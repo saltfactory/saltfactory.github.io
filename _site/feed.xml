@@ -5,8 +5,8 @@
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
     <link>http://saltfactory.github.io/</link>
     <atom:link href="http://saltfactory.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 25 Jul 2014 11:05:25 +0900</pubDate>
-    <lastBuildDate>Fri, 25 Jul 2014 11:05:25 +0900</lastBuildDate>
+    <pubDate>Fri, 25 Jul 2014 11:06:44 +0900</pubDate>
+    <lastBuildDate>Fri, 25 Jul 2014 11:06:44 +0900</lastBuildDate>
     <generator>Jekyll v1.5.1</generator>
     
       <item>
@@ -37,7 +37,7 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
     
       <item>
         <title>Markdown으로 새로운 블록 시작</title>
-        <description>&lt;p&gt;:-)&lt;/p&gt;
+        <description>&lt;p&gt;I give this plugin two :+1:!&lt;/p&gt;
 </description>
         <pubDate>Fri, 25 Jul 2014 06:59:45 +0900</pubDate>
         <link>http://saltfactory.github.io/jekyll/update/2014/07/25/start-blogging-using-markdown/</link>

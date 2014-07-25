@@ -5,4 +5,4 @@ date:   2014-07-24 21:59:45
 categories: jekyll update
 ---
 
-:-)
+I give this plugin two :+1:!
