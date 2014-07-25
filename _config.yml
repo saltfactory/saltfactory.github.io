@@ -14,9 +14,6 @@ pygments: true
 safe: true
 lsi: false
 
-emoji:
-  src: "/assets/images/emoji"
-
 gems:
   - jekyll-redirect-from
   - jemoji
