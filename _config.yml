@@ -8,6 +8,7 @@ baseurl: ""
 # url: "http://saltfactory.github.io"
 twitter_username: saltfactory
 github_username:  saltfactory
+facebook_username: salthub
 
 # Build settings
 markdown: kramdown
