@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 ---
 
-### lectures
+### Lectures
 - **[지식 거래 서비스를 위한 규칙칙기반 시맨틱 웹](http://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART001434494)**
 - **[웹 2.0 기반의 e-Learning 학습지원서비스 개발](https://dbpia.co.kr/Journal/ArticleDetail/903275)**
 

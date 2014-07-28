@@ -1,10 +1,14 @@
+{{site.url}}
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = '{{ page.disqus.shortname }}';
-    var disqus_identifier = '{{ page.disqus.identifier }}';
-    var disqus_url = '{{ page.disqus.url }}';
-
+    {% if site.disqus_shortname %}
+      var disqus_shortname = '{{ site.disqus_shortname }}';
+    {% endif %}
+    {% if page.disqus %}
+      {% if page.disqus.identifier %} var disqus_identifier = '{{ page.disqus.identifier }}'; {% endif %}
+      {% if page.disqus.url %} var disqus_url = '{{ page.disqus.url }}'; {% endif %}
+    {% endif %}
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
