@@ -1,11 +1,14 @@
 ---
 layout: page
+css: /css/about.css
 title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+## 송성광
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+![profile]({{site.url}}/assets/images/profile.png)
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+* 창원대학교 컴퓨터공학과 박사과정
+* 하이브레인넷 부설연구소
+* 창원대학교 데이터베이스 연구실

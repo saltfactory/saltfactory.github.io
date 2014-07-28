@@ -5,7 +5,7 @@ email: saltfactory@gmail.com
 description: ""
 
 baseurl: ""
-url: "http://saltfactory.github.io"
+# url: "http://saltfactory.github.io"
 twitter_username: saltfactory
 github_username:  saltfactory
 

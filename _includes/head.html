@@ -9,4 +9,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 
+    {% if page && page.css %}
+    <link rel='stylesheet' type='text/css' href='{{ page.css }}' />
+    {% endif %}
 </head>
