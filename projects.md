@@ -10,9 +10,9 @@ permalink: /projects/
 
 ### Open Source Projects
 
-- **[mark2html](https://github.com/saltfactory/mark2html)** : Markdown 문서를 HTML 문서로 만들어주는 모듈
-- **[passport-tistory](https://github.com/saltfactory/passport-tistory)** : passort를 이용하여 Tistory 오픈 API를 사용할 수 있는 OAuth 2.0 인증 모듈
-- **[node-tistory](https://github.com/saltfactory/node-tistory)** : Tistory 오픈 API 클라이언트 모듈
+- **[mark2html](http://saltfactory.net/mark2html/)** : Markdown 문서를 HTML 문서로 만들어주는 모듈
+- **[passport-tistory](http://saltfactory.net/passport-tistory/)** : passport를 이용하여 Tistory 오픈 API를 사용할 수 있는 OAuth 2.0 인증 모듈
+- **[node-tistory](http://saltfactory.net/node-tistory/)** : Tistory 오픈 API 클라이언트 모듈
 
 
 ### iOS Applicaitons
