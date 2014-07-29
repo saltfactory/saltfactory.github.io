@@ -16,7 +16,7 @@ disqus_shortname: saltfactoryblog
 markdown: kramdown
 permalink: pretty
 pygments: true
-safe: true
+safe: true # if using alias is safe:false
 lsi: false
 
 gems:

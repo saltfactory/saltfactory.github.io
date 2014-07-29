@@ -2,7 +2,6 @@
 layout: post
 title: github page를 이용하여 새로운 웹 사이트 제작
 comments: false
-redirect_from: /125
 ---
 
 > *연구원은 개인이 연구에 집중하는 공간이 필요한다. 이것은 오프라인뿐만 아니라 온라인에서도 마찬가지이다.*
