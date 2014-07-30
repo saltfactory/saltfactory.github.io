@@ -4,10 +4,9 @@
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     {% if site.disqus_shortname %}
       var disqus_shortname = '{{ site.disqus_shortname }}';
-    {% elsif page.disqus.shortname %}
-      var disqus_shortname = '{{ page.disqus.shortname }}';
     {% endif %}
     {% if page.disqus %}
+      {% if page.disqus.shortname %} var disqus_shortname = '{{ page.disqus.shortname }}';{% endif %}
       {% if page.disqus.identifier %} var disqus_identifier = '{{ page.disqus.identifier }}'; {% endif %}
       {% if page.disqus.url %} var disqus_url = '{{ page.disqus.url }}'; {% endif %}
     {% endif %}
