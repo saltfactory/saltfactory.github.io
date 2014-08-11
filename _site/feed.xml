@@ -5,14 +5,14 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 30 Jul 2014 14:49:09 +0900</pubDate>
-    <lastBuildDate>Wed, 30 Jul 2014 14:49:09 +0900</lastBuildDate>
-    <generator>Jekyll v1.5.1</generator>
+    <pubDate>Mon, 11 Aug 2014 15:13:00 +0900</pubDate>
+    <lastBuildDate>Mon, 11 Aug 2014 15:13:00 +0900</lastBuildDate>
+    <generator>Jekyll v2.2.0</generator>
     
       <item>
         <title>github page를 이용하여 새로운 웹 사이트 제작</title>
         <description>&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;연구원은 개인이 연구에 집중하는 공간이 필요한다. 이것은 오프라인뿐만 아니라 온라인에서도 마찬가지이다.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;연구원은 개인이 연구에 집중하는 공간이 필요한다. 이것은 오프라인뿐만 아니라 온라인에서도 마찬가지이다.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;처음에는 개인 서버를 이용하여 웹 사이트를 만들려고 했었다.
@@ -20,7 +20,7 @@
 이런 일은 연구에 집중하는 일에 방해를 준다.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;&lt;em&gt;컨텐츠 중심의 사이트를 만들고 싶다&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;컨텐츠 중심의 사이트를 만들고 싶다&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Markdown&quot;&gt;Markdown&lt;/a&gt;은 나의 고민을 해결해주는 열쇠가 되었다.
@@ -30,17 +30,17 @@
 &lt;p&gt;이것을 사용하면서 다음과 같은 장점이 있다.&lt;/p&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;문서를 작성할 때 HTML 코드를 생각할 필요가 없다.&lt;/strong&gt; 링크를 만들때 WYSIWYG을 사용한다면 글을 작성하고 작성한 글을 드래그한 후 링크주소를 복사해서 붙여넣고 링크의 타이틀을 지정해주고 해야한다. 하지만 Markdown을 사용하면 간단하게 작성할 수 있다. e.g. &lt;code&gt;[saltfactory&#39;s blog](http://blog.saltfactory.net/)&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;문서를 작성할 때 style을 생각할 필요가 없다.&lt;/strong&gt; 문서를 작성하면서 단락, 글자의 크기, 강조되는 색깔 등을 고려하지 않아도 된다.
+&lt;li&gt;&lt;strong&gt;문서를 작성할 때 HTML 코드를 생각할 필요가 없다.&lt;/strong&gt; 링크를 만들때 WYSIWYG을 사용한다면 글을 작성하고 작성한 글을 드래그한 후 링크주소를 복사해서 붙여넣고 링크의 타이틀을 지정해주고 해야한다. 하지만 Markdown을 사용하면 간단하게 작성할 수 있다. e.g. &lt;code&gt;[saltfactory&amp;#39;s blog](http://blog.saltfactory.net/)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;문서를 작성할 때 style을 생각할 필요가 없다.&lt;/strong&gt; 문서를 작성하면서 단락, 글자의 크기, 강조되는 색깔 등을 고려하지 않아도 된다.
 Markdown은 정해진 양식이 있고 그것 이상을 할 수도 없기 때문이다. 하지만 정해진 양식만으로 충분히 정보를 전달할 수 있다. 지금까지 블로그에 글을 올리면서 내용의 강조를 현란하게 컬러를 사용했지만 오히려 너무 많은 스타일 때문에 정작 중요한 내용이 죽을 때가 많다. Markdown은 문맥을 강조할 수 있는 마커도 정해져 있다. 그래서 글을 작성할 때 고민하지 않아도 된다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;문서를 내용을 최대한 보존할 수 있다.&lt;/strong&gt; WYSIWYG으로 작성된 문서를 데이터베이스에 저장해서 열어보면 도대체 무슨 내용을 작성했는지 알수가 없다. 기존의 문서를 다른 곳으로 이전하려고 하면 이 복잡한 코드를 분석해야하기 때문에 문제가 심각해진다. Markdown으로 작성하게 되면 모든 양식이 동일하기 때문에 다른 서비스로 쉽게 이전할 수 있다.
+&lt;li&gt;&lt;strong&gt;문서를 내용을 최대한 보존할 수 있다.&lt;/strong&gt; WYSIWYG으로 작성된 문서를 데이터베이스에 저장해서 열어보면 도대체 무슨 내용을 작성했는지 알수가 없다. 기존의 문서를 다른 곳으로 이전하려고 하면 이 복잡한 코드를 분석해야하기 때문에 문제가 심각해진다. Markdown으로 작성하게 되면 모든 양식이 동일하기 때문에 다른 서비스로 쉽게 이전할 수 있다.
 뿐만 아니라 문서의 내용을 헤치지 않으면서 마커만 표시 되어 있기 때문에 글의 내용 또한 사람이 쉽게 읽어서 확인할 수 있다.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;쉬운 archive와 backup&lt;/strong&gt; Markdown은 웹에서도 작성할 수 있지만 대부분 로컬에서 작업을 한다. 이렇게 저장된 파일들은 Markdown의 파일 집합 자체로 archive를 할 수 있는 장점이 있다. 그리고 백업 역시 편리하다.
+&lt;li&gt;&lt;strong&gt;쉬운 archive와 backup&lt;/strong&gt; Markdown은 웹에서도 작성할 수 있지만 대부분 로컬에서 작업을 한다. 이렇게 저장된 파일들은 Markdown의 파일 집합 자체로 archive를 할 수 있는 장점이 있다. 그리고 백업 역시 편리하다.
 최근 대용량 cloud 서비스들이 많기 때문에 작성한 파일을 cloud로 동기화만하면 자동으로 백업이 되기 때문이다.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;&lt;em&gt;Markdown을 웹에서 표현하고 싶다&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Markdown을 웹에서 표현하고 싶다&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Markdown으로 아무리 문서를 만들더라도 웹에 publish를 하지 않으면 정보를 사람들에게 제공할 수 없다.
@@ -52,7 +52,7 @@ Markdown은 정해진 양식이 있고 그것 이상을 할 수도 없기 때문
 이것은 jekyll이 만든 프로젝트 안의 &lt;code&gt;_post&lt;/code&gt; 디렉토리에 Markdown 문서를 작성하는 것 만으로 웹에서 스타일된 문서로 볼 수 있는 웹 페이지로 변환시켜 준다. 더구나 github에서 공식적으로 jekyll을 지원하고 있기 때문에 문서를 웹에 publish 하는 것도 &lt;code&gt;git push&lt;/code&gt;로 간단히 할 수 있다.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;&lt;em&gt;문서의 이력을 남기고 싶다&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;문서의 이력을 남기고 싶다&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;github&lt;/em&gt;&lt;/strong&gt;는 이력관리를 호스팅해주는데 github에서 &lt;strong&gt;&lt;em&gt;git page&lt;/em&gt;&lt;/strong&gt;를 사용해서 웹 서비스를 만드는 순간 웹 서비스의 모든 파일들이 이력 관리가 된다.
@@ -62,7 +62,7 @@ Markdown은 정해진 양식이 있고 그것 이상을 할 수도 없기 때문
 이젠 이곳에서 개인적으로 연구하거나 개발하는 내용을 남길 것이다. 그동안 여기저기 흩어져 있는 코드 조각들과 메모들을 이 공간에 저장하게 될 것이다.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;&lt;em&gt;지금부터 이곳은 내가 연구하는 공간이 될 것이다&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;지금부터 이곳은 내가 연구하는 공간이 될 것이다&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
         <pubDate>Mon, 28 Jul 2014 00:00:00 +0900</pubDate>
