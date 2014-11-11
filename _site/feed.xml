@@ -5,9 +5,9 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 11 Aug 2014 15:13:00 +0900</pubDate>
-    <lastBuildDate>Mon, 11 Aug 2014 15:13:00 +0900</lastBuildDate>
-    <generator>Jekyll v2.2.0</generator>
+    <pubDate>Tue, 11 Nov 2014 16:24:10 +0900</pubDate>
+    <lastBuildDate>Tue, 11 Nov 2014 16:24:10 +0900</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>github page를 이용하여 새로운 웹 사이트 제작</title>
