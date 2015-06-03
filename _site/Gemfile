@@ -16,7 +16,6 @@ gem 'jekyll-redirect-from', '0.6.2'
 gem 'jekyll-sitemap', '0.6.0'
 gem 'github-pages', '28'
 gem 'jekyll-img-converter', '0.1.0'
-gem 'jekyll-redirect-from', '0.6.2'
 # gem 'rb-gsl', '~> 1.16.0.2'
 
 
