@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: http://saltfactory.net/sitemap.xml
+Disallow: /ghost/
