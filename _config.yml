@@ -1,0 +1,42 @@
+title: saltfactory's blog
+email: saltfactory@gmail.com
+description: "하이브리드 모바일 앱, HTML5, 웹 프로그래밍, 데이터베이스, 운영체제, 프로그래밍 언어 그리고 IT 기술에 관한 연구 내용에 관한 saltfactory's blog 입니다."
+base_url: ""
+url: "http://blog.saltfactory.net"
+
+excerpt_separator : <!--more-->
+
+paginate: 5
+
+google_analytics : 'UA-8647285-2'
+
+twitter_username: saltfactory
+github_username:  saltfactory
+facebook_username: salthub
+facebook_admins_id: "1825058169"
+facebook_app_id: "271162092926857"
+disqus_shortname: saltfactoryblog
+
+comments:
+  disqus: true
+  facebook: true
+
+# Build settings
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "tables", "autolink", "fenced_code_blocks", "strikethrough"]
+
+# highlighter: pygments
+permalink: none
+
+# safe: false # if using alias is safe:false
+#safe: true
+#lsi: false
+
+gems:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jemoji
+  - jekyll-feed
+  # - jekyll-img-converter
+  # - jekyll-coffeescript

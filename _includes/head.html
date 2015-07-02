@@ -1,0 +1,110 @@
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- web -->
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+    {% if description %}
+    <meta name="description" content="{{ description }}">
+    {% endif %}
+
+    <!-- facebook -->
+    <meta property="fb:app_id" content="{{ site.facebook_app_id }}">
+    <meta property="fb:admins" content="{{ site.facebook_admins_id }}">
+
+
+    {% if page.description %}
+      {% assign description = page.description %}
+    {% elsif page.excerpt %}
+      {% assign description = page.excerpt | replace : '<h2>서론</h2>' | strip_html  %}
+    {% else %}
+      {% assign description = site.description %}
+    {% endif %}
+
+    <!-- twitter cards -->
+    {% if page.images.title %}
+    {% assign meta_image = page.images.title  %}
+    <meta name="twitter:card" content="summary_large_image">
+    {% else %}
+    {% assign meta_image = "https://avatars1.githubusercontent.com/u/84361?v=3&s=460" %}
+    <meta name="twitter:card" content="summary">
+    {% endif %}
+
+    <meta name="twitter:site" content="@{{ site.twitter_username }}">
+    <meta name="twitter:creator" content="@{{ site.twitter_username }}">
+    {% if page.title %}
+    <meta name="twitter:title" content="{{ page.title }}">
+    {% else %}
+    <meta name="twitter:title" content="{{ site.title }}">
+    {% endif %}
+    {% if page.url %}
+    <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+    {% endif %}
+    {% if description %}
+    <meta name="twitter:description" content="{{ description }}">
+    {% endif %}
+    <meta name="twitter:image" content="{{ meta_image }}">
+
+    <!-- profile -->
+    <meta property="profile:first_name" content="SungKwang">
+    <meta property="profile:last_name" content="Song">
+    <meta property="profile:gender" content="male">
+    <meta property="profile:username" content="saltfactory">
+
+    <!-- open graph -->
+    <meta content="{{ site.title }}" property="og:site_name">
+    {% if page.title %}
+    <meta content="{{ page.title }}" property="og:title">
+    {% else %}
+    <meta content="{{ site.title }}" property="og:title">
+    {% endif %}
+    {% if page.title %}
+    <meta content="article" property="og:type">
+    {% else %}
+    <meta content="website" property="og:type">
+    {% endif %}
+
+    {% if description %}
+    <meta content="{{ description }}" property="og:description">
+    {% endif %}
+    {% if page.url %}
+    <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+    {% endif %}
+    {% if page.date %}
+    <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
+    <meta content="{{ site.url }}/about/" property="article:author">
+    {% endif %}
+    <meta content="https://twitter.com/saltfactory" property="article:author">
+    <meta content="https://facebook.com/salthub" property="article:author">
+    <meta content="{{ meta_image }}" property="og:image">
+
+    {% if page.categories %}
+    {% for category in page.categories limit:1 %}
+    <meta content="{{ category }}" property="article:section">
+    {% endfor %}
+    {% endif %}
+    {% if page.tags %}
+    {% for tag in page.tags %}
+    <meta content="{{ tag }}" property="article:tag">
+    {% endfor %}
+    {% endif %}
+
+    <!-- style -->
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    {% if page.css %}
+    <link rel='stylesheet' type='text/css' href='/css/{{ page.css }}' />
+    {% endif %}
+    <!-- <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico"> -->
+    <link rel="shortcut icon" href="/assets/images/avatar_128.png">
+
+    <!-- canonical -->
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <!-- RDF -->
+    <link rel="meta" type="application/rdf+xml" title="FOAF" href="/assets/foaf.rdf" />
+
+    {% if site.google_analytics %}
+      {% include google_analytics.html %}
+    {% endif %}
+</head>

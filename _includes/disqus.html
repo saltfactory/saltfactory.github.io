@@ -1,0 +1,33 @@
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    {% if site.disqus_shortname %}
+      var disqus_shortname = '{{ site.disqus_shortname }}';
+    {% endif %}
+    // {% if page.disqus %}
+    //   {% if page.disqus.identifier %} var disqus_identifier = '{{ page.disqus_identifier }}'; {% endif %}
+    //   {% if page.disqus.url %} var disqus_url = '{{ page.disqus.url }}'; {% endif %}
+    // {% endif %}
+    {% if page.disqus_shortname %} var disqus_shortname = '{{ page.disqus_shortname }}'; {% endif %}
+
+    {% if page.disqus_identifier %}
+      var disqus_identifier = '{{ page.disqus_identifier }}';
+    {% else %}
+      var disqus_identifier = '{{ site.url }}{{ page.url }}';
+    {% endif %}
+
+    {% if page.disqus_url %}
+      var disqus_url = '{{ page.disqus_url }}';
+    {% else %}
+      var disqus_url = '{{ site.url }}{{ page.url }}';
+    {% endif %}
+
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>

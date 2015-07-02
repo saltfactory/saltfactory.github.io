@@ -34,3 +34,8 @@ build/
 .rvmrc
 .DS_Store
 *.swp
+
+_site/
+.sass-cache/
+.jekyll-metadata
+backup/
