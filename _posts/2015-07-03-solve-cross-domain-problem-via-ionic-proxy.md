@@ -12,6 +12,8 @@ images :
 
 **Angular.js**, **jQuery** 또는 [Vanilla JS](http://vanilla-js.com/) 프로젝트를 진행하면서 [CROS(Cross-Origin Resource Sharing)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) 문제를 반드시 겪어 봤을 것이다. 요즘은 페이지 전환없이 [SPA(Single Page Application)](https://en.wikipedia.org/wiki/Single-page_application)을 개발하는 경우가 많기 때문에 **Ajax**나 **WebSocket**을 사용할 때, 로컬에서 작업하면서 서버측으로 HTTP 요청을 보낼 때 **CORS** 문제를 만나게 된다. 이 문제를 해결하기 위해서 웹서버에서 CORS를 허용하게 설정하거나, 웹 프로그래밍에서 CORS를 허용하도록 인터셉터나 필터를 만들어서 사용하기도 한다. **Ionic**은 이런 문제를 보다 쉽게 해결해서 프로그램에만 집중할 수 있도록 프레임워크에 proxy 메카니즘을 포함시켰다. 이 글은 Ionic framework에서 proxy를 사용하여 CORS 문제를 간단하게 해결하는 방법에 대해서 소개한다.
 
+<!--more-->
+
 ## CORS(Cross-Origin Resource Sharing)
 
 **CORS**의 문제는 **SPA** 개발을 할 때 가장 쉽게 만날 수 있다. 또는 페이지 전환 없이 **ajax**를 사용하여 다른 서버에 http 요청을 할 때 만날 수 있다.
