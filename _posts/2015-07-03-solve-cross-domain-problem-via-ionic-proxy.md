@@ -52,6 +52,10 @@ bash run.sh
 boot2docker ip
 ```
 
+좀 더 유연하게 테스트를 하기 위해서 http://demo.docker.localhost/api/data.json 로 접근하면 내부적으로 http://boot2docker:7000/api/data.json 이 요청되도록  **Apache** 웹 서버의 **vhost**를 설정하였다.
+
+![vhost 결과](http://assets.hibrainapps.net/images/rest/data/512?size=full&m=1436431692)
+
 이제 테스트를 위해 미리 ionic 프로젝트를 만들어 놓았다. `demo-ionic` 디렉토리 안으로 이동한다.
 
 ```
@@ -66,32 +70,63 @@ ionic serve
 
 브라우저가 열리고 **CORS** 에러가 발생하는 것을 확인할 수 있다.
 
-![CORS error](http://assets.hibrainapps.net/images/rest/data/509?size=full&m=1435908135)
+![CORS error](http://assets.hibrainapps.net/images/rest/data/515?size=full&m=1436432402)
 
 에러 내용은 다음과 같다.
 
 ```text
-XMLHttpRequest cannot load http://boot2docker:7000/api/data.json. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://localhost:8100' is therefore not allowed access.
+XMLHttpRequest cannot load http://demo.docker.localhost/api/data.json. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://localhost:8100' is therefore not allowed access.
 ```
 
 소스코드를 살펴보자. `proxy-demo/demo-ionic/www/js/app.js` 파일을 열어보자. 코드 중간쯤에 **Angularjs**의 [$http](https://docs.angularjs.org/api/ng/service/$http)를 요청하고 있는 부분이 보일 것이다. **$http**는 내부족으로 **XMLHttpRequest** 즉 **ajax**를 사용하고 있다.
 
 ```javascript
-// CORS 요청 데모
-var API_ENDPOINT = "http://boot2docker:7000/api";
-$http.get(API_ENDPOINT + '/data.json').
-  success(function(data, status, headers, config) {
-    console.log(data)
-    $rootScope.name = data.name;
-    $rootScope.email= data.email;
-    $rootScope.blog = data.blog;
-  }).
-  error(function(data, status, headers, config) {
-    console.log(data);
+// Ionic Starter App
+
+// angular.module is a global place for creating, registering and retrieving Angular modules
+// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
+// the 2nd parameter is an array of 'requires'
+
+// angular.module('starter.services',[])
+// .service()
+
+angular.module('starter', ['ionic'])
+.constant('ApiEndpoint', {
+  url: 'http://demo.docker.localhost/api'
+})
+.run(function($ionicPlatform, $http, $rootScope, ApiEndpoint) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if(window.StatusBar) {
+      StatusBar.styleDefault();
+    }
+
+    // CORS 요청 데모
+    $http.get(ApiEndpoint.url + '/data.json').
+      success(function(data, status, headers, config) {
+        console.log(config);
+        console.log(status);
+        console.log(data);
+        $rootScope.name = data.name;
+        $rootScope.email= data.email;
+        $rootScope.blog = data.blog;
+      }).
+      error(function(data, status, headers, config) {
+        console.log(config);
+        console.log(status);
+        console.log(data);
+      });
+
   });
+})
+
 ```
 
-**CORS** 문제가 왜 발생했는지 눈치를 챘을 것이다. ionic으로 만든 demo-ionic 앱은 http://localhost:8100에서 동작하고 있는데 다른 도메인으로 http://boot2docker:7000/api/data.json 을 요청했기 때문이다.
+**CORS** 문제가 왜 발생했는지 눈치를 챘을 것이다. ionic으로 만든 demo-ionic 앱은 http://localhost:8100에서 동작하고 있는데 다른 도메인으로 http://demo.docker.localhost/api/data.json 을 요청했기 때문이다.
 
 ## CORS 해결 방법
 
@@ -129,34 +164,64 @@ http://ionicframework.com/docs/cli/test.html 에서 **Service Proxies** 섹션�
   "proxies":[
     {
       "path":"/api",
-      "proxyUrl":"http://boot2docker:7000/api"
+      "proxyUrl":"http://demo.docker.localhost/api"
     }
   ]
 }
 ```
-프록시 설정은 로컬에서 **URL**의 **path**가 `/api` 로 접근하게 되면 프록시가 **proxyUrl**로 변경시켜 요청하도록 하는 것이다. 즉 다시 말해서 http://http://localhost:8100/api/data.json 으로 요청하면 프록시는 http://bootk2docker:7000/api/data.json으로 요청한 것으로 인식시키는 것이다. 그럼 요청은 같은 도메인으로 하기 때문에 **CORS** 문제가 발생하지 않고 프록시는 원래 요청 URL인 **proxyUrl**로 요청하기 때문에 원하는 데이터를 받아 올 수 있게 되는 것이다.
+프록시 설정은 로컬에서 **URL**의 **path**가 `/api` 로 접근하게 되면 프록시가 **proxyUrl**로 변경시켜 요청하도록 하는 것이다. 즉 다시 말해서 http://http://localhost:8100/api/data.json 으로 요청하면 프록시는 http://demo.docker.localhost/api/data.json으로 요청한 것으로 인식시키는 것이다. 그럼 요청은 같은 도메인으로 하기 때문에 **CORS** 문제가 발생하지 않고 프록시는 원래 요청 URL인 **proxyUrl**로 요청하기 때문에 원하는 데이터를 받아 올 수 있게 되는 것이다.
 
-앞에서 설정했던 `proxy-demo/demo-ionic/www/js/app.js` 파일을 열어서 다음과 같이 수정하자. 앞에선 `API_ENDPOINT`의 도메인이 http://boot2docker:7000/api 였지만 **ionic.project** 파일에서 **proxy** 설정을 했기 때문에 이제 `API_ENDPOINT`를 http://localhost:8100/api로 지정하면 proxy에 의해서 자동으로 서버의 데이터를 가져오게 될 것이다.
+앞에서 설정했던 `proxy-demo/demo-ionic/www/js/app.js` 파일을 열어서 다음과 같이 수정하자. 앞에선 `ApiEndpoint.url`의 도메인이 http://demo.docker.localhost/api 였지만 **ionic.project** 파일에서 **proxy** 설정을 했기 때문에 이제 `ApiEndpoint.url`를 http://localhost:8100/api 로 지정하면 proxy에 의해서 자동으로 서버의 데이터를 가져오게 될 것이다.
 
 ```javascript
-// CORS 요청 데모
-// var API_ENDPOINT = "http://boot2docker:7000/api";
-var API_ENDPOINT = "http://localhost:8100/api";
-$http.get(API_ENDPOINT + '/data.json').
-  success(function(data, status, headers, config) {
-    console.log(data)
-    $rootScope.name = data.name;
-    $rootScope.email= data.email;
-    $rootScope.blog = data.blog;
-  }).
-  error(function(data, status, headers, config) {
-    console.log(data);
-  });
+// Ionic Starter App
+
+// angular.module is a global place for creating, registering and retrieving Angular modules
+// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
+// the 2nd parameter is an array of 'requires'
+
+// angular.module('starter.services',[])
+// .service()
+
+angular.module('starter', ['ionic'])
+.constant('ApiEndpoint', {
+  url: '/api'
+})
+.run(function($ionicPlatform, $http, $rootScope, ApiEndpoint) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if(window.StatusBar) {
+      StatusBar.styleDefault();
+    }
+
+    // CORS 요청 데모
+    $http.get(ApiEndpoint.url + '/data.json').
+      success(function(data, status, headers, config) {
+        console.log(config);
+        console.log(status);
+        console.log(data);
+        $rootScope.name = data.name;
+        $rootScope.email= data.email;
+        $rootScope.blog = data.blog;
+      }).
+      error(function(data, status, headers, config) {
+        console.log(config);
+        console.log(status);
+        console.log(data);
+      });
+
+      });
+})
+
 ```
 
 **ionic serve** 명령은 아주 훌륭하다. 파일을 변경하면 서버를 시작할 필요없이 바로 적용이 되기 때무에 브라우저를 바로 확인하면 된다. **ionic**의 **proxy** 설정 이후 http://localhost:8100/api/data.json 을 요청했지만 서버의 데이터를 가져온 것을 확인할 수 있다.
 
-![ionic proxy result](http://assets.hibrainapps.net/images/rest/data/510?size=full&m=1435910572)
+![ionic proxy result](http://assets.hibrainapps.net/images/rest/data/514?size=full&m=1436432185)
 
 ## 결론
 
