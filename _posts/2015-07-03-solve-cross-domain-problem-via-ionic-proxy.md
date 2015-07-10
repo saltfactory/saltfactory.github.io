@@ -223,6 +223,51 @@ angular.module('starter', ['ionic'])
 
 ![ionic proxy result](http://assets.hibrainapps.net/images/rest/data/514?size=full&m=1436432185)
 
+## 디바이스에서 proxy 설정
+
+Ionic의 **proxy**는 **ionic server**의 기능이다. 하지만 디바이스에서는 proxy 서버가 존재하지 않는다. 그래서 위의 코드를 그대로 디바이스에서 실행하게되면 데이터를 가져올 수 없다. 위 코드를 그대로 iOS 디바이스에 빌드하여 실행시켜보자. 테스트를 위해서 ios simulator로 진행하였다.
+
+```
+ionic prepare && ionic run --simulator ios
+```
+
+실행후 서버로부터 결과를 가져오지 못하는 것을 확인할 수 있다. **Safari Web Inspector**를 이용하여 로그를 살펴보면, `file://api/data.json`이라고 호출되는 것을 확인 할 수 있다. 위에서 proxy를 설정하기 위해 **ApiEndpoint**를 설정한 것은 **ionic server**를 가지고 테스트하는 브라우저 환경에서만 적용이 되기 때문이다.
+
+![simulator 결과](http://assets.hibrainapps.net/images/rest/data/518?size=full&m=1436491113)
+
+실제 디바이스에서는 **ionic.project** 파일의 **proxy**에 설정한 **path**를 가지고 **ApiEndpoint**로 사용하던 것을 실제 주소 **proxyUrl**로 변경을 해야한다.
+다시 명확하게 말하자면 아래와 같이 `./www/app.js`에 설장한 **ApiEndpoint**를 변경해야한다.
+
+```javascript
+// 데스크탑에서 테스트를 하기 위한 proxy path 설정
+angular.module('starter', ['ionic'])
+.constant('ApiEndpoint', {
+  url: '/api'
+})
+.run(function($ionicPlatform, $http, $rootScope, ApiEndpoint) {
+  ...
+```
+
+```javascript
+// 실제 디바이스에서 사용하기 위한 proxyUrl 설정
+angular.module('starter', ['ionic'])
+.constant('ApiEndpoint', {
+  url: 'http://demo.docker.localhost/api'
+})
+.run(function($ionicPlatform, $http, $rootScope, ApiEndpoint) {
+  ...
+```
+디바이스에서 사용할 수 있도록 변경하고 다시 디바이스를 실행해보자.
+
+```
+ionic prepare && ionic run --simulator ios
+```
+
+![simulator 성공](http://assets.hibrainapps.net/images/rest/data/517?size=full&m=1436491038)
+
+데스크탑에서 로컬 **ionic server**를 사용할 때 **ApiEndpoint** 을 **proxy path** 사용하면 디바이스에서 되지 않는 문제를 실제 URL로 대처하면서 사용할 수 있게 되었다. 
+
+
 ## 결론
 
 웹 앱, 하이브리드 앱을 만들 때 API 서버에서 작업하는 개발자는 없을 것이다. **SPA(Single Page Application)**으로 앱을 제작할 때 HTTP 요청은 반드시 Ajax를 사용하거나 WebSocket을 사용해야한다. Ionic은 HTTP 요청을 AngularJS의 **$http**를 사용하여 요청을 하는데 이것은 다른 도메인으로 요청을 할 때 **CORS** 문제를 발생하면서 데이터를 요청할 수 없게 된다. Ionic은 프레임워크에 **proxy** 환경을 포함하고 있기 때문에 CORS 문제를 아주 쉽게 해결할 수 있다. 이 글로 통해 Ionic 프로젝트를 시작할 때 서버와 통신을 하는 문제를 쉽게 해결할 수 있을 것으로 기대한다.
@@ -233,7 +278,8 @@ https://github.com/saltfactory/ionic-tutorial/releases/tag/proxy-demo
 
 ## 참고
 
-http://ionicframework.com/docs/cli/test.html
+1. http://ionicframework.com/docs/cli/test.html
+2. http://blog.ionic.io/handling-cors-issues-in-ionic/
 
 
 ## 연구원 소개
