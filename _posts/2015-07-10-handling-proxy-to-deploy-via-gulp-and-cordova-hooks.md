@@ -11,6 +11,7 @@ images :
 ## 서론
 
 앞에 글 [Ionic 기반 하이브리드 앱에서 proxy를 사용하여 CORS 문제 해결하기](http://blog.saltfactory.net/ionic/solve-cross-domain-problem-via-ionic-proxy.html)에서 Ionic을 데스크탑에서 개발할 때 **ionic serve**를 가지고 **proxy** 기능으로 **CORS** 문제 없이 테스트하는 방법을 살펴보았다. 이 방법은 로컬 데스크탑에서 브라우저를 통한 개발을 위한 방법이다. 만약 **proxy**를 사용하여 개발한 코드를 실제 디바이스에 개발하게되면 문제가 발생하지 않을지를 생각해보자. 정답은 Ionic의 **proxy** 기능은 **ionic serve**의 기능이다. 우리가 제품으로 개발하여 설치하는 모바일 디바이스에서는 ionic serve를 사용할 수 없기 때문에 **proxy**는 의미가 없어지게 된다. 즉, 실제 디바이스에서는 원래의 **proxyUrl**을 사용해야 하는 것이다. 이 글에서는 데스크탑에서 개발할 때와 디바이스에 실행할 때 **proxy**을 어떻게 다루는 방법과 [gulp.js](http://gulpjs.com/)를 사용하여 자동화하는 방법을 소개한다.
+
 <!--more-->
 
 ## Ionic의 proxy
@@ -230,7 +231,7 @@ gulp
 
 ![gulp 실행](http://assets.hibrainapps.net/images/rest/data/519?size=full&m=1436505110)
 
-이제 Xcode를 열어서 프로젝트 실행시켜보자. ./platforms/ios/demo-ionic.xcodeproj를 열어서 Xcode에서 앱을 실행한다. **proxy** 설정으로 데스크탑 브라우저에서만 잘 나왔던 결과와 달리 이제 **proxy**가 적용된 데스크탑 브라우저와 디바이스로 빌드할 때 **gulp**를 사용해서 **proxy**를 제거하여 디바이스에서도 잘 나오게 되었다. 우리는 단순하게 앱을 디바이스에 실행하기전에 **gupl** 명령어만 한번 입력해주면 된다.
+이제 Xcode를 열어서 프로젝트 실행시켜보자. **./platforms/ios/demo-ionic.xcodeproj**를 열어서 Xcode에서 앱을 실행한다. **proxy** 설정으로 데스크탑 브라우저에서만 잘 나왔던 결과와 달리 이제 **proxy**가 적용된 데스크탑 브라우저와 디바이스로 빌드할 때 **gulp**를 사용해서 **proxy**를 제거하여 디바이스에서도 잘 나오게 되었다. 우리는 단순하게 앱을 디바이스에 실행하기전에 **gupl** 명령어만 한번 입력해주면 된다.
 
 ![Xcode 실행](http://assets.hibrainapps.net/images/rest/data/520?size=full&m=1436570755)
 
@@ -250,7 +251,7 @@ ionic emulate ios
 하지만 **gulp**에 미리 실행하였음에도 불구하고 **remove-proxy**가 적용이 되지 않았다. 이유는 **ionic-cli**은 **cordova-cli** 기반으로 만들어졌는데 Cordova에서 **build**, **emulate**, **run** 을 실행하면 필요한 코드들을 복사하고 디바이스에 적용하기 위해서 다시 **prepare**을 실행하기 때문이다. 이런 이유 때문에 **gulp**에서 task 순서를 **prepare** 다음으로 **remove-proxy**를 진행하도록 정의하더라고 Cordova가 **emulate** 명령을 실행하기 전에 다시 **prepare**를 진행하기 때문이다.
 
 그래서 우리는 [Cordova Hooks](http://cordova.apache.org/docs/en/edge/guide_appdev_hooks_index.md.html)에서 **remove-proxy** 실행하도록 등록한다. Cordova 기반으로 만들어진 Ionic 프로젝트의 디렉토리를 살펴보면 **hooks** 디렉토리가 존재한다. 이곳에 다양한 Cordova hooks를 정의할 수 있고 cordova-cli 가 실행될때 hooks를 할 수 있다.
-우리는 **gulp**를 실행한 후 **cordova-cli**를 실행하게 되면 **./www* 디렉토리를 다시 복사해서 만들기 때문에 **cordova run***이나 **cordova emulate** 전에 **cordova** 실행후 앞에서 정의한 **gulp**를 다시 실행하도록 정의하자. **./hooks** 디렉토리 밑에 **after_prepare** 디렉토리 안에 **010_add_platform_class.js** 파일이 존재할 것이다. 만약 이 파일이 존재하지 않는다면 **./hooks/after_prepare/** 디렉토리 밑에 javascript 다음 내용으로 추가한다. 다른 내용은 생략하고 앞에서 만든 **gulpfile.js**를 추가한 내용을 살펴보자.
+우리는 **gulp**를 실행한 후 **cordova-cli**를 실행하게 되면 **./www* 디렉토리를 다시 복사해서 만들기 때문에 **cordova run**이나 **cordova emulate** 전에 **cordova** 실행후 앞에서 정의한 **gulp**를 다시 실행하도록 정의하자. **./hooks** 디렉토리 밑에 **after_prepare** 디렉토리 안에 **010_add_platform_class.js** 파일이 존재할 것이다. 만약 이 파일이 존재하지 않는다면 **./hooks/after_prepare/** 디렉토리 밑에 javascript 다음 내용으로 추가한다. 다른 내용은 생략하고 앞에서 만든 **gulpfile.js**를 추가한 내용을 살펴보자.
 
 ```javascript
 var sh = require('shelljs');
