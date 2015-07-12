@@ -11,6 +11,7 @@ images :
 ## 서론
 
 앞에 글 [Ionic 기반 하이브리드 앱에서 proxy를 사용하여 CORS 문제 해결하기](http://blog.saltfactory.net/ionic/solve-cross-domain-problem-via-ionic-proxy.html)에서 Ionic을 데스크탑에서 개발할 때 **ionic serve**를 가지고 **proxy** 기능으로 **CORS** 문제 없이 테스트하는 방법을 살펴보았다. 이 방법은 로컬 데스크탑에서 브라우저를 통한 개발을 위한 방법이다. 만약 **proxy**를 사용하여 개발한 코드를 실제 디바이스에 개발하게되면 문제가 발생하지 않을지를 생각해보자. 정답은 Ionic의 **proxy** 기능은 **ionic serve**의 기능이다. 우리가 제품으로 개발하여 설치하는 모바일 디바이스에서는 ionic serve를 사용할 수 없기 때문에 **proxy**는 의미가 없어지게 된다. 즉, 실제 디바이스에서는 원래의 **proxyUrl**을 사용해야 하는 것이다. 이 글에서는 데스크탑에서 개발할 때와 디바이스에 실행할 때 **proxy**을 어떻게 다루는 방법과 [gulp.js](http://gulpjs.com/)를 사용하여 자동화하는 방법을 소개한다.
+<!--more-->
 
 ## Ionic의 proxy
 
