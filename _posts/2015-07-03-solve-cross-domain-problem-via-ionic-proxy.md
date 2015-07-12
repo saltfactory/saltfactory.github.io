@@ -228,12 +228,12 @@ angular.module('starter', ['ionic'])
 Ionic의 **proxy**는 **ionic server**의 기능이다. 하지만 디바이스에서는 proxy 서버가 존재하지 않는다. 그래서 위의 코드를 그대로 디바이스에서 실행하게되면 데이터를 가져올 수 없다. 위 코드를 그대로 iOS 디바이스에 빌드하여 실행시켜보자. 테스트를 위해서 ios simulator로 진행하였다.
 
 ```
-ionic prepare && ionic run --simulator ios
+ionic prepare && ionic emulate ios
 ```
 
 실행후 서버로부터 결과를 가져오지 못하는 것을 확인할 수 있다. **Safari Web Inspector**를 이용하여 로그를 살펴보면, `file://api/data.json`이라고 호출되는 것을 확인 할 수 있다. 위에서 proxy를 설정하기 위해 **ApiEndpoint**를 설정한 것은 **ionic server**를 가지고 테스트하는 브라우저 환경에서만 적용이 되기 때문이다.
 
-![simulator 결과](http://assets.hibrainapps.net/images/rest/data/518?size=full&m=1436491113)
+![emulate 결과](http://assets.hibrainapps.net/images/rest/data/518?size=full&m=1436491113)
 
 실제 디바이스에서는 **ionic.project** 파일의 **proxy**에 설정한 **path**를 가지고 **ApiEndpoint**로 사용하던 것을 실제 주소 **proxyUrl**로 변경을 해야한다.
 다시 명확하게 말하자면 아래와 같이 `./www/app.js`에 설장한 **ApiEndpoint**를 변경해야한다.
@@ -260,12 +260,12 @@ angular.module('starter', ['ionic'])
 디바이스에서 사용할 수 있도록 변경하고 다시 디바이스를 실행해보자.
 
 ```
-ionic prepare && ionic run --simulator ios
+ionic prepare && ionic emulate ios
 ```
 
-![simulator 성공](http://assets.hibrainapps.net/images/rest/data/517?size=full&m=1436491038)
+![emulate 성공](http://assets.hibrainapps.net/images/rest/data/517?size=full&m=1436491038)
 
-데스크탑에서 로컬 **ionic server**를 사용할 때 **ApiEndpoint** 을 **proxy path** 사용하면 디바이스에서 되지 않는 문제를 실제 URL로 대처하면서 사용할 수 있게 되었다. 
+데스크탑에서 로컬 **ionic server**를 사용할 때 **ApiEndpoint** 을 **proxy path** 사용하면 디바이스에서 되지 않는 문제를 실제 URL로 대처하면서 사용할 수 있게 되었다.
 
 
 ## 결론
