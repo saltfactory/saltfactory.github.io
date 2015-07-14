@@ -32,7 +32,7 @@ sudo apt-get install mailutils ca-certificates
 sudo apt-get install mailutils libsasl2-2 ca-certificates libsasls-modules postfix
 ```
 
-## main.cf에 Gmail 설정 추가
+## main.cf에 설정 추가
 
 **Postfix**의 설정 파일은 **/etc/postfix/main.cf** 에 존재한다. 이 파일을 열어서 **gmail**을 사용하여 relay를 할 수 있도록 다음과 같이 파일을 변경한다.
 
@@ -84,6 +84,8 @@ mailbox_size_limit = 0
 recipient_delimiter = +
 inet_interfaces = all
 inet_protocols = all
+
+### Gmail SMTP 설정 추가
 
 relayhost = [smtp.gmail.com]:587
 smtp_sasl_auth_enable = yes
