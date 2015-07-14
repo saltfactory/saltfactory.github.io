@@ -10,7 +10,8 @@ images :
 
 ## 서론
 
-리눅스 서버를 운영하다보면 메일을 발송해야할 경우가 있다. 시스템의 로그나 다양한 리포트를 메일로 발송해야할 경우가 종종 생기는데 메일 서버를 구축하는 것은 만만치 않은 비용이 발생한다. Ubuntu는 멋진 리눅스 운영체제이다. 사용자로 하여금 필요한 것을 쉽게 서비스할 수 있게 다양한 패키지를 사용할 수 있기 때문이다. 그리고 Gmail은 여러가지 서비스에 Gmail SMTP를 사용할 수 있는 방법을 제공하고 있다. 이 글에서는 Ubuntu의 **Postfix**라는 패키지를 사용하여 **Gmail SMTP**로 메일을 발송하는 방법에 대해서 소개한다.
+리눅스 서버를 운영하다보면 메일을 발송해야할 경우가 있다. 시스템의 로그나 다양한 리포트를 메일로 발송해야할 경우가 종종 생기는데 메일 서버를 구축하는 것은 만만치 않은 비용이 발생한다.
+Ubuntu는 멋진 리눅스 운영체제이다. 사용자로 하여금 필요한 것을 쉽게 서비스할 수 있게 다양한 패키지를 사용할 수 있기 때문이다. 그리고 Gmail은 여러가지 서비스에 Gmail SMTP를 사용할 수 있는 방법을 제공하고 있다. 이 글에서는 Ubuntu의 **Postfix**라는 패키지를 사용하여 **Gmail SMTP**로 메일을 발송하는 방법에 대해서 소개한다.
 <!--more-->
 
 ## Postfix
@@ -31,7 +32,7 @@ sudo apt-get install mailutils ca-certificates
 sudo apt-get install mailutils libsasl2-2 ca-certificates libsasls-modules postfix
 ```
 
-** main.cf에 Gmail 설정 추가
+## main.cf에 Gmail 설정 추가
 
 **Postfix**의 설정 파일은 **/etc/postfix/main.cf** 에 존재한다. 이 파일을 열어서 **gmail**을 사용하여 relay를 할 수 있도록 다음과 같이 파일을 변경한다.
 
@@ -92,6 +93,8 @@ smtp_use_tls = yes
 smtp_tls_CAfile = /etc/postfix/cacert.pem
 ```
 
+## Gmail 계정 설정
+
 위에서 **smtp_sasl_password_maps**으로 지정한 파일에 **gmail** 계정의 비밀번호를 저장한다.
 ```
 vi /etc/postfix/sasl_passwd
@@ -117,6 +120,8 @@ sudo chmod 400 /etc/postfix/sasl_passwd
 ```
 sudo postmap /etc/postfix/sasl_passwd
 ```
+
+## TLS 설정
 
 다음은 **TLS**를 위해 서버의 **Certifcates** 파일을 지정한 곳에 복사한다.
 
