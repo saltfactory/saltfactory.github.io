@@ -99,9 +99,11 @@ smtp_tls_CAfile = /etc/postfix/cacert.pem
 ## Gmail 계정 설정
 
 위에서 **smtp_sasl_password_maps**으로 지정한 파일에 **gmail** 계정의 비밀번호를 저장한다.
+
 ```
 vi /etc/postfix/sasl_passwd
 ```
+
 ```
 [smtp.gmail.com]:587  Gmail계정@gmail.com:Gmail비밀번호
 ```
@@ -139,7 +141,7 @@ cp /etc/ssl/certs/Thawte_Premium_Server_CA.pem /etc/postfix/cacert.pem
 **Postfix** 설정이 모두 끝났으면 메일을 발송을 테스트해보자. 터미널에 다음과 같이 실행한다. 메일은 saltfactory@gmail.com 으로 발송했다.
 
 ```
-echo "Postfix를 사용하여 gmail로 메일 보내기" | mailx -s "Postfix 테스트" -a "From:SungKwang Song<saltfactory@gmail.com>"  saltfactory@gmail.com
+echo "Postfix를 사용하여 gmail로 메일 보내기" | mail -S from="SungKwang Song<saltfactory@gmail.com>" -s "Postfix 테스트"  "saltfactory@gmail.com"
 ```
 
 메일이 정상적으로 발송이 되면 Gmail로 메일이 도착하는 것을 확인할 수 있다.
