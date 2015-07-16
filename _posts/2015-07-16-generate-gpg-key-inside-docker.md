@@ -275,6 +275,10 @@ gpg --delete-key "saltfactory"
 
 **docker**의 발전으로 많은 서비스가 docker 위에서 컨테이너 독립적으로 서비스를 운영할 수 있 수 있게 되었다. 기존의 서비스를 docker로 이전하면서 발생하는 메이저한 문제부터 마이너한 문제까지 다양한 문제를 만날 수 있는데 이 때 원래 리눅스 시스템에서 사용하던 기존의 원리를 잘 연구하면 방법을 해결할 수 있다. 실제 **GunPG**로 키를 생성할 때 , **/dev/random**은 꼭 docker가 아니더라도 특정 서버에서 행아웃이 걸릴 수 있다. 이때 **/dev/urandom**으로 대처해서 **GnuPG**의 키를 생성할 수 있다. **GnuPG**는 고가의 암호화/복호화 소프트웨어를 구입하지 않고도 훌륭하게 파일(디렉토리) 암호화를 할 수 있다. 이미 많은 오픈소스에서 **GnuPG** 암호화를 사용하고 있다. docker에서 서비스를 운영할 때, **GnuPG** 키를 생성하지 못하는 문제를 해결하고 다양한 방법으로 파일(디렉토리) 보안 서비스를 할 수 있기를 기대한다.
 
+## 소스
+
+- https://github.com/saltfactory/docker-ubuntu-tutorial/tree/master/gpg
+
 ## 참고
 
 1. http://thejohnreed.com/2014/08/23/gnupg-2-on-ubuntu/#Generating_a_private_key
