@@ -191,6 +191,8 @@ SCP에 관련된 데모를 서버가 없어 테스트를 할 수 없다면 githu
 
 ## GnuPG 파일 암호 설정
 
+**CASE 메인서버:**
+
 파일을 백업할 때 원본 데이터를 백업할 수도 있지만 보안상 다른 서버에 파일을 백업할 때는 파일을 암호화해서 복사해두는 것이 좋다. **Duplicity**에서는 [GnuPG](https://www.gnupg.org/)를 사용하여 파일을 암호화해서 백업을 할 수 있도록 지원한다. 이 기능을 사용하기 전에 GunPG key를 생성해야한다.
 
 ```
@@ -268,6 +270,8 @@ sub   2048R/3AA6435D 2015-07-17
 
 ## Duplicity로 백업서버에 백업하기
 
+**CASE 메인서버:**
+
 **"mainServer"**의 파일을 **GnuPG**로 암호화해서 **"백업서버"**로 파일을 백업해보자. **Duplicity**의 백업은 **full**과 **incremental** 모드로 백업을 할 수 있다. 이것을 생략하면 자동으로 **full**로 백업을 한다.
 
 ```
@@ -288,12 +292,16 @@ duplicity --encrypt-key 2AEE1A60 --include /home/mainuser/data --exclude '**' /h
 ![백업대상 백업](http://assets.hibrainapps.net/images/rest/data/548?size=full&m=1437115023)
 
 
+**CASE 백업서버:**
+
 **"백업서버"**에서 백업된 파일을 확인하자. 백업서버에서는 **/home/backupuser/backup** 디렉토리에 백업 파일이 **GnuPG**로 암호화되어 저장되었다.
 
 ![백업파일 ](http://assets.hibrainapps.net/images/rest/data/546?size=full&m=1437096258)
 
 
 ## Duplicity로 복구하기
+
+**CASE 메인서버:**
 
 백업을 하는 목적은 만약에 원본 파일에 문제가 발생했을 때를 대비하기 위해서이다. 서버에 파일이 어떤 원인으로 삭제되었다고 가정해보자.
 
