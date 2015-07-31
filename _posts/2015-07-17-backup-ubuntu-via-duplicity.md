@@ -375,7 +375,7 @@ chmod 755 /etc/cron.daily/backup
 
 이 글을 포스팅하기 위해서 [SCP에 관련된 예제](https://github.com/saltfactory/docker-ubuntu-tutorial/tree/master/scp)와 [GPG에 관련된 예제](https://github.com/saltfactory/docker-ubuntu-tutorial/tree/master/gpg)를 **docker**에서 테스트할 수 있도록 준비했었다. 또한 [docker에서 GnuPG 키 생성 문제 해결과 파일 암호화/복호화 하기](http://blog.saltfactory.net/docker/generate-gpg-key-inside-docker.html) 글을 앞에서 준비했다. **Ubuntu** 서버를 운영하면서 **백업**에 대해서 좀 더 신경을 써고 싶다고 생각한다면 **Duplicity**를 사용하면 대안이 될 것이다. Duplicity는 강력한 백업과 복원 기능을 가지고 있고 **증분백업**과 **파일암호화**를 지원하기 때문에 **보안**과 **디스크용량**에 대해서 좀 더 효과적으로 사용할 수 있다. 이 글에 대한 내용또한 docker에서 테스트할 수 있도록 준비했다. 다시 말해서 docker에서 운영하는 서버 백업도 **Duplicity**를 사용하여 백업할 수 있을 것이다.
 
-## 실습예제
+## 실습
 
 - https://github.com/saltfactory/docker-ubuntu-tutorial/tree/master/duplicity
 
