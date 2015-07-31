@@ -13,7 +13,6 @@ permalink: /about/
 * [하이브레인넷](http://www.hibrain.net) 부설연구소
 * [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)
 
-
 ## 연락처
 
 * homepage : http://saltfactory.net
@@ -21,6 +20,11 @@ permalink: /about/
 * email : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
 * twitter : [@saltfactory](https://twitter.com/saltfactory)
 * facebook : [salthub](https://facebook.com/salthub)
+
+## 저서
+
+* [흥릉과학출판사](http://www.hongpub.co.kr/), 엣지있게 설명한 Ionic, 2015, ISBN 979-11-5600-381-6 ([yes24](http://www.yes24.com/24/Goods/19600736?Acode=101))
+* [마이크로소프트웨어](https://www.imaso.co.kr/) 2015년 7월호 2015 Google I/O Android Studio Preview 기고 ([교보문고](http://digital.kyobobook.co.kr/digital/ebook/ebookDetail.ink?selectedLargeCategory=001&barcode=480D150709260&orderClick=LAA&Kc=), [yes24](http://www.yes24.com/24/goods/19275465?scode=032&OzSrank=1))
 
 ## 기부하기
 
@@ -38,6 +42,9 @@ permalink: /about/
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 </p>
+
+
+
 ## 강의요청
 
 강의 요청은 다음 내용을 포함하여 <a href="mailto:saltfactory@gmail.com">saltfactory@gmail.com</a>으로 문의하시면 됩니다.
@@ -48,7 +55,6 @@ permalink: /about/
 * 장소 : *예) 하이브리드중소기업 4층 210호*
 * 대상 : *예) 개발부서 및 학생 30명*
 * 강의료 : *예) 시간당 0원*
-
 
 
 ![](http://assets.hibrainapps.net/images/var/albums/hbncloud/public/170527_1397357473697_3166009_o.jpg?m=1433686674)
