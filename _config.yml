@@ -5,6 +5,8 @@ base_url: ""
 url: "http://blog.saltfactory.net"
 
 excerpt_separator : <!--more-->
+tags_dir: tags
+categories_dir: categories
 
 paginate: 5
 

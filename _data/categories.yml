@@ -1,0 +1,49 @@
+android :
+  permalink: /categories/android/
+  redirect_from: /category/Android/
+
+appspresso :
+  permalink: /categories/appspresso/
+  redirect_from: /category/Hybrid%20App/Appspresso/
+
+database :
+  permalink: /categories/database/
+  redirect_from:
+    - /category/Database/
+    - /category/Database/Oracle/
+    - /category/Database/MySQK/
+    - /category/Database/MongoDB/
+    - /category/Database/SQLite/
+    - /category/Database/Redis/
+
+html5 :
+  permalink: /categories/html5/
+  redirect_from:
+    - /category/Web/
+    - /category/Web/HTHML5/
+
+hybridapp :
+  permalink: /categories/hybridapp/
+  redirect_from:
+    - /category/Hybrid%20App/
+    - /category/Hybrid%20App/Phonegap/
+
+ionic :
+  permalink: /categories/ionic/
+  redriect_from: /category/Hybrid%20App/Ionic%20Framework/
+
+ios :
+  permalink: /categories/ios/
+  redirect_from: /category/iOS/
+
+java :
+  permalink: /categories/java/
+  redirect_from:
+    - /category/Java/
+    - /category/Java/Scala/
+
+javascript :
+  permalink: /categories/javascript/
+  redirect_from:
+    - /category/JavaScript/
+    - /category/JavaScript/AngularJS/

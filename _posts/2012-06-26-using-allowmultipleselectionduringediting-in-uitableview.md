@@ -2,7 +2,7 @@
 layout: post
 title: UITableView에서 allowMultipleSelectionDuringEditing을 사용하여 여러개의 행 처리하기
 category: ios
-tags: [ios, sdk, objective-c, uitableview, allowmultipleselectionduringediting]
+tags: [ios, sdk, objective-c, uitableview]
 comments: true
 redirect_from: /161/
 disqus_identifier : http://blog.saltfactory.net/161
