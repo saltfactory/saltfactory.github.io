@@ -23,7 +23,7 @@ permalink: /about/
 
 ## 저서
 
-* [흥릉과학출판사](http://www.hongpub.co.kr/), 엣지있게 설명한 Ionic, 2015, ISBN 979-11-5600-381-6 ([yes24](http://www.yes24.com/24/Goods/19600736?Acode=101))
+* [흥릉과학출판사](http://www.hongpub.co.kr/), 엣지있게 설명한 Ionic, 2015, ISBN 979-11-5600-381-6 ([교보문고](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791156003816&orderClick=LAG&Kc=), [yes24](http://www.yes24.com/24/Goods/19600736?Acode=101))
 * [마이크로소프트웨어](https://www.imaso.co.kr/) 2015년 7월호 2015 Google I/O Android Studio Preview 기고 ([교보문고](http://digital.kyobobook.co.kr/digital/ebook/ebookDetail.ink?selectedLargeCategory=001&barcode=480D150709260&orderClick=LAA&Kc=), [yes24](http://www.yes24.com/24/goods/19275465?scode=032&OzSrank=1))
 
 ## 기부하기
