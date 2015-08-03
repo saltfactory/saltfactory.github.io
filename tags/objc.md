@@ -2,5 +2,4 @@
 layout: posts_by_tag
 tag: objc
 permalink: /tags/objc/
-redirect_from: /tag/objc/
 ---
