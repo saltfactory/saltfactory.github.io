@@ -3,6 +3,9 @@ email: saltfactory@gmail.com
 description: "하이브리드 모바일 앱, HTML5, 웹 프로그래밍, 데이터베이스, 운영체제, 프로그래밍 언어 그리고 IT 기술에 관한 연구 내용에 관한 saltfactory's blog 입니다."
 base_url: ""
 url: "http://blog.saltfactory.net"
+author :
+  name : saltfactory
+  email : saltfactory@gmail.com
 
 excerpt_separator : <!--more-->
 tags_dir: tags

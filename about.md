@@ -15,11 +15,13 @@ permalink: /about/
 
 ## 연락처
 
-* homepage : http://saltfactory.net
-* github : http://github.com/saltfactory
-* email : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* twitter : [@saltfactory](https://twitter.com/saltfactory)
-* facebook : [salthub](https://facebook.com/salthub)
+* Homepage : http://saltfactory.net
+* GitHub : http://github.com/saltfactory
+* Email : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
+* Twitter : [@saltfactory](https://twitter.com/saltfactory)
+* Facebook : [salthub](https://facebook.com/salthub)
+* Google Plus : https://plus.google.com/+SungKwangSong/
+* LinkedIn : https://www.linkedin.com/in/saltfactory
 
 ## 저서
 
