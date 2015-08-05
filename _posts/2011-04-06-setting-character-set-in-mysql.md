@@ -12,6 +12,7 @@ disqus_identifier : http://blog.saltfactory.net/21
 
 mysql을 처음 설치하면 디폴트 캐릭터가 OS의 LANG에 영향을 받거나 Latin1으로 설정되어 있다.
 지금 설치되어 있는 MySQL의  character 를 확인하려면 다음 명령어를 실행하면 알 수 있다.
+<!--more-->
 
 ```
 show variables link 'c%'
