@@ -4,8 +4,8 @@ title: Node.js를 사용하여 웹과 서버프로그램 동시에 사용 가능
 category: node
 tags: [javascript, node]
 comments: true
-redirect_from: /199/
-disqus_identifier : http://blog.saltfactory.net/199
+redirect_from: /197/
+disqus_identifier : http://blog.saltfactory.net/197
 ---
 
 ## 서론
