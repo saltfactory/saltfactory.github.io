@@ -64,7 +64,7 @@ Nokogiri를 이용한 HTML 파싱 테스트를 http://www.ruby-lang.org/en/commu
 
 ![](http://cfile3.uf.tistory.com/image/150211374EEAD0EE074074)
 
-이 커뮤니티 사이트에서 제목만을 가져오고 싶다고 할때 HTML구조를 살펴보면 <div id="content"><dl><dt><a> 태그 밑에 제목들이 있다는 것을 알 수 있다. 이를 XPath로 접근하고자 할때 `//div[@id="content"]/dl/dt/a` 로 접근을 할 수 있는데 Nokogiri에서는 다음과 같이 표현할 수 있다.
+이 커뮤니티 사이트에서 제목만을 가져오고 싶다고 할때 HTML구조를 살펴보면 `<div id="content"><dl><dt><a>` 태그 밑에 제목들이 있다는 것을 알 수 있다. 이를 XPath로 접근하고자 할때 `//div[@id="content"]/dl/dt/a` 로 접근을 할 수 있는데 Nokogiri에서는 다음과 같이 표현할 수 있다.
 
 ```ruby
 require "open-uri"
