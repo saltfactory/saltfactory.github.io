@@ -1,6 +1,6 @@
 ---
 layout: post
-title : GitHub Pages 블로그 네이버 검색등록하기
+title : GitHub Pages 블로그 네이버(Naver) 검색등록하기
 category : naver
 tags : [github, naver, blog, syndicator, rss, feed]
 comments : true
