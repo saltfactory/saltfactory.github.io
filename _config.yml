@@ -7,6 +7,7 @@ author :
   name : saltfactory
   email : saltfactory@gmail.com
 
+encoding: utf-8
 excerpt_separator : <!--more-->
 tags_dir: tags
 categories_dir: categories
