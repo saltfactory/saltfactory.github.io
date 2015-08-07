@@ -24,7 +24,7 @@ title : Atom Feed
     </author>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <published>{{ post.date | date_to_xmlschema }}</published>
-    <link ref="via" href="{{ site.url }}{{ post.url }}" title="{{ post.title | xml_escape }}"/>
+    <link rel="via" href="{{ site.url }}{{ post.url }}" title="{{ post.title | xml_escape }}"/>
 
       <id>{{ site.production_url }}{{ post.id }}</id>
     <content type="html">{{ post.content | xml_escape }}</content>
