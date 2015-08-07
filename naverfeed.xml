@@ -6,7 +6,7 @@ title : Atom Feed
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://webmastertool.naver.com">
   <id>{{ site.url }}</id>
-  <title>{{ site.title | xml_escape }}</title>
+  <title><![CDATA[ {{ site.title | xml_escape }} ]]></title>
   <author>
     <name>{{ site.author.name | xml_escape }}</name>
     <email>{{ site.author.email }}</email>
@@ -27,7 +27,7 @@ title : Atom Feed
     <link rel="via" href="{{ site.url }}{{ post.url }}" />
 
       <id>{{ site.production_url }}{{ post.id }}</id>
-    <content type="html">{{ post.content | xml_escape }}</content>
+    <content type="html"><![CDATA[  {{ post.content | xml_escape }} ]]></content>
   </entry>
   {% endfor %}
 </feed>
