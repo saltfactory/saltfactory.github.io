@@ -5,7 +5,7 @@ category : naver
 tags : [github, naver, blog, syndicator, rss, feed]
 comments : true
 images :
-  http://assets.hibrainapps.net/images/rest/data/617?size=full
+  title: http://assets.hibrainapps.net/images/rest/data/617?size=full
 ---
 
 ## 서론
