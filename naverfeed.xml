@@ -2,31 +2,44 @@
 layout: null
 title : Atom Feed
 ---
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://webmastertool.naver.com">
-  <id>{{ site.url }}</id>
+<feed xmlns="http://purl.org/atom/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:activity="http://activitystrea.ms/spec/1.0/" version="0.3">
   <title>{{ site.title | xml_escape }}</title>
+  <link href="{{ site.url }}"/>
   <author>
     <name>{{ site.author.name | xml_escape }}</name>
     <email>{{ site.author.email }}</email>
   </author>
+  <id>{{ site.url }}</id>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <link href="{{ "/atom.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/atom+xml" />
-  <link href="{{ site.url }}"/>
+  <modified>{{ site.time | date_to_xmlschema }}</modified>
 
   {% for post in site.posts limit:20 %}
   <entry>
-    <id>{{ site.production_url }}{{ post.id }}</id>
     <title>{{ post.title | xml_escape }}</title>
-    <link href="{{ site.url }}{{ post.url }}"/>
+    <link href="{{ site.url }}{{ post.url }}" type="text/html"/>
+    <id>{{ site.production_url }}{{ post.id }}</id>
     <author>
       <name>{{ site.author.name | xml_escape }}</name>
       <email>{{ site.author.email }}</email>
     </author>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <published>{{ post.date | date_to_xmlschema }}</published>
+    <modified>{{ post.date | date_to_xmlschema }}</modified>
+    <issued>{{ post.date | date_to_xmlschema }}</issued>
+    <created>{{ post.date | date_to_xmlschema }}</created>
     <content type="html">{{ post.content | xml_escape }}</content>
+    <summary type="text/html" mode="escaped">
+      <![CDATA[
+      {{ post.excerpt | split: '</h2>' | last | strip_html | truncate:200}}
+      ]]>
+    </summary>
+    <tag>
+      <![CDATA[ {{ post.tags | array_to_sentence_string }} ]]>
+    </tag>
+    <activity:object>
+      <activity:object-type>http://activitystrea.ms/schema/1.0/blog-entry</activity:object-type>
+    </activity:object>
+    <activity:verb>http://activitystrea.ms/schema/1.0/post</activity:verb>
   </entry>
- {% endfor %}
-
+  {% endfor %}
 </feed>
