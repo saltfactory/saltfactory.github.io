@@ -370,6 +370,12 @@ docker-machine rm dev
 
 Docker는 사용자에게 좀 더 편리하게 Docker를 사용할 수 있는 환경을 공식적으로 지원하려고 하고 있다. Docker는 기본적으로 리눅스에서 동작하는데 많은 개발자들이 Mac이나 Windows 운영체제에서 개발을 하기 때문에 **Boot2Docker**라는 것을 사용하여 VM 기반의 docker 운영을 할 수 있었다. Docker에서는 **Docker Machine**이라는 것을 베타로 릴리즈하였고 Boot2Docker 지원을 deprecated 시켰다. 이젠 앞으로 Docker Machine을 사용하여 Mac에서 Docker 기반 프로젝트를 진행해야할 것이다. 이에 따라 Docker Machine으로 마이그레이션하는 방법과 명령어에 대해서 간단하게 살펴보았다.
 
+## 참고
+
+1. https://docs.docker.com/machine/
+2. https://docs.docker.com/machine/get-started/
+3. https://docs.docker.com/machine/migrate-to-machine/
+
 
 ## 연구원 소개
 
