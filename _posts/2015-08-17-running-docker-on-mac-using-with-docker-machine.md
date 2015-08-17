@@ -168,7 +168,7 @@ docker-machine inspect default
 | restart | 머신 재시작 |
 | rm | 머신 삭제 |
 | ssh | 머신에 ssh 접속 |
-| scp | 버신의 파일 복사 |
+| scp | 머신의 파일 복사 |
 | start | 머신 시작 |
 | status | 머신 상태 출력 |
 | stop | 머신 중지 |
