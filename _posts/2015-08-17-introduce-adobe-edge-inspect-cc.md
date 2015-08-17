@@ -10,7 +10,7 @@ images :
 
 ## 서론
 
-모바일 웹을 개발할 때 보통 브라우저를 열어서 모바일 사이즈에 맞게 개발하거나, 반응형 웹으로 개발을 하려고 한다. 데스트탑에서 브라우저를 열어서 모바일 웹을 개발하려면 모바일 웹 사이즈에 맞게 브라우저를 줄여야한다. Google은 이런 불편함을 해결하기 위해서 Chrome 브라우저의 개발자 도구에 [Toggle Deivce Mode](https://developer.chrome.com/devtools/docs/device-mode)을 제공한다. 데스크탑에서 모바일 디바이스 사이즈에 최적화된 웹을 만들 수 있게 되었다. 하지만 이것은 데스크탑이다. 모바일 디바이스에서 동작하는 웹을 보기 위해서는 내 데스크탑을 서버로 동작시켜야하고, 디바이스에서 데스크탑의 URL을 입력해서 접근해야한다. [Adobe Edge Inspect CC](https://creative.adobe.com/products/inspect)를 사용하면 이 과정을 아주 쉽게 처리할 수 있고 모바일 디바이스에서 동작하는 웹을 디버깅할 수 있다. 
+모바일 웹을 개발할 때 보통 브라우저를 열어서 모바일 사이즈에 맞게 개발하거나, 반응형 웹으로 개발을 하려고 한다. 데스트탑에서 브라우저를 열어서 모바일 웹을 개발하려면 모바일 웹 사이즈에 맞게 브라우저를 줄여야한다. Google은 이런 불편함을 해결하기 위해서 Chrome 브라우저의 개발자 도구에 [Toggle Deivce Mode](https://developer.chrome.com/devtools/docs/device-mode)을 제공한다. 데스크탑에서 모바일 디바이스 사이즈에 최적화된 웹을 만들 수 있게 되었다. 하지만 이것은 데스크탑이다. 모바일 디바이스에서 동작하는 웹을 보기 위해서는 내 데스크탑을 서버로 동작시켜야하고, 디바이스에서 데스크탑의 URL을 입력해서 접근해야한다. [Adobe Edge Inspect CC](https://creative.adobe.com/products/inspect)를 사용하면 이 과정을 아주 쉽게 처리할 수 있고 모바일 디바이스에서 동작하는 웹을 디버깅할 수 있다.
 
 <!--more-->
 
@@ -27,7 +27,7 @@ Adobe는 CC 관련 소프트웨어를 사용하기 위해서는 반드시 Adobe 
 - [Chrome Browser Extension](https://chrome.google.com/webstore/detail/adobe-edge-inspect-cc/ijoeapleklopieoejahbpdnhkjjgddem)
 
 
-**Adobe Edge Inspect** 다운로드 페이지에서는 개발자의 경험 수준과 사용하는 곳을 입력한 이후 다운로드 받을 수 있다. 
+**Adobe Edge Inspect** 다운로드 페이지에서는 개발자의 경험 수준과 사용하는 곳을 입력한 이후 다운로드 받을 수 있다.
 
 ![Adobe Edge Inspect 다운로드](http://assets.hibrainapps.net/images/rest/data/635?size=full&m=1439775650)
 
@@ -35,7 +35,7 @@ Adobe는 CC 관련 소프트웨어를 사용하기 위해서는 반드시 Adobe 
 
 ![Adobe Creative Cloud 애플리케이션 설치화면](http://assets.hibrainapps.net/images/rest/data/638?size=full&m=1439776047)
 
-**Adobe Creative Cloud** 설치를 완료하면 메뉴바에서 **Adobe Creative Cloud**아이콘이 생긴다. 이것을 클릭하면 Adobe Account 계정으로 로그인을 할 수 있다. 
+**Adobe Creative Cloud** 설치를 완료하면 메뉴바에서 **Adobe Creative Cloud**아이콘이 생긴다. 이것을 클릭하면 Adobe Account 계정으로 로그인을 할 수 있다.
 
 ![Adobe Creative Cloud 로그인](http://assets.hibrainapps.net/images/rest/data/639?size=full&m=1439776163)
 
@@ -59,7 +59,7 @@ Adobe는 CC 관련 소프트웨어를 사용하기 위해서는 반드시 Adobe 
 
 ![Chrome browser extension 아이콘](http://assets.hibrainapps.net/images/rest/data/643?size=full&m=1439776538)
 
-아이콘을 클릭할 때 만약 **Adobe Edge Inspect**를 실행하지 않고 **Chrome Extension**을 실행하게 되면 다음과 같은 경고창이 나타난다. 
+아이콘을 클릭할 때 만약 **Adobe Edge Inspect**를 실행하지 않고 **Chrome Extension**을 실행하게 되면 다음과 같은 경고창이 나타난다.
 
 ![Inspect 경고창](http://assets.hibrainapps.net/images/rest/data/644?size=full&m=1439776617)
 
@@ -67,7 +67,7 @@ Chrome Extension을 사용하기 위해서는 반드시 위에서 다운받은 A
 
 ![Chrome extension 실행](http://assets.hibrainapps.net/images/rest/data/645?size=full&m=1439776811)
 
-이렇게 데스크탑의 내부 IP 정보와 함께 모바일 디바이스에서 엑세스 하기를 기다리고 있다. 
+이렇게 데스크탑의 내부 IP 정보와 함께 모바일 디바이스에서 엑세스 하기를 기다리고 있다.
 
 ## 모바일 앱 실행하기
 
@@ -89,7 +89,7 @@ Chrome Extension을 사용하기 위해서는 반드시 위에서 다운받은 A
 ## 모바일 웹 디버깅
 
 
-위에서 **Adobe Edge Inspect CC**를 사용하기 위한 Chrome Browser Extension을 설치했을 것이다. Chrome 도구 모음에 있는 Adboe Edge Inspect CC Extension을 클릭하면 다음과 같이 나타날 것이다. 
+위에서 **Adobe Edge Inspect CC**를 사용하기 위한 Chrome Browser Extension을 설치했을 것이다. Chrome 도구 모음에 있는 Adboe Edge Inspect CC Extension을 클릭하면 다음과 같이 나타날 것이다.
 
 > Adobe Edge Insepect CC는 데스트탑과 모바일 디바이스를 서로 연결하는데 같은 네트워크 상에 존재할 때 가능하다.
 
@@ -133,7 +133,7 @@ document.body.style.backgroundColor="pink";
 
 ![](http://assets.hibrainapps.net/images/rest/data/632?size=full&m=1439287084)
 
-모바일 디바이스를 살펴보자. 이것은 모바일에 나타난 웹에 바로 적용이 된다. **모바일 웹**에만 적용이 되는 것이다. 데스크탑에 열린 웹은 적용되지 않는다. 
+모바일 디바이스를 살펴보자. 이것은 모바일에 나타난 웹에 바로 적용이 된다. **모바일 웹**에만 적용이 되는 것이다. 데스크탑에 열린 웹은 적용되지 않는다.
 
 ![](http://assets.hibrainapps.net/images/rest/data/633?size=full&m=1439287324)
 
@@ -152,5 +152,3 @@ document.body.style.backgroundColor="pink";
 * 페이스북 : https://facebook.com/salthub
 * 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
 * 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)
-
-
