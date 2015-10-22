@@ -12,6 +12,7 @@ images :
 
 얼마전 OS X 운영체제의 업그레이드 공식 발표 이후 **Mac OS X 10.10(Yosemite)** 에서 **Mac OS X 10.11(El Capitan)**으로 업그레이드를 진행하였다. 블로그를 [Jekyll](https://jekyllrb.com/) 기반으로 운영하고 있기도 하고 [Ruby on Rails](http://rubyonrails.org/) 를 가지고 진행하는 프로젝트가 있기 때문에 Ruby 기반의 환경 개발을 위해 RVM을 항상 사용하고 있다. OS X를 업그레이드 한 이후 Xcode를 업그레이드한 것을 잊고 Jekyll 라이브러를 업그레이드하기 위해서 gem install를 실행하는데 에러가 발생해서 잠시 당황했다. 순수 Ruby로 작성된 라이브리가 아니라 native 컴파일을 사용하는 라이브러리가 컴파일러를 사용할 때 발생하는 문제였다. Xcode는 업그레이드 이후 라이센스 동의를 하지 않으면 해당 패키지들을 사용할 수 없는 이유였다. 이번 포스팅에서는 Xcode 업그레이드 이후 라이센스 동의를 하지 않았을 때 만날 수 있는 문제를 소개한다.
 
+<!--more-->
 
 ## Xcode 업그레이드 이후 gem 설치
 
