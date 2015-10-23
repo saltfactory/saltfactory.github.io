@@ -10,7 +10,7 @@ images :
 
 ## 서론
 
-웹 프로젝트를할 때 오픈소스 라이브러리를 가져와서 개발할 경우가 많은데 최근는 [bower](http://bower.io/) 를 사용하여 패키지를 관리하거나 설치하는 경우가 많다. Ruby on Rails에서 Ruby 라이브러리를 가져오기 위해서 Gemfile에 gem 라이브러리를 정의하여 bundle install 명령어로 쉽게 설치할 수 있다. Ruby on Rails는 기본적으로 Bower가 설치되어 있지 않다. 이 포스팅에서는 Ruby on Rails에서 [bower-rails](https://github.com/rharriso/bower-rails/)를 사용하여 간단하게 Bower를 사용하는 방법에 대해서 설명한다.
+웹 프로젝트를할 때 오픈소스 라이브러리를 가져와서 개발할 경우가 많은데 최근는 [bower](http://bower.io/) 를 사용하여 패키지를 관리하거나 설치하는 경우가 많다. 우리는 앞서 [Ruby on Rails에서 Bower를 사용하는 방법](http://blog.saltfactory.net/ruby/using-bower-in-ror.html)을 살펴보았다. Ruby on Rails에서 Ruby 라이브러리를 가져오기 위해서 Gemfile에 gem 라이브러리를 정의하여 bundle install 명령어로 쉽게 설치할 수 있다. Ruby on Rails는 기본적으로 Bower가 설치되어 있지 않다. 이 포스팅에서는 Ruby on Rails에서 [bower-rails](https://github.com/rharriso/bower-rails/)를 사용하여 간단하게 Bower를 사용하는 방법에 대해서 설명한다.
 
 <!--more-->
 
@@ -220,13 +220,13 @@ end
 
 ## 결론
 
-Ruby on Rails는 웹을 빠르게 개발하기 위한 풀스택 웹 개발 프레임워크이다. 최근 Node.js의 인기가 상승하면서 웹 자원의 원격저장소 관리를 bower를 사용하여 개발하는 곳이 많아졌다. RoR에서 Bower를 사용하여 bower 패키지를 설치하기 위해서는 기본적인 RoR의 패키지와 설정만으로는 사용할 수 없기 때문에 여러가지 설정을 해야한다. **bower-rails**는 RoR에서 bower를 사용하기 위한 복잡한 설정을 하지 않고 bower를 사용할 수 있도록 미들웨어 패키지로 만들고 rake 인터페이스를 제공한다. 단지 Ruby on Rails 프로젝트의 Gemfile에 bower-rails gem을 추가하여 설치하면 간단하게 bower 패키지를 설치할 수 있고 assets pipeline에 포함할 수 있도록 제공할 수 있다. RoR은 빠르게 웹을 개발할 수 있는 환경을 제공하고 Bower는 유용한 웹 자원 패키지를 체계적이고 편리하게 사용할 수 있는 저장소를 제공하기 때문에 이 두가지를 함께 사용하면 더욱 효율적이고 효과적인 빠른 웹 개발을 할 수 있을 것이다.
+Ruby on Rails는 웹을 빠르게 개발하기 위한 풀스택 웹 개발 프레임워크이다. 최근 Node.js의 인기가 상승하면서 웹 자원의 원격저장소 관리를 bower를 사용하여 개발하는 곳이 많아졌다. RoR에서 Bower를 사용하여 bower 패키지를 설치하기 위해서는 기본적인 RoR의 패키지와 설정만으로는 사용할 수 없기 때문에 여러가지 설정을 해야한다. 다른 gem 없이 RoR에서 Bower를 사용하기 위한 방법은 [Ruby on Rails 에서 bower 사용하기](http://blog.saltfactory.net/ruby/using-bower-in-ror.html) 글에서 소개했다. **bower-rails**는 RoR에서 bower를 사용하기 위한 복잡한 설정을 하지 않고 bower를 사용할 수 있도록 미들웨어 패키지로 만들고 rake 인터페이스를 제공한다. 단지 Ruby on Rails 프로젝트의 Gemfile에 bower-rails gem을 추가하여 설치하면 간단하게 bower 패키지를 설치할 수 있고 assets pipeline에 포함할 수 있도록 제공할 수 있다. RoR은 빠르게 웹을 개발할 수 있는 환경을 제공하고 Bower는 유용한 웹 자원 패키지를 체계적이고 편리하게 사용할 수 있는 저장소를 제공하기 때문에 이 두가지를 함께 사용하면 더욱 효율적이고 효과적인 빠른 웹 개발을 할 수 있을 것이다.
 
 
 ## 참고
 
 1. https://github.com/rharriso/bower-rails/
-
+2. http://blog.saltfactory.net/ruby/using-bower-in-ror.html
 
 ## 연구원 소개
 
