@@ -1,6 +1,6 @@
 ---
 layout: post
-title : Rails 에서 bower를 사용하여 Bootstrap, Bootstrap-Sass 적용하기
+title : Ruby on Rails 에서 bower를 사용하여 Bootstrap, Bootstrap-Sass 적용하기
 category : ruby
 tags : [ruby, gem, ror, bower, rails, bootstrap]
 comments : true
