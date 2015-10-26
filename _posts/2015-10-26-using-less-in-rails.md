@@ -136,7 +136,7 @@ npm install -g bower
 
 ```
 bower init
-``
+```
 
 생성된 bower.json 파일에 bootstrap 패키지를 추가한다.
 
