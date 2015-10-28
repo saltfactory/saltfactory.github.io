@@ -11,6 +11,8 @@ images :
 ## 서론
 Ruby on Rails는 개발자에게 빠르게 웹을 개발할 수 있게 설계되어져 있다. Ruby on Rails는 가장 인기있는 JavaScript 프레임워인 jQuery를 기본적으로 가지고 있고, 이것을 사용하여 Ajax 서비스를 쉽게 설계하고 빠르게 개발할 수 있다. 또한 RoR은 뷰를 필요한 조각으로 분리하여 개발할 수 있는 [partial](http://guides.rubyonrails.org/layouts_and_rendering.html) 이라는 개념을 가지고 있기 때문에 복잡한 뷰를 재활용 가능하게 간단하게 분리해서 만들 수 있다. 이 포스팅에서는 RoR의 Ajax 기능과 partial을 사용하여 페이지 전환없이 뷰를 업데이트하는 방법을 소개한다.
 
+<!--more-->
+
 ## 테스트를 위한 프로젝트 생성
 
 우선 테스트를 위해서 TestApp 이라는 이름으로 프로젝트를 생성하자.
