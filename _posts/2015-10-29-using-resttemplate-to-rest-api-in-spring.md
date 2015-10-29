@@ -10,7 +10,7 @@ images :
 
 
 ## 서론
-Microservice 아키텍처와 유사한 서비스를 구현한 이후 웹 어플리케이션에서 컨트롤러에서 API 서버로 REST 요청을 해야하는 경우를 만날 수 있다. 만약 Spring 기반은 웹 어플리케이션을 사용하고 있다면 RestTemplate을 사용하여 이 과정을 간단하게 처리할 수 있다. 이 포스팅에서는 Spring 기반 프로젝트에서 웹에서 Form 요청을 처리할 때 내부적으로 API 서버로 요청하여 다시 Spring에 결과를 적용하는 방법을 소개한다.
+마이크로서비스 아키텍처와 유사한 서비스를 구현할 때 웹 어플리케이션 컨트롤러에서 API 서버로 REST 요청을 해야하는 경우를 만날 수 있다. 만약 Spring 기반은 웹 어플리케이션을 사용하고 있다면 [RestTemplate](http://docs.spring.io/autorepo/docs/spring-android/1.0.x/reference/html/rest-template.html)을 사용하여 이 과정을 간단하게 처리할 수 있다. 이 포스팅에서는 Spring 기반 프로젝트에서 웹에서 Form 요청을 처리할 때 내부적으로 API 서버로 요청하여 다시 Spring에 결과를 적용하는 방법을 소개한다.
 
 <!--more-->
 
