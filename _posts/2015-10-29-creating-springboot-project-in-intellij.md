@@ -139,7 +139,7 @@ public class PostsController {
     @RequestMapping(value = "/posts/new", method = RequestMethod.GET)
     public String newPost(Model model) {
         model.addAttribute("post", new Post());
-        return “new”;
+        return "new";
     }
 }
 
@@ -217,7 +217,7 @@ public class PostsController {
     public String createPost(@ModelAttribute Post post, Model model) {
         model.addAttribute("post", post);
 
-        return “show”;
+        return "show";
     }
 }
 ```
@@ -255,6 +255,12 @@ http://localhost:8080/posts/new
 PostsController에서 **RestMethod.POST** 를 처리하고 입력으로 받은 post를 다시 model에 저장하여 show.html 뷰 템플릿을 사용하여 결과를 보여준다.
 
 ![](http://assets.hibrainapps.net/images/rest/data/761?size=full&m=1446094523)
+
+
+## 결론
+
+우리는 Spring 기반 웹 프로젝트를 빠르게 테스트해야할 경우 SpringBoot를 사용하여 테스트를 진행한다. SpringBoot는 Maven과 Gradle 로 생성하여 프로젝트를 관리할 수 있는데 터미널에서 Java 프로젝트를 진행하기에는 약간 어려움이 있다. 그래서 우리는 IntelliJ 라는 IDE를 사용하여 Spring 관련 Java 프로젝트를 개발하고 있다. IntelliJ 14.1 버전 이상부터는 IntelliJ에서 공식적으로 SpringBoot 프로젝트를 지원한다. 이번 포스팅에서는 IntelliJ에서 간단한 SpringBoot 웹 프로젝트를 생성하여 GET, POST를 처리하는 방법을 살펴보았다. SpringBoot를 사용한 Spring 프로젝트 개발에 관련된 내용을 지속적으로 업데이트할 예정이다.
+
 
 ## 참고
 
