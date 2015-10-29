@@ -109,6 +109,7 @@ curl --data "title=API 테스트&content=테스트내용" http://localhost:3000/
 Spring 기반의 웹 페이지인 http://localhost:8080/posts/new URL로 **GET**으로 요청한다. new.html 뷰의 입력폼에 데이터를 입력하고 submit을 클릭하면 http://localhost:8080/posts 로 **POST**를 요청한다. Spring 기반의 서버에서 POST 요청을 처리하는 메소드에서 내부적으로 http://localhost:3000/posts.json 으로 POST로 REST API를 요청하는데 이때 앞에서 FORM으로 요청한 모든 파라미터를 그대로 가지고 REST API 서버로 POST를 요청한다. 실제 데이터를 데이터베이스에 저장하는 것은 이곳에서 처리를하고 저장된 결과 값을 가지고 JSON을 만들어서 다시 Spring 컨트롤러에게 reponse를 돌려준다. 이제 Spring 서버의 컨트롤러는 받은 결과를 Model에 저장하여 show.html으로 결과 값을 화면에 보여주게 된다.
 
 우선 POST 요청이 들어오면 내부적으로 REST API 서버로 데이터를 요청하는 것을 위해 다음과 같이 이전에 만든 코드를 수정한다.
+기존은 ModelAttribute로 넘어온 입력값들을 show.html에 보여주기 위해서 단순히 모델에 다시 저장해서 넘겨줬지만, **RestTemplate**를 사용하여 다른 REST API 서버로 POST 요청을 보내고 그 결과를 POJO 객체로 매핑한 다음 그 결과를 모델에 저장하여 show.html을 호출하도록 하였다. **RestTemplate.postForObject()**는 POJO를 가지고 POST를 요청하고 JSON 결과를 POJO로 자동으로 매핑해주는 메소드이다.
 
 ```java
 package net.saltfactory.demo;
