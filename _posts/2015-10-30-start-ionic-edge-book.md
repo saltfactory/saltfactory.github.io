@@ -1,6 +1,6 @@
 ---
 layout: post
-title : Ionic 개발환경 설정 및 엣지있게 설명한 Ionic 책 예제 실습 방법
+title : Ionic 하이브리드 앱 개발환경 설정 및 엣지있게 설명한 Ionic 책 예제 실습 방법
 category : ionic
 tags : [ionic, hybrid, html5, cordova, ios, android]
 comments : true
