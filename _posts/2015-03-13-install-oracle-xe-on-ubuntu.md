@@ -164,7 +164,7 @@ sudo mkdir /dev/shm
 ```
 
 ```
-sudo mount -t tmpfs shmfs -size=4096m /dev/shm
+sudo mount -t tmpfs shmfs -o -size=4096m /dev/shm
 ```
 
 shm 설정을 데몬에 등록해서 로드하도록 하기 위해서 다음 내용을 `/etc/rc2.d/S01shm_load` 파일로 등록한다.
