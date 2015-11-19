@@ -52,6 +52,14 @@ idea {
 }
 ```
 
+만약 템플릿을 사용한다면 다음과 같에 **src/main/resources/application.properties** 파일을 열어서 템플릿 캐시를 꺼둔다.
+
+```java
+spring.thymeleaf.cache=false
+```
+
+
+
 이제 Spring 프로젝트의 리로드 설정이 모두 끝났다. 정말 간단하지 않는가? 단 몇줄을 스크립트를 추가하는 것만으로 복잡한 리로드 메카니즘을 구현한 것이다. 이것인 Spring Boot와 gradle의 장점이라고 생각한다.
 
 ## 서버 시작
@@ -63,7 +71,7 @@ idea {
 
 ## 정적파일 수정
 
-우리는 서버가 실행된 상태에서 정적 파일 수정이 적용되는지 알아보자. 앞에서 생성한 프로젝트에서 HTML 파일을 수정하자. 기존 예제에서는 style.css 파일을 포함하고 있지 않았는데 스타일을 적용하기 위해서 **src/resrouces/static/css/style.css** 파일을 추가한다.
+우리는 서버가 실행된 상태에서 정적 파일 수정이 적용되는지 알아보자. 앞에서 생성한 프로젝트에서 HTML 파일을 수정하자. 기존 예제에서는 style.css 파일을 포함하고 있지 않았는데 스타일을 적용하기 위해서 **src/main/resources/static/css/style.css** 파일을 추가한다.
 
 ```css
 body {
