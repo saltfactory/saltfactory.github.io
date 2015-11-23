@@ -52,7 +52,6 @@ fixtures:
 package net.saltfactory.tutorial;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.context.properties.NestedConfigurationProperty;
 import org.springframework.stereotype.Component;
 
@@ -66,7 +65,6 @@ import java.util.Map;
  * Created  : 11/23/15.
  */
 @Component
-@EnableConfigurationProperties
 @ConfigurationProperties(locations = {"fixtures.yml"}, prefix = "fixtures")
 public class FixturesProperty {
     @NestedConfigurationProperty
@@ -232,7 +230,6 @@ public class Article implements Serializable {
 package net.saltfactory.tutorial;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.context.properties.NestedConfigurationProperty;
 import org.springframework.stereotype.Component;
 
@@ -245,7 +242,6 @@ import java.util.List;
  * Created  : 11/23/15.
  */
 @Component
-@EnableConfigurationProperties
 @ConfigurationProperties(locations = {"fixtures.yml"}, prefix = "fixtures")
 public class FixturesProperty {
     private List<Article> articles = new ArrayList<>();
