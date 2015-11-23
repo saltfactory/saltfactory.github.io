@@ -487,6 +487,10 @@ public class FixturesPropertyTest {
 
 최신 Spring은 좀더 계층구조를 표현하기 쉽고 사람이 읽기 쉬운 YAML 파일을 로드할 수 있는 기능을 포함하였다. Spring Boot에서는 Spring 어플리케이션의 설정을 **src/main/resources/application.properties**에서 정의하면 자동으로 어플리케이션에 적용이되는데 YAML 파일을 사용하여 **application.yml** 파일을 만들어도 자동으로 적용을 할 수 있다. **SnakeYAML** 라이브러리를 포함하고 있는 Spring Boot에서는 YAML 파일을 읽어들어 Map이나 POJO에 바로 매핑하여 데이터를 로드할 수 있다. 더구나 **@ConfigurationProperties**를 사용하면 Spring 어플리케이션에서 YAML 파일을 Configuration Property 파일로 인식하여 특별한 자바 코드 없이도 Spring annotation 만으로도 외부의 YAML 파일을 로드할 수 있다. 만약 데이터베이스가 없는 데모 어플리케이션을 만들거나 테스트를 위한 간단한 데이터를 외부 파일에서 조작하기 위해서 YAML 파일을 사용하여 데이터를 정의하여 사용하면 매우 간단하게 처리할 수 있다.
 
+## 소스코드
+
+- https://github.com/saltfactory/saltfactory-java-tutorial/tree/spring-boot-yaml/SpringBootDemo
+
 ## 참조
 
 1. https://bitbucket.org/asomov/snakeyaml
