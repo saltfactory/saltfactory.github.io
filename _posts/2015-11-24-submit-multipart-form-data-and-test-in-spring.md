@@ -2,7 +2,7 @@
 layout: post
 title : Spring에서 REST 서비스를 위한 컨트롤러에 FORM과 파일업로드(multipart/form-data)를 함께 사용하기와 컨트롤러 테스트하기
 category : java
-tags : [java, spring, springboot, form, fileupload]
+tags : [java, spring, springboot, form, fileupload, unit-testing]
 comments : true
 images :
   title : http://assets.hibrainapps.net/images/rest/data/770?size=full
