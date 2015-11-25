@@ -26,7 +26,7 @@ Spring 기반 프로젝트를 진행하면 컴포넌트 내부에서 URL을 요�
 
 우리는 **RestTemplate**에 관한 테스트를 진행할 것이기 때문에 앞에서 **ArticlesControllerTests** 파일을 참조하여 **src/test/{패키지명}/RestTemplateTests.java** 파일을 다음과 같이 만들자.
 
-- **@WebIntegrationTest("server.port=0")** : 테스트를 위해서 동작하는 웹 서버 포트 번호를 지정할 수 있는데 이 값이 **0**이면 랜덤으로 테스트를 할 때 지정하여 동작하게 된다. 이 때 지정된 포트번호는 `@Value("{local.server.port}") int port;`  형태로 injection으로 값을 가져올 수 있다. WebIntegrationTest 방법으로 테스트를 진행할 때는 실제 테스트를 위한 웹 서버가 동작하는 것이기 때문에 서버에 접근할 수 있는 URL이 필요하다. 우리는 포트번호를 랜덤하게 정하였기 때문에 기본적으로 URL을 만들기 위해서 `String baseUrl`변수를 만들었고 이것은 테스트가 진행할 때 `@before` 테스트 시작 전에 포트번호를 가지고 URL의 앞부분을 만들 것이다. 예를 들면 http://localhost:81268 와 같은 식으로 만들어지는 것이다. 그리고 우리는 웹 서버에 접근하여 Http Request를 요청하는 것을 **RestTemplate**으로 사용할 것이기 때문에 테스트 전에 객체를 생성하도록 하였다.
+**@WebIntegrationTest("server.port=0")** : 테스트를 위해서 동작하는 웹 서버 포트 번호를 지정할 수 있는데 이 값이 **0**이면 랜덤으로 테스트를 할 때 지정하여 동작하게 된다. 이 때 지정된 포트번호는 `@Value("{local.server.port}") int port;`  형태로 injection으로 값을 가져올 수 있다. WebIntegrationTest 방법으로 테스트를 진행할 때는 실제 테스트를 위한 웹 서버가 동작하는 것이기 때문에 서버에 접근할 수 있는 URL이 필요하다. 우리는 포트번호를 랜덤하게 정하였기 때문에 기본적으로 URL을 만들기 위해서 `String baseUrl`변수를 만들었고 이것은 테스트가 진행할 때 `@before` 테스트 시작 전에 포트번호를 가지고 URL의 앞부분을 만들 것이다. 예를 들면 http://localhost:81268 와 같은 식으로 만들어지는 것이다. 그리고 우리는 웹 서버에 접근하여 Http Request를 요청하는 것을 **RestTemplate**으로 사용할 것이기 때문에 테스트 전에 객체를 생성하도록 하였다.
 
 ```java
 package net.saltfactory.tutorial;
@@ -101,19 +101,19 @@ public class RestTemplateTests {
 MockMvc를 사용하여 테스트한 코드를 먼저 살펴보자.
 
 ```java
-    @Test
-    public void testIndex() throws Exception {
-        List<Article> articles = articlesService.getArticles();
-        String jsonString = this.jsonStringFromObject(articles);
+@Test
+public void testIndex() throws Exception {
+    List<Article> articles = articlesService.getArticles();
+    String jsonString = this.jsonStringFromObject(articles);
 
-        MvcResult result = mockMvc.perform(get("/api/articles"))
-                .andExpect(status().isOk())
-                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-                .andExpect(content().string(equalTo(jsonString)))
-                .andReturn();
+    MvcResult result = mockMvc.perform(get("/api/articles"))
+            .andExpect(status().isOk())
+            .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+            .andExpect(content().string(equalTo(jsonString)))
+            .andReturn();
 
-        logger.info(result.getResponse().getContentAsString());
-    }
+    logger.info(result.getResponse().getContentAsString());
+}
 ```
 
 이제 RestTemplate을 사용하여 실제 웹 서버로 GET 요청을 해보자. RestTemplate으로 Http GET 요청을 하는 방법는 여러가지가 있는데 크게 다음가 같다.
@@ -126,22 +126,22 @@ MockMvc를 사용하여 테스트한 코드를 먼저 살펴보자.
 다음 예제는 http://localhost:{port}/api/articles 로 RestTemplate을 사용하여 **HttpMethod.GET** 요청을 하는 테스트이다. 이 때 결과 반환값을 JSON 문자열로 받고 싶어서 결과 반환 값을 **String.class**로 지정하였다. **restTemplate.getForObject(uri,반환될 객체 타입)** 으로 보면 된다. RestTemplate의 HttpMethod.GET의 결과를 확인하기 위해서 로깅을 해보았다. 만약 RestTemplate가 웹 서버에 정상적인 요청을 했다면 Articles의 List 타입이 JSON으로 만들어져 보일것이다. 컨트롤러를 요청한 결과과 맞는지 확인하기 위해서 ArticlesService.getArticles()로 가져오는 결과와 비교했다.
 
 ```java
-    @Test
-    public void testIndex() throws Exception {
+@Test
+public void testIndex() throws Exception {
 
-        URI uri = URI.create(baseUrl+ "/api/articles");
-        String responseString = restTemplate.getForObject(uri, String.class);
+    URI uri = URI.create(baseUrl+ "/api/articles");
+    String responseString = restTemplate.getForObject(uri, String.class);
 
-        // 컨트롤러 결과를 로깅
-        logger.info(responseString);
+    // 컨트롤러 결과를 로깅
+    logger.info(responseString);
 
-        // 컨트롤러 결과를 확인하기 위한 데이터 가져오기
-        List<Article> articles = articlesService.getArticles();
-        String jsonString = jsonStringFromObject(articles);
+    // 컨트롤러 결과를 확인하기 위한 데이터 가져오기
+    List<Article> articles = articlesService.getArticles();
+    String jsonString = jsonStringFromObject(articles);
 
-        // 컨트롤러의 결과와 JSON 문자열로 비교
-        assertThat(responseString, is(equalTo(jsonString)));
-    }
+    // 컨트롤러의 결과와 JSON 문자열로 비교
+    assertThat(responseString, is(equalTo(jsonString)));
+}
 ```
 
 RestTemplate.getForObject()로 HttpMethod.GET을 요청한 결과는 정상적이고 컨트롤르에서 반환한 JSON을 로깅을 통해서 확인할 수 있다.
@@ -153,25 +153,25 @@ RestTemplate을 사용하여 API 서버에서 JSON 문자열로 반환받게 되
 위 테스트를 다음과 같이 수정해보자.
 
 ```java
-    @Test
-    public void testIndex() throws Exception {
+@Test
+public void testIndex() throws Exception {
 
-        URI uri = URI.create(baseUrl+ "/api/articles");
-//        String responseString = restTemplate.getForObject(uri, String.class);
-        List<Article> resultArticles = Arrays.asList(restTemplate.getForObject(uri, Article[].class));
+    URI uri = URI.create(baseUrl+ "/api/articles");
+//  String responseString = restTemplate.getForObject(uri, String.class);
+    List<Article> resultArticles = Arrays.asList(restTemplate.getForObject(uri, Article[].class));
 
-        // 컨트롤러 결과를 로깅
-//        logger.info(responseString);
+// 컨트롤러 결과를 로깅
+//  logger.info(responseString);
 
-        // 컨트롤러 결과를 확인하기 위한 데이터 가져오기
-        List<Article> articles = articlesService.getArticles();
-//        String jsonString = jsonStringFromObject(articles);
+// 컨트롤러 결과를 확인하기 위한 데이터 가져오기
+    List<Article> articles = articlesService.getArticles();
+//  String jsonString = jsonStringFromObject(articles);
 
-        // 컨트롤러의 결과와 JSON 문자열로 비교
-//        assertThat(responseString, is(equalTo(jsonString)));
-        assertThat(resultArticles.size(), is(equalTo(articles.size())));
-        assertThat(resultArticles.get(0).getId(), is(equalTo(articles.get(0).getId())));
-    }
+// 컨트롤러의 결과와 JSON 문자열로 비교
+//  assertThat(responseString, is(equalTo(jsonString)));
+    assertThat(resultArticles.size(), is(equalTo(articles.size())));
+    assertThat(resultArticles.get(0).getId(), is(equalTo(articles.get(0).getId())));
+}
 ```
 브레이크 포인트를 가지고 RestTemplate가 컨트롤러에서 반환한 결과를 살펴보자.
 
@@ -184,29 +184,29 @@ restTemplate.getObjectFor()에 반환되는 객체의 타입을 지정하면 JSO
 앞에서 우리는 REST 서비스를 위한 컨트롤러에서 @RequestBody를 사용하여 객체를 JSON 타입으로 **HttpMethod.POST**를 보내는 것을 만들고 테스트를 통해 확인하였다. 먼저 MockMvc를 통해 테스트한 코드를 살펴보자. MockMvc 테스트를 통해서 보면 알 수 있듯 post() 요청을 할 때 content() 안에 Article 객체를 JSON 타입으로 변환해서 전송하는 것을 확인할 수 있다.
 
 ```java
-    @Test
-    public void testCreate() throws Exception {
-        Article article = new Article();
-        article.setTitle("testing create article");
-        article.setContent("test content");
+@Test
+public void testCreate() throws Exception {
+    Article article = new Article();
+    article.setTitle("testing create article");
+    article.setContent("test content");
 
-        Comment comment = new Comment();
-        comment.setContent("test comment1");
-        List<Comment> comments = new ArrayList<>();
-        comments.add(comment);
+    Comment comment = new Comment();
+    comment.setContent("test comment1");
+    List<Comment> comments = new ArrayList<>();
+    comments.add(comment);
 
-        article.setComments(comments);
+    article.setComments(comments);
 
-        String jsonString = this.jsonStringFromObject(article);
+    String jsonString = this.jsonStringFromObject(article);
 
-        MvcResult result = mockMvc.perform(post("/api/articles")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(jsonString))
-                .andExpect(status().isOk())
-                .andExpect(content().string(equalTo(jsonString))).andReturn();
+    MvcResult result = mockMvc.perform(post("/api/articles")
+            .contentType(MediaType.APPLICATION_JSON)
+            .content(jsonString))
+            .andExpect(status().isOk())
+            .andExpect(content().string(equalTo(jsonString))).andReturn();
 
-        logger.info(result.getResponse().getContentAsString());
-    }
+    logger.info(result.getResponse().getContentAsString());
+}
 ```
 
 이제 RestTemplate으로 실제 웹 서비스 형태로 테스트를 해보자. RestTemplate에서 POST를 요청하는 방법는 위에서 GET을 요청하는 방법과 비슷하다. 다만 getFor 로 시작하는 것을 postFor 로 바꿔주면 된다. 나머지는 동일하다.
@@ -219,25 +219,25 @@ restTemplate.getObjectFor()에 반환되는 객체의 타입을 지정하면 JSO
 MockMvc에서 가짜로 테스트하는 것과 달리 RestTemplate를 사용하여 실제 서버로 객체를 POST로 보낼 때는 Article의 객체를 그대로 넘겨주면 된다. 아주 간단하다.
 
 ```java
-    @Test
-    public void testCreate() throws Exception {
+@Test
+public void testCreate() throws Exception {
 
-        URI uri = URI.create(baseUrl + "/api/articles");
+  URI uri = URI.create(baseUrl + "/api/articles");
 
-        Article article = new Article();
-        article.setTitle("testing create article");
-        article.setContent("test content");
+  Article article = new Article();
+  article.setTitle("testing create article");
+  article.setContent("test content");
 
-        Comment comment = new Comment();
-        comment.setContent("test comment1");
-        List<Comment> comments = new ArrayList<>();
-        comments.add(comment);
+  Comment comment = new Comment();
+  comment.setContent("test comment1");
+  List<Comment> comments = new ArrayList<>();
+  comments.add(comment);
 
-        article.setComments(comments);
+  article.setComments(comments);
 
-        Article resultArticle = restTemplate.postForObject(uri, article, Article.class);
+  Article resultArticle = restTemplate.postForObject(uri, article, Article.class);
 
-        assertThat(resultArticle.getTitle(), is(equalTo(article.getTitle())));
+  assertThat(resultArticle.getTitle(), is(equalTo(article.getTitle())));
 
 
 //        String responseString = restTemplate.postForObject(uri, article, String.class);
@@ -251,11 +251,11 @@ MockMvc에서 가짜로 테스트하는 것과 달리 RestTemplate를 사용하�
 테스트를 진행하면 성공적으로 새로운 Article이 POST로 전송되는 것을 확인할 수 있다. 하지만 한가지 중요한 조건이 있다. 이 때 웹 서버의 컨트롤러에서 이 POST 요청이 매핑되는 곳에서 Article 객체를 매핑하기 위해서는 반드시 **@RequetBody** 요청으로 되어 있어야 한다는 것이다. 다시 한번 서버에서 POST의 컨트롤러 코드를 살펴보자.
 
 ```java
-    @RequestMapping(value = "/api/articles", method = RequestMethod.POST)
-    @ResponseBody
-    public Article create(@RequestBody Article article) {
-        return article;
-    }
+@RequestMapping(value = "/api/articles", method = RequestMethod.POST)
+@ResponseBody
+public Article create(@RequestBody Article article) {
+    return article;
+}
 ```
 
 나중에 다시 설명하겠지만 POST로 Article의 새로운 값을 받기 위해서 **@ModelAndAttribute**를 사용하는 것이 아니라 **@RequestBody**로 POST로 들어오는 객체를 매핑해야한다.
@@ -273,27 +273,27 @@ relateTemplate을 사용하여 HttpMethod.DELETE 요청을 처리하는 방법�
 만약 DELETE 요청 후 반환값이 필요하면 restTemplate.exchange()로 요청하면 되는데 이 것은 앞에서 restTemplate을 사용하는 방법과 달리 **HttpHeaders**와 **HttpEntity**를 사용하여 요청을 보내는 것을 확인할 수 있다. 그리고 exchange() 메소드에서 **HttpMethod.DELETE**를 보낸다고 method의 타입을 지정하는 것도 알 수 있단. 이유는 exchange()는 말 그대로 사용자가 직접 전달하는 것을 정의하여서 보내는 것이기 때문에 모둔 HttpMethod에서 동일하게 사용할 수 있는 방법이다.
 
 ```java
-    @Test
-    public void testDelete() throws Exception {
+@Test
+public void testDelete() throws Exception {
 
-        long id = 1;
-        URI uri = URI.create(baseUrl + "/api/articles/" + id);
+    long id = 1;
+    URI uri = URI.create(baseUrl + "/api/articles/" + id);
 
 //        Article article = articlesService.getArticle(id);
 //        restTemplate.delete(uri);
 
-        HttpHeaders headers = new HttpHeaders();
-        HttpEntity entity = new HttpEntity(headers);
+    HttpHeaders headers = new HttpHeaders();
+    HttpEntity entity = new HttpEntity(headers);
 
-        ResponseEntity<String> responseEntity = restTemplate.exchange(uri, HttpMethod.DELETE, entity, String.class);
+    ResponseEntity<String> responseEntity = restTemplate.exchange(uri, HttpMethod.DELETE, entity, String.class);
 
-        String jsonString = jsonStringFromObject(articlesService.deleteArticle(id));
+    String jsonString = jsonStringFromObject(articlesService.deleteArticle(id));
 
-        assertThat(responseEntity.getStatusCode(), is(HttpStatus.OK));
-        assertThat(responseEntity.getBody(), is(equalTo(jsonString)));
+    assertThat(responseEntity.getStatusCode(), is(HttpStatus.OK));
+    assertThat(responseEntity.getBody(), is(equalTo(jsonString)));
 
-        logger.info(responseEntity.getBody());
-    }
+    logger.info(responseEntity.getBody());
+}
 ```
 
 ## PUT /api/articles/{id}
@@ -302,27 +302,27 @@ relateTemplate을 사용하여 HttpMethod.DELETE 요청을 처리하는 방법�
 
 ```java
 @Test
-    public void testPut() throws Exception {
-        long id = 1;
+public void testPut() throws Exception {
+    long id = 1;
 
-        URI uri = URI.create(baseUrl + "/api/articles/" +id);
+    URI uri = URI.create(baseUrl + "/api/articles/" +id);
 
-        Article article = articlesService.getArticle(id);
-        article.setTitle("testing create article");
-        article.setContent("test content");
+    Article article = articlesService.getArticle(id);
+    article.setTitle("testing create article");
+    article.setContent("test content");
 
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_JSON);
+    HttpHeaders headers = new HttpHeaders();
+    headers.setContentType(MediaType.APPLICATION_JSON);
 
-        HttpEntity<Article> entity = new HttpEntity(article, headers);
+    HttpEntity<Article> entity = new HttpEntity(article, headers);
 
-        ResponseEntity<String> responseEntity = restTemplate.exchange(uri, HttpMethod.PUT, entity, String.class);
+    ResponseEntity<String> responseEntity = restTemplate.exchange(uri, HttpMethod.PUT, entity, String.class);
 
-        String jsonString = jsonStringFromObject(article);
+    String jsonString = jsonStringFromObject(article);
 
-        assertThat(responseEntity.getStatusCode(), is(HttpStatus.OK));
-        assertThat(responseEntity.getBody(), is(equalTo(jsonString)));
-    }
+    assertThat(responseEntity.getStatusCode(), is(HttpStatus.OK));
+    assertThat(responseEntity.getBody(), is(equalTo(jsonString)));
+}
 ```
 
 ## PATCH /api/articles/{id}
@@ -331,25 +331,25 @@ relateTemplate을 사용하여 HttpMethod.DELETE 요청을 처리하는 방법�
 
 ```java
 @Test
-    public void testPatch() throws Exception {
-        long id = 1;
+public void testPatch() throws Exception {
+    long id = 1;
 
-        URI uri = URI.create(baseUrl + "/api/articles/" +id);
+    URI uri = URI.create(baseUrl + "/api/articles/" +id);
 
-        Article article = articlesService.getArticle(id);
-        article.setTitle("testing create article");
-        article.setContent("test content");
+    Article article = articlesService.getArticle(id);
+    article.setTitle("testing create article");
+    article.setContent("test content");
 
-        HttpHeaders headers = new HttpHeaders();
-        HttpEntity<Article> entity = new HttpEntity(article, headers);
+    HttpHeaders headers = new HttpHeaders();
+    HttpEntity<Article> entity = new HttpEntity(article, headers);
 
-        ResponseEntity<String> responseEntity = restTemplate.exchange(uri, HttpMethod.PATCH, entity, String.class);
+    ResponseEntity<String> responseEntity = restTemplate.exchange(uri, HttpMethod.PATCH, entity, String.class);
 
-        String jsonString = jsonStringFromObject(article);
+    String jsonString = jsonStringFromObject(article);
 
-        assertThat(responseEntity.getStatusCode(), is(HttpStatus.OK));
-        assertThat(responseEntity.getBody(), is(equalTo(jsonString)));
-    }
+    assertThat(responseEntity.getStatusCode(), is(HttpStatus.OK));
+    assertThat(responseEntity.getBody(), is(equalTo(jsonString)));
+}
 ```
 위 코드를 실행하면
 > org.springframework.web.client.ResourceAccessException: I/O error on PATCH request for "http://localhost:56447/api/articles/1":Invalid HTTP method: PATCH; nested exception is java.net.ProtocolException: Invalid HTTP method: PATCH
@@ -428,28 +428,28 @@ gradle로 의존성있는 라이브러리를 자동으로 다운로드 받은 �
 
 ```java
 @Test
-    public void testPatch() throws Exception {
-        long id = 1;
+public void testPatch() throws Exception {
+    long id = 1;
 
-        URI uri = URI.create(baseUrl + "/api/articles/" +id);
+    URI uri = URI.create(baseUrl + "/api/articles/" +id);
 
-        Article article = articlesService.getArticle(id);
-        article.setTitle("testing create article");
-        article.setContent("test content");
+    Article article = articlesService.getArticle(id);
+    article.setTitle("testing create article");
+    article.setContent("test content");
 
-        HttpHeaders headers = new HttpHeaders();
-        HttpEntity<Article> entity = new HttpEntity(article, headers);
+    HttpHeaders headers = new HttpHeaders();
+    HttpEntity<Article> entity = new HttpEntity(article, headers);
 
-        ClientHttpRequestFactory httpRequestFactory =  new HttpComponentsClientHttpRequestFactory();
-        restTemplate = new RestTemplate(httpRequestFactory);
+    ClientHttpRequestFactory httpRequestFactory =  new HttpComponentsClientHttpRequestFactory();
+    restTemplate = new RestTemplate(httpRequestFactory);
 
-        ResponseEntity<String> responseEntity = restTemplate.exchange(uri, HttpMethod.PATCH, entity, String.class);
+    ResponseEntity<String> responseEntity = restTemplate.exchange(uri, HttpMethod.PATCH, entity, String.class);
 
-        String jsonString = jsonStringFromObject(article);
+    String jsonString = jsonStringFromObject(article);
 
-        assertThat(responseEntity.getStatusCode(), is(HttpStatus.OK));
-        assertThat(responseEntity.getBody(), is(equalTo(jsonString)));
-    }
+    assertThat(responseEntity.getStatusCode(), is(HttpStatus.OK));
+    assertThat(responseEntity.getBody(), is(equalTo(jsonString)));
+}
 ```
 
 브레이크 포인트를 사용하여 컨트롤러에서 확인하면 RestTemplate을 사용하여 요청한 PATCH 요청이 정상적으로 컨트롤러에 요청되는 것을 확인할 수 있다.
