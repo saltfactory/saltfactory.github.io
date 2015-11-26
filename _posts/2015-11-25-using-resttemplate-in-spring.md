@@ -258,7 +258,7 @@ public Article create(@RequestBody Article article) {
 }
 ```
 
-나중에 다시 설명하겠지만 POST로 Article의 새로운 값을 받기 위해서 **@ModelAndAttribute**를 사용하는 것이 아니라 **@RequestBody**로 POST로 들어오는 객체를 매핑해야한다.
+나중에 다시 설명하겠지만 POST로 Article의 새로운 값을 받기 위해서 **@ModelAttribute**를 사용하는 것이 아니라 **@RequestBody**로 POST로 들어오는 객체를 매핑해야한다.
 
 ## DELETE /api/articles/{id}
 
@@ -460,7 +460,7 @@ public void testPatch() throws Exception {
 
 실제 우리는 Spring을 사용하는 프로젝트에서 컴포넌트 내에서 API 서버로 REST 요청을 한는 작업을 **RestTemplate**을 사용하여 구현하였다. RestTemplate은 이전에 상요하던 Apache의 **HttpClient** 보다 간단하고 짧은 코드로 쉽게 API 서버로 REST 요청을 처리할 수 있다. JSON 형태의 문자열 결과만 받아오는 것 뿐만 아니라 JSON객체나 POJO 객체로 변환하는 작업 없이 컴포넌트 내에서 사용하는 객체로 바로 매핑하여 사용할 수 있다는 점에서 객체 변환 코드 상당 수를 줄일 수 있었다. RestTemplate은 크레 getForObject(),  postForObject()와 같이 Object로 매핑할 수 있는 요청과 , getForEntity(), postForEntity()와 같이 Entity로 매핑할 수 있는 요청을 할 수 있다 그리고 delete()나 put()과 같이 반환 없는 요청을 할 수 있다. exchange()나 execute() 같은 함수는 모든 Http method 요청에 사용할 수 있고 사용자가 요청하는 객체를 새롭게 정의하거나 로직을 변경할 수도 있다. RestTemplate은 **PATCH** 메소드를 기본적으로 지원하고 있지 않기 때문에 PATCH 를 지원하기 위해서는 생성할 때 Apache HttpClient 라이브를 사용하여 만든 **HttpComponentsClientHttpRequestFactory**를 사용하여 생성하여 사용하면 된다.
 
-다음에는 RestTemplate을 사용하여 FORM 객체를 컨트롤러의 **@ModelAndAttribute** 객체로 매핑하는 방법과 **Multipart/Form-data**를 사용하여 파일 업로드를 하는 방법에 대해서 소개할 예정이다.
+다음에는 RestTemplate을 사용하여 FORM 객체를 컨트롤러의 **@ModelAttribute** 객체로 매핑하는 방법과 **Multipart/Form-data**를 사용하여 파일 업로드를 하는 방법에 대해서 소개할 예정이다.
 
 ## 소스코드
 
