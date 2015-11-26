@@ -549,6 +549,7 @@ RestTemplate는 Spring 내부에서 다른 서버로 HTTP Request 요청을 처�
 6. http://docs.spring.io/autorepo/docs/spring-android/1.0.x/reference/html/rest-template.html
 7. https://docs.oracle.com/javase/7/docs/api/java/lang/reflect/package-summary.html
 8. https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/http/converter/FormHttpMessageConverter.html
+9. http://stackoverflow.com/questions/4118670/sending-multipart-file-as-post-parameters-with-resttemplate-requests
 
 ## 연구원 소개
 
