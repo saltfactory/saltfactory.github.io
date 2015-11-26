@@ -38,18 +38,18 @@ Spring에서 **RestTemplate**을 사용하면 간단하게 REST 서비스 요청
 그리고 이 메소드를 테스트하기 위해 **MockMvc**로 다음과 같이 테스트를 하였다. **get()** 요청으로 받은 HTML 뷰를 **xpath()**를 가지고 테스트하는 코드이다.
 
 ```java
- @Test
-    public void testNewArticle() throws Exception {
-        MvcResult result = mockMvc.perform(get("/articles/new"))
-                .andExpect(status().isOk())
-                .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
-                .andExpect(xpath("//input[@name='title']").exists())
-                .andReturn();
+@Test
+public void testNewArticle() throws Exception {
+  MvcResult result = mockMvc.perform(get("/articles/new"))
+          .andExpect(status().isOk())
+          .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
+          .andExpect(xpath("//input[@name='title']").exists())
+          .andReturn();
 
-        assertThat(result.getResponse().getContentAsString(), containsString("New Article"));
+  assertThat(result.getResponse().getContentAsString(), containsString("New Article"));
 
-        logger.info(result.getResponse().getContentAsString());
-    }
+  logger.info(result.getResponse().getContentAsString());
+}
 
 ```
 
@@ -126,25 +126,25 @@ task wrapper(type: Wrapper) {
 gradle을 사용하여 자동으로 새로 추가한 라이브러가 다운받아지면서 테스트는 성공적으로 진행이 될 것이다. 테스트를 해보자.
 
 ```java
-      @Test
-    public void testNewArticle() throws Exception {
-        URI uri = URI.create(baseUrl + "/articles/new");
+@Test
+public void testNewArticle() throws Exception {
+  URI uri = URI.create(baseUrl + "/articles/new");
 
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.TEXT_HTML);
-        MediaType mediaType = new MediaType("text", "html", Charset.forName("UTF-8"));
-        HttpEntity<String> entity = new HttpEntity<>(headers);
+  HttpHeaders headers = new HttpHeaders();
+  headers.setContentType(MediaType.TEXT_HTML);
+  MediaType mediaType = new MediaType("text", "html", Charset.forName("UTF-8"));
+  HttpEntity<String> entity = new HttpEntity<>(headers);
 
 
 //        String responseString = restTemplate.getForObject(uri), String.class);
-        ResponseEntity<String> responseEntity = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
+  ResponseEntity<String> responseEntity = restTemplate.exchange(uri, HttpMethod.GET, entity, String.class);
 
-        assertThat(responseEntity.getStatusCode(), is(equalTo(HttpStatus.OK)));
-        assertThat(responseEntity.getHeaders().getContentType(), is(equalTo(mediaType)));
-        assertThat(responseEntity.getBody(), hasXPath("//input[@name='title']"));
+  assertThat(responseEntity.getStatusCode(), is(equalTo(HttpStatus.OK)));
+  assertThat(responseEntity.getHeaders().getContentType(), is(equalTo(mediaType)));
+  assertThat(responseEntity.getBody(), hasXPath("//input[@name='title']"));
 
-        logger.info(responseEntity.getBody());
-    }
+  logger.info(responseEntity.getBody());
+}
 ```
 
 ![](http://assets.hibrainapps.net/images/rest/data/862?size=full&m=1448501866)
@@ -160,11 +160,11 @@ RestTemplate은 REST 요청에 최적화 되어 있다. 다시 말해서 JSON �
 하지만! 기존에 Spring 프로젝트에서는 POST로 데이터를 전송하면 **@ModelAttribute**를 사용하여 파라미터를 객체와 매핑하였다. 이전에는 API 서비스가 많지 않았고 대부분 웹에서 Form을 사용하여 Submit을 하기 때문에 기존의 컨트롤러는 **@RequestBody**와 같은 JSON 파라미터를 객체로 매핑하는 컨트롤러를 만들지 않았기 때문이다. 우리는 [Spring에서 REST 서비스를 위한 컨트롤러에 FORM과 파일업로드(multipart/form-data)를 함께 사용하기와 컨트롤러 테스트하기](http://blog.saltfactory.net/java/submit-multipart-form-data-and-test-in-spring.html) 글에서 HTML form을 사용하여 **Multipart/Form-data**를 전송하고 받는 컨틀롤와 뷰를 만들어보았다. Submit을 했을 때 매핑되는 컨트로러는 다음과 같다. 자세히 보면 클라이언트에서 객체의 데이터를 받는 것이 **@ModelAttribute** 라는 것을 살펴볼 수 있다.
 
 ```java
-    @RequestMapping(value = "/articles", method = RequestMethod.POST)
-    @ResponseBody
-    public Article submit(@ModelAttribute Article article){
-        return article;
-    }
+@RequestMapping(value = "/articles", method = RequestMethod.POST)
+@ResponseBody
+public Article submit(@ModelAttribute Article article){
+    return article;
+}
 ```
 
 그럼 RestTemplate을 사용하여 이 컨트롤러에 요청을 하려면 어떻게 해야할지 살펴보자.
@@ -173,27 +173,27 @@ RestTemplate은 REST 요청에 최적화 되어 있다. 다시 말해서 JSON �
 
 ```java
  @Test
-    public void testSubmit() throws Exception {
+public void testSubmit() throws Exception {
 
-        URI uri = URI.create(baseUrl + "/articles");
+  URI uri = URI.create(baseUrl + "/articles");
 
-        Article article = new Article();
-        article.setTitle("testing create article");
-        article.setContent("test content");
+  Article article = new Article();
+  article.setTitle("testing create article");
+  article.setContent("test content");
 
-        Comment comment = new Comment();
-        comment.setContent("test comment1");
-        List<Comment> comments = new ArrayList<>();
-        comments.add(comment);
+  Comment comment = new Comment();
+  comment.setContent("test comment1");
+  List<Comment> comments = new ArrayList<>();
+  comments.add(comment);
 
-        article.setComments(comments);
+  article.setComments(comments);
 
-        String responseString = restTemplate.postForObject(uri, article, String.class);
-        String jsonString = jsonStringFromObject(article);
+  String responseString = restTemplate.postForObject(uri, article, String.class);
+  String jsonString = jsonStringFromObject(article);
 
-        assertThat(responseString, is(equalTo(jsonString)));
+  assertThat(responseString, is(equalTo(jsonString)));
 
-    }
+}
 
 ```
 테스트 결과는 다음과 같다. 테스트 Fail 정보를 살펴보면 컨트롤에서 POST로 받은 Article의 객체를 JSON으로 매핑하여 반환할 때 Article의 필드에 값이 없는 것을 확인할 수 있다. 다시말해서 @ModelAttribute로 매핑되는 파라미터의 값이 하나도 들어오지 않았다는 말이 된다.
@@ -242,31 +242,31 @@ Spring의 컨트롤러에서 POST로 넘어오는 객체 파라미터를 **@Mode
 
 ```java
  @Test
-    public void testSubmit() throws Exception {
+public void testSubmit() throws Exception {
 
-        URI uri = URI.create(baseUrl + "/articles");
+  URI uri = URI.create(baseUrl + "/articles");
 
-        Article article = new Article();
-        article.setTitle("testing create article");
-        article.setContent("test content");
+  Article article = new Article();
+  article.setTitle("testing create article");
+  article.setContent("test content");
 
-        Comment comment = new Comment();
-        comment.setContent("test comment1");
-        List<Comment> comments = new ArrayList<>();
-        comments.add(comment);
+  Comment comment = new Comment();
+  comment.setContent("test comment1");
+  List<Comment> comments = new ArrayList<>();
+  comments.add(comment);
 
-        article.setComments(comments);
+  article.setComments(comments);
 
-        MultiValueMap<String, Object> multiValueMap = new LinkedMultiValueMap<>();
-        multiValueMap.add("title", article.getTitle());
-        multiValueMap.add("content", article.getContent());
-        multiValueMap.add("comments[0].content", article.getComments().get(0).getContent());
+  MultiValueMap<String, Object> multiValueMap = new LinkedMultiValueMap<>();
+  multiValueMap.add("title", article.getTitle());
+  multiValueMap.add("content", article.getContent());
+  multiValueMap.add("comments[0].content", article.getComments().get(0).getContent());
 
 //        String responseString = restTemplate.postForObject(uri, article, String.class);
-        String responseString = restTemplate.postForObject(uri, multiValueMap, String.class);
-        String jsonString = jsonStringFromObject(article);
+  String responseString = restTemplate.postForObject(uri, multiValueMap, String.class);
+  String jsonString = jsonStringFromObject(article);
 
-        assertThat(responseString, is(equalTo(jsonString)));
+  assertThat(responseString, is(equalTo(jsonString)));
 }
 ```
 
@@ -286,42 +286,42 @@ Spring의 컨트롤러에서 POST로 넘어오는 객체 파라미터를 **@Mode
 우리는 MultiPartFile을 ByteArrayResource로 변환하여 MutliValueMap에 추가하여 전송을 하였다.
 
 ```java
-  @Test
-    public void testSubmit() throws Exception {
+@Test
+public void testSubmit() throws Exception {
 
-        URI uri = URI.create(baseUrl + "/articles");
+  URI uri = URI.create(baseUrl + "/articles");
 
-        Article article = new Article();
-        article.setTitle("testing create article");
-        article.setContent("test content");
+  Article article = new Article();
+  article.setTitle("testing create article");
+  article.setContent("test content");
 
-        Comment comment = new Comment();
-        comment.setContent("test comment1");
-        List<Comment> comments = new ArrayList<>();
-        comments.add(comment);
-        article.setComments(comments);
+  Comment comment = new Comment();
+  comment.setContent("test comment1");
+  List<Comment> comments = new ArrayList<>();
+  comments.add(comment);
+  article.setComments(comments);
 
-        MockMultipartFile file = new MockMultipartFile("file", "filename.txt", "text/plain", "some xml".getBytes());
-        article.setFile(file);
+  MockMultipartFile file = new MockMultipartFile("file", "filename.txt", "text/plain", "some xml".getBytes());
+  article.setFile(file);
 
-        MultiValueMap<String, Object> multiValueMap = new LinkedMultiValueMap<>();
-        multiValueMap.add("title", article.getTitle());
-        multiValueMap.add("content", article.getContent());
-        multiValueMap.add("comments[0].content", article.getComments().get(0).getContent());
+  MultiValueMap<String, Object> multiValueMap = new LinkedMultiValueMap<>();
+  multiValueMap.add("title", article.getTitle());
+  multiValueMap.add("content", article.getContent());
+  multiValueMap.add("comments[0].content", article.getComments().get(0).getContent());
 
-        ByteArrayResource resource = new ByteArrayResource(article.getFile().getBytes()){
-            @Override
-            public String getFilename() throws IllegalStateException {
-                return article.getFile().getOriginalFilename();
-            }
-        };
-        multiValueMap.add("file", resource);
+  ByteArrayResource resource = new ByteArrayResource(article.getFile().getBytes()){
+      @Override
+      public String getFilename() throws IllegalStateException {
+          return article.getFile().getOriginalFilename();
+      }
+  };
+  multiValueMap.add("file", resource);
 
 //        String responseString = restTemplate.postForObject(uri, article, String.class);
-        String responseString = restTemplate.postForObject(uri, multiValueMap, String.class);
-        String jsonString = jsonStringFromObject(article);
+  String responseString = restTemplate.postForObject(uri, multiValueMap, String.class);
+  String jsonString = jsonStringFromObject(article);
 
-        assertThat(responseString, is(equalTo(jsonString)));
+  assertThat(responseString, is(equalTo(jsonString)));
 }
 ```
 
@@ -485,32 +485,32 @@ public class MultiValueMapConverter {
 위의 RestTemplate으로 Multipart/form-data를 전송하는 코드를 다음과 같이 객체를 그대로 MultiValueMap으로 전송하게 간단하게 만들 수 있다.
 
 ```java
-  @Test
-    public void testSubmit() throws Exception {
+@Test
+public void testSubmit() throws Exception {
 
-        URI uri = URI.create(baseUrl + "/articles");
+    URI uri = URI.create(baseUrl + "/articles");
 
-        Article article = new Article();
-        article.setTitle("testing create article");
-        article.setContent("test content");
+    Article article = new Article();
+    article.setTitle("testing create article");
+    article.setContent("test content");
 
-        Comment comment = new Comment();
-        comment.setContent("test comment1");
-        List<Comment> comments = new ArrayList<>();
-        comments.add(comment);
-        article.setComments(comments);
+    Comment comment = new Comment();
+    comment.setContent("test comment1");
+    List<Comment> comments = new ArrayList<>();
+    comments.add(comment);
+    article.setComments(comments);
 
-        MockMultipartFile file = new MockMultipartFile("file", "filename.txt", "text/plain", "some xml".getBytes());
-        article.setFile(file);
+    MockMultipartFile file = new MockMultipartFile("file", "filename.txt", "text/plain", "some xml".getBytes());
+    article.setFile(file);
 
-        MultiValueMap<String, Object> multiValueMap = new MultiValueMapConverter(article).convert();
+    MultiValueMap<String, Object> multiValueMap = new MultiValueMapConverter(article).convert();
 
-        String responseString = restTemplate.postForObject(uri, multiValueMap, String.class);
-        String jsonString = jsonStringFromObject(article);
+    String responseString = restTemplate.postForObject(uri, multiValueMap, String.class);
+    String jsonString = jsonStringFromObject(article);
 
-        assertThat(responseString, is(equalTo(jsonString)));
+    assertThat(responseString, is(equalTo(jsonString)));
 
-    }
+}
 
 ```
 
@@ -519,17 +519,17 @@ public class MultiValueMapConverter {
 사실 이 글을 작성하기 위해서 앞에 여러가지 REST 컨트롤러와 RestTemplate을 구현하고 테스트하는 방법을 살펴보았다. 처음 우리는 Spring 컴포넌트에서 웹 페이지에서 FORM으로 POST를 전송 받은 데이터를 API 서버로 전송하는 과정에서 RestTemplate을 가지고 컨트롤러에 받은 객체를 그대로 전송하는 방법이 필요했다. 하지만 RestTemplate로 API 서버로 객체를 전송하기 위해서는 MultiValueMap을 사용해야하는데 객체의 크기가 다양하고 계층 구조가 다양했기 때문에 하드 코딩으로 객체 안의 데이터를 빼어내는 작업을 하고 싶지 않았다. 그래서 우리는 Spring의 컨트롤러와 RestTemplate 동작 원리에 대해서 연구를 하기 시작했고 이 포스팅에서 소개하는 방법으로 문제를 해결했다. 다음은 우리가 하고 싶었던 컨트롤러 컴포넌트 내부의 모습을 간단하게 만든 모양이다.
 
 ```java
-    @RequestMapping(value = "/articles", method = RequestMethod.POST)
-    @ResponseBody
-    public Article submit(@ModelAttribute Article article) throws Exception {
+@RequestMapping(value = "/articles", method = RequestMethod.POST)
+@ResponseBody
+public Article submit(@ModelAttribute Article article) throws Exception {
 
-        URI uri = URI.create("http://API서버");
-        RestTemplate restTemplate = new RestTemplate();
-        MultiValueMap multiValueMap = new MultiValueMapConverter(article).convert();
+    URI uri = URI.create("http://API서버");
+    RestTemplate restTemplate = new RestTemplate();
+    MultiValueMap multiValueMap = new MultiValueMapConverter(article).convert();
 
-        return restTemplate.postForObject(uri, multiValueMap, Article.class);
+    return restTemplate.postForObject(uri, multiValueMap, Article.class);
 
-    }
+}
 ```
 
 RestTemplate는 Spring 내부에서 다른 서버로 HTTP Request 요청을 처리하고 객체로 간단하게 매핑할 수 있기 때문에 효율적인 코드를 작성할 수 있고, **MultiValueMap**을 사용하여 Multipart/Form-data를 쉽게 전송하기 위해서 **MultiValueMapConverter**를 사용하면 특별한 코드를 추가하지 않고 객체를 바로 POST로 보내는 MultiValueMap으로 만들어서 전송할 수 있다.
