@@ -1,6 +1,6 @@
 ---
 layout: post
-title : Spring에서 RestTemplate을 사용하여 Multipart/Form-data (첨부파일 포함) 전송하기
+title : Spring에서 RestTemplate을 사용하여 웹(API 서버)에 Multipart/Form-data (첨부파일 포함) 전송하기
 category : java
 tags : [java, spring, springboot, rest, resttemplate, multipart, form]
 comments : true
@@ -27,12 +27,12 @@ Spring에서 **RestTemplate**을 사용하면 간단하게 REST 서비스 요청
 우리는 이 화면을 위한 컨트롤르 메소드를 다음과 같이 ArticlesController 안에 newArticle() 이라는 이름으로 다음과 같이 만들었었다.
 
 ```java
-    @RequestMapping(value = "/articles/new", method = RequestMethod.GET)
-    public String newArticle(Model model){
-        Article article = new Article();
-        model.addAttribute("article", article);
-        return "articles/new";
-    }
+@RequestMapping(value = "/articles/new", method = RequestMethod.GET)
+public String newArticle(Model model){
+    Article article = new Article();
+    model.addAttribute("article", article);
+    return "articles/new";
+}
 ```
 
 그리고 이 메소드를 테스트하기 위해 **MockMvc**로 다음과 같이 테스트를 하였다. **get()** 요청으로 받은 HTML 뷰를 **xpath()**를 가지고 테스트하는 코드이다.
