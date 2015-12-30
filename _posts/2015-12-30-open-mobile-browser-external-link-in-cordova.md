@@ -2,7 +2,7 @@
 layout: post
 title : PhoneGap(Cordova) 안드로이드 앱에서 외부 링크 새로운 브라우저 앱으로 열기
 category : cordova
-tags : [cordova, hybrid, hybridapp, phonegap, android]
+tags : [cordova, hybrid, hybridapp, phonegap, android, ionic]
 comments : true
 images :
   title : http://assets.hibrainapps.net/images/rest/data/872?size=full
