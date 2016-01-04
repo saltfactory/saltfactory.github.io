@@ -19,7 +19,7 @@ Ionic은 기본적으로 Cordova 기반으로 만들어진 하이브리드 앱 �
 
 테스트를 위해서 ionic cli를 사용하여 프로젝트를 생성한다. 슬라이드 메뉴를 가지는 앱을 만들기 위해서 **sidemenu** 타입으로 프로젝트를 생성한다.
 
-```
+```text
 ionic start myApp sidemenu
 ```
 
@@ -27,11 +27,11 @@ ionic start myApp sidemenu
 
 ionic 으로 앱을 만들면 기본적으로 iOS 플랫폼을 추가하여 만들어진다. ionic은 cordova의 명령어를 그대로 사용할 수 있다. ionic 이나 cordova를 사용하여 설치된 플랫폼을 확인해보자.
 
-```
+```text
 ionic platform list
 ```
 
-```
+```text
 cordova platform list
 ```
 
@@ -39,8 +39,8 @@ cordova platform list
 
 앱을 빌드하고 실행시켜보자.
 
-```
-ionic run ios —device
+```text
+ionic run ios --device
 ```
 
 다음과 같은 화면이 디바이스에서 나타날 것이다.
@@ -51,7 +51,7 @@ ionic run ios —device
 
 Cordova 기반의 프레임워크의 장점은 유용한 Cordova 플러그인을 사용하여 빠르게 개발할 수 있는 것이다. 3D Touch에 관한 플러그인은 이미 몇가지 개발되어 리파지토리에서 바로 설치를 할 수 있다. 다음 명령어를 실행하여 3D touch 플러그인을 설치한다. cordova 명령어도 그대로 사용할 수 있다.
 
-```
+```text
 ionic plugin add cordova-plugin-3dtouch
 ```
 
@@ -91,13 +91,13 @@ ionic 명령어로 plugin을 설치하면 **package.json**에 어떤 플러그�
 
 명령어로 확인하기 위해서는 다음 명령어로 확인할 수 있다.
 
-```
+```text
 ionic plugin list
 ```
 
 또는
 
-```
+```text
 cordova plugin list
 ```
 
@@ -163,13 +163,13 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
 이제 디비이스에 코드를 빌드해서 실행해보자. 이 때 주의해야할 점은 3D Touch 테스트는 **Simulator에서 가능하지 않다**는 것이다. 반드시 **iPhone 6s/6s plus** 에 실행해서 테스트를 해야 3D Touch가 실행되는 것을 확인할 수 있다.
 
-```
+```text
 ionic prepare ios
 ```
-```
+```text
 ionic build ios
 ```
-```
+```text
 ionic run ios --device
 ```
 디바이스에 앱이 실행되면 홈스크린에 설치된 아이콘을 꾹 눌러서 3D Touch 가 적용되었는지 살펴보자.
@@ -236,13 +236,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 ```
 
 이벤트 핸들러를 정의하고 다시 디바이스에 빌드해서 실행해보자
-```
+
+```text
 ionic prepare ios
 ```
-```
+```text
 ionic build ios
 ```
-```
+```text
 ionic run ios --device
 ```
 
