@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 엣지있게 설명한 Ionic
+tags : [ionic, cordova, hybrid, hybridapp, phonegap, ios]
 permalink: /books/ionic-edge/
 comments : true
 disqus_identifier: http://blog.saltfactory.net/books/ionic-edge/
@@ -34,3 +35,11 @@ images:
 - [yes24](http://www.yes24.com/24/Goods/19600736?Acode=101)
 - [영풍문고](http://www.ypbooks.co.kr/book.yp?bookcd=100619479&gubun=NV)
 - [네이버](http://book.naver.com/bookdb/book_detail.nhn?bid=9413713)
+
+## 책 예제
+
+- [Ionic 하이브리드 앱 개발환경 설정 및 엣지있게 설명한 Ionic 책 예제 실습 방법](http://blog.saltfactory.net/ionic/start-ionic-edge-book.html)
+
+## 관련자료
+
+- http://blog.saltfactory.net/tags/ionic/
