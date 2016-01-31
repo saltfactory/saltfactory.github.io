@@ -41,3 +41,19 @@ images :
 그리고 역서 말고 저서를 희망하시는 메일을 주시는 분들이 많으신데, 이번에 출판사와 이야기하면서 개정판으로 진행하기로 하였습니다. 개정판 이후, 국내 서비스에 필요한 UI, 라이브러리, 플러그인을 가지고 국내 서비스 앱 개발에 가장 적합한 내용을 알기 쉽게 풀어서 새로운 모습으로 저서를 준비할 수 있도록 하겠습니다. 
 
 책과 블로그를 통해 부족한 내용을 참고하시면서 감사의 메일과 관심을 가지고 여러가지 의견을 주시는 모든 독자와 함께 개발하고 연구하는 연구자분들께 고개숙여 감사드립니다. 대한민국에서 컴퓨터공학을 전공하는 연구원으로 여러분들과 함께 열심히 연구하며 지식을 나누는데 힘쓰도록 하겠습니다. 바쁜 일정과 연구 본업 때문에 질문에 대한 답변이 늦더라도 깊은 양해 당부드립니다. 더욱 열심히 연구하는 연구자의 길을 걷겠습니다. 감사합니다.
+
+
+## 엣지있게 설명한 ionic 책소개
+
+- http://blog.saltfactory.net/books/ionic-edge/
+
+
+## 연구원 소개
+
+* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
+* 블로그 : http://blog.saltfactory.net
+* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
+* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
+* 페이스북 : https://facebook.com/salthub
+* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
+* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)
