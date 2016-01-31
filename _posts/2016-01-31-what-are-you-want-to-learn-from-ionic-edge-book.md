@@ -16,9 +16,10 @@ images :
 
 ## 새롭게 바뀌는 내용
 
-**엣지있게 설명한 Ionic (2nd)** 개정판에는 전편에 수록된 v1.0 기반의 소스코드를 가장 최신 SDK가 될 **v2.0.0** 기반으로 변경할 예정입니다. 그리고 전편이 출판되고 난 이후 가장 많은 질문을 받았던 [Trenditicy](https://github.com/trendicity/trendicity) 예제 소스코드를 컴퓨터 받아서 실습하는 방법을 아주 상세하고 자세하게 설명하여 추가할 예정입니다. 또한 최신 Trendicity 소소코드는 Ionic v1.0.0 기준으로 만들어져 있는데, **엣지있게 설명한 Ionic (2nd)**의 내용에 맞게 Ionic v2.0.0 기반과 모든 라이브러리를 최신으로 업데이트하여 역자의 소스코드 저장소에서  [Trendicity](https://github.com/saltfactory/trendicity)를 배포할 예정입니다. 새롭게 추가 예정될 내용은 다음과 같습니다.
+**엣지있게 설명한 Ionic (2nd)** 개정판에는 전편에 수록된 v1.0 기반의 소스코드를 가장 최신 SDK가 될 **v1.2.4** 기반으로 변경할 예정입니다. 또한 **v2.0.0** 기반 개발 방법을 추가할 예정입니다. 그리고 전편이 출판되고 난 이후 가장 많은 질문을 받았던 [Trenditicy](https://github.com/trendicity/trendicity) 예제 소스코드를 컴퓨터 받아서 실습하는 방법을 아주 상세하고 자세하게 설명하여 추가할 예정입니다. 또한 최신 Trendicity 소소코드는 Ionic v1.0.0 기준으로 만들어져 있는데, **엣지있게 설명한 Ionic (2nd)**의 내용에 맞게 Ionic v1.2.4 기반과 모든 라이브러리를 최신으로 업데이트하여 역자의 소스코드 저장소에서  [Trendicity](https://github.com/saltfactory/trendicity)를 배포할 예정입니다. 새롭게 추가 예정될 내용은 다음과 같습니다.
 
-- 최신 Ionic SDK (v2.0.0) 기반 소스코드
+- 최신 Ionic v1.2.4 기반 Trendicity 예제
+- 최신 Ionic SDK (v2.0.0) 기반 개발 방법 
 - **Windows기반 PC** 에서 Ionic 프로젝트를 개발하는 방법 추가
 - [Ionic Lab](http://lab.ionic.io/) 사용 방법 추가
 - [Ionic io](http://ionic.io/) 사용 방법 추가
