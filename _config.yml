@@ -12,7 +12,9 @@ excerpt_separator : <!--more-->
 tags_dir: tags
 categories_dir: categories
 
+# gems: [jekyll-paginate, jekyll-gist]
 paginate: 5
+# paginate_path: "page:num"
 
 google_analytics : 'UA-8647285-2'
 
@@ -28,9 +30,13 @@ comments:
   facebook: true
 
 # Build settings
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "tables", "autolink", "fenced_code_blocks", "strikethrough"]
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+# markdown: redcarpet
+# redcarpet:
+#   extensions: ["no_intra_emphasis", "tables", "autolink", "fenced_code_blocks", "strikethrough"]
 
 # highlighter: pygments
 permalink: none
@@ -40,6 +46,8 @@ permalink: none
 #lsi: false
 
 gems:
+  - jekyll-paginate
+  - jekyll-gist
   - jekyll-sitemap
   - jekyll-redirect-from
   - jemoji
