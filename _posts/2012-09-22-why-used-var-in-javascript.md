@@ -36,19 +36,19 @@ end
 
 하지만 변수의 사용범위 (scope)는 메소드 안에서만 사용이 가능하다. irb (Interactive Ruby Shell)을 이용해서 확인을 해보자.
 
-![](http://cfile10.uf.tistory.com/image/1623C23F505D95F90E0745)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/189f47c6-b595-42a3-a4e4-8b5b863e35c7)
 
 irb에서 Ruby의 변수에 숫자를 할당할때 미리 선언하지 않고 바로 사용할 수 있는 것을 확인 할 수 있다. 또한 함수를 정의해서 그 안에 result라는 로컬변수를 선언해서 사용할 때 함수 안에 들어있는 로컬변수의 범위가 함수 안에서만 사용가능하고 외부에서는 로컬 변수에 접근할 수 없는 것을 확인 할 수 있다. Ruby에선느 전역변수일 경우 $변수를 사용한다.
 
 그럼 Javascript에서 변수 선업 없이 사용하고 변수의 유효범위를 확인해보자. 브라우저에서 테스트해도 좋고 Mozilla의 Rhino의 Javascript Shell CLI를 이용해서 테스트해도 상관없다. Rhino를 사용하는 방법은 [Javascript에서 Callback 구현하기](http://blog.saltfactory.net/192) 글에서 간단하게 소개한 적이 있으니 참조해보길 바란다. 위의 코드를 Javascript로 똑같이 구현하면 다음과 같이 구현 할 것이다.
 
-![](http://cfile6.uf.tistory.com/image/205F673A505D989D059F13)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/29c318f8-7e36-46fd-87d2-0ea2ce4fc030)
 
 그런데 Javascript 코드를 잘 살펴보면 result의 scope가 sum 이라는 함수 안에서 사용했는데 sum 함수 밖에서 result를 출력시켰는데 sum 안에서 사용한 로컬 변수인 result에 값이 출력되는 것을 볼 수 있다.
 
 이것은 Javascript 에서 변수 선언 없이 바로 사용하게 되면 비록 함수내의 로컬변수로 사용되더라도 모든 변수들은 암묵적으로 전역 프로퍼티가 되어 버린다. 그래서 이러한 속성 때문에 다른 라이브러리들의 변수 명이 같거나, 다른 Javascript에서 사용하는 변수 명을 덮어쓰게되어 오류가 발생하기도 한다. 오류가 발생하지 않더라도 다른 값이 들어가서 원하는 결과가 나오지 않을 수도 있다. 그럼 Javascript에서 어떻게 변수를 선언해서 사용해야 할까? 위 코드를 다음과 같이 var를 이용해서 변수를 선언해서 사용하면 된다.
 
-![](http://cfile8.uf.tistory.com/image/11266B3E505DACE70F3480)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/cf0bc501-4eef-4be8-a182-20f9e779c230)
 
 암묵적 전역 프로퍼티로 되어버린 코드와 달리 함수 안에 로컬변수를 var로 선언하게 되면 그 변수의 scope는 함수 밖에 영향을 끼치지 못하고 함수 내 로컬변수로 사용 할 수 있게 된다.
 
@@ -61,12 +61,3 @@ Javascript는 브라우저에서 DOM과 Event를 처리하기 위한 간단한 �
 1.Stoyan Stefanov,김준기,변유진, O'REILLY, "Javascript Patterns", p.13~14
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

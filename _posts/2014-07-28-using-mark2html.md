@@ -120,12 +120,3 @@ mark2html은 Markdown 파일을 HTML 파일로 만들어주는 모듈이다. `np
 지금 이 글도 mark2html을 사용해서 Markdown으로 작성된 문서를 HTML으로 변환시켜 포스팅 될 것이다. Tistory에 글을 작성할 때 Markdown을 사용하기 위해서는 HTML 모드로 편집기를 사용해야하는데, 이때 이미지를 첨부할 수 없는 문제가 있다. 이때 mark2html을 사용해서 HTML으로 변환할 때 이미지를 datauri로 만들어서 HTML 파일 안에 포함시키면 된다. mark2html은 아직 개발단계이지만 Markdown을 사용해서 Tistory나  HTML 입력 모드를 지원하는 블로그에 글을 포스팅하고 싶을때 사용하면 유용할 것으로 생각된다.
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

@@ -343,29 +343,29 @@ node bin/www
 
 http://127.0.0.1:3000
 
-![Screen Shot 2014-07-18 at 9.54.43 AM.png](http://cfile4.uf.tistory.com/image/2635054653D0C929103F26)
+![Screen Shot 2014-07-18 at 9.54.43 AM.png](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/dcd4716d-4a6b-404f-a340-30352cad2a32)
 
 http://127.0.0.1:3000/login
 
-![Screen Shot 2014-07-18 at 9.54.46 AM.png](http://cfile4.uf.tistory.com/image/26014C3C53D0C92924E126)
+![Screen Shot 2014-07-18 at 9.54.46 AM.png](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/c764a59b-21db-45e9-a8ef-4fb14891ba39)
 
 http://127.0.0.1:300/login 에서 ***Login with Tistory*** 링크를 눌렀을 때
 
-![Screen Shot 2014-07-18 at 10.07.48 AM.png](http://cfile26.uf.tistory.com/image/263FC93453D0C9293A4B9B)
+![Screen Shot 2014-07-18 at 10.07.48 AM.png](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/1c8e7763-ad6a-4a25-8497-56b9793410e5)
 
-![Screen Shot 2014-07-18 at 9.54.49 AM.png](http://cfile30.uf.tistory.com/image/254D4C4353D0C92922FC37)
+![Screen Shot 2014-07-18 at 9.54.49 AM.png](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/12a7558a-5803-417f-8f81-991ab4121d02)
 
 Tistory에서 클라이언트 인증이 모두 마치고 다시 callback URL로 돌아왔을 때,
 
-![Screen Shot 2014-07-18 at 9.54.52 AM.png](http://cfile9.uf.tistory.com/image/27244B3953D0C9293358B7)
+![Screen Shot 2014-07-18 at 9.54.52 AM.png](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/2e46ac38-a214-4471-8aa4-24bcf80d6cb2)
 
 http://127.0.0.1:3000/account
 
-![Screen Shot 2014-07-18 at 9.54.56 AM.png](http://cfile2.uf.tistory.com/image/2309B13C53D0C92A1B4A04)
+![Screen Shot 2014-07-18 at 9.54.56 AM.png](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/17e17b31-bb80-4aad-9c38-3870432c5802)
 
 http://127.0.0.1:3000/logout
 
-![Screen Shot 2014-07-18 at 9.54.43 AM.png](http://cfile22.uf.tistory.com/image/2746824353D0C92A31DCB9)
+![Screen Shot 2014-07-18 at 9.54.43 AM.png](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/1098b65e-13b5-4ec3-ad63-9098c1e41951)
 
 실험이 이상없이 진행되면 이제부터 access_token 를 획득하였기 때문에 Tistory 오픈 API를 사용할 수 있다. 획득한 access_token은 `app.js`에 `passport.use()` 의 콜백함수에서 확인할 수 있다.
 access_token을 가지고 Tistory 오픈 API를 사용하는 방법은 다음 포스팅에서 소개하겠다.
@@ -392,12 +392,3 @@ Tistory의 오픈 API를 사용하기 위해서 OAuth 2.0 인증 후 access_toke
 * https://github.com/visionmedia/express
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

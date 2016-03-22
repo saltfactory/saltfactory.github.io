@@ -8,7 +8,7 @@ redirect_from: /153/
 disqus_identifier : http://blog.saltfactory.net/153
 ---
 
-![](http://cfile4.uf.tistory.com/image/1229AD3D4FCB4C74052EA2)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/57d3329e-1c94-4fe0-a33c-fa8a13a05cb4)
 
 이번 서울 일정에서 KTH의 Appspresso 개발팀을 만나게 되었다. 아니, 더 정확하게 이야기하자면 KTH Appspresso 팀에서 평범한 지방대학교 연구실과 연구소에 있는 나에게 저녁식사 초대를 해주었던 것이다. 대한민국 IT의 중심에서 좋은 영향력을 가진 엔지니어들과의 자리가 너무 고맙고 유익했기 때문에 블로그에 잠시 이야기를 남긴다.
 
@@ -74,14 +74,5 @@ K : "가지고 있는 디바이스로 모두 테스트를 하고, 가지고 있�
 
 KTH 엔지니어들의 사진은 남기지 않아도 이날을 기억하기 위해서 왕재곱창 집을 찍고 왔답니다^^ 선물까지 준비해주셨다는데 배송이 늦어서 우편으로 보내어 주신다고 합니다(사진은 나중에~). 정말 제가 더 고마운 시간들이였습니다. 다음에 만나더 좀더 깊은 주제로 이야기 나누고 싶습니다~ 감사합니다.
 
-![](http://cfile25.uf.tistory.com/image/20325E3F4FCB6CE40F2CFC)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/4f8815d4-9134-4a9f-b762-f6a2ef3846d6)
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

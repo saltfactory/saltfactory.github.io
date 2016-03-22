@@ -122,17 +122,8 @@ ALL : UNKNOWN : spawn /root/sendmail_unknown_ip.py %h : deny
 
 이제 TCP Wrapper에 정의한 허락된 호스트 접근 이외의 알수 없는 호스트가 서버에 접근을 하게 되면 다음과 같이 즉시 메일로 접근한 사항을 메일로 확인 받을 수 있게 되었다.
 
-![](http://cfile25.uf.tistory.com/image/1813B0424F16561B1A42B1)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/6b537f7b-ff9f-4aad-91bd-c9010027806e)
 
 하지만 이렇게 TCP Wrapper 기능을 사용하고 알수없는 호스트의 접근 사항을 메일로 확인 할 수 있더라도, 반드시 서버 관리자는 서버의 로그 파일을 주기적으로 모니터링하고 분석하는 일을 해야한다. 어떠한 사항으로 장애가 일어날지 모르며 어떻게 다른 경로로 접근해서 서버를 다른 용도로 사용할지 모르기 때문이다.
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

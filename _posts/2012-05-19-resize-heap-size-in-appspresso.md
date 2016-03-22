@@ -14,7 +14,7 @@ Appspresso Studio(앱스프레소 스튜디오)는 이큽립스 기반의 하이
 
 <!--more-->
 
-![](http://cfile22.uf.tistory.com/image/130DE3484FB793B80CE01A)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/85459ad9-e419-433a-9ad1-aa3a2ec47a61)
 
 Appspresso Studio를 열고 About Appspresso Studio를 열어보면 현재 설치되어 있는 앱스프레소 스튜디오 정보를 확인할 수 있는데 밑에보면 Appspresso Studio에 포함된 플러그인들을 확인할 수 있다.
 
@@ -22,19 +22,19 @@ Appspresso Studio를 열고 About Appspresso Studio를 열어보면 현재 설�
 
 WTP는 이클립스의 메이저 개발 툴 플러그 인으로 웹 개발을 할 때 사용하는 플러그인이다. Appspresso 로 만들어지는 앱은 웹과 네이티브 코드가 같이 만들어야하기 때문에 웹 개발툴이 포함되어 있는 것은 지극히 당연한 것일 것 이라 생각된다. 또한 WTP에는 XML 에디터가 포함이 되어 있는데 이것은 XML의 속성을 정의하고 추가할 때 code로 입력하는 것이 아니라 WTP에서 제공하는 key, value 형식의 GUI 입력기를 사용할 수 있게 지원하고 있다. 그래서 우리가 project.xml이나 다른 앱스프레소 설정에서 사용되는 xml 에서 입력기를 이용해서 속성을 간단하게 추가할 수 있는 것이다.
 
-![](http://cfile2.uf.tistory.com/image/1341D6344FB794E2098003)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/963680fd-12a3-40f9-8ed5-8eef5adc33b1)
 
 ## Eclipse
 
 Appspresso Studio는 Eclipse 기반으로 만들어진 IDE이다. 현재 3.7.2 (코드명 Indigo) 기반에 만들어진 것을 확인할 수 있다.
 
-![](http://cfile30.uf.tistory.com/image/1426F9384FB79596323CB0)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/3574359a-80e0-413d-b8ed-27b7d0d3b840)
 
 ## Appsrpesso Studio
 
 현재 사요중인 Appspresso Studio는 1.1.0 버전이고 2012년 4월 27일에 릴리즈된 버전이라는 것도 확인할 수 있다.
 
-![](http://cfile10.uf.tistory.com/image/1530693C4FB795BF01F3BA)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/b010242f-d1e0-4341-b456-a06414dd4dd2)
 
 ## EMF
 
@@ -44,7 +44,7 @@ Appspresso Studio는 Eclipse 기반으로 만들어진 IDE이다. 현재 3.7.2 (
 
 Appspresso Studio를 디폴트로 설치한 후 Sencha Touch 2 라이브러리를 추가하고 sencha-touch-all-debug.js를 여는 순간 Appspresso Studio는 갑자기 멈추는 현상이 일어난다거나, git에 올려둔 코드를 다른 곳에서 clone 해서 열었는데 다음과 같은 에러를 만날 수 있다는 것이다.
 
-![](http://cfile1.uf.tistory.com/image/1556A5424FB7990305DD58)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/4552cef6-f7ee-4665-a4b3-c41394d47628)
 
 코드를 열면서 Appspresso Studio가 코드를 분석해서 인덱싱을하는 도중에 Building workspace를 하는 동안 Java heap space의 문제를 알려주는 경고이다. 이 문제는 Appspresso Studio가 사용하는 IDE가 동작할때 사용하는 힙의 크기가 부족해서 발생하는 문제이다. 우리는 이 문제를 해결하기 위해서 Appspresso Studio가 사용할 수 있는 힙 사이즈를 더 크게 변경해줄 것이다.
 
@@ -98,12 +98,3 @@ cd /Applications/Appspresso/appspresso.app/Contents/MacOS
 1. http://wiki.eclipse.org/Eclipse.ini
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

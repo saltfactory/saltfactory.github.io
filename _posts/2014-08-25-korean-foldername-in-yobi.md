@@ -29,7 +29,7 @@ Yobi는 **UTF-8** 기반으로 운영되어지고 있다. 즉, 소스코드, 운
 
 Yobi 환경을 모두 UTF-8로 설정을 하여 사용하더라도 **Safari** 브라우저에서 **한글 디렉토리명**을 클릭하면 URL 인코딩 문제가 발생해 버린다.
 
-![error](http://cfile28.uf.tistory.com/image/27229A4553FAD06816305B)
+![error](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/cb199066-56b0-4f62-9e6b-03f4837814b7)
 
 한글이 포함된 URL을 직접 주소창에 넣으면 한글 디렉토리명이 문제 없이 보여지며 디렉토리 내의 파일들이 보여진다. Safari 브라우저를 제외한 나머지 브라우저에서는 Yobi 에 **한글 디렉토리명**을 클릭해도 정상적으로 보여지는데 Safari 브라우저에서만 **한글 디렉토리명**을 클릭했을 때 정상적으로 나타나지 않는 버그를 발견했다.
 
@@ -95,7 +95,7 @@ Safari 브라우저 버그는 `<a/>` 태그의 링크를 클릭하면 인코딩 
 
 한글 디렉토리명을 클릭해서 URL을 이동하는 대신에 `location.href`를 사용해서 URL을 이동하게 변경한 이후에 Yobi를 다시 실행하면 다음과 같이 **Safari** 브라우저에서도 정상적으로 동작하는 것을 확인할 수 있다.
 
-![success](http://cfile2.uf.tistory.com/image/233B8A3553FAD06820E0CF)
+![success](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ba529613-4adc-47e8-8229-42e1db059d96)
 
 ## \_page.less
 
@@ -123,12 +123,3 @@ Safari 브라우저 버그는 `<a/>` 태그의 링크를 클릭하면 인코딩 
 
 다시 Yobi를 재시작하면 서비스가 로드되면서 수정한 `.scala.html` 파일과 `.less` 파일이 컴파일되는 것을 확인 할 수 있을 것이다. 서비스가 완벽하게 올라간 이후 Safari 브라우저에서 **한글 디렉토리명**을 클릭해보면 문제없이 한글 디렉토리가 열리고 내부에 있는 파일 목록들이 보이는 것을 확인할 수 있을 것이다. 현재 Yobi 프로젝트에 [pull request](https://github.com/naver/yobi/pull/773/)를 요청한 상태이다. 오픈소스로 운영되고 있는 Yobi의 장점이 아닌가 생각한다. 정확한 문제의 원인은 알 수 없지만 우리가 경험한 내용을 수정해서 프로젝트에 적용할 수 있도록 요청했다. 다른 원인으로부터 발생한 것이라면 contributor들이 또 수정해서 프로젝트에 반영할 것이다. 우선 우리는 Yobi를 사용하여서 소스코드를 관리하는데 **한글문제**로 어려움을 가졌고 사내에서 수정해서 사용하게 되어 pull request를 요청했다. 아마 다음 버전에는 우리가 제시한 방법이 아니더라도 **Safari 브라우저에서 한글 디렉토리명 문제**에 대해서 해결이 되어서 나올 것으로 기대가 된다.
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

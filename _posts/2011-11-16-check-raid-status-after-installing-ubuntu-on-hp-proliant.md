@@ -19,9 +19,9 @@ HP ProLiant를 들여오기 전에 Ubuntu, CentOS, FreeBSD 셋 중에서 어떤 
 하나는 Ubuntu-10.04.3-server-amd64.ios 이고 하나는 HP_ProLiant_Value_Add_Software-8.70-10-6.iso 이다.
 두번재 이미지는 일종의 HP ProLiant의 관리자 소프트웨어인데 공식적으로 11.10 지원된다고 한다. 잦은 업데이트를 선호하는 사용자는 11.10에 설치하여도 무방하겠다. 다운로드는 다음 링크를 참조하면 된다 ([Ubuntu용 HP 소프트웨어 다운로드](http://h20000.www2.hp.com/bizsupport/TechSupport/SoftwareDescription.jsp?lang=en&cc=us&prodTypeId=15351&prodSeriesId=4091412&swItem=MTX-b3d56629ca784c84979546f127&prodNameId=4091432&swEnvOID=4096&swLang=8&taskId=135&mode=3))
 
-![](http://cfile10.uf.tistory.com/image/154B91344EC3942726CD8E)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/8e223286-dfd1-44c8-b7d3-682d1b011e3a)
 
-![](http://cfile25.uf.tistory.com/image/1536DB434EC394582A8F79)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/fa978771-8a55-4e45-be50-da86821d0738)
 
 두번째 파일을 설치하지 않아도 ubuntu를 설치하는데 전혀 문제가 되지 않는다. 하지만 HP의 RAID 구성을 확인하기 위해서 필요한 hpacucli가 필요한 이것을 설치할수 있게 도와준다. 물론 인터넷에 검색해보면 이미지 없이 바로  apt-get으로 설치하는 방법도 소개한 블로그를 볼 수 있을것이다.
 
@@ -47,7 +47,7 @@ HP Smart Array Controller가 지원되는지 설치되어 있는지 확인해보
 lspci -nn | grep Array
 ```
 
-![](http://cfile10.uf.tistory.com/image/193B16474EC3A32507381D)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/7c384b65-3162-4c20-a1d5-249bcd346cc2)
 
 다음은 디바이스 노드들을 살펴보자. 우리가 흔히 설치하는 RAID 구성 없이 일반 HDD만 여러개 일경우는 /dev/hda, /dev/hdb 나 /dev/sda, /dev/sdb 이런식으로 디바이스 노드가 추가된다. 히자만 RAID 구성을하면 /dev/c0d0, /dev/c0d1 이런식으로 된다.
 
@@ -55,7 +55,7 @@ lspci -nn | grep Array
 ls -lah /dev/cciss
 ```
 
-![](http://cfile8.uf.tistory.com/image/1362AF444EC3A48003328E)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e1189da4-bebe-4f03-9b94-31fa3b5efdd3)
 
 이제 모든 Controller들을 보자. 컨트롤러에 대한 정보를 보기 위해서는 우리가 설치한 hpacucli를 사용해야한다. 결과는 다음과 같다. sn(시리얼번호)가 있어서 캡쳐 대신에 텍스트만 복사해서 넣었다.
 
@@ -75,7 +75,7 @@ hpacucli ctrl slot=0 logicaldrive all show status
 
 여기서 보면 RAID 1로 구성되어 있는 하나의 logicaldrive 1을 확인할 수 있다.
 
-![](http://cfile24.uf.tistory.com/image/1160734A4EC3A5F815A913)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/07d35001-bdfd-4f56-a784-5d0172005000)
 
 이제 실제 물리적인 DISK의 상태를 확인하기 위해서 다음 명령어를 실행 한다. 첫번째 bay의 DISK 1와 두번째 bay의 DISK 2 의 상태를 한눈에 확인할 수 있다.
 
@@ -83,7 +83,7 @@ hpacucli ctrl slot=0 logicaldrive all show status
 phacucli ctrl slot=0 pd all show status
 ```
 
-![](http://cfile22.uf.tistory.com/image/155795364EC3A67F1E095B)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/8912033d-f389-4bc1-a1cf-d452d1fd556d)
 
 전체적인 요약을 보기 위해서는 다음과 같이 한다.
 
@@ -213,12 +213,3 @@ Smart Array P410i in Slot 0 (Embedded)
 
 Ubuntu는 처음 Desktop을 위해서 만들어졌고 그 유명세가 더해졌지만 Server환경에 최적화한 Ubuntu-Server 버전도 있다. 그리고 Ubuntu는 많은 communicator와  committer가 있기 때문에 드이라브 지원 및 라이브러리 업데이트가 매우 빠른편이다. 그리고 HP와 같은 서버에서도 공식적인 툴과 소프트웨어를 제공해주고 있다. 여기 예는 hpacucli을 이용해서 cli 환경만 소개했지만 HP sotware 안에는 웹으로 디시크를 관리할 수 있는 HP System management도 제공하고 있다. 웹 환경으로 관리하는 방법은 다음 기회에 포스팅할 계획이다.
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

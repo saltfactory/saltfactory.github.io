@@ -1,11 +1,17 @@
 ---
 layout: post
-title : Ionic 하이브리드 앱 (PhoneGap, Cordova) iOS 3D Touch 적용하기 
-category : ionic
-tags : [ionic, cordova, hybrid, hybridapp, phonegap, ios]
-comments : true
-images :
-  title : http://assets.hibrainapps.net/images/rest/data/873?size=full
+title: 'Ionic 하이브리드 앱 (PhoneGap, Cordova) iOS 3D Touch 적용하기'
+category: ionic
+tags:
+  - ionic
+  - cordova
+  - hybrid
+  - hybridapp
+  - phonegap
+  - ios
+comments: true
+images:
+  title: https://s3.ap-northeast-2.amazonaws.com/hbn-blog-assets/screen-shot-2015-09-26-at-5-44-22-pm.png
 ---
 
 ## 서론
@@ -23,7 +29,7 @@ Ionic은 기본적으로 Cordova 기반으로 만들어진 하이브리드 앱 �
 ionic start myApp sidemenu
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/874?size=full&m=1451466509)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/eb26ba95-4bf7-4571-bb37-f1a0e8e453cd)
 
 ionic 으로 앱을 만들면 기본적으로 iOS 플랫폼을 추가하여 만들어진다. ionic은 cordova의 명령어를 그대로 사용할 수 있다. ionic 이나 cordova를 사용하여 설치된 플랫폼을 확인해보자.
 
@@ -35,7 +41,7 @@ ionic platform list
 cordova platform list
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/875?size=full&m=1451466660)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/12c53ba1-d024-4887-b894-6cc44d0c53ff)
 
 앱을 빌드하고 실행시켜보자.
 
@@ -45,7 +51,7 @@ ionic run ios --device
 
 다음과 같은 화면이 디바이스에서 나타날 것이다.
 
-![](http://assets.hibrainapps.net/images/rest/data/876?size=full&m=1451467054)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/4662498c-a1de-4eb8-913d-18e353181d2c)
 
 ## cordova-plugin-3dtouch
 
@@ -101,7 +107,7 @@ ionic plugin list
 cordova plugin list
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/877?size=full&m=1451469022)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/059da844-4221-4b2f-ba31-dd5e60267e5e)
 
 우리는 Cordova Plugin 설치로 어렵지 않게 iPhone 6s 에서 사용할 수 있는 3D Touch 기능을 JavaScript로 구현할 수 있게 되었다.
 
@@ -174,7 +180,7 @@ ionic run ios --device
 ```
 디바이스에 앱이 실행되면 홈스크린에 설치된 아이콘을 꾹 눌러서 3D Touch 가 적용되었는지 살펴보자.
 
-![](http://assets.hibrainapps.net/images/rest/data/878?size=full&m=1451875818)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/159e92aa-70f7-4ebd-b50e-c30e44b215a5)
 
 ## 3D Touch 이벤트 처리하는 핸들러 정의하기
 
@@ -249,7 +255,7 @@ ionic run ios --device
 
 3D Touch를 시작해서 Search 액션을 선택하면 검색 화면이 열리게 될 것이다.
 
-![](http://assets.hibrainapps.net/images/rest/data/879?size=full&m=1451876757)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/302e4473-2e17-4661-a76d-c6bed16d52e8)
 
 
 ## 결론
@@ -271,12 +277,3 @@ iPhone 6s 에서 3D Touch는 꽤 유용하다. 앱을 실행시키지 않고 홈
 - http://blog.saltfactory.net/books/ionic-edge/
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

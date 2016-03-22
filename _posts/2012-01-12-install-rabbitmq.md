@@ -10,7 +10,7 @@ disqus_identifier : http://blog.saltfactory.net/90
 
 ## 서론
 
-![{max-width:180px}](http://cfile5.uf.tistory.com/image/137A57344F0EBC811A59BC)
+![{max-width:180px}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/08ce2e6f-1119-4f85-ba5f-cac72dedae29)
 
 [RabbitMQ](http://www.rabbitmq.com)는 간단하게 말하면 표준 [AMQP (Advanced Message Queueing Protocol)](http://www.amqp.org) 메세지 브로커 소프트웨어(message broker software) 오픈소스이다. RabbitMQ는 [erlang](http://www.erlang.org)언어로 만들어졌을 뿐만 아니라, clustering과 failover를 위한 OTP framework로 서버가 만들어져 있다. RabbitMQ는 VMware에서 지원해주고 있는데 spring source 프로젝트중에 [spring AMQP](http://projects.spring.io/spring-amqp/)가 정식으로 1.0으로 릴리즈되면서 RabbitMQ의 지원은 더 적극적인것 같다. RabbitMQ는 다양한 언어로된 RabbitMQ client를 지원하고 있고 공식적인 온라인 문서에서는 Python과 Java에 대한 소스코드를 예제로 공개하고 있다.
 
@@ -44,7 +44,7 @@ brew는 macport와 달리 `/usr/local/Cellar/{패키지명}/{버전}` 으로 패
 
 서버를 실행하면 RabbitMQ의 심볼이 나타나면서 rabbit boot start, external infrastructure ready, kernel ready, core initialized, message delivery logic read 순으로 부팅이 완료되고 메세지를 받기 위해 대기한다.
 
-![](http://cfile25.uf.tistory.com/image/206C79444F0EE7D025146A)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ade5c010-e308-401d-bc48-364cfc70d2ae)
 
 RabbitMQ의 상태를 확인하기 위해서는 `rabbitmqctl`을 사용하면 된다.
 
@@ -86,12 +86,3 @@ sudo apt-get install rabbitmq-server
 
 RabbitMQ는 공식적으로 Mac OS X, Debian/Ubuntu, RPM-based Linux, General Unix, Solaris, EC2 에서 설치가 가능하다. 여기서는 Mac과 Ubuntu 기반으로 RabbitMQ에 대해서 사용하는 방법을 포스팅하기 위해서 두가지 설치 방법만 작성했지만 공식 문서에 가면 다른 운영체제에서 설치하는 것도 어렵지 않게 따라할수 있을거라 생각이 든다. 다음 포스팅은 RabbitMQ의 공식 문서를 기반으로 실제 메세지를 전송하고 받는 방법에 대한 예제를 포스팅할 예정이다.
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

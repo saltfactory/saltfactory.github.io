@@ -42,7 +42,7 @@ git fetch origin
 git reset --hard origin/master
 ```
 
-![](http://cfile28.uf.tistory.com/image/012E103A5135530F040724)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/1d46db9e-cacf-49eb-b363-7b2cac80af55)
 
 이제 homebrew를 git 저장소로부터 소스를 받아와서 업데이트를 할 준비를 모두 마쳤다. brew update로 최신 homebrew로 업데이트르 실행하면 된다.
 
@@ -55,12 +55,3 @@ brew update
 1. http://stackoverflow.com/questions/10762859/brew-update-the-following-untracked-working-tree-files-would-be-overwritten-by
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

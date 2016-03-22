@@ -1,3 +1,4 @@
+
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1">
@@ -96,7 +97,10 @@
     <link rel="alternate" type="application/atom+xml" title="saltfactory's blog" href="http://blog.saltfactory.net/atom/" >
     <link rel="alternate" type="application/rss+xml" title="saltfactory's blog" href="http://blog.saltfactory.net/rss"/>
     <!-- style -->
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <!-- <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}"> -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic|Open+Sans:400italic,700italic,700,400">
+    <link rel="stylesheet" href="{{ "/css/screen.css" | prepend: site.baseurl }}">
+
     {% if page.css %}
     <link rel='stylesheet' type='text/css' href='/css/{{ page.css }}' />
     {% endif %}
@@ -107,6 +111,8 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <!-- RDF -->
     <link rel="meta" type="application/rdf+xml" title="FOAF" href="/assets/foaf.rdf" />
+
+    <script type="text/javascript" src="{{ '/assets/javascripts/jquery-2.1.4.min.js' | prepend: site.baseurl }}"></script>
 
     {% if site.google_analytics %}
       {% include google_analytics.html %}

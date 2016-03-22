@@ -18,19 +18,19 @@ disqus_identifier : http://blog.saltfactory.net/215
 
 데모를 보여주기 위해서 SFPushDemo 라는 이름으로 프로젝트를 만들었다. 단순하게 푸시가 아이폰으로 전송되는 것만 테스트할 것이기 때문에 빈 프로젝트로 만들었다.
 
-![](http://cfile26.uf.tistory.com/image/2607E35052D4ED89105885)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/a8ea994f-cb31-499c-9775-e34e7c1a2a42)
 
-![](http://cfile5.uf.tistory.com/image/2276A13552D4EDD903FDA2)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/317d3538-b451-4ef1-a3b3-b54023bd6667)
 
 ### Code Sign
 
 Xcode는 버전이 올라가면서 눈에 띄는 업데이트가 많이 일어나는 것 같다. 이젠 Xcode 툴 자체에서 개발자 인증 및 프로비저닝 코드 싸인을 검사하고 keychain에 없을경우 웹에서 등록하고 추가하는 대신에 Xcode 자체에서 되도록 업데이트 된것 같다. 점점 웹 없이 Xcode 자체로 개발될 수 있는것 같은 느낌이 든다.
 
-![](http://cfile5.uf.tistory.com/image/2520464352D4F0FE03F1B6)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/9bc832a1-d91d-496c-a9d7-292adf59418b)
 
 프로젝트의 code sign이 맞지 않을 겨우 No matching code signing identify found 에러가 나타나는데 이때, Fix issue를 누른다.
 
-![](http://cfile3.uf.tistory.com/image/213E0B3652D4F2AB106086)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/87a10f24-e560-41cc-a7c7-d0c072fa464b)
 
 개발자 등록이 되어 있으면 개발자 계정을 Xcode에 추가하면 된다. 이번 포스팅에서 이 내용을 더 깊게 다루지는 않겠다. 다만 이렇게 Xcode가 많이 발전하고 있다는 소개를 잠시 했다.
 
@@ -43,19 +43,19 @@ http://developer.apple.com
 
 iOS 앱은 유일한 Identifier를 가지고 있고 이것을 이용해서 앱을 식별할 수 있게 된다. 푸시 데모 앱을 위해서 `net.saltfactory.tutorial` 이라는 identifier를 만들었다. 여기서 identifier는 통상 도메인 이름을 거꾸로 적는다. 여러분들의 필요에 따라서 다른 이름으로 생성하면된다.
 
-![](http://cfile25.uf.tistory.com/image/240C6D4F52D4FB3115463B)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/57a7bd32-a4a1-4e93-b72e-47dabad324b1)
 
 #### Provisioning Profile 추가
 
 이제 Xcode에서 아이폰 개발을 할 때 사용할 provisioning profile을 추가한다. 추가하고 난 뒤 Download를 눌러 프로비저닝 파일을 다운 받아서 Xcode에 드래그해서 넣어주거나, 프로비저닝 파일을 더블클릭하면 자동적으로 Xcode에 추가된다.
 
-![](http://cfile5.uf.tistory.com/image/2641F13452D4FB48267E5C)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/8083322d-3f3d-4bbe-a27e-0c7654379687)
 
 #### iOS Certificates(Development) APNs Development iOS 추가
 
 마지막으로 나중에 Push Provider 서버에 사용하기 위한 Certificates 파일을 추가한다. 나중에 푸시 프로바이더 서버를 구현할때 Cetificates 파일이 필요하다. 다운받아 둔다. `apn_development.cer` 이란 파일로 저장이 될 것이다.
 
-![](http://cfile25.uf.tistory.com/image/26475D4E52D4FBEC2F51A8)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/7dec21a9-18cb-4b56-89a2-77425a295063)
 
 ### AppDelegate.m에서 device token 획득
 
@@ -99,7 +99,7 @@ Xcode에서 AppDelegate.m 파일을 열어서 device token을 획득하는 코�
 
 이제 아이폰을 Xcode에 연결해서 빌드를 실행한다. 아이폰에서는 푸시서비스를 허용할 것인지 알람이 뜨고 확인을 하면 Xcode 콘솔에서 로그를 확인하면 디바이스 토큰 정보를 확인할 수 있다.
 
-![](http://cfile10.uf.tistory.com/image/266F6E5052D503592879BC)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/9db57d66-3097-423b-8b17-32a9e6b1e3f9)
 
 이제 모바일 디바이스에서는 푸시를 받을 준비를 다 했으니, 푸시 프로바이더 서버를 만들 차례이다.
 
@@ -111,25 +111,25 @@ node package는 npm을 이용해서 간단히 설치할 수 있다. 만약 맥�
 npm install apn
 ```
 
-![](http://cfile22.uf.tistory.com/image/2707703A52D636C10AC0FC)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/cbb86502-e36b-4d84-824f-6f6d308eabd2)
 
 ### APNs Certificates 파일과 인증키 생성
 
 우린 앞에서 APNs Development Certificates 을 하나 생성해서 다운 받은 파일이 있다. `aps_development.cer` 이란 파일이다. 이 파일을 더블 클릭하면 Mac에서 key를 관리하는 KeyChain Access 라는 프로그램에 자동으로 등록이 된다. 열어서 확인해보자.
 
-![](http://cfile23.uf.tistory.com/image/2720604152D63A2424C2FB)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/cee43845-7493-4b43-acbe-9c2233b57897)
 
 Apple Development iOS Push Service:net.saltfactory.tutorial 을 선택하여 오른쪽 마우스를 클릭하여 export를 한다. 그러면 Certificates.p12 파일로 저장이 될 것이다. 이름은 변경해도 무방하다.
 
-![](http://cfile8.uf.tistory.com/image/2176C03952D63A9B13F48D)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/5f4b7f7c-319b-48ce-b8f0-b3eca5904fb8)
 
 파일을 저장할 때 인증 비밀번호를 물어보는데 비밀번호를 입력하고 기억해둔다.
 
-![](http://cfile27.uf.tistory.com/image/2165663C52D63BB61B7FF8)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/10a9e198-de40-48e5-81ec-ea88c92d7cc8)
 
 위의 두 파일을 keys라는 디렉토리를 만들고 파일을 디렉토리에 복사를 한다.
 
-![](http://cfile26.uf.tistory.com/image/223D6B5052D63C12144BA0)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/0e2f6673-7dea-40a4-b49f-23b45c9772c8)
 
 node-apn은 pem 파일 포멧을 사용하기 때문에 다음과 같이 두 파일을 pem 파일로 변경한다.
 
@@ -138,7 +138,7 @@ openssl x509 -in aps_development.cer -inform DER -outform PEM -out cert.pem
 openssl pkcs12 -in Certificates.p12 -out key.pem -nodes
 ```
 
-![](http://cfile26.uf.tistory.com/image/260FB54B52D6423737BA6C)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/734d1438-347e-4ccb-811d-11574d857854)
 
 ### 푸시 프로바이더 구현
 
@@ -173,7 +173,7 @@ apnConnection.pushNotification(note, myDevice);
 node sf_push_provider.js
 ```
 
-![](http://cfile24.uf.tistory.com/image/277FAC4452D6463341F7F2)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/8ca07335-1522-46de-8208-04db68517c20)
 
 
 ## 결론
@@ -188,12 +188,3 @@ node sf_push_provider.js
 
 1. https://github.com/argon/node-apn
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

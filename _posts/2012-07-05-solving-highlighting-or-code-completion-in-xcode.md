@@ -26,12 +26,12 @@ cd ~/Library/Developer/Xcode/DerivedData/
 
 DerivedData 디렉토리에서 프로젝트 이름으로 검색해보면 여러가지 Xcode에서 제작된 프로젝트마다 생긴 파일들이 특정 디렉토리에서 저장되고 있다는 것을 확인할 수 있다.
 
-![](http://cfile6.uf.tistory.com/image/17786F374FF4E9470F067E)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/eb5a7d38-6010-4148-a628-f7ea4d7953df)
 
 이 Derived Data의 정보는 Xcode의 Oranizer에서도 확인이 가능하다.
 Xcode에서 Window > Oranizer를 선택하면 Organizer 화면이 나타나는데 Projects 탭을 선택하면 Project의 Location이 나오게 되고 프로젝트의 파일들이 저장되는 Derived Data와 Snapshot의 정보를 보여준다.
 
-![](http://cfile25.uf.tistory.com/image/17785A334FF4E93B11CB76)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/1ec6aef7-9b94-47dc-825b-6886d75f60bb)
 
 그리고 각각 오른쪽에 Delete 버턴들이 존재하는데 Syntax Highlighting과 Code Completion의 문제가 발생하면 현재 작업중인 프로젝트의 Derived Data를 삭제하고 다시 Xcode에서 Project를 열어서 보면 다시 Syntax Highlighting과 Code Completion이 정상적으로 동작하는 것을 확인할 수 있다.
 
@@ -41,12 +41,3 @@ Xcode에서 Window > Oranizer를 선택하면 Organizer 화면이 나타나는�
 1. http://stackoverflow.com/questions/1627033/xcode-code-sense-color-completion-not-working
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

@@ -1,11 +1,15 @@
 ---
 layout: post
-title : Jekyll 기반 GitHub Pages 라이브러리 업그레이드
-category : jekyll
-tags : [jekyll, ruby, github, github pages]
-comments : true
+title: Jekyll 기반 GitHub Pages 라이브러리 업그레이드
+category: jekyll
+tags:
+  - jekyll
+  - ruby
+  - github
+  - github pages
+comments: true
 images:
-  title : http://assets.hibrainapps.net/images/rest/data/421?size=full
+  title: 'https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/89577e27-9e4e-4c79-a36e-c547359237bf'
 ---
 
 ## 서론
@@ -96,11 +100,11 @@ jekyll serve —wtach
 
 이 글을 작성하게된 이유가 있다. 최신 GitHub Pages 라이브러리를 업데이트하고 난 뒤 GitHub에 push를 하는데 다음과 같이 GitHub Pages 빌드에 실패를 했다는 메일이 왔다.
 
-![GitHub build failed email](http://assets.hibrainapps.net/images/var/albums/hbncloud/public/Screen_Shot%202015-06-12%20at%2012_46_59%20PM.png?m=1434080819)
+![GitHub build failed email](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/fe5c936f-9249-4663-abde-99913c48dc63)
 
 내가 push한 Jekyll에 문제가 있다는 것을 확인하고 Jekyll 빌드를 실행하는데 다음과 같이 에러가 발생했다.
 
-![jekyll error](http://assets.hibrainapps.net/images/var/albums/hbncloud/public/Screen_Shot%202015-06-12%20at%2012_01_56%20PM.png?m=1434078136)
+![jekyll error](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/234069e0-a05f-46fa-b648-66888a4337bb)
 
 Jekyll과 GitHub Pages를 사용하여 블로그를 운영할 때 가장 불편한 것은 서버의 로그를 볼 수 없다는 것이다. 그래서 로컬의 Jekyll 환경으로 테스트를 해야한다. 서버의 문제를 파악하기 위해서 GitHub Pages에서 운영하고 있는 Ruby와 depenency versions에 꼭 맞는 라이브러리로 동일한 환경을 구축해야지만 정확하게 디버깅을 할 수 있다.
 
@@ -122,12 +126,3 @@ GitHub Pages은 Jeyll을 이용하여 개인 웹 사이트를 구축할 수 있�
 1. https://pages.github.com/versions/
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

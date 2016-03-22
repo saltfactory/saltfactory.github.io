@@ -1,11 +1,12 @@
 ---
 layout: post
-title : GitHub Pages 저장소 이전에 따른 도메인 문제 해결
-category : github
-tags : [github]
-comments : true
-images :
-  title : http://assets.hibrainapps.net/images/rest/data/421?size=full
+title: GitHub Pages 저장소 이전에 따른 도메인 문제 해결
+category: github
+tags:
+  - github
+comments: true
+images:
+  title: 'https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/fd8a7fc0-a469-48b0-b752-85f9217dde1d'
 ---
 
 # 서론
@@ -31,7 +32,7 @@ GitHub Pages는 자시이 가지고 있는 **도메인**을 연결해주는 서�
 
 여기서 중요한 점은 GitHub는 GitHub Pages 서비스의 도메인 네임 서비스 연결을 위해 내가 가지고 있는 저장소 안에 **CNAME**이라는 파일이 존재하는지를 검색하고 모든 **CNAME** 파일의 정보를 읽어서 호스트와 별칭 관리를 하게 된다. 만약 내가 가지고 있는 저장소 중에 동일한 도메인네임 설정을 한 **CNAME** 파일이 존재한다면 GitHub Pages 서비스에서 분석해서 다음과 같이 같은 도메인을 가지고 있는 **CNAME** 파일 있다는 것을 메일로 알려준다.
 
-![CNAME already exists](http://assets.hibrainapps.net/images/rest/data/504?size=full&m=1435884864)
+![CNAME already exists](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/1b89456d-84e5-47c3-926f-e494c1f92420)
 
 
 ## GitHub Pages 저장소 이전
@@ -67,7 +68,7 @@ blog.saltfactory.net
 
 만약 인터넷 브라우저에서 http://blog.saltfactory.net 으로 요청을 한다면 도메인 서비스 사이트에서 지정한 **별칭**을 찾기 위해서 웹은 **saltfactory.net** 주소를 가지고 **DNS 서버**를 먼저 찾게 되고 만약 DNS 서버에 **CNAME** 설정이 되어 있으면 별칭을 찾아서 이동한다. 우리는 가비아 DNS 서비스에 별칭으로 **saltfactory.github.io.**를 등록했었다.
 
-![DNS 서버 CNAME](http://assets.hibrainapps.net/images/rest/data/503?size=full)
+![DNS 서버 CNAME](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/62f656a2-b756-4f18-bdee-55dc7bdd83ff)
 
 그럼 **blog.saltfactory.net** 도메인을 찾기위해서 DNS서버는 별칭으로 지정한 **saltfactory.github.io**로 넘어오게 된다. 그리고 **saltfactory.github.io**에 등록한 **CNAME**을 확인해서 다시 **blog.saltfactory.net** 페이지를 찾아갈 수 있도록 하는 것이다.
 
@@ -93,12 +94,3 @@ GitHub는 개인 개발자가 서버 없이 웹사이트 호스팅을 할 때 �
 1. https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://saltfactory.net/profile) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

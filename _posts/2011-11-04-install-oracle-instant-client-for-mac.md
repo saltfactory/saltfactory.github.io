@@ -22,7 +22,7 @@ disqus_identifier : http://blog.saltfactory.net/48
 
 디렉토리는 아무곳에 설치해도 상관이 없지만 개발의 편리를 위해서 /Projects/Servers/Oracle/instantclient 밑에 설치하려고한다. 다운 받은 파일은 이 디덱토리 밑으로 모두 mv 시켰다. 그리고 unzip 명령어를 사용해 모두 압축을 해제했다. 압축을 해제하면 instantclient_10_2라는 폴더가 생성되고 압축을 해제한 파일들은 모두 그 안에 들어있게 된다.
 
-![](http://cfile7.uf.tistory.com/original/1357E7484EB24CB82669FB)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e5f6f33a-c5d1-47e7-9bdc-eb4799bf9710)
 
 프로파일을 열어서 환경변수를 등록하고 프로파일을 다시 로드한다.
 
@@ -43,14 +43,5 @@ source ~/.profile
 
 이제 sqlplus 를 사용할 수 있게 되었다.
 
-![](http://cfile23.uf.tistory.com/image/114B773D4EB3385308DCF7)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/fec64c35-e653-4aa6-81f8-5474e783084c)
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

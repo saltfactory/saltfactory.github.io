@@ -132,7 +132,7 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 
 index.html을 새로 고치맣면 아이폰에서 Toolbar와 동일한 모야이 상단에 붙은 것을 확인할 수 있다.
 
-![](http://cfile10.uf.tistory.com/image/1610A3394FB20517329A50)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/477e860a-be4a-42a4-b451-9df0593eac76)
 
 우리는 좀더 Toolbar 스럽게 만들기 위해서 버턴을 추가하자, 왼쪽상단에 "Back" 이라는 뒤로가기 버턴을 추가할 것이다. MainView.js 파일을 다음과 같이 수정하자.
 
@@ -177,7 +177,7 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 });
 ```
 
-![](http://cfile2.uf.tistory.com/image/1102E0444FB2097E0B422A)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/c0926abd-dc44-4904-8698-5ad6c828848a)
 
 우리는 Toolbar를 조금 더 수정해보자. Toolbar 오른쪽에 "New"라는 버턴을 추가해보자. 우리는 앞서 버턴을 툴바에 추가하는 방법에 대해서 알아보았다. 그래서 코드를 다음과 같이 수정한다.
 
@@ -227,7 +227,7 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 });
 ```
 
-![](http://cfile28.uf.tistory.com/image/15090C384FB20A1012AF88)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/20842fa6-ece8-4f68-b96a-9407f71fd5a2)
 
 그런데 우리가 원하는 모양으로 나오지 않는다는 것을 확인할 수 있다. 이는 아이폰 개발자라면 알 수 있는 UI 구성이다. UIToolbar에 items를 NSArray 타입으로 받아서 UI를 구성하는데 Sencha에서도 동일하게 구성을 만들어둔 것이다. 그래서 다음과 같이 변경해보자.
 
@@ -283,7 +283,7 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 
 다시 index.html 파일을 새로 고침해보자. 이제 우리가 원하는 모양대로 Toolbar가 네이티브 앱의 모양과 동일하게 구성된 것을 확인할 수 있다.
 
-![](http://cfile29.uf.tistory.com/image/1136BA3E4FB20D7416BE5C)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/3ed1f690-d038-4d24-9477-61a92b4f05d2)
 
 Sencha에서 우리는 컴포넌트를 생성하는 방법으로 Ext.create를 사용했고 위 예제에서는 이름과 동일한 클래스명을 new로 생성하였다. 우리는 Ext.create을 상용해서 컴포넌트들을 생성하고 추가해보자.
 
@@ -428,7 +428,7 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 });
 ```
 
-![](http://cfile27.uf.tistory.com/image/183538374FB21B2102BF36)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/265af8d8-ff82-441d-adcf-bba7d7d28588)
 
 그리고 우리는 본문을 HTML로 작성하고자 하기 때문에 컨텐츠가 HTML 스타일이 적용되게 다음 코드를 추가하자.
 
@@ -478,19 +478,10 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 });
 ```
 
-![](http://cfile24.uf.tistory.com/image/162E3F3B4FB21B60162DCB)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/a647d666-7be3-41e7-98b3-c68881919990)
 
 ## 결론
 
 이제 우리가 구성하기로 마음 먹은대로 컴포넌트를 사용해서 뷰를 구성했다. 컴포넌트를 생성하는 방법은 Ext.create를 이용하거나 Ext.define에 정의한 이름을 new로 생성하여 만들 수 있다. 그리고 그렇게 생성된 컴포넌트들은 Ext.Component가 가지는 add 메소드를 이용해서 순서적으로 추가할 수 있다. 이렇게 정의하고 컴포넌트를 생성하고 하는 코드가 너무 길어지기 때문에 Ext.Component의 xtype이라는 것으로 컴포넌트를 정의하여 컴포넌트가 랜더링 될때 최적화된 컴포넌트를 구성할 수 있다는 것을 소개하였다. 마지막으로 우리가 사용하는 사용자 정의 HTML 속성을 사용하기 위해서 styleHtmlContent을 true 로 한다. 이 포스팅은 컴포넌트를 생성하여 다른 컴포넌트에 추가하여 뷰를 구성하는 방법을 Toolbar를 예로 들어 설명했다.  다음 포스팅에서는 컴포넌트 생성과 구성 과정을 생략하고 좀 더 다양한 컴포넌트를 조합해서 뷰를 구성하는 방법에 대해서 포스팅할 예정이다.
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

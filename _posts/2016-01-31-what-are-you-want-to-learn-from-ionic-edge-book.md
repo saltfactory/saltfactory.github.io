@@ -1,11 +1,17 @@
 ---
 layout: post
-title : 엣지있게 설명한 Ionic 수정증보판 작업을 진행 합니다.
-category : ionic
-tags : [ionic, cordova, hybrid, hybridapp, phonegap, ios]
-comments : true
-images :
-  title : http://assets.hibrainapps.net/images/rest/data/649?size=resize
+title: 엣지있게 설명한 Ionic 수정증보판 작업을 진행 합니다.
+category: ionic
+tags:
+  - ionic
+  - cordova
+  - hybrid
+  - hybridapp
+  - phonegap
+  - ios
+comments: true
+images:
+  title: https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/48133d68-b7e5-4434-b808-a81d59494aef
 ---
 
 ## 최신 Ionic 버전을 위한 개정판 준비
@@ -53,12 +59,3 @@ images :
 
 이번에 새롭게 인쇄를 준비하는 책은 원서 Ionic Edge 2nd edition을 번역한 것이 아니라(아직 2nd edition이 나오지 않음) 초판의 내용을 수정 추가한 수정증보판입니다.
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

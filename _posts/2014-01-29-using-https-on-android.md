@@ -163,11 +163,11 @@ public class MyActivity extends Activity {
 
 결과는 다음과 같다. 단순하게 http요청을 DefaultHttpClient로 요청한 데이터는 POST를 정상적으로 처리하고 응답을 json으로 받아 왔다.
 
-![](http://cfile1.uf.tistory.com/image/227C383452E7798829DF8F)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/7f12c30f-841f-497e-a661-855c618728c5)
 
 그러면 http 요청이 아닌 https를 DefaultHttpClient로 요청하면 어떤 결과가 나타나는지 살펴보자. urlString을 http://에서 https://로 변경하고 실행한다.
 
-![](http://cfile27.uf.tistory.com/image/2722EE3652E77A073327CA)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/fd0a8101-e10e-438a-92dd-8fbff26f8e1c)
 
 결과는 No Peer Certificate라는 에러를 발생시키면서 요청을 제대로 완료하지 못한다는 것을 확인할 수 있다. 왜냐면 https는 인증서를 인증하는 과정이 있어야하는데 http는 단순 http 요청만 처리하기 때문이다.
 
@@ -359,11 +359,11 @@ public class MyActivity extends Activity {
 
 이렇게 코드를 SFSSLFactory를 추가해서 HttpClient에 Scheme을 두가지로 추가했다. http와 https를 처리할 수 있는 Scheme을 가지게 하였고 SSL 인증을 TLS로 HostNameVerifier를 처리하게 했다. 이제 다시 실행을 해보자.
 
-![](http://cfile2.uf.tistory.com/image/274A484752E848712B868D)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/486e4dca-a1be-4da5-8f30-49631b5811ed)
 
 정상적으로 https로 데이터를 요청해서 응답을 받아 온 것을 확인할 수 있다. WireShark로 패킷을 캡쳐해보면 테스트를 진행한 안드로이드 디바이스에서 https로 요청했고 TLS로 보안 요청을 처리한 것을 확인할 수 있다.
 
-![](http://cfile3.uf.tistory.com/image/2279234252E848FA261CE4)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/22d27b8c-a027-4661-81b0-ddc63ed8fe35)
 
 ### HttpURLConnection 사용
 
@@ -498,7 +498,7 @@ public class MyActivity extends Activity {
 
 디바이스에서 실행을 해보자. 앞에서 HttpClient에 DefaultHttpClient로 요청한 결과를 HttpURLConnection으로 동일하게 받을 수 있는 것을 확인할 수 있다.
 
-![](http://cfile30.uf.tistory.com/image/2525A03C52E84E7E1A0DEC)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/10322d3a-234d-477f-806d-ec89d1eb6b2d)
 
 
 ### HttpsURLConnection을 사용하기
@@ -700,7 +700,7 @@ public class MyActivity extends Activity {
 
 이제 디바이스에서 실행을 해보자. 다음과 같이 HttpURLConnection을 실행한 결과와 동일하게 동작하는 것을 확인 할 수 있다.
 
-![](http://cfile30.uf.tistory.com/image/2525A03C52E84E7E1A0DEC)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/b8c54243-42fb-472a-bbc4-068be99ab807)
 
 
 ## 결론
@@ -718,12 +718,3 @@ public class MyActivity extends Activity {
 2. http://cafe.naver.com/jzsdn/21091
 3. http://stackoverflow.com/questions/2642777/trusting-all-certificates-using-httpclient-over-https
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

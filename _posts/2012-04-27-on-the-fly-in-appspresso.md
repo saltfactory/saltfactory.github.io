@@ -17,18 +17,18 @@ disqus_identifier : http://blog.saltfactory.net/126
 
 앞에서 같이 테스트한 SaltfactoryHybridTutorial (http://blog.saltfactory.net/125) 을 다시 열어 보자. 그리고 preferences를 열어서 Appspresso의 Debug를 열어서 Debug Server Host를 지정한다.
 
-![](http://cfile27.uf.tistory.com/image/116348334F9A47D31B6866)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/dc5ca502-8e5c-4baf-a135-64e784253710)
 
 이제 프로젝트를 디버그 모드로 실행해서 테스트를 해보자.
 프로젝트 디렉토리에서 오른쪽 마우스를 클릭해서 Debug as > Debug Appspresso application on iOS device를 선택한다.
 
-![](http://cfile27.uf.tistory.com/image/184172364F9A487302A45E)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/5649b90f-723c-473c-a23d-0504111d529f)
 
 그리고 eclipse의 하단에 있는 On The Fly 창을 확인한다. 밑에 빨간색으로 표시한 곳에 현재의 프로젝트명이 선택되어져 있어야 한다. 만약 그렇지 않을 경우는 on the fly의 target을 찾지 못한다는 에러가 발생하게 된다.
 
-![](http://cfile27.uf.tistory.com/image/1525CA394F9A49A60316AF)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/cb85a303-46f7-4661-8e0b-747f2161ef1c)
 
-![](http://cfile23.uf.tistory.com/image/13783A334F9A4AA40CE4DD)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/8a07f757-3c4b-423b-a77c-5d1d6f2453ce)
 
 최초에 한번 빌드되어 실행되면서 Log가 남았다. 소스를 확인해보자.
 
@@ -78,9 +78,9 @@ ax.log("Hello World") 라는 appspresso의 예약된 객체의 메소드를 사�
 
 새로고침을 실행하면 다음과 같이 "Goodbye World" 가 로그에 남게 되고 simulator를 확인해보면 Goodbye World 고 글자가 변경된 것을 확인 할 수 있다.
 
-![](http://cfile23.uf.tistory.com/image/1541FC384F9A4B710A1569)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/302f5e83-1969-4d1c-a965-060b18f63475)
 
-![](http://cfile9.uf.tistory.com/image/207414344F9A4BAB36DD8B)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/44079328-fe3f-4488-9b59-93806baf71fe)
 
 ## 결론
 
@@ -93,12 +93,3 @@ ax.log("Hello World") 라는 appspresso의 예약된 객체의 메소드를 사�
 
 1. http://appspresso.com/ko/archives/2575
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

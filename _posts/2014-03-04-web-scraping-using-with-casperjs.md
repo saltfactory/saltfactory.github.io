@@ -52,7 +52,7 @@ casper.run();
 casperjs app.js
 ```
 
-![](http://cfile24.uf.tistory.com/image/2510C046531569BF329DDE)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/0a703380-e9d2-45eb-a403-e05d86054ea4)
 
 CasperJS를 사용하는 것이 왠지 PhantomJS를 사용하거나 Node.js의 라이브러리를 사용해서 웹 데이터를 스크래핑하는 것보다 훨씬 간단한거 같다. 마치 웹 브라우저안에 DOM 접근을 직접하는 느낌마저 든다. casperjs 라는 명령어 대신에 casperjs를 Node.js 어플리케이션의 라이브러리로 사용하기 위해서는 [SpookyJS](https://github.com/SpookyJS/SpookyJS)라는 CasperJS 드라이버를 사용해야한다. CasperJS를 좀 더 살펴보기로 하자.
 
@@ -63,7 +63,7 @@ CasperJS의 가장 흥미로운 것이 바로 사람이 브라우저의 행동�
 이 주소를 브라우저에서 열면 다음과 같이 관리자 로그인 페이지로 넘어가게 된다.
 
 
-![](http://cfile23.uf.tistory.com/image/222AFC4953156ECE285C7A)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ff76723f-b853-42a3-81c6-315bf637cc3f)
 
 그리고 티스토리 로그인 정보를 입력하면 다시 관리자 페이지로 이동하게 된다. 우리는 CasperJS로 이 작업을 해보려고 한다.
 
@@ -81,7 +81,7 @@ casper.start('http://blog.saltfactory.net/admin/center/');
 casper.run();
 ```
 
-![](http://cfile25.uf.tistory.com/image/2744C34753157AA33BD4EF)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/91a3b6cf-df2b-4026-8e1a-bf4b04348de0)
 
 CasperJS의 실행 결과를 살펴보면 처음에 http://blog.saltfactory.net/admin/center/를 요청했지만 나중에 내부적인 세션체크가 이루어지고 난 다음에 자체적으로 http://saltfactory.tistory.com/login?requestURI=http://blog.saltfactory.net/admin/center/&try=1 로 URL이 변경된 것을 확인할 수 있다. 이제 변경된 URL이 열린 페이지, 즉, 로그인 페이지에서 form에 아이디와 비밀번호를 넣어서 로그인체크를 하고 우리가 처음에 요청한 http://blog.saltfactory.net/admin/center로 돌아다는 일을 해야한다.
 
@@ -89,7 +89,7 @@ CasperJS의 실행 결과를 살펴보면 처음에 http://blog.saltfactory.net/
 
 CasperJS에서는 form을 채워서 submit을 해주는 메소드가 존재한다. 바로 `casper.fill()` 메소드이다. 이때 `fill()`에 들어가는 것은 form을 선택하고 그 form 안에 input을 넣어주면 된다. 위의 로그인 페이지 소스를 분석하면 form은 id로 LoginForm 으로 만들어져 있고, input은 loginid를 입력 받는 nam이 loginid와 password를 입력받는 name이 password로 구성되어져 있는 것을 확인할 수 있다.
 
-![](http://cfile5.uf.tistory.com/image/27457C395315795F180933)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/9133e373-2694-4877-a250-6ec877e9af82)
 
 위 과정을 CasperJS 소스코드로 다음과 같이 구현할 수 있다. CapserJS는 순차적으로 사람의 행동과 동일하게 진행시킬 수 있는 데 then을 사용하면 앞의 행위 다음의 행위를 지정할 수 있다. 이것에 대한 내용은 다음에 좀더 깊게 자세히 하도록 하겠다. 여긴선 단순히 then으로 앞의 일을 그대로 받아와서 처리할 수 있다고만 생각하자.
 
@@ -113,13 +113,13 @@ casper.run();
 
 실행한 결과는 다음과 같다. 살펴보면 form element를 selector를 이용해서 찾아서 `loginid` 필드에 값을 set하고 password 피드에 값을 set하고 HTTP Post로 submit을 진행한다. 그리고 로그인체크가 끝나면 우리가 세션이 필요한 요청한 페이지로 다시 URL을 변경시켜 돌아가게 해준다.
 
-![](http://cfile25.uf.tistory.com/image/245E373953157C3C1D8209)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/9563683b-d04c-4503-a76a-7efd9e7bf14a)
 
 #### CasperJS를 이용해서 필요한 데이터 가져오기
 
 로그인이 완료된 상태로 우리가 요청한 http://blog.satlfactory.net/admin/center 페이지로 갔을 때 우리는 최근 댓글을 가져오고 싶다. 그래서 페이지를 분석하면 다음과 같다. 다음과 같이 최신댓글은 div 태그에 id가 recentComments로 만들어져 있고 각각 댓글은 span의 class가 txt로 이루어져 있다.
 
-![](http://cfile28.uf.tistory.com/image/2451074553157E72090FF5)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/f4dc5f6d-773b-4293-a8f2-abf815d8ae97)
 
 그래서 최근댓글 중에서 가장 첫번째 댓글을 가져오기 위해서 다음과 같이 querySelector와 querySelectorAll을 사용해서 필요한 데이터에 접근할 수 있다. 아래 코드를 실행하면 티스토리 관리자 페이지에서 최근 댓글중에 첫번째 댓글을 가져오는 것을 확인할 수 있다.
 
@@ -150,7 +150,7 @@ casper.run();
 
 ```
 
-![](http://cfile21.uf.tistory.com/image/2634123953157F403CB2E1)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ac36ef58-2344-486f-a2b7-750be5b54dad)
 
 
 ## 결론
@@ -164,12 +164,3 @@ CasperJS는 사람이 웹사이트에서 사이트를 브라우징하는 것과 
 3. http://nodeqa.com/nodejs_ref/86
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

@@ -51,9 +51,9 @@ Max_data_length: 281474976710655
 1 row in set (0.00 sec)
 ```
 
-![](http://cfile1.uf.tistory.com/image/182F763E4F5564AA08313F)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/624937f2-388a-49d9-b07c-04142fcf9374)
 
-![](http://cfile10.uf.tistory.com/image/127127334F5564B529FB13)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/5fe51055-31f9-4ba9-baea-e4d5bb065143)
 
 두 세션이 열린 터미널을 살표보면 다음과 같이 두번째에 write lock을 실행하려면 명령어가 끝나지 않는 것을 확인 할 수 있다. 서버 단에서 Lock을 기다리는 쿼리의 목록을 볼 수 있는데 다음 명령어로 서버 수준에서 락을 기다리는 쿼리를 확인할 수 있다.
 
@@ -93,7 +93,7 @@ Command: Query
 UNLOCK TABLES;
 ```
 
-![](http://cfile1.uf.tistory.com/image/205E8B374F55668F10156F)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/76796970-5a7e-4ebb-8e2e-9fcb7e0e5031)
 
 read 락이 해지되면서 locked 되어 있던 5번 쓰레드의LOCK TABLE messages WRITE; 쿼리가 실행되면서 messages 테이블에 write 락이 명시적으로 설정되었다. open tables from {데이터베이스 명} 이라는 명령어로 현제 cached 된 테이블의 정보를 볼 수 있는데 지금 현재 테이블이 LOCK 되어 사용 중이라는 것을 확인 할 수 있다.
 
@@ -667,12 +667,3 @@ END OF INNODB MONITOR OUTPUT
 7. http://www.phpdeveloper.org.uk/mysql-named-locks/
 8. http://dev.mysql.com/doc/refman/4.1/en/innodb-lock-modes.htm
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

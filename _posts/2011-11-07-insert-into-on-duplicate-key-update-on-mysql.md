@@ -42,11 +42,11 @@ ALTER TABLE students ADD UNIQUE (NAME);
 
 테스트할 테이블의 컬럼 중에 name 이라는 컬럼에 Unique 제약 조건을 추가했다. desc students; 를 실행하면 name 컬럼에 unique key가 생성되어 있는 것을 확인 할 수 있다.
 
-![](http://cfile23.uf.tistory.com/image/13126C3F4EB788C808CCB8)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/75c2afb6-2d84-44ca-96a8-31717cf711af)
 
 우선 이 테이블에는 아무런 데이터가 없다. select * from students;로 조회 하면 Empty set이라고 출력될 것이다.
 
-![](http://cfile1.uf.tistory.com/image/1237E24C4EB788EC385CC8)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e8fa6e81-9c90-43a4-8399-6e0ca1c96f45)
 
 다음은 insert into on duplicate key update를 할 것이다. 만약에 saltfactory라는 사용자가 없다면 insert를 하고 이메일은 saltfactory@gmail.com을 입력하고, 만약 saltfactory라는 사용자가 존재하고 있다면 saltfactory@me.com을 이메일로 업데이트하라는 쿼리이다.
 
@@ -57,18 +57,9 @@ ON DUPLICATE KEY UPDATE name='saltfactory', email='saltfactory@me.com';
 
 현재 아무런 값이 없기 때문에 insert를 하면서 saltfactory와 saltfactory@gmail.com을 입력할 것이다.
 
-![](http://cfile7.uf.tistory.com/image/145F46354EB7897123DD17)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d4b65aff-b913-40eb-b803-bcf66cb1af3c)
 
 한번더 위 쿼리를 실행하면 saltfactory라는 이름이 이미 있으니 saltfactory@gmail.com의 이메일 주소가 saltfactory@me.com으로 업데이트 될 것이다.
 
-![](http://cfile30.uf.tistory.com/image/1830913E4EB789BC1A1EC7)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/be5be7be-390a-4b49-b00a-48aab46cbbbb)
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

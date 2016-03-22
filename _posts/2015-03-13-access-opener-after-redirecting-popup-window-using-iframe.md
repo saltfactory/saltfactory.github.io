@@ -86,7 +86,7 @@ function doRedirectOpener(){
 3. **iPinMain.html** : 외부 업체 사이트에서 필요한 작업을 처리하고 결과를 나의 HOST의 `result.html`으로 리다이렉트 한다.
 4. result.html : 외부에서 전달한 값을 가지고 **부모창**에 접근하여 결과를 액션을 취한다.
 
-![](http://assets.hibrainapps.net/images/var/albums/posts/Screen%20Shot%202015-03-13%20at%204_35_04%20PM.png?m=1426232233)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e2148fee-1163-405c-b7fe-fd0398a48f58)
 
 이와 같은 경우 최종적으로 **자식창**에서 결과를 **부모창**에 전달하기 위해서 `window.opener`를 사용하면 `undefined` 에러를 발생시킨다.
 다시 말해서 HOST가 변경되면서 처음 **자식창**이 열렸을 때의 `window.opener`가 유지가 되지 않고 변경이 되는 문제를 가지게 되는 것이다. 이 문제는 Internet Explore의 보안설정에 의해서 발생한다. 이 문제를 해결하기  위해서 사용자에게 보안 설정을 해지하거나 변경해야한다고 공지할 수는 없기 때문에 우리는 이 문제를 해결하기 위한 방법을 찾게 되었다.
@@ -96,7 +96,7 @@ function doRedirectOpener(){
 
 **자식창**이 Popup으로 열려서 URL이 다른 HOST로 이동하게 되면 `window.opener`를 유지할 수 없는 문제를 해결하기 위해서 [iframe](http://www.w3schools.com/tags/tag_iframe.asp)을 이용하여 **자식창**의 HOST는 변경하지 않고 `iframe`안에서만 페이지가 변경될 수 있도록 실험하였다. **자식창**의 `window`객체는 변경되지 않기 때문에 **자식창**에서는 **부모창**을 접근할 수 있는 `window.opener`를 잃지 않을 것으로 생각했다. 결과 페이지인 `result.html` 페이지 안에서 `iframe`에 접근하면 `iframe`을 가지고 있는 **자식창**을 접근할 수 있고, **자식창**에서 **부모창**으로 접근할 수 있기 때문이다.
 
-![](http://assets.hibrainapps.net/images/var/albums/posts/Screen%20Shot%202015-03-13%20at%204_37_03%20PM.png?m=1426232233)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e77f6503-209d-4793-8ba7-71ad8a505cd9)
 
 
 
@@ -152,12 +152,3 @@ function onCloseSendResultToOpener(){
 
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

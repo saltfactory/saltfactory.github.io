@@ -1,11 +1,16 @@
 ---
 layout: post
-title : bower-rails를 사용하여 Ruby on Rails 에서 간단하게 bower 사용하기
-category : ruby
-tags : [ruby, gem, ror, bower, rails]
-comments : true
-images :
-  title : http://assets.hibrainapps.net/images/rest/data/707?size=full
+title: bower-rails를 사용하여 Ruby on Rails 에서 간단하게 bower 사용하기
+category: ruby
+tags:
+  - ruby
+  - gem
+  - ror
+  - bower
+  - rails
+comments: true
+images:
+  title: 'https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/816159f7-9204-4965-9a0b-548daf0de03d'
 ---
 
 ## 서론
@@ -36,7 +41,7 @@ RoR 프로젝트를 하나 생성해보자. 프로젝트를 생성하면 필요�
 rails new TestApp
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/694?size=full&m=1445565924)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/288aada9-4e4c-43dc-8a94-9de7ce193ff8)
 
 하지만 최초 RoR 프로젝트가 생성될 때 bower에 관련된 패키지는 자동으로 설치가 되지 않는다.
 
@@ -48,7 +53,7 @@ rails new TestApp
 gem 'bower-rails'
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/695?size=full&m=1445566262)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/cb3eb3a0-c45f-4175-a640-fc81a0c19dca)
 
 Gemfile에 bower-rails를 추가한 다음 [bundler](http://bundler.io/)을 가지고 설치한다.
 
@@ -58,7 +63,7 @@ bundle install
 
 이 명령어를 사용하면 bundler는 새롭게 추가된 gem 패키지를 설치할 것이다.
 
-![](http://assets.hibrainapps.net/images/rest/data/696?size=full&m=1445566345)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/bb0e90e7-77d9-424e-9080-7f007917b340)
 
 ## bower.json 생성 및 bower 패키지 설치하기
 
@@ -69,7 +74,7 @@ Bower를 사용하기 위해서는 Bower 패키지를 정의하기 위한 **bowe
 rails g bower_rails:initialize json
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/697?size=full&m=1445566516)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d22390ac-1547-4d17-b77d-4c7b7cb67d79)
 
 이 명령어는 RoR 프로젝트에 **bower.json** 파일과 **config/initializers/bower_rails.rb** 두가지 파일을 생성한다. bower 패키지를 다운로드하기 위해서는 bower.json 파일을 먼저 살펴보자. 기본적으로 만들어진 bower.json을 열어보면 다음과 같은 내용으로 저장이 되어 있다.
 
@@ -102,7 +107,7 @@ rails g bower_rails:initialize json
   }
 }
 ```
-![](http://assets.hibrainapps.net/images/rest/data/698?size=full&m=1445567515)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/c2c05adc-b18b-4b78-93bc-47626190a236)
 
 다음은 bower 패키지를 RoR에서 설치하기 위해서는 앞에서 설치한 **bower-rails**의 rake를 사용하면 된다.
 
@@ -112,11 +117,11 @@ rake bower:install
 
 이 명령어를 사용하면 RoR의 프로젝트에 bower.json 에 정의한 Bower 패키지를 설치할 수 있게 된다.
 
-![](http://assets.hibrainapps.net/images/rest/data/700?size=full&m=1445567630)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/a7543f6b-50b8-4c97-8793-96f485e509ae)
 
 rake 명령어가 실행되고 난 이후 Bower의 패키지가 설치되는 곳을 확인해보자. 기본적으로 bower-rails로 Bower 패키지를 설치하면 **vendor/assets/**에 패키지가 설치된다. bower.json 에 fontawesome 패키지를 설치한다고 정의하였기 때문에 다음과 같이 **vendor/assets/fontawesome** 경로에 설치가 될 것이다.
 
-![](http://assets.hibrainapps.net/images/rest/data/701?size=full&m=1445567819)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/01f2a5de-9446-41f2-b88f-717fba38820c)
 
 ## 테스트를 위한 RoR 컨트롤러와 뷰 추가
 
@@ -126,7 +131,7 @@ rake 명령어가 실행되고 난 이후 Bower의 패키지가 설치되는 곳
 rails g controller Greetings hello
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/702?size=full&m=1445568126)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/eeb9ac9a-4b9c-4554-8f08-d947c2ef5511)
 
 rails 서버를 실행해서 새롭게 만들어진 뷰를 확인하자. RoR 서버를 실행하고 브라우저로 http://localhost/greetings/hello 뷰를 열어본다.
 
@@ -134,11 +139,11 @@ rails 서버를 실행해서 새롭게 만들어진 뷰를 확인하자. RoR 서
 rails s
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/704?size=full&m=1445568312)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/72409a94-e7aa-4795-85dc-97206e8dcfdd)
 
 RoR 서버에 앞에서 bower 패키지를 설치한 자원이 로드 되었는지 확인하기 위해서 브라우저의 Inspector를 열어서 확인해보자.
 
-![](http://assets.hibrainapps.net/images/rest/data/705?size=full&m=1445568435)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/1f14ca9c-a25c-4fb4-ae00-87508731a769)
 
 우리는 앞에서 bower 패키지를 설치만 했을 뿐 RoR에 로드 시키지 않았기 때문에 아무런 자원이 로드 되지 않은 것을 확인할 수 있다.
 
@@ -188,7 +193,7 @@ RoR이 웹 프레임워크의 assets 자원을 관리하기 위해서 4버전부
 
 다시 브라우저를 리로드하여 inspector를 통해 웹 리소스를 확인해보자. application.css 설정을 하지 않았던 처음과 달리 이제는 bower로 설치한 패키지 중에서 application.css에 정의한 bower 패키지를 로드한 것을 확인할 수 있다.
 
-![](http://assets.hibrainapps.net/images/rest/data/706?size=full&m=1445574862)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/3f1a3227-2eec-491b-8c6f-b142554536d3)
 
 ## bower-rails 설정
 
@@ -228,13 +233,3 @@ Ruby on Rails는 웹을 빠르게 개발하기 위한 풀스택 웹 개발 프�
 1. https://github.com/rharriso/bower-rails/
 2. http://blog.saltfactory.net/ruby/using-bower-in-ror.html
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://saltfactory.net/profile) 개발 연구원
-* 프로필 : http://saltfactory.net/profile
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

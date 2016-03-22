@@ -1,11 +1,17 @@
 ---
 layout: post
-title : Ruby on Rails 에서 bower를 사용하여 Bootstrap, Bootstrap-Sass 적용하기
-category : ruby
-tags : [ruby, gem, ror, bower, rails, bootstrap]
-comments : true
-images :
-  title : http://assets.hibrainapps.net/images/rest/data/717?size=full
+title: 'Ruby on Rails 에서 bower를 사용하여 Bootstrap, Bootstrap-Sass 적용하기'
+category: ruby
+tags:
+  - ruby
+  - gem
+  - ror
+  - bower
+  - rails
+  - bootstrap
+comments: true
+images:
+  title: 'https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/0259fd41-74dc-4d85-9ce5-a4723bf7ac47'
 ---
 
 ## 서론
@@ -167,7 +173,7 @@ http://localhost:3000/greetings/hello
 
 결과를 살펴보면 RoR에서 Bower를 사용하여 Bootstrap의 assets들이 정상적으로 포함되어 잘 동작하는 것을 확인할 수 있다.
 
-![](http://assets.hibrainapps.net/images/rest/data/711?size=full&m=1445585175)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/9a79ce57-95e4-4584-9998-7d6b501efed1)
 
 ## Bootstrap-Sass 설정
 
@@ -179,7 +185,7 @@ Bower를 사용하여 bootstrap-sass를 설치하기 위해서 bower.json에 boo
 bower uninstall bootstrap
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/712?size=full&m=1445585958)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/a95781e3-3695-4a0c-877d-0a96cf032ea2)
 
 위 명령어로 패키지를 삭제하면 bower 패키지 디렉토리에서 해당 패키지가 삭제된다. 기존의 boostrap 패키지를 삭제한 이후 bower.json의 패키지를 다음과 같이 수정한다.
 
@@ -220,7 +226,7 @@ bower install
 
 설치 명령어가 끝나면 **vendor/assets/bower_components/bootstrap-sass** 경로에 패키지가 설치된 것을 확인할 수 있다.
 
-![](http://assets.hibrainapps.net/images/rest/data/713?size=full&m=1445586050)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/3fb705fd-126b-4048-b9b4-5d82701db2f4)
 
 ## application.js에 boostrap-sass JavaScript 포함하기
 
@@ -292,7 +298,7 @@ http://localhost:3000/greetings/hello
 
 결과는 어떠한가? 다음 그림과 같이 font에 관련된 assets를 찾지 못했다는 결과와 함께 greeings asset에 boostrap assets 포함되어 만들어진 css가 나타날 것이다.
 
-![](http://assets.hibrainapps.net/images/rest/data/714?size=full&m=1445586982)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/717ee4db-1118-41d9-aed8-bfba7c05cc15)
 
 이유는 SASS에서 참조하는 font의 경로가 RoR의 assets pipeline으로 만들어지는 경로와 맞지 않기 때문이다.  이러한 문제는 RoR 프로젝트에서 기존의 CSS로 만들어진 파일을 Assets Pipeline으로 포함시켜서 작업하거나 SCSS로 변경하여 작업할 때 자주 만나게 되는 문제이다. 이 문제를 해결하기 위해서는 RoR의 Assets Pipeline 개념을 잘 이해해야한다. RoR의 Assets Pipeline은 컴파일된 assets을 assets에 관련된 패스로 접근하기 때문에 발생하는 문제인데 이것을 css나 scss 파일을 열어서 컴파일된 assets의 경로로 변경하면 된다. 하지만 이것을 복잡한 문제를 야기시키가나 꽤 불편한 작업이다. Bootstrap-Sass는 이렇게 Assets Pipeline에 대해서 발생하는 문제점을 해결하기 위해서 **_boostrap-sprokerts.scss**를 사용하여 쉽게 해결할 수 있도록 하였다. 이 파일은 RoR의 Assets Pipeline을 사용할 경우의 font 패스가 변경되어 지는 것을 함수로 만들어서 처리하도록 한 것이다.
 
@@ -316,7 +322,7 @@ Showing /Users/saltfactory/Projects/Workspaces/Rails/TestApp/app/views/layouts/a
 Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot )` to `config/initializers/assets.rb` and restart your server
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/715?size=full&m=1445587858)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/a3974471-3467-4d56-aef2-6288a2e89634)
 
 이 문제는 Assets Pipeline에서 assets을 참조할 때 컴파일되어진 assets을 참조하는데 font 자원들이 포함되도록 설정이 되어 있지 않기 때문이다. Assets Pipeline에 관련된 설정은 **config/initializers/assets.rb**에서 설정한다고 앞에서 설명하였다. 이 파일을 다시 열어보자.
 
@@ -344,7 +350,7 @@ Rails.application.config.assets.precompile << %r(bootstrap-sass/assets/fonts/boo
 
 http://localhost:3000/greetings/hello
 
-![](http://assets.hibrainapps.net/images/rest/data/716?size=full&m=1445588236)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/74fb3781-57b4-4927-ae20-7648ee472521)
 
 이제 Bootstrap의 SCSS를 참조하여 나만의 SCSS를 개발할 수 있게 되었다. Bootstrap-Sass의 여러가지 스타일 변수를 사용하거나 상속하거 참조해서 보다 효율적인 스타일 개발을 할 수 있을 것이다.
 
@@ -359,13 +365,3 @@ http://localhost:3000/greetings/hello
 3. https://github.com/twbs/bootstrap-sass
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://saltfactory.net/profile) 개발 연구원
-* 프로필 : http://saltfactory.net/profile
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

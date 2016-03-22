@@ -48,7 +48,7 @@ void UIImageFromURL( NSURL * URL, void (^imageBlock)(UIImage * image), void (^er
 
 이 코드를 iOS에서 사용하면 다음과 같은 warning이 나타난다.
 
-![](http://cfile10.uf.tistory.com/image/130CF7364F2753D10308D5)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/3fbd0a84-966a-43e8-bcb0-5d46f673d570)
 
 이것은 UIImageFromURL가 미리 선언되어 있지 않아서 발생하는 경고인데 .h 파일 안에 미리 선언해주면 이 경고는 사라진다.
 
@@ -79,7 +79,7 @@ void UIImageFromURL( NSURL * URL, void (^imageBlock)(UIImage * image), void (^er
 }
 ```
 
-![](http://cfile10.uf.tistory.com/image/143F5F404F275729018C66)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/488aef88-86bb-4933-8bf3-29c3f8b255df)
 
 우리는 이 코드를 좀더 Objective-C에 익숙한 메소드와 파라미터 방식으로 변경하고 싶다고 생각했다. Objective-C의 메소드 선언 방법은 개발할때 파라미터에 대한 이름과 타입을 참조하는데 더 유용하기 때문이다. 그래서 이 코드를 다음과 같이 변경하여 인스턴스 메소드로 만들어서 사용할 수 있다.
 
@@ -187,7 +187,7 @@ void UIImageFromURL( NSURL * URL, void (^imageBlock)(UIImage * image), void (^er
 }
 ```
 
-![](http://cfile4.uf.tistory.com/image/142CC23E4F27776E21F98A)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/3958633b-88a9-4662-8d51-a23be3fb9c39)
 
 참조 원문 : http://www.geekygoodness.com/2011/06/17/uiimage-from-url-simplified/
 코드의 저작권은 http://www.geekygoodness.com 에 있기 때문에 코드 사용시 원 저작권자에게 사용 요청을 받기 바랍니다.
@@ -195,12 +195,3 @@ void UIImageFromURL( NSURL * URL, void (^imageBlock)(UIImage * image), void (^er
 http://blog.saltfactory.net/attachment/cfile5.uf@202A18504F2A3B7E319A00.gz
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

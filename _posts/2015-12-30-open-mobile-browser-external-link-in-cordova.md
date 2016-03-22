@@ -1,11 +1,17 @@
 ---
 layout: post
-title : PhoneGap(Cordova) 안드로이드 앱에서 외부 링크 새로운 브라우저 앱으로 열기
-category : cordova
-tags : [cordova, hybrid, hybridapp, phonegap, android, ionic]
-comments : true
-images :
-  title : http://assets.hibrainapps.net/images/rest/data/872?size=full
+title: PhoneGap(Cordova) 안드로이드 앱에서 외부 링크 새로운 브라우저 앱으로 열기
+category: cordova
+tags:
+  - cordova
+  - hybrid
+  - hybridapp
+  - phonegap
+  - android
+  - ionic
+comments: true
+images:
+  title: 'https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/b8a17dba-2920-478c-9012-b5ab6f7deb6c'
 ---
 
 
@@ -120,12 +126,3 @@ Cordova 앱에서 외부 링크를 브라우저로 열기 위한 방법은 기�
 1. http://stackoverflow.com/questions/29992669/accessing-appview-from-cordova-5-0-0
 2. http://blog.saltfactory.net/hybridapp/solve-external-link-tag-in-phonegap.html
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

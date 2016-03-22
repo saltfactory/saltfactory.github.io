@@ -81,7 +81,7 @@ node chaining-demo.js
 
 예상한 결과가 나오는 것을 확인 할 수 있다. 코드는 매우 간단하게 host, port, user, password를 입력 받고 connect라는 메소드가 호출되면서 저장된 멤버변수를 출력한 예제이다.
 
-![](http://cfile6.uf.tistory.com/image/2734C83352EF4D6E0E424E)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/0bd504ea-450d-4e68-a116-e2eb819c5dce)
 
 그럼 우리는 메소드 체이닝을 해볼 것이다. 메소드 체이닝은 메소드를 순차적으로 호출할 수 있게 메소드에 메소드를 붙여서 사용한다. 그래서 우리는 위 실행코드를 다음과 같이 수정했다.
 
@@ -91,7 +91,7 @@ dbconn.host('localhost').port(80).user('saltfactory').password('password').conne
 
 다시 실행해보자. 실행 결과는 다음과 같다. port 메소드가 호출되기 전에 에러가 발생하는데 이것은 port라는 메소드를 `host('localhost')`에서 찾기 때문에이다.
 
-![](http://cfile29.uf.tistory.com/image/24274E4852EF507925CBF0)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/2e02c516-297d-4895-a09e-84e96eb0e84d)
 
 그래서 다음과 같이 코드를 수정한다. 메소드에 객체 인스턴스인 this를 반환하게 넣어주는 것이다. 이렇게 되면 메소드가 호출하되고 난 다음 다음 메소드를 호출할 수 있게 되는 것이다.
 
@@ -138,7 +138,7 @@ DBConnector.prototype.connect = function(){
 dbconn.host('localhost').port(80).user('saltfactory').password('password').connect();
 ```
 
-![](http://cfile6.uf.tistory.com/image/2734C83352EF4D6E0E424E)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/21338adc-c839-42d6-9bc7-9545e8662eb5)
 
 그럼 메소드 체이닝 패턴은 자바스크립트에서만 사용할 수 있는 패턴인가? 그렇지 않다. 다른 언어에서도 이와 같이 메소드 체이닝 패턴을 동일한 방법으로 구현할 수 있다.
 
@@ -187,7 +187,7 @@ dbconn = DBConnector.new
 dbconn.host('localhost').port(80).user('saltfactory').password('password').connect()
 ```
 
-![](http://cfile10.uf.tistory.com/image/2478AF3A52EF587F253B7F)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/229515f9-7420-4853-9bcb-086872913f4b)
 
 Java에서는 메소드 체이닝을 사용할 수 있을까? 물론 가능하다 다음과 같이 메소드 안에서 자신을 리턴해 주면 된다.
 
@@ -249,12 +249,3 @@ public class ChainingDemo{
 2. http://en.wikipedia.org/wiki/Method_chaining
 3. http://www.sitepoint.com/a-guide-to-method-chaining/
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

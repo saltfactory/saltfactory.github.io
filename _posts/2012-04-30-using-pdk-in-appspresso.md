@@ -20,57 +20,57 @@ disqus_identifier : http://blog.saltfactory.net/129
 
 Appspresso의 workspace에 다른 Plugin Project를 생성한다.
 
-![](http://cfile30.uf.tistory.com/image/130D2E404F9E3DCD187DE6)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/aed13eb0-7a37-46ee-9340-a87f2cee83a2)
 
 새로운 Plugin 프로젝트를 만들때 Project Name을 입력하고 나중에 plugin의 유일한 식별을 하기 위해서 ID를 지정하고 버전 정보를 입력한다.
 
-![](http://cfile4.uf.tistory.com/image/1642853D4F9E3F6F150987)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/1718499c-75c0-47d0-80fc-8d721f175d6a)
 
 다음은 iOS 버전의 네이티브 모듈 plugin을 만들 것인지, Android 네이티브 모듈 plugin을 만들 것인지 선택을 한다. 두가지 모두 선택하면 두가지 모듈 프로젝트가 workspace에 추가된다.
 
-![](http://cfile23.uf.tistory.com/image/1537FD3D4F9E3F6F2058F2)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/dd0b0f7e-78cd-4ed6-a5bd-44b65dc93821)
 
 첫번재로 Android 모듈을 설정하는 화면이다. plugin project에서 새로운 module project를 사용하게 되는데 이때 안드로이드 버전의 모듈 프로젝트를 생성한다.
 
-![](http://cfile25.uf.tistory.com/image/133DA53D4F9E3F6F25EE4C)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/65c0372b-32cd-48bf-bbae-b29f9e10b5d8)
 
 안드로이드 모듈에서 사용될 메인 클래스를 지정한다. 이름은 어떻게 주어지든 상관 없지만 인식의 편리를 위해서 plugin을 만들 때 사용한 ID를 기반으로 메인 클래스 이름을 만들었다. 그리고 Android SDK의 레벨을 지정한다.
 
-![](http://cfile7.uf.tistory.com/image/18426D3D4F9E3F6E1507C9)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/b2bd8e65-cf3a-4c9a-ad49-1ffe579eaad4)
 
 우리는 위에서 Android와 iOS 두가지 모듈 모두를 사용하는 plugin을 만든다고 체크하였기 때문에 이번에는 iOS 모듈을 설정하는 화면이 나타난다.
 
-![](http://cfile1.uf.tistory.com/image/1440D23D4F9E3F701756C0)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/421dbf5c-cf55-4dea-9403-9ddd9509cf0e)
 
 안드로이드 모듈의 메인클리스와 달리 iOS에서는 네이밍 규칙에 클래스 파일에 .을 사용하기 보다 다음과 같이 사용하기 때문에 다음과 같은 형태로 자동으로 만들어진다.
 
-![](http://cfile7.uf.tistory.com/image/1445583D4F9E3F6E0F6975)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/4f141078-242d-431e-a528-aff4256976c4)
 
 이렇게 plugin project를 생성하고 각가의 네이티브 서브 모듈들을 설정하면 다음과 같이 workspace에 plugin project와 Android Module Project, iOS Module Project를 생성할 거라는 요약정보를 알려준다.
 
-![](http://cfile9.uf.tistory.com/image/163E8C3F4F9E3F6D31DD3C)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/129d3a52-8c9d-45ca-bebb-1b774f5a85c1)
 
 이렇게 plugin project를 생성하는 과정이 끝나면 현재 열려져 있는 workspaces에 다음과 같이 Application Project, Plugin Project, android Module Project, iOS Module Project 총 4가지 프로젝트가 존재하게 된다.
 
-![](http://cfile8.uf.tistory.com/image/182B69364F9E4309032AD7)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/daf1bd97-6406-4598-923e-b38d4caea79e)
 
 그런데 잘 살펴보면 Android Module Project 에 에러가 발생한 것을 볼 수 있다. 이유는 Java SDK나 JRE가 연결되지 못해서 그런것이기 때문에 Android Module Project를 선택하고 오른쪽 마우스를 클릭해서 build Path > Configure build path를 선택하여 JRE를 연결한다.
 
-![](http://cfile9.uf.tistory.com/image/137208374F9E43D7075715)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/5169c6bb-a869-48fd-9a8d-6c2f403aac0e)
 
-![](http://cfile27.uf.tistory.com/image/205AC83F4F9E3F6C016F54)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/8fa8ed99-f58f-4e48-8510-5390008d8121)
 
-![](http://cfile25.uf.tistory.com/image/16471D3F4F9E3F6B236418)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d36f698a-7d9c-490c-9dc1-a4197f2d272a)
 
-![](http://cfile25.uf.tistory.com/image/134C483F4F9E3F6B1BDF36)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/66247cb8-5016-4a4f-a7e3-24e54b2ff11a)
 
-![](http://cfile10.uf.tistory.com/image/1152933F4F9E3F6B122E8C)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ef5facff-60f7-42ab-b111-b407b2a468f8)
 
 이렇게 JRE를 설정해주면 에러가 났던 문제는 해결이 된다.
 
 이젠 Application Project에서 어떻게하면 PDK로 만든 사용자가 새롭게 만든 plugin을 사용할 수 있느냐는 것이다. Application Project에서 project.xml 파일을 연다. 그리고 common 이라는 탭에서 plugin을 관리하는 패널이 나타나는데, 여기서 Add Plugin Project 버턴을 선택하여 방금 생성한 plugin project의 폴더를 지정한다.
 
-![](http://cfile24.uf.tistory.com/image/193E3C3F4F9E3F6A32B2FE)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/b470dcc8-0237-4d4e-ac2f-a01815348390)
 
 이제 plugin project를 만들고 Application Project에서 사용자가 생성한 plugin을 사용할 모든 준비를 마쳤다.
 이젠 코드를 실행시켜보자. 아마 샘플로 만들어진 코드는 message를 echo하는 소스코드가 샘플로 만들어질 것이다. 아래 코드는 plugin project에 들어있는 axplugin.js 의 파일이다. 여기서 feature id에 plugin을 만들었을 때 사용하던 id를 입력시킨다. Appspresso는 WAC 를 사용하여 디바이스의 API에 접근을 할 수 있는데 echoSync와 echoAsync에 사용하는 this.execSync와 this.execAsync를 네이티브 코드로 call by name 으로 context를 호출하고 데이터를 처리하는 과정을 거친다.
@@ -282,11 +282,11 @@ public class MyPlugin implements AxPlugin {
 </html>
 ```
 
-![](http://cfile29.uf.tistory.com/image/1760B3374F9E46C5383872)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/7dbb1917-0644-4c89-8f97-9549d60b66a9)
 
 우리는 좀더 wac에 대한 접근 메소드가 궁금할 수 있는데 다행히도 Appspresso 1.1 버전부터는 ADE를 지원한다. ADE에 관한 내용은 이전 포스팅을 참조하면 된다. 여기서 우리는 echoSync 메소드에 breakpoint를 걸어서 확인할 것이다. 이렇게 breakpoint를 echoSync 내부의 this를 살펴보면 javascript 객체에 prototype으로 연결이 되어 있는데 보면 execAsync, execAsyncWAC, execSync, execSyncWAC, watch, ... 등 내부 메소드를 확인할 수가 있다.
 
-![](http://cfile10.uf.tistory.com/image/173DC1384F9E4A260CE695)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/9fea7e77-289e-4432-bf22-b2611294ac4e)
 
 ## PDK를 이용하여 네이티브 코드로 원격 데이터 요청하기
 
@@ -478,18 +478,9 @@ public class MyPlugin implements AxPlugin {
 
 빌드해서 실행하면 다음과 같이 실행이 완료된다. ax.ext.net.get 내장 모듈과 사용할 때와 동일하게 네이티브 코드로 자신만의 plugin을 PDK로 만들어서 ax.plugin으로 연결하여 사용하여 얻은 결과이다.
 
-![](http://cfile9.uf.tistory.com/image/123111444F9E4D8812730D)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e5565c53-e02a-43fd-bf26-55480381e6de)
 
 ## 결론
 
 이 포스팅은 이해를 돕기 위해서 원격의 데이터를 요청하는 예제를 선택하였다. 그리고 네이티브 코드를 사요할 경우 기존의 외부 라이브러리를 사용할 수 있는것을 보여주기 위해서 NSURLConection+Block 을 사용하였다. 하지만 이렇게 간단한 URL요청은 ax.ext.net으로도 충분히 사용하는데 문제가 없다. 포스팅의 크기와 본문의 길이 때문에 예제는 iOS 버전만 남겼는데 Android 네이티브 코드를 사용하는 방법도 동일하다. (시간이 나는대로 다른 포스트로 추가하도록 하겠다.)성능상 네이티브가 꼭 필요한 경우에 이렇게 PDK를 이용하여 네이티브코드를 사용할 수 있다는 것을 설명하기 위해서 간단한 예제 코드를 만들었다. 이제 우리는 하이브리드 앱을 만들기 위해서 필요한 기술 중에서 cross domain으로부터 원격 데이터를 가져오는 방법에 대해서 웹 프로그램과 네이티브 프로그램을 처리하는 방법을 모두 살펴보았다. 그리고 ADE를 사용해서 javascript 코드와 HTML, CSS 코드를 디버깅하는 방법 또한 살펴보았다. 다음 포스팅은 UI Framework 를 적용하는 방법에 대해서 포스팅할 예정이다.
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

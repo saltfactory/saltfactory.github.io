@@ -23,7 +23,7 @@ java -jar js.jar
 js> load ("env.rhino.1.2.js");
 ```
 
-![](http://cfile25.uf.tistory.com/image/175D37385062F1521B891F)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/aab557ff-f185-4678-a020-8a02dcebeba8)
 
 ## Java method size limit
 
@@ -42,7 +42,7 @@ http://www.coachwei.com/2008/09/01/the-64kb-java-language-problem-lesso-learnd-f
 
 env.rhino.1.2.js 파일을 살펴보자. env.rhino.1.2.js는 64k가 넘는다는 것을 확인 할 수 있다.
 
-![](http://cfile23.uf.tistory.com/image/1864CF3D5063BB4317A472)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/f0ba3c1a-5e65-4404-96cc-d1d8cb6e3a2c)
 
 그래서 github.com/hns 에서 rhino를 fork 해서 코드를 수정했다. https://github.com/hns/rhino/commit/207bb86e63b452237fbf6004fee12b90980c67f3 커밋된 내용을 참조하거나 이 커밋의 rhino를 다운 받는다. 그리고 압축을 해지한 다음 ant를 이용해서 jar를 생성하기 위해서를 build를 한다. 그리고 en.rhino.1.2.js를 다시 로드한다.
 
@@ -76,12 +76,3 @@ rhino에서는 Java의 최적화를 위해서 미리 대용량 파일을 로드�
 4. http://docs.oracle.com/cd/A97688_16/generic.903/bp/j2ee.htm#1009526
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

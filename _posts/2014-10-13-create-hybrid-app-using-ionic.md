@@ -83,7 +83,7 @@ Ionic Framework는 AngularJS를 근간에 두고 만들어졌다. Ionic에서는
 
 `ion-nav-bar`와 `ion-nav-view`를 사용하면 자동으로 새로운 View를 요청하면 다음 네비게이션이 가능한 View가 열리고 상단에 뒤로가기 버튼과 새로운 타이틀을 가지는 View가 열리게 된다. 아래 그림은 우리가 구현한 네비게이션 뷰 중에서 한 부분이다. 우리는 **뒤로가기** 버튼이 있는 네비게이션 바를 직접 구현하지 않았고 Ionic에서 제공하는 `ion-nav-bar`와 `ion-nav-view`를 사용했다. 자세한 사용법은 다음 포스팅에서 소개하려고 한다.
 
-![ion-nav-bar 예제 {width:320px}](http://cfile22.uf.tistory.com/image/262F10455459D34B2851B5)
+![ion-nav-bar 예제 {width:320px}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/000fb7b8-8789-4491-98be-b5f5ae2e251b)
 
 Ionic은 뷰의 네비게이션을 위해 다른 뷰로 이동하는 것을 SPA의 routing으로 한다. 즉 다시 말해서 새로운 뷰를 불러오는 것은 AngularJS의 templates로 만들어진 HTML 페이지를 AngularJS에서 routing으로 요청하여 불러오는 것이다. 아래는 Ionic의  slidemenu sample project의 Routing을 정의한 부분이다. Ionic의 AngularJS 기반의 이런 Routing은 완벽한 SPA 구현을 할 수 있게 도와준다. Ionic의 Routing을 사용하는 방법도 다음 포스팅에 자세히 소개하려고 한다.
 
@@ -147,7 +147,7 @@ cordova platform add ios
 
 Ionic로 프로젝트를 개발할 때 HTML, JavaScript, CSS 파일이 수정될 때마다 디바이스에 빌드해서 디버깅을 한다면 빌드시간이 길어서 코드를 업데이트하는데 굉장히 많은 시간이 소요될 것이다. Ionic은 하이브리드 앱을 개발하는 프레임워크이다. 네이티브 자원을 사용하지 않는 코드는 디바이스에 빌드하지 않고 로컬 컴퓨터에서 Safari나 Chrome 브라우저를 이용해서 개발한다. 이 때 Ionic 프로젝트를 디버깅할 수 있게 앱을 실행시켜주는 서버를 구동해서 개발한다. Cordova에서는 `cordova serve`라는 명령어를 사용하여 프로젝트를 실행시키는데 이 때 웹 자원 소스가 업데이트 되면 이 명령어를 재시작해줘야한다. 하지만 `phonegap serve`와 `ionic serve` command를 이용하면 웹 자원이 수정될 때 수정된 파일을 반영해서 서버 재시작 없이 자동으로 업데이트 되기 때문에 이 명령어를 다시 실행시키지 않아도 된다. Ionic을 이용하여 개발을 진행하면 웹 자원의 디버깅을 가장 많이하는데, Safari나 Chrome의 **Developer Tool**로 디버깅을 하면 된다. 아래 그림은 `ionic serve`를 실행하고 **Chrome  Developer Tool** 로 디버깅하는 화면이이다.
 
-![chrome debugging {width:320px;}](http://cfile5.uf.tistory.com/image/24440D3B5459D34B160AA5)
+![chrome debugging {width:320px;}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e59b9d6f-ac5c-4122-b1ad-3cc630ea1a1e)
 
 Ionic은 Cordova 기반의 장점을 사용할 수 있다. Cordova의 장점 중에 하나는 Plugins 이라고 생각한다. 하이브리드 앱을 개발하기 위해서는 단순하게 HTML, JavaScript, CSS 만으로는 디바이스를 제어할 수 없다. 그래서 Cordova는 네이티브 브릿지와 같은 Cordova Plugins를 제공하고 이 것을 이용하여 웹과 네이티브간의 통신을 가능하게 한다. 예를 들어 Push Notification 서비스를 앱에 구현하고 싶을 경우 Push Notification은 디바이스의 자원을 사용해야만 가능하다. PhoneGap에서는 [PhoneGap Push Plugin](https://github.com/phonegap-build/PushPlugin)을 이미 만들어 두었다. 이것을 사용하면 많은 시간을 단축하고 간단하게 Push Notification 기능을 하이브리드 앱에서 구현할 수 있다. 다음 포스팅에서 **PushPlugin**을 어떻게 설정하고 사용하는지에 대한 글도 소개할 예정이다.
 
@@ -228,12 +228,3 @@ Ionic으로 만든 하이브리드 앱은 여러가지 디바이스에 실행할
 
 우리는 **Ionic Framework**를 이용한 첫번째 하이브리드 앱을 [앱스토어](https://itunes.apple.com/kr/app/haibeuleinnes/id438616285?mt=8)와 [구글 플레이](https://play.google.com/store/apps/details?id=net.hibrain.apps.android.hibrainnet)를 통해 배포했다. 기존에 iOS와 Android를 혼자 개발했을 때 개발 비용이 너무 많이 필요했다. 안드로이드 파편화 그리고 iOS와 Android 개발의 다른 플랫폼을 혼자서 처리하기에는 버거운 일이였다. 그래서 우리는 개발환경을 하이브리드 개발을 해보기로 결정을 했다. 사전 조사와 테스트 앱을 만들어보고 우리가 배포하는 앱은 고성능을 필요하기 보다 관리의 편리성과 개발 시간을 단축하는 것을 주요하게 생각했기 때문에 하이브리드 앱으로 결정을 내린것이다. 하이브리드 앱 개발 프레임워크를 조사하면서 Ionic은 우리가 원하는 환경을 가지고 있었다. Ionic은 AngularJS, Cordova, Node.js 기반으로 만들어졌기 때문에 우리가 요구조건을 대부분 갖추고 있었다. 이번 프로젝트에서 우리는 Cordova를 이용해서  Network와 Persistence 플러그인 두가지를 만들었고, Ionic을 사용해서 iOS와 Android 앱을 동시에 개발하였다. 개발 시간은 기존의 네이티브 앱을 개발하는 시간에 비해 상당한 시간을 줄일 수 있었다. 우리는 이 경험을 바탕으로 Ionic으로 하이브리드 앱을 개발한 과정과 개발하면서 겪게된 문제들 그리고 그것을 해결한 방법들을 계속해서 블로그를 통해 소개할 예정이다.
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

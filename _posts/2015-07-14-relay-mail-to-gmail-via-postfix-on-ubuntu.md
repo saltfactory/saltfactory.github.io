@@ -1,11 +1,17 @@
 ---
 layout: post
-title : Ubuntu에서 Postfix와 Gmail SMTP를 사용하여 메일 보내기
-category : ubuntu
-tags : [ubuntu, postfix, mail, gmail, mailx, relay]
-comments : true
-images :
-  title : http://assets.hibrainapps.net/images/rest/data/522?size=full
+title: Ubuntu에서 Postfix와 Gmail SMTP를 사용하여 메일 보내기
+category: ubuntu
+tags:
+  - ubuntu
+  - postfix
+  - mail
+  - gmail
+  - mailx
+  - relay
+comments: true
+images:
+  title: 'https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/634b2cac-47b5-44d3-a3ea-633c0a337d80'
 ---
 
 ## 서론
@@ -146,7 +152,7 @@ echo "Postfix를 사용하여 gmail로 메일 보내기" | mail -S from="SungKwa
 
 메일이 정상적으로 발송이 되면 Gmail로 메일이 도착하는 것을 확인할 수 있다.
 
-![gmail 발송 테스트](http://assets.hibrainapps.net/images/rest/data/523?size=full&m=1436837141)
+![gmail 발송 테스트](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/b006dec9-9e91-4d21-a7c3-e46f51a66e2a)
 
 
 ## 결론
@@ -166,12 +172,3 @@ echo "Postfix를 사용하여 gmail로 메일 보내기" | mail -S from="SungKwa
 2. https://rtcamp.com/tutorials/linux/ubuntu-postfix-gmail-smtp/
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://saltfactory.net/profile) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

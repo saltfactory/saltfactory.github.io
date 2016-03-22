@@ -1,11 +1,15 @@
 ---
 layout: post
-title : IntelliJ에서 SpringBoot 웹 프로젝트 생성하기  
-category : java
-tags : [java, spring, springboot, intellij]
-comments : true
-images :
-  title : http://assets.hibrainapps.net/images/rest/data/762?size=full
+title: IntelliJ에서 SpringBoot 웹 프로젝트 생성하기
+category: java
+tags:
+  - java
+  - spring
+  - springboot
+  - intellij
+comments: true
+images:
+  title: 'https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/edb55ce0-a86f-441f-acca-e855f681bdc9'
 ---
 
 
@@ -19,7 +23,7 @@ Spring Framework 기반의 웹 프로젝트를 진행하게되면 최초 설정�
 
 IntelliJ를 시작하여 **Create New Project**를 선택하고 새로운 프로젝트 다이얼로그를 연다. **New Project** 다이얼로그가 열리면 **Spring Initializr**를 선택하고 Next를 한다.
 
-![](http://assets.hibrainapps.net/images/rest/data/746?size=full&m=1446086045)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/16ff2604-0739-40a9-9c32-a89ede4e6e8e)
 
 다음은 프로젝트 이름, 타입, 패키지 등 프로젝트의 기본 정보를 설정하는 화면이 나온다.
 
@@ -33,29 +37,29 @@ IntelliJ를 시작하여 **Create New Project**를 선택하고 새로운 프로
 - **Description** : 프로젝트 설명
 - **Package** : 프로젝트 패키지명
 
-![](http://assets.hibrainapps.net/images/rest/data/747?size=full&m=1446086451)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e873c7f2-3e47-4e77-a0a5-6b27bc836e74)
 
 다음은 SpringBoot 프로젝트를 생성할 때 추가할 라이브러리들을 설정하는 화면이 나온다. 지정한 라이브러리는 이후 maven이나 gradle의 스크립트에 추가되어 자동으로 라이브러리를 쉽게 추가할 수 있다. 우리는 Web 프로젝트를 만들어서 테스를 하기 위해 **Web**을 선택하였고, 뷰 템플릿 엔진으로 [Thymeleaf](http://www.thymeleaf.org/)를 선택하여 gradle 스크립트를 만들었다.
 
-![](http://assets.hibrainapps.net/images/rest/data/748?size=full&m=1446086633)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e705e498-164f-48f6-842d-8f4622144255)
 
 다음은 프로젝트가 저장되는 경로를 지정한다.
 
-![](http://assets.hibrainapps.net/images/rest/data/749?size=full&m=1446086728)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/26bfc8a2-8cce-4d28-ad5b-3358b0be2ead)
 
 만약 프로젝트가 열릴 때 프로젝트에 gradle 정보가 없을 경우 다음과 같이 **Import Project from Gradle** 화면을 열어서 프로젝트를 임포트한다.
 
-![](http://assets.hibrainapps.net/images/rest/data/750?size=full&m=1446086843)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/9aa44112-4bf0-4403-bdcc-52a9360e26a6)
 
 gradle 프로젝트가 임포트되면 이제 IntelliJ에서 gradle을 사용하여 BootStrap을 개발할 준비가 끝났다.
 
-![](http://assets.hibrainapps.net/images/rest/data/751?size=full&m=1446087016)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/db64a4c4-9919-465c-a380-4d4abe96abc8)
 
 ## 테스트를 위한 Post 객체
 
 우리는 테스트를 위해서 **Post** 객체를 만들것이다. 간단하게 id, title, content, created_at, updated_at 필드를 가지고 있는 POJO 객체로 만든다. **src/main/java/net/saltfactory/demo/Post.java** 파일로 만든다.
 
-![](http://assets.hibrainapps.net/images/rest/data/752?size=full&m=1446092456)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/296628fa-8cf0-457d-9b1f-1df623c68fb4)
 
 
 ```java
@@ -119,7 +123,7 @@ public class Post {
 
 먼저 우리는 테스트를 위해서 컨트롤러를 만들 것이다. 컨트롤러의 이름은 PostsController로 만들 것이다. **src/main/java/net/saltfactory/demo/PostsController.java**
 
-![](http://assets.hibrainapps.net/images/rest/data/753?size=full&m=1446092601)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/cd9de38e-f9d7-4749-972d-8214eebd210b)
 
 ```java
 package net.saltfactory.demo;
@@ -147,7 +151,7 @@ public class PostsController {
 
 테스트를 위해 Post를 입력하는 Form 화면이 필요하다. 우리는 Thymeleaf로 뷰 템플릿 엔진을 사용하기 때문에 다음과 같이 **src/main/resources/templates/new.html** 파일로 뷰 템플릿 파일을 만든다.
 
-![](http://assets.hibrainapps.net/images/rest/data/758?size=full&m=1446093865)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ebfadb7f-7e41-4e5b-b87c-85615f123587)
 
 ```html
 <!DOCTYPE HTML>
@@ -175,17 +179,17 @@ public class PostsController {
 gradle run
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/755?size=full&m=1446092963)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ead2cc65-f9ea-481d-a3f9-bebc94ff4a82)
 
 우리는 IntelliJ를 사용하고 있고 이것은 여러가지 명령어라인에서 처리해야할 명령어들을 UI로 쉽게 처리할 수 있게 만들어져 있다. IntelliJ의 오른쪽 패널에서 **Gradle Projects** 패널을 열어보자. Gradle 프로젝트 안에 **Task** 중에 **run**을 실행시키면 위에 터미널에서 **gradle run**을 실행한 결과와 동일하게 프로젝트가 빌드되고 시작될 것이다.
 
-![](http://assets.hibrainapps.net/images/rest/data/756?size=full&m=1446093187)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ded8126c-5192-459b-8b76-3d3bd0598768)
 
 어플리케이션 서버가 실행되면 브라우저에서 뷰와 컨트롤러를 확인해보자.
 
 http://localhost:8080/posts/new
 
-![](http://assets.hibrainapps.net/images/rest/data/759?size=full&m=1446093911)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d9652b53-d1de-4e90-a0e3-5f7a5a99dc0d)
 
 ## Form submit 처리를 위해 POST 메소드와 결과 뷰 추가
 
@@ -250,11 +254,11 @@ http://localhost:8080/posts/new
 
 입력 폼에 값을 입력하고 submit을 클릭한다.
 
-![](http://assets.hibrainapps.net/images/rest/data/760?size=full&m=1446094499)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/4423cb95-425f-441f-86d9-8f2d99aed066)
 
 PostsController에서 **RestMethod.POST** 를 처리하고 입력으로 받은 post를 다시 model에 저장하여 show.html 뷰 템플릿을 사용하여 결과를 보여준다.
 
-![](http://assets.hibrainapps.net/images/rest/data/761?size=full&m=1446094523)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/5aaae744-4def-4834-9153-ead5535911ac)
 
 
 ## 결론
@@ -270,13 +274,3 @@ PostsController에서 **RestMethod.POST** 를 처리하고 입력으로 받은 p
 4. https://www.jetbrains.com/idea/help/creating-spring-boot-projects.html
 
 
-## 연구원 소개
-
-- 작성자 : [송성광](http://saltfactory.net/profile) 개발 연구원
-- 프로필 : http://saltfactory.net/profile
-- 블로그 : http://blog.saltfactory.net
-- 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-- 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-- 페이스북 : https://facebook.com/salthub
-- 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-- 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

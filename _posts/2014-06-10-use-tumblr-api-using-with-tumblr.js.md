@@ -43,11 +43,11 @@ tumblr.js를 사용하기 위해서는 다음과 같은 Node.js 모듈이 필요
 - **Administrative contact email** : saltfactory@gmail.com
 - **Default callback URL** : http://127.0.0.1:3000/auth/tumblr/callback
 
-![register application](http://cfile5.uf.tistory.com/image/2517BF4F5396961336C546)
+![register application](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/0070b133-5531-4c2a-8a87-9b49891e069a)
 
 앱 등록이 모두 마치면 다음과 같이 **OAuth consumer key**와 **OAuth consumer secret**을 획득할 수 있다. 데모로 등록한 앱은 포스팅을 마치면 삭제할 것이기 때문에 여러분이 생성한 앱의 consumer key와 consumer secret을 사용하면 된다.
 
-![registered application](http://cfile4.uf.tistory.com/image/222032335396AE53329892)
+![registered application](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e44ba7b4-4c6d-4a0f-989f-8491ea167d29)
 
 ## package.json
 
@@ -307,21 +307,21 @@ node app.js
 
 express 서버가 동작할 것이고 브라우저를 열어서 http://127.0.0.1:3000 으로 접근해보자.
 
-![start express](http://cfile5.uf.tistory.com/image/24356E4053969E8A0E55CF)
+![start express](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/eda617b8-9e26-471e-94ce-85120eef3c4d)
 
 express가 정상적으로 동작하는 것을 확인할 수 있다. Login을 눌러서 tumblr로 로그인을 한다. Login with Tumblr를 클릭하면 tumblr의 앱이 엑세스를 허락을 요구하는 화면이 나타난다 Allow를 선택해서 access 를 허용한다.
 
-![login {width:320px;}](http://cfile6.uf.tistory.com/image/251D303553969EE4351F40)
-![tumblr permission {width:320px;}](http://cfile26.uf.tistory.com/image/2631ED3553969EE5080D6E)
+![login {width:320px;}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/dbdf0076-0144-4f7f-aff0-4ea7298e4ac4)
+![tumblr permission {width:320px;}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/72dd1185-9a1e-4738-b2ee-45a5b262adde)
 
 앱의 엑세스를 허용한 이후 tumblr는 우리가 명시한 redirect URL로 다시 보내게 되는데 이때 우리가 생성한 앱(tubmlrAPIDemo)이 tumblr의 프로필을 가지고 와서 메인 블로그의 이름을 화면에 나타나게 한다. 그리고 세션이 유지되어   logout 메뉴가 보이는 것을 확인할 수 있다.
-![redirect](http://cfile1.uf.tistory.com/image/265DFF4553969FAB103B0D)
+![redirect](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/6fa23842-8458-4968-aadc-b5505bdd7545)
 
 ## Access Token 획득
 
 우리는 웹에서 인증을 완료했지만 우리가 원하는 것은 Node.js 로 tumblr.js 모듈을 사용해서 클라이언트에서 tumblr에 접근을 하고 싶어한다. 그래서 우리는 app.js에서 console.log(token)과 console.log(tokenSecret)을 출력하여 auth token key과 auth token secret key를 사용하여야 한다. express를 실행시킨 터미널로 가보자.
 
-![get access token](http://cfile28.uf.tistory.com/image/2621E7505396AE090D699C)
+![get access token](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/3a13a174-3493-4509-8c92-425bb779348c)
 
 터미널에서는 우리가 passport-tumblr 모듈에서 인증처리 후 받은 token과 token secret을 출력시켰기 때문에 그 값이 console.log로 출력된 것을 확인할 수 있다.
 
@@ -363,9 +363,9 @@ node bin/tumblrClient.js
 
 tumblr는 개인이 여러개의 블로그를 가질 수 있는데 지금 http://saltfactorythings.tumblr.com이라는 블로그 하나만 가지고 있기 때문에 위의 코드를 실행하면 가지고 있는 블로그이 이름 saltfactorythings를 출력하게 된다.
 
-![run tumblr client {width:320px;}](http://cfile22.uf.tistory.com/image/255DED375396A39D0CE7F9)
+![run tumblr client {width:320px;}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/99d929ee-7ec1-446f-9116-904b11ec7aac)
 
-![show tumblr {width:320px;}](http://cfile30.uf.tistory.com/image/230FA44F5396A3F111D68D)
+![show tumblr {width:320px;}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/96ab099a-d39c-4236-a522-5ca16f514c53)
 
 ### blogInfo API
 
@@ -387,9 +387,9 @@ client.userInfo(function (err, data) {
   });
 });
 ```
-![blog {width:320px;}](http://cfile30.uf.tistory.com/image/230FA44F5396A3F111D68D)
+![blog {width:320px;}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/c051f162-ded1-47ea-8ddc-1fbdbf724145)
 
-![run blogInfo](http://cfile25.uf.tistory.com/image/247C483E5396A55912CC5E)
+![run blogInfo](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/2aad0d92-91e4-4e56-b12f-a4285af04bfa)
 
 결과는 현재의 블로그에 있는 정보를 가져와서 블로그에 글이 1건 있는 것을 보여준다. 그리고 마지막 업데이트 날짜도 보여주고 여러가지 블로그에 관련된 정보를 가져올 수 있다.
 
@@ -418,7 +418,7 @@ console.log(res);
 });
 ```
 
-![get posts {width:320px;}](http://cfile7.uf.tistory.com/image/27791A4B5396A65D07A31D)
+![get posts {width:320px;}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/7f911a15-d580-4f0f-85b5-22a94b786042)
 
 ### 글쓰기 API
 
@@ -456,9 +456,9 @@ client.text(blogName, options, function(err, res){
 });
 ```
 
-![run write {width:320px;}](http://cfile1.uf.tistory.com/image/23308C475396A87114B4F4)
+![run write {width:320px;}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/c59fd27d-d64c-457e-b062-02b2067ea97c)
 
-![writed {width:320px;}](http://cfile3.uf.tistory.com/image/261C20475396A87217F6B8)
+![writed {width:320px;}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/0d10ae4d-606e-4f97-a828-a174ffbf7c01)
 
 실행하면 tumblr에 포스팅이 진행되고 완료가 되면 포스트의 ID 값을 리턴 받게 된다. 그리고 웹 사이트에서 확인을 해보면 우리가 작성한 내용이 포스팅 된 것을 확인할 수 있다.
 
@@ -488,9 +488,9 @@ client.deletePost(blogName, id, function(err, res){
 });
 ```
 
-![run delete {width:320px}](http://cfile2.uf.tistory.com/image/2573FC3D5396A96D29CF67)
+![run delete {width:320px}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/68d4e0ba-6459-45a3-b4da-a2adce998868)
 
-![blog {width:320px;}](http://cfile21.uf.tistory.com/image/226F353D5396A96E0809C8)
+![blog {width:320px;}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/a446b725-5837-4f52-957c-b60d2ee78185)
 
 글 삭제가 성공적으로 마치게되면 삭제한 포스트의 ID 값을 다시 반환한다. 그리고 삭제가 완료된 이후 tumblr 블로그에 가보면 해당되는 글이 삭제된 것을 확인할 수 있다. tubmlr.js에서 tumblr API를 사용할 수 만들어둔 메소드는 다음과 같다. 많은 기능이 제공되고 있는데 인증이 완료된 이후 client를 만들어서 위에서 테스트한 것과 같이 사용하면 쉽게 tumblr API를 사용할 수 있다.
 
@@ -596,12 +596,3 @@ client.tagged(tag, callback);
 3. http://passportjs.org/guide/
 4. https://github.com/tumblr/tumblr.js
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

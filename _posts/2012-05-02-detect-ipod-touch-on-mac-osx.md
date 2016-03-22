@@ -13,11 +13,11 @@ disqus_identifier : http://blog.saltfactory.net/131
 
 <!--more-->
 
-![](http://cfile26.uf.tistory.com/image/117305414FA0B5873B7107)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/707fa238-64ac-453d-8d5e-bbfdec7674b5)
 
 보통 이렇게 하위 기종의 디바이스 인식 문제는 Xcode 4.3 에서 하위 기종의 디버깅 라이브러리를 옵션으로 설치할 수 있는데 설치를 제대로 하지 않았을 때 발생하는 문제로 알고 있다. 하지만 Xcode를 열어서 Components를 살펴보니 iOS4.0-4.1, iOS3.0-3.2 device debugging support 라이브러리가 설치가 되어 있는 것이다.
 
-![](http://cfile5.uf.tistory.com/image/18369F434FA0B66829D943)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/abaa3e11-c7cb-4188-b334-7684d104a8de)
 
 요즘 대부분의 개발자는 iPhone4 이상으로 iOS 5.0 이상에서 개발을 하고 있겠지만, 연구소에서 타겟으로 만드는 앱은 4.0 까지 지원하기로 되어 있기 때문에 오래된 디바이스와 구형 iOS 버전을 가지고 테스트를 계속 진행하는데 이렇게 구형 디바이스가 인식되지 않는 원인을 찾기 시작했다. 다행이 stackoverflow에 같은 고민을 하는 thread를 볼 수 있었다.  "Xcode 4.2: Error 0xC002 when trying to use a jailbroken iPhone 3G for development" (http://stackoverflow.com/questions/7922308/xcode-4-2-error-0xc002-when-trying-to-use-a-jailbroken-iphone-3g-for-developmen) 이라는 thread에서 의견들이 나오고 있는데 질문이 Xcode 4.2인 것을 보니  최근 Xcode가 아니더라고 비슷한 문제가 발생하는 것으로 보인다. jailbroken iPhone에 대한 질문인듯한데 아직까지 내가 테스트하는 디바이스들은 모두 jailbroken 된 것이 아니라 original 버전 디바이스들이다.
 
@@ -35,23 +35,14 @@ cd ~/Library/Developer/Xcode/iOS\ DeviceSupport/4.2.1\ \(8C148\)/Symbols/System/
 touch .copied_dyld_shared_cache_armv6 && touch .processed_dyld_shared_cache_armv6 && touch dyld_shared_cache_armv6
 ```
 
-![](http://cfile25.uf.tistory.com/image/184D38394FA0B9FE2AD14A)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/c38fe452-7994-45ff-a431-bab679efb91f)
 
 4. 디바이스를 연결하고 organizer를 확인한다.
 
-![](http://cfile23.uf.tistory.com/image/1713093E4FA0BB0426AFBB)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/90aa4b2b-91fd-4483-9b9e-b2f400d65df6)
 
 이제부터는 디바이스가 정상적으로 인식되기 때문에 구형 iPod Touch 2nd (iOS 4.2.1)를 가지고 디버깅을 할 수 있게 되었다.
 
 ## 참고
 1. http://stackoverflow.com/questions/7922308/xcode-4-2-error-0xc002-when-trying-to-use-a-jailbroken-iphone-3g-for-developmen
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

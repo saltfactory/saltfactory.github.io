@@ -120,13 +120,13 @@ blacklist uas
 
 이젠 Ubuntu에 USB 외장하드디스크를 연결해서 사용할 수 있는 준비를 모두 마쳤다. 우리는 모든 운영체제에서 Read/Write를 할 수 있게 500G 하드디스크를 **FAT** 형식으로 포맷을 했는데, FAT 형식은 4G 이상 대용량 파일을 저장할 수 없다는 에러를 만나서 [exFAT](http://en.wikipedia.org/wiki/ExFAT) 형식으로 다시 포맷을 했다. Mac OS X (10.9.x) 에서는 NTFS 포멧 형식을 지원하고 있지 않는다. 그리고 Mac OS X에서는 NTFS로 포멧되어진 외장하드디스크는 read only로 마운트가 되어진다. 그래서 우리는 exFAT으로 USB 외장하드디스크를 포맷했다. Mac OS X 에서 USB 외장하드디스크를 포맷하기 위해서는 [Disk Utility](http://en.wikipedia.org/wiki/Disk_Utility)를 상용하면 된다.
 
-![exfat](http://cfile6.uf.tistory.com/image/265C774453FD64EB20640A)
+![exfat](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e6a3e566-5f5e-41ba-bfcf-0e0ff36ef0da)
 
 
 ## USB 외장하드디스크 마운트
 
 exFAT으로 포맷되어진 USB 외장하드디스크를 Ubuntu에 연결한다. 그리고 `fdisk -l` 명령어를 실행해보자.
-![fdisk](http://cfile28.uf.tistory.com/image/260F553953FD64EB223CE9)
+![fdisk](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e764076c-0dee-405a-b8d9-c92979c75d4a)
 
 처음 우리가 USB 외장하드디스크를 연결해서 `fdisk -l`을 실행했을 때는 디스크 목록에 외장하드디스크가 나타나지 않았는데 이젠 `/dev/sde1` 500G 하드디스크가 목록에 나타나는 것을 볼 수 있다. 우리는 **exFAT**으로 포맷했는데 Ubuntu에서 인식할 때는 **NTFS**로 인식이 되는 것 같다.
 
@@ -144,12 +144,3 @@ touch README.md
 
 작은 연구소나 개인 사무실, 개인이 연구하거나 개발할 때 PC에 Linux 서버를 설치해서 사용하는 경우가 많다. 때로는 운영하고 있던 서버를 업그레이드하거나 데이터를 백업해야하는 일이 발생한다. 요즘은 Cloud 저장소에 데이터를 백업하거나 또는 원격 서버에 백업을 하는 경우가 많지만, 네트워크 제한이나 특정한 이유로 물리적으로 다른 디스크로 데이터를 백업 받아야하는 경우가 종종 발생한다. 예전에는 하드디스크를 **slave**로  마운트 시켜서 데이터를 백업했지만 최근 USB 외장 하드디스크의 용량이 커지면서 더이상 서버를 뜯어서 하드디스크를 추가로 달아서 백업하지 않고 간단히 USB 외장 하드디스크에 바로 백업할 수 있게 되었다. Linux도 많이 발전하게 되어서 kenel에 다양한 모듈이 지원되면서 간단히 USB를 연결하는 것 만으로 대용량 USB 외장 하드디스크를 바로 사용할 수 있게 되었다. 하지만, Ubuntu에서 외장 하드디스크를 연결하여 사용할 때 버그로 인해서 외장하드 인식이 불가능할 수도 있는데 우리는 `rmmod uas`나 `blacklist uas`를 사용해서 USB 인식의 문제를 수정했다. 또한 대용량 데이터를 백업할 때는 **exFAT** 포멧을 사용하면 된다는 것을  살펴보았다. 느린 네트워크 백업이 답답하거나 디스크 풀 백업을 해야할 경우는 이젠 쉽게 USB 외장 하드디스크를 연결해서 백업해보는 것도 해결책 중에 하나라고 생각한다.
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

@@ -1,11 +1,15 @@
 ---
 layout: post
-title : Ruby on Rails에서 모던 브라우저와 (IE8)이하 브라우저에 따른 뷰 레이아웃 구성하기
-category : ruby
-tags : [ruby, ruby on rails, ror, browser]
-comments : true
-images :
-  title : http://assets.hibrainapps.net/images/rest/data/686?size=full
+title: Ruby on Rails에서 모던 브라우저와 (IE8)이하 브라우저에 따른 뷰 레이아웃 구성하기
+category: ruby
+tags:
+  - ruby
+  - ruby on rails
+  - ror
+  - browser
+comments: true
+images:
+  title: 'https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/cbce30a2-5b51-4f2e-bb35-76e863964242'
 ---
 
 ## 서론
@@ -183,13 +187,3 @@ end
 4. http://railscasts.com/episodes/269-template-inheritance
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://saltfactory.net/profile) 개발 연구원
-* 프로필 : http://saltfactory.net/profile
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

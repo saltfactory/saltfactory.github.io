@@ -14,7 +14,7 @@ disqus_identifier : http://blog.saltfactory.net/240
 
 <!--more-->
 
-![slidemenu in ionic](http://cfile22.uf.tistory.com/image/2212A53D5396535E3074C1)
+![slidemenu in ionic](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/8bc6c9e2-8e8c-4a7d-9ef2-e4440801d7a8)
 
 요즘 모바일 앱에서 흔히 볼 수 있는 메뉴가 바로 **슬라이드 메뉴(slide out menu)**이다. 이 메뉴는 모바일 SDK에 기본적으로 만들어진 메뉴는 아니다.
 
@@ -32,14 +32,14 @@ disqus_identifier : http://blog.saltfactory.net/240
 ionic start sf-hybrid-demo blank
 ```
 
-![blank app template](http://cfile24.uf.tistory.com/image/2407F54E539656271E83F5)
+![blank app template](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/2e23accd-7bd9-4a7e-aa98-f297cd9fafd7)
 
 blank 템플릿을 선택해서 프로젝트를 생성하면 ionic의 리파지토리에서 **ionic-starter-blank** 템플릿을 가져와서 프로젝트를 생성하는 것을 확인할 수 있다. 그럼 blank 템플릿으로 앱을 만들면 어떻게 만들어지는 확인해보자. 우리는 이전 포스팅에서 하이브리드 앱을 개발할 때, HTML, JavaScript, CSS와 같은 웹 코드는 디바이스에서 확인하지 않고 ionic serve를 이용해서 웹에서 확인 하는 방법을 살펴보았다. 다음과 같이 생성된 프로젝트 디렉토리 안에서 `ionic serve` 명령어를 실행한다.
 
 ```
 ionic serve
 ```
-![blank preview](http://cfile8.uf.tistory.com/image/2405633F539657D916DFA2)
+![blank preview](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/0e0a783c-1ac6-40ad-9b78-087e9f59b06e)
 
 blank 템플릿은 다른 특별한 메뉴 없이 header (또는 titlebar)를 가진 앱을 기본적으로 만들어 주는 것을 확인할 수 있다.
 
@@ -53,7 +53,7 @@ ionic 명령어를 사용하여 프로젝트를 생성할 때 app template으로
 ionic sf-hybrid-demo tabs
 ```
 
-![tabs in ionic](http://cfile22.uf.tistory.com/image/2562D94853965AB81BE46C)
+![tabs in ionic](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d425c493-de60-4557-8efe-9d9c1ebcb034)
 
 탬플릿으로 tabs를 지정하여 프로젝트를 생성하면 ionic의 리파지토리에서 ionic-starter-tabs라는 템플릿을 가져와서 프로젝트를 생성하는 것을 확인할 수 있다. 위에서와 동일하게 ionic serve를 이용해서 앱을 실행시켜 확인해보자.
 
@@ -61,8 +61,8 @@ ionic sf-hybrid-demo tabs
 ionic serve
 ```
 
-![tabs preview {width:45%}](http://cfile23.uf.tistory.com/image/2275093853965B480409C9)
-![tabs preview {width:45%}](http://cfile4.uf.tistory.com/image/220D293853965B493B89FD)
+![tabs preview {width:45%}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/442dc39e-b8d8-46e5-9fd5-4c99a1a4a87f)
+![tabs preview {width:45%}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/64aa8380-59db-4fa8-82c6-d66e279e7966)
 
 tabs는 우리가 흔이 iOS 환경이 익숙해져 있는 UI이다. 뿐만 아니라 Android도 tab UI를 공식적인 컴포넌트로 지원하고 있지만 Android는 기본적으로 tab이 하단에 있는 것이 아니라 상단에 존재한다.
 
@@ -77,7 +77,7 @@ tabs는 우리가 흔이 iOS 환경이 익숙해져 있는 UI이다. 뿐만 아�
 
 우리는 ionic serve를 이용해서 확인하고 있는데 이것은 파일이 변경되면 자동으로 반영되기 때문에 다시 브라우저로 가서 변경된 사실을 확인해보자. 그런데 아래 그림과 같이 tabs은 화면의 상단에 위치되었는데 header(또는 titlebar)가 tabs 메뉴를 가려버리는 문제가 발생한다.
 
-![tab hidden problem](http://cfile1.uf.tistory.com/image/2323AA38539661352C7664)
+![tab hidden problem](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/5ed27145-8846-4dcd-b61e-8c1a161cc3b1)
 
 우리는 android UI와 같이 구성하기 위해서 작업을 하고 있는데 android는 tabs를 사용하면 header가 보이지 않는다. 그래서 우리는 ionic 템플릿에서 tabs에 포함된 화면에 header를 보이지 않게 해본다. ionic에서 UI 템플릿 파일은 `www/templates` 안에 존재한다. 이후에 templates 구조와 화면에 출력되어지는 원리에 대해서 소개를 할 것이기 때문에 여기서는 간단히 `tabs.html`이 tabs 메뉴를 구성하는 템플릿이고 각각 메뉴를 눌렀을 때 나타나는 화면은 `tab-dash.html`, `tab-friends.html`, `tab-account.html` 이라고 생각하자. 그럼 앱이 실행할 때 첫번째 나타나는 화면은 `tab-dash.html`이다. 이 파일을 열어서 다음과 같이 네비게이션바(nav-bar)를 숨긴다고 `ion-view`에 속성을 추가하자. (이 HTML 코드를 보면 우리가 흔히보는 HTML의 엘리먼트가 아니라는 것을 보면 알 수 있다. 이것을 설명하기 위해서는 [AngularJS](https://angularjs.org/)의 [directive](https://docs.angularjs.org/guide/directive)를 설명해야한다. 이것은 이후에 ionic의 view 동작 원리에 대해서 설명할때 함께 설명하도록 하겠다.)
 
@@ -91,7 +91,7 @@ tabs는 우리가 흔이 iOS 환경이 익숙해져 있는 UI이다. 뿐만 아�
 
 변경된 내용을 확인해보자. 아래와 같이 tabs을 가렸던 header(또는 titlebar 또는 navigation bar)가 사라진 것을 확인 할 수 있다.
 
-![tab top poistion](http://cfile6.uf.tistory.com/image/216EF44A539662D9359F8C)
+![tab top poistion](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/6ca2d12e-56a1-4117-aed3-2095c28dd2fe)
 
 ## slidemenu 템플릿
 
@@ -101,7 +101,7 @@ tabs는 우리가 흔이 iOS 환경이 익숙해져 있는 UI이다. 뿐만 아�
 ionic start sf-hybrid-demo sidemenu
 ```
 
-![slidemenu in ionic](http://cfile25.uf.tistory.com/image/2512383E539666D52B8FAE)
+![slidemenu in ionic](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d08faa84-44cb-4b31-8192-b24e66ab790a)
 
 템플릿으로 sidemenu를 선택하면 리파지토리에서 ionic-starter-sidemenu 템플릿을 가져와서 프로젝트를 생성하는 것을 확인할 수 있다. 만들어진 프로젝트를 ionic serve로 확인해보자.
 
@@ -109,8 +109,8 @@ ionic start sf-hybrid-demo sidemenu
 ionic serve
 ```
 
-![slidemenu preview {width:45%}](http://cfile7.uf.tistory.com/image/2147E344539667B820C493)
-![sidemenu preview {width:45%}](http://cfile22.uf.tistory.com/image/231B8444539667B916C0F7)
+![slidemenu preview {width:45%}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/43a6997e-8522-4a73-933b-f8b34085f849)
+![sidemenu preview {width:45%}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/b569d39e-1129-4d44-a6fb-1473c18013da)
 
 간단하게 슬라이드 메뉴가 만들어진 것을 확인할 수 있다. 최근 슬라이드메뉴를 나타나게 하기 위해서 햄버그메뉴 아이콘도 자동으로 header에 toggle 버튼으로 만들어진 것을 확인할 수 있다. 뿐만 아니라 화면을 드래그해서 오른쪽으로 하면 슬라이드 메뉴가 나타나고 왼쪽으로 드래그하면 나타났던 메뉴가 닫히게 된다. 현재 우리는 ionic serve를 이용해서 디버깅하고 있는 것이지만 실제 이 앱이 모바일에 설치하게 되면 **touch**의 **swipe 제스쳐**를 인식해서 메뉴가 열리고 닫히게 된다. 이렇게 슬라이드 메뉴를 구성하는 것도 터치를 인식해서 프로그래밍하는 것도 상당하게 많은 시간이 소비되며 복잡하고 어려운 일인데, ionic은 이것을 매우 간단하게 프로젝트를 생성할 때 sidemenu라는 키워드 하나만 추가하면 만들어 준다. 개발자들은 슬라이드 메뉴를 구현하는데 더이상 골머리를 썩을 필요가 없게 되었다. 또한 슬라이드 메뉴에서 보이는 각 메뉴의 뷰들은 독립적은 template을 가지고 만들어진다. 즉, 메뉴에 보이는 화면마다 다른 html 파일로 분리해서 개발도 관리도 편리하다. 슬라이드메뉴를 구성할 때는 `www/templates/menu.html` 파일과 각각 해당되는 뷰 html 템플릿으로 구성된다는 것을 `www/templates` 디렉토리 확인하면 알 수 있다.
 
@@ -166,19 +166,10 @@ ionic serve
 
 코드를 변경했으면 다시 브라우저로 가서 변경된 화면을 확인해보자. 아래와 같이 변경된 코드가 반영되어서 슬라이드 메뉴가 오른쪽에서 동작하고 슬라이드메뉴 버튼로 오른쪽으로 변경된 것을 확인할 수 있다.
 
-![right slidemenu privew {width:45%}](http://cfile9.uf.tistory.com/image/2342823D53966B9430D63F)
-![right slidemnu privew {width:45%}](http://cfile23.uf.tistory.com/image/2647883D53966B9501A5E9)
+![right slidemenu privew {width:45%}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/a9ceb3ec-952f-408f-a9c8-dd28b410cd82)
+![right slidemnu privew {width:45%}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/fd0b5d20-bb04-4f63-a3f0-c66d5370880d)
 
 ## 결론
 
 ionic framework는 하이브리드 앱을 개발하는데 최적화된 코드를 제공한다. ionic는 복잡하게 HTML과 CSS를 만들지 않아도 app templates를 이용해서 앱을 만들기에 필요한 코드를 최초 제공해준다. 이때 app templates는 현재 개발자들이 가장 많이 사용하고 있는 메뉴를 구성해서 만들어서 제공한다. 아무것도 없이 header만 존재하는 단일 blank, 여러 tab을 만들어서 tab을 눌러서 메뉴가 변경되고 각 메뉴마다 해당하는 화면을 구성하는 tabs, 그리고 최근 앱에서 쉽게 볼 수 있는 보편화된 슬라이드 메뉴를 sidemenu라는 app templates로 만들어서 프로젝트 생성할 때 쉽게 구성할 수 있게 제공한다. 개발자들은 더이상 처음 앱을 만들 때 앱의 레이아웃을 만들기 위해서 골머리를 썩지 않아도 된다. ionic에서 제공하는 기본 app templates는 안정적이며 기본 레이아웃을 바로 사용해도 될 만큼 디자인도 이쁘게 되어 있다. 더이상 고민하지 않고 ionic framework로 프로젝트를 바로 시작해보길 바란다.
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

@@ -1,11 +1,19 @@
 ---
 layout: post
-title : Ionic 기반 하이브리드 앱에서 proxy를 사용하여 CORS 문제 해결하기
-category : ionic
-tags : [ionic, hybrid, hybridapp, cors, ajax, angularjs, anguar, proxy]
-comments : true
-images :
-  title : http://assets.hibrainapps.net/images/rest/data/505?size=full
+title: Ionic 기반 하이브리드 앱에서 proxy를 사용하여 CORS 문제 해결하기
+category: ionic
+tags:
+  - ionic
+  - hybrid
+  - hybridapp
+  - cors
+  - ajax
+  - angularjs
+  - anguar
+  - proxy
+comments: true
+images:
+  title: 'https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/c04caa5a-d2d2-49e0-a405-49a63073c236'
 ---
 
 ## 서론
@@ -38,11 +46,11 @@ bash build.sh
 bash run.sh
 ```
 
-![start docker](http://assets.hibrainapps.net/images/rest/data/507?size=full)
+![start docker](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/28fb0b7d-6ffe-40c3-82ab-768bd7c95e07)
 
 브라우저에서 방금 추가한 서버를 확인해보자. 테스트를 위해서 웹서버 홈 디렉토리에 `/api/data.json` 파일을 docker 이미지에 추가해 두었다. 브라우저를 열어서 http://boot2docker:7000/api/data.json 을 요청해보자.
 
-![docker browser](http://assets.hibrainapps.net/images/rest/data/508?size=full);
+![docker browser](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/43941a12-d183-4bcb-a165-854d3579c8b4);
 
 정상적으로 서버가 동작하면 추가한 JSON 데이터를 확인할 수 있다.
 
@@ -54,7 +62,7 @@ boot2docker ip
 
 좀 더 유연하게 테스트를 하기 위해서 http://demo.docker.localhost/api/data.json 로 접근하면 내부적으로 http://boot2docker:7000/api/data.json 이 요청되도록  **Apache** 웹 서버의 **vhost**를 설정하였다.
 
-![vhost 결과](http://assets.hibrainapps.net/images/rest/data/512?size=full&m=1436431692)
+![vhost 결과](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/959a2b79-fedf-4cbc-8fd3-dc49a3f2e0ca)
 
 이제 테스트를 위해 미리 ionic 프로젝트를 만들어 놓았다. `demo-ionic` 디렉토리 안으로 이동한다.
 
@@ -70,7 +78,7 @@ ionic serve
 
 브라우저가 열리고 **CORS** 에러가 발생하는 것을 확인할 수 있다.
 
-![CORS error](http://assets.hibrainapps.net/images/rest/data/515?size=full&m=1436432402)
+![CORS error](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/6ff25567-d87d-437d-b8e1-d2f9f6df1d29)
 
 에러 내용은 다음과 같다.
 
@@ -221,7 +229,7 @@ angular.module('starter', ['ionic'])
 
 **ionic serve** 명령은 아주 훌륭하다. 파일을 변경하면 서버를 시작할 필요없이 바로 적용이 되기 때무에 브라우저를 바로 확인하면 된다. **ionic**의 **proxy** 설정 이후 http://localhost:8100/api/data.json 을 요청했지만 서버의 데이터를 가져온 것을 확인할 수 있다.
 
-![ionic proxy result](http://assets.hibrainapps.net/images/rest/data/514?size=full&m=1436432185)
+![ionic proxy result](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/81405bab-c985-4f9d-a1e3-ecad647bd7d6)
 
 ## 디바이스에서 proxy 설정
 
@@ -233,7 +241,7 @@ ionic prepare && ionic emulate ios
 
 실행후 서버로부터 결과를 가져오지 못하는 것을 확인할 수 있다. **Safari Web Inspector**를 이용하여 로그를 살펴보면, `file://api/data.json`이라고 호출되는 것을 확인 할 수 있다. 위에서 proxy를 설정하기 위해 **ApiEndpoint**를 설정한 것은 **ionic server**를 가지고 테스트하는 브라우저 환경에서만 적용이 되기 때문이다.
 
-![emulate 결과](http://assets.hibrainapps.net/images/rest/data/518?size=full&m=1436491113)
+![emulate 결과](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d27cec4b-df35-4ddf-a280-138b62788357)
 
 실제 디바이스에서는 **ionic.project** 파일의 **proxy**에 설정한 **path**를 가지고 **ApiEndpoint**로 사용하던 것을 실제 주소 **proxyUrl**로 변경을 해야한다.
 다시 명확하게 말하자면 아래와 같이 `./www/app.js`에 설장한 **ApiEndpoint**를 변경해야한다.
@@ -263,7 +271,7 @@ angular.module('starter', ['ionic'])
 ionic prepare && ionic emulate ios
 ```
 
-![emulate 성공](http://assets.hibrainapps.net/images/rest/data/517?size=full&m=1436491038)
+![emulate 성공](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/33dde4c6-a41a-4606-82ff-a9156f64d56c)
 
 데스크탑에서 로컬 **ionic server**를 사용할 때 **ApiEndpoint** 을 **proxy path** 사용하면 디바이스에서 되지 않는 문제를 실제 URL로 대처하면서 사용할 수 있게 되었다.
 
@@ -282,12 +290,3 @@ https://github.com/saltfactory/ionic-tutorial/releases/tag/proxy-demo
 2. http://blog.ionic.io/handling-cors-issues-in-ionic/
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://saltfactory.net/profile) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

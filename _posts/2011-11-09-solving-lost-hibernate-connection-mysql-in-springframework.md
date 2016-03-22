@@ -95,7 +95,7 @@ The last packet successfully received from the server was 35,986,917 millisecond
 show global variables like 'wait%';
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/450?size=full&m=1434637169)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/73794388-8ea4-45bd-b9f7-44b451cbec1e)
 
 MySQL은 기본적으로 **8시간**동안 요청이 없으면 커넥션을 해지한다.
 방법은 리소스를 설정하는 MySQL url에다가 `autoReconnection=true`로 변경하면 된다. 또는 `valdationQuery="select 1"``을 전처리로 실행하게하면 된다.
@@ -137,12 +137,3 @@ url="jdbc:mysql://localhost: 3306/test_database?autoReconnection=true"/>
 
 이 방법 외에도 `/etc/my.cnf`에서도 설정하는 방법도 있고 유지하는 방법 여러가지 있으니 프로젝트에 맞는 방법을 선택하여 사용하면 될것 같다.
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

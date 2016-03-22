@@ -12,27 +12,27 @@ Appspresso는 1.1 버전 부터 지역화 기능이 추가되었다. 앱 스토�
 
 <!--more-->
 
-![](http://cfile25.uf.tistory.com/image/177D8C3F4FA0CE880D59D4)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/2b274e81-f3cf-4597-a185-e1fe8ff0d82e)
 
 지역화 템플릿으로 프로젝트를 만들면 디렉토리 구조가 지역정보대로 분리가 된다.
 
-![](http://cfile23.uf.tistory.com/image/123EDB354FA0CFB821690E)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/4a4d4165-600b-4935-9783-c313e2b82d89)
 
 뭔가 엄청나게 많아 보인다. 지역화는 크게 platform 디렉토리와 src 디렉토리로 나누어서 살펴볼 수 있는데 tree라는 명령어를 사용해서 살펴보면 다음과 같다. 안드로이드와 아이폰 내부가 동일하기 때문에 android의 경우 살펴보자. resources라는 디렉토리 밑으로 icon과 splash 디렉토리가 있다. 각각 앱이 설치될 때의 icon과 앱이 실행될 때의 splash이다. 이렇게 지역별로 디렉토리로 구분해서 만들어두었는데 디바이스의 지역화 정보를 확인해서 자동으로 해당되는 자원을 사용하게 해주는 것이다.
 
-![](http://cfile27.uf.tistory.com/image/127422344FA0D0390648BD)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/6901df2b-374d-4db5-8226-01e05442545f)
 
 현재 splash.en 과 splash.ko에 들어 있는 이미지를 살펴보면 다음과 같다. splash.en 안에 들어있는 이미지는 하단에 en 로고가 있고 splash.ko 에 들어 있는 이미지는 ko라는 로고가 들어 있다.
 
-![](http://cfile29.uf.tistory.com/image/197388354FA0D127127C9C)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/818e48b3-bc38-4911-a49d-274ce8ac4f02)
 
-![](http://cfile25.uf.tistory.com/image/146F7D3D4FA0D1372E39F5)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/372f4083-519c-442b-9fee-cffc6cf20a51)
 
 실제 디바이스에 테스트하면 지역정보에 다르게 첫 화면이 다르게 나오게 된다. platform이라는 디렉토리 안의 지역화 디렉토리들은 이렇게 resource에 관한 지역화 파일들이 디렉토리별로 존재하게 된다.
 
 다음은 src 안에 들어 있는 지역화 구조이다. 예제 소스는 locale-example.js 가 각각 지역화 디렉토리 안에 들어가 있다. 이것도 마찬가지로 디바이스의 지역정보를 보고 해당되는 .js 파일을 사용하게 되는 것이다.
 
-![](http://cfile26.uf.tistory.com/image/1143CB384FA0D20831B383)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d432158e-03a0-48d3-ab34-4349498f6a37)
 
 
 우리는 이해를 좀더 돕기 위해서 다음과 같이 소스를 변경해보자.
@@ -162,22 +162,13 @@ window.onload = function() {
 
 위의 예제를 실행 하였을 때의 지역화가 적용된 모습이다. 왼쪽 iPod touch는 한글을 설정하였고 오른쪽 Android Nexus one은 영어로 설정되어 있는 상태이다.
 
-![](http://cfile1.uf.tistory.com/image/174ED63A4FA0D6F015F390)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/6c8d85d0-48ba-4440-96db-c9ce9efe4d50)
 
 앱이 설치된 아이콘도 이렇게 한글 설정이 되어 있는 iPod touch에는 한글로 설치가 되고 영어가 설정되어 있는 Android Nexus one에는 영어로 된 이름이 설치가 된다.
 
-![](http://cfile10.uf.tistory.com/image/196726384FA0D78118BE5D)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e3058f6a-7b32-4aaa-b93a-44f60de941ce)
 
 ## 결론
 
 현재 버전에서는 on the fly로 지역화를 테스트를 할 수 없다고 한다. 언어 설정을 위해서 디바이스에 매번 설치하면서 확인한다는 것은 현재는 많이 불편한건 사실이지만 지역화를 지원해서 개발할 때 언어와 프로그램을 분리해서 개발할 수 있게 되었다는 것에는 매우 의미 있는 업데이트라고 생각한다. 다만 지역화를 하기 위해서 언어만 따로 설정할 수 있는 언어 파일이 존재한다면 어떨까 생각해봤다. 이미지나 리소스 자원들은 분리해서 디렉토리 구조로 나누어서 사용할 수 있을 것 같은데, 언어 설정을 하는 파일은 appName.xml 처럼 뭔가 정해진 곳에 언어를 설정하면 좋지 않을까? 생각도 해봤다. 하지만 대부분의 지역화를 지원하는 프레임워크는 이렇게 디렉토리 구조화가 되어 있는 것으로 안다. 앱스프레소의 업데이트 마다 새로운 기능이 추가되고 개발하기 편리해지는 것 같아서 이젠 앱스프레소를 사용하여 기존에 서비스하는 앱을 하이브리드 앱으로 마이그레이션 할 수 있을 것이라고 조심스레 생각해본다. 하나의 코드로 여러가지 디바이스에 적용하고 지역화까지 하나로 개발할 수 있으니 개발 공수가 많이 줄어 들것 같다는 생각도 해본다.
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

@@ -15,7 +15,7 @@ http://cwnumap.hibrainapps.net/  사이트에서 각각의 앱을 해당 스토�
 
 <!--more-->
 
-![](http://cfile27.uf.tistory.com/image/1859DD394FCDA81C032202)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/bb015bf1-ae39-4380-91e3-f9781e363d93)
 
 기존 네이티브 앱(iOS, Android)을 하이브리드 앱으로 전환 할 때 다음 조건을 만족시켜야한다.
 
@@ -36,7 +36,7 @@ Appspresso를 열어서 프로젝트를 생성하고 디렉토리 구조는 다�
 /lib/sencha/ 디렉토리를 생성하고 그 안에 sencha-touch.css와 sencha-touch-all-debug.js 파일을 추가하였다.
 그리고 Sencha Touch 프레임워크를 사용하여 MVC 모델로 개발하기 위해서 /js/app/controller, /js/app/model, /js/app/view, /js/app/store 디렉토리를 추가하였다. 그리고 /js/app/app.js 파일을 만들었다.
 
-![](http://cfile24.uf.tistory.com/image/136A1D364FCDABEE0C61D7)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/57620260-407e-42e6-b5fe-3d8f96389270)
 
 텍스트 관리는 이후에 지역화를 지원하기 위해서 미리 텍스트를 분리하여 개발하도록 locales/string.js 파일을 추가하였다.
 
@@ -148,7 +148,7 @@ Ext.application({
 
 앱을 실행시켜보자. 다음과 같이 기존의 네이티브 앱과 거의 유사한 NavigationBar가 만들어 졌다.
 
-![](http://cfile9.uf.tistory.com/image/1772DF3A4FCDAFBF128F4F)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/3d7c925f-f311-4cec-937d-f7989bca1d1e)
 
 ## Daum Map
 
@@ -156,11 +156,11 @@ Ext.application({
 
 다음 캡처를 확인해보자. 아래는 시뮬레이터 도메인으로 요청을 해서 On The Fly의 디버깅을 이용해서 실행하면 다음과 같이 Referer의 문제로 API 로드 실패한다.
 
-![](http://cfile22.uf.tistory.com/image/202DA6344FCDB17A2C0ADA)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/712f6059-cceb-4921-94f5-d186feeb55a2)
 
 그리고 시뮤레이터 도메인으로 제대로 요청하지 않으면 아래와 같이 나온다.
 
-![](http://cfile3.uf.tistory.com/image/116D26384FCDB1F21BA379)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/da1d33f4-593b-45a7-ba5a-7782a3ea6d7a)
 
 다음의 지도 API 인증키를 제대로 요청한 이후에 Daum Map API를 요청하기 위해서 index.html을 다음과 같이 수정한다.
 
@@ -281,18 +281,18 @@ Ext.application({
 
 아래는 앱을 실행한 후에 TitleBar에 있는 Button을 눌러서 MainController에 등록된 메소드들이 제어되는지 확인하는 화면이다.
 
-![](http://cfile29.uf.tistory.com/image/1903E8384FCDB5440E20E2)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/fff86a98-5a25-4f96-8b4a-d269b619bee6)
 
-![](http://cfile6.uf.tistory.com/image/1775E2364FCDB55038187E)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/2ebc7d35-bad5-4a65-86a5-29fa9c2adab4)
 
 ## 결론
 
 이렇게 Sencha와 Daum API를 Appspresso에서 동작할 수 있게 구현할 수가 있다. Appspresso로 프로젝트를 만들어서 하나의 코드로 간단하게 두가지 앱을 개발 할 수 있는 장점을 다음을 보면 확인할 수 있다. Appspresso에서 개발은  Chrome Extension Appspresso Debugging 툴로 개발하고 코드 반영은 On The Fly로 할 수 있다. 그리고 그렇게 개발된 코드를 가지고 iOS와 Android에 바로 적용하여 테스트할 수 있다. 포스트 과정에서 실제 디바이스에 올리는 내용은 생략했지만 http://blog.saltfactory.net/category/Appspresso 아티클에서 그 내용을 찾아서 적용할 수 있을 것이다. 토이프로젝트의 기존 앱을 하이브리드 앱으로 전환하는 과정을 블로그릍 통해서 계속 포스팅을 진행할 예정이다. 그 과정 중에 첫번 째로 다음의 지도를 Sencha와 함께 사용하는 방법에 대해서 소개하였다. 다음은 원격지에 있는 서버에서 json 데이터를 요청하여 처리하는 과정을 포스팅할 예정이다.
 
 
-![](http://cfile8.uf.tistory.com/image/14104A364FCDB6EA16A25A)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/bbf96a4b-50ed-4ade-a8ec-57e7cc5cd949)
 
-![](http://cfile7.uf.tistory.com/image/1150BC344FCDB6F7146774)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d5c7882d-429d-4116-8b5e-ff12a6d6c016)
 
 이 블로그에 사용되는 모든 코드는 CCL(By-NC-SA 2.0) 라이센스 (http://creativecommons.org/licenses/by-nc-sa/2.0/kr/) 에 의해서 보호됩니다. (저작권 표시, 비영리, 동일조건변경허락). 상업용 목적으로 코드를 사용하시거나 저작권 표시없이 재사용하실 수 없습니다. 올바른 공유문화를 위해서 협조바랍니다. 소스코드는 이후 github으로 공개할 예정입니다.
 
@@ -302,12 +302,3 @@ Ext.application({
 2. http://dna.daum.net/apis/maps/v3
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

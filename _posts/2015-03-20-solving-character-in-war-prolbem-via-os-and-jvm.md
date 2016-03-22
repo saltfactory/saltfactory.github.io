@@ -33,7 +33,7 @@ LC_TIME="C"
 LC_ALL=
 ```
 이렇게 UTF-8 로 사용되고 있는 Mac에서 IntelliJ 와 같은 응용 프로그램을 사용해서 파일을 생성하게 되면 파일은 기본적으로 System encoding을 따르기 때문에 파일은 **UTF-8**로 만들어지게 된다. 만약 Windows를 사용한다면 CP959 캐릭터 기반으로 만들어지게 될 것이다. **IntelliJ**의 **Preferences**를 열어서 확인하면 기본 **IDE Encoding**, **Project Encoding**, **Default encoding for properties files**를 설정할 수 있는 것을 확인할 수 있다. 만약 Windows PC에서 개발을 한다면 이 정보를 잘 확인해서 서버환경과 동일하게 만드는 것이 좋다.
-![](http://assets.hibrainapps.net/images/var/albums/posts/Screen%20Shot%202015-03-20%20at%203_35_13%20PM-01.png?m=1426842028)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/065a6ab5-18d3-4765-8f07-b089b5bb5fa2)
 개발 PC 환경은 CP949나 EUC_KR 일 경우 서버에서 파일을 열게 되면 한글이 깨어지기 때문이다.
 
 ## JVM 환경
@@ -142,12 +142,3 @@ jar -xvf encoidng_test.war
 - http://www.coderanch.com/t/277269/java-io/java/Change-default-character-set-JVM
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

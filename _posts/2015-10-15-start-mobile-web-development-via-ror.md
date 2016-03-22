@@ -1,11 +1,14 @@
 ---
 layout: post
-title : 모바일 웹 개발을 위해 Ruby on Rails 선택하다
-category : ruby
-tags : [ruby, ruby on rails, ror]
-comments : true
-images :
-  title : http://assets.hibrainapps.net/images/rest/data/685?size=full
+title: 모바일 웹 개발을 위해 Ruby on Rails 선택하다
+category: ruby
+tags:
+  - ruby
+  - ruby on rails
+  - ror
+comments: true
+images:
+  title: 'https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/95c05daf-941b-45bd-8858-211cbde03c94'
 ---
 
 ## 다시 Ruby on Rails를 만나다.
@@ -43,13 +46,3 @@ images :
 
 하이브리드 앱은 HTML5 기술을 사용을 한다. 이번 프로젝트는 RoR 기반에서 HTML5를 사용하여 개발을 진행하는 것에 대해서 중점적으로 연구한다. 이런 이유에서 모바일 웹은 하이브리드 앱과 긴밀한 연관성이 있다. 이런 부분에 관해서 당분간 포스팅을 진행할 것이다. 또한 하이브리드 앱에 관한 연구는 계속해서 함께 연구해갈 것이다. 이미 하이브리드 앱으로 개발한 서비스에 대한 관리도 필요하고 모바일 웹과 앱의 모호한 경계선을 넘으며 서비스를 해야하기 때문에 하이브리드 앱과 모바일 웹에 관한 연구는 계속될 것으로 기대된다.
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://saltfactory.net/profile) 개발 연구원
-* 프로필 : http://saltfactory.net/profile
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

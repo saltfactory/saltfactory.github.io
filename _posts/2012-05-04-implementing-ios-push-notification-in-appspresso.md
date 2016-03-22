@@ -20,11 +20,11 @@ Appspresso (앱스프레소)를 현재 구현되어져 있는 네이티브 앱�
 
 플러그인은 SaltfactoryPushPlugin 이라는 이름으로 만들고 SaltfactoryPushPlugin_ios  모듈과 SaltfactoryPushPlugin_android 모듈 프로젝트를 만든다.
 
-![](http://cfile29.uf.tistory.com/image/152A383B4FA33B1430E438)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/0c6d7d83-c613-4b9e-a734-77de3b617669)
 
 SaltfactoryPushPlugin_ios 모듈 프로젝트를 열어서 SaltfactoryPushPlugin_ios.xcodeprj 파일을 선택하고 오른쪽 마우스를 클릭하면 Xcode 로 프로젝트를 열수 있게 된다. 우리는 푸시 설정을하기 위해서 네이티브 코드를 수정할 것이기 때문이다.
 
-![](http://cfile2.uf.tistory.com/image/1724F03C4FA33BAF2DCDA4)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e1986062-4769-4cb8-848a-e35910e49bf3)
 
 여기서부터는 iOS의 동작을 이해하고 있어야 개발하는데 도움이 될 것인데, 우선 iOS가 처음 앱이 동작할 때 UIApplicationDelegate를 사용하게 된다. 다시 말하면 UIApplication에 관한 동작에 대한 프로토콜(정의)을 UIApplicationDelegate 에 미리 지정한 메소드들(delegate method)를 이용해서 설정을 지정할 수 있다.
 그중에서 푸시 서비스를 하기 위해서 디바이스의 고유한 토큰이 필요한데 이 것을 사용하기 위해서 토큰 값을 가져오는 delegate method가
@@ -75,7 +75,7 @@ SaltfactoryPushPlugin_ios 모듈 프로젝트를 열어서 SaltfactoryPushPlugin
 
 NSLog를 사용해도 Appspresso에서 로그 정보를 볼 수 없다. 물론 ADE (크롬 Appspresso Debug Extension)에서도 볼 수 없다. 하지만 Xcode의 Organizer에서 디바이스 콘솔로 NSLog의 정보를 확인할 수 가 있기 때문이다.  아래 그림은 나중에 앱이 실행될 때 Xcode의 Organizer를 이용해서 위에서 작성한 UIApplicationDelegate 메소드가 동작할 때 NSLog를 출력하게 만든 것을 확인하는 그림이다.
 
-![](http://cfile23.uf.tistory.com/image/1361E6374FA33FBC11B5F9)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/2a1a0ef3-22fa-4cee-bff0-9f4ce0c25f4d)
 
 이제 우리가 만든 앱이 실행될 때 APN (Apple Push Notification)을 사용한다고 지정을 해야한다. Appspresso가 아닌 Xcode에서 푸시를 적용하기 위해서는 UIApplicationDelegate의 `-application:didFinishLaunchingWithOptions:` 딜리게이트 메소드에 푸시를 사용할 거라고 명시하지만, Appspresso가 생성하는 네이티브 코드의 시작은 `-activate:runtimeContext:` 를 실행시킨다. 그래서 이 메소드 안에 푸시를 사용할 거라고 지정을 한다. Appspresso에서는 AxRuntimeContext를 사용해서 javascript와 통신을 하는 Context이고 어플리케이션을 담당하고 있는데 이 객체에다 UIApplicationDelegete를 적용해서 위임시키고 만약 푸시로 앱이 실행하게 될 때는 getLaunchOptions를 사용해서 UIApplicationLaunchOptionsRemoteNotificationKey로 푸시로 전달된 값을 받아 온다.
 
@@ -190,15 +190,15 @@ NSLog를 사용해도 Appspresso에서 로그 정보를 볼 수 없다. 물론 A
 이제 모두 다 되었다. 앱을 빌드하고 디바이스로 설치를 한다. 그리고 앱이 실행될때 위에서 말한 Organizer로 NSLog 정보를 확인한다.
 그리고 ADE를 열어서 디바이스토큰을 바로 가져오는지 확인하자.
 
-![](http://cfile23.uf.tistory.com/image/1361E6374FA33FBC11B5F9)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/598fe9da-f211-425e-b7ee-0d970aa0b2e1)
 
 Appspresso의 on the fly 화면
 
-![](http://cfile24.uf.tistory.com/image/160BB3364FA345502AF0DB)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/6dab00e3-f86f-423b-806b-890b75143e6f)
 
 ADE (구글 크롬 Debugging Extension) 화면
 
-![](http://cfile29.uf.tistory.com/image/1662FE344FA345192FD258)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/19356621-d22b-4ab1-965b-a53ecd84bd34)
 
 이제 PDK를 이용해서 네이티브코드로 디바이스 토큰을 가져오는 작업을 모두 맞쳤다. 이 디바이스 토큰을 서버에 전송해서 데이터베이스화 시켰다가 푸시를 보낼 때 사용하면 된다. 푸시가 전송이 바로 되는지 확인해보자.
 간단하게 푸시를 보내기 위해서 Ruby로 푸시 전송하는 코드를 작성한다. 먼저 ruby gem을 이용해서 apns를 설치한다.
@@ -220,7 +220,7 @@ device_token = '488fca...ea' #디바이스토큰
 APNS.send_notification(device_token, :alert => 'Appspresso Push Test', :badge => 1, :sound => 'default')
 ```
 
-![](http://cfile9.uf.tistory.com/image/121E57374FA33AD03DAE22)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/c7e31dd1-0ff7-425b-ac2f-5cecd06065e1)
 
 이젠 Appspresso (앱스프레소)로 푸시 서비비스를 적용할 수 있게 되었다. Appspresso는 처음에 생각했던 것 보다 훨씬 더 하이브리드 앱을 만들기에 좋은 환경을 제공한다. 나중에 포스팅을 또 하겠지만 WAC를 사용할 수 있는 마술 같은 방법은 정말 멋진 기능이다. 다음 포스팅은 Android 앱에서 C2DM으로 푸시를 받을 수 있는 방법에 대해서 포스팅을 할 예정이다.
 
@@ -230,12 +230,3 @@ APNS.send_notification(device_token, :alert => 'Appspresso Push Test', :badge =>
 
 1. https://groups.google.com/forum/#!searchin/appspresso-ko/UIApplicationDelegate/appspresso-ko/-g8-oSWEABg/XMxojB1icf4J
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

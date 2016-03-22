@@ -83,11 +83,11 @@ and (min-width : 1025px) {
 
 이제 다시 PC와 iOS에서 브라우저로 테스트를 해보면 데스크탑의 구현 범위가 iPad의 스크린의 width를 겹치더라도 iPad일 경우는 `min-device-with`, `max-device-with`, orientation 속성으로 태블릿과 PC 화면을 구분해서 적용할 수 있게 된다. 여기서 태블릿의 디바이스 크기와 스크린의 크기를 조합해서 해당하는 사이즈를 유동적으로 변경해주면 된다.
 
-![](http://cfile28.uf.tistory.com/image/14637F3C5072692A0873B1)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/9065bcd0-4a08-40c3-8d72-b37c180e3f83)
 
-![](http://cfile25.uf.tistory.com/image/190E9136507269471B19AD)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/5aeae60c-de9c-49e8-84f6-c9c62e622963)
 
-![](http://cfile23.uf.tistory.com/image/12728F3C507269511A3BA3)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/9ec7535d-ce3e-425a-a722-0db15de40eaa)
 
 ## 결론
 
@@ -101,12 +101,3 @@ CSS의 @media의 screen을 이용해서 화면의 크기를 이용해서 그에 
 
 1. http://broadcast.oreilly.com/2010/04/using-css-media-queries-ipad.html
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

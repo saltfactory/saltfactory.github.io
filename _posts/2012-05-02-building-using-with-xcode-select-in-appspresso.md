@@ -17,7 +17,7 @@ Appspresso를 사용해서 [ Appspresso를 사용하여 하이브리드앱 개�
 
 다음 캡처를 살펴보자. 정상적으로 build가 성공되었으면 디바이스에 설치하기 전에 project 디렉토리 밑에 output 디렉토리 안에 설치하기 실제 앱 파일이 존재한다. android 디바이스에 설치하기 위해서 .apk  파일이 만들어지고 iOS 디바이스에 설치하기 위해서 .ipa 파일이 만들어 진다.
 
-![](http://cfile6.uf.tistory.com/image/127B8B3A4FA0C15C141814)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d4d6bbf2-38d9-4fb6-9beb-5b5a29efccc4)
 
 하지만 Mac 운영 체제에서 사용하는 command line의 경로가 /Developer를 가르키고 있으면 .ipa 파일을 생성하지 못하는 문제가 발생한다.
 iOS 디바이스에 설치하기 위해서 빌드를 실행하면 다음과 같은 에러가 발생한다.
@@ -50,7 +50,7 @@ Widget Launch(run) >>: SaltfatoryHybridTutorial project launch failed.
 
 우리는 xcode-select를 이용할 것이다. xcode-select는 python-select와 비슷하게 여러가지 버전의 Xcode가 설치되어 있을 경우 특정 버전의 Xcode를 Activity하게 환경변수를 변경시켜 주는 명령어이다.
 
-![](http://cfile25.uf.tistory.com/image/144409414FA0C3DF15C850)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/2a300b55-60a1-4ef3-91c3-896a7effcb6b)
 
 현재 Xcode가 설정된 경로를 확인하기 위해서 -print-path를 사용한다.
 
@@ -66,7 +66,7 @@ sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
 
 다시 -print-path로 경로를 확인하면 Xcode의 경로가 변경되어 있는 것을 확인할 수 있다.
 
-![](http://cfile6.uf.tistory.com/image/192EF7454FA0C45206053B)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ddad9577-dd16-44fa-8427-8ca2097941b3)
 
 ## 결론
 
@@ -77,12 +77,3 @@ sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
 1. http://appspresso.com/ko/archives/3934
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

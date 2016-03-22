@@ -6,7 +6,6 @@ tags: [jekyll, ruby, markdown, plugin]
 comments: true
 redirect_from : /264/
 disqus_identifier : http://blog.saltfactory.net/264
-excerpt_separator : <!--more-->
 ---
 
 > [jekyll-img-converter](https://github.com/saltfactory/jekyll-img-converter)는 [Markdown](http://daringfireball.net/projects/markdown/syntax)의 이미지  문법(syntax)를 HTML으로 변환 시킬 때  이미지의 사이즈를 inline style로 추가해서 변환 시키는 [Jekyll](http://jekyllrb.com)의 플러그인이다.
@@ -355,12 +354,3 @@ jekyll serve --watch
 **Jekyll**은 Markdown을 사용해서 정적 웹 사이트를 만들 수 있는 static web page generator 프레임워크이다. Jekyll을 사용하면 개인 웹 서버나 고가의 데이터베이스 없이 **Github Pages**를 이용해서 개인 웹 사이트나 블로그를 쉽게 구축할 수 있다. Markdown은 문서 제작를 간편하고 빠르게 제작할 수 있게 스타일을 지정하지 않는다. 하지만 웹 사이트를 만들다보면 이미지 사이즈를 조정하는 경우가 많다. Markdown의 기본 문법에서는 IMG 태그에 스타일을 지정할 수 없기 때문에 우리는 Jekyll의 **Redcarpet**이라는 Markdown 변환기에서 IMG 태그를 변환하는 메소드를 오버라이드하여 Jekyll 플러그인 **jekyll-img-converter**를 제작하게 되었다. jekyll은 **Ruby** 기반으로 만들어졌기 때문에 우리는 **Rakefile**을 이용해서 플러그인을 만들고 테스트를 진행했다. 우리는 우리가 만든 플러그인을 **gem**을 사용해서 설치할 수 있게 **rubygems**에 우리가 만든 플러그인을 등록해서 배포했고 이 모든 과정을 이 포스트에서 소개 했다. Ruby는 Minxin이라는 기능을 가지고 있고 모든 클래스 기반 언어처럼 상속과 오버라이드를 지원한다. 우리는 이 개념을 잘 사용하여 Markdown의 문법을 해치지 않고 이미지 문법의 ALT 속성에 **inline style**을 지정하여 IMG 태그를 분석할 때 오버라이드한 메소드가 이를 분석해서 IMG 태그에 **style** 속성에 inline style을 적용하도록 했다. 이 포스트를 참조해서 앞으로 더욱 많은 Jekyll의 플러그인이 제작되길 기대해본다.
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

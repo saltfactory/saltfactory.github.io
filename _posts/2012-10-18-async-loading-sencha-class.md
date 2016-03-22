@@ -60,7 +60,7 @@ Sencha Touch에서 Javascript 파일을 추가할 때 application 구조가 아�
 </html>
 ```
 
-![](http://cfile7.uf.tistory.com/image/14100D36507FE7B426D620)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/524c0faa-4bd0-47fd-9c01-690a759cc872)
 
 위 스크립트 코드를 HTML에 삽입하지 않고 Person.js 라는 파일로 관리한다고 하면 다음과 같이 Person.js 파일과 <script src="Person.js"></script>로 변경이 될 것이다.
 
@@ -117,7 +117,7 @@ Ext.define("Person", {
 위 코드로 변경한 다음에 브라우저를 리로딩해도 결과는 동일하다는 것을 확인할 수 있을 것이다. Sencha Touch는 같은 경로에 클래스 이름과 동일한 Javascript 파일이 있으면 이름으로 객체를 구분하기 때문에 동일한 클래스로 생각하고 로드를 자동으로 해준다. 방금 추가한 <script src="Person.js">를 삭제시켜보자.
 개발을 위해서 sench touch debug all javascript를 상용하고 있다면 아래와 같은 Warning이 발생하기는 하지만 같은 경로에 있는 Person.js를 로드해서 Person 클래스를 해석하고 객체를 만들 수는 있다는 것을 확인할 수 있다.
 
-![](http://cfile24.uf.tistory.com/image/12159F38507FEAF2023E40)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/7e6141e3-3f98-4fbf-a0c4-05df6a03f589)
 
 Sencha Touch는 클래스 파일을 동기모드와 비동기모드로 로드를 할 수 있는데 기본적으로는 동기모드로 로드를 한다. 만약 비동기모드로 로드를 하고 싶을 경우는 Ext.require를 이용해서 처리할 수 있다. 하지만 다음과 같이 Ext.require 만 사용해서 Sencha 의 클래스 파일을 로드시키면 비동기방식으로 로드를 하기 때문에 document의 로드와 순서적으로 비동기 적으로 로드가 발생해서 Ext.require로 로드가 된 것이 아니라 같은 경로의 Person.js 파일을 먼저 찾게 되어서 WARN 이 발생한 것을 확인할 수 있다.
 
@@ -157,11 +157,11 @@ Sencha Touch는 클래스 파일을 동기모드와 비동기모드로 로드를
 </html>
 ```
 
-![](http://cfile10.uf.tistory.com/image/1848A4435080A8C82C6DC1)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/fe47bf80-8396-4ea6-a28c-0b2d2329ac20)
 
 정말 Ext.require과 상관없이 Ext.create가 이름을 가지고 Person.js 찾는지 확인하기 위해서 Person.js 파일을 classes라는 폴더로 이동을 하고 다시 실행을 시켜보았다. 그러면 다음과 같은 에러를 보게 될 것이다. 즉, 클래스를 명시적으로 로드하는 것을 찾지도 못했고, 명시된 것이 없어서 클래스 이름과 같은 Person.js 파일을 같은 경로에서 찾아봤지만 찾을 수 없다는 에러이다.
 
-![](http://cfile10.uf.tistory.com/image/181E14455080A9421B5799)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/29422cfe-22ad-42c3-a342-1691bc03e50d)
 
 그래서 우리는 Sencha에게 Person이 ./classes/Person.js 라는 파일이라는 힌트를 주기로하자.
 
@@ -210,7 +210,7 @@ Sencha Touch는 클래스 파일을 동기모드와 비동기모드로 로드를
 
 다음 코드를 추가한다. 아직 비동기문제로 발생하는 Ext.require의 문제는 해결되지 않았다.
 
-![](http://cfile30.uf.tistory.com/image/2078394A5080A9F7397F7D)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/3e48a209-5d86-4da0-a121-3da119167761)
 
 Secnch는 어플리케이션 로드를 담당하는 Ext.application 이라는 객체를 가지고 있는데 이것을 이용해서 Ext.require의 비동기로드 문제를 해결할 수 있다. Ext.application은 센차가 필요한 모든 클래스를 로드하고 난 다음에 launch 라는 메소드를 callback 하기 때문에 Ext.application의 launch 메소드에서 위 코드를 구현하면 된다.
 
@@ -336,12 +336,3 @@ Secnch는 어플리케이션 로드를 담당하는 Ext.application 이라는 �
 1. http://docs.sencha.com/touch/2-0/#!/api/Ext.Loader
 2. 이광호, Interpress, "센차터치 2 입문에서 활용까지", p. 106~p. 126
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

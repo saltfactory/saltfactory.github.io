@@ -23,15 +23,15 @@ Appsresso를 프로젝트에 적용하기 위해서 필요한 기능을 먼저 �
 
 Asspresso에서 다른 네트워크 데이터를 전송하기 위해서 Appspresso에서 제공하는 플러그인에서 ax.ext.net 라는 플러그인의 ax.ext.net.curl을 사용하면 된다. Appspresso에서 플러그인을 추가하기 위해서 project 디렉토리 안에 있는 project.xml 파일을 선택하여 Feature라는 탭을 선택한다. 그리고 Add Built-in Plugin을 선택한다.
 
-![](http://cfile8.uf.tistory.com/image/1739C03F4F9C00B631A7F6)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/51eba37d-ab20-46af-874b-9cc3201e6709)
 
 Add Built-in Plugin 버턴을 누르면 Appspresso에서 제공하고 있는 플러그인들이 보이는데 그 중에서 ax.ext.net 플러그인을 선택하고 OK를 누른다.
 
-![](http://cfile24.uf.tistory.com/image/12656B3F4F9C022D057041)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/afb078e0-2346-454f-94da-9aa972b62c8c)
 
 Feature List에 extension  에 http://appspresso.com/api/ax.ext.net 플러그인이 추가된 것을 확인할 수 있다.
 
-![](http://cfile29.uf.tistory.com/image/123AAF414F9C02572CA99B)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/9d090fef-35dd-4159-948b-b74054b172c6)
 
 ax.ext.net.curl을 테스트하기 위해서 Twitter Search API를 이용한 json 요청을 http://search.twitter.com 도메인으로 요청을 해보자.
 프로젝트 폴더 아래의 index.html을 열어서 다음 코드를 추가한다.
@@ -74,7 +74,7 @@ ax.ext.net.curl을 테스트하기 위해서 Twitter Search API를 이용한 jso
 
 on the fly 로 디버깅 모드를 빌드하고 실행해보자, 실행하는 방법은 [Appspresso를 사용하여 하이브리드앱 개발하기 - 2.On The Fly로 디버깅하기](http://blog.saltfactory.net/126) 글을 참조한다.
 
-![](http://cfile1.uf.tistory.com/image/200874394F9C0AED26AD06)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/12abc9fd-5086-4789-b33c-7c4c8c5233e3)
 
 ax.ext.net.curl 은 URL을 기반하는 http 요청을 처리한다. http://appspresso.com/api/extension/symbols/ax.ext.net.html 를 참조하면 ax.ext.net.curl에 대한 설명이 나오고, http://appspresso.com/api/extension/symbols/ax.ext.net.CurlOpts.html 를 참조하면 파라미터 옵션들의 설정 값들을 확인할 수 있다. 예제는 간단하게 url, success callback method, fail callback method를 지정하였다. Http 요청을 처리할 때 method가 'GET' 일 경우는 다음과 같이 ax.ext.net.get 으로도 사용할 수 있다. 단지 ax.ext.net.curl에 사용한 해시형태의 파라미터가 아니라 다음과  같이 ax.ext.net.get을 사용할 수 있다.
 
@@ -124,7 +124,7 @@ ax.ext.net.curl 은 URL을 기반하는 http 요청을 처리한다. http://apps
 
 이 글을 작성할 때 Appsspresso 가 1.1로 업데이트가 되었다. 1.1 버전 부터는 plugin을 추가하는 패널이 조금 다르게 보이는 다음과 같은 화면으로 추가할 수가 있다. (Appsresso의 1.1 새로운 기능은 다음 포스트에 자세히 언급하겠다.)
 
-![](http://cfile8.uf.tistory.com/image/172A4B404F9E213704813D)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/1f9ebffd-c78c-4b61-9f9a-c01507d63b23)
 
 Appsresso 1.1버전 부터는 다국어 지원이 가능한데 다국어 지원하는 탬플릿을 선택하고 프로젝트를 만들면 다음과 같은 샘플 코드가 들어가 있다. 하지만 기존의 ax.ext.net 을 사용하는 방법은 동일하다. ax.ext.net.curl 이나 ax.ext.net.get을 사용하면 간단하게 javascript에서 cross domain 문제를 해결하고 데이터를 가져올 수 있다.
 
@@ -190,9 +190,9 @@ Appsresso 1.1버전 부터는 다국어 지원이 가능한데 다국어 지원�
 </html>
 ```
 
-![](http://cfile26.uf.tistory.com/image/1715DD354F9E2A0E17E603)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/533ed0f7-8862-4d76-920d-d8e32f87cb27)
 
-![](http://cfile1.uf.tistory.com/image/2025C6434F9E2A5E100A2B)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e64aea38-388a-4cc6-9045-920960ba91e2)
 
 ## 결론
 
@@ -200,12 +200,3 @@ Appsresso 1.1버전 부터는 다국어 지원이 가능한데 다국어 지원�
 
 다음 포스팅에서는 Appspresso의 PDK (Plugin Development Kit)을 이용해서 Native code(Objective-C, Java)를 사용하는 방법과 네이티브 프로그램으로 URL 요청을 하는 방법에 대해서 포스팅할 예정이다.
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

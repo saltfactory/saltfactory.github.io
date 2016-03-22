@@ -1,37 +1,44 @@
 ---
 layout: default
+body_class: "home-template user"
 ---
+{% include header.html %}
 
-<div class="home">
-  <ul class="post-list">
-    {% for post in paginator.posts %}
-    <li>
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+<div class="page-content">
+  <div class="wrapper">
+    <div class="home">
+      {% for post in paginator.posts %}
+      <article class="{%comment%}post_class{%endcomment%}">
 
-      <p class="excerpt">
-        {{ post.excerpt | split: '</h2>' | last | strip_html | truncate:200}} <a href="{{post.url | prepend: site.baseurl }}">[본문보기]</a>
-      </p>
+          {% if post.images.title %}
+              <div class="image-holder show">
+                <a href="{{ post.url | prepend: site.baseurl }}" class="inner" style="background-image: url('{{ post.images.title }}');">
+                  <img src="{{ post.images.title}}">
+              </a>
+            </div>
+          {% endif %}
 
-    </li>
-    {% endfor %}
-  </ul>
+          <div class="meta">
+            <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
+              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: "%B %-d, %Y" }}</a>
+            </time>
+          </div>
 
+          <header>
+              <h1><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+          </header>
 
-  <div class="pagination">
-    {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous">Previous</a>
-    {% else %}
-    <span class="previous">Previous</span>
-    {% endif %}
-    <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next">Next</a>
-    {% else %}
-    <span class="next">Next</span>
-    {% endif %}
+          <div class="text">
+              <p>{{ post.excerpt }}</p>
+              <a href="{{ post.url | prepend: site.baseurl }}" class="readmore">Continue Reading</a>
+          </div>
+      </article>
+      {% endfor %}
+
+    </div>
   </div>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
 </div>
+
+{% include pagination.html %}
+
+{% include footer.html %}

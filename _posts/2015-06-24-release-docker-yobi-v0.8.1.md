@@ -1,11 +1,15 @@
 ---
 layout: post
-title : Yobi를 docker에서 운영하기 위한 docker-yobi v0.8.1 업데이트
-category : docker-yobi
-tags : [yobi, git, docker-yobi, java]
-comments : true
+title: Yobi를 docker에서 운영하기 위한 docker-yobi v0.8.1 업데이트
+category: docker-yobi
+tags:
+  - yobi
+  - git
+  - docker-yobi
+  - java
+comments: true
 images:
-  title: http://assets.hibrainapps.net/images/rest/data/484?size=full
+  title: 'https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/5aa58637-424f-4c28-9d19-acd6d0ad0686'
 ---
 
 ##  서론
@@ -22,7 +26,7 @@ github에서 docker-yobi를 **clone** 한다.
 git clone https://github.com/saltfactory/docker-yobi.git
 ```
 
-![git clone docker-yobi](http://assets.hibrainapps.net/images/rest/data/486?size=full&m=1435132579)
+![git clone docker-yobi](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/f735ca78-957c-4866-9df4-f0bedcb7df11)
 
 ## docker-yobi 파일
 
@@ -64,7 +68,7 @@ DOCKER_YOBI_PORT="9000"
 sh build.sh
 ```
 
-![build](http://assets.hibrainapps.net/images/rest/data/487?size=full&m=1435132677)
+![build](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/42f3dee5-6196-41db-86da-f3eadaeb0e39)
 
 ## 시작
 
@@ -75,26 +79,26 @@ sh start.sh
 ```
 만약 아무런 설정을 하지 않고 실행하게 되면 기본 **YOBI_HOME** 디렉토리를 발견하지 못해서 다음과 같은 메세지를 만나게 된다.
 
-![not found YOBI_HOME](http://assets.hibrainapps.net/images/rest/data/488?size=full&m=1435132726)
+![not found YOBI_HOME](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/62905290-eebc-4a88-a0be-266e1f7b677d)
 
 `./config.sh` 파일을 수정하지 않으면 기본적으로 **YOBI_HOME** 디렉토리는 docker-yobi를 clone한 디렉토리 안의 **yobi/** 디렉토리로 지정이 된다. 이 곳에 **yobi**라는 디렉토리가 없어서 발생하는 메세지이다. 이곳에 yobi 디렉토리를 만들거나 새로운 디렉토리로 지정하면 된다. 예제를 위해서 `/Users/saltfactory/shared/yobi-home`에 새롭게 디렉토리를 만들고 YOBI_HOME으로 지정한다.
 
-![setting YOBI_HOME](http://assets.hibrainapps.net/images/rest/data/489?size=full&m=1435132983)
+![setting YOBI_HOME](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/84c14270-c1c1-4909-ba6e-e3744d1cec43)
 
 다시 `sh start.sh` 명령어로 docker-yobi를 실행하자.
 
 이제 정상적으로 docker-yobi가 실행이 되었다. docker-yobi가 실행이되면 Yobi가 정상적으로 실행되어 YOBI_HOME에 필요한 파일들을 만들게 된다. YOBI_HOME 디렉토리에 `ls` 명령어로 파일이 만들어졌는지 확인해보자.
 
-![startup docker-yobi](http://assets.hibrainapps.net/images/rest/data/491?size=full&m=1435133100)
+![startup docker-yobi](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/695ce50a-4f6e-43eb-9087-7662652f2dcb)
 
 브라우저를 열어서 Yobi가 정상적으로 실행되는지 확인해보자. host에 호스트 IP를 입력하면된다. 이 예제는 boot2docker를 사용하여 만들 것이라 boot2docker의 IP를 입력했다.
 
 http://host:9000
-![open yobi](http://assets.hibrainapps.net/images/rest/data/492?size=full&m=1435133324)
+![open yobi](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/3fb22afb-85b4-4db6-8892-8292e040f7fa)
 
 docker 프로세스를 확인해보자. `config.sh`에 설정한 정보대로 docker-yobi가 운영되고 있는 것을 확인할 수 있다. 우리는 기본정보 그대로 사용했기 때문에 **PORT**는 9000 그리고 **NAME**은 yobi-0.8.1로 실행되었다.
 
-![docker ps](http://assets.hibrainapps.net/images/rest/data/494?size=full&m=1435133560)
+![docker ps](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/2ad4ad32-0575-4949-b2e0-cee65b6c34db)
 
 ## 로그확인
 
@@ -106,7 +110,7 @@ sh logs.sh
 
 현재 docker-yobi가 정상적으로 실행되었기 때문에 다음과 같은 로그를 확인할 수 있다.
 
-![logs.sh](http://assets.hibrainapps.net/images/rest/data/493?size=full&m=1435133497)
+![logs.sh](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/56e03610-bb91-4159-b2b7-c64566f92060)
 
 
 ## 중지
@@ -116,7 +120,7 @@ docker-yobi를 중지하고 싶을 경우는 `stop.sh` 파일을 실행한다. �
 ```
 sh stop.sh
 ```
-![stop docker-yobi](http://assets.hibrainapps.net/images/rest/data/495?size=full&m=1435133784)
+![stop docker-yobi](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/9326798e-b822-4e91-bf04-ba5db6200ed1)
 
 
 ## 삭제
@@ -126,7 +130,7 @@ docker에서 컨테이너를 중지해도 완전히 삭제되는 것은 아니�
 ```
 docker ps -a
 ```
-![stoped container](http://assets.hibrainapps.net/images/rest/data/496?size=full&m=1435134068)
+![stoped container](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/957a6b4f-73dc-4a59-9153-32c26154a591)
 
 docer-yobi 컨테이너를 완전히 삭제하기 위해서는 `rm.sh` 파일을 실행한다. 이 파일은 `config.sh`에 정의한 docker-yobi 컨테이너를 삭제한다. 그리고 다시 `docker ps -a` 명령어로 확인하면 docker-yobi 컨테이너가 완전히 삭제 된 것을 확인할 수 있다.
 
@@ -134,7 +138,7 @@ docer-yobi 컨테이너를 완전히 삭제하기 위해서는 `rm.sh` 파일을
 sh rm.sh
 ```
 
-![sh rm.sh](http://assets.hibrainapps.net/images/rest/data/497?size=full&m=1435134121)
+![sh rm.sh](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/b88231f9-875c-4f0e-b706-d3e9284576a9)
 
 ## 결론
 
@@ -151,13 +155,3 @@ docker-yobi를 업데이트하게된 이유는 v0.7 기반의 yobi를 사용하�
 
 1. http://www.webupd8.org/2014/03/how-to-install-oracle-java-8-in-debian.html
 
-## 연구원 소개
-
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

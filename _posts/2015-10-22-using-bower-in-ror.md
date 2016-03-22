@@ -1,11 +1,16 @@
 ---
 layout: post
-title : Ruby on Rails 에서 bower 사용하기
-category : ruby
-tags : [ruby, gem, ror, bower, rails]
-comments : true
-images :
-  title : http://assets.hibrainapps.net/images/rest/data/707?size=full
+title: Ruby on Rails 에서 bower 사용하기
+category: ruby
+tags:
+  - ruby
+  - gem
+  - ror
+  - bower
+  - rails
+comments: true
+images:
+  title: 'https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/a50c1421-45b5-41d3-a4f8-d40bdd71619c'
 ---
 
 ## 서론
@@ -35,7 +40,7 @@ RoR 프로젝트를 하나 생성해보자. 프로젝트를 생성하면 필요�
 rails new TestApp
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/694?size=full&m=1445565924)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/5246b8c5-4a62-4fe2-8326-68994d2c4604)
 
 ## bower.json 설정
 
@@ -53,7 +58,7 @@ bower init
 
 **bower init** 명령을 실행하면 다음과 같이 인터렉티브하게 질문이 나오고 해당 값을 입력하면 자동으로 bower.json 파일이 생성이 된다.
 
-![](http://assets.hibrainapps.net/images/rest/data/708?size=full&m=1445578582)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/678907fe-6031-4071-a20f-55472bd20706)
 
 기본값으로 만들어진 bower.json은 다음과 같다.
 
@@ -134,7 +139,7 @@ bower install
 
 앞에서 우리는 bower.json에 **fontawesome** 패키지를 설치할 것이라고 정의하였고 .bowerrc에 bower 패키지가 설치될 디렉토리를 지정하였기 때문에 이 명령어를 실행하면 해당 경로에 패키지가 설치될 것이다. 실행결과 마지막 메세지에 패키지가 설치된 경로 **vender/assets/bower_components/fontawesome**을 볼 수 있다.
 
-![](http://assets.hibrainapps.net/images/rest/data/709?size=full&m=1445579170)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/29e337cf-7e9c-4488-9eb0-329b799f261e)
 
 ## RoR의 Assets 경로 추가하기
 
@@ -186,7 +191,7 @@ Rails.application.config.assets.paths << Rails.root.join('vendor','assets','bowe
 rails g controller Greetings hello
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/702?size=full&m=1445568126)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/04b34866-f641-407b-af6e-abf79eb24163)
 
 다음은 RoR 서버를 실행시키고 브라우저를 열어서 앞에서 bower를 사용하여 포함한 패키지가 웹 사이트의 assets로 로드되어 졌는지 확인해보자.
 
@@ -196,7 +201,7 @@ rails s
 
 http://localhost:3000/greetings/hello
 
-![](http://assets.hibrainapps.net/images/rest/data/710?size=full&m=1445580304)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/7e4e403c-2079-4de6-a34c-4a2a3a1d9b86)
 
 RoR 프로젝트에 Bower 패키지가 정상적으로 assets에 포함되어 동작하는 것을 확인할 수 있을 것이다.
 
@@ -208,13 +213,3 @@ Bower를 사용하면 웹 개발에 필요한 패키지를 쉽게 구하거나 �
 
 1. http://dotwell.io/taking-advantage-of-bower-in-your-rails-4-app/
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://saltfactory.net/profile) 개발 연구원
-* 프로필 : http://saltfactory.net/profile
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

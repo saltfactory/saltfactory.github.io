@@ -23,7 +23,7 @@ Javascript는 브라우저의 Javascript 엔진이 있어야 해석이 가능하
 java -jar js.jar
 ```
 
-![](http://cfile29.uf.tistory.com/image/20761234505AC645252194)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/edec3844-57ca-47ea-ac11-8d81b4b5cb35)
 
 이렇게 Rhino의 CLI 로 사용하면 Javascript를 테스트 할 수 있다.
 
@@ -75,7 +75,7 @@ eventApplication.main();
 
 그러면 우리가 예상하듯 외부에서 구현한 CallbackMethod가 피호출자(callee)에서  호출자(caller)를 호출해서 서브루틴에서 메소드를 실행할 수 있게 되었다.
 
-![](http://cfile24.uf.tistory.com/image/177E9733505ACDB60BF4BE)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/7bb69dc0-b931-4699-ad8d-8fe960da61d1)
 
 ## 결론
 
@@ -86,12 +86,3 @@ Javascript는 객체지향 언어이지만 클래스가 없는 언어이다. 그
 1. http://www.impressivewebs.com/callback-functions-javascript/
 2. http://stackoverflow.com/questions/2190850/javascript-create-custom-callback
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

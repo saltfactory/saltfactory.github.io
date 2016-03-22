@@ -21,7 +21,7 @@ CakePHP는 PHP 어플리케이션을 만들기 위한 MVC 기반 웹 프레임�
 /Projects/Server/mysql/support-mysql/mysql.server start
 ```
 
-![](http://cfile10.uf.tistory.com/image/2073BE3650401E4A10A9F6)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/f06c9fbb-2be3-44a2-8d53-74868697a55f)
 
 이렇게 Aapache, PHP, MySQL  서버가 모두 설치 되었으면 이제 CakePHP를 소스를 다운받는다. PHP 작업을 위해서 /Projects/Workspaces/PHP/ 에서 작업을 한다고 가정한다. (자신이 편한 경로에 작업을 해도 상관없다)
 
@@ -43,11 +43,11 @@ apache의 httpd.conf 에서 vhost를 사용하기 위해서 2가지를 확인해
 
 Virtual Host Alias Module 주석 해지
 
-![](http://cfile5.uf.tistory.com/image/20658538504020EF209B21)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/8b65bb76-d99a-4ad5-8eb9-f70a62a7f120)
 
 Virtual Hosts 설정 파일 주석 해지
 
-![](http://cfile10.uf.tistory.com/image/2009D750504020F91A4263)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/8380a748-d052-4ef1-a50f-3f070f67c6f8)
 
 이제 주석 해지한 httpd-vhosts.conf 파일에 다음을 수정할 것이다.
 
@@ -103,13 +103,13 @@ sudo apachectl restart
 
 두둥!!! 엄청난 실망을 했을지 모른다. cakePHP에서 알려주는 에러가 나타나기 때문이다.
 
-![](http://cfile25.uf.tistory.com/image/2019753F504025BC2C4E1D)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/c1a5e9cb-930b-4177-82f6-6d7b0e00ae5a)
 
 하지만 걱정할 것 없이 처음나온 에러부터 천천히 수정해보도록 하자.
 
 우선 제일먼저 나타난 에러부터 확인하면 CakePHP가 사용하려는 tmp 디렉토리에 권한 문제로 파일 쓰기를 할 수 없어서 생기는 문제이다. 편의상 권한을 777로 변경한다. 실제 서비스를 하는 서버에서는 웹 서버만 접근할 수 있는 권한을 부여해야할 것이다.
 
-![](http://cfile1.uf.tistory.com/image/1326623350402649202180)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/27120bd3-0086-4d06-a7bf-cf6b6bcd1309)
 
 CakePHP의 경로로 이동한다.
 
@@ -125,7 +125,7 @@ chmod -R 777 app/tmp
 
 다음은 cakePHP가 사용하는 보안키에 관련된 설정을 수정하라는 알림을 처리한다.
 
-![](http://cfile30.uf.tistory.com/image/1322C64F5040274E069D3C)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/545bbe2d-d2ef-4409-bfc0-ab53d5342efc)
 
 ```
 vi app/Config/core.php
@@ -133,13 +133,13 @@ vi app/Config/core.php
 
 core.php 파일을 열고 Security.salt와 Security.cipherSeed의 값을 아무런 랜던 값으로 대처한다.
 
-![](http://cfile25.uf.tistory.com/image/19710B50504027D92D4EDA)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/64b36c1f-6f8a-4ff1-822e-500a0dfddb26)
 
-![](http://cfile27.uf.tistory.com/image/15514B4E504027E2022738)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/8e5c6224-469a-42bf-8738-5df2f28e1f75)
 
 다시 cake.saltfactory.local 을 브라우저에 리로드해보자.
 
-![](http://cfile10.uf.tistory.com/image/15774D4B504028293354A7)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/24d10c7c-de32-4cf8-887d-3f6eecd12634)
 
 이제 마지막으로 database를 사용하게 설장하는 것인데 다음과 같이 샘플 데이터베이스파일을 복사해서 수정한다.
 
@@ -190,7 +190,7 @@ create database cakephp_test default character set utf8;
 
 다시 cake.saltfactory.local 주소를 브라우저에서 새로 고침을 해보자. 아래와 같이 CakePHP가 정상적으로 설치되어진 것을 확인할 수 있다.
 
-![](http://cfile6.uf.tistory.com/image/2031B93A504038B705C8E4)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/10b5c86f-965b-4e60-b09e-bc2c55d38212)
 
 ## 결론
 
@@ -199,12 +199,3 @@ PHP는 웹 서버 설정과 긴말한 관계가 있다. PHP 개발을 하기 위
 ## 참고
 1. http://bakery.cakephp.org/articles/momendo/2006/10/04/installing-cakephp-on-macos-x
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

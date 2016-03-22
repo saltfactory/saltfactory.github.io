@@ -146,7 +146,7 @@ sudo -u gitlab -H git clone git@localhost:gitolite-admin.git /tmp/gitolite-admin
 
 지금까지의 설정이 바르게 되었다면 다음과 같이 출력 될 것이다.
 
-![](http://cfile23.uf.tistory.com/image/11397E37503C77E712D832)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/7bcc0c32-fa07-418f-a60c-c26e140ca882)
 
 ## gitlab  설치
 
@@ -368,20 +368,11 @@ a2ensite gitlab.saltfactory.net
 
 이제 apache2를 재시작하면 gitlab.saltfactory.net(예제 도메인으로 실제 도메인으로 접근해보길 바란다.) 으로 접근하면 gitlab 을 사용할 수 있게 된다.
 
-![](http://cfile6.uf.tistory.com/image/1358604D503C8B420251F5)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/973f4b2e-33fa-4425-8d75-5d5acc052fe1)
 
-![](http://cfile25.uf.tistory.com/image/161A8B49503C8B54085350)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e932d6e2-b3b4-4842-abdc-e0eefe825f4c)
 
 ## 참고
 
 1. https://github.com/gitlabhq/gitlabhq/blob/stable/doc/installation.md
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

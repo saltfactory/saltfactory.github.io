@@ -22,13 +22,13 @@ disqus_identifier : http://blog.saltfactory.net/88
 
 아래 그림은 draw9path를 이용해서 패턴을 정의하고난 이미지 이다. 실제 이미지는 다음과 같다.  이 이미지를  draw9path를 이용해서 양쪽으로 늘이거나 상하로 늘릴때 이미지가 어떻게 스트레칭 될지의 패턴을 정의할 수 있다. 이 때 empty 영역에 마우스를 클릭하면 검은색 점이 찍히면서 패턴이 변경하게 된다. 만약 패턴을 삭제 싶으면 검은색 점에다 오른쪽 마우스를 클릭하면 패턴이 삭제 된다.
 
-![](http://cfile10.uf.tistory.com/image/182C71464F0BD7B20CEC8B)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/3d5eaecc-1167-4cf6-83ea-44f97aba8616)
 
-![](http://cfile1.uf.tistory.com/image/135CE9444F0BD75F04C20F)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/62cd7fa5-e43a-4820-b5d5-dda0fbc032d4)
 
 이렇게 이미지를 draw9path 툴로 선택되기 전과 선택되고 난 후의 이미지를 두가지를 만들어서 `/res/drawable-hdpi`에 저장을 했다.
 
-![](http://cfile24.uf.tistory.com/image/202B23374F0BD6D9070B2A)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/981e2641-dc3a-4fcb-8e6d-8af4ea4a1e68)
 
 그리고 버턴을 선택하면 pressed 된 느낌을 구현하기 우해서 `selector_default_button.xml`을 만들어서 방금 draw2path로 만든 이미지들을 각각 지정하였다.
 
@@ -98,14 +98,5 @@ disqus_identifier : http://blog.saltfactory.net/88
 
 이제 우리는 Draw 9-path를 이용해서 같은 패턴의 버턴을 가로로 늘리거나, 세로로 늘리거나 아니면 완벽하게 스케일을 변화 시켜도 동일한 패턴의 버턴을 만들 수 있게 되었다. 아마도 디자이너에게 더이상 각각의 버턴을 만들어 달라는 시간이 줄어 들것이라 생각이 들고, 같은 이미지로 좀더 유연하고 다양한 이미지를 프로그래밍적으로 만들어 낼 수 있을거라 생각이 든다.
 
-![](http://cfile27.uf.tistory.com/image/17149C4D4F0BD8D80185E5)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e3ccf957-e63f-4b10-9826-778275d79798)
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

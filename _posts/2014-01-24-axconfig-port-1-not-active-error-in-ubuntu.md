@@ -23,7 +23,7 @@ axconfig : port 1 not active
 axconfig : port 2 not active
 ```
 
-![](http://cfile27.uf.tistory.com/image/2328E24552E1CE462767A1)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d4a273b4-d99b-41ef-be88-94253f01e16b)
 
 <!--more-->
 
@@ -61,7 +61,7 @@ sudo apt-get install nodejs
 
 기존에 설치된 nodejs는 /usr/sbin/node로 존재하지만 새로 설치된 node는 /usr/bin에 설치가 되기 때문에 PATH에 경로를 추가한다. vi로 ~/.profile을 열어서 PATH에 /usr/bin을 추가하자.
 
-![](http://cfile30.uf.tistory.com/image/22433B4A52E1D0E7284CC1)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/359d1296-f152-42e0-bee0-58aa5ce3b25b)
 
 새로 추가한 PATH를 시스템에 반영하기 위해서 .profile을 컴파일 한다.
 
@@ -75,18 +75,9 @@ source ~/.profile
 lsb_release -a
 ```
 
-![](http://cfile9.uf.tistory.com/image/2676233452E1D1E22CC3EC)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/a91e4711-ca12-4e8e-bd26-94fde3a8f70d)
 
 ## 참고
 
 1. http://stackoverflow.com/questions/2424346/getting-error-while-running-simple-javascript-using-node-framework
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

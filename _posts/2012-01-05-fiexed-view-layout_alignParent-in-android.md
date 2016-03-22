@@ -64,17 +64,8 @@ android:layout_alignParentLeft, android:layout_alignParentRight라는 속성은 
 </LinearLayout>
 ```
 
-![](http://cfile23.uf.tistory.com/image/123B2D3F4F05342A26E577)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d390b1c7-70fb-4d83-bb2a-d3e929555541)
 
-![](http://cfile26.uf.tistory.com/image/16625F3C4F0535B22CF2FD)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/cfb50adc-101c-4a5d-a1f3-eb8657a4f7d5)
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

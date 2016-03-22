@@ -23,19 +23,19 @@ disqus_identifier : http://blog.saltfactory.net/225
 개발자 등록이 끝나면 내 애플리케이션을 등록한다. https://developers.kakao.com/apps
 데모를 위해서 **sf-kakao-demo** 라는 이름으로 앱을 등록했다.
 
-![](http://cfile21.uf.tistory.com/image/22320B4452F84D0F08DB4A)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/b813325c-7638-4dfa-b9b5-ddd30d51eccc)
 
 다음은 개발 플랫폼을 추가한다. 먼저 Android 앱을 개발하는 예제를 만들것이기 때문에 Android 플랫폼을 추가한다. 등록한 앱을 선택하면 "설정"이라는 메뉴를 선택하면 플랫품을 추가할 수 있다.
 
-![](http://cfile24.uf.tistory.com/image/2238374252F84DF22FAD09)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/deea6ba4-e4ac-44f7-a6d2-20dd87933dc6)
 
-![](http://cfile3.uf.tistory.com/image/21476D4752F84E3717B281)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/736521e2-fafb-4f52-a03a-eabec056f630)
 
 Android 플랫폼을 추가하면 Android 개발할 때 사용하는 패키지명을 입력한다. 우리는 데모용 앱을 만들것이기 때문에 `net.saltfactory.tutorial.kakaodemo` 라는 패키지명을 사용했다.
 
-![](http://cfile2.uf.tistory.com/image/2360593D52F84E510C62F9)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/3693981d-22e0-430f-808e-e057d6c7cb02)
 
-![](http://cfile1.uf.tistory.com/image/2412AC4F52F84FD71A720B)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/3559d907-24bd-4f7f-9368-8ec3cc5421bf)
 
 패키지명을 입력하면 마켓 URL까지 자동으로 추가되어진다. 이젠 키 해시를 만들어서 추가를 한다. Android 키 해시를 만드는 방법은 다음과 같다. 터미널에서 다음 명령어를 입력한다. 명령어를 입력하면 키해시가 만들어지는데 이것을 "키 해시" 란에 입력한다.
 
@@ -43,64 +43,64 @@ Android 플랫폼을 추가하면 Android 개발할 때 사용하는 패키지�
 keytool -exportcert -alias androiddebugkey -keystore ~/.android/debug.keystore | openssl sha1 -binary | openssl base64
 ```
 
-![](http://cfile3.uf.tistory.com/image/2257F24A52F8511D2D7898)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/fa6ce9b5-170e-47c3-a341-ff1e31988824)
 
-![](http://cfile1.uf.tistory.com/image/257A7A4A52F8522E2153FD)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/078297ed-ac4c-4b97-9f23-6c30f63d8fd4)
 
 ### SDK 다운로드
 
 이제 앱 등록은 모두 마쳤다. 개발에 필요한 SDK를 다운 받는다. https://developers.kakao.com/docs/sdk 에서 안드로이드 SDK를 다운받는다.
 
-![](http://cfile28.uf.tistory.com/image/266BC35052F852F4058787)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/9b0bf838-92b0-4a3c-ab74-422efc6c544b)
 
-![](http://cfile1.uf.tistory.com/image/2432013552F853A3122D0E)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/2f9ef0d9-8a13-4a1a-8b66-0c2f11ec8cde)
 
 다운 받은 zip 파일을 unzip 한다. 다운 받은 sdk 디렉토리 안에는 sdk, samples 그리고 templates 디렉토리가 존재한다.
 
-![](http://cfile2.uf.tistory.com/image/24208E4A52F8542719B530)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d879767e-a122-4720-a9c6-f4bb39962eb7)
 
 ### 안드로이드 프로젝트 생성
 
 이젠 안드로이드 앱을 개발하기 위해서 안드로이드 프로젝트를 생성한다. **sf-kakao-demo**라는 이름으로 안드로이드 앱 프로젝트를 생성한다.
 패키지 이름은 카카오 개발자 사이트에 안드로이드 앱을 등록한 패키지명을 입력한다. 우리는 `net.saltfactory.tutorial.kakaodemo`라고 지정했기 때문에 패키지를 `net.saltfactory.tutorial.kakaodemo`로 입력했다.
 
-![](http://cfile27.uf.tistory.com/image/242B1F4252F8878B386026)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ec73068d-126d-46b6-bd3a-59ef8ab91f9b)
 
 이렇게 입력한 후 Finish를 선택하면 비어있는 기본적인 안드로이드 프로젝트가 완성된다.
 
-![](http://cfile21.uf.tistory.com/image/235B3D3552F887D30F8747)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/340fcfeb-7402-490d-b11f-069984fb41fb)
 
 이젠 다운 받은 SDK 를 import 한다. IntelliJ에서 File > import Module을 선택한다.
 
-![](http://cfile10.uf.tistory.com/image/2578594652F887F928C55A)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/8257e11b-6fdd-4ce0-96fd-9b0ecfaed8a3)
 
 import Module을 선택하면 import할 파일을 찾는 탐색기가 열리는데 이때 앞에서 다운받은 SDK 디렉토리 밑에 kakao-android-sdk-1.0.10 프로젝트를 선택한다.
 
-![](http://cfile1.uf.tistory.com/image/2250A13652F8566512CCE9)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/4c0248ae-4a71-4f47-a7b6-5c1a08c29621)
 
 import할 모듈을 선택하면 Create module from existing sources를 선택한다.
 
-![](http://cfile23.uf.tistory.com/image/2510594152F856CB3A3875)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e5d38d9b-aa3f-4e3a-9091-a4a2a8f298ac)
 
 그러면 관련된 모듈이 모두 체크된 것을 확인할 수 있다. 모든 모듈을 한번에 import할 수 있게 모두 체크한다.
 
-![](http://cfile23.uf.tistory.com/image/2519AF4D52F857040D0A0F)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/dd65c480-f5da-40c0-95aa-055fd653d43c)
 
 관련된 모듈을 선택하면 필요한 라이브러리들을 자동으로 찾아내는데 모든 라이브러리들을 가져올 수 있게 체크한다.
 
-![](http://cfile22.uf.tistory.com/image/216D904152F8576104313C)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/6c9f14e5-ef91-4f55-b372-86abdc5dd219)
 
 모듈간의 의존성을 검사해서 자동으로 의존성 모듈을 찾아낸다. 모두 체크한다음 Next를 누른다.
 
-![](http://cfile28.uf.tistory.com/image/26167A3C52F857AA29BE82)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/51f4fc63-b9b8-4349-a0a6-850602248c90)
 
 마지막으로 모듈이 어떤 프레임워크로 개발 되었는지 확인하는 작업에서 디렉토리를 검사해서 `AndroidManifest.xml`을 찾아내어 안드로이드 프로젝트인 것을 확인하는데 모두 안드로이드 프로젝트 이므로 체크한 상태에서 Finish 버튼을 누른다.
 
-![](http://cfile3.uf.tistory.com/image/2758143652F857E01F953D)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/12408e34-eda6-48b4-bf26-5100178428d3)
 
 이렇게 Import Module 작업을 마치면 우리가 개발하기로한 프로젝트가 담긴 워크스페이스에 SDK와 관련된 모듈들이 모두 import 된 것을 확인할 수 있다.
 
-![](http://cfile26.uf.tistory.com/image/2264DF3F52F888692AFDEB)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/b72c9cd5-57d0-443d-8286-e3bc82c6e8de)
 
 ### 샘플 프로젝트 실행
 
@@ -116,27 +116,27 @@ import할 모듈을 선택하면 Create module from existing sources를 선택�
 
 안드로이드 폰으로 빌드해자. 카카오 연동 앱은 반드시 카카오 어플이 있어야만 한다. 즉, 안드로이드 폰에 카카오톡이 설치가 되어 있어야하기 때문에 에뮬레이터에서 사용은 할 수 없다. 카카오톡이 설치된 안드로이드 폰으로 빌드한다. 에러 없이 간단히 실행이 되는 것을 확인할 수 있다.
 
-![](http://cfile3.uf.tistory.com/image/214F163952F85EFF13D7CA)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/a3e15415-6bea-43f2-b070-8e8625eeec2e)
 
 보내기 버튼을 클릭해보자. kakaolink-sample 프로젝트는 Text, Link, Image, 다시 앱으로 돌아오게 연결하는 button 이렇게 전송하는 것을 예제로 만들어져있다. 확인 버튼을 눌러보자.
 
-![](http://cfile5.uf.tistory.com/image/240F284C52F860691A4674)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/5fa7a9f7-52ac-4741-a8de-a033e660a024)
 
 확인 버튼을 누르면 카카오톡의 친구 목록이 나타난다.
 
-![](http://cfile1.uf.tistory.com/image/2462BB4752F8611901A48D)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/52b64182-2dc3-49a1-9016-3e7fe2b13142)
 
 친구 목록 중에서 한명을 선택하자. 우리는 연구소의 강승준 연구원을 선택했다.
 
-![](http://cfile30.uf.tistory.com/image/27499B4252F861792CD471)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/1bb2ef34-d791-42ae-842c-e08e2e3faa05)
 
 kakaolink로 전송할 수 있는 친구는 여러명을 동시에 선택할 수 있다. 예로 한명만 선택했는데 여러명을 체크하면 전송할 친구들이 여러면 체크가되고 전송 목록에 담길 것이다. 확인 버튼을 클릭한다. 그러면 선택한 친구에게 Text, Image, Link, 그리고 앱을 열수 있는 버튼이 만들어져서 전송되는 것을 확인할 수 있다.
 
-![](http://cfile22.uf.tistory.com/image/2204504352F861C519FD69)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ddea00d9-e24e-4fa5-a476-9b7d1f5afcd9)
 
 앱으로 이동이라는 버튼을 누르면 우리가 샘플로 실행한 kakao-sample 앱이 다시 열리는 것을 확인할 수 있다.
 
-![](http://cfile3.uf.tistory.com/image/214F163952F85EFF13D7CA)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/2675c97b-e44c-4252-a021-e5f53bd42fe8)
 
 간단하게 kakaolink-sample 앱을 실행해봤다. 우리가 실행한 앱은 Kakao SDK에 들어있는 카카오 개발자가 배포한 간단한 kakao-sample 앱이였다. 이젠 우리가 직접 우리가 만든 앱에서 kakao link를 만들어서 실행해보자.
 
@@ -292,11 +292,11 @@ public class MyActivity extends Activity {
 
 안드로이드 디바이스로 빌드해보자. 우리는 레이아웃에 버튼하나만 추가했기 때문에 다음과 같이 실행 될 것이다.
 
-![](http://cfile28.uf.tistory.com/image/21647B4052F88DA7349189)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/2f044607-978a-44bc-9f75-e627071adcd2)
 
 버튼을 누르면 카카오톡 친구 목록이 나타난다. 친구 목록중에 카카오링크를 보낼 친구를 선택하면 다음과 같이 카카오톡으로 text, image, link, 앱 연결 버튼을 보낼 수 있다.
 
-![](http://cfile6.uf.tistory.com/image/2149344052F8804F2ACAB0)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/28d00b1d-699a-4c23-ad82-cb9a02086314)
 
 ## 결론
 
@@ -311,12 +311,3 @@ public class MyActivity extends Activity {
 1. https://developers.kakao.com/docs
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

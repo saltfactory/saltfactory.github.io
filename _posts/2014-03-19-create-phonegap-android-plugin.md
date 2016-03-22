@@ -22,7 +22,7 @@ disqus_identifier : http://blog.saltfactory.net/236
 phonegap local build android
 ```
 
-![](http://cfile26.uf.tistory.com/image/257F7B3B53291D1E02B32D)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/978ebadb-121d-4a15-b5f3-7d440e768eab)
 
 
 ### Android Studio 를 이용해서 Android 프로젝트를 만들고 PhoneGap Plugins 프로젝트를 import 한다.
@@ -31,57 +31,57 @@ PhoneGap Android 플러그인을 개발하기 위해서는 Android IDE가 필요
 
 **1) Android Studio를 실행**
 
-![](http://cfile27.uf.tistory.com/image/21040A3C53291DD62A0482)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/9a25600f-8b52-49be-b76d-a73cdee0355c)
 
 **2) PhoneGap Plugins 프로젝트 디렉토리를 import**
 
 우리는 PhoneGap Plugins 프로젝트를 **sf-phonegap-plugin-demo** 라는 이름으로 디렉토리를 만들었는데 이 디렉토리를 import 한다.
 
-![](http://cfile10.uf.tistory.com/image/27189E4F53291F472EC739)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/0ed07eb8-eade-4a46-84fe-1a123646bd99)
 
-![](http://cfile5.uf.tistory.com/image/25134C3553291FCB224B76)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/89eef322-f5a6-42d7-87e9-6773e442bf71)
 
 **3) PhoneGap Plugins 프로젝트의 소스 import**
 
 PhoneGap Plugins 디렉토리를 import하면 Android Studio가 새로운 프로젝트를 만들고 존재하는 소스파일을 import 할것을 물어본다. 존재하는 소스를 import 한다. Android Studio 프로젝트 이름은 원하는 이름으로 만들어도 되지만 편의상 PhoneGap Plugins 디렉토리와 동일한 이름으로 만든다.
 
-![](http://cfile2.uf.tistory.com/image/21236E3953292022033EEB)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/93b85775-a9d5-4e7f-bd3a-f162faeed21e)
 
-![](http://cfile28.uf.tistory.com/image/261BE8365329203901C033)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/9f65302d-7e61-46ec-bebe-70348d848961)
 
 **4) PhoneGap Plugins 안의 패키지 import**
 
 프로젝트를 생성하면 Android Studio는 하위 디렉토리를 검사해서 Android 프로젝트에 필요한 패키지들을 찾아낸다. 이 때 주의해야할 점은 ant 디렉토리 밑에 자원들은 import하지 않는다. 만약 모두 import하게 되면 Android Studio 프로젝트를 모두 만들고 나서 컴파일할 때 Class가 중복된다고 나오기 때문이다. 다음과 같이 `src`와 `gen` 디렉토리들만 import한다.
 
-![](http://cfile2.uf.tistory.com/image/2579A64E5329212D034023)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/779e5e09-e928-447c-aa11-857fc5176b61)
 
 **5) PhoneGap Plugins의 라이브러리 import**
 
 다음은 PhoneGap Plugins 프로젝트에서에 android 플랫폼을 추가하기 위해서 생성된 라이브러리를 추가하는데 역시 빌드가 완료된 라이브러리는 추가하지 않고 `classes` 만 추가한다.
 
-![](http://cfile3.uf.tistory.com/image/273D8333532921A231DE1C)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/cc818aff-91aa-4f78-a6b7-aa0a75ac4ab0)
 
 **6) PhoneGap Plugins 프로젝트의 모듈 import**
 
 다음은 PhoneGap Plugins 프로젝트의 모듈을 추가하는 화면이 나타나는데 PhoneGap 프로젝트에서 Android 플랫폼 작업을 할 때는 PhoneGap 프로젝트의 모듈과 PhoneGap 코어 모듈인 **CordovaLib** 모듈을 추가한다.
 
-![](http://cfile29.uf.tistory.com/image/21246B39532922154498D1)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d3329aec-c7b5-4e0b-95d5-6d498962e90a)
 
 **7) Android SDK 추가**
 
 마지막으로 PhoneGap Android Plugins를 개발하기 위해서 Android SDK를 임포트하는데 PC에 설치되어 있거나 Android Studio에 built-in 되어 있는 Android SDK를 선택한다.
 
-![](http://cfile7.uf.tistory.com/image/2338A536532922AB09EB97)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/24e4126a-e8c4-42a6-a677-8cb15df15cc8)
 
 **8) PhoneGap Plugins 프로젝트의 AndroidManifest.xml 설정**
 
 이젠 모든 설정이 끝났다. Android Studio가 Android 프로젝트를 import 하였기 때문에 Android 프로젝트가 가진 `AndroidManifest.xml`을 찾아서 마지막으로 설정을 하게 한다.
 
-![](http://cfile27.uf.tistory.com/image/222AD639532922F60E1BF4)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/44d2590e-7c1b-4579-8c32-96e050b434c5)
 
 Android Studio는 [gradle](https://gradle.org/) 빌드 시스템을 사용하지만 위와 같이 PhoneGap의 프로젝트를 import 할 때는 gradle을 사용하지 않는다. gradle로 migration하는 방법은 나중에 따로 포스팅을 할 예정이다. 모든 설정이 마치면 PhoneGap Android Plugins를 개발할 수 있는 Android 프로젝트가 만들어지게 된다.
 
-![](http://cfile29.uf.tistory.com/image/2756A83A5329236E1CF841)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/a61a5853-3a4a-4998-ad53-c9cc63ae3fbf)
 
 ### JavaScript 파일 공동 사용
 
@@ -154,9 +154,9 @@ module.exports = new SFPluginEcho();
 
 이전 포스트에서 iOS 플러그인을 만들기 위해서 `CDVPlugin.h`를 import 하여 상속받아서 만든것과 동일하게 Android 용 Plugins을 개발하기 위해서는 `org.apache.cordova.CordovaPlugin`을 상속받아서 클래스를 생성한다. 이름은 iOS 플러그인을 만들 때와 동일하게 `SFPluginEcho`로 만든다.
 
-![](http://cfile28.uf.tistory.com/image/2413E83553292532191547)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/158d6a0a-6678-4283-bbc5-0b082260e0a7)
 
-![](http://cfile1.uf.tistory.com/image/2764FC34532925441D9960)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/1e9f64e3-bf8f-41f8-a4f4-696f8268fba2)
 
 `CordovaPlugin`을 상속받은 `SFPluginEcho`는 PhoneGap의 Android Plugins을 만들 수 있는 메소드들을 사용할 수 있게 된다. `SFPluginEcho.java `파일을 열어서 다음과 같이 수정한다. iOS용 Plugins을 만들때와 마찬가지로 JavaScript에서 네이티브코드에 접근하기 위해서는 서비스이름(클래스이름)과 action이름(메소드이름)으로 접근하기 때문에 ACTION 이름을 다음과 같이 정해주고 각각 해당하는 메소드를 호출할 수 있도록 한다. JavaScript에서 action 이름을 호출할 때는 `echo`, `getMessage`, `runJavaScriptFunction`으로 접근할 것이기 때문에 이에 해당하는 conditions을 지정하였다.
 
@@ -432,7 +432,7 @@ phonegap local build android
 phonegap local install android
 ```
 
-![](http://cfile23.uf.tistory.com/image/215BE13553292A251FF298)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d0a2e015-a9c7-430d-b82f-914883f2270c)
 
 그런데 실행해보면 JavaScript가 `SFPluginEcho`의 `echo()`를 호출했음에도 불구하고 아무런 동작이 일어나지 않는다. 이유는 JavaScript에서 `SFPluginEcho`라는 서비스이름이 어떤 클래스와 매핑되는지를 설정하지 않았기 때문이다. 우리는 앞에서 iOS용 플러그인을 만들 때 `context.xml`에 `feature`를 추가한 것을 기억할 것이다. Android의 네이티브 클래스를 사용하기 위해서 존재하는 feature에 다음을 추가한다.
 `SFPluginEcho`는 `net.saltfactory.tutorial.phonegap.plugindemo.SFPluginEcho` 클래스를 지정하고 있다고 `feature`에 추가한다.
@@ -557,7 +557,7 @@ phonegap local install android
 
 이젠 다음 그림과 같이 `SFPluginEcho`의 `echo()`를 실행해서 네이티브 코드의 `SFPluginEcho`의 `echo` 액션을 실행한 것을 확인할 수 있다.
 
-![](http://cfile29.uf.tistory.com/image/233E4A3E53292B4A01AD0C)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/0b6f26bc-2482-48a8-ab5e-75b43798c375)
 
 
 다른 JavaScript 메소드를 실행해보자. 위에는 JavaScript에서 메세지를 Android 네이티브 코드로 보내어 Android의 `AlertDialog`를 사용해서 출력했다면, `getMessage()`는 Android의 네이티브 코드에서 생성한 `JSONObject`를 JavaScript로 반환해서 웹에서 alert()를 출력하는 예제이다. `www/index.html`을 다음과 같이 수정한다.
@@ -631,7 +631,7 @@ phonegap local build android
 phonegap local install android
 ```
 
-![](http://cfile26.uf.tistory.com/image/2529E14453292C3F2A29A5)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/7e85f380-5d81-4e4c-b713-170caf8d9a5e)
 
 `SFPluginEcho`의 `getMessage()` 역시 정상적으로 동작한다. 이 예제는 Android의 `SFPluginEcho` 안에서 `getMessage`라는 action이 들어오면 네이티브에서 JSON을 만들어서 JavaScript로 반환하여 JavaScript가 `alert()`를 보여주는 예제이다. 마지막으로 `SFPluginEcho`의 `runJavaScriptFunction` 을 실행하기 위해서 `www/index.html` 파일을 다음과 같이 수정한다.
 
@@ -704,7 +704,7 @@ phonegap local build android
 phonegap local install android
 ```
 
-![](http://cfile1.uf.tistory.com/image/251D834253292D5C105943)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/47817299-f335-4052-9ed5-a6ca31460b1b)
 
 이렇게 PhoneGap Plugins 프로젝트에서 JavaScript와 네이티브 클래스와 메소드에 접근하는 것을 확인했다. 이젠 이렇게 만든 PhoneGap Android Plugins을 다른 PhoneGap 프로젝트에 설치를 해보자.
 
@@ -772,7 +772,7 @@ phonegap local build android
 phonegap local plugin remove net.saltfactory.tutorial.phonegap.plugindemo
 ```
 
-![](http://cfile8.uf.tistory.com/image/212CB1455329305703DC1D)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/1687c4ee-f78d-423c-8c94-71878338fa28)
 
 4) ios와 android 플러그인을 모두 만들어둔 **SF-PhoneGap-Plugin-Demo**를 다시 설치한다.
 
@@ -780,7 +780,7 @@ phonegap local plugin remove net.saltfactory.tutorial.phonegap.plugindemo
 phonegap local plugin add ../sf-phonegap-plugin-demo
 ```
 
-![](http://cfile30.uf.tistory.com/image/216998435329310A16DDA3)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/3a643069-8bf1-4f8f-81d1-37a503c86862)
 
 이제 PhoneGap 프로젝트에 PhoneGap Plugins이 설치가 모두 완료되었다. PhoneGap 프로젝트의 `www/index.html`을 열어보자. 이전 포스팅에서 iOS 플러그인을 추가해서 동작하게 한 JavaScript 코드가 그대로 있는데 이것을 Android에도 동일하게 사용 가능한지 테스트해볼 것이다.
 
@@ -855,7 +855,7 @@ phonegap local build android
 phonegap local install android
 ```
 
-![](http://cfile1.uf.tistory.com/image/251D834253292D5C105943)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/376f2adf-4a29-4d74-b01d-dedcf9b501f8)
 
 정상적으로 Plugins이 설치가 되어서 동작하는 것을 확인할 수 있다. 이렇게 두 포스팅에 걸쳐서 iOS와 Android용 PhoneGap Plugins을 개발하는 방법을 살펴보았다.
 
@@ -870,12 +870,3 @@ PhoneGap은 동일한 JavaScript 코드로 다른 플랫폼의 네이티브 코�
 1. http://docs.phonegap.com/en/edge/guide_platforms_android_plugin.md.html#Android%20Plugins
 2. http://devgirl.org/2013/09/17/how-to-write-a-phonegap-3-0-plugin-for-android/
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

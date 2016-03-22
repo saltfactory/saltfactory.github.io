@@ -59,7 +59,7 @@ Tistory를 선택한 이유는 Daum Editor를 사용해서 웹에서 다양한 �
 지금은 생각이 많이 바뀌어서 WISIWYG으로 작성할 수 있는 컬러풀한 문서보다, 문서는 정보 전달이 가장 최우선되는 목적으로 Headers, Paragraphs, Emphasis, Code, Images, Links 만 구분하면 된다. 그런 의미에서 **Markdown**을 사용해서 글을 작성하기로 했다.
 
 지금 이글 역시 **Markdown**으로 작성을한 글이다. Markdown은 다양한 에디터를 사용해서 작성할 수 있다. 물론 아무런 툴이 없이 그냥 vi나 메모장을 사용해도 괜찮다. 하지만 앞서 말했지만 *”문서작성이 즐거워야 한다”*라는 생각으로 Markdown으로 기록을 남길 수 있는 [DAYONE](http://dayoneapp.com)으로 글을 작성하고 있다. DayOne은 2014년 Apple Design Award를 한 앱인만큼 디자인이 매우 훌륭하다. 그래서 글을 작성하는데 즐겁고 무엇보다 *iCloud*나 *DropBox*와 연동하여 Mac과 iPhone과 동기화를 지원하고 있기 때문에 연구소에서 뿐만 아니라 언제 어디서든지 아이디어가 생각이 나면 글을 이어서 작성할 수 있다는 것이 큰 장점이다.
-![DAYONE](http://cdn.cultofmac.com/wp-content/uploads/2011/10/DayOne-1_1-e1317529571898.jpeg)
+![DAYONE](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/2ca1dbee-2e7f-4a6d-809c-13c483f80f77)
 
 Markdown은 문서와 구조만을 표기하기 때문에 나중에 Display는 HTML으로 변환되어질 때 CSS로 표현한다. 이것 또한 Markdown의 장점이라 생각한다. **문서에서 디자인 요소를 분리해서 문서 작성에 최대한 집중할 수 있게 한다.** 그리고 문서를 어떠한 형태로 export 하거나 display를 할 수 있다는 장점이 있다. 만약 WISWYG으로 작성한 문서는 문서를 변환할 수 없거나 변환하더라도 다시 WISWYG을 사용해서 하나하나 변경을 해야할 것이다.
 
@@ -106,12 +106,3 @@ Open Graph의 meta를 만들기 위해서는 다음과 같이 HTML 문서를 분
 
 Tistory에 Markdown을 사용해서 글을 작성하면 또하나의 큰 문제점이 있는데 바로 이미지 파일을 첨부할 수 없다는 것이다. Tistory의 에디터에서 HTML 모드로 작성하게 되면 파일을 첨부할 수 없는 문제가 발생한다. 이문제를 해결하기 위해서 두가지 방법을 실험하여 적용했다. 하나는 DataURI로 이미지를 변환해서 사용하는 방법이고, 다른 하나는 Node 모듈을 만들어서 파일 업로드하여 이미지 URI를 획득하는 방법이다. 이 방법에 대한 설명 또한 따로 포스팅으로 작성하려고 한다.
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

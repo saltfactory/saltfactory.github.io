@@ -4,12 +4,11 @@ title: About
 css: about.css
 permalink : /about/
 redirect_from : /profile/
-
 ---
 
 
 <!-- ![profile]({{site.url}}/assets/images/profile.png) -->
-![profile](/assets/images/profile.jpeg)
+![](https://s3.ap-northeast-2.amazonaws.com/hbn-blog-assets/170527_1397357473697_3166009_o+(1).jpg)
 
 * [창원대학교 컴퓨터공학과](http://portal.changwon.ac.kr/home/ce) 박사수료
 * [하이브레인넷](http://www.hibrain.net) 부설연구소
@@ -60,8 +59,6 @@ redirect_from : /profile/
 * 대상 : *예) 개발부서 및 학생 30명*
 * 강의료 : *예) 시간당 0원*
 
-
-![](http://assets.hibrainapps.net/images/var/albums/hbncloud/public/170527_1397357473697_3166009_o.jpg?m=1433686674)
 
 ## 연구분야
 

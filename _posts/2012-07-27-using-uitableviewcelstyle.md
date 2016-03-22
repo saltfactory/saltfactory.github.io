@@ -32,11 +32,11 @@ typedef enum {
 
 테스트를 위해서 empty 프로젝트를 만든다. 이 포스팅에서는 SFTableViewCellTutorial이라는 이름으로 만들었다.
 
-![](http://cfile28.uf.tistory.com/image/1912AC45502490F118C789)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/50e6532e-87b6-4bbb-9732-3f2b60069598)
 
 그리고 UITableViewController를 상속받은 SFTableViewController를 추가하여 UINavigationController에 추가하고 rootViewController로 지정한다.
 
-![](http://cfile5.uf.tistory.com/image/1211A83E502491BC2F3800)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/57058be7-3cad-4c41-876f-973cf3b914a1)
 
 ```objective-c
 //
@@ -187,7 +187,7 @@ typedef enum {
 }
 ```
 
-![](http://cfile1.uf.tistory.com/image/1353883C5024A20710B6BD)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/6b0afa2a-c2ac-43c9-a012-33712a2367f4)
 
 ## UITableViewCellStyleSubtitle
 
@@ -213,7 +213,7 @@ UITableViewCellStyleDefault는 단순하게 textLabel을 표현하기 위한 기
 }
 ```
 
-![](http://cfile27.uf.tistory.com/image/173B9434502498CC293C18)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/bb8b9e8d-a6d4-4e2e-9490-23d35a2f1def)
 
 UITableViewCellStyleSubtitle은 UITableViewCellStyleDefault로 나타난 textLabel 밑에 detailTextLabel을 나타나게 하는 스타일로 만들어준다.
 
@@ -241,11 +241,11 @@ UITableViewCellStyleValue1은 UITableViewCellStyleSubtitle과 달리 detailLabel
 }
 ```
 
-![](http://cfile29.uf.tistory.com/image/15731F3A50249A4C1FCF80)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/bc70fe52-2fcb-4edf-a2c8-0901119f8089)
 
 좀더 익숙한 UI로 만들어보려면 UITableViewStyle을 UITableViewStyleGrouped로 변경해보면 된다.
 
-![](http://cfile27.uf.tistory.com/image/1814273B50249B4F288FA9)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/be940ecb-b97a-41ff-afc4-30bead86e18d)
 
 ## UITableViewCellStyleValue2
 
@@ -270,7 +270,7 @@ UITableViewCellStyleValue2는 UITableViewCellStyleValue1과 반대로 되는 스
 }
 ```
 
-![](http://cfile7.uf.tistory.com/image/19318E4A50249CEC0A641A)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/b096a54f-7606-4a9c-b0fd-1f370e059a3d)
 
 UITalbeViewCellStyleValue1에서 detailTextLabel의 색상을 변경하고 싶을 경우에는 다음과 같이 한다.
 
@@ -300,7 +300,7 @@ UITalbeViewCellStyleValue1에서 detailTextLabel의 색상을 변경하고 싶�
 
 위 코드를 추가하고 다시 빌드와 실행을해보고 확인한다.
 
-![](http://cfile3.uf.tistory.com/image/123FEC3B50249F1707BC35)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/337f7b09-08e0-40c6-8a42-d40fc9fee7b3)
 
 ## 소스
 
@@ -310,12 +310,3 @@ UITalbeViewCellStyleValue1에서 detailTextLabel의 색상을 변경하고 싶�
 
 1. http://developer.apple.com/library/ios/#documentation/uikit/reference/UITableV
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

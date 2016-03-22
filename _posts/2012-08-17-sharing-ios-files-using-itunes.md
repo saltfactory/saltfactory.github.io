@@ -18,19 +18,19 @@ disqus_identifier : http://blog.saltfactory.net/173
 
 먼저 테스트를 위해 프로젝트를 생성한다.
 
-![](http://cfile28.uf.tistory.com/image/11164935502DED8E0A6026)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/38577d7f-986b-4944-8860-2acff8113a91)
 
 다음은 iTunes와 iOS 어플리케이션의 파일 공유를 위해서 `{application}.plist` 파일에 **Application supports iTunes file sharing** 속성을 추가한다.
 
-![](http://cfile22.uf.tistory.com/image/12050F3E502DEE2E0DE8C3)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/3896d9d1-ab78-4df8-b4ba-a5cc3697b77a)
 
 **Application supports iTunes files sharing** 의 디폴트 값은 **NO**인데 **YES**로 변경한다. 그리고 아이폰 디바이스로 빌드하고 실행한 뒤에 iTunes를 열어보면 파일을 공유할 수 있는 앱으로 등록이 되어있다.
 
-![](http://cfile7.uf.tistory.com/image/1377CC39502DEF950617CB)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/f95192bd-ba44-4bbe-a253-87c2be2bca94)
 
 이렇게 공유되는 파일들은 iOS 앱의 /Documents에 저장이 되는데 실제로 파일이 저장되는지 확인하기 위해서 테이블뷰컨트롤러를 하나 추가해서 다음 코드를 추가해보자.
 
-![](http://cfile27.uf.tistory.com/image/111F953C502DF01E119FAA)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/b0abc6dc-ac1f-498f-a963-0bdd30981dbb)
 
 ```objective-c
 //
@@ -164,13 +164,13 @@ disqus_identifier : http://blog.saltfactory.net/173
 
 이제 iTunes에 공유하고 싶은 파일을 추가하고 iTunes와 iPhone을 동기화 한다. 테스트를 위해선 간단한 스트링문자열을 포함한 test.rtf 파일을 텍스트 에디터로 저장해서 그 파일을 공유 목록에 Add 버튼을 눌러서 추가한 다음에 동기화를 했다.
 
-![](http://cfile10.uf.tistory.com/image/1909AF4F502DF0BB01B6D3)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/82bde98d-180b-4dc7-a997-6860c412f501)
 
 ## iPhone에서 Desktop으로 파일 공유
 
 이제 아이폰의 /Documents 파일에 제대로 들어갔는지 앱을 빌드해서 실행시켜보자. iOS 시뮬레이터에서는 할 수 없기 때문에 아이폰으로 캡처를 받은 화면이다.
 
-![](http://cfile9.uf.tistory.com/image/1576234C502DF132195C0A)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/40f3962f-35ae-4e81-8341-a1c1b65bcbda)
 
 이렇게 간단하게 데스크탑의 파일을 앱으로 공유 시킬 수 있다.  
 이제 앱에서 데스크탑으로 파일을 복사하려면 앱에서 /Documents 폴더로 파일을 저장한다. 테스트를 위해서 Xcode로 test.jpg 파일을 하나 추가했다. 이제 이것을 /Documents 폴더로 저장하는 코드를 추가한다.
@@ -209,11 +209,11 @@ disqus_identifier : http://blog.saltfactory.net/173
 
 다시 앱을 빌드하고 실행시킨 후 에 iTunes를 확인해보자. 아래 그림과 같이 파일이 iTunes Documents 목록에 나타나게 된다. 여기서 Save to... 버튼을 선택해서 다른 곳으로 파일을 저장하면 간단하게 아이폰의 데이터를 데스크탑으로 저장할 수 있게 되는 것이다.
 
-![](http://cfile10.uf.tistory.com/image/1314AA4C502DF39B036560)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/9520a85f-7dce-4448-806f-7cb55bc93be9)
 
 만약 데스크탑에서 공유되고 있는 파일을 삭제하고 싶으면 파일이 선택되어 져 있는 상태에서 데스크탑의 delete 키를 누르면 다음과 같은 Alert 창이 나타나면서 삭제할 수 있다.
 
-![](http://cfile6.uf.tistory.com/image/1275884B502DF44E32C6B2)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/8e4ddccb-bb40-4c4c-abf3-982af05e9ce4)
 
 ## 결론
 
@@ -229,12 +229,3 @@ disqus_identifier : http://blog.saltfactory.net/173
 2. http://www.raywenderlich.com/1948/how-integrate-itunes-file-sharing-with-your-ios-app
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

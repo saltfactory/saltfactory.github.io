@@ -1,11 +1,16 @@
 ---
 layout: post
-title : GitHub Pages 도메인 네임 설정 하기
-category : github
-tags : [github, jekyll, pages, domain, dns]
-comments : true
+title: GitHub Pages 도메인 네임 설정 하기
+category: github
+tags:
+  - github
+  - jekyll
+  - pages
+  - domain
+  - dns
+comments: true
 images:
-  title: http://assets.hibrainapps.net/images/rest/data/420?size=full
+  title: 'https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/a3b92191-fdd4-442f-9529-ff425bdcd419'
 ---
 
 
@@ -42,7 +47,7 @@ GitHub의 **DNS Provider**  IP 주소는 다음과 같다.
 
 자신의 도메인네임의 **호스트 설정**에서 자신의 **호스트 이름**에 **IP 주소**를 위의 것 중에 하나로 입력한다.
 
-![gabia ](http://assets.hibrainapps.net/images/var/albums/hbncloud/public/Screen_Shot%202015-06-13%20at%2011_59_42%20PM.png?m=1434207599)
+![gabia ](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/2473d210-b885-4f38-8f1d-849930062a1c)
 
 ## CNAME 파일
 
@@ -74,7 +79,7 @@ blog.saltfactory.net
 * **별칭(alias)** : blog
 * **값/위치** : saltfactory.github.io.
 
-![cname record](http://assets.hibrainapps.net/images/var/albums/hbncloud/public/Screen_Shot%202015-06-14%20at%201_23_33%20AM.png?m=1434212638)
+![cname record](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/cafa973b-e352-4669-a19d-af2f9e079f41)
 
 이 때 주의해야할 점은 **값/위치**에 **saltfactory.github.io.** 마지막에 `.`이 추가 되어야한다는 것이다.
 
@@ -86,12 +91,3 @@ GitHub Pages로 사이트를 구축할 때 필요한 도메인네임 설정을 *
 
 1. https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

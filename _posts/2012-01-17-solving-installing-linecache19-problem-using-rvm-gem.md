@@ -97,18 +97,9 @@ Single-User 모드로 설치할 때는 다음과 같이 하면 된다.
 gem install linecache19 -- --with-ruby-include=$HOME/.rvm/src/ruby-1.9.2-head
 ```
 
-![](http://cfile23.uf.tistory.com/image/1513A94D4F151AC8234006)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/8e639082-fa36-4146-a143-b59dd8df2553)
 
 ruby-debug-base19 설치에서도 동일한 문제로 설치가 되지 않는다. 위와 같은 방법으로 설치하면 해결할 수 있다.
 
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

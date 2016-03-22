@@ -1,11 +1,14 @@
 ---
 layout: post
-title : Docker Machine을 이용하여 Mac에서 docker 운영하기
-category : docker
-tags : [docker, docker-machine, mac]
-comments : true
-images :
-  title : http://assets.hibrainapps.net/images/rest/data/651?size=thumb
+title: Docker Machine을 이용하여 Mac에서 docker 운영하기
+category: docker
+tags:
+  - docker
+  - docker-machine
+  - mac
+comments: true
+images:
+  title: 'https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/7c58abbb-e050-4b63-bf84-c8e49562cebd'
 ---
 
 
@@ -19,7 +22,7 @@ images :
 
 **Docker Machine**을 가장 쉽게 설치하는 방법은 [Docker Toolbox](https://www.docker.com/toolbox)를 설치하는 것이다.
 
-![docker toolbox](http://assets.hibrainapps.net/images/rest/data/652?size=full&m=1439786498)
+![docker toolbox](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/99923d3c-7285-4cf8-9e02-ddc6563847be)
 
 Docker는 지속적으로 발전하고 있고 더욱 더 쉽게 Docker를 사용할 수 있는 방법을 제공하고 있다. **Docker Toolbox**는 Docker의 All-in-One 으로 생각하면 된다. Docker Toolbox를 설치하면 Docker를 바로 시작할 수 있다. Docker Toolbox에는 다음 어플리케이션들이 포함되어 있다.
 
@@ -31,11 +34,11 @@ Docker는 지속적으로 발전하고 있고 더욱 더 쉽게 Docker를 사용
 
 우리가 설치하고 싶은 **Docker Machine**이 포함되어 있는 것을 확인할 수 있다. https://www.docker.com/toolbox 에서 Docker Toolbox를 다운로드한다. Mac/Windows 버전이 존재하며 자신의 운영체제 맞는 것을 다운로드 받고 설치한다. Mac용 Docker Toolbox를 설치했다.
 
-![docker machine installer](http://assets.hibrainapps.net/images/rest/data/653?size=full&m=1439787164)
+![docker machine installer](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/93049f78-ddff-4957-8c6f-52b6319ccfa0)
 
 기존에 **Boot2Docker**를 사용하고 있었다면 설치 중에 다음과 같은 메세지를 만나게 된다.
 
-![boot2docker migration alert](http://assets.hibrainapps.net/images/rest/data/654?size=full&m=1439787728)
+![boot2docker migration alert](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/854ccb78-66da-4fe0-b578-2dac29eab034)
 
 **Docker Machine**는 내부적으로 **VM**을 사용하는데, Boot2Docker에서 사용한 VM으로부터 마이그레이션을 할 수 있다. Migrate를 선택하면 기존의 Boot2Docker에서 사용한 VM을 그대로 사용할 수 있고 Do not Migrate를 선택하면 새로운 VM을 사용한다.
 
@@ -47,7 +50,7 @@ Docker Toolbox를 설치하면서 Boot2Docker VM을 마이그레이션하면 다
 docker-machine ls
 ```
 
-![docker-machine ls](http://assets.hibrainapps.net/images/rest/data/655?size=full&m=1439789413)
+![docker-machine ls](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/5f47e7e8-c744-4819-a4e6-7c2d16d032e7)
 
 
 좀더 자세하게 살펴보기 위해서는 **inspect** 명령어를 사용한다. **default**라는 이름으로 만들어진 머신을 살펴보자.
@@ -139,11 +142,11 @@ docker-machine inspect default
 
 **Docker Machine**은 **Docker Engine**에 접속하기 위한 **Docker Client**을 설치, 설정하고  관리한다. 만약 Mac에서 Docker를 사용하고 싶을경우 Docker Machine은 다음 그림과 같이 사용 가능하다. **Docker Machine**은 Docker Client를 다양한 Docker Host에 접속할 수 있게 해준다. 내 로컬의 Docker 엔진 뿐만 아니라 Data Center VM, Cloud Instance까지 접속할 수 있게 해준다.
 
-![](http://assets.hibrainapps.net/images/rest/data/657?size=full&m=1439790740)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/f5cf34c4-836c-49f5-82c2-a0e981648bb8)
 
 그림출처 : http://www.tomsitpro.com/articles/docker-enterprise-hub-orchestration,1-2375.html
 
-![](http://assets.hibrainapps.net/images/rest/data/656?size=full&m=1439790641)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/867b4da4-dfe4-477b-b727-377647e4b323)
 
 그림출처 : http://pocketstudio.jp/log3/2015/07/01/docker-machine-0-3-generic-driver-and-scp/
 
@@ -184,7 +187,7 @@ Docker Machine을 사용하여 **virtualbox**를 드라이브로하는 VM을 추
 docker-machine create --driver virtualbox dev
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/658?size=full&m=1439792350)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/85e2415e-4e59-49c2-9d8f-5787b3429df9)
 
 ## ls
 
@@ -194,7 +197,7 @@ Docker Machine의 목록을 살펴보자.
 docker-machine ls
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/659?size=full&m=1439792673)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/b7e44065-fb8a-4830-896c-ba194063b929)
 
 현재 **Docker Machine**에 기존의 Boot2Docker를 마이그레이션한 default라는 것과 위에서 추가한 dev가 보인다. Docker Machine을 사용하면 각각의 VM에 있는 docker로 접근이 가능하다.
 
@@ -206,7 +209,7 @@ docker-machine ls
 docker-machine start default
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/660?size=full&m=1439793024)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/9073cd41-2e9d-4627-abcf-74e070aff555)
 
 docker-machine의 리스트를 살펴보면 default와 dev가 각각 virutalbox 드라이브로 다른 내부 아이피에서 동작하는 것을 확인할 수 있다.
 
@@ -221,7 +224,7 @@ docker-machine의 리스트를 살펴보면 default와 dev가 각각 virutalbox 
 docker-machine env dev
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/661?size=full&m=1439794070)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/445ceba4-97eb-42be-86dd-919a5bc2b1f9)
 
 이 명령어를 사용하면 **DOCKER_TLS_VERIFY**, **DOCKER_HOST**, **DOCKER_CERT_PATH**, 그리고 **DOCKER_MACHINE_ANME**이 환경변수로 설저을 하기 위한 스크립트로 만들어진다. **env** 명령어를 실행 후  *Run this command to configure your shell: # eval "$(docker-machine env dev)"* 메세지가 나타난다. 실제 docker에 접속하기 위한 shell을 실행하는 것으로 위에서 env로 만든 설정파일을 환경변수로 설정하는 것이다.
 
@@ -231,7 +234,7 @@ eval "$(docker-machine env dev)"
 
 다시 **docker-machine ls**로 리스트를 살펴보자. 위에서 우리는 **dev**에 접속하기 위해 docker-machine의 env를 설정하였다. dev 머신의 **ACTIVIE**에 표시가 된 거을 확인할 수 있다.
 
-![](http://assets.hibrainapps.net/images/rest/data/662?size=full&m=1439794251)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/6a80fffa-6ffb-4d99-8e47-2286de067198)
 
 이제 docker 명령어를 사용할 수 있다. docker의 이미지 목록을 살펴보자.
 
@@ -239,7 +242,7 @@ eval "$(docker-machine env dev)"
 docker images
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/663?size=full&m=1439794439)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e6f80408-6ce2-4447-9095-bae125158bbc)
 
 아직 docker에서 어떤 이미지도 만들지 않았기 때문에 목록에 나타나지 않는다. 중요한 것은 Mac에서 **Docker Machine**을 사용하여 **Docker**에 접속하고 있다는 것이다. 테스트를 위해서 간단한 docker 이미지를 실행해보자.
 
@@ -247,11 +250,11 @@ docker images
 docker run hello-world
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/665?size=full&m=1439794990)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/98d10758-c36e-491e-86ff-d7b6ff9d0f37)
 
 이 명령어를 실행한 이후 docker는 로컬에 이미지가 없기 때문에 hub에서 이미지를 pull한 뒤 실행을 할 것이다. 다시 이미지 목록을 살펴보자. 이제는 hello-world라는 저장소의 이미지가 보여질 것이다.
 
-![](http://assets.hibrainapps.net/images/rest/data/664?size=full&m=1439794652)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/87895896-ec62-4b38-8474-50395794156e)
 
 ## status
 
@@ -261,7 +264,7 @@ Docker Machine에서 머신의 상태를 확인하기 위해서는 **status** �
 docker-machine status dev
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/667?size=full&m=1439797139)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/f4cb09c1-4f86-472c-a67b-5cbf68e70ee1)
 
 현재 dev는 **Running**이라는 상태를 출력하고, default는 **Stopped**라는 상태를 출력한다.
 
@@ -273,7 +276,7 @@ docker-machine status dev
 docker-machine active
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/668?size=full&m=1439797542)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/c6c2d940-8938-436c-acf9-89d46c7eb77a)
 
 ## inspect
 
@@ -283,7 +286,7 @@ docker-machine active
 docker-machine inspect dev
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/670?size=full&m=1439798651)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/7d5869d7-60b7-4190-b0c2-18152fc72cde)
 
 ## config
 
@@ -293,7 +296,7 @@ Docker Machine는 VM 드라이브를 사용하여 접속하기 때문에 접속�
 docker-machine config dev
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/671?size=full&m=1439798762)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/16a4d510-2b39-4db1-85d7-6bc99903b99c)
 
 ## ip
 
@@ -303,7 +306,7 @@ Docker Machine에서 특정 머신의 IP 정보를 확인하기 위해서 **ip**
 docker-machine ip dev
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/673?size=full&m=1439798910)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d3ddae1c-dfb5-4e70-a809-695473b7fba3)
 
 ## url
 
@@ -313,7 +316,7 @@ Docker Machine에 특정 머신의 URL을 **url** 명령어로 확인할 수 있
 docker-machine url dev
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/672?size=full&m=1439798822)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/f615f356-3954-474f-9297-0f4d5b9b260c)
 
 
 ## ssh
@@ -324,7 +327,7 @@ docker-machine url dev
 docker-machine ssh dev
 ```
 
-![](http://assets.hibrainapps.net/images/rest/data/669?size=full&m=1439798437)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ff775d8b-1897-41f2-9f3a-7ee212356c17)
 
 ## scp
 
@@ -336,7 +339,7 @@ docker-machine scp test.md dev:~/test.md
 
 dev 머신으로 파일을 복사하고 난 다음 파일 ssh로 접속하면 **~/test.md** 경로에 로컬 파일에서 머신으로 파일이 복사 된 것을 확인할 수 있다.
 
-![](http://assets.hibrainapps.net/images/rest/data/674?size=full&m=1439799329)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/08e26fba-8cf2-42b9-aaff-1a78fb99edc5)
 
 
 ## stop
@@ -349,7 +352,7 @@ docker-machine stop dev
 
 다시 docker-manchine의 리스트를 살펴보면 dev가 중지된 것을 확인할 수 있다.
 
-![](http://assets.hibrainapps.net/images/rest/data/666?size=full&m=1439795116)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/bff25720-1f21-4ab3-8679-d77ad75e3d00)
 
 하지만 여기서 끝이 아니다. 아직 위에서 **docker-machine env dev**로 환경변수를 등록한 것을 기억할 것이다. 이 환경변수까지 모두 삭제해야한다.
 
@@ -364,7 +367,7 @@ Docker Machine에서 머신을 삭제하기 위한 명령어는 **rm**이다. �
 ```
 docker-machine rm dev
 ```
-![](http://assets.hibrainapps.net/images/rest/data/675?size=full&m=1439799582)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/f5d0e293-36e9-4927-906d-11d243afe7be)
 
 ## 결론
 
@@ -377,12 +380,3 @@ Docker는 사용자에게 좀 더 편리하게 Docker를 사용할 수 있는 �
 3. https://docs.docker.com/machine/migrate-to-machine/
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

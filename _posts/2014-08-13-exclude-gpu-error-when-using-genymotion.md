@@ -81,7 +81,7 @@ LogCat의 filter는 옵션으로 정규표현식을 사용해서 보고 싶은 �
 
 genymotion을 사용할 때 LogCat에서는 GPU에 대한 에러가 LogCat에 출력이 된다.
 
-![eglCodecCommon error](http://cfile6.uf.tistory.com/image/26046D4153EAF250118695)
+![eglCodecCommon error](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/cbf6dfa8-83c7-4079-b465-d3c33e1bb8b9)
 
 이렇게 우리가 프로그램에 포함되지 않은 로깅이 디바이스의 문제로 수없이 많이 발생하기 때문에 정작 우리가 개발하면서 보고 싶은 로그를 스크롤을 하면서 찾아서 확인해야하는 불편함이 있다. 그래서 우리는 불필요한 genymotion의 GPU에 관련된 에러를 모두 제거하고 순수하게 우리가 남기고 싶은 로그만 보고 싶었다.
 
@@ -89,11 +89,11 @@ genymotion을 사용할 때 LogCat에서는 GPU에 대한 에러가 LogCat에 �
 
 genymotion을 사용하여 앱을 실행시키면 GPU에 관련된 에러가 포함되는데 TAG에는 **eglCodecCommon**, **OpenGLRender** 그리고 **EGL_genymotion**가 포함된 에러가 출력이 되고 있다. 그리고 message에 **GL_INVALID_OPERATION** 에러가 포함이 되어 있기 때문에 다음과 같이 filter를 적용할 수 있다.
 
-![exclude filter](http://cfile26.uf.tistory.com/image/2272B34253EAF24F130B75)
+![exclude filter](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/68c0e95f-0f9c-418d-bf13-2cb0e51c0b62)
 
 이렇게 LogCat에 정규 표현식을 적용하면 노이즈로 포함되어있는 필요없는 로그를 모두 제거하고 우리에게 필요한 정보만 LogCat으로 출력되는 것을 확인 할 수 있다.
 
-![remove exclude](http://cfile25.uf.tistory.com/image/2276CB4253EAF2500C0600)
+![remove exclude](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/a599f405-cd07-4aac-9d34-bb3276bfb371)
 
 ## 결론
 
@@ -105,12 +105,3 @@ LogCat은 Android 앱을 개발할 때 아주 중요한 자료가 된다. 그런
 2. http://developer.android.com/tools/help/logcat.html
 
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

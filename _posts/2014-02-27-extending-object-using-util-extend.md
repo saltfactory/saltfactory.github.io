@@ -68,7 +68,7 @@ var extended_object = extend(default_object, object);
 console.log(extended_object);
 ```
 
-![](http://cfile6.uf.tistory.com/image/232FEF38530E955D4157F7)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/488c09fc-90c2-497c-b307-2cd238d7f9da)
 
 이 예제는 default_object 안에 있는 속성과 object의 속성이 같은 이름이 있을때 기본 값을 새로운 값으로 덮어쓰는 예제인데, util-extend라는 이름으로 알듯, Object를 extend 시킨다. Java의 extend와 마찬가지로 속성을 이름이 같을 경우 값을 덮어쓰고 새로운 값이 있으면 새로운 Object에 그 값을 추가할 수 있다. 다음 예제를 살펴보자. default_object에 있는 a를 덮어쓰고 default_object에 없는 c를 추가하고 싶은 예제이다.
 
@@ -82,7 +82,7 @@ var extended_object = extend(default_object, object);
 console.log(extended_object);
 ```
 
-![](http://cfile10.uf.tistory.com/image/2719794F530E96590AD8A5)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/56516c17-69c5-4a85-9433-4dbd7944232c)
 
 결과는 예상했듯 default_object에 같은 이름을 가지고 있는 속성은 덮어 쓰기를 하고, 새로운 Object에 없는 값은 그대로 가져왔다. 뿐만 아니라 default_object에는 없고 새로운 Object에 있는 속성을 확장해서 만들어 냈다는 것을 확인할 수 있다.
 
@@ -116,7 +116,7 @@ var options = {
 connect(options);
 ```
 
-![](http://cfile22.uf.tistory.com/image/253FEE36530E97AC21EDE1)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/82094d41-3546-4f94-8b41-922b7d0a4b60)
 
 
 ## 결론
@@ -127,12 +127,3 @@ Node.js로 프로그램을 만들때 options을 설정하거나 params을 설정
 
 1. https://github.com/isaacs/util-extend
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

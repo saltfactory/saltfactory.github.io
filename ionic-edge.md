@@ -6,7 +6,7 @@ permalink: /books/ionic-edge/
 comments : true
 disqus_identifier: http://blog.saltfactory.net/books/ionic-edge/
 images:
-  title : http://assets.hibrainapps.net/images/rest/data/649?size=full
+  title : https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/48133d68-b7e5-4434-b808-a81d59494aef
 ---
 
 ## 역자

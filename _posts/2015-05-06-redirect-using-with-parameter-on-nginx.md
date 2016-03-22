@@ -37,7 +37,7 @@ override func viewDidLoad() {
 ```
 
 하지만 me2day 서비스가 종료되면서 인터넷 상에서 디이상 앱 속에 넣어둔 URL은 유효한 주소가 되지 못한다. 실제로 me2day 서비스는 종료되었고, URL을 요청하면 다음과 같은 화면이 나타난다.
-![](http://assets.hibrainapps.net/images/var/albums/hbncloud/public/Screen_Shot%202015-05-06%20at%203_28_08%20PM.png?m=1430893668)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/c3e8f451-46b0-47cc-8200-3c5277eff664)
 아마도 앱을 업데이트하지 않는 이상, 사용자들이 개발자의 홈페이지를 절대 열어볼 수 없을 것이다. me2day DNS 서버와 웹 서버 모두 개인이 가지고 있는 서버들이 아니라 redirect 설정도 할 수 없는 문제가 생긴다. 유일한 해결 방법은 URL 하나를 변경하기 위해 앱을 다시 빌드해서 버전을 올려 스토어에 등록을 해야한다. 우리는 이런 문제를 해결하기 위해서 [NginX의 rewrite 모듈 사용](http://nginx.org/en/docs/http/ngx_http_rewrite_module.html)하여 외부 링크를 중개하는 웹 서버 환경을 구축하였다.
 
 ## NginX의 rewrite 사용하기
@@ -123,18 +123,9 @@ server {
 ```
 
 이제 앱에서 http://me2day.net/saltfactory 라는 유효하지 않는 URL을 요청하더라도 NginX 중간자가 새로운 http://blog.saltfactory.net 으로 rewrite 시켜주기 때문에 앱을 수정하지 않고도 외부 URL 링크 문제를 해결할 수 있다.
-![](http://assets.hibrainapps.net/images/var/albums/hbncloud/public/Screen_Shot%202015-05-06%20at%203_27_42%20PM.png?m=1430893686)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/7683239e-4dac-4b74-95ae-87fb40727d56)
 
 ## 결론
 
 모바일 앱을 개발하면서 외부 URL 링크를 사용하는 것은 아주 사소하지만 큰 문제를 일으키기도 한다. 외부에 URL을 사용하는 것은 URL이 변화지 않는다는 전제 조건을 가지고 만들어야하지만, 최근 서비스들은 쉽게 사라지거나 형태가 변형되기 때문에 외부 URL 주소를 프로그램 안에 정적으로 만들어두면 문제를 일으키게 된다. 이 글에서는 간단한 예제를 보여줬지만 실제 민감한 서비스의 경우 외부 URL링크 때문에 큰 문제를 가져올 수도 있다. 우리는 그래서 앱을 수정하지 않고 NginX의 rewrite 모듈을 사용하여 URL을 다시 작성하는 중간자를 만들었다. 앱은 NginX 중간자에게 외부 URL을 redirect_url 파라미터로 요청할 것이고 NginX는 앱에서 부터 요청 받은 URL을 외부 URL로 rewrite하도록 해 준다. 이렇게 NginX로 만든 중간자를 사용해서 외부 URL이 문제가 발생했을 때, 다른 URL로 바꾸어서 rewrite하여 앱에서 유효하지 못한 URL을 찾는 문제를 해결할 수 있을 것이다.
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

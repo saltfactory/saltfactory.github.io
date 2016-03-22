@@ -1,11 +1,16 @@
 ---
 layout: post
-title : Spring에서 RestTemplate을 사용하여 REST 기반 서비스 요청과 테스트하기
-category : java
-tags : [java, spring, springboot, rest, resttemplate]
-comments : true
-images :
-  title : http://assets.hibrainapps.net/images/rest/data/770?size=full
+title: Spring에서 RestTemplate을 사용하여 REST 기반 서비스 요청과 테스트하기
+category: java
+tags:
+  - java
+  - spring
+  - springboot
+  - rest
+  - resttemplate
+comments: true
+images:
+  title: 'https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d730694e-f37e-4293-9f1c-b75e2f2b097a'
 ---
 
 ## 서론
@@ -146,7 +151,7 @@ public void testIndex() throws Exception {
 
 RestTemplate.getForObject()로 HttpMethod.GET을 요청한 결과는 정상적이고 컨트롤르에서 반환한 JSON을 로깅을 통해서 확인할 수 있다.
 
-![](http://assets.hibrainapps.net/images/rest/data/858?size=full&m=1448437139)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/c05430ec-0c35-410d-802d-5d7f690241c8)
 
 RestTemplate을 사용하여 API 서버에서 JSON 문자열로 반환받게 되면 우리는 이것을 어플리케이션에서 객체 타입으로 다시 JSON 라이브러리를 사용하여 POJO 객체로 변환하는 작업을 할 것이다. 하지만 RestTemplate은 이런 과정을 자동으로 할 수 있다. 우리는 테스트를 위해서 반환 타입을 String.class로 지정하였지만 만약 API를 요청한 결과를 객체에 매핑한 Article 형태로 받고 싶다면 반환 타입에 객체 타입을 지정하면 자동으로 JSON 결과를 객체로 매핑해서 반환해준다.
 
@@ -175,7 +180,7 @@ public void testIndex() throws Exception {
 ```
 브레이크 포인트를 가지고 RestTemplate가 컨트롤러에서 반환한 결과를 살펴보자.
 
-![](http://assets.hibrainapps.net/images/rest/data/859?size=full&m=1448437993)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/9d4ed742-7343-4402-953b-7458b8c331f1)
 
 restTemplate.getObjectFor()에 반환되는 객체의 타입을 지정하면 JSON을 자동으로 반한되는 객체로 매핑해주는 것을 확인할 수 있다.
 
@@ -356,7 +361,7 @@ public void testPatch() throws Exception {
 
 에러를 보게 된다. 이것은 RestTemplate이 기본적으로 **PATCH** 메소드를 지원하고 있지 않기 때문이다.
 
-![](http://assets.hibrainapps.net/images/rest/data/860?size=full&m=1448440202)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/cf94c814-e982-4af8-ace2-0311ed6342d6)
 
 RestTemplate은 **ClientHttpRequest** 감싸고 있는 모듈인데 기본적으로 [SimpleClientHttpRequestFactory](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/http/client/SimpleClientHttpRequestFactory.html)로 만들어져 있다. 우리는 [Apache HttpComponents HttpClient](http://hc.apache.org/httpcomponents-client-ga/)를 만들 때 사용하는 [HttpComponentsClientHttpRequestFactory](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/http/client/HttpComponentsClientHttpRequestFactory.html)으로 ClientHttpRequest를 바꾸어서 사용할 것이다. RestTemplate를 생성할 때 ClientHttpRequestFactory를 변경하여 생성한다. HttpComponentsClientHttpRequestFactory는 Apache HttpClient 라이브러가 필요하다. guild.gradle 파일을 열어서 라이브러리를 추가한다.
 
@@ -454,7 +459,7 @@ public void testPatch() throws Exception {
 
 브레이크 포인트를 사용하여 컨트롤러에서 확인하면 RestTemplate을 사용하여 요청한 PATCH 요청이 정상적으로 컨트롤러에 요청되는 것을 확인할 수 있다.
 
-![](http://assets.hibrainapps.net/images/rest/data/861?size=full&m=1448440910)
+![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/acd32c54-c51c-494d-a6e3-3638d0c9ec15)
 
 ## 결론
 
@@ -472,12 +477,3 @@ public void testPatch() throws Exception {
 2. https://github.com/spring-projects/rest-shell/issues/21
 3. https://hc.apache.org/httpcomponents-client-ga/
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)

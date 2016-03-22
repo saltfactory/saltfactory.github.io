@@ -114,7 +114,7 @@ git clone https://github.com/naver/yobi.git
 ```
 
 docker는 GitHub와 같은 Repository를 구축했다. 그래서 docker 명령어로 docker image를 바로 다운받아서 사용할 수 있다. 우리는 yobi를 Docker Hub에서 바로 다운 받을 수 있게 GitHub와 Docker Hub를 연동했다.
-![Docker Hub](http://cfile30.uf.tistory.com/image/223C273653FEB7A60B789B)
+![Docker Hub](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ecc95243-82dc-41ac-ba32-18e8b53992dc)
 
 Docker Hub에서 `docker pull` 명령어를 사용하여  ***saltfactory/yobi*** 이미지를 다운 받는다.
 
@@ -159,7 +159,7 @@ sh run-yobi.sh /Users/saltfactory/yobi
 ```
 마지막으로 브라우저에서 http://localhost:9000 를 확인한다.
 
-![yobi](http://cfile30.uf.tistory.com/image/214D574553FEB7A62A5D91)
+![yobi](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/35066d0d-0840-4d5b-9573-c1010ec914b3)
 
 ## 결론
 
@@ -177,12 +177,3 @@ Yobi는 git를 사용하기 위한 repository를 포함하고 있다. 이 reposi
 3. http://viget.com/extend/how-to-use-docker-on-os-x-the-missing-guide
 4. https://medium.com/boot2docker-lightweight-linux-for-docker/boot2docker-together-with-virtualbox-guest-additions-da1e3ab2465c
 
-## 연구원 소개
-
-* 작성자 : [송성광](http://about.me/saltfactory) 개발 연구원
-* 블로그 : http://blog.saltfactory.net
-* 이메일 : [saltfactory@gmail.com](mailto:saltfactory@gmail.com)
-* 트위터 : [@saltfactory](https://twitter.com/saltfactory)
-* 페이스북 : https://facebook.com/salthub
-* 연구소 : [하이브레인넷](http://www.hibrain.net) 부설연구소
-* 연구실 : [창원대학교 데이터베이스 연구실](http://dblab.changwon.ac.kr)
