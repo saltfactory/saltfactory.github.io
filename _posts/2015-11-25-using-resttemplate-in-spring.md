@@ -10,7 +10,7 @@ tags:
   - resttemplate
 comments: true
 images:
-  title: 'https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d730694e-f37e-4293-9f1c-b75e2f2b097a'
+  title: 'https://hbn-blog-assets.s3.amazonaws.com/spring_bean_bud.jpg'
 ---
 
 ## 서론

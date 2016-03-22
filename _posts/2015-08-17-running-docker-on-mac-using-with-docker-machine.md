@@ -8,7 +8,7 @@ tags:
   - mac
 comments: true
 images:
-  title: 'https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/7c58abbb-e050-4b63-bf84-c8e49562cebd'
+  title: 'https://hbn-blog-assets.s3.amazonaws.com/docker-logo-new.png'
 ---
 
 
