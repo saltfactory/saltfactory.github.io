@@ -19,9 +19,9 @@ Sencha 는 MVC 패턴으로 웹 앱을 개발할 수 있는 자바스크립트 �
 
 간단하게 테스트를 하기 위해서 다음과 같은 구조로 디렉토리와 파일을 복사하여 집에 넣어보자. app 디렉토리에서는 Sencha 웹 앱에 관련된 코드들이 들어갈 것인데 처음 view에 대한 것만 테스트하기 위해서 app/view/ 디렉토리만 우선 생성한다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/c19c9ceb-b7e0-42dd-bbd5-2e7432ae3422)
+![](http://asset.hibrainapps.net/saltfactory/images/c19c9ceb-b7e0-42dd-bbd5-2e7432ae3422)
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e5d35d0b-5765-49b9-9bfb-a4eb703e37a8)
+![](http://asset.hibrainapps.net/saltfactory/images/e5d35d0b-5765-49b9-9bfb-a4eb703e37a8)
 
 다른 파일은 sencha 라이브러리를 다운받은 것에서 복사하면 되고, app.js과 index.html 파일은 새로 생성한다.
 그리고 index.html 파일을 다음과 같이 작성하고 저장한다.
@@ -60,7 +60,7 @@ Ext.application({
 
 index.html  파일을 열어서 확인해보자. 앱이 실행될 때 lauch 가 실행된다는 것을 우리는 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/f6a31878-eea8-48f5-8364-27e2f6ecd111)
+![](http://asset.hibrainapps.net/saltfactory/images/f6a31878-eea8-48f5-8364-27e2f6ecd111)
 
 우리는 앱이 실행할 때 alert가 아니라 HTML 코드를 나타내고 싶을 것이다. 그럴 경우는 lauch 안에다 html 코드를 작성하는 코드를 입력하면 된다.
 app.js 파일을 다음과 같이 수정하고 index.html 파일을 새로 고침 해보자.
@@ -75,7 +75,7 @@ Ext.application({
 });
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/38dd524e-f3ee-4b5a-ae23-267a162f144c)
+![](http://asset.hibrainapps.net/saltfactory/images/38dd524e-f3ee-4b5a-ae23-267a162f144c)
 
 또는 다음과 같이 수정해보자.
 
@@ -115,11 +115,11 @@ Ext.application({
 
 Sencha의 Panel의 html으로 코드를 추가할 경우는 위에서 추가한 HTML과 다르게 생성된다는 것을 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/6645c93e-36a7-409c-a7f1-9470076f028c)
+![](http://asset.hibrainapps.net/saltfactory/images/6645c93e-36a7-409c-a7f1-9470076f028c)
 
 이것은 Ext.Panel 이라는 것을 사용해서 html을 추가하기 때문인데. Sencha의 뷰 컴포넌트를 사용하면 Sencha가 제공하는 DOM 구조와 디폴트 스타일로 만들어지게 되고 그 안에 사용자가 정의한 html 코드가 추가되기 때문이다. Ext.panel에 좀더 자세히 살펴보자. 다음은 Sencha Touch 2의 공식 다큐먼트에 정의된 Ext.Panel의 구조를 나타낸 화면이다. Ext.Panel은 Ext.Base > Ext.Evented > Ext.AbstractComponent > Ext.Component > Ext.Container를 상속받아서 만들어졌다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/bfca2577-5272-4c2d-a224-a991a95e457d)
+![](http://asset.hibrainapps.net/saltfactory/images/bfca2577-5272-4c2d-a224-a991a95e457d)
 
 Ext.Panel은 application에서 어떠한 container를 overlay할 때 사용하는 Container 컴포넌트이다. Ext.Container는 다음과 같은 특징을 가지고 있다. runtime에 instantiation을 해서 child component를 추가할 수 있거나 제거할 수 있다. 또한 특별한 layout을 구성할 수도 있다. layout에 대해서는 나중에 좀더  자세히 살펴보기로 하고, 중요한 특징은 run time에 실시간으로 컴포넌트가 추가되거나 삭제할 수 있다는 것이다. 우리가 작성한 코드는 앱이 실행할 때 이러한 속성을 지난 Panel을 하나 생성하여 fullscreen으로 만들었고 그 아래 HTML 코드를 추가하도록 한 것이다. Panel과 container의 이해를 위해서 다음 코드를 실행해보자.
 
@@ -155,7 +155,7 @@ Ext.application({
 
 이렇게 run time에서 Ext.Panel와 Ext.Container를 이용해서 특정 컴포넌트를 overlay 시키도록 추가하거나 삭제할 수 있게 된다. 각가의 컴포넌트에 대해서는 앞으로 자세히 다루게 될 것이다. 한가지 확인할 것은 Ext.Container를 상속받게 된 컴포넌트들은 모두 run time에서 추가할 수 있다는 것이다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/fc975fa9-01e2-4ec8-b769-bd77c94e4279)
+![](http://asset.hibrainapps.net/saltfactory/images/fc975fa9-01e2-4ec8-b769-bd77c94e4279)
 
 다신 우리가 작성한 app.js로 돌아오자. 우리는 Ext.Panel 을 추가할 때 Ext.create라는 것을 사용하였다. Ext.create는 실제 Ext.ClassManager로 클래스의 이름과 실제 객체와 매핑을하는 역활중에서 instantiate를 실행하는 기능을 가지고 있다. Ext.ClassManager에 관해서는 http://docs.sencha.com/touch/2-0/#!/api/Ext.ClassManager 에서 확인할 수 있다. 쉽게 말해서 Ext.create에 정의한 이름을 가지고 Sencha에서 사용할수 있는 객체를 생성하고 매핑하는 것이다. 이렇게 Ext.ClassManager를 이용해서 객체를 생성시키는 방법은 다음과 같이 사용할 수도 있다. 아래 방법은 Ext.define으로 Ext.Panel을 상속받은 SaltfactorySenchaTutorial.view.Welcom 객체를 Ext.ClassManager인 Ext.define으로 정의하고 정의한 이름을 이용하여 Ext.create에서 이름으로 클래스를 생성하고 매핑하는 작업을 하는 것이다. index.html을 새로고침해서 확인하면 앞에서 출력한 형태 그대로 출력이 된다.
 
@@ -192,7 +192,7 @@ Ext.application({
 
 이렇게 미리 정의한 View를 담당하는 클래스를 추가해서 나타나게 할 수도 있다. 또한 우리가 처음 시작할 때 app 이라는 디렉토리와 그 아래로 view라는 디렉토를 만들었는데 그 디렉토리 안에 Welcome.js이라는 파일을 하나 추가하자.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/71ce993d-7d87-4dba-8373-0d27a84768c5)
+![](http://asset.hibrainapps.net/saltfactory/images/71ce993d-7d87-4dba-8373-0d27a84768c5)
 
 그리고 Welcome.js에 다음 코드를 추가하자.
 
@@ -303,7 +303,7 @@ Ext.define('SaltfactorySenchaTutorial.view.Welcome', {
 });
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/8a84ce73-c27c-45af-b534-eb093cb03818)
+![](http://asset.hibrainapps.net/saltfactory/images/8a84ce73-c27c-45af-b534-eb093cb03818)
 
 또한 뷰가 스크롤이 가능하게 하고 싶어할 수도 있다 이럴 경우는 scrollable 속성을 true로 추가한다.
 
@@ -328,7 +328,7 @@ Ext.define('SaltfactorySenchaTutorial.view.Welcome', {
 });
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ef1efe1e-7418-438f-bbf8-ca932c7aa43b)
+![](http://asset.hibrainapps.net/saltfactory/images/ef1efe1e-7418-438f-bbf8-ca932c7aa43b)
 
 ## 결론
 

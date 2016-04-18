@@ -8,7 +8,7 @@ tags:
   - ror
 comments: true
 images:
-  title: 'https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/95c05daf-941b-45bd-8858-211cbde03c94'
+  title: 'http://asset.hibrainapps.net/saltfactory/images/95c05daf-941b-45bd-8858-211cbde03c94'
 ---
 
 ## 다시 Ruby on Rails를 만나다.

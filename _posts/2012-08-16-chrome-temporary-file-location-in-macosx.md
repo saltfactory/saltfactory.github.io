@@ -24,7 +24,7 @@ Mac OS X (맥)에서는 맥용 소프트웨어 캐시 자원을 ~/Library/Caches
 
 Chrome Browser에서 preferences를 열어보자.  command + ,  키를 사용하거나 검색창에서   chrome://chrome/settings  라고 입력하고 검색하면 크롬 브라우저의 환경설정 화면이 나타난다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/100ea7d8-323d-4195-b7b8-f57e1975d40a)
+![](http://asset.hibrainapps.net/saltfactory/images/100ea7d8-323d-4195-b7b8-f57e1975d40a)
 
 항목중에서 Users 라는 것이 있는데, Chrome Browser가 계속적으로 업데이트되면서 이젠 크롬 브라우저에서 여러면의 사용자들이 각자 자신에 맞는 맞춤형 서비스를 사용할 수 있게 되었다. 그래서 하나의 크롬에 다른 구글 계정으로 접속해서 개인의 검색과 통계를 가지고 맞춤형 서비스를 받을 수 있게 된다. User라는 항목이 바로 자신이 사용할 구글 계정을 추가하는 항목이다. Add new user로 추가할 수 있고, Delete this user로 삭제할 수 있는데 여기서 Delete this user를 한다고 해서 브라우저에서 사용하던 임시 데이터가 삭제되는 것이 아니라는 것을 기억하고 있어야한다.
 
@@ -40,7 +40,7 @@ ls ~/Library/Application\ Support
 
 이렇게 사용자 디렉토리 밑에 있는 ~/Library/Application Support 안에는 지금 현재 내가 사용하고 있는 소프트웨어들의 폴더가 있는 것을 확인할 수 있을 것이다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/b5716dc1-1394-4247-ab81-bc560e76fa11)
+![](http://asset.hibrainapps.net/saltfactory/images/b5716dc1-1394-4247-ab81-bc560e76fa11)
 
 이제 우리가 알고 싶어하는 Google Chrome에서 저장하고 있는 데이터를 확인하기 위해서 다음과 같이 크롬 디렉토리로 이동을 한다.
 ```
@@ -49,11 +49,11 @@ cd ~/Library/Application\ Support/Google/Chrome
 
 크롬 디렉토리 목록을 살펴보면 다음과 같이 "Profile 시퀀스 번호"의 형태를 가지는 디렉토리가 생겨있는 것을 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/f885bd95-c5ba-4ee5-bac5-627c2e81b4e5)
+![](http://asset.hibrainapps.net/saltfactory/images/f885bd95-c5ba-4ee5-bac5-627c2e81b4e5)
 
 위에서 언급한 새로운 사용자 추가 (Add new user) 나 사용자 삭제(Delete this user)를 하게되면 Profile 이라는 디렉토리가 생겨서 그때에 맞는 사용자의 데이터를 저장하게 된다. 현재 가장 최근에 만들어진 Profile 16 (이것은 실습하는 PC마다 번호가 다를것이다) 안을 살펴보자.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/5ca7600d-d7aa-460a-8cf7-ce251b847879)
+![](http://asset.hibrainapps.net/saltfactory/images/5ca7600d-d7aa-460a-8cf7-ce251b847879)
 
 Cookie 파일 말고도 다른 여러가지 파일들이 존재한다. 다른 파일에 대한 상세한 설명을 지금은 생략하고 앞으로 하나씩 알아가보도록 하자. 이 포스팅의 요점은 사용자의 개인 정보를 쿠키를 이용해서 사용한다고 할 때 브라우저가 사용하는 쿠키 파일의 위치가 이곳에 있다는 것이다.
 
@@ -71,7 +71,7 @@ cd ~/Library/Caches
 
 앞에서 본 ~/Library/Application Support 디렉토리처럼 현재 사용하고 있는 소프트웨어 이름들이나 패키지명들이 보이게 될 것이다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/4667e55d-6232-43e4-b6cd-4578fb172fdd)
+![](http://asset.hibrainapps.net/saltfactory/images/4667e55d-6232-43e4-b6cd-4578fb172fdd)
 
 다음은 우리가 궁금해하는 Chrome 캐시 디렉토리를 살펴보자.
 
@@ -82,35 +82,35 @@ cd ~/Libraray/Caches/Google/Chrome
 우리가 위에서 살펴본 ~/Library/Application Support/Google/Chrome/Profile 시퀀스 디렉토리와 마찬가지로 ~/Library/Caches/Google/Chrome/Profile 시퀀스 디렉토리가 존재하는 것을 확인할 수 있다.
 
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/2ba88d5e-33b8-46b7-bbba-4913e21f9d2a)
+![](http://asset.hibrainapps.net/saltfactory/images/2ba88d5e-33b8-46b7-bbba-4913e21f9d2a)
 
 디렉토리 내부를 살펴보면 다음과 같이 data 파일들과 index 파일이 존재한다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/b753a228-ccec-4e95-a29c-3f1600ef95fa)
+![](http://asset.hibrainapps.net/saltfactory/images/b753a228-ccec-4e95-a29c-3f1600ef95fa)
 
 만약에 지금 브라우저를 열어서 현재 이 블로그를 열었다고 했을 때 Cache 디렉토리에는 다음과 같는 파일들이 추가적으로 더 발생한다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/a997196e-fd96-425c-af24-f648276b99c3)
+![](http://asset.hibrainapps.net/saltfactory/images/a997196e-fd96-425c-af24-f648276b99c3)
 
 이렇게  크롬 브라우저가 웹 사이트를 열었을 때 캐싱해서 속도를 높이거나 재사용할 자원들이 저장이 된다. 또는 크롬브라우저의 캐싱정보를 보기 위해서는 검색창에다 다음과 같이  chrome://cache  라고 입력하면 캐싱된 되이터의 정보를 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/1b87b1e3-2dc9-40a2-a5c4-d6436c7c836c)
+![](http://asset.hibrainapps.net/saltfactory/images/1b87b1e3-2dc9-40a2-a5c4-d6436c7c836c)
 
 캐싱 정보를 보면 알겠지만 javascript, css, image 파일, 브라우저의 자동완성 데이터 등이 저장된다. 이런 데이터들이 단순하게 Preferences에서 Delete this user를 해서 사라지는 것이 아니다. Preferences의 가장 아래에보면 Show advance settings라고 되어 있는 링크를 클릭한다. 그러면 보이지 않았던 Privacy 항목이 나타나고 체크 항목이 나타나고 Clear browsing data 버튼이 보이게 된다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/7b76ccd8-ded2-4260-9c05-89774fba3560)
+![](http://asset.hibrainapps.net/saltfactory/images/7b76ccd8-ded2-4260-9c05-89774fba3560)
 
 그리고 Clear browsing data를 클릭하게 되면 삭제하고 싶은 items 들이 나타나고 체크박스로 선택을 하고 삭제하면 된다. items의 기간에 따라서 삭제를 할 수 있는데 1시간 이전부터 1주, 한달 등 선택을 할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/f95d1185-92b6-43c9-a91d-1202e5425658)
+![](http://asset.hibrainapps.net/saltfactory/images/f95d1185-92b6-43c9-a91d-1202e5425658)
 
 Clear Browsing data를 클릭해서 캐시된 파일과 쿠키 파일을 모두 삭제 시켜보자. 그리고 다시 브라우저에 chrome://cache라고 검색하면 캐싱된 파일이 모두 삭제된 것을 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/6e88d4e5-1031-4b1e-a110-37e8cb2bab25)
+![](http://asset.hibrainapps.net/saltfactory/images/6e88d4e5-1031-4b1e-a110-37e8cb2bab25)
 
 마찬가지로 캐시 디렉토리를 검색하면 Profile 디렉토리에 캐싱된 파일이 지워졌고 기본 데이터 파일들만 있는 것을 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/7d8c315f-0d2d-49bc-9583-a383250fa1ac)
+![](http://asset.hibrainapps.net/saltfactory/images/7d8c315f-0d2d-49bc-9583-a383250fa1ac)
 
 ## 참고
 

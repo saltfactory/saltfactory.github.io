@@ -98,7 +98,7 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 
 위의 코드에 대해서 다시 좀더 설명을 하자면, Ext.dataview.DataView에서 저장된 되이터를 출력할 것인데, store 라는 곳에서 저장된 되이터를 관리한다. 이 때 data 라는 곳에서는 실제 데이터가 저장되어 캐싱되는 곳이고 fields에서 store에 저장된 data의 형태를 정의한다. 그리고 datView에서 데이터를 출력시킬 때는 itemTpl 이라는 속성에서 정의한 대로 출력을 하는데 이 때 {} 를 이용해서 data에 저장된 field의 이름을 매핑해서 html과 같이 렌더링해서 코드를 완성시킨다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/38ab201d-3f9f-44be-9c99-b7729ce47530)  
+![](http://asset.hibrainapps.net/saltfactory/images/38ab201d-3f9f-44be-9c99-b7729ce47530)  
 
 ## Carousel
 
@@ -200,9 +200,9 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 Carousel은 items의 갯수만큼 컴포넌트를 추가할 수 있는 페이지들이 추가가 된다. 예제에서는 items를 두가지로 했기 때문에 2가지 페이지가 추가되었다.
 
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/8f5c056e-b7ab-4529-8ff6-819d1d5a9817)
+![](http://asset.hibrainapps.net/saltfactory/images/8f5c056e-b7ab-4529-8ff6-819d1d5a9817)
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/f3ad03c6-2346-4a3a-8312-74ac0b084b02)
+![](http://asset.hibrainapps.net/saltfactory/images/f3ad03c6-2346-4a3a-8312-74ac0b084b02)
 
 carousel에서 추가되는 items에서는 html 코드말고 Ext.Component도 추가될 수 있다. 우리가 위해서 생성한 dataview 컴포넌트를 carousel의 items에 추가해보자.
 
@@ -297,13 +297,13 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 
 Carousel의 첫번째 페이지에 위에서 설정한 dataview가 표현되는 것을 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/678c1a37-8912-4063-802c-3968b0596b0a)
+![](http://asset.hibrainapps.net/saltfactory/images/678c1a37-8912-4063-802c-3968b0596b0a)
 
 ## List
 
 우리가 앱을 개발할 때 가장 많이 사용할 UI중에 하나인 List는 우리가 앞에서 테스트한 dataview와 동일하게 사용할 수 있다. Sencha는 모든 컴포넌트가 Ext.Component를 상속받아서 사용하는데 Ext.List는 Ext.dataview.DataView를 상속받기 때문에 dataview를 구성하는 것과 동일하게 사용할 수 있는 것이다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/a0426377-fc38-43cd-bae2-e901da8ecb67)
+![](http://asset.hibrainapps.net/saltfactory/images/a0426377-fc38-43cd-bae2-e901da8ecb67)
 
 그래서 우리는 dataview를 다음과 같이 list로 변경을 할 것이다.
 
@@ -397,9 +397,9 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 });
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d1b2f692-4fd4-4a78-8be2-191cb8fa7cd5)
+![](http://asset.hibrainapps.net/saltfactory/images/d1b2f692-4fd4-4a78-8be2-191cb8fa7cd5)
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/3252e9e3-b767-4b61-b7b0-211d273944df)
+![](http://asset.hibrainapps.net/saltfactory/images/3252e9e3-b767-4b61-b7b0-211d273944df)
 
 우리는 특별한 작업을 하지 않았고 단지 dataview였던 xtype을 list로 변경했는데, 리스트뷰를 생성해서 출력시켜주는 것을 확인할 수 있다. 만약에 리스트에 출력되는 아이템에 Disclosure 버턴을 추가하고 싶으면 다음과 같이 onItemDisclosure 속성을 추가한다.
 
@@ -495,7 +495,7 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 });
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/6c3d2de2-e6e7-4292-81bf-42b6af3e3d1c)
+![](http://asset.hibrainapps.net/saltfactory/images/6c3d2de2-e6e7-4292-81bf-42b6af3e3d1c)
 
 ## Nested List
 
@@ -672,11 +672,11 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 
 새로 고침해서 웹앱을 재 실행해보자. 아래 그림처럼 세 단계에 데이터 깊이가 있고 각각 하위 데이터가 있으면 nested list는 마치 navigationcontroller에 viewcontroller을 푸시 하듯이 내부로 들어가게된다. 이 때 상단의 백 버턴에는 바로 이전에 선택된 아이템의 텍스트가 나타난다는 것을 확인할 수 있을 것이다. 이것은 iOS의 NavigationController에서 백버턴의 구성과 동일하다. 그림지 작아서 볼 수 없다면 클릭해서 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d9636dc1-6a08-4a8b-9c53-43024e1ad140)
+![](http://asset.hibrainapps.net/saltfactory/images/d9636dc1-6a08-4a8b-9c53-43024e1ad140)
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/0dd2ec09-78d7-4aba-a784-75240f9a9369)
+![](http://asset.hibrainapps.net/saltfactory/images/0dd2ec09-78d7-4aba-a784-75240f9a9369)
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/0c814541-3c8f-4070-b29d-b90e84dd8b14)
+![](http://asset.hibrainapps.net/saltfactory/images/0c814541-3c8f-4070-b29d-b90e84dd8b14)
 
 테스트에 사용된 data는 Sencha Touch2 의 공식 메뉴얼에 포함된 데이터이다. NestedList는 데이터를 네비게이션하기 때문에 자체적으로 Toolbar를 포함하고 있다. 그래서 NestedList에 toolbar를 교체하기 위해서는 외부에서 Ext.Toolbar를 설정해서 넣어주면 된다. 우리는 이미 titlebar라는 것을 만들어 두었기 때문에 NestedList의 toolbar를 titlebar로 지정하였다. NestedList에 관해서는 Ext.data.Model을 설명할 때 다시한번 더 소개하겠다.
 

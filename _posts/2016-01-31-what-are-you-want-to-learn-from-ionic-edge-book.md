@@ -11,7 +11,7 @@ tags:
   - ios
 comments: true
 images:
-  title: https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/48133d68-b7e5-4434-b808-a81d59494aef
+  title: http://asset.hibrainapps.net/saltfactory/images/48133d68-b7e5-4434-b808-a81d59494aef
 ---
 
 ## 최신 Ionic 버전을 위한 개정판 준비

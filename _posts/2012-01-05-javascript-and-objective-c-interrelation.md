@@ -22,7 +22,7 @@ iOS는 이러한 webkit의 한계를 극복하기 위해서 Objective-C의 메�
 ## Objective-C에서 Javascript를 호출하는 방법
 Objective-C에서 JavaScript를 호출하는 방법은 문자열을 evaluation 시키는 방법이다. `AppViewController`를 새로 생성하고 Outlet으로 **UIWebView**인 `appWebView`를 @property와 @synthesize를 만든다. 그리고 **UIBarButtonItem**을 누르면 `onCallJavascriptButton:` 이 호출될수 있게 선언한다. 그리고 구현클래스에서 IBAction와 연결된 `onCallJavascriptButton:` 메소드를 구현하는데 이때 `stringByEvaluationJavascriptFromString:` 메소드를 이용해서 JavaScript의 메소드를 문자열로 입력한다. 실제 JavaScript는 app.html 파일 안에 `<script>callJavascriptFromObjectiveC()</script>`에 구현이 된다. 즉, `thestringByEvaluationJavascriptFromString:` 메소드를 이용해 JavaScript의 이름을 이용하여 JavaScript 메소드를 호출하는 것이다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/1a0a66c4-fbdd-4caa-9e6f-062ef280d4f7)
+![](http://asset.hibrainapps.net/saltfactory/images/1a0a66c4-fbdd-4caa-9e6f-062ef280d4f7)
 
 ```objective-c
 /**
@@ -91,12 +91,12 @@ file : app.html
 </html>
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/34436836-87b0-403d-b7a0-8271d3bde3d8)
+![](http://asset.hibrainapps.net/saltfactory/images/34436836-87b0-403d-b7a0-8271d3bde3d8)
 
 ## JavaScript에서 Objective-C를 호출하는 방법
 JavaScript에서 Objective-C를 호출하는 방법은 커스텀 Scheme를 이용하는 방법이다. 안드로이드에서도 URI로 리소스에 접근할수 있는데 이렇게 외부에서 URI scheme를 이용해서 특정 메소드에서 접근하는 방법을 사용하면 웹에서 JavaScript나 hyper text로 어플리케이션의 특정 메소드를 호출할 수 있는 브릿지를 구현할 수 있다. app.html에 button을 하나 만들고 버턴이 눌러지면 JavaScript에 구현한 `callObjectiveCFromJavascript()` 를 호출한다. 이 메소드 안에는 `window.location`를 이용해서 커스텀 scheme (ex. `jscall://callObjectiveCFromJavascript`)로 이동하는 코드를 넣어둔다. 그러면 webView의 delegate 메소드의 `webView: souldStartLoadWithRequest:navigationType` 메소드를 호출하는데 이때 특정 메소드가 실행되게 구현하면 된다. 예제 코드에서는 Objective-C 메소드 속에 단순하게 Log를 출력하는 것만 넣어 두었다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/4e123c7c-4f3e-4744-919c-a43bd3cc6680)
+![](http://asset.hibrainapps.net/saltfactory/images/4e123c7c-4f3e-4744-919c-a43bd3cc6680)
 
 ```html
 <!--
@@ -161,5 +161,5 @@ file: app.html
 }
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/8e96d058-aee9-4ca7-a9ea-b8be819dd6d4)
+![](http://asset.hibrainapps.net/saltfactory/images/8e96d058-aee9-4ca7-a9ea-b8be819dd6d4)
 

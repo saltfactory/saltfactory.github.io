@@ -173,7 +173,7 @@ public class EventApplication {
 
 이 코드를 실행하면 다음과 같은 결과를 확인 할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/5ceb0086-f4c6-4033-a3e4-26490052248c)
+![](http://asset.hibrainapps.net/saltfactory/images/5ceb0086-f4c6-4033-a3e4-26490052248c)
 
 이 코드를 유사하게 Android에서는 Activity와 Fragment에 Callback을 사용하고 있는데 이는 Fragment는 반드시 Activity를 가져야하고 Fragment는 Activity의 메소드를 비동기적으로 요청해야하기 때문이다. 이와 같은 상황을 콜백메소드를 이용해서 비동기적인 문제를 해결하고 코드를 재사용할 수 있게 Java의 Interface를 사용해서 Callback을 구현한 것이다.
 

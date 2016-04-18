@@ -10,7 +10,7 @@ disqus_identifier : http://blog.saltfactory.net/245
 
 ## 서론
 
-![phonegap](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/3b3f1517-58ab-482d-8115-4f6ae2b94e7b)
+![phonegap](http://asset.hibrainapps.net/saltfactory/images/3b3f1517-58ab-482d-8115-4f6ae2b94e7b)
 
 하이브리드 앱 개발은 웹 리소스와 네이티브 리소스를 함께 사용하는 개발 방법이다. 하이브리드 앱은 보통 UI를 웹 리소스로 만들기 때문에 디바이스가 가지는 특정한 기능을 핸들링하지 못한다. PhoneGap(Cordova)는 plugin을 사용해서 웹 리소스와 네이티브 리소스간 서로 통신하여 사용할 수 있도록 설계되어 있고 이 plugin을 사용해서 디바이스가 가지는 특정하는 기능을 웹 리소스에서 핸들링할 수 있다. 이번 포스팅에서는 모바일 앱 개발을 할 때 복잡하고 어렵지만 반드시 필요한 기능중에 하나인 알림 서비스를 PhoneGap(Cordova)에서 어떻게 구현할 수 있는지를 소개한다.
 <!--more-->
@@ -36,10 +36,10 @@ PhoneGap은 하이브리드 앱 개발 플랫폼이고 웹 리소스와 네이�
 ```
 phonegap local plugin add https://github.com/phonegap-build/PushPlugin.git
 ```
-![install push plugin](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/17d00d6b-8f3d-4c79-9878-21027440a16c)
+![install push plugin](http://asset.hibrainapps.net/saltfactory/images/17d00d6b-8f3d-4c79-9878-21027440a16c)
 위 명령어를 실행하고 난 다음에 plugins 디렉토리에 ***com.phonegap.plugins.PushPlugin***이 설치 되는 것을 확인할 수 있을 것이다.
 
-![pluugins list](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/63ae5d57-9923-4e99-9017-57d89825ed36)
+![pluugins list](http://asset.hibrainapps.net/saltfactory/images/63ae5d57-9923-4e99-9017-57d89825ed36)
 
 ## PhoneGap iOS 플랫폼 PushPlugin 사용하기
 
@@ -51,7 +51,7 @@ phonegap을 이용하면 다음과 같이 추가할 수 있다.
 ```
 phonegap build ios
 ```
-![create ios platform](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/6b6341d5-a534-44c2-9705-74bb8ac16419)
+![create ios platform](http://asset.hibrainapps.net/saltfactory/images/6b6341d5-a534-44c2-9705-74bb8ac16419)
 PhoneGap 프로젝트에 iOS 플랫폼이 추가되면 위와 같이 ***platforms/*** 디렉토리 밑에 ***ios/*** 디렉토리가 만들어지고 Xcode 프로젝트가 생성되는 것을 확인할 수 있다. Xcode 프로젝트를 열어보자 그리고 애플 개발자 사이트에서 프로비저닝 파일을 만들고 Xcode 프로젝트의 Code Sign을 변경해준다. 자세한 설명은 다음 글을 참조하자. (http://blog.saltfactory.net/215)
 
 PushPlugin을 사용하기 위해서는 ***config.xml***에 `feature`를 추가해야한다. 다음과 같이 config.xml을 수정하자.
@@ -219,10 +219,10 @@ phonegap local plugin add org.apache.cordova.console
 ```
 
 이제 Xcode 에서 아이폰 디바이스를 빌드하고 실행시켜보자. 최초 앱이 실행하면 앱에서 푸시서비스를 허용 할 것인지 물어보게 되는데 푸시서비스를 허용하도록 OK를 선택한다. 만약 빌드하는데 aps_entitlement 에러가 만나게 되면 code sign이 제대로 매칭되지 않았기 때문이기 때문에 provisioning 파일을 잘 생성해서 적용하고 있는지 확인할 필요가 있다.
-![아이폰 푸시허용 {width:320px}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/6652e278-37f8-43ae-9dea-2166994360ea)
+![아이폰 푸시허용 {width:320px}](http://asset.hibrainapps.net/saltfactory/images/6652e278-37f8-43ae-9dea-2166994360ea)
 
 푸시 서비스를 허용하고 난 다음에는 우리가 index.html에 작성한 readydevice 이벤트 리스너가 동작하게 된다. 우리는 여기서 ***window.plugins.pushnotification.register***를 실행하게 만들었고 이 메소드가 동작하면 디바이스 토큰을 획득해서 console.log를 출력하게 하였다. Xcode에서 실행한 결과는 다음 그림과 같다. 아래 그림을 확대해서 보면 deviceToken에 아이폰 디바이스 토큰 값이 출력되는 것을 확인할 수 있다. 푸시서버에서 아이폰으로 푸시 메세지를 보내기 위해서는 이 디바이스 토큰 값을 푸시 서버로 전송해야한다.
-![디바이스토큰 획득](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/36174aa8-562f-4a35-b723-e7e6c6bd29dd)
+![디바이스토큰 획득](http://asset.hibrainapps.net/saltfactory/images/36174aa8-562f-4a35-b723-e7e6c6bd29dd)
 
 푸시서버로 디바이스토큰을 저장했다고 가정하고 푸시 서비스에서 푸시 메세지를 보내는 코드를 작성해보자. Node.js로 푸시 서비스를 구현하는 방법은 다음 글에 자세하게 설명하고 있다. (http://blog.saltfactory.net/215)
 간단하게 다시 설명하면 Node.js로 푸시 서비스를 구현하기 위해서는 ***node-apn*** 모듈을 사용하면 애플 푸시 프로바이더를 쉽게 구현할 수 있다. 먼저 node-apn 모듈을 npm으로 설치하자.
@@ -277,11 +277,11 @@ apnConnection.pushNotification(note, myDevice);
 ```
 
 Node.js로 만든 간단한 ios push provider 코드이다. 이 코드를 실행시켜보자. 잠시 후 다음 그림과 같이 아이폰으로 푸시 메세지가 전송된 것을 확인할 수 있다.
-![아이폰 백그라운드 푸시 {width:320px}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/16b8e50a-5f37-4d6f-a79b-f6adbe2929b2)
+![아이폰 백그라운드 푸시 {width:320px}](http://asset.hibrainapps.net/saltfactory/images/16b8e50a-5f37-4d6f-a79b-f6adbe2929b2)
 
-![아이폰 슬립모드 푸시 {width:320px}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/029f7f2b-1ca6-41e6-9ff0-935f369b3aba)
+![아이폰 슬립모드 푸시 {width:320px}](http://asset.hibrainapps.net/saltfactory/images/029f7f2b-1ca6-41e6-9ff0-935f369b3aba)
 
-![아이폰 노티피케이션 센터 {width:320px}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/2e2620f6-bdc8-429a-be26-0173ecd4bb69)
+![아이폰 노티피케이션 센터 {width:320px}](http://asset.hibrainapps.net/saltfactory/images/2e2620f6-bdc8-429a-be26-0173ecd4bb69)
 
 
 푸시 프로바이더에서 badge 값을 3으로 지정하여 푸시 메세지를 보냈다. 우리는 PhoneGap 프로젝트에서 PushPlugin을 설정하면서 onNotificationAPN에 뱃지값을 어플리케이션에 반영할 수 있도록 코드를 작성하였기 때문에 뱃지가 앱에 표현되는 것을 확인할 수 있다. 위 결과는 앱이 백그라운드로 실행되고 있을 때나 앱이 실행되지 않았을 때 푸시 메세지가 왔을 때의 결과이다. 만약 앱이 실행되고 있을 때 푸시 메세지가 오면 onNotificationAPN에서 지정한 callback을 화면에서 실행할 것이다. index.html 코드에서 앱이 실행되고 있을 때 푸시 메세지에서 alert 값이 있을 경우에 ***navigator.notification.alert***를 실행하라고 했는데 이것은 PhoneGap의 ***org.apache.cordova.dialogs*** 플러그인을 설치하고 alert dialog를 보이게 하는 메소드를 호출하는 것이다. PhoneGap 프로젝트에 ***org.apache.cordova.dialogs*** 플러그인을 설치하자.
@@ -294,7 +294,7 @@ phonegap local plugin add org.apache.cordova.dialogs
 phonegap build ios
 ```
 다시 디바이스에 앱을 빌드해서 실행시켜보자. 앱이 백그라운드가 아니라 실행되고 있을 때 우리가 작성한 푸시 프로바이더에서 다시 푸시 메세지를 보내어보자. 그러면 다음 그림과 같이 앱이 실행되고 있을 때, 푸시 메세지가 왔을 경우 alert dialog가 보여지는 것을 확인할 수 있다.
-![안드로이드 푸시 알림 {width:320px}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/526650d4-535f-42b7-9023-f68af586ce31)
+![안드로이드 푸시 알림 {width:320px}](http://asset.hibrainapps.net/saltfactory/images/526650d4-535f-42b7-9023-f68af586ce31)
 
 ## PhoneGap android PushPlugin 사용하기
 
@@ -516,7 +516,7 @@ PhoneGap 프로젝트에서 android 앱에 푸시 서비스를 구현하기 위�
 phonegap build android
 ```
 안드로이드 디바이스를 연결하고 eclipse나 IntelliJ를 이용하여 PhoneGap의 안드로이드 프로젝트를 열어서 실행해보자. 안드로이드 디바이스로 빌드하고 실행하면 우리가 앞에서 window.plugin.pushnotification.register에 안드로이드 senderID를 등록한 것을 가지고 GCM에 사용할 수 있는 디바이스의 유일한 registerID를 획득한 것을 확인할 수 있다.
-![registerID](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/bb74d45e-feb6-4d17-937b-4e7356d08613)
+![registerID](http://asset.hibrainapps.net/saltfactory/images/bb74d45e-feb6-4d17-937b-4e7356d08613)
 
 
 이제 안드로이드 디바이스로 푸시를 보낼 GCM 서버를 Node.js로 만들어보자. GCM 서버에 필요한 인증절차와 구축 방법은 다음 글을 참조하면 된다.(http://blog.saltfactory.net/216). 이 포스팅에서는 간단하게 GCM 서버로 안드로이드 디바이스로 푸시를 전송하는 예제를 설명한다. GCM 서버를 구축하기 위해서는 Google Console에서 안드로이드 GCM 프로젝트를 만들고 server API key를 만들어서 사용한다. 그리고 Node.js로 GCM 서버를 만들기 위해서는 ***node-gcm*** 모듈을 사용한다. server API key 를 만드는 방법은 (http://blog.saltfactory.net/216)글을 참조한다. node-gcm 모듈을 npm으로 설치하자.
@@ -564,9 +564,9 @@ sender.send(message, registrationIds, 4, function (err, result) {
 });
 ```
 node-gcm 모듈로 Node.js 기반의 안드로이드 GCM 서버를 간단히 만들 수 있다. 위 코드를 실행하면 안드로이드 다음 그림과 같이 디바이스로 푸시가 전송 되는 것을 확인할 수 있다.
-![안드로이드 백그라운 알림 {width:320px;}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/1171672c-4dee-44c8-8f1e-3f1bcee12d33)
-![안드로이드 대시보드 {width:320px;}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/28ff5734-31a7-4a63-92c1-7e66f4e1a53d)
-![안드로이드 알림 {width:320px;}](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/12907e9a-3176-44db-89a4-514a030984d0)
+![안드로이드 백그라운 알림 {width:320px;}](http://asset.hibrainapps.net/saltfactory/images/1171672c-4dee-44c8-8f1e-3f1bcee12d33)
+![안드로이드 대시보드 {width:320px;}](http://asset.hibrainapps.net/saltfactory/images/28ff5734-31a7-4a63-92c1-7e66f4e1a53d)
+![안드로이드 알림 {width:320px;}](http://asset.hibrainapps.net/saltfactory/images/12907e9a-3176-44db-89a4-514a030984d0)
 
 ## 결론
 

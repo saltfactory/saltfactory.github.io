@@ -9,7 +9,7 @@ tags:
   - yaml
 comments: true
 images:
-  title: 'https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e2332bdb-1a94-4849-8dc3-8a81c73ec2ac'
+  title: 'http://asset.hibrainapps.net/saltfactory/images/e2332bdb-1a94-4849-8dc3-8a81c73ec2ac'
 ---
 
 ## 서론
@@ -45,7 +45,7 @@ fixtures:
       content: content3
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ca2e7301-f509-451b-93c0-96dc628186bf)
+![](http://asset.hibrainapps.net/saltfactory/images/ca2e7301-f509-451b-93c0-96dc628186bf)
 
 
 ## YAML 파일을 Map으로 매핑하기
@@ -80,7 +80,7 @@ public class FixturesProperty {
 }
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e80dfa08-7164-48e9-ae50-784f8ed2a148)
+![](http://asset.hibrainapps.net/saltfactory/images/e80dfa08-7164-48e9-ae50-784f8ed2a148)
 
 스크린샷과 같이 Spring Boot Configuration Annoation Processor를 찾을 수 없다는 에러가 나타나면 다음과 build.gradle 파일을 열어서 다음 내용을 추가한다. 원래 Spring Boot에서 외부 프로퍼티 파일을 로드하기 위해서는 메타 정보를 파일로 만들어서 추가해야는데 [propdes-plugin](https://github.com/spring-projects/gradle-plugins/tree/master/propdeps-plugin)을 사용하면 메타 파일을 추가하지 않고 자동으로 적용할 수 있다. http://docs.spring.io/spring-boot/docs/1.3.0.RELEASE/reference/html/configuration-metadata.html#configuration-metadata-annotation-processor (글을 참조)
 
@@ -181,7 +181,7 @@ public class FixturesPropertyTest {
 
 테스트 파일을 만들었으면 단위 테스트를 실행해보자.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/835e7b01-d634-46e1-9271-f7a1c4c0daa6)
+![](http://asset.hibrainapps.net/saltfactory/images/835e7b01-d634-46e1-9271-f7a1c4c0daa6)
 
 ## YAML 파일을 POJO로 매핑하기
 
@@ -292,7 +292,7 @@ public class FixturesPropertyTest {
 }
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ef19c70b-b6a0-4ecb-92fc-f4c68ffb453d)
+![](http://asset.hibrainapps.net/saltfactory/images/ef19c70b-b6a0-4ecb-92fc-f4c68ffb453d)
 
 테스트의 브레이크 포인트를 확인하면 fixtureProperty.getArticles() 에서 YAML 파일에서 로드된 데이터가 Article의 객체로 매핑되어 로드된 것을 확인할 수 있다.
 
@@ -479,7 +479,7 @@ public class FixturesPropertyTest {
 
 단위 테스트를 실행시켜서 Article 객체 안에 Comment가 정상적으로 로드 되었는지 확인해보자.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/1c9895e3-83d0-4dbf-940b-4922bef5287b)
+![](http://asset.hibrainapps.net/saltfactory/images/1c9895e3-83d0-4dbf-940b-4922bef5287b)
 
 브레이크 포인트를 확인해보면 Article 객체 안에 Comment가 리스트로 정상적으로 로드된 것을 확인할 수 있다.
 
@@ -496,5 +496,3 @@ public class FixturesPropertyTest {
 1. https://bitbucket.org/asomov/snakeyaml
 2. http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 3. https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html
-
-

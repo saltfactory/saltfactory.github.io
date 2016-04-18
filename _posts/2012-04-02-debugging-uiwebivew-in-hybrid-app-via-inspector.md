@@ -19,13 +19,13 @@ disqus_identifier : http://blog.saltfactory.net/113
 
 웹 프로그램을 개발할때 웹 개발자들은 웹 화면에 나타나는 코드를 분석하거나 브라우저 앤진에서 연산되는 코드들을 디버깅한다.  이 때 사용되는 대표적인 툴이 Firebug나 Webkit Inspector 가 있다. Firebug는 Firefox 브라우저에서 동작하는 웹 개발툴로 현재의 Firefox의 명성을 유지하는데 가장 큰 역활을한 플러그인이 아닌가 생각이 든다. 그리고 오픈소스 WebKit 기반의 브라우저는 Inspector라는 툴로 Firefox의 Firebug과 동일한 작업을 할 수 있다. 현재 구글의 Chrome과 애플의 Safari는 WebKit 기반의 브라우저로 개발되어있고 두 브라우저 모두 Inspector를 사용할 수 있다. 아래는 지금 글을 작성하는 이 화면을 Web Inspector의 화면으로 열어본 것이다. Eelements는 HTML의 DOM의 구조를 보여주고 Resources는 웹을 표현하는데 사용되는 리소스들을 보여준다. 그리고 Network는 리소스들이 사용자에게 표현되기 까지의 시간을 보여준다. Scripts는 javascript 코드를 보거나 디버깅(브레이크 포인트 등)을 할 수 있는 메뉴이다. 그리고 console은 Javascript가 동작하는 것을 확인하거나 변수의 내용을 출력시킬 수 있는 콘솔이다. (다른 메뉴들도 각각 기능이 있지만 이 포스트에서 소개는 하지 않겠다.)
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/1e66ecc5-b55c-4136-9445-36d4b766223c)
+![](http://asset.hibrainapps.net/saltfactory/images/1e66ecc5-b55c-4136-9445-36d4b766223c)
 
 이렇게 웹을 개발할때는 Web Inspector를 사용할 수 있으니가 UIWebView에 이것을 이용하면 될거라는 생각을 하고 찾아보기 시작했다. 하지만 UIWebView는 Safari 브라우저가 아니다. UIWebView는 iOS SDK의 UIKit에 포함된 웹뷰이기 때문에서 Web Inspector를 바로 실행시킬 수 없다. 더구나 Web Inspector는 Mac 에 포함된 기능이지 아이폰 자체에 포함된 기능은 아니기 때문이다. 그래서 조사하던 도중에 [@kenu0000](http://twitter.com/kenu0000) [@iolothebard](http://twitter.com/iolothebard) 께서 조언을 해주신 weinre를 사용할 수 있게 되었다. (다시 한번 링크와 조언 감사드립니다)
 
 weinre 의 사이트는 http://phonegap.github.com/weinre/ 이다. 그리고 다음 그림은 weinre 첫 화면에 나타내는 그림인데, 아이폰 시뮬레이터 속에 있는 웹페이지의 내용을 맥에 있는 Safari 브라우저에서 디버깅을 하는 화면이다. 다시 말하면 로컬 PC에 디버깅 서버를 동작시키고 그 서버에서 분석한 결과를 웹으로 확인하는 방법이다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/919b4f0d-2ef6-424c-8384-c9bd0104ccc0)
+![](http://asset.hibrainapps.net/saltfactory/images/919b4f0d-2ef6-424c-8384-c9bd0104ccc0)
 
 하지만 위에 슬라이드나 그림들은 모두 시뮬레이터의 브라우저에서 코드를 실행한 결과를 확인하는 것인다. 우리의 목적은 UIWebView 안에 Hybrid 앱을 만들기 위한 코드를 작성하면서 디버깅을 하고 싶은 것이다. 그래서 예제를 준비 했다.
 
@@ -39,11 +39,11 @@ https://github.com/callback/callback-weinre/archives/master
 java -jar weinre.jar --boundHost -all-
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/af48f273-ae42-413f-affc-669a74578956)
+![](http://asset.hibrainapps.net/saltfactory/images/af48f273-ae42-413f-affc-669a74578956)
 
 Single View Application을 하나 만들고 UIWebView를 추가하도록 하자. 그리고 Web 이라는 폴더 안에 index.html 파일을 만들고 프로젝트에 추가를 하는데 파을을 복사하지 않고 Xcode 프로젝트 내에서 참조만 할 수 있게 다음과 같이 설정한다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/540cc95f-2c7d-474b-8be1-31d8bb34d60d)
+![](http://asset.hibrainapps.net/saltfactory/images/540cc95f-2c7d-474b-8be1-31d8bb34d60d)
 
 index.html에는 다음과 같은 코드를 입력한다. weinre 서버가 디폴트로 8080 포트로 운영되기 때문에 localhost 의 8080 으로 접근해서 디버깅을 하기 위한 javascript를 받아온다. 그리고 우리가 테스트할 메소드를 하나 만들었다.
 
@@ -135,29 +135,29 @@ viewController에는 물러적으로 만든 index.html 파일을 가져오도록
 
 실행시키면 간단한 버턴만 눈에 보일 뿐 아무러 동작을 하지 않는다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/607ff981-d595-4ae5-aeb4-01eca4c47083)
+![](http://asset.hibrainapps.net/saltfactory/images/607ff981-d595-4ae5-aeb4-01eca4c47083)
 
 우리는 프로젝트를 만들고 UIWebView를 추가하기 전에 UIWebView를 디버깅하기 위해서 weinre를 실행하였었다. 그 화면으로 돌아가보면 Targets에 시뮬레이터가 감지되고 번들 밑에 Web 폴더 안의 index.html을 타게팅하는 정보를 얻게 된다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/61f2d043-6d44-4d50-88ae-54d5bbd89855)
+![](http://asset.hibrainapps.net/saltfactory/images/61f2d043-6d44-4d50-88ae-54d5bbd89855)
 
 Inspector의 Elements를 열어서 특정 DOM을 선택하면 UIWebView 안에서 해당되는 엘리먼트가 선택되는 것을 확인할 수도 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/79e7957c-dbc1-4222-9340-8a10a16038fb)
+![](http://asset.hibrainapps.net/saltfactory/images/79e7957c-dbc1-4222-9340-8a10a16038fb)
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/940be16f-9d29-468b-8080-69d52eb44aea)
+![](http://asset.hibrainapps.net/saltfactory/images/940be16f-9d29-468b-8080-69d52eb44aea)
 
 그리고 버턴을 눌렀을때 console에 메세지를 출력하게 함수를 만들었는데 버턴을 눌러보면 콘솔에 로그가 찍히는 것을 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/f5363be4-bbd0-4168-bc16-24b045997de0)
+![](http://asset.hibrainapps.net/saltfactory/images/f5363be4-bbd0-4168-bc16-24b045997de0)
 
 뿐만아니라 만약에 Javascript 에서 에러가 발생하면 콘솔에서 에러 메세지를 확인할 수 있다. 에러를 발생시키기 위해서 일부러 console.log를 consol.log로 만들어서 테스트 하였다. Can't find variable: consol 이라는 에러가 나타난다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/80699b7a-3eec-468d-bff4-1b7ea3df4644)
+![](http://asset.hibrainapps.net/saltfactory/images/80699b7a-3eec-468d-bff4-1b7ea3df4644)
 
 자바스크립트 코드만 확인할 수 있는 것이 아니라 Elements 창에서 실시간으로 HTML 코드를 변경할 수 있고 CSS를 변경하여 확인할수도 있다. 아래는 버턴의 글자 크기를 Inspector에서 변경하여 바로 확인한 결과 이다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/a4ef02b7-d634-4935-b985-c931575df207)
+![](http://asset.hibrainapps.net/saltfactory/images/a4ef02b7-d634-4935-b985-c931575df207)
 
 이제 하이브리드 앱을 개발할 때 UIWebView 안에 HTML, CSS, Javascript의 값을 확인하거나 변경할 수 있게 되었다. 다만 개발자들에게 좀 아쉬운 부분은 javascript의 변수들이 어떻게 변화되는지를 console.log로 계속 확인해야한다면 약간 부담스럽다. 그래서 개발자들은 breakpoint 기능이 있기를 원한다. 하지만 아쉽게도 weinre에서는 Web Inspector에서 제공하는 Scripts 메뉴가 없어서 javasctipt 디버깅을 하기에 약간 아쉬운 감이 있다. 이럴 경우에는 애플에서만 사용하는 private API를 이용하여 아쉬운 부분을 해결할 수 있다. 하지만 지금 소개하는 것은 private API 이기 때문에 이 코드를 남겨두고 앱스토어에 등록하면 reject를 당하게 된다. 앱스토어에 등록할때는 반드시 이 코드를 제외시켜야 함을 기억하자.
 
@@ -207,11 +207,11 @@ Javascript의 변수의 값이 변화되는 것을 디버깅하기 위해서 ind
 
 이제 다시 Build & Run을 하여 시뮬레이터를 실행시킨다. 그리고 http://localhost:9999 로 Safari 브라우저에서 접속한다. weinre를 사용할 때와 비슷한 것이 나오며 디버깅이 시작된다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ab49073d-681c-4b85-9a02-7517b932a53f)
+![](http://asset.hibrainapps.net/saltfactory/images/ab49073d-681c-4b85-9a02-7517b932a53f)
 
 링크를 클릭해서 들어가서  Scripts 메뉴에서 breakpoint를 linenumber가 나오는 패널에다 추가할 수 있고 실행하여 breakpoint에 걸렸을 때 변수에 어떤 값이 들어있는지 변수 값의 변화를 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/a92b168e-e120-4bc5-b0bf-476106b2e1ad)
+![](http://asset.hibrainapps.net/saltfactory/images/a92b168e-e120-4bc5-b0bf-476106b2e1ad)
 
 Hybrid 앱을 개발하기 위해서는 UIWebView라는 객체의 사용은 필수조건이 된다. 물론 html 파일을 로컬 에디터에서 작성하고 Safari  브라우저에서 작업하여 최종 결과물을 Xcode 프로젝트에 넣어서 활용하기도 하지만 Safari 브라우저와 UIWebView가 100% 똑같이 해석되지 않는다. 더구나 Hybrid 앱을 작성하면 Native 코드와 데이터를 주고 받게 되는데 이것을 동작시키면서 디버깅하는 방법이 필요한데 이때 반드시 UIWebView 상에서 디버깅이 이루어져야한다. 이 때 weinre와 WebView의 private API가 디버깅을 하는데 많은 도움이 될거라 예상된다.
 

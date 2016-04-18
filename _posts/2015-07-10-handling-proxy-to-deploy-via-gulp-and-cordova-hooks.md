@@ -16,7 +16,7 @@ tags:
   - hooks
 comments: true
 images:
-  title: 'https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/01406f0f-fbc9-444f-813f-be6977949d93'
+  title: 'http://asset.hibrainapps.net/saltfactory/images/01406f0f-fbc9-444f-813f-be6977949d93'
 ---
 
 ## 서론
@@ -35,7 +35,7 @@ Ionic의 proxy를 다시한번 살펴보자. Ionic의 **proxy**는 매우 훌륭
 ionic prepare && ionic emulate ios
 ```
 
-![emulate 에러 결과](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/edc07aab-6068-4e1b-b208-bf26b54b0539)
+![emulate 에러 결과](http://asset.hibrainapps.net/saltfactory/images/edc07aab-6068-4e1b-b208-bf26b54b0539)
 
 결과는 **proxy**를 사용한 것을 실제 서버로 가져오지 못하는 문제가 발생했다. 이유는 ionic의 **proxy** 기능은 **ionic serve**에서 제공하는 기능으로 디바이스에서는 사용할 수 없는 기능이기 때문이다. 이 문제를 해결하기 위해서 실제로 디바이스에 디플로이 시키기전에 **proxy**를 위해 사용한 **ApiEndpoint**의 **path**를 **proxyUrl**로 변경해야한다.(앞의 글 참조)
 
@@ -64,7 +64,7 @@ angular.module('starter', ['ionic'])
 ionic prepare && ionic emulate ios
 ```
 
-![emulate 성공 결과](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ded79429-df3f-499e-a619-4ad660979187)
+![emulate 성공 결과](http://asset.hibrainapps.net/saltfactory/images/ded79429-df3f-499e-a619-4ad660979187)
 
 하지만 매번 개발하면서 디플로이할 때 개발자가 코드를 변경하는 것은 매우 위험한 일이다. 오류가 발생하기 쉽고, 중요한 문제가 발생할 수도 있기 때문이다.
 
@@ -240,11 +240,11 @@ gulp.task('remove-proxy', function() {
 gulp
 ```
 
-![gulp 실행](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/b4829930-e9e1-4d7a-9f02-cb5cbe6c005f)
+![gulp 실행](http://asset.hibrainapps.net/saltfactory/images/b4829930-e9e1-4d7a-9f02-cb5cbe6c005f)
 
 이제 Xcode를 열어서 프로젝트 실행시켜보자. **./platforms/ios/demo-ionic.xcodeproj**를 열어서 Xcode에서 앱을 실행한다. **proxy** 설정으로 데스크탑 브라우저에서만 잘 나왔던 결과와 달리 이제 **proxy**가 적용된 데스크탑 브라우저와 디바이스로 빌드할 때 **gulp**를 사용해서 **proxy**를 제거하여 디바이스에서도 잘 나오게 되었다. 우리는 단순하게 앱을 디바이스에 실행하기전에 **gupl** 명령어만 한번 입력해주면 된다.
 
-![Xcode 실행](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/8e4714c3-79e0-43be-83f8-e5d73bc29d03)
+![Xcode 실행](http://asset.hibrainapps.net/saltfactory/images/8e4714c3-79e0-43be-83f8-e5d73bc29d03)
 
 ## Cordova Hooks
 
@@ -257,7 +257,7 @@ gulp
 ionic emulate ios
 ```
 
-![emulate 에러 결과](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d4974066-22c4-4e3c-aed9-653f44e96a78)
+![emulate 에러 결과](http://asset.hibrainapps.net/saltfactory/images/d4974066-22c4-4e3c-aed9-653f44e96a78)
 
 하지만 **gulp**에 미리 실행하였음에도 불구하고 **remove-proxy**가 적용이 되지 않았다. 이유는 **ionic-cli**은 **cordova-cli** 기반으로 만들어졌는데 Cordova에서 **build**, **emulate**, **run** 을 실행하면 필요한 코드들을 복사하고 디바이스에 적용하기 위해서 다시 **prepare**을 실행하기 때문이다. 이런 이유 때문에 **gulp**에서 task 순서를 **prepare** 다음으로 **remove-proxy**를 진행하도록 정의하더라고 Cordova가 **emulate** 명령을 실행하기 전에 다시 **prepare**를 진행하기 때문이다.
 
@@ -303,7 +303,7 @@ if (rootdir) {
 ionic emulate ios
 ```
 
-![emulate 성공](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/8d11a599-342a-424a-babf-51346762c8cd)
+![emulate 성공](http://asset.hibrainapps.net/saltfactory/images/8d11a599-342a-424a-babf-51346762c8cd)
 
 
 이제 디바이스에서도 성공적으로 데이터 요청이 가능해졌다.

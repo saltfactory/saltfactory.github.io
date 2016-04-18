@@ -10,7 +10,7 @@ disqus_identifier : http://blog.saltfactory.net/190
 
 ## 서론
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/070137db-ea73-4e33-8f22-a1e34944e37c)
+![](http://asset.hibrainapps.net/saltfactory/images/070137db-ea73-4e33-8f22-a1e34944e37c)
 
 만약 스마트 폰 앱을 개발할 때 세로모드(Portrait)에서는 단순하게 화면을 구성하지만 가로모드(Landscape) 화면 구성을 좀더 다양한 화면으로 구성 하고 싶다면 어떻게 할지 고민할 수 있다. 또는 해상도나 디바이스의 스크린크기, 디바이스 종류에 따라서 보여지는 것들을 다르게 구성하고 싶어할 수도 있다. 안드로이드 개발자들은 이러한 요구사항을 만족시켜줄 수 있는 것을 fragment라는 개념으로 추가하게 되었다. 안드로이드 2.3 이하 버전에서는 한 화면에 보이는 모든 것을 관장하는 것이 Activity라는 개념이였다. 이러한 Activity는 하나의 화면에 여러개 사용할 수 없게 설계가 되어있다. Activity 하나하나 마다 생명주기를 갖고 있기 때문이다. 만약 하나의 화면에 Activity와 비슷한 개념을 가지면서도 여러가지 화면을 넣을 수 있는 방법으로 fragment가 등장하게 되었다. 이 fragment 는 Android 3.0 부터 등장하였지만 Android 3.0은 태블릿을 위한 버전이라 Android 3.0 버전 때의 SDK를 사용하거나 개발하지 못했다. 하지만 Android 4.0 이상 부터는 안드로이드 개발자들이 스마트폰과 태블릿을 동시에 적용할 수 있게 지원하면서 Android 3.0 이상에서 부터 사용할 수 있는 fragment를 사용하여 개발할 수 있게 되면서 자료를 찾아서 실험하게 되었다.
 
@@ -28,7 +28,7 @@ Fragment를 이용해서 개발을 하기전에 몇가지 특징을 알아보자
 
 ## Fragment 생명주기
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/fafedb5a-83ee-4507-8150-173727fcf508)
+![](http://asset.hibrainapps.net/saltfactory/images/fafedb5a-83ee-4507-8150-173727fcf508)
 
 **onAttach()**
 
@@ -177,19 +177,19 @@ public void onDetach() {
 Fragment의 생명주기를 테스트하기 위한 프로젝트를 만들어보자.
 테스트를 위해서 android 4.0.3 기반으로 안드로이드 프로젝트를 생성했다(HAXM과 X86으로 빠른 에뮬레이터로 테스트하기 위해서이다. Fragment는 Android 3.0 이상부터 지원한다.) [HAXM(Hardware Accelerated Execution Manager) + Android Atom x86 이미지로 안드로이드 에뮬레이터 속도 빠르게하기](http://blog.saltfactory.net/187) 글을 참조해서 에뮬레이터 속도를 빠르게 설정한다. 설정이 완료되면 안드로이드 프로젝트를 추가한다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ca3ffb0e-2bf3-4cf3-b0df-36ea531decbd)
+![](http://asset.hibrainapps.net/saltfactory/images/ca3ffb0e-2bf3-4cf3-b0df-36ea531decbd)
 
 그리고 Activity를 만드는 화면에서 MasterDetailFlow를 선택한다. 그리고 Debug Configurations에 x86 AVD를 이용해서 빌드될 수 있게 한다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/91bc7ed9-5990-427c-b260-88a4a72cbefe)
+![](http://asset.hibrainapps.net/saltfactory/images/91bc7ed9-5990-427c-b260-88a4a72cbefe)
 
 에뮬레이터로 빌드해서 실행하게 되면 간단한 item의 목록이 나타나고 item을 선택하면 디테일화면으로 전환되는 예제이다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/9c1ae1cc-deae-439f-8238-35edb2d8e1c2)
+![](http://asset.hibrainapps.net/saltfactory/images/9c1ae1cc-deae-439f-8238-35edb2d8e1c2)
 
 디폴트로 생성된 클래스를 살펴보면 Fragment 클래스를 상속받아서 만든  ItemListFragment.java와 ItemDetailFragment.java가 생성된 것을 볼 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/0cbf502c-1e64-4b3e-98b0-edc2d95cd7ff)
+![](http://asset.hibrainapps.net/saltfactory/images/0cbf502c-1e64-4b3e-98b0-edc2d95cd7ff)
 
 이후에 각 클래스마다 자세히 살펴볼 것이다. 클래스 이름에서도 상상이 되듯,  item의 목록을 나타내는 ItemListFragment가 있고 item을 select하게 되면 ItemDetailFragment가 나타나게 될 것이다.
 
@@ -485,15 +485,15 @@ public class ItemListFragment extends ListFragment {
 
 이제 빌드하고 로깅을 살펴볼 차례이다. 우리는 안드로이드의 모든 로그가 필요 없다. TAG로 "satfactorytutorial"라고 지정했으니 이것을 필터해보자. 이클립스는 안드로이드를 개발하는데 많은 편리함을 준다.  Logcat을 확인하는 화면에서 filter를 추가할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/260db4bf-143b-412c-a737-db3317d1a492)
+![](http://asset.hibrainapps.net/saltfactory/images/260db4bf-143b-412c-a737-db3317d1a492)
 
 이렇게 로그의 필터를 추가하면 다음과 같이 설정이 된다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/f341943b-63a2-4f6a-a579-b3e06fb38680)
+![](http://asset.hibrainapps.net/saltfactory/images/f341943b-63a2-4f6a-a579-b3e06fb38680)
 
 이제 빌드하고 실행해서 로그를 확인해보자.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/6c701e6e-604b-40b7-a210-d0cb93b2efd6)
+![](http://asset.hibrainapps.net/saltfactory/images/6c701e6e-604b-40b7-a210-d0cb93b2efd6)
 
 ## Fragment 실행 순서
 
@@ -509,7 +509,7 @@ public class ItemListFragment extends ListFragment {
 onPause() > onStop()
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/4206368f-fb8f-4036-bff0-257448b2c6d1)
+![](http://asset.hibrainapps.net/saltfactory/images/4206368f-fb8f-4036-bff0-257448b2c6d1)
 
 ItemDetailFragment에서 백 버튼(Back Button)을 눌러서 다시 ItemListFragment로 돌아오면 다음 순서대로 콜백 메소드를 호출한다. 이때 새로 Fragment를 생성하면서 이전의 Fragment에 대한 자원을 모두 해지하고 새로 만든다.
 
@@ -517,7 +517,7 @@ ItemDetailFragment에서 백 버튼(Back Button)을 눌러서 다시 ItemListFra
 onDestroyView() > onDestroy() > onDetach() > 생성자() > onAttach() > onCreate() > onViewCreate() > onStart() > onResume()
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/943ecede-57e0-447b-b41d-c71f26cdc86b)
+![](http://asset.hibrainapps.net/saltfactory/images/943ecede-57e0-447b-b41d-c71f26cdc86b)
 
 그럼 Fragment를 매번 새로 생성시켜야 하는가하면 그런것은 아니다. 이 포스팅에서 말하는 것은 Fragment가 Activity 안에서 만들어지고, Activity 의 생명 주기처럼 Fragment에서도 생명주기가 있는데, 상태가 변화는 것에 따라 콜백 메소드가 호출되며 각각 콜백 메소드의 특성에 따라서 오퍼레이션을 추가할 수 있다는 것을 말하고 있다.
 ItemDetailFragment 의 사용도 또하 동일한 방법으로 로깅을 해볼 수 있다. 다음 포스팅에서 Fragment를 이용해서 화면을 구성하는 방법에 대한 코드를 좀더 자세하게 살펴볼 예정이다.

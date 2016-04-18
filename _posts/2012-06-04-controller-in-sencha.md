@@ -50,7 +50,7 @@ Ext.application({
 });
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/726042b9-b9f3-4014-a49f-e6f77a042d85)
+![](http://asset.hibrainapps.net/saltfactory/images/726042b9-b9f3-4014-a49f-e6f77a042d85)
 
 우리는 이제 Ext.Container를 추가해서 xtype을 이용해서 컴포넌트를 하나 추가하는 일은 매우 쉽게 할 수 있을 것이다. (혹시 이 방법에 대해서 아직 잘 모른다면 http://blog.saltfactory.net/category/Sencha 에서 Sencha Touch 2 (센차터치)를 이용한 웹 앱 개발 2~7 까지 살펴보길 바란다.)
 
@@ -94,7 +94,7 @@ Ext.application({
 
 handler를 구현하고 composeButton을 누르면 console에 'composeButton handler'가 출력되는 것을 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/776ba94c-b1b1-43f1-8788-889ba552001e)
+![](http://asset.hibrainapps.net/saltfactory/images/776ba94c-b1b1-43f1-8788-889ba552001e)
 
 위 코드는 우리가 MVC 에서 사용하고 싶어하는 코드가 아니다. 위 코드에서 뷰와 컨트롤러를 분리해보자. 우선 application에서 View를 분리해보자. /apps/view/MainView.js를 만들고 다음 코드를 추가하자.
 
@@ -159,7 +159,7 @@ Ext.application({
 
 MainView를 분리하기 전에는 app.js에서 이벤트 처리가 되기 때문에 app.js에서 콘솔 로그가 찍혔지만 MainView로 뷰를 분리하고 나서는 MainView에서 이벤트처리가 이루어졌다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/7f036cc5-4ba5-4c3f-a193-bc508eaf49e5)
+![](http://asset.hibrainapps.net/saltfactory/images/7f036cc5-4ba5-4c3f-a193-bc508eaf49e5)
 
 
 ## Controller
@@ -265,7 +265,7 @@ launch: function() {
 
 새로고침하여 앱을 다시 실행시켜보면 다음과 같이 MainController가 초기화 할 때 init 메소드를 호출하고, launch 될 때 launch 메소드를 호출한다. 그리고 composeButton을 누르면 MainController의 onComposeButton 핸들러 메소드가 실행하도록 컨트롤러가 동작한 것을 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/a192696b-54f7-4b88-aa4c-2fb5b55b9663)
+![](http://asset.hibrainapps.net/saltfactory/images/a192696b-54f7-4b88-aa4c-2fb5b55b9663)
 
 ## 결론
 

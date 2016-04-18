@@ -29,7 +29,7 @@ Ionic은 기본적으로 Cordova 기반으로 만들어진 하이브리드 앱 �
 ionic start myApp sidemenu
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/eb26ba95-4bf7-4571-bb37-f1a0e8e453cd)
+![](http://asset.hibrainapps.net/saltfactory/images/eb26ba95-4bf7-4571-bb37-f1a0e8e453cd)
 
 ionic 으로 앱을 만들면 기본적으로 iOS 플랫폼을 추가하여 만들어진다. ionic은 cordova의 명령어를 그대로 사용할 수 있다. ionic 이나 cordova를 사용하여 설치된 플랫폼을 확인해보자.
 
@@ -41,7 +41,7 @@ ionic platform list
 cordova platform list
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/12c53ba1-d024-4887-b894-6cc44d0c53ff)
+![](http://asset.hibrainapps.net/saltfactory/images/12c53ba1-d024-4887-b894-6cc44d0c53ff)
 
 앱을 빌드하고 실행시켜보자.
 
@@ -51,7 +51,7 @@ ionic run ios --device
 
 다음과 같은 화면이 디바이스에서 나타날 것이다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/4662498c-a1de-4eb8-913d-18e353181d2c)
+![](http://asset.hibrainapps.net/saltfactory/images/4662498c-a1de-4eb8-913d-18e353181d2c)
 
 ## cordova-plugin-3dtouch
 
@@ -107,7 +107,7 @@ ionic plugin list
 cordova plugin list
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/059da844-4221-4b2f-ba31-dd5e60267e5e)
+![](http://asset.hibrainapps.net/saltfactory/images/059da844-4221-4b2f-ba31-dd5e60267e5e)
 
 우리는 Cordova Plugin 설치로 어렵지 않게 iPhone 6s 에서 사용할 수 있는 3D Touch 기능을 JavaScript로 구현할 수 있게 되었다.
 
@@ -180,7 +180,7 @@ ionic run ios --device
 ```
 디바이스에 앱이 실행되면 홈스크린에 설치된 아이콘을 꾹 눌러서 3D Touch 가 적용되었는지 살펴보자.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/159e92aa-70f7-4ebd-b50e-c30e44b215a5)
+![](http://asset.hibrainapps.net/saltfactory/images/159e92aa-70f7-4ebd-b50e-c30e44b215a5)
 
 ## 3D Touch 이벤트 처리하는 핸들러 정의하기
 
@@ -255,7 +255,7 @@ ionic run ios --device
 
 3D Touch를 시작해서 Search 액션을 선택하면 검색 화면이 열리게 될 것이다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/302e4473-2e17-4661-a76d-c6bed16d52e8)
+![](http://asset.hibrainapps.net/saltfactory/images/302e4473-2e17-4661-a76d-c6bed16d52e8)
 
 
 ## 결론

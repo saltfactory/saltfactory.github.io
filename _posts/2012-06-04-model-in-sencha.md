@@ -23,7 +23,7 @@ Model 이야기를 하기에 앞서 우리는 MVC 가 무엇인지 다시한번 
 우리는 지금까지 애플리케이션의 시각적 요소인 사용자 인터페이스 요소에 대해서 계속 테스트해 왔다. 이제 모델을 다룰것인데, 모델은 어플리케이션 내면에서 실행되는 비즈니스 로직을 담당하는 부분이다. 사람들은 Model을 일종의 데이터 저장하거나 데이터베이스 엑세스를 하는 공간으로 생각하기도 하는데, 그런 생각의 단적인예로 MVC 패턴으로 개발하면서 DAO(Data Access Object)만 Model로 분류해서 나눈 경우를 볼 수 있다. 하지만 Model은 데이터를 저장하는 것 뿐만 아니라 비즈니스 로직이 표현하는 부분이라고 말할 수 있다. 그래서 어떤 예제에서는 MVC 패턴으로 개발하기 위해 모듈을 나누면서 Model 패키지를 logic으로 표현하는 예제도 볼 수 있을 것이다.
 그리고 또 한가자 오해하고 있는 부분이 있는데 MVC에서 Model은 데이터를 처리만 할 뿐이고 나머지는 Controller가 View에게 데이터를 주게 하고 View는 Controller를 통해서만 Model에게 데이터를 처리하도록 시킨다고 생각한다는 것이다. 아래 그림을 살펴보자. Model,View는 Controller를 매개체로 두어서 매핑하기도 하지만 Model이 View로 또는 View가 Model로 직접적으로 사용될 수 있다는 것이다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/67bc61c0-881f-4613-ab95-ee954b292cc5)
+![](http://asset.hibrainapps.net/saltfactory/images/67bc61c0-881f-4613-ab95-ee954b292cc5)
 
 Model은 비즈니스 로직을 담당하는 영역이기도 하지만, Model은 실세계의 객체를 의미있는 집합으로 구성할수 있는 논리적인 객체로 표현하는 부분이기도 하다. 다시 말하자면 어 떤 객체를 표현하기 위한 논리적은 실체(Entity) 된다는 것이다. 더 쉽게 말하면 데이터가 저장되는 특징을 표현하는 부분이다. 이 부분에서는 객체가 다른 객체와 어떠한 관계가 있는지(Entity-Relationship)를 표현할 수 있다. 이렇게 객체와 객체의 관계를 표현하기 위해서 우리는 비즈니스 로직을 모델링할때 Class Diagram 이나 ERD(Entity-Relationshp Diagram)으로 표현할 수 있는 것이다.
 
@@ -84,7 +84,7 @@ Ext.application({
 
 위에서 SaltfactorySenchaTutorial.model.Student를 Student로 alias를 만들어 뒀기 때문에 우리가 뷰에서 alias를 사용한 것과 동일하게 모델에서도 alias를 사용할 수 있다. 간단하게 학생 정보를 입력해서 생성하고 console.log 로 학생정보를 출력해보자. Ext.create('Student')로 만든 인스턴스 자체를 console로 출력해서 내용을 살펴보면 다음과 같이 출력이 된다. 이 중에서 Model의 data에 저장된 내용을 살펴보면, 우리가 Model을 정의한 속성이 나오고, app.js에서 입력한 속성의 값이 data에 저장된 것을 확인할 수 있다. 뿐만 아니라 이 Model에서 생성된 인스턴스의 identifier(id)가 자동으로 생성되어진것을 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/8e0e4f01-2f32-4323-b2cd-fef2b882cb8c)
+![](http://asset.hibrainapps.net/saltfactory/images/8e0e4f01-2f32-4323-b2cd-fef2b882cb8c)
 
 위에는 Model에서 인스턴스를 생성하는 시점에 마치 Ext.Container를 생성할 때 지정하는 config 처럼 생성자와 함께 넣어주는 예인데, 이것을 인스턴스 생성 후 데이터를 입력할 때는 다음과 같이 할 수 있다.
 
@@ -174,7 +174,7 @@ Ext.application({
 
 결과는 errors에 다음과 같이 유효성 검사 실패된 것을 message와 함께 가져와서 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/8c15fe0c-b8e6-48ad-b18e-c3e3967207d1)
+![](http://asset.hibrainapps.net/saltfactory/images/8c15fe0c-b8e6-48ad-b18e-c3e3967207d1)
 
 ## Model Relationship(Association)
 
@@ -362,7 +362,7 @@ console.log(student.getDepartment().get("name"))
 
 샘플 json을 보면 알듯, department의 첫번째 데이터는 "컴퓨터공학과"이다. 그리고 그 컴퓨터공학과에는 각각 "홍길동"과 "이순신"이 포함되어 있다. Ext.getStore로 이 앱에 등록된 Store를 가져오고 store.load를 실행시켜서 데이터를 획득한다. 이렇게 되면 ajax로 데이터를 가져오게 설정하였기 때문에 아래와 같이 departmets.json을 요청해서 json을 해석해서 Department와 Student의 Model 형태로 저장을 하게 된다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/1ff9f4ef-33e5-4cf1-a28b-f64a263a8453)
+![](http://asset.hibrainapps.net/saltfactory/images/1ff9f4ef-33e5-4cf1-a28b-f64a263a8453)
 
 그리고 store가 load 된 이후 callback으로 메소드를 하나 구현했다. DepartmentStore에 데이터가 모두 저장이 되면 그 store에 저장된 데이터 중에서 첫번째의 데이터(여기선 "컴퓨터공학과")를 가져와서 그 학과가 가지고 있는 학생들을 가져오기 위해서 department.students() 메소드를 호출한다. 이것은 Department의 association으로 students라는 이름으로 정의를 했기 때문에 사용할 수 있는 것이다. 만약 이것을 정의하지 않았다고 하면 이런 에러가 나타날 것이다.
 
@@ -387,11 +387,11 @@ Ext.define('SaltfactorySenchaTutorial.model.Department', {
 });
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/7a790c4c-4e7c-4893-acc5-a57a8661a6d5)
+![](http://asset.hibrainapps.net/saltfactory/images/7a790c4c-4e7c-4893-acc5-a57a8661a6d5)
 
 만약 설정이 모두 완벽하게 되었다면 아래와 같이 console에 로그가 출력될 것이다. Object는 department에서 students를 각각 each로 루프를 돌면서 한 학과에 포함된 학생 데이터를 나타나는 것이다. 그 안에 보면 DepartmentBelongsToInstance라고 우리가 Student Model에 Department와 관계를 정의한 내용이 적용되어 있음을 확인할 수 있다. 그리고 departmet.students()라고 사용할 수 있는 이유가 Department에서 hasMany로 studetns를 지정하였기 때문이다. 이렇게하여 컴퓨터공학과에서 홍길동과 이순신을 찾을 수 있고, 가각 학생들이 belongsTo 정의에 의해서 student.getDepartment()로 학생 데이터에서 바로 연결된 학과 데이터를 가져와서 get("name")으로 학과 이름을 출력할 수 있게 되었다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/b463a12a-1c58-48ec-8d9d-087a0a899108)
+![](http://asset.hibrainapps.net/saltfactory/images/b463a12a-1c58-48ec-8d9d-087a0a899108)
 
 아마도 Ruby on Rails를 개발한적이 있는 분들이라면 이렇게 모델을 정의하는 방법과 데이터의 관계가 어핵하지 않을 수 있지만 ERD를 작성해본적만 있고 객체 모델링을 하지 않은 분은 약간 어색할 수도 있을 것 같다. 하지만 원리는 모델과 모델의 관계를 정의하는 것이고 모델간의 관계를 foreign key와 같이 객체와 매핑해서 지정한다고 생각하면 이해하기 쉬울 것이다. 하지만 여기서 한가지 말하고 싶은 것은 이 association 테스트는 json으로만 가능하다는 것이다. 이 포스팅을 준비하면서 json 데이터가 아닌 localstorage를 이용하는 방법으로 테스트를 보여주려고 여러번 테스트했지만, 버그인지 몰라도 localstorage에 저장된 데이터를 store로 올리고 난 다음에 assocation이 바르게 표현이 되지 않았다. 이는 storea에 데이터를 add하는 과정에서 생기는 이슈같은데, json은 reader로 파싱하면서 자동적으로 json의 nested한 데이터를 모델의 관계에 따라 각각 저장하는 반면에 localstorage에서는 foreign key 로 department_id 와 같은 식의 속성을 연결해주어야 하기 때문인 것으로 짐작된다. 물론 store에 데이터를 load할때 해당되는 students 객체를 바로 add 하고난 뒤에 프로그램을 동작시키면 되긴하지만, 이해를 돕기 위해서 json을 이용해서 자동으로 assocation이 만들어지는 것을 보여주려고 json을 이용한 Model과 Store응 사용법에 대해서 작성을 하였다.
 

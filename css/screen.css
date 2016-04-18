@@ -390,10 +390,19 @@ body.noimage {
     position: absolute;
 }
 
+
 .post-comments {
     margin: 0 auto;
     max-width: 680px
 }
+
+.author_img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+
 
 
 article {
@@ -450,6 +459,7 @@ article>header .meta {
     zoom: 1;
     *display: inline
 }
+
 article>header .count {
     font-size: 14px;
     margin-left: 30px;
@@ -848,7 +858,9 @@ body.user article .meta {
     color: #a4adb6;
     text-rendering: optimizeLegibility;
     -webkit-text-size-adjust: none
+    vertical-align: middle !important;
 }
+
 body.user article .meta .count {
     margin-left: 34px
 }

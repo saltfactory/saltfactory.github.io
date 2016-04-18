@@ -23,7 +23,7 @@ axconfig : port 1 not active
 axconfig : port 2 not active
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d4a273b4-d99b-41ef-be88-94253f01e16b)
+![](http://asset.hibrainapps.net/saltfactory/images/d4a273b4-d99b-41ef-be88-94253f01e16b)
 
 <!--more-->
 
@@ -61,7 +61,7 @@ sudo apt-get install nodejs
 
 기존에 설치된 nodejs는 /usr/sbin/node로 존재하지만 새로 설치된 node는 /usr/bin에 설치가 되기 때문에 PATH에 경로를 추가한다. vi로 ~/.profile을 열어서 PATH에 /usr/bin을 추가하자.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/359d1296-f152-42e0-bee0-58aa5ce3b25b)
+![](http://asset.hibrainapps.net/saltfactory/images/359d1296-f152-42e0-bee0-58aa5ce3b25b)
 
 새로 추가한 PATH를 시스템에 반영하기 위해서 .profile을 컴파일 한다.
 
@@ -75,7 +75,7 @@ source ~/.profile
 lsb_release -a
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/a91e4711-ca12-4e8e-bd26-94fde3a8f70d)
+![](http://asset.hibrainapps.net/saltfactory/images/a91e4711-ca12-4e8e-bd26-94fde3a8f70d)
 
 ## 참고
 

@@ -58,7 +58,7 @@ Ext.application({
 
 간단하게 button으로 부터 overlay 된 floating Panel을 만들 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e69a6ec5-2361-4bb1-a393-bfaf353011e6)
+![](http://asset.hibrainapps.net/saltfactory/images/e69a6ec5-2361-4bb1-a393-bfaf353011e6)
 
 ## FieldSet, Text Field, Password Field
 
@@ -100,15 +100,15 @@ Ext.application({
 });
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d94fb16c-0658-44df-a768-5095b503bce7)
+![](http://asset.hibrainapps.net/saltfactory/images/d94fb16c-0658-44df-a768-5095b503bce7)
 
 그리고 name 으로 form 태그의 input 태그의 name 속성으로 정의 되는 것을 확인할 수 있다. 우리는 나중에 자바스크립트나 POST로 데이터를 전송할때 이 name을 유용하게 사용할 수 있을 것이다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/b5e231da-0734-427e-9b28-9b90fdb26337)
+![](http://asset.hibrainapps.net/saltfactory/images/b5e231da-0734-427e-9b28-9b90fdb26337)
 
 우리는 공식문서에 제공하는 예제코드를 우리의 테스트에 맞게 수정해보자. 다음과 같이 아이디와 비밀번호를 넣기 위한 입력 폼을 가지는 뷰를 구성한다고 가정할때 코드는 다음과 같이 변경할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/cef6b7a2-25a7-4853-811f-babcbe8c3af7)
+![](http://asset.hibrainapps.net/saltfactory/images/cef6b7a2-25a7-4853-811f-babcbe8c3af7)
 
 ```javascript
 /**
@@ -219,11 +219,11 @@ Ext.application({
 });
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/80711c52-9a57-49da-b33b-156e08ba8f64)
+![](http://asset.hibrainapps.net/saltfactory/images/80711c52-9a57-49da-b33b-156e08ba8f64)
 
 Ext.Field 의 컴포넌트는 너무 쉽게 입력 폼을 구성할 수 있다는 것을 확인할 수 있을 것이다. 더욱 흥미로운 것은 마치 UILabel과 같이 크기에 따라 자동으로 테스트가 줄임말로 변환시켜준다는 것이다. 이것은 마치 UILabel과도 동일한 느낌을 들게 해준다. 일부러 창을 작게 만들어 보면 Label의 크기가 전체 비율이 줄어드는 비율과 적절하게 함께 줄어드는데 텍스트 크기가 label의 크기를 넘어서면 텍스트가 자동으로 ... 을 나타내며 label 안에 알맞은 형태로 변형된다는 것이다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/c64465d3-b05e-4180-8572-43d3184c310b)
+![](http://asset.hibrainapps.net/saltfactory/images/c64465d3-b05e-4180-8572-43d3184c310b)
 
 ## Hidden Field
 
@@ -309,7 +309,7 @@ Ext.application({
 });
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/09076d07-c397-4e8e-87f1-5e0f04ee6299)
+![](http://asset.hibrainapps.net/saltfactory/images/09076d07-c397-4e8e-87f1-5e0f04ee6299)
 
 ## Data Picker Field
 
@@ -347,7 +347,7 @@ Ext.application({
 
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d41a6e2c-73ea-4da7-8a4a-73ef51e8cb39)
+![](http://asset.hibrainapps.net/saltfactory/images/d41a6e2c-73ea-4da7-8a4a-73ef51e8cb39)
 
 ## Email Field
 
@@ -418,7 +418,7 @@ Ext.application({
 });
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/98eacded-b7bb-4396-b9a9-3fe3b3c1eee0)
+![](http://asset.hibrainapps.net/saltfactory/images/98eacded-b7bb-4396-b9a9-3fe3b3c1eee0)
 
 전체 코드는 다음과 같다.
 
@@ -581,7 +581,7 @@ Ext.application({
 });
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/5cbeaeae-db35-4340-84c6-7c7de6ba35c3)
+![](http://asset.hibrainapps.net/saltfactory/images/5cbeaeae-db35-4340-84c6-7c7de6ba35c3)
 
 ## 결론
 

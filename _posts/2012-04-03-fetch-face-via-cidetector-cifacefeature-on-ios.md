@@ -13,7 +13,7 @@ disqus_identifier : http://blog.saltfactory.net/114
 Mac에는 iPhoto라는 사진편집 및 관리하는 툴이 있는데 iPhoto에 사진을 추가하게 되면 내부적으로 사진에 포함된 얼굴을 찾아서 자동으로 인덱싱해주는 기능이 있다.
 <!--more-->
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/af8dd815-28a5-4a70-97f7-e0b5e99c91dc)
+![](http://asset.hibrainapps.net/saltfactory/images/af8dd815-28a5-4a70-97f7-e0b5e99c91dc)
 
 이런 일련된 사진에서 얼굴 이미지를 추출하는 작업을 하기 위해서는 얼굴 패턴 인식을 하는 이미지 프로세싱을 해야하는데 이러한 작업은 패턴 인식을 처리하는 전공자가 아니면 하기 매우 어려운 작업이다. 이미지에서 얼굴의 특징을 찾아내는 특징(features)를 찾아내는 작업 자체가 힘든 작업이다. OpenCV (Open Source Computer Vision)을 이용해서 얼굴 인식을 할 수 있지만 C 기반으로 만들어진 이 라이브러리를 설치하고 사용하는 것 차체도 여간 어려운일이 아니다. 이렇게 사진에서 자동으로 사람의 얼굴을 찾아내기란 매우 어려운 일이지만, 맥에서는 iPhoto 에서 오래전부터 서비스해 왔고, 이러한 기능은 사용자들에게 편리함을 높여주고 다양한 활용성을 제공하였다. iOS SDK 5.1 부터는 이젠 사진에서 얼굴 이미지를 추출하는데 어렵지 않게 구현할 수 있게 되었다. iOS 5.1 부터 CIDetector와 CIFaceFeature라는 클래스가 포함되었는데 이 두가지를 이용해서 위의 복잡하고 어려운 부분을 간단히 API를 이용하여 사용할 수 있게 해준다. CIDetector를 이용하기 위해서는 CIImage를 이용하는데 이것은 CoreImage.framework가 필요하다. 그리고 나중에 사진의 이미지 중에 얼굴 부위만 표시하는 도형을 그리기 위해서 QuartzCore.framework를 사용한다. 이 아티클에 사용된 코드를 만들기 위해서 여러가지 블로그를 참조했으며 그에 대한 각각의 자세한 내용은 아티클 마지막 참조의 링크를 확인하기 바란다. 또한 소스코드의 일부는 인용한 것이기 때문에 개발자의 동의 없이 소스코드를 무단으로 상용으로 사용할 수 없음을 밝힌다.
 
@@ -21,11 +21,11 @@ Mac에는 iPhoto라는 사진편집 및 관리하는 툴이 있는데 iPhoto에 
 
 먼저 간단하게 Single View Project를 생성한다. 그리고 간단하게 사진 한장을 추가하자. 여기서 테스트하는 사진은 2007년도 하이브레인넷 연구소에서 야유회의 사진으로 테스트한다. 얼굴들이 모두 잘 나와있고 모두 9명의 사람이 있다. 그리고 한명은 얼굴이 반쯤 가려지고 눈만 보이고 코는 거의 일부만 보인다. (그 사람이 바로 저예요^^;) 이 사진을 예제 프로그램을 실힝하면 디바이스의 Caches 폴더로 얼굴 이미지만 저장할 수 있게 된다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d1d0f253-bd33-4245-ba7b-dd85f678c51c)
+![](http://asset.hibrainapps.net/saltfactory/images/d1d0f253-bd33-4245-ba7b-dd85f678c51c)
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/aea56ca7-b0ce-40c4-bc38-5af757eb672a)
+![](http://asset.hibrainapps.net/saltfactory/images/aea56ca7-b0ce-40c4-bc38-5af757eb672a)
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ad54c8eb-43cc-4beb-86d9-bcccc7b4bff6)
+![](http://asset.hibrainapps.net/saltfactory/images/ad54c8eb-43cc-4beb-86d9-bcccc7b4bff6)
 
 앞에서도 말했듯 CIDetector와 CIFaceFeature를 사용하기 위해서는 CoreImage.framework가 반드시 필요하다. 그리고 QuartzCore.framework를 프로젝트에 추가한다. 사진 이미지가 크기 때문에 이미지를 스크롤해서 볼 수 있게 하기 위해서 UIScrollView를 이용하였고 그 안에 UIImageView를 추가하였다.
 
@@ -75,7 +75,7 @@ Mac에는 iPhoto라는 사진편집 및 관리하는 툴이 있는데 iPhoto에 
 
 컴파일과 빌드 후 실행 시키보면 이렇게 사진이 들어가고 사진을 드래그하면 스크롤링 되면서 전체 사진을 모두 볼 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/4532fc18-355b-4b6f-86c6-d8689161f4e8)
+![](http://asset.hibrainapps.net/saltfactory/images/4532fc18-355b-4b6f-86c6-d8689161f4e8)
 
 제 부터는 사진에서 얼굴 이미지를 찾는 작업을 할 차례이다. 이 예제 프로그램에는 총 3가지의 메소드가 사용된다. 하나는 사진 이미지에서 얼굴을 찾아내는 작업을하는 findFacesFromImage: 이고, 다른 하나는 얼굴을 찾아낸 좌표를 가지고 사진에서 그 이미지를 디바이스에 저장하는 saveFaceWithFrame:메소드이다. 마지막으로 CImage로 작업하면 다시 말해서 CoreImage로 작업하면 좌표계가 뒤집어지는데 이렇게 뒤집어진 이미지를 다시 돌려서 원래 좌표계의 이미지로 가져오게하는 메소드이다.
 
@@ -173,7 +173,7 @@ CIDetector는 CIImage를 이용하여 (CoreImage.framework)를 이용하여 작�
 
 지금까지의 코드를 실행시키면 다음과 같이 사진에서 얼굴을 찾아서 사각형으로 표시를 하게 해주는 것을 확인할 수 있다. 사진을 드래그해보면 9명 전원의 얼굴을 찾아서 사각형이 그려진 것을 확인할 수 있다. 나중에 OpenCV로 동일한 작업을 포스팅할 예정이지만 OpenCV로 작업하는 것 보다 너무나 쉽게 사람 얼굴을 찾아 낼 수 있다. (정확도에 대해서는 지금 말하지 않겠다)
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/7ee43b08-f6f5-45d0-9933-0af2ce858595)
+![](http://asset.hibrainapps.net/saltfactory/images/7ee43b08-f6f5-45d0-9933-0af2ce858595)
 
 이제 얼굴 이미지를 찾았으니 이 이미지를 디바이스에 저장해 보기로 한다. 이미지를 저장하는 부분은 saveFaceWithFrame: 이라는 메소드가 처리하는데 실제 사진 이미지에서 얼굴 이미지가 가지고 있는 좌표를 가지고 이미지를 Cropping(잘라내기)하여 저장하도록 한다. 이미지 그래픽 처리를 위해서 CGContext를 사용한다. 그리고 Crop 되어질 영역을 지정해서 새로운 CGContextDrawImage로 이미지를 그리고 그 그래픽처리한 컨텍스트에서 cropImage를 추출한다. 여기서 crop 이미지를 만들때 -1 값을 곱한 이유는 좌표를 대칭하기 위한 작업이다. 그런다음에는 Caches 디렉토리에다 사진을 저장하는데 저장할때는 얼굴 배열의 index 번호로 파일 이름을 만든다.
 
@@ -240,7 +240,7 @@ CIDetector는 CIImage를 이용하여 (CoreImage.framework)를 이용하여 작�
 
 얼굴 이미지는 제대로 추출하였지만 얼굴이 뒤집혀서 저장된 것을 확인할 수 있다. 이제 이 문제를 해결하기 위해서 파일을 저장하기 전에 이미지를 돌리는 작업을 해보자.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/a8411fe4-849e-4432-9eb9-ff4227362a10)
+![](http://asset.hibrainapps.net/saltfactory/images/a8411fe4-849e-4432-9eb9-ff4227362a10)
 
 우선 이미지를 회전 시키기 위해서 UIImage 객체를 radian 값을 이용하여 CGAffineTransformMakeRotation을 시켜야하기 때문에 degreesToRadians 매크로를 만든다. 그리고 회전시킨 값을 가지고 위에서 작업한 것과 동일하게 GCContext를 상용하여 다시 이미지를 그려서 회전시킨다음에 회전된 이미지를 반환한다.
 
@@ -300,7 +300,7 @@ CIDetector는 CIImage를 이용하여 (CoreImage.framework)를 이용하여 작�
 
 이제 다시 컴파일 후 시행해보자. 뒤집혔던 이미지들이 정상적으로 저장되는 것을 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/f90c0037-6d4f-4fb5-8f70-973f508b5ced)
+![](http://asset.hibrainapps.net/saltfactory/images/f90c0037-6d4f-4fb5-8f70-973f508b5ced)
 
 ## 결론
 

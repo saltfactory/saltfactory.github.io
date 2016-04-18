@@ -29,7 +29,7 @@ Yobi는 **UTF-8** 기반으로 운영되어지고 있다. 즉, 소스코드, 운
 
 Yobi 환경을 모두 UTF-8로 설정을 하여 사용하더라도 **Safari** 브라우저에서 **한글 디렉토리명**을 클릭하면 URL 인코딩 문제가 발생해 버린다.
 
-![error](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/cb199066-56b0-4f62-9e6b-03f4837814b7)
+![error](http://asset.hibrainapps.net/saltfactory/images/cb199066-56b0-4f62-9e6b-03f4837814b7)
 
 한글이 포함된 URL을 직접 주소창에 넣으면 한글 디렉토리명이 문제 없이 보여지며 디렉토리 내의 파일들이 보여진다. Safari 브라우저를 제외한 나머지 브라우저에서는 Yobi 에 **한글 디렉토리명**을 클릭해도 정상적으로 보여지는데 Safari 브라우저에서만 **한글 디렉토리명**을 클릭했을 때 정상적으로 나타나지 않는 버그를 발견했다.
 
@@ -95,7 +95,7 @@ Safari 브라우저 버그는 `<a/>` 태그의 링크를 클릭하면 인코딩 
 
 한글 디렉토리명을 클릭해서 URL을 이동하는 대신에 `location.href`를 사용해서 URL을 이동하게 변경한 이후에 Yobi를 다시 실행하면 다음과 같이 **Safari** 브라우저에서도 정상적으로 동작하는 것을 확인할 수 있다.
 
-![success](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ba529613-4adc-47e8-8229-42e1db059d96)
+![success](http://asset.hibrainapps.net/saltfactory/images/ba529613-4adc-47e8-8229-42e1db059d96)
 
 ## \_page.less
 

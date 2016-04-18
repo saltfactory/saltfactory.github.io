@@ -24,7 +24,7 @@ Rhino를 소개하면서 Javascript를 브라우저 없이 개발하는 방법�
 
 맥에서 Node.js를 설치하기 위해서는 http://nodejs.org/download/ 에서 자신에게 맞는 OS 환경의 바이너리 파일로 설치를 하면 된다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/974fee57-3cf6-4ea3-8093-868d0ffedb4d)
+![](http://asset.hibrainapps.net/saltfactory/images/974fee57-3cf6-4ea3-8093-868d0ffedb4d)
 
 Mac 사용자라면 macport나 homebrew를 이용해서 설치도 가능하다. homebrew로 설치를 하기 위해서는 다음과 같이 인스톨을 할 수 있다.
 
@@ -68,7 +68,7 @@ console.log(saltfactory.hello());
 
 `test.html` 파일을 브라우저에서 열어보자. 브라우저에서 test.html을 열면서 javascript 를 해석하고 console에 로그를 남겼다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/cb16eeff-f7b8-419a-a8e6-d54905846a16)
+![](http://asset.hibrainapps.net/saltfactory/images/cb16eeff-f7b8-419a-a8e6-d54905846a16)
 
 
 ## Server 사이드
@@ -79,7 +79,7 @@ console.log(saltfactory.hello());
 node person.js
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/949e0f3f-4784-446f-8ba1-059f07325a17)
+![](http://asset.hibrainapps.net/saltfactory/images/949e0f3f-4784-446f-8ba1-059f07325a17)
 
 브라우저에서나 동작할만한 Javascript 객체가 정확하게 node를 이용해서 해석되고 있다는 것을 확인할 수 있다. 위 파일을 마치 하나의 Javascript 라이브러리 처럼 사용한다고 생각해보자. 즉, 여러가지 javascript 파일들이 존재하고 그 파일을 `<script type="filename" type="text/javascript"></script>`로 불러 들여서 사용하다고 가정해보자. 그래서 person.js를 좀더 유연하게 사용할 수 있게 변수 생성을 제거한다. 그리고 nodejs의 fs 모듈을 이용해서 외부 javascript 파일을 읽어서 eval을 한다.
 
@@ -108,7 +108,7 @@ console.log(saltfactory.hello()):
 console.log(mushroom.hello());
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/c585e099-bdf4-4cf9-9eae-16419fbd56ad)
+![](http://asset.hibrainapps.net/saltfactory/images/c585e099-bdf4-4cf9-9eae-16419fbd56ad)
 
 이제 person.js를 좀더 다양하게 사용할 수 있게 되었다. 브라우저 없이 Javascript를 개발할 분만 아니라 서버에서 사용할 수 있는 javascript 프로그램을 만들 수가 있다.
 
@@ -124,7 +124,7 @@ npm이 설치되어 있으면 npm으로 jsdom을 설치한다.
 npm install jsdom
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/8360ebd0-f753-4641-adcf-86d587a78888)
+![](http://asset.hibrainapps.net/saltfactory/images/8360ebd0-f753-4641-adcf-86d587a78888)
 
 jsdom을 이용해서 HTML 파일을 열어서 접근해보도록 하자.
 
@@ -144,7 +144,7 @@ jsdom.env({
 
 그리고 node로 이 jsdom-test.js 파일을 실행시키면 test.html 을 읽어오는 것을 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e4308382-ee69-4b45-be1a-7c3ad79450b8)
+![](http://asset.hibrainapps.net/saltfactory/images/e4308382-ee69-4b45-be1a-7c3ad79450b8)
 
 HTML 파일을 로드했으니 Javascript로 HTML Element에 접근을 해보자. jsdom-test.js 파일을 다음과 같이 수정한다.
 
@@ -165,7 +165,7 @@ jsdom.env({
 
 HTML 문서에 있는 h1의 Element의 텍스트를 가져오는 것을 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/8cb5c187-a710-4e57-8a4d-4020c9531a21)
+![](http://asset.hibrainapps.net/saltfactory/images/8cb5c187-a710-4e57-8a4d-4020c9531a21)
 
 jsdom은 HTML 파일을 로드할 뿐만 아니라 로컬 javascript 파일을 로드도 한다. jQuery 파일을 로드해서 사용하려면 다음과 같이한다.
 
@@ -188,7 +188,7 @@ jsdom.env({
 });
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/98db538e-5295-47df-b361-7946aeaafb03)
+![](http://asset.hibrainapps.net/saltfactory/images/98db538e-5295-47df-b361-7946aeaafb03)
 
 Envjs도 원격의 HTML를 로드해서 사용할 수 있었는데 jsdom도 원격지의 HTML을 로드해서 로컬에서 Javascript 프로그램을 작성할 수도 있다.
 
@@ -211,7 +211,7 @@ jsdom.env({
 });
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/a9661a67-59a2-436f-b29c-434f60e5b06a)
+![](http://asset.hibrainapps.net/saltfactory/images/a9661a67-59a2-436f-b29c-434f60e5b06a)
 
 ## 결론
 

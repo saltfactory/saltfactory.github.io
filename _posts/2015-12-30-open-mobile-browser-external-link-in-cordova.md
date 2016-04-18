@@ -11,7 +11,7 @@ tags:
   - ionic
 comments: true
 images:
-  title: 'https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/b8a17dba-2920-478c-9012-b5ab6f7deb6c'
+  title: 'http://asset.hibrainapps.net/saltfactory/images/b8a17dba-2920-478c-9012-b5ab6f7deb6c'
 ---
 
 
@@ -125,4 +125,3 @@ Cordova 앱에서 외부 링크를 브라우저로 열기 위한 방법은 기�
 
 1. http://stackoverflow.com/questions/29992669/accessing-appview-from-cordova-5-0-0
 2. http://blog.saltfactory.net/hybridapp/solve-external-link-tag-in-phonegap.html
-

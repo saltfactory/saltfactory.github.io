@@ -25,7 +25,7 @@ app/Console/cake bake
 
 bake를 실행하면 Interactive Bake Shell이 동작한다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/0751de0c-5afe-4585-b7cd-af8cc1e5fdf3)
+![](http://asset.hibrainapps.net/saltfactory/images/0751de0c-5afe-4585-b7cd-af8cc1e5fdf3)
 
 bake로 관리할 수 있는 부분은 Database Configuration, Model, View, Controller, Project, Fixture, Test case 등 대부분의 CakePHP의 코드를 관리할 수 있다.
 우리는 바로 앞 포스팅에서 CakePHP의 scaffolding을 사용하는 방법을 알아보았다. CakePHP의 scaffolding은 RoR과 달리 Database에 테이블을 생성하고 컨트롤러에서 public $scaffold 변수만 선언하면 MVC 코드 없이 자동으로 MVC 동작을 할 수 있는 prototyping으로 서비스를 구현할 수 있었다는 것을 테스트했다.
@@ -41,16 +41,16 @@ bake의 사용은 bake shell을 이용하는 방법과 command로 처리하는 �
 app/Console/cake bake model all
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/7c842012-2064-4203-bc68-65263278fae3)
+![](http://asset.hibrainapps.net/saltfactory/images/7c842012-2064-4203-bc68-65263278fae3)
 
 bake로 Model에 관련된 코드와 파일을 생성하는 trace를 확인할 수 있고 생성이 마치고 나면 실제 물리적인 코드가 생성되는 것을 확인할 수 있다.
 
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ab173e92-b3c2-4bc3-a043-1dd4b91d4f29)
+![](http://asset.hibrainapps.net/saltfactory/images/ab173e92-b3c2-4bc3-a043-1dd4b91d4f29)
 
 app/Model 안에 Category.php로 생성된  파일을 살펴보자. 생성된 코드는 AppModel을 상속받아서 만든 Post.php의 모델과 동일한 형태를 가지고 있다. 그리고 디폴트로 name 이라는 필드의 비즈니스 규칙으로 공란을 허용하지 않는 validate 까지 생성된 것을 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/25e60842-ffe1-4880-8032-bd0377dcd2b5)
+![](http://asset.hibrainapps.net/saltfactory/images/25e60842-ffe1-4880-8032-bd0377dcd2b5)
 
 
 ## bake shell
@@ -61,40 +61,40 @@ app/Model 안에 Category.php로 생성된  파일을 살펴보자. 생성된 �
 app/Console/cake bake
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/4da0d521-479e-4fd3-a66e-d52ad6eff183)
+![](http://asset.hibrainapps.net/saltfactory/images/4da0d521-479e-4fd3-a66e-d52ad6eff183)
 
 다음은 Model을 선택한다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/777305fe-cf30-4763-8447-41de04942da2)
+![](http://asset.hibrainapps.net/saltfactory/images/777305fe-cf30-4763-8447-41de04942da2)
 
 CakePHP에서 코드 prototyping은 데이터베이스의 테이블을 분석해서 생성이되기 때문에 Model을 prototyping할 데이터베이스를 선택하는 메뉴가 나온다.
 app/Config/database.php에서 우리는 다음과 같이 설정을 했었다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/30314d60-b27f-46db-95b9-be1b3a973def)
+![](http://asset.hibrainapps.net/saltfactory/images/30314d60-b27f-46db-95b9-be1b3a973def)
 
 살펴보면 DATABASE_CONFIG 안에 default와 test 두가지를 사용한다고 정의하고 있기 때문에 bake에서 Model을 적용할 데이터베이스를 defaut/test 둘중에 선택하라고 나오는 것이다. default를 선택한다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/58c9a307-a1d0-4a7d-90f8-e82a786d9322)
+![](http://asset.hibrainapps.net/saltfactory/images/58c9a307-a1d0-4a7d-90f8-e82a786d9322)
 
 bake에서 데이터베이스를 선택하면 현재 선택된 데이터베이스에서 Model을 생성할 수 있는 목록을 보여준다. Category 모델을 생성하기 원하기 때문에 우리는 Category를 선택한다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/cacb188a-6841-4bad-9d0b-8bda6636c312)
+![](http://asset.hibrainapps.net/saltfactory/images/cacb188a-6841-4bad-9d0b-8bda6636c312)
 
 모델을 Category로 만들 것이라고 선택하면 validation을 적용할지에 대해서 묻는 메뉴가 나온다. y를 입력해보자. 아마도 Model에 적용할 수 있는 validate 규칙이 어떤 것이 있는지 궁금했다면 이 항목을 보면서 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/f5780bbf-8b3d-4bf7-b8f4-1705038a451d)
+![](http://asset.hibrainapps.net/saltfactory/images/f5780bbf-8b3d-4bf7-b8f4-1705038a451d)
 
 위 내용은 Category 모델에서 id 필드에 대한 validation rule을 지정하는 것인데 skip 하고 넘어가자. 34를 입력한다. 그리고 name 필드가 나오면 우리는 notempty 규칙을 추가할 것이기 때문에 23번을 입력한다. 그리고 다른 필드를 더 설정할지 물어보면 n을 치고 넘어간다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/a75cbf5e-927f-48c4-b71b-7e97ee8ad082)
+![](http://asset.hibrainapps.net/saltfactory/images/a75cbf5e-927f-48c4-b71b-7e97ee8ad082)
 
 Model에서는 validation rule을 설정하여 필드의 값과 상태를 체크할 수 있을 뿐만 아니라 객체(Model)의 관계도 설정할 수 있는데 1:M, M:M, M:1 등의 관계를 설정할 수 있다. Category는 여러개의 Post를 가질 수 있는 객체 관계를 설정하기 위해서 y를 선택한다. 그러면 어떤 모델과의 관계를 추가할 것인지 물어보는 메뉴가 나오는데 이 때 y를 선택한다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/50cf182e-cede-45cb-aaa4-5c284893f518)
+![](http://asset.hibrainapps.net/saltfactory/images/50cf182e-cede-45cb-aaa4-5c284893f518)
 
 이제 Category 모델안에 추가된 관계의 타입을 지정하게 되는데 Category안에는 Posts들을 여러개 가질 수 있기 때문에 1:M 관계가 필요하다. 그래서 hasMany 관계를 선택한다. 그리고 그 관계를 나타낼 alias를 지정하라고 하는데 흔히 우리가 객체 관계나 foreign key로 사용할 때의 이름을 사용하면 된다. 객체 관계에서 Category는 여래개의 Post를 가지고 있을 것이기 때문에 Post라고 alias를 지정하자. 그러면 이 Post라는 alias는 어떤 클래스(Model) 이름으로 사용할지에 대해서 묻는 메뉴가 나오는데 Post로 지정한다. 그러면 Post에 사용할 foreignKey를 물어보는데 Post 객체에서 id를 참조할 수 있게 한다. 다른 관계는 예제에서 필요하지 않기 때문에 n을 선택한다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/05583f00-45ce-49b2-8d59-74f5d9786798)
+![](http://asset.hibrainapps.net/saltfactory/images/05583f00-45ce-49b2-8d59-74f5d9786798)
 
 bake shell 에서 Model에 관련된 모든 설정이 끝나면 다시 마지막으로 Model의 내용을 보여주면서 맞게 설정되었는지 확인을 한다. 우리가 원하던 설정은 name 이라는 필드에 notempty validation rule이 적용되고 Post라는 모델을 여러개 관계를 할 수 있는 Associations에 Category가 Post를 여러개 가질 수 있도록 설정한 것을 확인했다. y를 선택하면 파일이 존재하면 overwrite할지 물어본다. 우리는 cake bake model all 로 이미 Category 모델을 만들었기 때문에 모두 덮어 쓰기로 한다.
 app/Model/Cateogry.php 에 Category 모델 파일이 생성이 된다. 우리는 이미 만들어두어서 파일을 덮어서 만들어졌지만, 파일이 존재하지 않을 경우는 bake shell에 설정한대로 만들어 질 것이다. Category.php 파일을 열어보자.

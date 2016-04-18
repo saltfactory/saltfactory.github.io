@@ -24,9 +24,9 @@ disqus_identifier : http://blog.saltfactory.net/216
 
 CREATE PROJECT 를 눌러서 안드로이드 푸시 프로젝트를 생성한다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/b29366a1-49d6-4607-8c2b-2744a954a440)
+![](http://asset.hibrainapps.net/saltfactory/images/b29366a1-49d6-4607-8c2b-2744a954a440)
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/58d4c51f-95ca-4cd2-87b0-e28f66d09b4c)
+![](http://asset.hibrainapps.net/saltfactory/images/58d4c51f-95ca-4cd2-87b0-e28f66d09b4c)
 
 프로젝트를 생성하면 고유 **Project ID**를 입력하고(Project ID는 고유한 값으로 직접 등록할 수 있다.) **Project Number**를 획득한다.
 
@@ -34,17 +34,17 @@ CREATE PROJECT 를 눌러서 안드로이드 푸시 프로젝트를 생성한다
 
 다음은 APIs & Auth 메뉴를 선택한다. 기본적으로 Google Cloud 서비스 API가 활성화 되어 있는데 GCM을 사용할 때는 필요없기 때문에 모두 비활성화 시킨다. 우리가 필요한 것은 **Google Cloud Messaging for Android API** 이기 때문에 이 항목을 찾아서 활성화 시킨다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d2133a86-4a76-42a2-b5f3-7a9177f36b4e)
+![](http://asset.hibrainapps.net/saltfactory/images/d2133a86-4a76-42a2-b5f3-7a9177f36b4e)
 
 ## API Access Key 생성
 
 다음은 **Credentials** 메뉴를 선택해서 API access key를 생성한다. **CREATE NEW KEY** 를 선택하면 여러가지 환경에 사용할 key를 만들 수 있는데, 우선 안드로이드 디바이스에서 API access key를 생성해야하기 대문에 **Android Key**를 선택한다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/c64f8107-8a83-4146-a48e-99cd596e7250)
+![](http://asset.hibrainapps.net/saltfactory/images/c64f8107-8a83-4146-a48e-99cd596e7250)
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/966b57c2-a248-4626-bd52-bbe45b0aaf0f)
+![](http://asset.hibrainapps.net/saltfactory/images/966b57c2-a248-4626-bd52-bbe45b0aaf0f)
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/aee5e224-76f1-4f24-bad8-9203c6d0c3fa)
+![](http://asset.hibrainapps.net/saltfactory/images/aee5e224-76f1-4f24-bad8-9203c6d0c3fa)
 
 이렇게 등록한 Android API access key는 안드로이드 디바이스에서 GCM을 이용해서 푸시를 받을 수 있는 **registration_id** 값을 획득하는데 사용된다. 아이폰에서는 device token과 같은 개념이 registration_id 이다. 다음은 안드로이드에 registration_id를 획득하는 라이브러리를 추가하고 코드를 작성한다.
 
@@ -59,25 +59,25 @@ https://code.google.com/p/gcm/
 git clone https://code.google.com/p/gcm/
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/51c5964c-0f36-46d7-a57f-ae1a851cdd60)
+![](http://asset.hibrainapps.net/saltfactory/images/51c5964c-0f36-46d7-a57f-ae1a851cdd60)
 
 ### Google Play Service SDK 다운로드
 
 인터넷에서 GCM 구현에 관련된 글들을 찾아보면 대부분 gcm.jar를 사용하는데 gcm.jar 역시 deprecate 되었다. 그래서 위에서 다운받은 gcm-client-deprecated를 살펴보면 dist 디렉토리 안에 gcm.jar가 포함되어 있는 것을 확인할 수 있다. 하지만 Google에서는 Cloud Messaging Service는 모두 **Google Play Service** 로 통합되었기 때문에 gcm.jar를 사용하는 포스팅을 참조하기 보다는 Google Play Service SDK를 사용한 예제를 참조하는것이 좋다. Google Play Service SDK는 기본적으로 android SDK를 다운 받는다고 설치되는 것이 아니라 extra 로 따로 다운 받아야 한다. android SDK Manager를 열어서 Google Play Service SDK를 다운로드한다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/5b2d9a80-1e69-412a-9ce1-0c566775e3be)
+![](http://asset.hibrainapps.net/saltfactory/images/5b2d9a80-1e69-412a-9ce1-0c566775e3be)
 
 이렇게 다운받은 파일은 `android-sdk-mac/sdk/extras/google/google_play_services/libproject/google-play-services_lib/libs` 라는 디렉토리 안에 존재하게 된다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d3ad4859-042a-49b5-ad52-032e74d75c19)
+![](http://asset.hibrainapps.net/saltfactory/images/d3ad4859-042a-49b5-ad52-032e74d75c19)
 
 ### 안드로이드 프로젝트 생성
 
 이제 안드로이드 프로젝트를 생성해서 GCM 획득하는 코드를 추가할 것이다. 이름은 sf-push-demo 라고 만들었다. 안드로이드 개발은 여러가지 IDE로 개발할 수 있으니 보통 eclipse로 한다. 우리는 연구소에서 IntelliJ를 Java IDE를 사용하고 있기 때문에 IntelliJ 환경으로 설명하도록 하겠다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/3767843e-cf27-4df6-a46c-70cbda5ff2e1)
+![](http://asset.hibrainapps.net/saltfactory/images/3767843e-cf27-4df6-a46c-70cbda5ff2e1)
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/72500313-fb59-4ec0-9b2f-3e672561788e)
+![](http://asset.hibrainapps.net/saltfactory/images/72500313-fb59-4ec0-9b2f-3e672561788e)
 
 프로젝트 이름은 sf-push-demo 라고 하였고, 패키지이름은 net.saltfactory.tutorial.sfpushdemo로 지정하였다.
 
@@ -85,31 +85,31 @@ git clone https://code.google.com/p/gcm/
 
 그리고 앞에서 다운받은 Google Play SDK를 프로젝트 디렉토리의 libs 안으로 복사한다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/98df94b6-9ea9-4220-a5c5-b496812c1240)
+![](http://asset.hibrainapps.net/saltfactory/images/98df94b6-9ea9-4220-a5c5-b496812c1240)
 
 ### Google Play Service version.xml 파일 복사
 
 Google Play Service를 사용하기 위해서는 `AndroidManifest.xml` 파일 안에 `<application>`태그 안에 `<meta-data>` 값으로 Google Play Service 버전 정보를 넣어줘야하는데 이 정보는 `android-sdk-mac/sdk/extras/google_play_services/libproject/google-paly-services_lib/res/values/version.xml` 에 존재한다. 이 파일을 복사해서 새로 생성한 프로젝트의 `res/values/` 디렉토리 안에 추가한다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/33f93e6b-36c4-4bcd-95eb-88c6410369de)
+![](http://asset.hibrainapps.net/saltfactory/images/33f93e6b-36c4-4bcd-95eb-88c6410369de)
 
 ### Android Support 라이브러리 추가
 
 안드로이드에서는 다양한 sdk 버전을 커버하기 위해서 android에서도 확장 라이브러리를 가지고 있는데 GCM 구현에서는 android v4 확장 라이브리가 필요하다. 이것은 `android-sdk-mac/sdk/extras/android/support/v4/android-support-v4.jar` 에 존재하는데 이것도 libs 디렉토리에 복사해서 넣는다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/9aab28ea-dddb-4edd-8e0e-c1d2427d9267)
+![](http://asset.hibrainapps.net/saltfactory/images/9aab28ea-dddb-4edd-8e0e-c1d2427d9267)
 
 ### 예제 Resources 파일 추가
 
 그리고 앞에서 clone 받은 gcm-client 디렉토리에서 resources들을 복사한다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/c3fb5700-2153-4931-9ce4-1fc7ed4b66fc)
+![](http://asset.hibrainapps.net/saltfactory/images/c3fb5700-2153-4931-9ce4-1fc7ed4b66fc)
 
 ### GCM 클래스 추가
 
 이젠 GCM을 사용할 준비를 마쳤으니 코드를 추가하자. gcm-client 안에 있는 소스 중에서 `src/com/google/android/gcm/demo/app/` 디렉토리 안에서 `GcmBroadcastReceiver.java`와 `GcmIntentService.java`를 복사해서 프로젝트에 생성된 패키지 안에다 넣는다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/147f4ba9-ed1a-44b2-a5a0-a01945919a20)
+![](http://asset.hibrainapps.net/saltfactory/images/147f4ba9-ed1a-44b2-a5a0-a01945919a20)
 
 #### GcmIntentService 파일 수정
 
@@ -227,7 +227,7 @@ Google Play Service를 사용하기 위해서는 `AndroidManifest.xml` 파일 �
 
 긴 작업이였지만 위의 순서대로 진행하면 오류없이 안드로이드 디바이스로 빌드가 될 것이다. 그리고 빌드가 성공하면 TextView에 안드로이드 디바이스 정보가 나오는 것을 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/5877d9ec-7922-403f-bc8e-db5bfdc33b7c)
+![](http://asset.hibrainapps.net/saltfactory/images/5877d9ec-7922-403f-bc8e-db5bfdc33b7c)
 
 이렇게 획득한 **registration_id** 는 푸시 프로바이더에서 푸시를 발송할 때 사용된다.
 
@@ -239,13 +239,13 @@ Google Play Service를 사용하기 위해서는 `AndroidManifest.xml` 파일 �
 npm install node-gcm
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/c44a340c-160c-4fc5-b038-0157a6cff723)
+![](http://asset.hibrainapps.net/saltfactory/images/c44a340c-160c-4fc5-b038-0157a6cff723)
 
 ## Push Provider GCM Server Access Key 생성
 
 우리는 앞에서 안드로이드의 registration_id를 획득하기 위해서 엑세스키를 만드는 과정을 한번 진행했었다. 이제 동일한 작업으로 server key를 생성한다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/15315f59-5a94-41e9-9ed9-96c0127ea672)
+![](http://asset.hibrainapps.net/saltfactory/images/15315f59-5a94-41e9-9ed9-96c0127ea672)
 
 서버는 IPs 접근을 제한하는 항목이 보일것이다. 이제 푸시 프로바이더의 access key를 구했으니 푸시 프로바이더 코드를 작성하자.
 
@@ -290,7 +290,7 @@ node sf-push-provider.js
 
 잠시 후 안드로이드 디바이스로 GCM으로 메세지가 전송된 것을 확인할 수 있다. (아래와 같이 출력하기 위해서는 안드로이드의 GCM 코드에 약간의 변경을 가해야한다. 구글에서 제공하는 기본 코드는 푸시 프로바이더의 payload로 전송한 key값을 출력하는 것이 아니라 object자체를 출력하게 되어 있다.) 이 포스팅에 진행된 모든 소스코드는 github를 통해서 공개하고 있으니 참조하기 바란다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/e828510c-963a-458a-aedd-70851fbcd830)
+![](http://asset.hibrainapps.net/saltfactory/images/e828510c-963a-458a-aedd-70851fbcd830)
 
 ## 결론
 

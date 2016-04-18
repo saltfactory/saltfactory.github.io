@@ -64,8 +64,8 @@ android:layout_alignParentLeft, android:layout_alignParentRight라는 속성은 
 </LinearLayout>
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/d390b1c7-70fb-4d83-bb2a-d3e929555541)
+![](http://asset.hibrainapps.net/saltfactory/images/d390b1c7-70fb-4d83-bb2a-d3e929555541)
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/cfb50adc-101c-4a5d-a1f3-eb8657a4f7d5)
+![](http://asset.hibrainapps.net/saltfactory/images/cfb50adc-101c-4a5d-a1f3-eb8657a4f7d5)
 
 

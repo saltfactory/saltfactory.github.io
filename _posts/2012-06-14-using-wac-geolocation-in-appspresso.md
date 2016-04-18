@@ -37,7 +37,7 @@ WAC 중에서 우리는 GeoLocation의 문제를 해결하기 위해서 navigato
 
 앱스프레소에서 geolocation을 사용하기 위해서는 project.xml에서 geolocation plugins을 사용한다고 선택을 해야한다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/192981ec-a564-4ff5-abeb-03361843f670)
+![](http://asset.hibrainapps.net/saltfactory/images/192981ec-a564-4ff5-abeb-03361843f670)
 
 그리고 우리가 [Appspresso를 사용하여 네이티브앱을 하이브리드 앱으로 전환 - 3.Sencha MVC 적용](http://blog.saltfactory.net/158) 글에서 fireEvent로 등록한 것 중에서 "위치끄기" 버튼에 대한 handler 메소드에 다음 코드를 입력한다. 이 버턴을 담당하는 controller는 MainController에서 담당하고 있다. MainController.js를 수정한다.
 
@@ -204,7 +204,7 @@ Ext.define('CWNUMap.controller.MainController', {
 
 WAC 를 이용해서 현재의 위치를 모니터링하면서 변경된 위치의 정보를 새로운 custom marker로 지도위에 위치하도록 했다. 새로운 마크에 사용된 이미지는 /images/marker.png로 되어 있고 Daum Map V3 API에서 MarkerImage를 이용해서 추가했다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/4bf6935f-68e5-495e-8aef-ee663565a8d9)
+![](http://asset.hibrainapps.net/saltfactory/images/4bf6935f-68e5-495e-8aef-ee663565a8d9)
 
 그리고 "위치찾기" 버튼이 클릭되면 버튼의 텍스트를 "위치끄기"로 변경을 하기 위해서  기존의 rightBarButton에 등록한 handler 메소드와 fireEvent 메소드를 수정했다. MainView.js를 수정하자.
 
@@ -303,7 +303,7 @@ var HBNString = {
 
 fireEvent로 MainController에게 전달하는 메소드에 button 을 전달해서 "위치찾기" 버튼을 제어하는 메소드 안에서 WAC의 navigator.geolocation.watchPosition을 이용해서 현재 위치를 찾아서 새로운 Marker를 표시해주고 화면도 이동을 시켜주도록 프로그램을 수정을 완료했다. 다시 새롭게 빌드해서 디바이스로 런칭해보자. GPS 가 활성화 되면서 현재 위치를 모니터링 할 수 있게 되었다. 네이티브 앱에서 현재 위치를 지도위에서 보는 것과 동일한 기능을 Appspresso가 제공하는 WAC를 이용해서 구현할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/eace2f14-4ada-4dba-aea0-5ae096ae5fb3)
+![](http://asset.hibrainapps.net/saltfactory/images/eace2f14-4ada-4dba-aea0-5ae096ae5fb3)
 
 ## 참고
 

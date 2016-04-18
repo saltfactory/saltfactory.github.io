@@ -24,7 +24,7 @@ SQLite를 이용해서 테이블을 만들고 조회를 한다고 가정해보�
 sqlite3 sample.sqlite
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/14fa5869-cad7-45d1-be49-f23dc77433dc)
+![](http://asset.hibrainapps.net/saltfactory/images/14fa5869-cad7-45d1-be49-f23dc77433dc)
 
 sample.sqlite 데이터베이스가 열어진 상태에서 테스트를 하기 위한 테이블을 만들어보자.
 
@@ -40,7 +40,7 @@ INSERT INTO users VALUES (2, 'lightfactory');
 
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/14a23d35-df3e-4263-95f3-50a2ce3f2f82)
+![](http://asset.hibrainapps.net/saltfactory/images/14a23d35-df3e-4263-95f3-50a2ce3f2f82)
 
 데이터를 입력했으니 조회를 해보자.
 
@@ -50,7 +50,7 @@ SELECT * FROM users;
 
 Oracle이나 MySQL을 사용하던 사용자라면 SQLite의 SELECT 결과를 보고 실망을 했을지 모른다. SQLite의 SELECT 모드가 디폴트는 line mode에다가 header off가 기본적으로 되어 있기 때문이다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/6a285f2d-9393-4b70-824f-265a0d387475)
+![](http://asset.hibrainapps.net/saltfactory/images/6a285f2d-9393-4b70-824f-265a0d387475)
 
 ## .mode colue
 
@@ -62,7 +62,7 @@ Oracle이나 MySQL을 사용하던 사용자라면 SQLite의 SELECT 결과를 �
 
 column mode로 변경한 다음에 다시 SELECT를 실행하면 다음과 같이 라인으로 출력되었던 튜플들이 column 형태로 출력되는 것을 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/5736bd7e-0feb-4582-bafc-16c61495da5c)
+![](http://asset.hibrainapps.net/saltfactory/images/5736bd7e-0feb-4582-bafc-16c61495da5c)
 
 
 ## .header on
@@ -73,7 +73,7 @@ column mode로 변경한 다음에 다시 SELECT를 실행하면 다음과 같�
 .header on
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/5062f007-8cf7-4a7f-a63b-a0f584c1db69)
+![](http://asset.hibrainapps.net/saltfactory/images/5062f007-8cf7-4a7f-a63b-a0f584c1db69)
 
 ## .width
 
@@ -83,7 +83,7 @@ column mode로 변경한 다음에 다시 SELECT를 실행하면 다음과 같�
 .width 10, 20
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/2c8a52e3-bea1-4315-8f27-754215127d82)
+![](http://asset.hibrainapps.net/saltfactory/images/2c8a52e3-bea1-4315-8f27-754215127d82)
 
 ## .quit
 
@@ -95,7 +95,7 @@ column mode로 변경한 다음에 다시 SELECT를 실행하면 다음과 같�
 
 그리고 다시 SELECT를 실행하면 위의 설정들이 모두 무시되고 SQLite에 설정한 기본 설정으로 출력이 되는 것을 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/c810862c-fe77-484a-bab5-d20bf4a35018)
+![](http://asset.hibrainapps.net/saltfactory/images/c810862c-fe77-484a-bab5-d20bf4a35018)
 
 ## .sqliterc
 
@@ -108,11 +108,11 @@ column mode로 변경한 다음에 다시 SELECT를 실행하면 다음과 같�
 vi ~/.sqliterc
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/c43672be-6d1e-49ce-919d-2199565ba9cf)
+![](http://asset.hibrainapps.net/saltfactory/images/c43672be-6d1e-49ce-919d-2199565ba9cf)
 
 설정 정보를 저장한 뒤 SQLite에 다시 접속해서 SELECT 명령어를 실행해보자.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/530d1c60-40bd-428e-9e2c-2955c2389d56)
+![](http://asset.hibrainapps.net/saltfactory/images/530d1c60-40bd-428e-9e2c-2955c2389d56)
 
 이제부터는 SQLite를 사용할 때는 라인모드가 아닌 컬럼모드로 컬럼헤더를 확인하면서 사용할 수 있게 되었다.
 

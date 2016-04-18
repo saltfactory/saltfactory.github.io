@@ -54,11 +54,11 @@ HTML5 application cache를 테스트하기 위해서 우선 application cache가
 
 서버에 HTML 파일을 저장하고 요청을 해봤다. 아무런 caching 작업 없이 HTML 웹 사이트를 제작했다고 생각하고 웹 페이지를 최초 요청하였을 때이다. 예상대로 모든 요청을 처음하기 때문에 각각 URL 요청이 들어가는 부분은 네트워크 요청 시간이 포함되어서 시간이 길게 나타난다. 특히 jquery를 요청할 때는 google library host를 이용해서 구글서버까지 요청시간을 더해진 것을 확인할 수 있다. 이미지가 70kb 인것도 네트워크 요청에서 시간을 필요한 부분이다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ca03af89-d723-4a47-8ac8-c2a4101ff565)
+![](http://asset.hibrainapps.net/saltfactory/images/ca03af89-d723-4a47-8ac8-c2a4101ff565)
 
 한번 요청한 페이지를 다시 같은 URL로 재 요청을 해봤다. 최초 HTTP 200 code의 결과와 달리 이번에는 HTTP 304 code의 결과를 반환하면서 최초의 로딩 속도 (669ms) 보다는 189ms로 많이 빨라졌다. 304 code는 이미 요청한 자원을 서버측의 내용과 변경된 것이 없다는 것을 확인한 코드인데 이 요청 때문에 서버의 자원과 비교하는 시간이 소비가 된다. 하지만 원래 브라우저가 동작하는 방식이 한번 읽은 Javascript/css/images 들은 temporary 디렉토리 같은 곳에 자체적으로 저장해서 웹 요청 시간을 단축시키기 때문에 최초의 요청시간보다는 많은 시간이 단축된 것을 확인할 수 있다. 다만 304 code를 계속 확인하는 시간은 포함이 되어 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/20cece35-eccc-40fe-ad6f-ccf8067543ce)
+![](http://asset.hibrainapps.net/saltfactory/images/20cece35-eccc-40fe-ad6f-ccf8067543ce)
 
 ### Application Cache 적용
 
@@ -133,25 +133,25 @@ AddType text/cache-manifest .manifest
 
 응답속도는 놀라울 만큼 빨라졌다. 최초 로드 속도를 제외하고 304를 요청하던 요청 결과가 189ms 였는데 application cache를 하게 적용하게 되면 manifest를 읽어들여서 CACHE에 정의된 요청은 cache로 부터 불러오기 때문에 모두 200 code 결과가 나오면서 서버와의 통신을 하지 않게 되기 때문에 모든 것이 네트워크 요청없이 cache에서 불러왔기 때문이다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/937929c8-528d-43e5-b82f-90bbc8473126)
+![](http://asset.hibrainapps.net/saltfactory/images/937929c8-528d-43e5-b82f-90bbc8473126)
 
 HTML5 application cache를 사용하면 브라우저에서 resouces가 어떻게 저장되는지 확인할 수 있다. resources 탭을 눌러서 Application Cache 를 확인해보자. 이렇게 manifest에 정의한 cache 정보를 부라우저가 HTML5 문서에 해석해서 application 레벨에서 cache를 관리하게 된다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/1b6845a5-14b4-4b60-9108-b08e7a8ac0f4)
+![](http://asset.hibrainapps.net/saltfactory/images/1b6845a5-14b4-4b60-9108-b08e7a8ac0f4)
 
 캐시를 지우고 싶을 경우에는 크롬 브라우저에서 application cache를 보는 URL로 접근해서 삭제할 수 있다. chrome://appcache-internals/ 을 URL 입력창에 입력하면 다음과 같은 화면이 나타난다. 이것을 보면 manifest 파일에 관련된 캐시 정보를 가지고 있다는 것을 확인할 수 있고 Remove로 삭제할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/ddb1295c-d599-4640-b572-025263a63429)
+![](http://asset.hibrainapps.net/saltfactory/images/ddb1295c-d599-4640-b572-025263a63429)
 
 View Entires를 클릭하면 manifest의 자세한 정보를 확인할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/676d967d-79b7-4059-8925-9ed699e89d74)
+![](http://asset.hibrainapps.net/saltfactory/images/676d967d-79b7-4059-8925-9ed699e89d74)
 
 그런데 한가지 주의할 점이 있다. HTML5 application cache를 사용하게 되면 cache를 적용한 html 파일이 자동으로 캐싱이 되어 버린다는 것이다. 그래서 HTML문서를 수정하더라도 cache 되어 있는 html 파일을 로드하기 때문에 적용되지가 않는다. manifest에서 html 문서를 NETWORK: 로 정의해도 html 문서만은 자동으로 캐싱되기 때문에 적용이 되지 않는다. 방법은 manifest를 변경해서 application cache가 업데이트 되어서 window.location.reload()를 해야만 한다는 것이다.
 
 HTML5 application cache 은 훌륭한 cache 기법 application level에서 (서버설정없이) 할 수 있다는 것이 가장 큰 강점이다. 만약에 javascript 파일이 지속적으로 업데이트되는 (원격 업데이트)를 하고 싶으면 NETWORK: 쪽에 정의를 하면 된다. app.js는 수시로 변할 수 있는 파일이라고 가정하고 NETWORK: 아래에 정의를 하고 페이지를 다시 요청을 했다. 나머지는 모두 from cache로 캐시된 것에서 불러오지만 app.js 파일만은 서버에서 다시 요청을 하게된다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/906ef0b6-04ab-421e-b3b0-c63b2ab73a5c)
+![](http://asset.hibrainapps.net/saltfactory/images/906ef0b6-04ab-421e-b3b0-c63b2ab73a5c)
 
 ## 결론
 

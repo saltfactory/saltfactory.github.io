@@ -33,7 +33,7 @@ open("http://www.ruby-lang.org/") {|f|
 }
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/800d2cef-0bb3-40fe-bb31-be9f15ae7f2d)
+![](http://asset.hibrainapps.net/saltfactory/images/800d2cef-0bb3-40fe-bb31-be9f15ae7f2d)
 
 open-uri는 웹사이트의 코드를 가져오는 것 이외에 추가적으로 웹사이트의 헤더 정보도 가져올 수가 있다. 다음 예제는 open-uri를 이용해서 웹사이트를 요청하고 응답받은 헤더의 정보를 확인하는 코드이다.
 
@@ -50,7 +50,7 @@ open("http://www.ruby-lang.org/en") {|f|
   }
 ```
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/0c45882e-5d7c-4849-867c-9d2ab28010a3)
+![](http://asset.hibrainapps.net/saltfactory/images/0c45882e-5d7c-4849-867c-9d2ab28010a3)
 
 이렇게 open-uri를 이요하면 웹 사이트의 코드를 가져오는 것을 할 수 있다. 필요한 기법 1번째를 해결했으니 이제 2번째를 해결할 차례이다. 웹사이트를 분석한다는 말은 parsing이라는 말과 동일하다. 그리고 좀더 구체적으로 우리가 원하는 컨텐츠는 HTML 속에 있는 특정 HTML element 안에 있는 글자들이다. 자연어 처리로 이 방법을 처리하기 위해서는 html 코드를 모두 없애고 (strip) 뛰어쓰기 단위로 단어를 잘라서 처리를 하겠지만, 난 프로그램이 가볍고 코드가 간단하기를 원했다. 그래서 XPath를 사용할수 있는 HTML 파서를 찾아야했고 Nokogiri가 XPath를 지원하여서 HTML 파서로 Nokogiri를 사용했다. HTML 파서의 종류는 다양하기 때문에 자신에게 필요한 파서를 선택하면 될 것 같다. 참고로, python으로 만들었을때는 BeautifulSoup을 이용했다.
 
@@ -62,7 +62,7 @@ sudo gem install nokogiri
 
 Nokogiri를 이용한 HTML 파싱 테스트를 http://www.ruby-lang.org/en/community/ 사이트를 살펴보자.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/37f7b39c-1ac9-4836-8e19-bc5960283950)
+![](http://asset.hibrainapps.net/saltfactory/images/37f7b39c-1ac9-4836-8e19-bc5960283950)
 
 이 커뮤니티 사이트에서 제목만을 가져오고 싶다고 할때 HTML구조를 살펴보면 `<div id="content"><dl><dt><a>` 태그 밑에 제목들이 있다는 것을 알 수 있다. 이를 XPath로 접근하고자 할때 `//div[@id="content"]/dl/dt/a` 로 접근을 할 수 있는데 Nokogiri에서는 다음과 같이 표현할 수 있다.
 
@@ -79,5 +79,5 @@ end
 
 이 코드를 실행시키면 다음과 같이 제목만 출력되는 것을 확인 할 수 있다.
 
-![](https://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/085469a1-00c1-4b52-bb86-f4d7dd48ca9c)
+![](http://asset.hibrainapps.net/saltfactory/images/085469a1-00c1-4b52-bb86-f4d7dd48ca9c)
 
