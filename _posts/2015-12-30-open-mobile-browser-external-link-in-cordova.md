@@ -11,7 +11,7 @@ tags:
   - ionic
 comments: true
 images:
-  title: 'http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/b8a17dba-2920-478c-9012-b5ab6f7deb6c'
+  title: 'http://blog.hibrainapps.net/saltfactory/images/b8a17dba-2920-478c-9012-b5ab6f7deb6c'
 ---
 
 

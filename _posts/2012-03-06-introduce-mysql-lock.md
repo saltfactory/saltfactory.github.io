@@ -51,9 +51,9 @@ Max_data_length: 281474976710655
 1 row in set (0.00 sec)
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/624937f2-388a-49d9-b07c-04142fcf9374)
+![](http://blog.hibrainapps.net/saltfactory/images/624937f2-388a-49d9-b07c-04142fcf9374)
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/5fe51055-31f9-4ba9-baea-e4d5bb065143)
+![](http://blog.hibrainapps.net/saltfactory/images/5fe51055-31f9-4ba9-baea-e4d5bb065143)
 
 두 세션이 열린 터미널을 살표보면 다음과 같이 두번째에 write lock을 실행하려면 명령어가 끝나지 않는 것을 확인 할 수 있다. 서버 단에서 Lock을 기다리는 쿼리의 목록을 볼 수 있는데 다음 명령어로 서버 수준에서 락을 기다리는 쿼리를 확인할 수 있다.
 
@@ -93,7 +93,7 @@ Command: Query
 UNLOCK TABLES;
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/76796970-5a7e-4ebb-8e2e-9fcb7e0e5031)
+![](http://blog.hibrainapps.net/saltfactory/images/76796970-5a7e-4ebb-8e2e-9fcb7e0e5031)
 
 read 락이 해지되면서 locked 되어 있던 5번 쓰레드의LOCK TABLE messages WRITE; 쿼리가 실행되면서 messages 테이블에 write 락이 명시적으로 설정되었다. open tables from {데이터베이스 명} 이라는 명령어로 현제 cached 된 테이블의 정보를 볼 수 있는데 지금 현재 테이블이 LOCK 되어 사용 중이라는 것을 확인 할 수 있다.
 

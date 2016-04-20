@@ -18,7 +18,7 @@ disqus_identifier : http://blog.saltfactory.net/99
 
 터미널을 사용할때 프롬프트(Prompt)는 많은 정보를 포함할 수 있다. bash shell 에서 프롬프트는 `$PS1`이라는 shell 변수에 들어있다. 다음은 Mac의 터미널을 열면 기본적으로 나타나는 프롬프트이다. `$PS1`에 어떤 정보가 저장되어 있는지 확인하기 위해서 `$PS1` 변수를 echo 하면 다음과 같이 나타난다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/d5d69554-a43b-4e6f-98fd-66f800153d77)
+![](http://blog.hibrainapps.net/saltfactory/images/d5d69554-a43b-4e6f-98fd-66f800153d77)
 
 * `\h` 는 현재의 호스트의 이름(hostname)을 나타내는 것이다.
 * `\W` 는 현재의 위치의 디렉토리(Working Directory)를 나타내는 것이다.
@@ -36,7 +36,7 @@ Mac에서 디퐅트 프롬프트는 다음 코드 들이 저장되어 있다.
 {호스트이름}:{현재 디렉토리} {로그인된 사용자}$
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/3d456f9d-7fa4-44cb-9460-0493d7e8dc88)
+![](http://blog.hibrainapps.net/saltfactory/images/3d456f9d-7fa4-44cb-9460-0493d7e8dc88)
 
 만약 프롬프트에 현재의 시간을 나타내고 싶으면 `\t` 를 사용하면 된다. 다음 예는 `({현재시간}) {로그인된 사용자}$` 를 나타내려고 할때이다.
 
@@ -44,7 +44,7 @@ Mac에서 디퐅트 프롬프트는 다음 코드 들이 저장되어 있다.
 export PS1="(\t) \u$ "
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/f6f02332-74ce-4b75-b533-fb629d93e2c0)
+![](http://blog.hibrainapps.net/saltfactory/images/f6f02332-74ce-4b75-b533-fb629d93e2c0)
 
 ## Prompt 코드 정보  
 
@@ -106,7 +106,7 @@ export PS1="(\t) \u$ "
 export PS1="\e[0;31m[\u@\h \W]\$ \e[m "
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/d54e1989-988f-4884-a949-8ad6e24ce33f)
+![](http://blog.hibrainapps.net/saltfactory/images/d54e1989-988f-4884-a949-8ad6e24ce33f)
 
 
 색상 정보를 이렇게 복잡한 식으로 넣었서 사용한다면 작성하기도 어렵고 혼란스럽게 된다. 그래서 다음과 같이 색상코드만 따로 변수에 만들어서 사용한다. 다음 코드를 `~/.bashrc` 나 `~/.profile`에 저장한다.
@@ -146,7 +146,7 @@ C_BG_LIGHTGRAY="\[\033[47m\]"
 export PS1="$C_CYAN\h:$C_YELLOW\W \$$C_DEFAULT "
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/5bfe330e-ebef-4e8b-bec2-a1998825aed2)
+![](http://blog.hibrainapps.net/saltfactory/images/5bfe330e-ebef-4e8b-bec2-a1998825aed2)
 이제 호스트이름 디렉토리 그리고 명려어의 색상을 모두 자신이 원하는대로 변경할 수 있게 되었다.
 
 ## 참조

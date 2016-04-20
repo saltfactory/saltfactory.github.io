@@ -151,7 +151,7 @@ public void testIndex() throws Exception {
 
 RestTemplate.getForObject()로 HttpMethod.GET을 요청한 결과는 정상적이고 컨트롤르에서 반환한 JSON을 로깅을 통해서 확인할 수 있다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/c05430ec-0c35-410d-802d-5d7f690241c8)
+![](http://blog.hibrainapps.net/saltfactory/images/c05430ec-0c35-410d-802d-5d7f690241c8)
 
 RestTemplate을 사용하여 API 서버에서 JSON 문자열로 반환받게 되면 우리는 이것을 어플리케이션에서 객체 타입으로 다시 JSON 라이브러리를 사용하여 POJO 객체로 변환하는 작업을 할 것이다. 하지만 RestTemplate은 이런 과정을 자동으로 할 수 있다. 우리는 테스트를 위해서 반환 타입을 String.class로 지정하였지만 만약 API를 요청한 결과를 객체에 매핑한 Article 형태로 받고 싶다면 반환 타입에 객체 타입을 지정하면 자동으로 JSON 결과를 객체로 매핑해서 반환해준다.
 
@@ -180,7 +180,7 @@ public void testIndex() throws Exception {
 ```
 브레이크 포인트를 가지고 RestTemplate가 컨트롤러에서 반환한 결과를 살펴보자.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/9d4ed742-7343-4402-953b-7458b8c331f1)
+![](http://blog.hibrainapps.net/saltfactory/images/9d4ed742-7343-4402-953b-7458b8c331f1)
 
 restTemplate.getObjectFor()에 반환되는 객체의 타입을 지정하면 JSON을 자동으로 반한되는 객체로 매핑해주는 것을 확인할 수 있다.
 
@@ -361,7 +361,7 @@ public void testPatch() throws Exception {
 
 에러를 보게 된다. 이것은 RestTemplate이 기본적으로 **PATCH** 메소드를 지원하고 있지 않기 때문이다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/cf94c814-e982-4af8-ace2-0311ed6342d6)
+![](http://blog.hibrainapps.net/saltfactory/images/cf94c814-e982-4af8-ace2-0311ed6342d6)
 
 RestTemplate은 **ClientHttpRequest** 감싸고 있는 모듈인데 기본적으로 [SimpleClientHttpRequestFactory](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/http/client/SimpleClientHttpRequestFactory.html)로 만들어져 있다. 우리는 [Apache HttpComponents HttpClient](http://hc.apache.org/httpcomponents-client-ga/)를 만들 때 사용하는 [HttpComponentsClientHttpRequestFactory](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/http/client/HttpComponentsClientHttpRequestFactory.html)으로 ClientHttpRequest를 바꾸어서 사용할 것이다. RestTemplate를 생성할 때 ClientHttpRequestFactory를 변경하여 생성한다. HttpComponentsClientHttpRequestFactory는 Apache HttpClient 라이브러가 필요하다. guild.gradle 파일을 열어서 라이브러리를 추가한다.
 
@@ -459,7 +459,7 @@ public void testPatch() throws Exception {
 
 브레이크 포인트를 사용하여 컨트롤러에서 확인하면 RestTemplate을 사용하여 요청한 PATCH 요청이 정상적으로 컨트롤러에 요청되는 것을 확인할 수 있다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/acd32c54-c51c-494d-a6e3-3638d0c9ec15)
+![](http://blog.hibrainapps.net/saltfactory/images/acd32c54-c51c-494d-a6e3-3638d0c9ec15)
 
 ## 결론
 

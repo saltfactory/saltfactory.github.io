@@ -28,7 +28,7 @@ Big Data, HTML5, Cloud, NFC 주제어를 키워드를 가지고 있어서 정말
 
 이미 PaaS(Platform as a Service), SaaS(Software as a Service), IaaS(Infrastructure as a Service) 가 화두가 되고 있는 시점에서 약간 진부한 이야기일수도 있지만 최근 사례를 중심으로 Apple, Google, IBM 그리고 MS 를 비교하여 표를 만들어서 소개해주서 Keynote가 오픈되면 한번쯤 참고해도 좋을 자료가 될 것 같다는 생각이든다. 다만 Paas, SaaS, IaaS 라는 용어가 명시적으로 나와서 설명이 되지 않아서 조금 아쉽기는 했지만, 강연 내용에 그 내용도 포함되어 있었다. 듣는 사람에 따라서는 모바일 사업이 대중화되면서 OS에 종속적이고 폐쇄적인 플랫폼에서 오픈 플랫폼 변경되어 있는 것에 이미 익숙한 개발자나 IT 종사자들에게는 이미 익숙한 내용이였을 수도 있고, 처음 모바일이나 오픈 플랫폼 위에서 사업을 처음 준비하는 분들에게는 좋은 자료가 되었을 거라고 생각이든다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/e50f05a4-7dcb-4b1d-98eb-641bacdefb5e)
+![](http://blog.hibrainapps.net/saltfactory/images/e50f05a4-7dcb-4b1d-98eb-641bacdefb5e)
 
 ## 스마트기기를 위한 Big Data 전략 가이드
 
@@ -40,7 +40,7 @@ Big Data, HTML5, Cloud, NFC 주제어를 키워드를 가지고 있어서 정말
 
 강연자가 현재 전략 업무에 종사하시는 분이시라 Big Data의 기술적인 디테일 설명보다는 빅 데이터 전략 방향에대해 강연이 진행이 되었다. 개인적으로는 좀더 디테일한 기술적 소개를 듣고 싶었지만, 빅데이터를 처음 접하는 사람에게는 리뷰가 될 수 있는 세션이였던것 같다. 모바일 서비스 분야에서 뿐만 아니라 빅데이터의 잠재적 가치와 활용사례 등을 좀더 자세히 듣고 싶었는데 이에 대한 아쉬움은 5월 31일에 있는 3Big Technology에서 얻을 수 있을것 같다는 생각이 들었다. 세션 내용은 대부분 포괄적인 리뷰 내용들이였던 것 같다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/0f16d1a3-3a62-41f0-bdc2-ccef0ef5c998)  
+![](http://blog.hibrainapps.net/saltfactory/images/0f16d1a3-3a62-41f0-bdc2-ccef0ef5c998)  
 
 ## 모바일 Cloud 전쟁과 플랫폼 전쟁
 
@@ -52,7 +52,7 @@ Big Data, HTML5, Cloud, NFC 주제어를 키워드를 가지고 있어서 정말
 
 앞에 세션들과 다르게 이번 세션은 마인드 맵으로 강연이 진행되었는데, 기존의 파워포인트의 강연과 달라서 참신했던것 같다. 그리고 현 개발자로 종사하고 계시는 분이시라 dropbox에 관련된 샘플 코드를 안드로이드 시뮬레이터를 돌려서 보여주시는 기술적 소개도 잠시 있었다. 이 세션에는 주로 dropbox, evernote 등의 현재 클라우드 대표 서비스에 대해서 소개가 되어졌다. 이번 세션도 okjsp 에서 발표하는 세션이라 나름 디테일한 기술적 내용을 들을 수 있을거라 예상했는데 클라우드 앱과 서비스의 소개만 이루어 져서 아쉬웠는데 아마도 이번 컨퍼런스 자체가 이슈와 트랜드에 대한 전반적인 리뷰나 오버뷰를 컨셉트로 잡은 것 같다는 생각이 들었다. 디테일한 기술적인 내용은 아쉬웠지만 모바일 서비스를 이제 시작하려고 준비하는 분들에게는 간략한 트랜드 소개가 되는 자리였을 것 같다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/e6a5aa88-da3f-4f24-9180-c4f6a5c48e0c)
+![](http://blog.hibrainapps.net/saltfactory/images/e6a5aa88-da3f-4f24-9180-c4f6a5c48e0c)
 
 ## NFC의 과거, 현재, 미래라는 세션
 
@@ -63,7 +63,7 @@ NFC의 과거, 현재, 미래라는 세션에는 다음과 같은 주제로 강�
 
 사실 이번 컨퍼런스에 참석하게된 가장 큰 이유가 바로 이 세션 때문이였다. 연구하면서 궁금했던 것이 NFC(Near Field Communication)로 결제에 관한 금융서비스가 아닌 데이터를 서로 주고 받을 수 있는 통신으로 사용할 수 있느냐는 것이였다. 하지만 지금까지 NFC에 대한 이슈는 많았지만 컨퍼런스나 세미나에 참석할 기회가 없었다. 한때 급속하게 화두에 올랐다가 어느순간 잠잠해진 이슈인데 그 이유도 궁금했었기 때문이다. 발표자는 이러한 궁금증을 잘 요약해서 설명해주셔 얻고 싶은 답을 조금 얻고 갈 수 있게 되었다. 단순하게 데이터 커뮤니케이션을 할 수 있는 모델인줄 알았는데 실제는 WiFi나 블루투스처럼 쉽게 데이터를 주고 받을 수 있는 것이 아니라는 생각이 들었다. 그리고 왜 이슈로 되었다가 다시 잠잠해질수 밖에 없었는지에 대해서 간략하게 말씀해주셨다. 발표 내용에 대해서는 자세히 언급하지 않을 생각이다. 나중에 강연자료가 업로드가 되면 링크로 대신할 생각이다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/ab9bf1ba-c7c5-4f07-b13d-ea7b11a490a6)
+![](http://blog.hibrainapps.net/saltfactory/images/ab9bf1ba-c7c5-4f07-b13d-ea7b11a490a6)
 
 ## 결론
 

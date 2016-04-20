@@ -14,7 +14,7 @@ comments: true
 redirect_from: /221/
 disqus_identifier: 'http://blog.saltfactory.net/221'
 images:
-  title: 'http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/ccfbb118-993b-4844-ae67-7fa940fbf416'
+  title: 'http://blog.hibrainapps.net/saltfactory/images/ccfbb118-993b-4844-ae67-7fa940fbf416'
 ---
 
 ## 서론
@@ -30,11 +30,11 @@ images:
 openssl genrsa 1024 > key.pem
 ```
 
-![개인키발급](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/d1bde966-6342-4a77-adc7-34f61dca01a3)
+![개인키발급](http://blog.hibrainapps.net/saltfactory/images/d1bde966-6342-4a77-adc7-34f61dca01a3)
 
 이렇게 만들어진 파일을 열어보면 다음과 같다. RSA로 **PRIVATE KEY**로 만들어진 것을 확인할 수 있다.
 
-![개인키발급결과](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/a4ba4b01-e230-42e8-b54f-2a8148345b5b)
+![개인키발급결과](http://blog.hibrainapps.net/saltfactory/images/a4ba4b01-e230-42e8-b54f-2a8148345b5b)
 
 ## Cert 인증서 파일 생성하기
 
@@ -44,11 +44,11 @@ openssl genrsa 1024 > key.pem
 openssl req -x509 -new -key key.pem > cert.pem
 ```
 
-![인증서 파일 생성](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/9752cddd-df1d-4d4d-85cb-2f2febf06bed)
+![인증서 파일 생성](http://blog.hibrainapps.net/saltfactory/images/9752cddd-df1d-4d4d-85cb-2f2febf06bed)
 
 인증서를 만들기 위해서는 몇가지 기입해야할 정보가 있다. 공인 인증기관에서 만드는 곳에서도 이와 동일한 항목들을 받아서 만들어지는데 OpenSSL로 인증서를 만드는 기관은 바로 자신이므로 항목에 입력을하면 디지털 인증서가 만들어진다. 물론 공인된 인증서는 아니다. 인증서 파일을 열어보면 다음과 같다.
 
-![인증서 파일 생성 결과](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/ebdeae21-6eca-4dc0-a059-2215b6f61eab)
+![인증서 파일 생성 결과](http://blog.hibrainapps.net/saltfactory/images/ebdeae21-6eca-4dc0-a059-2215b6f61eab)
 
 ## Http 서버 만들기
 
@@ -113,12 +113,12 @@ app.post('/login', function (req, res){
 node app.js
 ```
 
-![http 서버 실행](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/7705df17-7207-4233-a5a9-f8b163ba4670)
+![http 서버 실행](http://blog.hibrainapps.net/saltfactory/images/7705df17-7207-4233-a5a9-f8b163ba4670)
 
 이렇게 http 서버와 로그인 서비스를 만들고 나서 http 로 전송되는 패킷을 캡쳐해보자. 패킷캡쳐는 WireShark라는 툴을 사용하면 간단하게 캡쳐할 수 있다.
 우리는 POST로 userId와 password를 넘기는데 이것을 캡쳐하기로 한다.
 
-![패킷분석](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/45898551-a7a5-4755-9252-683baf339a68)
+![패킷분석](http://blog.hibrainapps.net/saltfactory/images/45898551-a7a5-4755-9252-683baf339a68)
 
 어떤가? 아주 깜짝 놀라는 결과를 얻게 될 것이다. 패킷캡처 툴로 아주 간단하게 userId와 password를 알아낼 수 있다. 간단하고 보안상 문제되지 않는 데이터는 http POST로 암호화 없이 전송해도 괜찮지만, 로그인 정보는 보안상 아주 중요한 문제가 된다. 그래서 우리는 위에서 만든 디지털 보안 인증서를 가지고 https를 구현해보기로 한다.
 
@@ -192,13 +192,13 @@ node app.js
 
 브라우저를 열어서 두가지모두 접근해보자 http://localhost/login 과 https://localhost/login 으로 접근한다. 어떠한가 https로 접근하면 다음과 같이 인증서를 확인할 수 있다.
 
-![https 요청](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/cc64fd88-f56f-47d2-8d66-7678c9de6518)
+![https 요청](http://blog.hibrainapps.net/saltfactory/images/cc64fd88-f56f-47d2-8d66-7678c9de6518)
 
-![https 요청 결과](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/10ab5eb3-66a8-44e3-83d7-7eab12b3adf5)
+![https 요청 결과](http://blog.hibrainapps.net/saltfactory/images/10ab5eb3-66a8-44e3-83d7-7eab12b3adf5)
 
 그럼 패킷은 과연 암호화 되어서 날아가는지 확인해보자. 위와 마찬가지로 WireShark를 사용한다. WireShark에서 패킷을 분석하기 위해서 여러가지 필터 옵션을 추가할 수 있는데 http.request.method=="POST"로 하면 http로 요청되는 POST 데이터를 잡을 수 있다. 하지만 https 옵션이 없기 때문에 tpc.port=443으로 필터를 넣고 캡처했다.
 
-![https 패킷분석](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/57076989-9081-417f-aa4f-3a51a03bf353)
+![https 패킷분석](http://blog.hibrainapps.net/saltfactory/images/57076989-9081-417f-aa4f-3a51a03bf353)
 
 캡처한 패킷을 살펴보면 모두 TLS로 패킷이 암호화 되어 있는 것을 확인할 수 있다.
 

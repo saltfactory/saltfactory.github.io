@@ -12,7 +12,7 @@ tags:
   - random
 comments: true
 images:
-  title: 'http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/fe9e56f7-48e2-4d5a-b035-de7a33d9ea10'
+  title: 'http://blog.hibrainapps.net/saltfactory/images/fe9e56f7-48e2-4d5a-b035-de7a33d9ea10'
 ---
 
 ## 서론
@@ -81,7 +81,7 @@ Not enough random bytes available.  Please do some other work to give
 the OS a chance to collect more entropy! (Need 275 more bytes)
 ```
 
-![not enough random bytes](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/bd894e86-51e7-4cc0-a9db-3c17a6a86aa0)
+![not enough random bytes](http://blog.hibrainapps.net/saltfactory/images/bd894e86-51e7-4cc0-a9db-3c17a6a86aa0)
 
 위의 결과와 같이 docker에서 gpg 개인키를 생성할 때, 랜덤 바이트가 부족하다는 메세지를 출력하고 더이상 진행이 되지 않는다. 난수를 발생시키기 위해서 키보드나 마우스를 움직이라고 하는데 아무리 키보드를 두드려도 다음으로 진행이 되지 않는다.
 
@@ -185,7 +185,7 @@ sub   2048R/70100803 2015-07-16
 
 ```
 
-![gpg 키생성 성공](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/9c42d065-5638-4323-8103-f575800bd3e8)
+![gpg 키생성 성공](http://blog.hibrainapps.net/saltfactory/images/9c42d065-5638-4323-8103-f575800bd3e8)
 
 
 ## GnuPG Key 목록 보기
@@ -203,7 +203,7 @@ gpg --list-keys
 gpg --list-secret-keys
 ```
 
-![gpg list keys](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/f30ffc31-0505-43e5-8753-21134f32360c)
+![gpg list keys](http://blog.hibrainapps.net/saltfactory/images/f30ffc31-0505-43e5-8753-21134f32360c)
 
 ## gpg Key를 사용하여 파일 암호화하기
 
@@ -213,7 +213,7 @@ gpg --list-secret-keys
 gpg --output /data/seed.data.gpg --encrypt --recipient saltfactory /data/seed.data
 ```
 
-![파일 암호화 결과 ](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/3ac1a8a8-e3ba-4c22-a33d-a23c25f508be)
+![파일 암호화 결과 ](http://blog.hibrainapps.net/saltfactory/images/3ac1a8a8-e3ba-4c22-a33d-a23c25f508be)
 
 ## gpg Key를 사용하여 파일 복호화하기
 
@@ -232,7 +232,7 @@ gpg --output /data/seed.data --decrypt /data/seed.data.gpg
 
 이렇게 복호화된 파일은 원래 파일과 동일하다.
 
-![파일복호화 결과](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/4c536675-c8df-4edf-87f6-50cd5215ffad)
+![파일복호화 결과](http://blog.hibrainapps.net/saltfactory/images/4c536675-c8df-4edf-87f6-50cd5215ffad)
 
 
 ## 공개키 배포
@@ -243,7 +243,7 @@ gpg --output /data/seed.data --decrypt /data/seed.data.gpg
 gpg --armor --output demo-server-gpg.pub --export "saltfactory"
 ```
 
-![gpg export public key](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/7ee72c4d-c8a9-48fb-873d-68b9000f944d)
+![gpg export public key](http://blog.hibrainapps.net/saltfactory/images/7ee72c4d-c8a9-48fb-873d-68b9000f944d)
 
 이렇게 생성한 공개키를 다른 서버에 전송해서 다음과 같이  gpg 데이터베이스에 임포트하여 사용할 수 있다.
 
@@ -257,7 +257,7 @@ gpg --import demo-server-gpg.pub
 
 생성한 GPG key를 삭제하고 싶을 경우는 **--delete-secret-key**와 **--delete-key**로 할 수 있다. 키 삭제는 반드시 개인키를 먼저 삭제해야한다. 만약 **--delete-key**를 먼저하게 되면 개인키가 있다는 메세지를 보이고 삭제되지 않는다.
 
-![delete key 에러](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/f01a3a07-9f3f-42cd-957c-7e8c60bf47b6)
+![delete key 에러](http://blog.hibrainapps.net/saltfactory/images/f01a3a07-9f3f-42cd-957c-7e8c60bf47b6)
 
 개인키부터 삭제를 해보자. **--delete-secret-key** 뒤에 ID를 입력한다.
 
@@ -267,7 +267,7 @@ gpg --delete-secret-key "saltfactory"
 
 개인키가 삭제되더라도 공개키가 삭제가 되지 않는다는 것을 주의하자.
 
-![secret key 삭제](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/f0afb043-3855-4290-bc5f-f1c59f1fd8a9)
+![secret key 삭제](http://blog.hibrainapps.net/saltfactory/images/f0afb043-3855-4290-bc5f-f1c59f1fd8a9)
 
 이제 공개키를 삭제한다.
 
@@ -276,7 +276,7 @@ gpg --delete-key "saltfactory"
 ```
 이제 GPG Key가 모두 삭제 되었다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/a753cd41-af02-4a22-9b5a-8ba9bbaed3bb)
+![](http://blog.hibrainapps.net/saltfactory/images/a753cd41-af02-4a22-9b5a-8ba9bbaed3bb)
 
 ## 결론
 

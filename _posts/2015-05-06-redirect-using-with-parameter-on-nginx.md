@@ -37,7 +37,7 @@ override func viewDidLoad() {
 ```
 
 하지만 me2day 서비스가 종료되면서 인터넷 상에서 디이상 앱 속에 넣어둔 URL은 유효한 주소가 되지 못한다. 실제로 me2day 서비스는 종료되었고, URL을 요청하면 다음과 같은 화면이 나타난다.
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/c3e8f451-46b0-47cc-8200-3c5277eff664)
+![](http://blog.hibrainapps.net/saltfactory/images/c3e8f451-46b0-47cc-8200-3c5277eff664)
 아마도 앱을 업데이트하지 않는 이상, 사용자들이 개발자의 홈페이지를 절대 열어볼 수 없을 것이다. me2day DNS 서버와 웹 서버 모두 개인이 가지고 있는 서버들이 아니라 redirect 설정도 할 수 없는 문제가 생긴다. 유일한 해결 방법은 URL 하나를 변경하기 위해 앱을 다시 빌드해서 버전을 올려 스토어에 등록을 해야한다. 우리는 이런 문제를 해결하기 위해서 [NginX의 rewrite 모듈 사용](http://nginx.org/en/docs/http/ngx_http_rewrite_module.html)하여 외부 링크를 중개하는 웹 서버 환경을 구축하였다.
 
 ## NginX의 rewrite 사용하기
@@ -123,7 +123,7 @@ server {
 ```
 
 이제 앱에서 http://me2day.net/saltfactory 라는 유효하지 않는 URL을 요청하더라도 NginX 중간자가 새로운 http://blog.saltfactory.net 으로 rewrite 시켜주기 때문에 앱을 수정하지 않고도 외부 URL 링크 문제를 해결할 수 있다.
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/7683239e-4dac-4b74-95ae-87fb40727d56)
+![](http://blog.hibrainapps.net/saltfactory/images/7683239e-4dac-4b74-95ae-87fb40727d56)
 
 ## 결론
 

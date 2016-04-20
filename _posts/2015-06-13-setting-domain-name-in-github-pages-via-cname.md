@@ -10,7 +10,7 @@ tags:
   - dns
 comments: true
 images:
-  title: 'http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/a3b92191-fdd4-442f-9529-ff425bdcd419'
+  title: 'http://blog.hibrainapps.net/saltfactory/images/a3b92191-fdd4-442f-9529-ff425bdcd419'
 ---
 
 
@@ -47,7 +47,7 @@ GitHub의 **DNS Provider**  IP 주소는 다음과 같다.
 
 자신의 도메인네임의 **호스트 설정**에서 자신의 **호스트 이름**에 **IP 주소**를 위의 것 중에 하나로 입력한다.
 
-![gabia ](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/2473d210-b885-4f38-8f1d-849930062a1c)
+![gabia ](http://blog.hibrainapps.net/saltfactory/images/2473d210-b885-4f38-8f1d-849930062a1c)
 
 ## CNAME 파일
 
@@ -79,7 +79,7 @@ blog.saltfactory.net
 * **별칭(alias)** : blog
 * **값/위치** : saltfactory.github.io.
 
-![cname record](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/cafa973b-e352-4669-a19d-af2f9e079f41)
+![cname record](http://blog.hibrainapps.net/saltfactory/images/cafa973b-e352-4669-a19d-af2f9e079f41)
 
 이 때 주의해야할 점은 **값/위치**에 **saltfactory.github.io.** 마지막에 `.`이 추가 되어야한다는 것이다.
 

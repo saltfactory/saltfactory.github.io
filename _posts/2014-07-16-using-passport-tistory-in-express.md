@@ -343,29 +343,29 @@ node bin/www
 
 http://127.0.0.1:3000
 
-![Screen Shot 2014-07-18 at 9.54.43 AM.png](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/dcd4716d-4a6b-404f-a340-30352cad2a32)
+![Screen Shot 2014-07-18 at 9.54.43 AM.png](http://blog.hibrainapps.net/saltfactory/images/dcd4716d-4a6b-404f-a340-30352cad2a32)
 
 http://127.0.0.1:3000/login
 
-![Screen Shot 2014-07-18 at 9.54.46 AM.png](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/c764a59b-21db-45e9-a8ef-4fb14891ba39)
+![Screen Shot 2014-07-18 at 9.54.46 AM.png](http://blog.hibrainapps.net/saltfactory/images/c764a59b-21db-45e9-a8ef-4fb14891ba39)
 
 http://127.0.0.1:300/login 에서 ***Login with Tistory*** 링크를 눌렀을 때
 
-![Screen Shot 2014-07-18 at 10.07.48 AM.png](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/1c8e7763-ad6a-4a25-8497-56b9793410e5)
+![Screen Shot 2014-07-18 at 10.07.48 AM.png](http://blog.hibrainapps.net/saltfactory/images/1c8e7763-ad6a-4a25-8497-56b9793410e5)
 
-![Screen Shot 2014-07-18 at 9.54.49 AM.png](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/12a7558a-5803-417f-8f81-991ab4121d02)
+![Screen Shot 2014-07-18 at 9.54.49 AM.png](http://blog.hibrainapps.net/saltfactory/images/12a7558a-5803-417f-8f81-991ab4121d02)
 
 Tistory에서 클라이언트 인증이 모두 마치고 다시 callback URL로 돌아왔을 때,
 
-![Screen Shot 2014-07-18 at 9.54.52 AM.png](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/2e46ac38-a214-4471-8aa4-24bcf80d6cb2)
+![Screen Shot 2014-07-18 at 9.54.52 AM.png](http://blog.hibrainapps.net/saltfactory/images/2e46ac38-a214-4471-8aa4-24bcf80d6cb2)
 
 http://127.0.0.1:3000/account
 
-![Screen Shot 2014-07-18 at 9.54.56 AM.png](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/17e17b31-bb80-4aad-9c38-3870432c5802)
+![Screen Shot 2014-07-18 at 9.54.56 AM.png](http://blog.hibrainapps.net/saltfactory/images/17e17b31-bb80-4aad-9c38-3870432c5802)
 
 http://127.0.0.1:3000/logout
 
-![Screen Shot 2014-07-18 at 9.54.43 AM.png](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/1098b65e-13b5-4ec3-ad63-9098c1e41951)
+![Screen Shot 2014-07-18 at 9.54.43 AM.png](http://blog.hibrainapps.net/saltfactory/images/1098b65e-13b5-4ec3-ad63-9098c1e41951)
 
 실험이 이상없이 진행되면 이제부터 access_token 를 획득하였기 때문에 Tistory 오픈 API를 사용할 수 있다. 획득한 access_token은 `app.js`에 `passport.use()` 의 콜백함수에서 확인할 수 있다.
 access_token을 가지고 Tistory 오픈 API를 사용하는 방법은 다음 포스팅에서 소개하겠다.

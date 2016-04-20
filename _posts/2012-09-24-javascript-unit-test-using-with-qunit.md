@@ -23,7 +23,7 @@ QUnit은 http://qunitjs.com 에서 다운 받을 수 있다. 그리고 http://be
 먼저 Javascript는 브라우저의 Javascript 인터프리터 엔진이 필요하기 때문에 브라우저에 HTML 파일을 생성해서 포함해야지만 Javascript가 동작하는 것을 확인을 할 수 있기 때문에 index.html 만든다. (나중에 따로 포스팅을 하겠지만 브라우저 없이도 Javascript 디버깅이 가능하다. 이 포스팅은 일반적으로 Javascript 단위 테스트를 하는 방법을 다루기 위해서 브라우저 없이 디버깅하는 방법은 다음 포스팅에 다룰 것이다.)
 테스트할 파일의 구조는 다음과 같다. JSUnitTestTutorial 안에 index.html 파일이 있고 lib 디렉토리 안에 jQuery와 QUnit 파일들이 존재한다. 그리고 내가 테스트하기 위한 Javascript 파일은 test 라는 디렉토리에 생성하기로 한다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/91791680-93a3-4181-8112-6b75b5a10bff)
+![](http://blog.hibrainapps.net/saltfactory/images/91791680-93a3-4181-8112-6b75b5a10bff)
 
 ### Javasctipt 테스트할 수 있는 HTML 파일
 
@@ -48,7 +48,7 @@ QUnit은 http://qunitjs.com 에서 다운 받을 수 있다. 그리고 http://be
 
 위 index.html 파일을 생성했으면 브라우저를 열어서 확인해보자. 테스트의 편리함을 위해서 Coda 2를 이용했다. 여러분이 편한 IDE를 선택해도 상관없고, IDE없이 터미널에서 테스트하고 브라우저를 열어서 확인해도 상관없다. 다만 Inspector가 지원되는 브라우저를 이용하길 바란다. Javascript를 개발할 때 브라우저에서 Inspector가 제공되지 않으면 디버깅하기 매우 힘들기 때문이다. 실행하면 다음과 같이 QUnit의 테스트 결과를 나타내는 UI가 로드되는 것을 확인할 수 있다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/0e176e66-a324-44d7-8490-57a9072fbbbc)
+![](http://blog.hibrainapps.net/saltfactory/images/0e176e66-a324-44d7-8490-57a9072fbbbc)
 
 지금은 아무런 테스트 코드가 작성되지 않았기 때문에 0 tests of 0 passed, 0 failed. 라는 결과가 21milliseconds 만에 출력되었다.
 이제 QUnit을 사용해서 간단한 단위 테스트를 해보자. QUnit의 테스트 함수는 test라는 함수 안에 테스트할 함수를 closure로 블럭 프로그램으로 테스트를 한다. jQuery를 사용하는 개발자에게는 익숙한 문법으로 여겨질 것이다.
@@ -65,7 +65,7 @@ test("hello test", function(){
 
 그리고 페이지를 리로드해보자. (Coda 2 를 사용해서 테스트한다면 그냥 저장을 하면 preview는 자동으로 리로드가 된다) 위 코드는 test("테스트 메소드 이름", 테스트로직 함수); 라고 생각하면 된다. 테스트할 함수 안에 ok() assert는 1=1을 비교해서 문제가 없으면 정상적으로 진행하는 코드이다. 이 코드가 실행되면 아래와 같은 결과를 볼 수 있다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/b0430c5f-6fea-466f-bd4c-72de2ea480b4)
+![](http://blog.hibrainapps.net/saltfactory/images/b0430c5f-6fea-466f-bd4c-72de2ea480b4)
 
 hello test 테스트 함수의 결과는 1 tests 가 있고 1 passed 를 했고 0 failed로 하나의 함수를 이상없이 단위 테스트를 수행했다는 결과를 보여주는데, hello test (0, 1, 1)은 0개의 에러, 1개의 성공, 1개의 테스트 함수를 의미한다. 다음과 같이 코드를 추가해보자. Javascript에서 혼돈을 일으키는 바로 Value의 비교이다. 1과 "1"의 값의 비교인데 같으면 정상적으로 passed가 될 것이지만 만약에 1 과 "1"의 value 가 다르면 fail이 발생할 것이다.
 
@@ -78,7 +78,7 @@ test("hello test", function(){
 
 다시 페이지를 리로드 해본다. 예상한 결과가 나왔는가? 아래 결과에서 보듯 Javascript에서는 1과 "1"의 value는 같다고 보고 있다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/0f024302-43f2-43b4-a04c-a418d57b685c)
+![](http://blog.hibrainapps.net/saltfactory/images/0f024302-43f2-43b4-a04c-a418d57b685c)
 
 위 코드의 단위 테스트에서는 테스트 함수 안에 2가지의 assert 테스트가 있었기 때문에 2 tests of 2 passed, 0 failed. 결과가 나타났고 hello test(0, 2, 2)로 에러 0개, 성공 2개, 테스트 2개로 확인할 수 있다.
 
@@ -98,7 +98,7 @@ test("equal test", function(){
 });
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/f0853b6d-3bef-4693-b1c9-f2565fc8efd8)
+![](http://blog.hibrainapps.net/saltfactory/images/f0853b6d-3bef-4693-b1c9-f2565fc8efd8)
 
 ### deepEqual() assert
 
@@ -117,7 +117,7 @@ test("equal test", function(){
 });
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/865252e7-37fe-4c01-acfc-24eb376c7ce3)
+![](http://blog.hibrainapps.net/saltfactory/images/865252e7-37fe-4c01-acfc-24eb376c7ce3)
 
 deepEqual()을 가지고 1과 "1"을 서로 비교했을때는 equal과 다르게 두 입력값의 원시 데이터타입, 오브젝트, 정규식등을 검사해서 다르다는 것을 확인하기 때문에 equal과 1failed이 발생 하였다.
 
@@ -142,7 +142,7 @@ test("stringEqual test", function(){
 });
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/2c724203-e3b9-4b89-8d1f-6fd239303d18)
+![](http://blog.hibrainapps.net/saltfactory/images/2c724203-e3b9-4b89-8d1f-6fd239303d18)
 
 예상했듯 strictEqual()은 1과 "1"의 value와 type을 동시에 비교하기 때문에 결과가 fail이 발생하는 것을 확인할 수 있다.
 
@@ -161,11 +161,11 @@ test("hello test", function(){
 });
 ```  
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/45c9b333-a9a3-4732-a03a-bfa8fa28375b)
+![](http://blog.hibrainapps.net/saltfactory/images/45c9b333-a9a3-4732-a03a-bfa8fa28375b)
 
 expect()의 조건이 정상적으로 만족하면 위과 같이 문제 없이 테스트가 진행되는데 만약 assert 테스트가 4가지인데 expect를 3으로 지정하면 다음과 같은 결과를 볼 수 있다. 즉 assert는 4가지인데 expected 3 assertions를 예상했다는 에러가 발생한다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/6cc2d61f-1e5b-448c-a120-6e3000c2ec0c)
+![](http://blog.hibrainapps.net/saltfactory/images/6cc2d61f-1e5b-448c-a120-6e3000c2ec0c)
 
 ### module()
 
@@ -191,7 +191,7 @@ test( "a basic test example 4", function() {
 
 결과는 다음과 같이 나타난다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/ec5dc90e-dcb8-44b6-968a-1bea8238a454)
+![](http://blog.hibrainapps.net/saltfactory/images/ec5dc90e-dcb8-44b6-968a-1bea8238a454)
 
 Javascript는 비동기 프로그램을 간단하게 사용할 수 있는 언어로 인기를 얻고 있다. 쉽게 Event 기반의 프로그램을 만들기도 하고 callback을 사용하기도 한다. 그럼 이렇게 비동기로 동작하는 함수들은 어떻게 테스트해야할까? 다음 코드는 twitter search api를 javascript로 호출하는 간단한 예제이다. jQuery의 $.getJSON을 이용해서 트위터에 jquery가 들어있는 트윗글을 가져와서 그 결과가 0보다 큰지 확인하는 비동기 함수이다. 이때 callback 메소드를 만들고 그 안에서 데이터가 다 처리되고 난 다음에 assert를 start하게 하는 코드이다. 이 테스트를 위해서는 javascript의 콜백함수를 만드는 방법에 대한 이해가 필요할 수 있다. [Javascript 콜백 구현하기](http://blog.saltfactory.net/192) 글을 참조하면 도움이 될 것이다.
 

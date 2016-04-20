@@ -54,11 +54,11 @@ public $helpers = array('Html', 'Form');
 이제 브라우저에서 바르게 동작하는지 확인해보자.
 http://cake.saltfactory.local/posts
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/48762e77-fb8e-4e16-b83f-1820daa73e2c)
+![](http://blog.hibrainapps.net/saltfactory/images/48762e77-fb8e-4e16-b83f-1820daa73e2c)
 
 이 목록 중에서 1번째 "The title" 이라는 글을 클릭해보자. 그러면 http://cake.saltfactory.local/posts/view/1 URL이 요청될 것이다. 이 URL 요청은 PostsController의 view 메소드가 id 라는 파라미터와 함께 요청을 받아서 처리하게 된다. 이 때 Model Post에서 id 값이 1 인 post를 조회해서 처리하기 때문에 trace를 살펴보면 query 의 where 조건에 Post.id=1 인 쿼리가 실행 된 것을 확인할 수 있다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/08282493-73d2-4bfa-9f63-b74776ed7868)
+![](http://blog.hibrainapps.net/saltfactory/images/08282493-73d2-4bfa-9f63-b74776ed7868)
 
 ## Create
 
@@ -128,17 +128,17 @@ class Post extends AppModel {
 
 브라우저에서 http://cake.saltfactory.local/posts/add 라고 요청해보자. 단순하게 브라우저에 요청했으니 GET으로 요청하게 될 것이기 때문에 다음과 같이 PostsController에서 GET의 요청을 처리하는 뷰를 볼 수 있다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/7859e0d2-6646-4285-b78e-c5c29dda9cd5)
+![](http://blog.hibrainapps.net/saltfactory/images/7859e0d2-6646-4285-b78e-c5c29dda9cd5)
 
 데이터를 저장하고 Save Post 버튼을 누르면 동일한 http://cake.saltfactory.local/posts/add 로 요청하는데 POST로 요청하기 때문에 데이터를 저장하고 flash 메시지를 만들어서 index 로 리다이렉트를 할 것이다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/d5055579-5210-4e3d-a2d8-d70b5a91e194)
+![](http://blog.hibrainapps.net/saltfactory/images/d5055579-5210-4e3d-a2d8-d70b5a91e194)
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/f5d3230a-2515-4343-8f9b-03085b9fd856)
+![](http://blog.hibrainapps.net/saltfactory/images/f5d3230a-2515-4343-8f9b-03085b9fd856)
 
 만약 데이터의 값을 입력하는데 우리가 Model의 비즈니스 규칙에 맞지 않게 데이터를 입력했을 경우는 다음과 같이 validate의 체크에 의한 에러가 사용자에게 알려줄 수 있다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/9e5fc19b-c11b-4519-b0d9-008972353720)
+![](http://blog.hibrainapps.net/saltfactory/images/9e5fc19b-c11b-4519-b0d9-008972353720)
 
 ## Update
 
@@ -202,11 +202,11 @@ edit 메소드에서 Post를 찾아서 수정할 수 있도록 /app/View/Posts/e
 
 브라우저를 열어서 http://cake.saltfactory.local/posts/edit/1 을 요청해보자. 다음 그림과 같이 id 가 1인 post를 조회해서 수정할 수 있도록 edit.ctp의 Form에  데이터를 넣어서 뷰를 보여준다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/44021652-63dd-41ce-bcdd-686e657eb504)
+![](http://blog.hibrainapps.net/saltfactory/images/44021652-63dd-41ce-bcdd-686e657eb504)
 
 Save Post를 하면 index URL 요청으로 리다이렉트를 하면서 flash를 보여 줄 것이다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/65919c2d-35c6-4f70-8381-b9f2bf80ff01)
+![](http://blog.hibrainapps.net/saltfactory/images/65919c2d-35c6-4f70-8381-b9f2bf80ff01)
 
 
 ## Delete
@@ -306,7 +306,7 @@ public $helpers = array('Html', 'Form');
 
 다시 http://cake.saltfactory.local/posts 를 브라우저에서 열어보자. 이제 제법 블로그 서비스를 할 수 있는 모양을 갖추었다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/2b16d5cb-642f-4e17-becf-1ae55bbca40b)
+![](http://blog.hibrainapps.net/saltfactory/images/2b16d5cb-642f-4e17-becf-1ae55bbca40b)
 
 ## Routes 설정
 

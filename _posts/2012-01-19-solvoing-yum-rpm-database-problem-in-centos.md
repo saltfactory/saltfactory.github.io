@@ -18,7 +18,7 @@ CentOS는 enterprise 오픈소스 리눅스 서버이다. redhat의 서비스와
 
 CentOS에서 가끔 yum을 사용하다가 갑지가 yum이 이상하게 사용중에 에러가 발생할 때가 있다. yum은 rpm 패키지를 관리하는데 이 때 rpm 패키지에 관련된 정보를 사용하는 데이터베이스에 이상이 생겨서 발생하는 문제라는 것을 CentOS 커뮤니티에서 찾아볼 수 있었다. 다음 링크에가면 이 문제애 대한 thread를 확인할 수 있다. http://www.centos.org/modules/newbb/viewtopic.php?topic_id=20237
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/fd3fdffd-0cf7-4887-a98e-7835d30d785d)
+![](http://blog.hibrainapps.net/saltfactory/images/fd3fdffd-0cf7-4887-a98e-7835d30d785d)
 
 ```
 Traceback (most recent call last):
@@ -81,6 +81,6 @@ rpm --rebuilddb
 yum update
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/04d56e2b-4ff9-4bc8-960b-ef2a139ab40d)
+![](http://blog.hibrainapps.net/saltfactory/images/04d56e2b-4ff9-4bc8-960b-ef2a139ab40d)
 
 

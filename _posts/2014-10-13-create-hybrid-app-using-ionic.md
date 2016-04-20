@@ -83,7 +83,7 @@ Ionic Framework는 AngularJS를 근간에 두고 만들어졌다. Ionic에서는
 
 `ion-nav-bar`와 `ion-nav-view`를 사용하면 자동으로 새로운 View를 요청하면 다음 네비게이션이 가능한 View가 열리고 상단에 뒤로가기 버튼과 새로운 타이틀을 가지는 View가 열리게 된다. 아래 그림은 우리가 구현한 네비게이션 뷰 중에서 한 부분이다. 우리는 **뒤로가기** 버튼이 있는 네비게이션 바를 직접 구현하지 않았고 Ionic에서 제공하는 `ion-nav-bar`와 `ion-nav-view`를 사용했다. 자세한 사용법은 다음 포스팅에서 소개하려고 한다.
 
-![ion-nav-bar 예제 {width:320px}](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/000fb7b8-8789-4491-98be-b5f5ae2e251b)
+![ion-nav-bar 예제 {width:320px}](http://blog.hibrainapps.net/saltfactory/images/000fb7b8-8789-4491-98be-b5f5ae2e251b)
 
 Ionic은 뷰의 네비게이션을 위해 다른 뷰로 이동하는 것을 SPA의 routing으로 한다. 즉 다시 말해서 새로운 뷰를 불러오는 것은 AngularJS의 templates로 만들어진 HTML 페이지를 AngularJS에서 routing으로 요청하여 불러오는 것이다. 아래는 Ionic의  slidemenu sample project의 Routing을 정의한 부분이다. Ionic의 AngularJS 기반의 이런 Routing은 완벽한 SPA 구현을 할 수 있게 도와준다. Ionic의 Routing을 사용하는 방법도 다음 포스팅에 자세히 소개하려고 한다.
 
@@ -147,7 +147,7 @@ cordova platform add ios
 
 Ionic로 프로젝트를 개발할 때 HTML, JavaScript, CSS 파일이 수정될 때마다 디바이스에 빌드해서 디버깅을 한다면 빌드시간이 길어서 코드를 업데이트하는데 굉장히 많은 시간이 소요될 것이다. Ionic은 하이브리드 앱을 개발하는 프레임워크이다. 네이티브 자원을 사용하지 않는 코드는 디바이스에 빌드하지 않고 로컬 컴퓨터에서 Safari나 Chrome 브라우저를 이용해서 개발한다. 이 때 Ionic 프로젝트를 디버깅할 수 있게 앱을 실행시켜주는 서버를 구동해서 개발한다. Cordova에서는 `cordova serve`라는 명령어를 사용하여 프로젝트를 실행시키는데 이 때 웹 자원 소스가 업데이트 되면 이 명령어를 재시작해줘야한다. 하지만 `phonegap serve`와 `ionic serve` command를 이용하면 웹 자원이 수정될 때 수정된 파일을 반영해서 서버 재시작 없이 자동으로 업데이트 되기 때문에 이 명령어를 다시 실행시키지 않아도 된다. Ionic을 이용하여 개발을 진행하면 웹 자원의 디버깅을 가장 많이하는데, Safari나 Chrome의 **Developer Tool**로 디버깅을 하면 된다. 아래 그림은 `ionic serve`를 실행하고 **Chrome  Developer Tool** 로 디버깅하는 화면이이다.
 
-![chrome debugging {width:320px;}](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/e59b9d6f-ac5c-4122-b1ad-3cc630ea1a1e)
+![chrome debugging {width:320px;}](http://blog.hibrainapps.net/saltfactory/images/e59b9d6f-ac5c-4122-b1ad-3cc630ea1a1e)
 
 Ionic은 Cordova 기반의 장점을 사용할 수 있다. Cordova의 장점 중에 하나는 Plugins 이라고 생각한다. 하이브리드 앱을 개발하기 위해서는 단순하게 HTML, JavaScript, CSS 만으로는 디바이스를 제어할 수 없다. 그래서 Cordova는 네이티브 브릿지와 같은 Cordova Plugins를 제공하고 이 것을 이용하여 웹과 네이티브간의 통신을 가능하게 한다. 예를 들어 Push Notification 서비스를 앱에 구현하고 싶을 경우 Push Notification은 디바이스의 자원을 사용해야만 가능하다. PhoneGap에서는 [PhoneGap Push Plugin](https://github.com/phonegap-build/PushPlugin)을 이미 만들어 두었다. 이것을 사용하면 많은 시간을 단축하고 간단하게 Push Notification 기능을 하이브리드 앱에서 구현할 수 있다. 다음 포스팅에서 **PushPlugin**을 어떻게 설정하고 사용하는지에 대한 글도 소개할 예정이다.
 

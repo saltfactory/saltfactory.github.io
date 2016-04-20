@@ -9,7 +9,7 @@ tags:
   - rest
 comments: true
 images:
-  title: 'http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/23449058-ad31-4f64-81f4-69949124aec7'
+  title: 'http://blog.hibrainapps.net/saltfactory/images/23449058-ad31-4f64-81f4-69949124aec7'
 ---
 
 
@@ -30,7 +30,7 @@ images:
 rails new TestApp
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/34743190-6a2a-4ca5-960e-f65bbf0fea62)
+![](http://blog.hibrainapps.net/saltfactory/images/34743190-6a2a-4ca5-960e-f65bbf0fea62)
 
 TestApp 프로젝트를 생성하면 간단하게 scaffold를 사용하여 Post에 관련된 REST API를 만들어보자.
 
@@ -38,7 +38,7 @@ TestApp 프로젝트를 생성하면 간단하게 scaffold를 사용하여 Post�
 rails g scaffold Post title:string content:text
 ````
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/cc919856-863d-4bb6-a0b3-5e60a91d5490)
+![](http://blog.hibrainapps.net/saltfactory/images/cc919856-863d-4bb6-a0b3-5e60a91d5490)
 
 scaffold를 사용하여 Post 서비를 위한 기본 구조를 만들었으면 데이터베이스를 마이그레이션하여 테이블을 생성한다.
 
@@ -46,7 +46,7 @@ scaffold를 사용하여 Post 서비를 위한 기본 구조를 만들었으면 
 rake db:migrate
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/ef29b87f-070c-4c44-975c-3f61435f92e9)
+![](http://blog.hibrainapps.net/saltfactory/images/ef29b87f-070c-4c44-975c-3f61435f92e9)
 
 REST API 서버로 만든 이 프로젝트의 **PostsController**를 열어보자. 그리고 다음과 같이 코드를 추가한다. Rails는 기본적으로 크로도메인 접근을 막기 위해서 auth_token을 사용하는데 REST API 테스트를 위해서 이 부분을 skip 하도록 코드를 추가하였다. 그리고 POST 처리를 담당하는 부분에 파라미터의 처리를 위하는 코드를 추가하였다. **title**과 **content** 라는 이름의 파라미트 값을 저장하기 위해서이다.
 
@@ -100,7 +100,7 @@ curl --data "title=API 테스트&content=테스트내용" http://localhost:3000/
 
 결과는 다음과 같이 나타날 것이다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/c2ad0a13-5921-47a2-94c3-35c0c0018a1b)
+![](http://blog.hibrainapps.net/saltfactory/images/c2ad0a13-5921-47a2-94c3-35c0c0018a1b)
 
 간단히 테스트를 위한 REST API 서버가 만들어졌다. 다시 SpringBoot 프로젝트로 가보자.
 
@@ -160,18 +160,18 @@ SpringBoot 웹 어플리케이션을 다시 빌드하고 실행시켜서 브라�
 
 http://localhost:8080/posts/new
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/34eec344-cff9-4eb1-a812-e59a5d7eb0ae)
+![](http://blog.hibrainapps.net/saltfactory/images/34eec344-cff9-4eb1-a812-e59a5d7eb0ae)
 
 new.html 폼이 나타나면 입력폼에 값을 입력하고 submit을 클릭한다.
 
 
 Rails로 만든 REST API 서버의 로그를 살펴보면 **/posts.json** 으로 POST 요청이 들어와서 데이터베이스에 저장을 하고 json으로 결과를 반환한 것을 볼 수 있다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/c9626c1b-384d-42e7-a86c-e8f320a2a96e)
+![](http://blog.hibrainapps.net/saltfactory/images/c9626c1b-384d-42e7-a86c-e8f320a2a96e)
 
 REST API 서버로 부터 정상적이 JSON 응답을 받은 Spring 프로젝트의 PostsController는 restTemplate를 사용하여 POJO를 사용하여 Model에 저장하고 show.html을 화면에 보여준다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/3320dc20-1b1c-4ffa-9966-158b44798848)
+![](http://blog.hibrainapps.net/saltfactory/images/3320dc20-1b1c-4ffa-9966-158b44798848)
 
 
 ## 결론

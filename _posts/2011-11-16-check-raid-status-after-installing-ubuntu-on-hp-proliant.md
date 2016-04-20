@@ -19,9 +19,9 @@ HP ProLiant를 들여오기 전에 Ubuntu, CentOS, FreeBSD 셋 중에서 어떤 
 하나는 Ubuntu-10.04.3-server-amd64.ios 이고 하나는 HP_ProLiant_Value_Add_Software-8.70-10-6.iso 이다.
 두번재 이미지는 일종의 HP ProLiant의 관리자 소프트웨어인데 공식적으로 11.10 지원된다고 한다. 잦은 업데이트를 선호하는 사용자는 11.10에 설치하여도 무방하겠다. 다운로드는 다음 링크를 참조하면 된다 ([Ubuntu용 HP 소프트웨어 다운로드](http://h20000.www2.hp.com/bizsupport/TechSupport/SoftwareDescription.jsp?lang=en&cc=us&prodTypeId=15351&prodSeriesId=4091412&swItem=MTX-b3d56629ca784c84979546f127&prodNameId=4091432&swEnvOID=4096&swLang=8&taskId=135&mode=3))
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/8e223286-dfd1-44c8-b7d3-682d1b011e3a)
+![](http://blog.hibrainapps.net/saltfactory/images/8e223286-dfd1-44c8-b7d3-682d1b011e3a)
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/fa978771-8a55-4e45-be50-da86821d0738)
+![](http://blog.hibrainapps.net/saltfactory/images/fa978771-8a55-4e45-be50-da86821d0738)
 
 두번째 파일을 설치하지 않아도 ubuntu를 설치하는데 전혀 문제가 되지 않는다. 하지만 HP의 RAID 구성을 확인하기 위해서 필요한 hpacucli가 필요한 이것을 설치할수 있게 도와준다. 물론 인터넷에 검색해보면 이미지 없이 바로  apt-get으로 설치하는 방법도 소개한 블로그를 볼 수 있을것이다.
 
@@ -47,7 +47,7 @@ HP Smart Array Controller가 지원되는지 설치되어 있는지 확인해보
 lspci -nn | grep Array
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/7c384b65-3162-4c20-a1d5-249bcd346cc2)
+![](http://blog.hibrainapps.net/saltfactory/images/7c384b65-3162-4c20-a1d5-249bcd346cc2)
 
 다음은 디바이스 노드들을 살펴보자. 우리가 흔히 설치하는 RAID 구성 없이 일반 HDD만 여러개 일경우는 /dev/hda, /dev/hdb 나 /dev/sda, /dev/sdb 이런식으로 디바이스 노드가 추가된다. 히자만 RAID 구성을하면 /dev/c0d0, /dev/c0d1 이런식으로 된다.
 
@@ -55,7 +55,7 @@ lspci -nn | grep Array
 ls -lah /dev/cciss
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/e1189da4-bebe-4f03-9b94-31fa3b5efdd3)
+![](http://blog.hibrainapps.net/saltfactory/images/e1189da4-bebe-4f03-9b94-31fa3b5efdd3)
 
 이제 모든 Controller들을 보자. 컨트롤러에 대한 정보를 보기 위해서는 우리가 설치한 hpacucli를 사용해야한다. 결과는 다음과 같다. sn(시리얼번호)가 있어서 캡쳐 대신에 텍스트만 복사해서 넣었다.
 
@@ -75,7 +75,7 @@ hpacucli ctrl slot=0 logicaldrive all show status
 
 여기서 보면 RAID 1로 구성되어 있는 하나의 logicaldrive 1을 확인할 수 있다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/07d35001-bdfd-4f56-a784-5d0172005000)
+![](http://blog.hibrainapps.net/saltfactory/images/07d35001-bdfd-4f56-a784-5d0172005000)
 
 이제 실제 물리적인 DISK의 상태를 확인하기 위해서 다음 명령어를 실행 한다. 첫번째 bay의 DISK 1와 두번째 bay의 DISK 2 의 상태를 한눈에 확인할 수 있다.
 
@@ -83,7 +83,7 @@ hpacucli ctrl slot=0 logicaldrive all show status
 phacucli ctrl slot=0 pd all show status
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/8912033d-f389-4bc1-a1cf-d452d1fd556d)
+![](http://blog.hibrainapps.net/saltfactory/images/8912033d-f389-4bc1-a1cf-d452d1fd556d)
 
 전체적인 요약을 보기 위해서는 다음과 같이 한다.
 

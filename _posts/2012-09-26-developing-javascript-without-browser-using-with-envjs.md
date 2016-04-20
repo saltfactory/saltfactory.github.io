@@ -74,7 +74,7 @@ js> print (document.getElementById("title").innerHTML);
 
 Envjs는 거의 완벽한 브라우저 시뮬레이션을 할 수 있게 환경을 제공하고 있다. (여기서 거의라는 말은 다직 테스트하지 않은 meda 접근들을 말한다.)
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/bd57012d-e00d-41ce-bee5-18636ecdeda5)
+![](http://blog.hibrainapps.net/saltfactory/images/bd57012d-e00d-41ce-bee5-18636ecdeda5)
 
 Envjs가 브라우저라면 혹시 로컬의 파일말고 원격에 있는 웹 문서도 열수 있어야 할 것이다. 그래서 테스트를 해보았다. Envjs가 로컬파일을 로드하는 것이 아니라 다른 외부 URL을 열수 있는지 다음과 같이 이 블로그 URL으로 테스트를 해보았다.
 
@@ -88,11 +88,11 @@ js> console.log (blog_title);
 
 http://blog.saltfactory.net 의 HTML 문서 코드의 일부이다. 만약 Envjs가 브라우저와 동일하게 동작한다면 이 URL에서 HTML 문서를 열어서 파싱한 후에 DOM Element에 대한 해석을 하고 있을 것이다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/315166fb-6889-4b60-8cb8-fce1114917ff)
+![](http://blog.hibrainapps.net/saltfactory/images/315166fb-6889-4b60-8cb8-fce1114917ff)
 
 결과는 예상대로 다음과 같이 외부 URL을 window.location 속성으로 인식해서 HTML 문서를 로드해서 Javascript로 HTML 의 Element에 접근이 가능하게 되었다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/c43655aa-f0ad-4454-964a-f4859b49debf)
+![](http://blog.hibrainapps.net/saltfactory/images/c43655aa-f0ad-4454-964a-f4859b49debf)
 
 http://blog.saltfactory.net 이라는 문서에는 여러가지 javascript 파일이 포함되어 있다. 그중에서 jQuery 가 포함되어 있는데 envjs에서 로드한 HTML 문서에 포함된 jQuery를 사용할 수 있는지 테스트를 해보자. 위에 document에 접근하기 위한 selector를 jQuery의 selector로 변경해서 테스트해보자.
 
@@ -101,7 +101,7 @@ js> var blog_title = $("#overview h1:first").html();
 js> console.log (blog_title);
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/f05562f6-baf8-44d5-8885-af763234d610)
+![](http://blog.hibrainapps.net/saltfactory/images/f05562f6-baf8-44d5-8885-af763234d610)
 
 역시나 Envjs가 브라우저와 동일하게 동작하기 때문에 원격 URL에서 읽은 HTML 문서에 포함된 javascript 까지 사용할 수 있다는 것을 확인할 수 있다. 원격에 있는 javascript 말고 로컬의 javascript를 추가로 불러들여서 원격 HTML 문서에 바로 테스트를 할 수 있다. 추가적으로 로컬에 있는 javascript 파일을 로드하기 위해서는 env.rhino.js 파일을 로드한 것 처럼 load() 함수를 이용하면 된다.
 

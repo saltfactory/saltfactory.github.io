@@ -49,7 +49,7 @@ disqus_identifier : http://blog.saltfactory.net/87
 </LinearLayout>
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/650b4c40-553b-49c0-8153-7144b97d047c)
+![](http://blog.hibrainapps.net/saltfactory/images/650b4c40-553b-49c0-8153-7144b97d047c)
 
 ## 버튼 선택 여부 구현하기
 
@@ -108,8 +108,8 @@ public void onCreate(Bundle savedInstanceState) {
 </LinearLayout>
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/5af38bef-1fbe-49f9-9b9c-0a5ea31265c6)
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/001fbd79-6230-4d34-8d0f-facf663673d2)
+![](http://blog.hibrainapps.net/saltfactory/images/5af38bef-1fbe-49f9-9b9c-0a5ea31265c6)
+![](http://blog.hibrainapps.net/saltfactory/images/001fbd79-6230-4d34-8d0f-facf663673d2)
 
 이제 사용자는 버튼이 제대로 눌러졌는지를 버튼을 누르면서 확인할 수 있게 되어 버튼이 눌러졌는지 더이상 의심하지 않아도 되게 되었다. 그럼 selector를 Acitivity에서 사용하려고 할때를 살펴보면 단순히 button에다 이미지를 추가하는 방벙으로는 할수가 없다. xml에서 설정한 것과 마찬가지로 selector의 리소스를 background로 사용하면 된다.
 

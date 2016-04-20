@@ -23,9 +23,9 @@ Mac에서는 기본적으로 Apache와 PHP가 설치되어 있다. 이 포스팅
 우선 Mac에서 Apache 웹 서버를 사용하기 위해서는 GUI로 실행하는 방법과 command로 실행하는 방법 두가지가 있다.
 System preferences를 열어서 Sharing을 선택하고 Web Sharing을 활성화 시키면 Web Sharing : On으로 상태가 변경된다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/86fa3c34-44ca-49f6-8f3b-452fbc5f0ab1)
+![](http://blog.hibrainapps.net/saltfactory/images/86fa3c34-44ca-49f6-8f3b-452fbc5f0ab1)
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/51bbfdcc-6ed1-49ac-903c-481de7858f36)
+![](http://blog.hibrainapps.net/saltfactory/images/51bbfdcc-6ed1-49ac-903c-481de7858f36)
 
 프로세스를 확인해보자.
 
@@ -33,11 +33,11 @@ System preferences를 열어서 Sharing을 선택하고 Web Sharing을 활성화
 ps -ef | grep httpd
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/04bd35f9-a447-4ea8-9a82-bb12bd61fc2f)
+![](http://blog.hibrainapps.net/saltfactory/images/04bd35f9-a447-4ea8-9a82-bb12bd61fc2f)
 
 프로세스를 확인하면 WEBSHARING_ON 모드로 httpd 웹 서버 데몬이 동작하고 있는 것을 확인할 수 있다. 이제 브라우저를 열어서 주소창에 자신의 아이디를 가지는 주소를 입력해보면 Mac에서 기본적으로 제공하고 있는 웹 사이트 개발에 필요한 개인 사이트 디렉토리(~/Sites)의 파일이 열릴 것이다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/1ece062b-e641-4ada-b7a1-2f3cc10d85e6)
+![](http://blog.hibrainapps.net/saltfactory/images/1ece062b-e641-4ada-b7a1-2f3cc10d85e6)
 
 이제 command로 httpd 웹 서버를 실행시켜보자. System Preferences에서 웹 공유를 하기 위해서 켜두었던 Web Sharing을 Off로 변경하고 터미널을 열어서 다음과 같이 명령어를 입력한다.
 
@@ -45,7 +45,7 @@ ps -ef | grep httpd
 sudo httpd -k start
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/80234ec7-3c12-477e-a21f-858a55732fed)
+![](http://blog.hibrainapps.net/saltfactory/images/80234ec7-3c12-477e-a21f-858a55732fed)
 
 httpd 프로세스가 동작하고 있고 위에서 확인한 것 처럼 브라우저에서 계정의 홈 사이트를 열어보면 (http://localhost/~Saltfactory) 사이트가 열리는 것을 확인할 수 있다. 서비스를 멈추기 위해서는 stop 명령어를 사용하면 된다.
 
@@ -53,7 +53,7 @@ httpd 프로세스가 동작하고 있고 위에서 확인한 것 처럼 브라�
 sudo httpd -k stop
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/9880f93d-8f83-4e2d-b714-6d1689643999)
+![](http://blog.hibrainapps.net/saltfactory/images/9880f93d-8f83-4e2d-b714-6d1689643999)
 
 위 캡처에서는 warning이 나타난 것을 확인할 수 있는데 이것은 Apache를 설정하는 httpd.conf에 서버의 full qualified domain name이 없어서 그렇다. (예, http://blog.saltfactory.net 이나 http://127.0.0.1 과 같은 서버 네임)
 httpd 명령어 말고 apachectl 이라는 명령어로 실행하거나 중지할 수 있다.
@@ -66,7 +66,7 @@ sudo apachectl start
 sudo apachectl stop
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/778a01d0-94a0-4d8a-b2f7-a3ad36456a76)
+![](http://blog.hibrainapps.net/saltfactory/images/778a01d0-94a0-4d8a-b2f7-a3ad36456a76)
 
 ## Apache에서 PHP 모듈 사용 설정
 
@@ -84,7 +84,7 @@ phpinfo();
 
 다음과 같은 화면이 나오는가? 이렇게 나온다는 말은 apache와 php의 설정이 제대로 되어 있는 것이다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/c869ee6d-1e37-4be0-9ad3-268b54ab497b)
+![](http://blog.hibrainapps.net/saltfactory/images/c869ee6d-1e37-4be0-9ad3-268b54ab497b)
 
 만약 위와 같이 나오지 않고 소스코드가 그대로 보인다면 다음 설정을 확인해서 설정해준다. 아마 최초에는 Apache에서 PHP 모듈을 사용하는 설정이 커멘트되어 있을 것이다.
 Mac에서 Apache 서버의 환경설정 파일은 /private/etc/apache2/httpd.conf  에 있다.
@@ -95,7 +95,7 @@ sudo vi /private/etc/apache2/httpd.conf
 
 약 116라인쯤에 Apache에 모듈 사용을 설정하는 부분에서 php5_module 이 주석이 되어 있는 것을 확인할 수 있을 것이다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/2789d3a1-bc20-4c16-8040-7390c26131c4)
+![](http://blog.hibrainapps.net/saltfactory/images/2789d3a1-bc20-4c16-8040-7390c26131c4)
 
 여기서 116 라인의 앞의 주석을 제거하고 저장하고 나온뒤, Apache 서버를 재시작한다.
 
@@ -132,7 +132,7 @@ dbpath = /usr/local/var/mongodb
 bind_ip = 127.0.0.1
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/96967beb-58f4-410a-aa76-e3407debc21a)
+![](http://blog.hibrainapps.net/saltfactory/images/96967beb-58f4-410a-aa76-e3407debc21a)
 
 이 아티클은 MongoDB 사용법에 대한 글이 아니라 Apache와 PHP 그리고 MongoDB의 연동을 주제로 한 글이기 때문에 자세한 사용법은 다른 글에서 소개하겠다.
 
@@ -164,7 +164,7 @@ sudo php -d detect_unicode=0 go-pear.phar
 
 그러면 다음과 같이 패키지를 설치할 경로에 대해서 물어본다. 디폴트로 설치하려면 그냥 enter를 누르면 되고 난 prefix를 가지고 설치하기 위해서 1을 누르고 enter를 눌러서 prefix를 /usr/loca/pear로 설치할 수 있게 하였다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/11f8b404-2da7-4535-9925-9c40b63c5778)
+![](http://blog.hibrainapps.net/saltfactory/images/11f8b404-2da7-4535-9925-9c40b63c5778)
 
 이렇게 설정하고 pear를 실행하면 다음과 같은 경로를 만나게 된다.
 
@@ -174,7 +174,7 @@ WARNING!. The include_path define in the currently used php.ini does not contain
 
 이 경고는 PEAR로 PHP의 extension 을 설치하면 php.ini 파일에 추가가되는데 php.ini 파일을 찾을 수 없어서 발생하는 문제이다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/7b942d7c-890a-40e0-b7a3-75cc41928bc7)
+![](http://blog.hibrainapps.net/saltfactory/images/7b942d7c-890a-40e0-b7a3-75cc41928bc7)
 
 phpinfo()에서 .ini 파일을 찾아보도록 다음 명령어를 실행해보자.
 
@@ -184,11 +184,11 @@ php -r "phpinfo();" | grep '.ini'
 
 출력된 결과를 확인해보면 Configuration File(php.ini) Path =>/etc 로 시스템의 /etc 밑에 있다고 정의되어 있는데 실제 /etc/php.ini 파일이 존재하지 않는다. (php.ini.default 만 존재한다. php.ini의 샘플 파일을 미리 만들어서 php.ini.default로 설치되어 있는 것이다.)
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/d9206b95-52c1-4f83-9b90-e50ae4a48597)
+![](http://blog.hibrainapps.net/saltfactory/images/d9206b95-52c1-4f83-9b90-e50ae4a48597)
 
 이렇게 command로 확인할 수 있거나 우리가 방금 브라우저에서 확인했던 phpinfo(); 코드가 포함된 test.php를 열어서 확인할 수도 있다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/38fe1e41-6d46-4ad2-8857-022bb85b01c1)
+![](http://blog.hibrainapps.net/saltfactory/images/38fe1e41-6d46-4ad2-8857-022bb85b01c1)
 
 그럼 우리는 샘플로 만들어져있는 php.ini.default를 /etc/php.ini로 변경해보자.
 
@@ -198,7 +198,7 @@ sudo mv /etc/php.ini.default /etc/php.ini
 
 그리고 다시 php -r command로 확인해보자. 이제 /private/etc/php.ini에서 php.ini를 Loaded 한것을 확인할 수 있다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/218b9adc-7f2d-4fa2-a409-fb5e6729d938)
+![](http://blog.hibrainapps.net/saltfactory/images/218b9adc-7f2d-4fa2-a409-fb5e6729d938)
 
 우리는 /etc/php.ini로 복사를 했는데 왜 /private/etc/php.ini로 검색이 되었을까? Mac에서는 /etc 가 /private/etc를 심볼릭링크로 만들어져 있기 때문이다.
 
@@ -206,11 +206,11 @@ sudo mv /etc/php.ini.default /etc/php.ini
 ls -al /
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/6fa36348-06b7-468c-82c0-b539946f23d4)
+![](http://blog.hibrainapps.net/saltfactory/images/6fa36348-06b7-468c-82c0-b539946f23d4)
 
 php -r 말고 test.php를 부라우저에서 확인해보자. Loaded Configuration File 항목에 /private/etc/php.ini 가 설정된 것을 확인할 수 있다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/95c5cbb3-015b-43e3-bad5-3b446a5fa400)
+![](http://blog.hibrainapps.net/saltfactory/images/95c5cbb3-015b-43e3-bad5-3b446a5fa400)
 
 이제 pear를 다시 실행시키자.
 
@@ -218,7 +218,7 @@ php -r 말고 test.php를 부라우저에서 확인해보자. Loaded Configurati
 sudo php -d detect_unicode=0 go-pear.phar
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/f1ddf7ee-7002-4fc1-a0df-c2ec2a799403)
+![](http://blog.hibrainapps.net/saltfactory/images/f1ddf7ee-7002-4fc1-a0df-c2ec2a799403)
 
 php.ini를 검색하게 되었고 이것을 이용해서 설치를 하게 된다. 설치가 완료되면 php.ini를 열어보자. php.ini 파일 가장 마지막 부분에 다음 코드가 추가된 것을 확인할 수 있다.
 
@@ -236,7 +236,7 @@ include_path=".:/usr/local/pear/share/pear"
 sudo /usr/local/pear/bin/pecl install mongo
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/6adb88fe-ac4f-4795-b5ba-08155b18ef42)
+![](http://blog.hibrainapps.net/saltfactory/images/6adb88fe-ac4f-4795-b5ba-08155b18ef42)
 
 아마 처음 설치한다면 다음과 같이 "phpize" failed 에러가 발생할 것이다. 이것은 autoconf 명령어가 없어서 발생하는 문제인데 Homebrew를 이용해서 autoconf를 설치한다.
 
@@ -244,7 +244,7 @@ sudo /usr/local/pear/bin/pecl install mongo
 brew install autoconf
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/3d83bbd9-a106-4b93-b7e9-1d7267150c99)
+![](http://blog.hibrainapps.net/saltfactory/images/3d83bbd9-a106-4b93-b7e9-1d7267150c99)
 
 다시 pecl 명령어를 사용해서 PHP용 MongoDB driver를 설치한다.
 
@@ -254,7 +254,7 @@ sudo /usr/local/pear/bin/pecl install mongo
 
 이제 에러 없이 설치가 완료되는 것을 확인할 수 있다. extension=mongo.so를 php.ini에 추가하라고 메세지가 출력된다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/b66d454f-b807-4924-8be9-3f063de6de63)
+![](http://blog.hibrainapps.net/saltfactory/images/b66d454f-b807-4924-8be9-3f063de6de63)
 
 php.ini 파일을 열어서 extension을 추가하는 부분에 extension=mongo.so를 추가한다.
 
@@ -262,11 +262,11 @@ php.ini 파일을 열어서 extension을 추가하는 부분에 extension=mongo.
 sudo vi /etc/php.ini
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/10d6846c-013b-40ff-bd92-e67d1c2a5431)
+![](http://blog.hibrainapps.net/saltfactory/images/10d6846c-013b-40ff-bd92-e67d1c2a5431)
 
 이제 phpinfo()를 확인하자. test.php를 브라우저에서 열어보자. PHP용 MongoDB driver인 mongo가 1.2.10 버전이 설치되어 있는 것을 확인할 수 있다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/6c143ad6-d292-49b9-abe4-6e1c362c4c6a)
+![](http://blog.hibrainapps.net/saltfactory/images/6c143ad6-d292-49b9-abe4-6e1c362c4c6a)
 
 php -r 명령어로 확인해보자.
 
@@ -274,7 +274,7 @@ php -r 명령어로 확인해보자.
 php -r "phpinfo();" | grep 'mongo'
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/6ae3505c-31ab-412a-aa55-958cceb0d463)
+![](http://blog.hibrainapps.net/saltfactory/images/6ae3505c-31ab-412a-aa55-958cceb0d463)
 
 이제 PHP 프로그램에서 MongoDB를 사용할 수 있는지 간단한 코드로 테스트해보자. 테스트 소스는 간단하다 Mongo 커넥션을 열어서 mydb라는 데이터베이스를 지정하여 mycollection이라는 컬렉션에 myobj, myobj2를 저장하고 컬렉션에서 find()하여 모든 객체를 찾아서 출력후 db를 닫고 커넥션을 닫는 코드이다.
 
@@ -309,7 +309,7 @@ php -r "phpinfo();" | grep 'mongo'
 
 이 코드를 test.php에 추가하고 브라우저에서 열어보자. 다음과 같이 PHP에서 MongoDB를 이용해서 저장하고 찾은 결과를 웹 페이지에서 출력할 수 있게 되었다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/1e2e82b5-e0c1-455f-b47f-3a4b78064617)
+![](http://blog.hibrainapps.net/saltfactory/images/1e2e82b5-e0c1-455f-b47f-3a4b78064617)
 
 ## 참고
 

@@ -23,7 +23,7 @@ Javascript는 브라우저의 Javascript 엔진이 있어야 해석이 가능하
 java -jar js.jar
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/edec3844-57ca-47ea-ac11-8d81b4b5cb35)
+![](http://blog.hibrainapps.net/saltfactory/images/edec3844-57ca-47ea-ac11-8d81b4b5cb35)
 
 이렇게 Rhino의 CLI 로 사용하면 Javascript를 테스트 할 수 있다.
 
@@ -75,7 +75,7 @@ eventApplication.main();
 
 그러면 우리가 예상하듯 외부에서 구현한 CallbackMethod가 피호출자(callee)에서  호출자(caller)를 호출해서 서브루틴에서 메소드를 실행할 수 있게 되었다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/7bb69dc0-b931-4699-ad8d-8fe960da61d1)
+![](http://blog.hibrainapps.net/saltfactory/images/7bb69dc0-b931-4699-ad8d-8fe960da61d1)
 
 ## 결론
 

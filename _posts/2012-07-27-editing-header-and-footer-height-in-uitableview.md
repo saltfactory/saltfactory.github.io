@@ -16,7 +16,7 @@ UITableView는 iOS 기반 앱을 개발할 때 가장 많이 사용하는 UIKit 
 
 이 아티클에서 테스트를 하기 위해서 우리는 empty 프로젝트를 하나 만들고 UITableView 기반의 ViewController를 하나 추가하자. 이름은 SFTableViewController라고 지정했다. 편의에 맞게 다른 이름을 사용해도 상관없다. 그리고 특별히 XIB는 생성하지 않는다. 특별한 UI 구성 이외에 XIB를 사용할 일이 거의 없기 때문이다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/f4bfed12-4992-4654-aeea-dba04eeae5ff)
+![](http://blog.hibrainapps.net/saltfactory/images/f4bfed12-4992-4654-aeea-dba04eeae5ff)
 
 뷰컨트롤러를 추가하고 난 다음에는 우리는 테스트를 위해서 AppDelegate에 UINavigationController에 포함되어서 가장 처음에 나타나게 rootViewController로 지정할 것이다.
 
@@ -56,7 +56,7 @@ UITableView는 iOS 기반 앱을 개발할 때 가장 많이 사용하는 UIKit 
 
 build 하고 실행하면 다음과 같이 비어있는 UITableView가 보이게 될 것이다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/78f73d65-4ed5-4e0e-9ea5-24662a456aa3)
+![](http://blog.hibrainapps.net/saltfactory/images/78f73d65-4ed5-4e0e-9ea5-24662a456aa3)
 
 우리는 테스트를 위해서 HeaderView를 가질수 있게 임시 데이터를 저장해보자. 간단하게 NSMutableDictionary에 두가지 데이터를 집어넣었고 각각 First Items와 Second Items라는 Key를 가지고 저장이 되었다.
 
@@ -147,7 +147,7 @@ build 하고 실행하면 다음과 같이 비어있는 UITableView가 보이게
 
 다시한번 Build하고 Run 시켜보자. 우리가 의도한 대로 데이터가 나왔는가? 우리가 의도한 UITableView의 형태는 Header를 가지고 있는 모양이다. 하지만 위의 코드는 UITableView의 cell에 대한 코드만 존재를 한다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/2dda44db-ca56-489d-a540-94e85f8caa94)
+![](http://blog.hibrainapps.net/saltfactory/images/2dda44db-ca56-489d-a540-94e85f8caa94)
 
 우리는 Header를 만들기 위해서 다음 UITableView의 뷰 속성을 다루는 delegate method를 구현하기 위해서 다음 코드를 추가한다.
 
@@ -162,7 +162,7 @@ build 하고 실행하면 다음과 같이 비어있는 UITableView가 보이게
 다시 build하고 run 실행해보자. 이제 우리가 의도한 header view가 나타났다. 각 섹션별로 그 섹션의 key가 나타나게 된 것이다.
 
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/17720321-282e-4e91-b447-6b9c1ebeb533)
+![](http://blog.hibrainapps.net/saltfactory/images/17720321-282e-4e91-b447-6b9c1ebeb533)
 
 그리고 footer view를 추가하기 위해서 다음과 같이 코드를 수정해보자. 아이템별로 description을 footer에 추가한다.
 
@@ -173,7 +173,7 @@ build 하고 실행하면 다음과 같이 비어있는 UITableView가 보이게
 }
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/b9b00615-b1de-4662-b6de-d5dacd053381)
+![](http://blog.hibrainapps.net/saltfactory/images/b9b00615-b1de-4662-b6de-d5dacd053381)
 
 UITableViewStylePlain에 모양에서 이렇게 나타나지만 UITableViewGrouped 에서는 다음과 같이 나타난다.
 
@@ -197,7 +197,7 @@ UITableViewStylePlain에 모양에서 이렇게 나타나지만 UITableViewGroup
 
 ## UITableView Header, Footer 높이조절
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/fc1196ab-7ba8-4d53-9f38-ea0a38308162)
+![](http://blog.hibrainapps.net/saltfactory/images/fc1196ab-7ba8-4d53-9f38-ea0a38308162)
 
 이제 우리가 원하는 Heade와 Footer의 높이를 조절해보자. UITableView의 view delegate를 구현하기 위해서 다음 코드를 추가한다. 높이를 확인하기 위해서 tableView의 style을 다시 UITableViewStylePlain으로 변경한다.
 
@@ -215,7 +215,7 @@ UITableViewStylePlain에 모양에서 이렇게 나타나지만 UITableViewGroup
 
 다시 build와 run을 해보면 header와 footer의 높이가 변경된 것을 확인할 수 있을 것이다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/8859fa40-b9d5-404a-92c7-32d88c754afd)
+![](http://blog.hibrainapps.net/saltfactory/images/8859fa40-b9d5-404a-92c7-32d88c754afd)
 
 만약 UITableViewController를 상속받아서 만들어서 사용하지 않고 UIViewController에 UITableView를 추가해서 사용할 경우도 동일하다. 우리는 UITableViewController를 상속받아서 만든 SFTableViewController를 UIViewController를 상속받아서 사용하는 것으로 변경할 것이다.
 SFTableViewController.h 파일을 다음과 같이 수정한다.

@@ -17,7 +17,7 @@ http://en.wikipedia.org/wiki/JSONP
 
 우리는 Sencha Touch의 기본 사용법은 앞의 포스팅으로 익히 알고 있다고 가정하고 기본 설정이나 사용법에 대해서는 생략한다. SenchaTutorial이라는 디렉토리 안에 lib 안에 sencha touch 개발에 필요한 js와 css 파일을 추가하였다. IDE는 각자 편리한 IDE를 사용하면 된다. 연구소에서 공식적으로 IntelliJ를 사용하고 있기 때문에 이 포스팅은 IntelliJ 기반으로 설명한다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/049e8aba-41de-4269-803d-3fac52eaf267)
+![](http://blog.hibrainapps.net/saltfactory/images/049e8aba-41de-4269-803d-3fac52eaf267)
 
 그리고 간단히 index.html을 만든다. sencha 의 파일과 app.js를 호출하는 코드가 있다.
 
@@ -78,7 +78,7 @@ Ext.application({
 
 위의 Sencha Touch의 코드를 실행하면 다음과 같은 화면이 보이게 된다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/4ea3abe0-0352-4345-a2c3-5793ec324bec)
+![](http://blog.hibrainapps.net/saltfactory/images/4ea3abe0-0352-4345-a2c3-5793ec324bec)
 
 ### Node.js 설치
 
@@ -123,11 +123,11 @@ server.listen(8080);
 이 코드를 실행하고 다음과 같이 브라우저에서 요청한다.
 http://localhost:8080/test.json?callback=callbackfunc
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/d63560e5-93a0-4db7-b6e1-8659662c276b)
+![](http://blog.hibrainapps.net/saltfactory/images/d63560e5-93a0-4db7-b6e1-8659662c276b)
 
 그러면 브라우저에서 application/json인 {"name":"saltfactory"} 라는 json 결과를 받을 수 있다는 것을 확인할 수 있다. 그럼 서버측에 로깅을 살펴보자.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/431c15ce-a70b-48c1-832c-d9a0d219ed66)
+![](http://blog.hibrainapps.net/saltfactory/images/431c15ce-a70b-48c1-832c-d9a0d219ed66)
 
 서버측에서는 url 파싱을 해서 callback 파라미터를 출력하니 callbackfunc이라는 결과가 나왔는데 이상하게 undefined도 같이 출력된다. 브라우저에서 refresh를 반복적으로하면 이 두 쌍이 계속적으로 출력이되는 것을 확인할 수 있다. 이것은 http요청을 할 때 favicon을 요청하는 url이 들어와서 이다. 그래서 그래서 다음과 같이 코드를 변경한다.
 
@@ -229,7 +229,7 @@ Ext.application({
 
 위 코드를 브라우저에서 실행해보았다. 브라우저에서 index.html 파일은  `file://` 로 시작하는 로컬파일이다. 이 파일에서 http://localhost 인 크로스 도메인으로 ajax를 요청하면 XMLHttpRequest를 사용할 수 없다는 에러를 발생한다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/1571af2c-581d-4ad9-8790-e4b68589b854)
+![](http://blog.hibrainapps.net/saltfactory/images/1571af2c-581d-4ad9-8790-e4b68589b854)
 
 ### JSONP 요청
 
@@ -294,10 +294,10 @@ Ext.application({
 
 이제 서버측으로 요청해보자. 그런데 app.js에서 요청하는 JSONP는 정상적인데 서버측에서 받게된 JSON 객체를 파싱하는데 문제가 발생한다. 크로스도메인으로 JavaScript 코드를 요청하는데 문제는 발생하지 않지만, JSONP는 payload를 넘겨주는 function으로 wrapping을 해줘야하기 때문이다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/a4e45dca-3a66-4dcc-8c45-8c3140da0663)
+![](http://blog.hibrainapps.net/saltfactory/images/a4e45dca-3a66-4dcc-8c45-8c3140da0663)
 
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/9872f591-e4fa-43b5-b74d-76a418c1f47e)
+![](http://blog.hibrainapps.net/saltfactory/images/9872f591-e4fa-43b5-b74d-76a418c1f47e)
 
 
 그래서 서버에 코드를 다음과 같이 callback 파라미터가 가지고 오는 callback function 이름으로 json을 payload로 wrapping하도록 한다. 이때 Content-Type은 application/json에서 application/javascript로 변경해서 javascript callback function과 payload를 전송한다.
@@ -338,7 +338,7 @@ server.listen(8080);
 
 브라우저에서 다시한번 테스트하면 Sencha Touch에서 JSONP를 요청하기 위해서 넘기는 callback 함수의 이름이 Ext.data.JsonP.callback1 이라는 것을 확인할 수 있다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/76ad3abc-f838-47e3-8aab-3c39da8251f9)
+![](http://blog.hibrainapps.net/saltfactory/images/76ad3abc-f838-47e3-8aab-3c39da8251f9)
 
 ## 결론
 

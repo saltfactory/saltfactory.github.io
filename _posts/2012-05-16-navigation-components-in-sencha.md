@@ -66,7 +66,7 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 });
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/fcf37d26-8343-419d-85b5-b7d360133b2b)
+![](http://blog.hibrainapps.net/saltfactory/images/fcf37d26-8343-419d-85b5-b7d360133b2b)
 
 하지만 보통 툴바는 상단에 위치하는 것이 아니고 하단에 위치하도록 하여 만든다. 그리고 Toolbar에는 info 버턴만 나타나게 해보자.
 그래서 우리는 다음과 같이 Toolbar를 하단에 위치하도록 해보자.
@@ -109,7 +109,7 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 });
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/bf263466-b009-4043-8314-c0d764baab4d)
+![](http://blog.hibrainapps.net/saltfactory/images/bf263466-b009-4043-8314-c0d764baab4d)
 
 ## Button
 
@@ -331,7 +331,7 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 });
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/138175cc-7f11-4c3f-bb6e-71edfea680ff)
+![](http://blog.hibrainapps.net/saltfactory/images/138175cc-7f11-4c3f-bb6e-71edfea680ff)
 
 ## Titlebar (with Button)
 
@@ -387,7 +387,7 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 });
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/b85100d9-b0f5-4640-a7e8-399f11f56e0e)
+![](http://blog.hibrainapps.net/saltfactory/images/b85100d9-b0f5-4640-a7e8-399f11f56e0e)
 
 ## SegmentedButton
 
@@ -469,7 +469,7 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 });
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/4379e34d-691f-4835-9510-ae79daeb2745)
+![](http://blog.hibrainapps.net/saltfactory/images/4379e34d-691f-4835-9510-ae79daeb2745)
 
 SegmentedButton이 추가되었지만 우리가 원하는대로 출력은 되지 않았다. 우리는 이 세그먼트버턴이 중앙에 위치하면서 가로가 화면에 가득차게 나타나길 원하고 있기 때문이다. 그래서 다음과 같이 수정한다.
 
@@ -563,7 +563,7 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 });
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/b915ab4b-0d09-4807-b264-824072deecc0)
+![](http://blog.hibrainapps.net/saltfactory/images/b915ab4b-0d09-4807-b264-824072deecc0)
 
 ## 이벤트 추가하기
 
@@ -664,7 +664,7 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 });
 ```
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/ce43ea47-c506-4a6d-b076-000247e49d80)
+![](http://blog.hibrainapps.net/saltfactory/images/ce43ea47-c506-4a6d-b076-000247e49d80)
 
 다음은 SegmentedButton에 이벤트를 처리할 코드를 등록할 것인데, 단순한 Button과 달리 SegmentedButton은 여러가지 버턴들의 조합으로 이루어져있다. SegmentedButton에 이벤트를 감지하기 위해서 listeners를 등록할 수 있다. 다음 코드를 살펴보자.
 
@@ -770,7 +770,7 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 
 리스너를 등록하는데 버턴이 눌러졌을 때의 버턴의 activity를 출력할 수 있도록 toggle 속성에 메소드를 추가하였다. index.html 을 새로 고침하여 SegmentedButton 을 순서대로 출력하면 다음과 같이 console.log를 출력하는 것을 확인할 수 있다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/faaa25a2-1e78-419d-b30e-518d4d379dde)
+![](http://blog.hibrainapps.net/saltfactory/images/faaa25a2-1e78-419d-b30e-518d4d379dde)
 
 ## 결론
 

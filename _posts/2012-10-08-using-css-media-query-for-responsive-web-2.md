@@ -83,11 +83,11 @@ and (min-width : 1025px) {
 
 이제 다시 PC와 iOS에서 브라우저로 테스트를 해보면 데스크탑의 구현 범위가 iPad의 스크린의 width를 겹치더라도 iPad일 경우는 `min-device-with`, `max-device-with`, orientation 속성으로 태블릿과 PC 화면을 구분해서 적용할 수 있게 된다. 여기서 태블릿의 디바이스 크기와 스크린의 크기를 조합해서 해당하는 사이즈를 유동적으로 변경해주면 된다.
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/9065bcd0-4a08-40c3-8d72-b37c180e3f83)
+![](http://blog.hibrainapps.net/saltfactory/images/9065bcd0-4a08-40c3-8d72-b37c180e3f83)
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/5aeae60c-de9c-49e8-84f6-c9c62e622963)
+![](http://blog.hibrainapps.net/saltfactory/images/5aeae60c-de9c-49e8-84f6-c9c62e622963)
 
-![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/9ec7535d-ce3e-425a-a722-0db15de40eaa)
+![](http://blog.hibrainapps.net/saltfactory/images/9ec7535d-ce3e-425a-a722-0db15de40eaa)
 
 ## 결론
 
