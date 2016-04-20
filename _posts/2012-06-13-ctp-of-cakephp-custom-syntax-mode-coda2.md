@@ -16,11 +16,11 @@ Coda는 Mac 에서 PHP를 개발할 때 가장 아름다운 IDE가 아닌가 생
 
 지금까지 프로젝트를 진행하는 동안에 여러 프레임워크를 도입해봤지만 Ruby on Rails와 Springframework MVC 를 가장 좋아한다. 이유는 아주 명확하게 MVC 패턴으로 개발할 수 있게 지원해주고 있기 때문인데, 이렇게 프레임워크에서 개발하면 내가 힘들게 MVC 패턴을 생각하면서 개발하지 않아도 프레임워크가 가지고있는 루틴으로 자동으로 MVC 로 개발할 수 있는 편리함을 제공받는다. 그래서 PHP 프로젝트를 진행하면서 CakePHP를 도입하기 생각하고 테스트를 진행하기로 했다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/98c347c7-374d-4d4f-8529-fff71e5e083c)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/98c347c7-374d-4d4f-8529-fff71e5e083c)
 
 CakePHP는 MVC 패턴을 지원하면서 빠르고 신리성 있는 웹 어플리케이션을 만드는데 이미 많은 커뮤니티들에게 인기 좋은 프레임워크이다. 더구나 라이센스도 MIT License를 따르고 있어서 상용으로 사용하기에도 부담되지 않는 프레임워크이다. 이렇게 프레임워크를 선정하고나서 Coda를 이용해서 PHP 개발을 위해서 테스트를 진행하고 있는데 CakePHP에서는 View를 만들기 위해서 template으로 .ctp 라는 확장자를 가진 파일을 사용하는 것이다. 애썩하게도 Coda에서는 기본적으로 .ctp 파일에 대한 syntax를 지원하고 있지 않았다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/1b97a549-f494-4452-9b41-bf83ec10861c)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/1b97a549-f494-4452-9b41-bf83ec10861c)
 
 그래서 .ctp 파일을 Coda2 에서 syntax highlight 를 적용하기 위해서 custom syntax mode 기능을 사용해야한다.
 1. Coda 2의 preferences를 연다. (command + ,)
@@ -31,11 +31,11 @@ CakePHP는 MVC 패턴을 지원하면서 빠르고 신리성 있는 웹 어플�
 6. OK 버튼을 클릭한다.
 7. Coda 2 를 종료하고 다시 실행한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/10fdedee-3a69-4d82-87b9-7c998028f15f)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/10fdedee-3a69-4d82-87b9-7c998028f15f)
 
 이렇게 Custom Syntax Modes를 설정하고 Coda 2를 종료하고 다시 Coda 2를 열게되면 .ctp 확장자를 가진 파일은 PHP-HTML 의 syntax mode와 같이 syntax highlight 기능을 사용할 수 있게 된다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/f13b1780-7a14-4287-b7f8-fbecd8b689b4)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/f13b1780-7a14-4287-b7f8-fbecd8b689b4)
 
 ## 결론
 

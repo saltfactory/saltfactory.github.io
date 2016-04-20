@@ -21,7 +21,7 @@ Ruby를 처음 접하게 된 것은 순수하게 컴퓨터전공을 하는 나�
 
 먼저 Java에서 상위 클래스의 속성을 그대로 상속받아서 확장된 서브 클래스를 만들어 사용하는 것에 익숙하다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/6f3c98e9-e999-4170-a89e-8f98415c317f)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/6f3c98e9-e999-4170-a89e-8f98415c317f)
 
 Java 코드로 살펴보면 `Number`의 `intValue` 메소드를 상속받아서 `BigInteger`는 `inteValue` 메소드를 가지고 있지만, `stringfy`라는 `value` 값을 문자열로 출력하게 하는 메소드를 추가했다.
 
@@ -58,7 +58,7 @@ public class BigInteger extends Number {
 
 또는 Java에서는 추상클래스를 만들고 그것을 상속받아서 구현체를 만들어 가는 것 또 한 Java 객체 지향 프로그램에 익숙한 클래스의 사용 패턴이다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/7e6e86f2-ab1c-404e-9f4a-2a02236cf8c5)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/7e6e86f2-ab1c-404e-9f4a-2a02236cf8c5)
 
 하지만 현실의 세계에서는 객체가 단일 상속만 이루어지지 않는다. 예를 들어 엄마, 아빠에게서 서로 좋은 점만 닮은 특징을 가져와서 같이 사용하고 싶은 경우가 충분히 있을 수 있다. 개발자와 디자이너의 메소드를 각각 가져와서 유니콘 같은 슈퍼개발자를 만들고 싶어한다면 Java와 같은 단일 상속만 지원하는 프로그래밍 언어에서는 절대 유니콘을 만들 수 없게 된다.
 
@@ -66,7 +66,7 @@ public class BigInteger extends Number {
 
 Mixin은 이러한 한계를 해결할 수 있는 개발 패턴이다. 즉 클래스에 새로운 특징을 더 추가해서 여러가지 기능을 필요한 곳에서 가져와서 새로운 클래스를 만드는 것이다. 우리가 지금까지 목말라해온 다중 상속의 문제를 아주 간단하게 해결할 수 있는 도깨비 방망이 같은 것이다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/5fc73d39-592f-45f4-95cd-61b5d06f1fc8)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/5fc73d39-592f-45f4-95cd-61b5d06f1fc8)
 
 과연 Ruby는 어떻게 이런것이 가능할까? 루비는 **Class**와 비슷한 **Module** 이라는 것을 가지고 있다. Module는 Class와 비슷하게 메소드, 상수, 모듈, 클래스를 포함할 수 있다. 그러나 Class와 달리 모듈을 상속받아서 객체를 생성할 수는 없다. 하지만 이 Module의 인스턴스 메소드를 클래스에서 사용할 수 있다. 이렇게 상속을 하지 않고도 여러개의 Class가 같은 Module을 mixin해서 사용하거나 여러개의 Module을 하나의 클래스에 mixin하여 사용할 수 있다. 위에서 작성한 Java 코드의 한계를 Ruby에서는 이렇게 해결을 하였다.
 
@@ -145,7 +145,7 @@ puts bigint1.intValue
 
 단순히 `BigInteger`가 가지고 있는 생성자 메소드인 `initialize` 에서 받은 value 값을 객체 변수 `@value`에 할당했다가 출력하는 Java와 같은 단순 상속의 예제이다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/aec489bd-01bc-4ddc-9ca3-a01d6006ad1a)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/aec489bd-01bc-4ddc-9ca3-a01d6006ad1a)
 
 다음은 Math를 Mixin으로 추가된 `Math`의 `add`를 사용해서 `BigInteger` 객체를 생성해보자.
 
@@ -162,7 +162,7 @@ puts bigint2.intValue
 
 Mixin으로 Math의 `add`가 실행되었는데 이 때 입력받은 두 인자값은 Math의 `add` 메소드안에 포함된 클래스 `BigInteger.new(a+b)`로 두 인자 값을 더해서 객체를 생성시키는 것이다. 그래서 결국은 `BigInteger`의 객체변수 `@value`에 두 인자를 더한 2의 값이 저장되어 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/58e8582d-c8c7-4acb-99f7-3696c153af31)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/58e8582d-c8c7-4acb-99f7-3696c153af31)
 
 여기 생성된` bigint2`는 `Math` 뿐만 아니라` Stringfy`도 Mixin되어 있기 때문에 `Stringfy`의 `stringfy` 메소드를 사용할 수 있다. 결과는 `BigInteger`의 객체인 bigint2의 객체변수(@value)가 2이기 때문에 `Stringfy`의 인스턴스 메소드 `stringfy` 안에 `@value`를 비교해서 해당 문자열을 반환하는 메소드가 실행이 된 것이다.
 
@@ -177,7 +177,7 @@ bigint2 = BigInteger.add(-2, 4)
 puts bigint2.intValue
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/2345c876-d693-456c-bb9c-abed6df61ab3)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/2345c876-d693-456c-bb9c-abed6df61ab3)
 
 마지막 테스트로 생성된 객체에다 새로운 Module을 하나더 mixin 해보기로 하자. `BigInteger`로 생성한 객체 `bigint2`에 `format`이라는 메소드를 가진 Module을 Mixin했다. 그리고 `bigint2`에 mixin된 module의 메소드인 `format`으로 객체의 객체변수 `@value` 값 앞에 `$`를 붙여서 출력시키도록 했다.
 
@@ -202,11 +202,11 @@ bigint2.extend CurrencyFormatter
 puts bigint2.format
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/799d5164-7c25-4d54-9671-6d2c722d6a72)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/799d5164-7c25-4d54-9671-6d2c722d6a72)
 
 그럼 `CurrecyFormatter`를 Mixin하지 않은` bigint1`이라는 `BigInteger`로 만든 객체는 과연 `format`이라는 메소드를 가지고 있을까? 아래와 같이 Mixin되지 않는 객체에서 format 메소드를 불렀기 때문에 에러가 발생한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/ec15928c-aa7a-4be1-9637-b9f3334a9e35)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/ec15928c-aa7a-4be1-9637-b9f3334a9e35)
 
 결과가 놀랍지 않는가? 마치 JavaScript의 prototype 마냥 Module을 이용해서 무한정 메소드를 추가할 수 있게 되었다. 심지어 클래스로 생성된 객체에도 mixin이 가능하다는 것이다. 이런 이유로 Ruby는 Module과 Class를 잘 이용해서 유연하고 확정성 좋은 모듈과 라이브러리를 만들어서 쉽게 다양한 프로젝트에서 코드를 재사용할 수 있는 장점을 가지고 있다.
 

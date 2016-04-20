@@ -12,27 +12,27 @@ Appspresso는 1.1 버전 부터 지역화 기능이 추가되었다. 앱 스토�
 
 <!--more-->
 
-![](http://asset.hibrainapps.net/saltfactory/images/2b274e81-f3cf-4597-a185-e1fe8ff0d82e)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/2b274e81-f3cf-4597-a185-e1fe8ff0d82e)
 
 지역화 템플릿으로 프로젝트를 만들면 디렉토리 구조가 지역정보대로 분리가 된다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/4a4d4165-600b-4935-9783-c313e2b82d89)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/4a4d4165-600b-4935-9783-c313e2b82d89)
 
 뭔가 엄청나게 많아 보인다. 지역화는 크게 platform 디렉토리와 src 디렉토리로 나누어서 살펴볼 수 있는데 tree라는 명령어를 사용해서 살펴보면 다음과 같다. 안드로이드와 아이폰 내부가 동일하기 때문에 android의 경우 살펴보자. resources라는 디렉토리 밑으로 icon과 splash 디렉토리가 있다. 각각 앱이 설치될 때의 icon과 앱이 실행될 때의 splash이다. 이렇게 지역별로 디렉토리로 구분해서 만들어두었는데 디바이스의 지역화 정보를 확인해서 자동으로 해당되는 자원을 사용하게 해주는 것이다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/6901df2b-374d-4db5-8226-01e05442545f)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/6901df2b-374d-4db5-8226-01e05442545f)
 
 현재 splash.en 과 splash.ko에 들어 있는 이미지를 살펴보면 다음과 같다. splash.en 안에 들어있는 이미지는 하단에 en 로고가 있고 splash.ko 에 들어 있는 이미지는 ko라는 로고가 들어 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/818e48b3-bc38-4911-a49d-274ce8ac4f02)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/818e48b3-bc38-4911-a49d-274ce8ac4f02)
 
-![](http://asset.hibrainapps.net/saltfactory/images/372f4083-519c-442b-9fee-cffc6cf20a51)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/372f4083-519c-442b-9fee-cffc6cf20a51)
 
 실제 디바이스에 테스트하면 지역정보에 다르게 첫 화면이 다르게 나오게 된다. platform이라는 디렉토리 안의 지역화 디렉토리들은 이렇게 resource에 관한 지역화 파일들이 디렉토리별로 존재하게 된다.
 
 다음은 src 안에 들어 있는 지역화 구조이다. 예제 소스는 locale-example.js 가 각각 지역화 디렉토리 안에 들어가 있다. 이것도 마찬가지로 디바이스의 지역정보를 보고 해당되는 .js 파일을 사용하게 되는 것이다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/d432158e-03a0-48d3-ab34-4349498f6a37)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/d432158e-03a0-48d3-ab34-4349498f6a37)
 
 
 우리는 이해를 좀더 돕기 위해서 다음과 같이 소스를 변경해보자.
@@ -162,11 +162,11 @@ window.onload = function() {
 
 위의 예제를 실행 하였을 때의 지역화가 적용된 모습이다. 왼쪽 iPod touch는 한글을 설정하였고 오른쪽 Android Nexus one은 영어로 설정되어 있는 상태이다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/6c8d85d0-48ba-4440-96db-c9ce9efe4d50)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/6c8d85d0-48ba-4440-96db-c9ce9efe4d50)
 
 앱이 설치된 아이콘도 이렇게 한글 설정이 되어 있는 iPod touch에는 한글로 설치가 되고 영어가 설정되어 있는 Android Nexus one에는 영어로 된 이름이 설치가 된다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/e3058f6a-7b32-4aaa-b93a-44f60de941ce)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/e3058f6a-7b32-4aaa-b93a-44f60de941ce)
 
 ## 결론
 

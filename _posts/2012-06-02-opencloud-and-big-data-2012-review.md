@@ -18,7 +18,7 @@ disqus_identifier : http://blog.saltfactory.net/152
 
 <!--more-->
 
-![](http://asset.hibrainapps.net/saltfactory/images/dd114f37-6bb1-4121-9a0b-392c0d5f3a27)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/dd114f37-6bb1-4121-9a0b-392c0d5f3a27)
 
 ## Cloud Computing과 Big Data 기술을 주도하는 Open Source의 힘
 
@@ -26,11 +26,11 @@ disqus_identifier : http://blog.saltfactory.net/152
 
 키노트자료 : http://opensource.ktcloudware.com/opensource/files/OpenCloud2012_Bi
 
-![](http://asset.hibrainapps.net/saltfactory/images/261114ec-0f37-447c-85dc-94f23e744597)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/261114ec-0f37-447c-85dc-94f23e744597)
 
 역시나 최근 빅데이터에서는 Hadoop을 제외하고는 이야기가 되지 않는 것 같다. 더구나 오픈소스 사례이다보다 당연히 Hadoop에 대해서 말씀해주셨고, Hadoop의 echo system에 대한 자료, 실제 KT의 uCloud 서비스에서 사용된 오픈소스의 사례를 발표해주셨다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/45320810-1668-4551-bf9b-2aca0ba12c68)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/45320810-1668-4551-bf9b-2aca0ba12c68)
 
 이 자료만 보아도 Cloud 인프라를 구축하기 위해서 어떤 오픈 소스가 필요한지 알 수 있을 것 같다는 생각이 들었다. 그리고 SDEC 2011에서 NexR의 통신사의 대용량 데이터를 처리하기 위해서 Hive라는 것을 도입하고, HQL(Hive에서 사용하는 Query Language)를 예로 보여주면서 발표해 주신게 너무 인상적이였는데, NexR에서 Hive는 이미 중요한 Core를 차지하고 있고 회사에서 정식으로 comitter를 양성하고 투자하고 있다고 하였다. Hive는 SQL like한 인터페이스로 복잡한 Map Reduce를 작성하는 프로그램을 대처할 수 있기 때문여 개발에 매우 효율성을 가져올 수 있다고 말해주었다. 실제 업체 대부분의 레거시 데이터관리 시스템은 RDBMS이고 이 시스템에서의 모든 인터페이스는 SQL 로 구성되어 있기 때문에 Big Data를 도입하더라도 존재하는 수천가지의 SQL을 모두 Map Reduce로 재작성하는 것이 거의 불가능 하다는 것이다. 이러한 이유로 SQL을 사용할 수 있다는 것은 매우 효과적이라고 볼 수 있다. 그리고 NexR에서 직접 오프소스 프로젝트를 등록해서 진행하고 있는 것이 있는데 RHive라는 것이다.
 github에 등록해서 오픈소스 프로젝트로 진행하고 있는데, 이것은 통계프로그램인 R과 Hive를 상호연동하는 프로젝트이다. 이번 컨퍼런스에 또하나 중요한 키워드로 R 이라는 것이 있다. R는 통계자료를 프로그래밍할 수 있는 함수형 언어이다. 빅 데이터 처리는 바로 빅 데이터 분석과 같은 말이라고 볼 수 있는데, 이렇게 분석을 하기 위해서 반드시 분석 프로그램이 필요하다. R는 그러한 분석을 처리할 수 있는 프로그래밍을 지원하는 오픈소스 이기 때문에 현재 Hadoop과 더불어 가장 인기있는 키워드 중에 하나가 되었다. 학부과정과 석사 과정중에 생명정보학에 대해서 수업을 할 때 유전자의 alignment를 분석하고 리포팅하기 위해서 R을 사용한적이 있는데, 실제 C나 Java로 작성하면 엄청나게 하드 코딩해야할 것을 R로 간단하게 분석 통계를 만들고 리포팅할 수 있다는 것을 경험한 적이 있다. 이러한 R 이 이젠 실제 업무에서 가장 중요한 프로그래밍 언어로 자리잡고 있다.
@@ -43,15 +43,15 @@ github에 등록해서 오픈소스 프로젝트로 진행하고 있는데, 이�
 
 발표자료 : http://opensource.ktcloudware.com/opensource/files/OpenCloud2012_OSSBi
 
-![](http://asset.hibrainapps.net/saltfactory/images/48e028af-970f-4930-a8fb-668b571eb4c1)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/48e028af-970f-4930-a8fb-668b571eb4c1)
 
-![](http://asset.hibrainapps.net/saltfactory/images/8b59c75b-ad33-45b6-8cfe-006b0385b206)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/8b59c75b-ad33-45b6-8cfe-006b0385b206)
 
-![](http://asset.hibrainapps.net/saltfactory/images/8df8d68f-f3fa-4fa3-9097-3a284fc4095f)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/8df8d68f-f3fa-4fa3-9097-3a284fc4095f)
 
 뿐만 아니라 Hadoop의 Echosystem에 대해서 오픈소를 활용할 수 있는 예들을 계속해서 발표해주셨다. 또한, Big와 Hive에 대해서도 간단히 비교했다. 두가지 모두 Map Reduce를 프로그래밍이 아닌 간단한 인터페에스를 사용하는데 Pig는 pig script를 사용하고 Hive는 SQL을 사용할 수 있다는 비교를 아래 자료에서 확인할 수 이다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/46197a63-30b6-4700-88b5-d401c479dc35)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/46197a63-30b6-4700-88b5-d401c479dc35)
 
 이미 Hadoop는 enterprise 급에 사용하기에 전혀 문제되지 않을 만큰 안정화되어서 릴리즈되어 있는 상태라고 말했고, 현재 존재하는 big data 처리에서 Hadoop은 빠질 수 없는 부분이라고 말했다.
 
@@ -61,23 +61,23 @@ github에 등록해서 오픈소스 프로젝트로 진행하고 있는데, 이�
 
 발표자료 : http://opensource.ktcloudware.com/opensource/files/OpenCloud2012_osspres_James%20Clark.pdf
 
-![](http://asset.hibrainapps.net/saltfactory/images/318ca068-82d0-4930-9441-510d1cbb07aa)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/318ca068-82d0-4930-9441-510d1cbb07aa)
 
 각 세션마다 오픈소스라는 주제에 대해서 한다미씩 하였는데 Clark 다음과 같이 발표하였다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/ed0b52a3-488f-43e9-bc46-e6a25f118cdb)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/ed0b52a3-488f-43e9-bc46-e6a25f118cdb)
 
 
 또한 클라우드에해서도 아주 명확하게 말했는데 최근에 들은 클라우드에 대한 정의중 가장 깔끔하지 않았나 생각이 들었었다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/29de4628-f2ae-40fa-b8ec-31bb7680cc6d)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/29de4628-f2ae-40fa-b8ec-31bb7680cc6d)
 
-![](http://asset.hibrainapps.net/saltfactory/images/08c0f7cc-3489-4b10-9ab4-2b532afb3a8c)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/08c0f7cc-3489-4b10-9ab4-2b532afb3a8c)
 
 다음 세션은 패널 토의가 진행되었다. 사회는 한재선 님께서 해주시고 패널은 김영우, 김재홍, 전희원 님이였는데, 생각보다 참여자들의 질문이 없어서 한재선님이 주최측에서 준비한 질문을 공개적으로 답변하는 시간이 진행되었다. 나는 이제 처음 빅데이터와 클라우드에 대해서 연구를 시작하려는 연구원이라서 실제 운영중에 궁금한 점을 몰라서 질문하지 못했는데, 개인적으로 다른 참여자들의 질문이 없어서 좀 아쉽긴했다. 하지만 미리 준비된 내용이 꽤 괜찮고 생각해볼만한 주제라서 유익한 답변을 많이 들을 수 있었다. 특히, 라이센스 문제는 경험해보지 못한 문제였는데, 라이센스 문제가 오픈소스로 서비스를 구축하면 생기는 큰 문제중에 하나라는 것을 알게되었다. LGPL 라이센스의 코드 공개부분과 LGPL을 사용하기 부담스러워하는 기업의 반응, Apache 라이센스가 적용되면 더 많은 개발자와 벤더들이 사용할 수 있다는 것 등을 알게되었다. 또한 LGPL이라고 반드시 코드를 모두 공개해야하는 것이 아니라는 것도 알 수 있었다. 이쪽 분야에 대해서 해박한 지식이 없어서 그런지 Xen에 대해서도 처음 듣게 되었다. 패널 토의가 끝날무렵 한재선님께서 요즘 개발자들이 빅데이터에 대해서 와주 관심은 많지만 실제 빅데이터를 한번이라도 제대로 테스트하거나 운영한 사람은 찾기 어렵다고 정확한 지적도 해주었다.
 
 
-![](http://asset.hibrainapps.net/saltfactory/images/7bf0d1d7-f251-4e9b-a188-75fb7ed9f24b)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/7bf0d1d7-f251-4e9b-a188-75fb7ed9f24b)
 
 ## Open Source를 활용한 통신사 Big Data System 구축 사례
 
@@ -87,15 +87,15 @@ Hadoop등 오픈소스로 기존의 Oracle 기반의 DW에 적용한 사례에 �
 
 발표자료 : http://opensource.ktcloudware.com/opensource/files/OpenCloud2012_Telco%20Big%20Data%20System_jkb.pdf
 
-![](http://asset.hibrainapps.net/saltfactory/images/b3df4dc2-5746-4221-9e4d-0e52e3ae079c)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/b3df4dc2-5746-4221-9e4d-0e52e3ae079c)
 
 아래는 기존의 플랫폼 아키텍처에 대한 간단한 설명과 문제점에 대해서 나타난 슬라이드이다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/9ad4ab0c-2710-4b3b-bb8e-e841ac21dd72)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/9ad4ab0c-2710-4b3b-bb8e-e841ac21dd72)
 
 아래는 Open Source 기반으로 구성한 아키텍처를 설명한 슬리이드이다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/feda88ff-4392-490f-b352-6cb1c8501588)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/feda88ff-4392-490f-b352-6cb1c8501588)
 
 ## 고급 분석의 신흥강자 R과 Big Data Analysis
 
@@ -103,7 +103,7 @@ Hadoop등 오픈소스로 기존의 Oracle 기반의 DW에 적용한 사례에 �
 
 발표자료 : http://opensource.ktcloudware.com/opensource/files/OpenCloud2012_R_Big%20Dat
 
-![](http://asset.hibrainapps.net/saltfactory/images/432c79e1-77cb-47e4-a1d6-ba6a2ab4b62a)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/432c79e1-77cb-47e4-a1d6-ba6a2ab4b62a)
 
 
 ##  OpenStack과 CloudStack
@@ -113,21 +113,21 @@ Hadoop등 오픈소스로 기존의 Oracle 기반의 DW에 적용한 사례에 �
 OpenStack에 관한 발표자료 : http://opensource.ktcloudware.com/opensource/files/OpenCloud2012_openStack_ajs.pdf
 CloudStack에 관한 발표자료 : http://opensource.ktcloudware.com/opensource/files/OpenCloud2012_cloudstack_towards_open_ssw.pdf
 
-![](http://asset.hibrainapps.net/saltfactory/images/a4ccef2a-0904-49ac-97af-c14d9824c2ea)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/a4ccef2a-0904-49ac-97af-c14d9824c2ea)
 
 CloudStack은 GPL 라이센스에서 Aapache 라이센스로 변경되면서 더욱 빠르게 성장하고 참여가 높아 지고 있다고 한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/29d84ba3-9602-45ae-8851-5c16c7a898e5)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/29d84ba3-9602-45ae-8851-5c16c7a898e5)
 
-![](http://asset.hibrainapps.net/saltfactory/images/684cc22d-0965-4b81-988e-978fc9cd52b5)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/684cc22d-0965-4b81-988e-978fc9cd52b5)
 
 마지막 세션은 KT Cloudware의 서버가상화팀 김재홍 팀장께서 발표를 해주셨는데, uCloud를 구축할때 Open Source를 활용한 사례를 발표해주었다.
 
 발표자료 : http://opensource.ktcloudware.com/opensource/files/OpenCloud2012_Cloud%20Computing_kjh.pdf
 
-![](http://asset.hibrainapps.net/saltfactory/images/b4f1df3c-ea31-42ff-836e-9961e584bfb5)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/b4f1df3c-ea31-42ff-836e-9961e584bfb5)
 
-![](http://asset.hibrainapps.net/saltfactory/images/a0626b20-09dd-4ff5-9f28-e1c3077ee880)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/a0626b20-09dd-4ff5-9f28-e1c3077ee880)
 
 학교 연구실, 연구소에서 Big Data에 대해서 실제로 서비스할 곳이 그렇게 많지가 않지만 연구분야의 주제로 어떻게 시작해야할지, 어떤 오픈 소스를 사용해야할지에 대해서 뜬 구름 같은 생각이 들었는데 이번 컨퍼런스를 다녀오고 난 이후 그 방향이 약간은 잡히는 것 같았다. 특히 오픈소스로 아키텍처를 구축한 사례, 어떤 오픈소스들을 사용했는지에 대한 사례 처음 빅데이터와 클라우드 구축을 하려는 우리 같은 연구소에게는 매우 고마운 발표와 자료가 아니었나 생각이 든다. 아직 가상화와 클라우드에 대한 시스템 구축을 한번도 해보지 않았지만, 이날 발표자들이 말하기를 오픈소스로 에코시스템을 구축한다는 것은 아주 많은 커스터마이징 작업을 해야한다는 것이였다. 이러한 이유로 클라우드나 빅 데이터에 대한 관심들은 너무나들 많으나 실제 시스템을 구축하고 운영할줄 아는 전문가들이 부족하다는 것이다. 그래서 이번 컨퍼런스 자료 내용으로 실험용 클라우드와 빅데이터 시스템을 구축해볼 예정이다. 현재 진행중인 프로젝트가 끝나면 이 연구주제에 대해서 블로그에 포스팅하면서 공유하고 싶다. 하루의 짦은 시간이지만 이렇게 서울에 올라와서 이런 자료를 얻고, 발표내용을 들으면서 생각하지 못하고 찾지못한 방법을 얻게되어서 다행이다. 서울에서 흔한 교육이라도 왕복 6시간 넘게 새벽같이 일어나서 어렵게 참석하지만 이렇게 얻고 가는 교육들은 참 기분이 좋다. 늘 느끼는 것이지만 클라우드와 빅데이터 분야에서는 NexR의 발표가 가장 좋은것 같다. 다음에 Big Data 컨퍼런스를 또 준비하고 있다고 하던데 그 컨프런스에 다시 참석해서 좀더 디테일한 설명과 자료를 얻어가고 싶다고 생각하면서 마무리하고 내려왔다.
 

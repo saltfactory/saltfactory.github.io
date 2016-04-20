@@ -139,7 +139,7 @@ Ext.define('Saltfactory.view.MainPanel', {
 
 위와 같이 listeners에 이벤트를 등록하면 다음과 같이 console에 로그가 남는 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/c4de5141-ca23-40c3-900f-a98049c8add4)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/c4de5141-ca23-40c3-900f-a98049c8add4)
 
 이젠 View에서 처리하는 이벤트를 Controller에서 처리하도록 해보자. 먼저 activate를 controller 에 등록하는 경우이다. MainPanelController를 파일을 만들고 app.js에 다음과 같이 controller와 view 파일을 등록한다.
 
@@ -238,7 +238,7 @@ Ext.define('Saltfactory.controller.MainPanelController', {
 
 웹 앱을 다시 리로드 시켜보자. View에서 listeners에 등록해서 사용할 때는 view에 있는 handler 함수가 동작했지만 controller에 추가한 handler가 동작하고 있는 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/5d4e950b-6607-49c5-9d3d-076078312c01)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/5d4e950b-6607-49c5-9d3d-076078312c01)
 
 이렇게 View의 event를 Controller로 분리함으로 View에는 실제 display시키는 것에만 집주할 수 있게 되고 Controller에서 이벤트와 데이터를 처리해서 View 코드의 의존성은 낮출수 있게 된다.
 

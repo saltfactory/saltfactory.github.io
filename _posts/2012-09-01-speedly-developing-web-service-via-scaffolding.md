@@ -27,7 +27,7 @@ scaffolding 개념을 추상화해서 말하자면 건물을 짓기 위한 가�
 우리는 간단하게 블로그 웹 서비스를 만들어볼 것이다. scaffold를 사용할 때와 scaffold로 사용하지 않을 때 두가지로 살펴볼 것인데, 우선 테스트를 위해서 Rails 프로젝트를 만든다.
 이 포스팅에 사용된 ruby 버전은 1.9.2-p290이고, rails 버전은 3.2.8 이다
 
-![](http://asset.hibrainapps.net/saltfactory/images/b94ad242-67dd-47ee-9028-374676c09950)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/b94ad242-67dd-47ee-9028-374676c09950)
 
 ```
 rails new BlogApp
@@ -35,7 +35,7 @@ rails new BlogApp
 
 우리는 RoR 어플리케이션을 만들때 데이터베이스 타입을 지정하지 않았는데 이럴경우는 기본적으로 SQLite 데이터베이스를 사용한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/98e7e735-f0ab-4820-a433-ff6b4da27007)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/98e7e735-f0ab-4820-a433-ff6b4da27007)
 
 위 명령어를 실행하면 BlogApp 이라는 Rails 어플리케이션이 만들어진다. 지금부터 scaffold를 사용하지 않고 개발하는 경우와 scaffold를 사용해서 개발하는 방법을 살펴보기로 한다.
 
@@ -70,7 +70,7 @@ class Post < ActiveRecord::Base
 end
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/17e14368-85d9-4e61-91c7-757241dd0840)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/17e14368-85d9-4e61-91c7-757241dd0840)
 
 모델과 데이터베이스 테이블과 연결이 잘 되었는지 확인해보자. rails console 명령어를 사용하면 rails를 웹 브라우저에서 확인하지 않고 rails의 객체를 확인하고 rails 동작과 유사한 것을 처리할 수 있다.
 
@@ -81,7 +81,7 @@ rails console
 post = Post.new
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/eff15092-6015-4164-a984-1543ee5edb15)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/eff15092-6015-4164-a984-1543ee5edb15)
 
 위의 그림과 같이 Post.new를 생성하면 ActiveRecord를 상속받은 Post 객체가 posts 테이블과 매핑되어 Rails에 메모리에 올라오는 것을 확인할 수 있다.
 
@@ -91,11 +91,11 @@ post = Post.new
 rails generate Post name:string, title:string, content:text
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/af5f1ee6-ef19-4736-ab82-d7d7490f7f82)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/af5f1ee6-ef19-4736-ab82-d7d7490f7f82)
 
 rails genreate model 명령어로 모델을 생성하면 db/migrate/ 디렉토리에 테이블에 관한 마이그레이션 파일이 생성된다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/0436f08c-7a3b-4e8f-a79c-7bd4d6268aff)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/0436f08c-7a3b-4e8f-a79c-7bd4d6268aff)
 
 그리고 데이터베이스를 마이그레이션하기 위해서 마이그레이션 명령어를 사용한다.
 
@@ -103,7 +103,7 @@ rails genreate model 명령어로 모델을 생성하면 db/migrate/ 디렉토�
 rake db:migrate
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/ac3e2956-068a-4fba-8878-7ce6041842b2)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/ac3e2956-068a-4fba-8878-7ce6041842b2)
 
 너무나 간단하게 데이터베이스에 테이블도 생기고 객체와 메핑이 되는 모델도 만들어졌다. 위에서 했던 것과 동일하게 rails console로 확인할 수 있다.
 
@@ -271,7 +271,7 @@ end
 rake routes
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/fbc02a0b-dd64-4ad1-adfb-2be79890f646)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/fbc02a0b-dd64-4ad1-adfb-2be79890f646)
 
 이제 컨트롤러에서 처리하고 렌더링한 뷰를 만들어보자 ${RAILS_HOME}/app/views/  디렉토리 밑에 posts 라는 디렉토리를 만들고 posts_controller에서 해당하는 뷰 파일을 controller의 메소드 이름과 매핑하여 생성한다.
 
@@ -395,17 +395,17 @@ rails server
 
 http://localhost:3000/posts 를 실행해보자.
 
-![](http://asset.hibrainapps.net/saltfactory/images/38a17495-d140-4965-bb90-5fb8c3a59226)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/38a17495-d140-4965-bb90-5fb8c3a59226)
 
 http://localhost:3000/posts/new 를 실행해보자.
 
-![](http://asset.hibrainapps.net/saltfactory/images/e1cc94a0-172c-4432-acfb-4ece4411942c)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/e1cc94a0-172c-4432-acfb-4ece4411942c)
 
 form에 값을 입력하고 Create Post 버튼을 클릭해보자.
 
-![](http://asset.hibrainapps.net/saltfactory/images/04b96501-69c9-4777-a808-a3f7e471e7bb)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/04b96501-69c9-4777-a808-a3f7e471e7bb)
 
-![](http://asset.hibrainapps.net/saltfactory/images/f1a55867-3f35-46c6-ade6-13b0b0587170)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/f1a55867-3f35-46c6-ade6-13b0b0587170)
 
 참고로 Model을 생성할 때 수동으로 파일을 생성하지 않고 rails generate model을 사용하였듯이 컨트롤러를 생성할 때도 rails generate controller로 생성할 수 있다. rails generate controller 명령어로 생성하면 컨트롤러가 생성되면서 해동되는 view 파일이 자동으로 생성이 된다.
 
@@ -431,7 +431,7 @@ rails generate scaffold Post name:string title:string content:text
 
 위 rails generate scaffold 라는 명령으로 Post에 관한 Model, View, Controller를 생성할 수 있는 것을 확인할 수 있다. 앞에서 복잡하고 길었던 작업을 scaffolding으로 한번에 Model, View, Controller를 생성하는 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/514ae644-6942-40d8-860c-c452011583b6)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/514ae644-6942-40d8-860c-c452011583b6)
 
 scaffold는 Model을 생성하면서 데이터베이스의 migration 파일 까지 생성해준다. 그래서 바로 데이터베이스를 마이그레이션 할 수 있다.
 
@@ -441,9 +441,9 @@ rake db:migrate
 
 이제 Rails 어플레케이션 서버를 실행해서 http://localhost:3000/posts 를 확인한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/f04a8f39-6003-452b-bfec-cbeeceddf352)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/f04a8f39-6003-452b-bfec-cbeeceddf352)
 
-![](http://asset.hibrainapps.net/saltfactory/images/bc9807cc-5267-4b24-af65-acb10bc352c3)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/bc9807cc-5267-4b24-af65-acb10bc352c3)
 
 scaffolding으로 작업했던 CRUD 뷰, 컨틀롤러, 모델 그리고 데이터베이스가 잘 동작하는 것을 확인할 수 있을 것이다.
 

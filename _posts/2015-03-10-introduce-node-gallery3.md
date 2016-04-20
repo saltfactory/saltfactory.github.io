@@ -194,7 +194,7 @@ Gallery3의 REST API를 사용하기 위해서는 **X-Gallery-Request-Key**가 �
   });
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/a751ed0e-e8c8-433c-bda3-9446fe098d7b)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/a751ed0e-e8c8-433c-bda3-9446fe098d7b)
 
 ## Gallery3.findItem(identifier)
 
@@ -229,7 +229,7 @@ describe.only('findItem', function(){
     });
   });
 ```
-![](http://asset.hibrainapps.net/saltfactory/images/f9fa6c55-e129-45a6-8c72-8e797d0d7f63)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/f9fa6c55-e129-45a6-8c72-8e797d0d7f63)
 
 ## Gallery3.createItem(entity, identifier)
 
@@ -285,7 +285,7 @@ Gallery3에서 **앨범**은 `type`이 `album`인 **item**이다. 새로운 앨�
     });
   });
 ```
-![](http://asset.hibrainapps.net/saltfactory/images/7531d1f4-2457-4a41-a544-0221c58ea4cf)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/7531d1f4-2457-4a41-a544-0221c58ea4cf)
 
 ## Gallery3.uploadFile(filePath, entity, identifier)
 
@@ -384,7 +384,7 @@ describe.only('upload file', function(){
   });
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/b963a261-1bf1-4e48-8913-73ef01a7d501)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/b963a261-1bf1-4e48-8913-73ef01a7d501)
 
 
 ## Gallery3.getImageUrlPublic(identifier)
@@ -421,14 +421,14 @@ describe.only('getImageUrlPublic', function(){
   });
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/362aba12-649c-46f4-8d88-7d82b35bb15d)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/362aba12-649c-46f4-8d88-7d82b35bb15d)
 
 ## 결론
 
 [node-gallery3](https://github.com/saltfactory/node-gallery3)를 사용하여 Gallery3 서버에 앨범을 만들고 사진을 업로드하였다. 실제 서버에는 웹으로 업로드한 파일을 다음과 같이 관리할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/39596b21-9d7d-4a2c-83c2-867bd91dbb7a)
-![](http://asset.hibrainapps.net/saltfactory/images/496c302c-ad8a-45f7-819a-083040ce217c)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/39596b21-9d7d-4a2c-83c2-867bd91dbb7a)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/496c302c-ad8a-45f7-819a-083040ce217c)
 
 Gallery3은 앨범을 만들거나 사진을 관리하기 위한 오픈 소스 프로젝트이만 사용하는 방법에 따라서 다양한 서비스를 만들 수 있다. 이렇게 구축된 Gallery3 서비스를 클라이언트 프로그램이나 외부 프로그램에서 Gallery3의 RESTful API를 사용하여 편리하게 데이터를 가져올 수 있다. 이 때 **node-gallery3**를 이용하면 편리하고 쉽게 Gallery3의 데이터를 관리할 수 있을 것이다. **node-gallery3**은 CLI를 제공하고 있다. Unix나 Mac을 사용하는 사용자는 터미널에서 쉽게 파일을 Gallery3로 업로드할 수 있다. **node-gallery3**을 이용하여 확장된 Gallery3 클라이언트 프로그램도 만들 수 있을 것이다.
 

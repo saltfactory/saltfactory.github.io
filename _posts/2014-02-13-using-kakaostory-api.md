@@ -42,19 +42,19 @@ kakaostory-sample을 열어서 `/res/values/kakao-strings.xml` 파일을 열어�
 
 한번 아무런 수정 없이 실행해보자. 앱을 최초 실행하면 "카카오 계정으로 로그인"하기 버튼이 있는 `KakaoStoryeLoginActivity`가 실행이 된다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/dadddb33-a5f1-46a2-a13e-6047295d1c7c)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/dadddb33-a5f1-46a2-a13e-6047295d1c7c)
 
 현재 kakao_app_key와 kakao_scheme을 수정하지 않은 상태이다. 카카오 계정으로 로그인을 눌러본다. 그러면 다음과 같이 카카오계정으로 로그인하려는 앱에서 접근하는 권한을 허용할거냐는 alert를 보게 된다. 마치 페이스북에서 앱이 페이스북의 권한을 얻는 것과 유사하다. "허용"을 선택한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/6f6e789b-f0e3-4545-9bc2-4dbc762053e5)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/6f6e789b-f0e3-4545-9bc2-4dbc762053e5)
 
 이렇게 카카오계정의 접근을 허용하면 다음은 `KakaoStoryMainActivity`가 열려야하는데 다시 `KakaoStoryLoginActivity`로 돌아가는 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/ecbb7ced-3900-495a-ae09-046ad4de5b95)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/ecbb7ced-3900-495a-ae09-046ad4de5b95)
 
 어떤 문제로 이와 같은 현상이 발생한 것일까? 화면상에서는 아무런 경고도 없고 이유도 알 수 없기 때문에 우리는 로그를 확인하기로 한다. 안드로이드 로그에서     kakao를 필터하면 kakao의 샘플 코드가 실행되면서 남기는 로그를 볼 수 있다. 밑에 녹색형광색 박스를 살펴보자. **AUTHORIZATION_FAILED**가 발생했고, **APIErrorResult**로 보여주고 있는 것을 확인 할 수 있다. 화면 캡처에서는 보이지 않지만 다음과 같은 메세지를 출력하고 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/dc019bda-6080-47b3-abcb-6ac5df917526)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/dc019bda-6080-47b3-abcb-6ac5df917526)
 
 ```
 APIErrorResult={requestURL='https://kauth.kakao.com/oauth/token?grant_type=authorization_code&code=uNKn1sPBFmbOp46d_uTR8kkYLgMcg6Fqf5X-jiL-fu6gSnYjZ7Mjjdw77DioVskxdBTV36wQQjQAAAFEHt2s9g&redirect_uri=kakao0a0e05c7073ff55e402b1468d65d429b%3A%2F%2Foauth&client_id=0a0e05c7073ff55e402b1468d65d429b&android_key_hash=fOb%2B%2Bhwpaq64Bn%2FG7q07yd%2B4Jaw%3D',
@@ -70,7 +70,7 @@ request_type = null
 
 우리는 위에서 kakao_app_key와 key hash의 중요성을 알아보았다. 이제 개발자 사이트에 들어가서 앱 키와 키 해시 값을 확인한다. 자신이 등록한 앱의 기본설정을 열어서 앱키와 키 해시 값을 확인하다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/3f106e0a-7e44-45a4-b454-3aea8a33fa6c)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/3f106e0a-7e44-45a4-b454-3aea8a33fa6c)
 
 확인한 값을 kakaostory-sample 프로젝트를 열어서 `/res/values/kakao-strings.xml`에 값을 입력한다. `kakao_scheme`에는 `kakao`를 앞에 붙이고  앱키를 입력하면 된다.
 
@@ -85,19 +85,19 @@ request_type = null
 
 이제 다시 디바이스로 빌드해보자. 위에서와 같은 `KakaoStoryLoginActivity`가 열리게 되고 "카카오톡 계정으로 로그인" 버튼을 누르면 정상적으로 로그인 인증을 마치고 `KakaoStoryMainActivity` 화면이 나타날 것이다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/015f628c-fd82-4068-a229-c21eb3edb4cb)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/015f628c-fd82-4068-a229-c21eb3edb4cb)
 
 프로필 버튼을 눌러보자. 그러면 현재 내가 사용하고 있는 카카오스토리의 배경화면과 프로필 화면 그리고 프로필 정보를 가져와서 업데이트한 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/305fb3a6-ac0a-4acd-a5de-0a101a652024)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/305fb3a6-ac0a-4acd-a5de-0a101a652024)
 
 다음은 포스팅 버튼을 눌러보자. 미리 지정한 글을 카카오스토리 내에 포스팅한 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/a4bb77f4-a9cf-4639-baf4-cbf85c71c345)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/a4bb77f4-a9cf-4639-baf4-cbf85c71c345)
 
 컨텐츠를 자세히 눌러보면 앱 키가 내가 만든 앱의 키이기 때문에 내가 앱으로 등록한 **sf-kakao-demo**의 앱으로 등록된 것이라는 것을 확인할 수 있다. 다시 말해서 앱 키를 가지고 어떤 앱으로 글을 올렸는지 확인하는 것을 알 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/055f2d08-74c3-4692-bb08-f1fdb18c53b5)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/055f2d08-74c3-4692-bb08-f1fdb18c53b5)
 
 마지막으로 "업로드" 버튼을 눌러보자. 그런데 좀 이상하다. 업로드가 완료 되었다고 하는데 업로드가 되지 않는 것을 확인할 수 있다. 소스코드를 살펴보자. `KakaoStoryMainActivity`를 열어본다. 그리고 `onClickUpload()` 메소드를 살펴보자. 카카오스토리에 이미지와 같이 포스팅을 할 경우 카카오스토리 SDK는 다음과 같이 동작을 한다.
 1. 파일을 용량을 줄여서 카카오 서버로 전송한다.
@@ -129,7 +129,7 @@ private void onClickUpload() {
 
 다시 디바이스로 빌드해서 "업로드" 버튼을 눌러보자. 이젠 사진과 함께 `onClickPost()`가 동작되어 포스팅 예제 글과 함께 업로드가 완료된 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/a8ad66aa-b145-413c-803c-ff36b9d28021)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/a8ad66aa-b145-413c-803c-ff36b9d28021)
 
 ### 카카오스토리에 글 올리기 직접 구현해보기
 
@@ -161,7 +161,7 @@ https://github.com/saltfactory/saltfactory-android-tutorial/tree/kakaolink-demo
 
 카카오 SDK 로그인을 담당하는 `SFKakaoLoginActivity` 안드로이드 컴포넌트를 추가한다. 이 `SFKakaoLoginActivity`는 카카오 SDK의 로그인버튼을 이용해서 로그인하는 방법을 담고 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/ecfb785f-0e6b-426a-8384-13173e85b276)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/ecfb785f-0e6b-426a-8384-13173e85b276)
 
 `/res/layout/login.xml` 파일에 다음 내용을 추가한다.
 
@@ -312,7 +312,7 @@ public class SFKakaoLoginActivity extends Activity {
 
 첫 번째 예제의 `MyActivity`를 좀 더 다양한 예제를 테스트하기 위해서 다음과 같이 변경했다. "카카오링크", "카카오스토리 프로파일", "카카오스토리 포스팅", "카카오 로그아웃" 버튼을 추가했는데 카카오링크는 첫 번 째 예제에서 소개한 내용이고, 카카오스토리 프로파일은 카카오스토리의 프로파일 내용을 요청하는 `SFKakaoStoryProfileActivity`를 열게되고, 카카오스토리 포스팅은 카카오스토리로 사진과 글을 포스팅할 수 있는 `SFKakaoStoryPostingActivity`를 열게 만들었다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/fb9b744d-6a7f-4963-a04a-0552f65fa628)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/fb9b744d-6a7f-4963-a04a-0552f65fa628)
 
 `/res/layout/mail.xml` 을 다음과 같이 수정한다.
 
@@ -476,7 +476,7 @@ public class MyActivity extends Activity {
 
 지금부터 눈여겨 봐야할 것이 바로 카카오 SDK 중에서도 카카오스토리의 기능을 사용할 수 있는 카카오스토리 API 사용법이다. 테스트로 만든 `SFKakaoStoryProfileActivity`는 크게 ImageView 2개 (프로파일 이미지, 배경화면 이미지)와 TextView 2개(닉네임, 생일)를 레이아웃으로 구성하고 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/beec9b11-7dd8-46f8-b78b-307d76d99072)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/beec9b11-7dd8-46f8-b78b-307d76d99072)
 
 위와 같이 구성하기 위해서 `/res/layout/profile.xml`을 다음과 같이 추가한다.
 
@@ -710,7 +710,7 @@ public class SFKakaoStoryProfileActivity extends Activity {
 
 카카오 SDK의 카카오스토리 API 테스트의 마지막 엑티비티인 이 객체는 사진첩에서 사진을 선택해서 글을 입력 받아 그 글을 카카오스토리에 올리는 엑티비티이다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/3e816b0e-43a8-4f3c-b81e-b63a5117bd40)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/3e816b0e-43a8-4f3c-b81e-b63a5117bd40)
 
 `res/layout/post.xml` 파일을 다음 내용으로 추가한다.
 
@@ -995,27 +995,27 @@ public class SFKakaoStoryPostActivity extends Activity {
 
 이제 카카오스토리 테스트에 관한 모든 설정이 완료되었다. 카카오스토리 포스팅을 테스트해보자. 앱을 디바이스에 빌드하고 난 이후 로그인 버튼을 클릭한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/391849b5-50ea-4b6b-8596-874a5916f965)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/391849b5-50ea-4b6b-8596-874a5916f965)
 
 그러면 카카오계정으로 로그인하려는 앱에서 접근 권한을 허용하는 문구가 나온다. 허용을 선택한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/eb5f3e9d-f312-4db4-97d4-6251bc746248)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/eb5f3e9d-f312-4db4-97d4-6251bc746248)
 
 그러면 테스트를 위해 추가한 MyActivity가 실행된다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/e79a5f21-897f-4be9-b2d6-19ad039bb844)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/e79a5f21-897f-4be9-b2d6-19ad039bb844)
 
 카카오스토리 포스팅 버튼을 눌러보자. 그러면 카카오에 글을 등록하기 이전에 먼저 앨번에서 사진을 선택할 수 있게 사진첩 앨범이 열리는 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/afa1f527-a08c-4263-861d-80676f99d14b)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/afa1f527-a08c-4263-861d-80676f99d14b)
 
 사진을 선택하고 글상자에 글을 입력한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/607a3ab8-b14f-4688-9161-9609de6e54af)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/607a3ab8-b14f-4688-9161-9609de6e54af)
 
 포스팅 버튼을 클릭해서 실제 포스팅이 완료 되었는지 확인한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/4135b596-ca43-4b4c-a1f9-e2d27ab31a82)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/4135b596-ca43-4b4c-a1f9-e2d27ab31a82)
 
 ## 결론
 

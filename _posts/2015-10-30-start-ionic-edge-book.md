@@ -11,7 +11,7 @@ tags:
   - android
 comments: true
 images:
-  title: 'http://asset.hibrainapps.net/saltfactory/images/48133d68-b7e5-4434-b808-a81d59494aef'
+  title: 'http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/48133d68-b7e5-4434-b808-a81d59494aef'
 ---
 
 
@@ -53,7 +53,7 @@ Windows 사용자일 경우는 **시스템 환경변수** 등록하는 메뉴에
 
 Ionic 프로젝트를 개발하면서 Android 에뮬레이터나 디바이스에 설치하거나 디버깅할 때 Android SDK가 필요하다. http://developer.android.com/sdk/installing/index.html 에서 SDK를 설치하면 된다. Android 플랫폼을 위한 플러그인 개발을 위해서는 Android Studio를 설치하면 되지만, Ionic이 Android 앱을 빌드하거 실행할 때는 Stand-Alone SDK Tools가 필요하다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/921e9a86-1f39-4f9b-a8a0-88d509b64dd9)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/921e9a86-1f39-4f9b-a8a0-88d509b64dd9)
 
 시스템에 맞는 SDK를 다운받아서 설치한다. **주의할 점은 JAVA_HOME과 마찬가지로 Android SDK를 설치한 이후에 ANDROID_HOME 을 환경변수로 등록해둬야한다.** 예를 들어 Android SDK 바이너리 파일을 다운받아 /Projects/Libraries/adt-bundle-mac-x86_64/** 경로에 압축을 풀었다면 ANDROID_HOME은 다음과 같이 된다. **/Projects/Libraries/adt-bundle-mac-x86_64/sdk**
 
@@ -75,15 +75,15 @@ Ionic의 개발 환경은 기본적으로 Node.js가 설치되어 있어야한�
 
 Node.js는 공식 사이트에서 다운로드하여 시스템에 맞는 설치파일을 가지고 설치하면 된다. https://nodejs.org/en/download/
 
-![](http://asset.hibrainapps.net/saltfactory/images/426fe750-c0f2-4be0-a639-a7450e67256d)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/426fe750-c0f2-4be0-a639-a7450e67256d)
 
 ```
 node -v
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/7fb5911c-0fe5-4e0d-bb44-831a2cc72d89)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/7fb5911c-0fe5-4e0d-bb44-831a2cc72d89)
 
-![](http://asset.hibrainapps.net/saltfactory/images/26f93107-88f5-47ee-8ee3-1aaa9e685c18)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/26f93107-88f5-47ee-8ee3-1aaa9e685c18)
 
 최근 Node.js는 IO.js와 합쳐지면서 **v.4.x* 버전으로 업데이트 되었다. 아직 최신 node를 사용하게 되면 의존성 문제가 발생하기 때문에 **v0.12.x** 버전을 사용할 것을 추천한다.
 
@@ -119,7 +119,7 @@ Ionic은 내부적으로 [Cordova](https://cordova.apache.org/)를 사용하여 
 npm install -g cordova
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/d754e0cc-0a8f-4dbb-b92e-979ad109a70f)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/d754e0cc-0a8f-4dbb-b92e-979ad109a70f)
 
 
 ## gulp
@@ -130,7 +130,7 @@ Ionic의 빌드시스템은 [gulp](http://gulpjs.com/)를 사용한다. gulp는 
 npm install -g gulp
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/999d14a0-a6ae-4a2b-9eb3-671c68254727)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/999d14a0-a6ae-4a2b-9eb3-671c68254727)
 
 ## bower
 
@@ -148,7 +148,7 @@ npm install -g bower
 npm install -g ios-sim
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/ac74fe14-2ada-4887-adcb-82f4e4d2eb0f)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/ac74fe14-2ada-4887-adcb-82f4e4d2eb0f)
 
 ## ios-deploy
 
@@ -158,11 +158,11 @@ npm install -g ios-sim
 npm install -g ios-deploy
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/42620314-87c0-4282-8cd9-6b253c358f17)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/42620314-87c0-4282-8cd9-6b253c358f17)
 
 만약 ios-sim과 ios-deploy 패키지를 설치하지 않은 상태에서 ionic 프로젝트를 생성하면 다음과 같은 warning을 보게 될 것이다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/72800990-4eef-486d-a72b-b0ab1ccac9a4)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/72800990-4eef-486d-a72b-b0ab1ccac9a4)
 
 ## ionic
 
@@ -172,13 +172,13 @@ Ionic 프로젝트를 개발하기 위해서 Ionic 패키지를 설치한다. Io
 npm install -g ionic
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/b9aed591-983f-4cf9-b16f-2a2ca495f924)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/b9aed591-983f-4cf9-b16f-2a2ca495f924)
 
 ## Git
 
 Ionic 프로젝트를 만들때, 반드시 필요한 것은 아니지만 관련된 소스를 가져오거나 소스 관리를 할 때 필요하다. https://git-scm.com/downloads 에서 시스템 환경에 맞는 설치 파일을 찾아서 설치하면 된다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/5fc2b345-9dda-4286-bd7d-bcde2e389e48)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/5fc2b345-9dda-4286-bd7d-bcde2e389e48)
 
 또한 Mac 사용자는 Homebrew를 사용하여 간편하게 설치할 수 있다.
 
@@ -198,7 +198,7 @@ npm으로 Ionic을 설치했다면 이젠 모든 준비가 완료되었다. 정�
 ionic start myApp sidemenu
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/236d5ceb-4521-481a-b4e5-6f9691a24d69)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/236d5ceb-4521-481a-b4e5-6f9691a24d69)
 
 
 ionic framework는 현재 가장 인기있는 하이브리드 앱 개발 플랫폼이다. 이런 이유로 ionic은 아주 빠른 속도로 버전이 업데이트되고 기능이 추가되고 있다. 아마 책에서 소개한 Ionic보다 최근 Ionic이 더 많은 기능이 추가되었고 환경이 변화 되었을 것이다. 그래서 이 블로그를 운영하면서 ionic의 기능들을 소개하려고 하는 것이다. ionic으로 프로젝트를 생성하면 기존과 달리 터미널에서 많은 정보를 보여준다.
@@ -209,13 +209,13 @@ Ionic은 하이브리드 앱을 개발하는 프레임워크이다. 다시 말�
 ```
 ionic serve
 ```
-![](http://asset.hibrainapps.net/saltfactory/images/549c6ce3-9c07-4ead-8333-bdc6adfb7406)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/549c6ce3-9c07-4ead-8333-bdc6adfb7406)
 
 서버가 실행되면 브라우저에서 프로젝트 확인이 가능하다.
 
 http://localhost:8100
 
-![](http://asset.hibrainapps.net/saltfactory/images/7f572899-bc10-4a80-89ac-a2d3b4f3922f)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/7f572899-bc10-4a80-89ac-a2d3b4f3922f)
 
 Mac에서 Ionic 프로젝트를 생성하였으면 기본적으로 iOS 플랫폼이 추가되어 있기 때문에 iOS 앱으로 빌드를 해보자.
 
@@ -223,7 +223,7 @@ Mac에서 Ionic 프로젝트를 생성하였으면 기본적으로 iOS 플랫폼
 ionic build ios
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/30cddb2c-5f97-47fd-b591-236b6c243f11)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/30cddb2c-5f97-47fd-b591-236b6c243f11)
 
 현재 앱에 iOS 플랫폼으로 빌드를 하면 다음과 같이 앱 빌드가 진행되어진다. 빌드가 마치면 iOS 시뮬레이터에 실행을 해보자.
 
@@ -231,11 +231,11 @@ ionic build ios
 ionic emulate ios
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/4a6afcc2-ddef-4a84-a1c7-e62615f70437)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/4a6afcc2-ddef-4a84-a1c7-e62615f70437)
 
 기본적으로 target을 지정하지 않으면 Xcode의 기본 시뮬레이터로 앱을 런칭시키는 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/9eddf515-140a-42cb-a158-b916dc41e573)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/9eddf515-140a-42cb-a158-b916dc41e573)
 
 만약 특별한 디바이스에 특별한 iOS 버전으로 시뷸레이터에 설치해서 보고 싶은 경우 **ios-sim**의 정보를 확인하여 **—target** 옵션을 추가한다.
 
@@ -243,7 +243,7 @@ ionic emulate ios
 ios-sim showdevices
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/67908699-4af9-4efe-bef8-4b1f4e7c5134)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/67908699-4af9-4efe-bef8-4b1f4e7c5134)
 
 만약 iPhone-5s 에 앱이 설치되었을 때를 확인하고 싶을 경우 다음과 같이 target으로 디바이스를 지정하고 프로젝트를 simulator에 실행한다.
 
@@ -251,7 +251,7 @@ ios-sim showdevices
 ionic emualte ios —target=“iPhone-5s”
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/49252c9e-6606-49fd-b660-a45549208b96)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/49252c9e-6606-49fd-b660-a45549208b96)
 
 실제 디바이스에 ionic 앱을 실행시키기 위해서는 USB로 디바이스를 Mac에 연결한 뒤 run 명령어를 실행하면 된다. 이때, 디바이스에 비밀번호가 걸려있을 경우 설치가 되지 않는다. 비밀번호를 해지하거나 비밀번호를 미리 열어둬야한다.
 
@@ -271,7 +271,7 @@ ionic 앱을 빌드하는 방법은 iOS 앱을 빌드하는 방법과 동일하�
 ionic build android
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/1285d33b-97ba-4456-bb87-294e7e7e3b00)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/1285d33b-97ba-4456-bb87-294e7e7e3b00)
 
 Android 에뮬레이터 앱을 런칭시켜보자 이 방법도 iOS 시뮬레이터에 앱을 런칭시키는 방법과 동일하다
 
@@ -279,11 +279,11 @@ Android 에뮬레이터 앱을 런칭시켜보자 이 방법도 iOS 시뮬레이
 ionic emulate android
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/17e1792f-afdd-4bf6-9027-1ce3c1408201)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/17e1792f-afdd-4bf6-9027-1ce3c1408201)
 
 위 명령어를 실행하면 Android 앱 파일인 **.apk** 파일이 자동으로 생성이 된다. 이 파일을 위에서 추가한 Andorid SDK를 사용하여 emulator를 실행하여 런칭하게 된다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/382804db-38fb-4dac-8865-9a81651b7bb0)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/382804db-38fb-4dac-8865-9a81651b7bb0)
 
 
 ## 엣지있게 설명한 Ionic 책의 예제 실행방법
@@ -308,7 +308,7 @@ Ionic을 처음 접하거나 하이브리드 앱을 처음 개발하는 개발�
 git clone https://github.com/trendicity/trendicity.git
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/4422df34-644a-4863-ad57-8f1af36b3afb)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/4422df34-644a-4863-ad57-8f1af36b3afb)
 
 다음은 Trendicity 앱이 필요한 Node.js 패키지를 설치해야한다. 이런 이유 때문에 반드시 Node.js가 설치가 되어 있어야 한다. 프로젝트 디렉토리 안으로 들어가서 다음과 같이 npm을 사용하여 package.json 파일에 정의한 필요한 패키지를 한번에 설치한다.
 
@@ -316,7 +316,7 @@ git clone https://github.com/trendicity/trendicity.git
 npm install
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/d2e940c3-7e92-4073-897e-5d668237197a)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/d2e940c3-7e92-4073-897e-5d668237197a)
 
 이 명령어를 실행하면 필요한 패키지들이 설치되는데 가장 먼저 설하는 패키지들은 cordova, ionic, gulp, bower 이다. 이것은 ionic 개발에 필수적인 패키지들이기 때문이다. 기타 모든 패키지와 웹 컴포넌트들이 설치되는데 약간의 시간이 걸릴 것이다. 모든 패키지가 설치되면 앱을 실행할 준비가 끝났다.
 
@@ -325,21 +325,21 @@ Trendicity는 대부분의 기능을 HTML5 기술로 만들었기 때문에 디�
 ```
 ionic serve
 ```
-![](http://asset.hibrainapps.net/saltfactory/images/4e16150c-40d5-4e8e-a369-04e0c7ecc740)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/4e16150c-40d5-4e8e-a369-04e0c7ecc740)
 
 http://localhost:8100
 
 서버가 실행되면 브라우저에서 앱을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/1496b01f-c6d3-4fe0-9eee-dab9912e2fde)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/1496b01f-c6d3-4fe0-9eee-dab9912e2fde)
 
 책에서 나오는 OAuth2를 사용한 Instragram 로그인도 가능하다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/5f18095c-4bb6-425c-ba9f-fdc78fe1b4fd)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/5f18095c-4bb6-425c-ba9f-fdc78fe1b4fd)
 
 Trendicity는 HTML5 위치정보를 사용하여 주위에 있는 Instagram을 가져오는 앱인데 이 기능역서 Google Map과 연동하여 HTML5로 구현하였기 때문에 브라우저에서 확인이 가능하다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/db6e742f-0846-4307-b050-df62f7de253e)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/db6e742f-0846-4307-b050-df62f7de253e)
 
 
 다음은 iOS와 Android 플랫폼에서 동작하는 것을 확인해보자. Trendicity 소스는 기본적으로 플랫폼이 추가되어 있지 않다. 플랫폼에 동작하는 것을 확인하기 위해서 필요한 플랫폼을 추가한다. 우리는 iOS와 Android 플랫폼을 추가할 것이다.
@@ -348,7 +348,7 @@ Trendicity는 HTML5 위치정보를 사용하여 주위에 있는 Instagram을 �
 ionic platform add ios android
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/4ea8e2ed-d2ca-44dc-a0b5-4a785a9bd484)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/4ea8e2ed-d2ca-44dc-a0b5-4a785a9bd484)
 
 다음은 iOS 시뮬레이터에서 앱을 실행시켜보자.
 
@@ -356,7 +356,7 @@ ionic platform add ios android
 ionic simulate ios
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/2c57d41f-975c-4e3e-88a8-6c640143a044)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/2c57d41f-975c-4e3e-88a8-6c640143a044)
 
 Android 에뮬레이터에서 앱을 실행시켜보자.
 
@@ -364,7 +364,7 @@ Android 에뮬레이터에서 앱을 실행시켜보자.
 ionic simulate android
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/65f101c5-8435-44cd-967e-056805c25464)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/65f101c5-8435-44cd-967e-056805c25464)
 
 이렇게 데스크탑에서 브라우저로 실행하기, iOS 시뮬레이터 실행하기, Android 에뮬레이터 실행하기를 살펴보았다. 만약 실제 디바이스에 실행하고 싶을 경우 다음과 같이 실행하면 된다.
 

@@ -26,12 +26,12 @@ cd ~/Library/Developer/Xcode/DerivedData/
 
 DerivedData 디렉토리에서 프로젝트 이름으로 검색해보면 여러가지 Xcode에서 제작된 프로젝트마다 생긴 파일들이 특정 디렉토리에서 저장되고 있다는 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/eb5a7d38-6010-4148-a628-f7ea4d7953df)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/eb5a7d38-6010-4148-a628-f7ea4d7953df)
 
 이 Derived Data의 정보는 Xcode의 Oranizer에서도 확인이 가능하다.
 Xcode에서 Window > Oranizer를 선택하면 Organizer 화면이 나타나는데 Projects 탭을 선택하면 Project의 Location이 나오게 되고 프로젝트의 파일들이 저장되는 Derived Data와 Snapshot의 정보를 보여준다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/1ec6aef7-9b94-47dc-825b-6886d75f60bb)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/1ec6aef7-9b94-47dc-825b-6886d75f60bb)
 
 그리고 각각 오른쪽에 Delete 버턴들이 존재하는데 Syntax Highlighting과 Code Completion의 문제가 발생하면 현재 작업중인 프로젝트의 Derived Data를 삭제하고 다시 Xcode에서 Project를 열어서 보면 다시 Syntax Highlighting과 Code Completion이 정상적으로 동작하는 것을 확인할 수 있다.
 

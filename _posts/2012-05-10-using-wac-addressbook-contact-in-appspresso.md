@@ -19,7 +19,7 @@ Appspresso에서 구현한 Contact Module은 http://appspresso.com/api/wac/conta
 
 그래서 우리는 project.xml 에서 deviceapis.pim과 deviceapis.pim.contact를 추가한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/d24703c1-5500-4ad2-888b-bad6ca2af420)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/d24703c1-5500-4ad2-888b-bad6ca2af420)
 
 Appspresso 에서 WAC로 연락처를 접근하기 위해서 가장 먼저 해야하는 일이 AddressBook을 찾아오는 것이다.
 Appspresso 에서 ContactManager는 contact 모듈에 관한 인터페이스로 주소록 참조에 관한 것을 담당하고 있다. 이것을 이용해서 우리는 AddressBook을 찾을 것이다. AddressBook을 얻기 위해서는 deviceapis.pim.contact.getAddressBooks 메소드를 다음과 같이 사용해서 획득할 수 있다.
@@ -153,19 +153,19 @@ function createContact(){
 
 빌드하고 ADE로 확인을 해보자. 우리가 입력한 contact property 정보를 모두 입력하고 난 뒤 addContactSuccessCallback으로 넘겨 받은 contact를 확인하면 다음과 같이 저장된 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/14881e3c-2efe-4dd1-8bba-3e6fd9272b47)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/14881e3c-2efe-4dd1-8bba-3e6fd9272b47)
 
 실제 디바이스 주소록에 추가가 되었는지 확인해보자. 먼저 Android 폰에서 테스트한 것이다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/e91d50e0-018e-4283-8d39-9918669efda4)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/e91d50e0-018e-4283-8d39-9918669efda4)
 
-![](http://asset.hibrainapps.net/saltfactory/images/fbe6c95c-bbb2-42f5-9e53-f361c85e0f54)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/fbe6c95c-bbb2-42f5-9e53-f361c85e0f54)
 
 iOS 폰에서도 테스트 해보자. 테스트는 iPod으로 했지만 iPhone이나 iPad에서도 동일하게 주소록에 연락처 정보가 추가되는 것을 확인할 수 있을 것이다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/d6b1b48f-fbbc-43e5-9367-3c7043caf945)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/d6b1b48f-fbbc-43e5-9367-3c7043caf945)
 
-![](http://asset.hibrainapps.net/saltfactory/images/b91fce34-673a-44f4-9214-0b3aea2f6731)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/b91fce34-673a-44f4-9214-0b3aea2f6731)
 
 ## 연락처 검색
 
@@ -219,7 +219,7 @@ function updateContact(){
 
 updateContactSuccessCallback에서 받게되는 Contact의 객체는 변경되기 이전의 객체 스냅샷이다. 아래그림은 breakpoint를 추가하여 변수 내부를 살펴본 것이다. Appspresso 다음 버전에서는 업데이트 이후의 객체가 넘겨 받을 수 있도록 되어지면 좋을 것 같다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/0e4f5063-1a60-4f80-b700-4831e47c65cf)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/0e4f5063-1a60-4f80-b700-4831e47c65cf)
 
 ## 연락처 삭제
 

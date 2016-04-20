@@ -12,7 +12,7 @@ disqus_identifier : http://blog.saltfactory.net/207
 
 SPX는 Java web RAD framework이다. JSPX는 자바 rich interactive web application 개발을 쉽게하기 위해서 2008년도에 자바 커뮤니티인 java.net에서 소개가 되었다. JSPX는 초기에는 web form과 같은 매우 제한적이였지만 JSPX-bay로 프로젝트가 옮겨지면서 지원하는 것이 점차 많아지게 되었다. RAD framework는 Rapid Application Development framework로 RAD software 방법론을 기반으로 만들어진 프레임워크이다. RAD software 방법론은 매우 짧은 개발 주기를 강조하는 선형모델로 비즈니스 모델링, 데이터 모데링, 어플리케이션 생성, 테스팅의 인과 과정을 보다 빠르게 하면서 고품질의 제품을 개발하는 모델이다
 
-![](http://asset.hibrainapps.net/saltfactory/images/178bbaa6-22e4-46e1-9765-9926aaa2b923)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/178bbaa6-22e4-46e1-9765-9926aaa2b923)
 
 소프트웨어 자체는 지속적으로 변화를 수용할 수 있는 개발 방법론을 적용해서 요구사항이 들어오면 그 요구사항에 맞게 신속하게 제품의 디자인(모델링)부터 어플리케이션 변경까지 변경되어져야하는데 정적인 개발 방법을 가지고는 대규모 어플리케이션에 적용하기 힘들어진다. 하지만 어플리케이션을 마치 뼈대를 조립하듯이 설계가 되어져 있으면 변경이 필요한 부분만 빠르게 변경하고 조립해가는 방법을 사용하면 되기 때문에 이런 RAD framework는 고객의 요구사항과 어플리케이션 변경에 빠르게 대응할 수 있는 환경을 가지고 있다. RAD는 제한된 범위의 단독 시스템을 CASE를 사용하여 신속하게 개발하는 방법론이다. 이 개발 대상은 시스템이 복잡하지 않아서 독립적으로 기술을 설계가 가능한 경우에 사용할 수 있다.
 
@@ -29,7 +29,7 @@ JSPX는 RAD의 방법론을 기반해서 다음 목적으로 디자인 되었다
 
 JSPX의 구조는 다음과 같다. Http Request 요청이 들어오면 Java Servlet이 URL 패턴에 해당되는 RequestHandler에게 요청을 넘겨서 Cache가 있으면 Cache된 컨트롤러를 사용하고 아니면 Page Controller과 Page Model Composer 를 이용해서 jspx와 조합해서 사용자 코드를 결합해서 Http Response를 반환해주는 구조를 가지고 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/4835c6e7-ebac-4123-965e-2c2bee9881e4)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/4835c6e7-ebac-4123-965e-2c2bee9881e4)
 
 CASE 기반으로 개발이 가능하다는 이야기인데 실제 어떻게 적용되는지 알아보기 이전에 기본 설정이 필요기 때문에 설정하는 포스팅부터 준비를 했다. JSPX는 Spring 프레임워크와 함께 연동해서 사용도 가능하지만 JSPX의 개념을 알기위해서 단독으로 설정해서 개발하는 방법을 소개한다.
 
@@ -37,7 +37,7 @@ CASE 기반으로 개발이 가능하다는 이야기인데 실제 어떻게 적
 
 Java 웹 어플리케이션을 개발하려면 기본적으로 Java 서블릿 서버가 필요한데 apache-tomcat과 같이 무료 오픈소스 서브를 이용하여 개발을 하고 있을 것으로 예상이된다. 그리고 IntelliJ나 Eclipse와 같이 IDE를 통해서 쉽게 웹 어플리케이션 프로젝트를 생성할 수 있기 때문에 그에 대한 설명은 생략한다. 이 포스팅을 위해 JSPXTutorial이라는 웹 어플리케이션 프로젝트를 IntelliJ에서 생성했다. 그리고 서블릿 엔진 서버는 apache-tomcat-6.0.36을 사용했다. 그리고 web root 디렉토리 밑에 jspx 파일을 저장하기 위해서 jspx 디렉토리를 생성했다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/2fe679a6-2102-41f6-aba2-c26af8fffb1a)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/2fe679a6-2102-41f6-aba2-c26af8fffb1a)
 
 ## JSPX 라이브러리 다운로드
 
@@ -147,11 +147,11 @@ JSPX는 HTML 파일 생성하는 코드를 대폭적으로 줄일 수 있다고 
 
 http://localhost:8080/jspx/helloworld.jspx
 
-![](http://asset.hibrainapps.net/saltfactory/images/785f55ae-b7fb-4d9a-bbfe-b9122f738e41)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/785f55ae-b7fb-4d9a-bbfe-b9122f738e41)
 
 jspx에 <label id="message"/>에 비어 있던 내용이 Hello Jspx World 라는 문자열을 포함해서 HTML이 생성된 것을 확인할 수 있다. 소스코드를 확인해보자. HelloWorld.java에서 Label에 setter했던 내용이 HTML 조립이 될 때 getter를 이용해서 가져와서 label element에 Hello Jspx World 문자열을 포함시켰다. 그리고 web.xml 서블릿에 리소스에 대한 url  Link 엘리먼트로 자동으로 생성되는 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/0af9b6cf-0fc7-4ea0-a980-e509ef1f13fa)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/0af9b6cf-0fc7-4ea0-a980-e509ef1f13fa)
 
 ## 결론
 

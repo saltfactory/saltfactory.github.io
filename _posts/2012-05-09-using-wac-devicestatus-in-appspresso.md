@@ -51,7 +51,7 @@ var components = deviceStatus.getComponents("Device");
 console.log(components);
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/a37786c2-796d-4baa-82fc-6a36e113daac)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/a37786c2-796d-4baa-82fc-6a36e113daac)
 
 지금 테스트하고 있는 디바이스는 iPod touch 2.1 세대 디바이스이다. 그 중에서 WAC로 접근할 수 있는 deviceStatus의 Device Aspect의 component는 "_default"만 존재한다. 이제 Device의 모델명을 가져오는 코드를 작성해보자.
 
@@ -70,7 +70,7 @@ var pendingOperation = deviceapis.devicestatus.getPropertyValue(
 );
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/b71634f1-f16f-4f4c-af39-160456d5239c)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/b71634f1-f16f-4f4c-af39-160456d5239c)
 
 success callback function에서 aspect와 component와 property에 맞는 값을 획득해서 이벤트를 만들었다. 현재 연결된 iPod 2.1라는 것을 확인할 수 있다. 이렇게 모델명을 획득해서 모델명에 따라 다른 UI를 설정하거나 다른 기능을 추가, 삭제 할 수 있게 된다. 만약 디바이스의 해상도를 가져와서 그 해상도에 맞는 UI를 만든다고 가정해보자. 그러면 디바이스의 크기가 필요하다. 이럴 경우에는 aspect가 Display이고 property가 resolutionWidth를 이용해서 가져올 수 있다.
 
@@ -91,7 +91,7 @@ var prop = {aspect:"Display", component : "_default", property:"resolutionWidth"
 var pendingOperation = deviceapis.devicestatus.getPropertyValue(successCallback, errorCallback, prop);
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/4bf313c9-a615-4057-a1d4-1a67fd77fb81)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/4bf313c9-a615-4057-a1d4-1a67fd77fb81)
 
 Nexus One ( android 폰)과 Apple의 iPod Touch를 연결해서 Device의 vendor를 확인해보았다.
 
@@ -112,9 +112,9 @@ var prop = {aspect:"Device", component : "_default", property:"imei"};
 var pendingOperation = deviceapis.devicestatus.getPropertyValue(successCallback, errorCallback, prop);
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/3e409ec0-dfba-4525-ad6f-898eac54d87e)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/3e409ec0-dfba-4525-ad6f-898eac54d87e)
 
-![](http://asset.hibrainapps.net/saltfactory/images/38ae5218-4164-42ba-bfa6-b83add59c3d9)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/38ae5218-4164-42ba-bfa6-b83add59c3d9)
 
 이렇게 하나의 코드로 디바이스 속성을 deviceStatus의 getPropertyValue를 이용해서 가져올 수 있다. Appspresso에서 지원하는 WAC의 deviceStatus Module의 접근할 수 있는 Aspect와 property 목록은 http://appspresso.com/api/wac/devicestatus.html 어휘집 테이블을 확인하고 적용하면 된다.
 
@@ -140,7 +140,7 @@ deviceapis.devicestatus.watchPropertyChange(propertyChangeCallback, errorCallbac
 
 이렇게 watchProertyChange를 이용해서 devicestatus에 이벤트를 추가해두면 property가 변경될 때 감지해서 동작하게 되는 것이다. 예제는 디바이스의 베터리가 변경(감소)되면 alert를 발생하게 하였다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/8e42c0ff-37a1-49d0-b4df-c4d04329d9c9)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/8e42c0ff-37a1-49d0-b4df-c4d04329d9c9)
 
 ## 결론
 

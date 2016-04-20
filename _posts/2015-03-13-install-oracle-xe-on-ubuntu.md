@@ -18,7 +18,7 @@ disqus_identifier : http://blog.saltfactory.net/267
 
 최근 국내에서 가장 있기는 리눅스 서버는 [Ubuntu](www.ubuntu.com/)라고해도 과언이 아닐 것이라 생각이된다. **Ubuntu**는 [Debian](https://www.debian.org/)를 기반으로 만들어졌다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/531f6662-d1bb-468c-b07f-e8db1c8acb87)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/531f6662-d1bb-468c-b07f-e8db1c8acb87)
 
 그래서 안정적이고 편리하게 패키지를 관리할 수 있는 장점을 가지고 있다. 무엇보다도 현재 리눅스 커뮤니티 중에서 가장 엑티브하게 활동하는 곳이 Ubuntu이기 때문에 온라인 자료가 많은 것이 최고의 장점이다. **Debian**은 오픈 소스 프로젝트 가운데 하나로 37,500개의 패키지를 갖춘 저장소를 관리하기 때문에 패키지 사용이 편리하다. [Redhat](http://redhat.com) 계열이 [yum](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-yum.html)으로 패키지를 관리할 수 있다면 **Debian** 계열은 [apt-get](https://wiki.debian.org/apt-get)로 패키지를 관리할 수 있다. **Ubuntu**는 Desktop 버전 위주로 개발을 진행해왔기 때문에 서버 패키지보다 업데이트 주기가 빠른 편이라 최신 라이브러리들을 사용할 수 있는 장점이 있다. 하지만 너무 빠른 업데이트 주기 때문에 안정성이 낮아질 수 있기 때문에 [LTS(Long Term Support)](https://wiki.ubuntu.com/LTS) 버전으로 만들어진 서버를 배포하고 있는데 **5년**동안 지속적인 관리를 보장 받을 수 있다. 현재 가장 안정화된 서버 버전은 [12.04LTS](http://releases.ubuntu.com/12.04/)이다.
 

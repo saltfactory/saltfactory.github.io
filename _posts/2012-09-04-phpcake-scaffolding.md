@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/833f7d68-6dae-40e3-901c-a56412ab2fe0)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/833f7d68-6dae-40e3-901c-a56412ab2fe0)
 
 다음은 /app/Controller/CategoriesController.php 파일을 추가한다. 앞의 포스팅에서 PostsController를 구현할 때 기억을 해보면 URL요청이 들어오는 패턴에 따라서 메소드를 추가해 주었는데, CategoriesController에서는 public $scaffold 변수를 추가했다.
 
@@ -47,7 +47,7 @@ class CategoriesController extends AppController {
 
 이제 http://cake.saltfactory.local/categories 라고 요청을 해보자.
 
-![](http://asset.hibrainapps.net/saltfactory/images/dfac0e9a-d43a-4545-9d9e-44f44a8a0f30)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/dfac0e9a-d43a-4545-9d9e-44f44a8a0f30)
 
 마술이 일어났다. CategoriesController에 public $scaffold 변수 하나만 추가했을 뿐인데 MVC 코드들이 마치 생성이라도 된 것 처럼 URL 요청을 받아들이고 모델로 데이터베이스의 테이블을 조회하며, 뷰 파일까지 나타내어주고 있다. 앞에서 PostsController를 처리하기 위해서 많은 파일과 코드들을 힘들게 만든것이 허무하게 느껴질 정도이다. 그럼 CRUD가 동작되는지도 살펴보자.
 
@@ -55,25 +55,25 @@ class CategoriesController extends AppController {
 
 http://cake.saltfactory.local/categories/add
 
-![](http://asset.hibrainapps.net/saltfactory/images/7e79f213-54c8-4924-9840-90e645a79a4d)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/7e79f213-54c8-4924-9840-90e645a79a4d)
 
-![](http://asset.hibrainapps.net/saltfactory/images/b8fa32f5-fd91-4fb2-8fb8-05d6fe4c8585)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/b8fa32f5-fd91-4fb2-8fb8-05d6fe4c8585)
 
 ## Retrieve
 
 http://cake.saltfactory.local/categories/view/1
 
-![](http://asset.hibrainapps.net/saltfactory/images/4ceb33b9-16b4-46c4-bfe4-b12b9785ecf2)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/4ceb33b9-16b4-46c4-bfe4-b12b9785ecf2)
 
 ## Update
 
 http://cake.saltfactory.local/categories/edit/1
 
-![](http://asset.hibrainapps.net/saltfactory/images/c7cdbd94-2b90-4fd8-b275-678ca8baa586)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/c7cdbd94-2b90-4fd8-b275-678ca8baa586)
 
 ## Delete
 
-![](http://asset.hibrainapps.net/saltfactory/images/dceff601-3faf-49da-b544-053fe89436a2)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/dceff601-3faf-49da-b544-053fe89436a2)
 
 CakePHP의 scaffolding RoR의 scaffolding보다 더 마술같이 MVC 패턴을 만들어준다. 코드를 생성하지 않아서 약가은 낯설지만 분명히 CRUD가 모두 가능할 수 있도록 자동으로 어플리케이션이 구현되어지는 결과를 만들어 냈다. RoR의 scaffoding은 MVC 코드를 생성하기 때문에 customization 하기 쉽지만 CakePHP는 어떻게 Customization을 해야할지 당황스러울 수 있다. 다음에는 CakePHP의 Scaffoding을 custom 하는 방법에 대해서 포스팅을 할 예정이다. 이 포스팅에서 소개하는 내용은 CakePHP도 scaffolding을 지원하고 있으며, scaffoding을 통애서 개발 속도가 빨라지고 개발 코드를 줄일 수 있는 효과를 얻을 수 있다는 것을 테스트해보았다.
 

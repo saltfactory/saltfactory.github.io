@@ -95,7 +95,7 @@ The last packet successfully received from the server was 35,986,917 millisecond
 show global variables like 'wait%';
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/73794388-8ea4-45bd-b9f7-44b451cbec1e)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/73794388-8ea4-45bd-b9f7-44b451cbec1e)
 
 MySQL은 기본적으로 **8시간**동안 요청이 없으면 커넥션을 해지한다.
 방법은 리소스를 설정하는 MySQL url에다가 `autoReconnection=true`로 변경하면 된다. 또는 `valdationQuery="select 1"``을 전처리로 실행하게하면 된다.

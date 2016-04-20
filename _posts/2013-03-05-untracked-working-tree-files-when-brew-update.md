@@ -42,7 +42,7 @@ git fetch origin
 git reset --hard origin/master
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/1d46db9e-cacf-49eb-b363-7b2cac80af55)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/1d46db9e-cacf-49eb-b363-7b2cac80af55)
 
 이제 homebrew를 git 저장소로부터 소스를 받아와서 업데이트를 할 준비를 모두 마쳤다. brew update로 최신 homebrew로 업데이트르 실행하면 된다.
 

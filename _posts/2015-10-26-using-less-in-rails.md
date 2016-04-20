@@ -11,7 +11,7 @@ tags:
   - less
 comments: true
 images:
-  title: 'http://asset.hibrainapps.net/saltfactory/images/d4518692-82f2-4b23-a131-175951306bb5'
+  title: 'http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/d4518692-82f2-4b23-a131-175951306bb5'
 ---
 
 
@@ -88,7 +88,7 @@ rails g controller Greetings hello
 
 생성된 파일을 살펴보자. 컨트롤러가 추가되면서 자동으로 생성되는 파일 중에 **.less** 파일이 생성되는 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/49e5dbbe-67df-4a38-94ce-4ff87ebd9d44)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/49e5dbbe-67df-4a38-94ce-4ff87ebd9d44)
 
 RoR은 서버를 재시작하지 않고도 변경된 파일의 내용을 적용할 수 있는 장점이 있어 개발 속도를 빠르게할 수 있다. less 파일을 수정하면 바로 스타일시트가 변경되어 뷰에 적용되는지 살펴보자. 테스트를 위해 추가한 컨트롤러가 생성될 때 만들어진 **app/assets/stylesheets/greetings.css.less** 파일을 열어서 다음과 같이 간단히 less를 작성해서 저장한다.
 
@@ -126,7 +126,7 @@ http://localhost:3000/greetings/hello
 
 뷰를 확인하면 Less 파일이 컴파일되어 CSS 파일이 만들어져 RoR Assets를 통해 뷰의 스타일시트 적용이 된 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/2f8f94f3-51cf-4ce0-a04d-143849e43693)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/2f8f94f3-51cf-4ce0-a04d-143849e43693)
 
 ## Bootstrap 의 Less 사용하기
 
@@ -193,7 +193,7 @@ bower를 사용하기 위한 방법은 [Ruby on Rails 에서 bower 사용하기]
 
 이제 프로젝트에 Bootstrap 패키지가 설치되었는데 생성된 패키지 **vender/assets/bower_components/bootstrap** 디렉토리를 살펴보면 **less**라는 디렉토리가 보일 것이다. 이 안에 Bootstrap 스타일을 위한 Less 파일들이 존재하는 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/29ca87f2-b2af-400f-bb8d-4b6a1083cfca)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/29ca87f2-b2af-400f-bb8d-4b6a1083cfca)
 
 RoR 프로젝트에서 **config/initializers/assets.rb** 파일을 열어 Assets 패스에 이 경로를 추가한다.
 
@@ -258,7 +258,7 @@ Bootstrap less 스타일이 적용되는지 확인하기 위해서 뷰 파일을
 
 브라우저를 열어서 확인해보자. Bootstrap의 코드를 가지고 나의 less 파일과 함께 컴파일되어 적용된 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/9b2c06be-399c-4414-846b-6d43843211d2)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/9b2c06be-399c-4414-846b-6d43843211d2)
 
 
 좀더 구제척으로 Bootstrap의 Less를 어떻게 사용할 수 있는지 간단한 예를 살펴보자. 만약 Bootstrap에서 작성한 **.border-left-radius** 로 만든 함수(왼쪽에 radius를 적용하는 스타일이 정의된 함수)를 가지고  나의 스타일에 적용하고 싶을 경우 다음과 같이 하면된다.
@@ -290,7 +290,7 @@ div{ .border-left-radius(5px); margin: 20px; }
 
 뷰를 확인해보자. 나의 뷰의 DIV 왼쪽으로 radisu가 적용된 것을 확인할 수 있다. 이렇게 Bootstrap이 만들어 놓은 스타일 함수들을 가져와서 사용할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/1496f7c2-de14-4f40-bba6-5d146870c5ab)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/1496f7c2-de14-4f40-bba6-5d146870c5ab)
 
 ## 결론
 

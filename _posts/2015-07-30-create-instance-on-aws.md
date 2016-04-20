@@ -9,7 +9,7 @@ tags:
   - instance
 comments: true
 images:
-  title: 'http://asset.hibrainapps.net/saltfactory/images/09d82608-45b2-4a40-a28e-0a978dd0ac83'
+  title: 'http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/09d82608-45b2-4a40-a28e-0a978dd0ac83'
 ---
 
 ## 서론
@@ -37,24 +37,24 @@ AWS 계정을 만들어서 AWS 서비스를 시작하려면 **카드정보**가 
 
 카드 정보와 내 연락처를 입력한다. 카드 정보를 입력하면 카드 정보를 확인하기 위해 내 카드에서 **$1**가 결제되지만 이것은 확인용이라 다시 취소가 된다. 학생일 경우 **체크카드**를 사용해도 무방하다. 다만 해외결제가 되는 체크카드로 진행해야한다. 요즘 해외결제되는 체크카드를 은행에서 만들 수 있으니 학생들도 원한다면 체크카드를 생성하여 카드정보를 업데이트할 수 있다. 이 예제를 위해서 **체크카드**를 사용하여 진행하였다.
 
-![연락처정보](http://asset.hibrainapps.net/saltfactory/images/0027f201-3fe8-41ee-9fe7-b0a3ae2c8a35)
+![연락처정보](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/0027f201-3fe8-41ee-9fe7-b0a3ae2c8a35)
 
 ### ID 확인
 
 카드정보와 연락처 정보를 입력하고 난 다음에는 **ID확인**이 진행된다. 이 때, 전화번호를 입력하는 화면이 나오는데 전화번호를 입력하고 확인 작업을 할 때, Amazon에서 전화가 걸려온다. 겁낼필요가 없다. 전화인증 작업은 한국어로 진행이된다.
 
-![결제정보](http://asset.hibrainapps.net/saltfactory/images/58edd0fb-6584-4cbc-8ef0-0bd2d870fddb)
+![결제정보](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/58edd0fb-6584-4cbc-8ef0-0bd2d870fddb)
 
 전화 인증을할 때 AWS에서 발생한 **PIN**값을 전화기에 입력하면 된다. 어렵지 않다.
-![PIN 정보](http://asset.hibrainapps.net/saltfactory/images/14dde885-7675-4a82-a5e7-b464bcab8eda)
+![PIN 정보](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/14dde885-7675-4a82-a5e7-b464bcab8eda)
 
 ### 계획지원
 
 우리는 먼저 **기본(무료)**를 사용해볼 것이기 때문에 체크하고 다음으로 넘어간다.
 
-![계획지원](http://asset.hibrainapps.net/saltfactory/images/209c6a49-f902-4ecf-ad6d-86532768e2de)
+![계획지원](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/209c6a49-f902-4ecf-ad6d-86532768e2de)
 
-![가입완료](http://asset.hibrainapps.net/saltfactory/images/df95239a-9ac0-4dfc-8a5f-15fd3c3fabbb)
+![가입완료](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/df95239a-9ac0-4dfc-8a5f-15fd3c3fabbb)
 
 이렇게 **연락처 정보**, **결제정보**, **ID확인**, **계획지원**을 모두 완료하면 AWS 서비스를 시작할 수 있다.
 
@@ -62,11 +62,11 @@ AWS 계정을 만들어서 AWS 서비스를 시작하려면 **카드정보**가 
 
 계정을 생성하고 난 다음 **관리자콘솔**로 들어가면 AWS의 서비스를 한눈에 확인할 수 있다. 대한민국에서 서비스하기 위해서는 **Asia Pacific(Tokyo)**를 선택하면된다. 그냥 기본적으로 위 과정을 진행하면 자동으로 Asia Pacific(Tokyo)가 선택될 것이다. 우리는 **Ubunut** 인스턴스를 AWS에서 동작시키기 위해서 [EC2(Elastic Compute Cloud)](http://aws.amazon.com/ko/ec2/) 인스턴스를 만들 것이다.
 
-![AWS 관리자콘솔](http://asset.hibrainapps.net/saltfactory/images/35d6a138-f00e-4607-a125-82f46ffe9fdb)
+![AWS 관리자콘솔](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/35d6a138-f00e-4607-a125-82f46ffe9fdb)
 
 AWS 서비스중에 EC2를 클릭하면 **EC2 Dashboard**로 이동한다.
 
-![EC2 dashboard](http://asset.hibrainapps.net/saltfactory/images/df5a09f5-42c3-4355-9fc5-c0cf8ce9170e)
+![EC2 dashboard](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/df5a09f5-42c3-4355-9fc5-c0cf8ce9170e)
 
 현재 아무런 인스턴스가 없기 때문에 위와 같은 화면이 나타날 것이다.
 
@@ -78,13 +78,13 @@ EC2 인스턴스를 생성해보자. EC2 Dashboard 가운데에 있는 **Create 
 
 가장 먼저 해야할 것은 운영체제 이미지를 선택하는 것이다. AWS는 AWS에 최적화된 RedHat 기반의 **AWS Linux**부터 Ubuntu, Windows 등 다양한 운영체제 이미지를 제공한다.
 
-![Choose AMI](http://asset.hibrainapps.net/saltfactory/images/93f12a97-6399-4773-b993-76de0bece8db)
+![Choose AMI](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/93f12a97-6399-4773-b993-76de0bece8db)
 
 우리는 **Free Tier** 플랜을 사용하기 때문에 Free Tier 체크박스를 체크하여 무료로 사용할 수 있는 운영체제 이미지를 선택하면 된다. 우리는 기존에 Ubuntu 서버를 사용하고 있고 AWS에서 Ubuntu 서버를 운영하기 위해서 **Ubuntu 14.04LTS(HVM), SSD Volum Type** 이미지를 선택한다.
 
 **Step 2. Choose an Instance Type**
 
-![Choose an Instance Type](http://asset.hibrainapps.net/saltfactory/images/e6174334-e994-4862-b65f-1727e5dbd8f2)
+![Choose an Instance Type](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/e6174334-e994-4862-b65f-1727e5dbd8f2)
 
 같은 운영체제 이미지라고 할지라도 인스턴스 타입에 따라 성능 구별된다. CPU, Memory 갯수, Network Performance 등에 따라 가격이 다르다. 자신의 서비스에 최적화된 리소스를 선택하면 된다. 인스턴스 타입에 대한 자세한 정보는 [Instance Type](http://aws.amazon.com/ko/ec2/instance-types/)에서 참조할 수 있다. 우리는 **Free Tier** 플랜에 사용하는 **t2.micro**를 선택한다.
 
@@ -94,11 +94,11 @@ EC2 인스턴스를 생성해보자. EC2 Dashboard 가운데에 있는 **Create 
 
 인스턴스를 생성하면 **SSH**를 사용하여 AWS 인스턴스에 접속할 수 있다.
 
-![Review Instance Launch](http://asset.hibrainapps.net/saltfactory/images/e6dafd94-fa8f-4469-b6be-1d5281a0f8e8)
+![Review Instance Launch](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/e6dafd94-fa8f-4469-b6be-1d5281a0f8e8)
 
 **Launch** 버튼을 클릭하면 AWS 서비스를 위한 **public key**와 **private key**를 생성할 수 있다. **private key**는 생성후 내 컴퓨터 저장하여 AWS에 접속할 때 **private key**을 사용한다. 이미 생성한 적이 있으면 생성된 키를 사용하면되고 처음이라면 **Create a new key pair**를 선택하고 **Key pair name**에 파일 이름을 저장한다. 예제를 위해서 **aws-saltfactory**라는 이름으로 키를 생성하였고, 생성된 **private key**는 **Download Key** 버튼으로 다운로드 한다. 다운로드되는 파일 이름은 **aws-saltfactory.pem**과 같이 **.pem** 파일로 다운로드 된다.
 
-![create a new key](http://asset.hibrainapps.net/saltfactory/images/455f2cf8-b5dc-4e5e-840d-23ecbc09a283)
+![create a new key](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/455f2cf8-b5dc-4e5e-840d-23ecbc09a283)
 
 다운로드 받은 **private key**는 **~/.ssh/** 디렉토리로 복사한다.
 
@@ -116,15 +116,15 @@ chmod 400 ~/.ssh/aws-saltfactory.pem
 
 이제 기본적인 설정으로 인스턴스 생성이 완료되었다. 인스턴스 생성이 완료됨과 동시에 런칭되어 동작하기 시작한다.
 
-![Launch Status](http://asset.hibrainapps.net/saltfactory/images/09cd4805-c451-412a-880b-4b88e1786d56)
+![Launch Status](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/09cd4805-c451-412a-880b-4b88e1786d56)
 
 EC2 Dashboard로 돌아가보자.
 
-![EC2 Dashboard](http://asset.hibrainapps.net/saltfactory/images/5a066576-3b3c-4eea-949d-5915b1b0c22b)
+![EC2 Dashboard](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/5a066576-3b3c-4eea-949d-5915b1b0c22b)
 
 앞에서 인스턴스를 생성하지 않았을 때와 달리 지금은 **1 Running instances**와 **1 Volumes** 그리고 **1 key Pairs**로 표시가 된다. **1 Runnings Instance**를 클릭하자.
 
-![Running Instances](http://asset.hibrainapps.net/saltfactory/images/c741e258-ff58-4b7a-8461-508f5023b139)
+![Running Instances](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/c741e258-ff58-4b7a-8461-508f5023b139)
 
 생성된 인스턴스에 관련된 정보가 보일 것이다. AWS에 접근하기 SSH 로 접근하기 위해서 **Public DNS** 와 **Public IP** 정보를 살표보자. 이 예제에서는 **ec2-52-69-138-20.ap-northeast-1.compute.amazonaws.com** 로 만들어졌다. 이 Public DNS와 Public IP는 인스턴스를 생성할때마다 새롭게 할당되어진다. *이 예제에서 사용한 인스턴스는 삭제할 것이기 때문에  블로그에 포스팅하고 난 이후 이 정보들은 존재하지 않는 값이 되어질 것이다.*
 
@@ -136,7 +136,7 @@ EC2 Dashboard로 돌아가보자.
 ssh -i ~/.ssh/aws-saltfactory.pem ubuntu@ec2-52-69-138-20.ap-northeast-1.compute.amazonaws.com
 ```
 
-![ssh](http://asset.hibrainapps.net/saltfactory/images/3b4a7bdd-4bc4-409f-b734-36f0ab999e4d)
+![ssh](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/3b4a7bdd-4bc4-409f-b734-36f0ab999e4d)
 
 이제 나만의 리눅스 서버가 만들어졌다.  지금부터는 Ubuntu를 사용하는 방법과 동일하다.
 

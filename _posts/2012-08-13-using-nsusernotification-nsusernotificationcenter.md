@@ -12,11 +12,11 @@ disqus_identifier : http://blog.saltfactory.net/170
 
 Mountain Lion Mac OS X (10.8)에서 부터 NSUserNotificationCenter 을 사용해서 아이폰과 동일하게 푸시 알림(Push Notification) 쌓이는 것을 확인할 수 가 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/03b6f240-63eb-4a71-b20f-4ab160e6c901)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/03b6f240-63eb-4a71-b20f-4ab160e6c901)
 
 그리고 아이폰에서 푸시알림 (Push Notification)이 도착해서 알림창이 나타나듯 NSUserNotification 을 사용해서 알림을 설정할 수 있게 되었다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/419c8d73-99aa-4b6f-83ed-8a64983704c3)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/419c8d73-99aa-4b6f-83ed-8a64983704c3)
 
 <!--more-->
 
@@ -24,24 +24,24 @@ Mountain Lion Mac OS X (10.8)에서 부터 NSUserNotificationCenter 을 사용�
 
 이번 포스팅에서는 이렇게 새롭게 추가된 NSUserNotificationCenter와 NSUserNotification을 사용해서 알림(Notification) 기능을 구현하는 간단한 예제를 만들어 볼 것이다. 우슨 테스트를 위해서 Cocoa Application 프로젝트를 생성한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/adef65d7-cba5-4827-ab5f-c54e25d919f9)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/adef65d7-cba5-4827-ab5f-c54e25d919f9)
 
-![](http://asset.hibrainapps.net/saltfactory/images/c020e89c-1077-4ae3-9cb9-fc6c5a2c20e5)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/c020e89c-1077-4ae3-9cb9-fc6c5a2c20e5)
 
 간단하게 Cocoa 프로젝트가 만들어졌다. 빌드해서 실행하면 단순하게 간단하게 윈도우하나만 나타나게 된다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/31dc5fcb-ee1b-4cab-98dc-6526416e5166)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/31dc5fcb-ee1b-4cab-98dc-6526416e5166)
 
 
 다음은 푸시를 발생시킬 버튼을 하나 추가해서 버튼을 누르면 푸시를 발생하게 해보자. MainMenu.xib를 열어서 Push Button을 하나 추가하고 버튼을 더블클릭해서 "알림 생성" 이라고 텍스트를 변경한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/492d6da1-0905-4d56-a05f-0c25fa181402)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/492d6da1-0905-4d56-a05f-0c25fa181402)
 
 원래는 컨트롤러 객체를 만들어서 IBAction을 연결하는게 좋지만 테스트를 위해서 그냥 간단하게 AppDelegate로 IBAction을 연결하도록 하겠다. Assistant editor를  열어서 Push Button으로 부터 드래그하여 IBAction을 연결한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/ff221079-9294-41c2-ab93-8b7c2c76b492)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/ff221079-9294-41c2-ab93-8b7c2c76b492)
 
-![](http://asset.hibrainapps.net/saltfactory/images/6aea7ff5-019d-4f45-9515-5a80c80b58f7)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/6aea7ff5-019d-4f45-9515-5a80c80b58f7)
 
 ## NSUserNotification와 NSUserNotificationCenter 사용
 
@@ -114,7 +114,7 @@ NSUserNotification 객체를 생성하고 Title과 InformativeText를 설정하�
 
 다시 빌드하고 실행한 뒤에 버튼을 누르면 콘솔창에 다음과 같은 로그가 남는다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/9d216e99-2cd4-4e33-b955-2471816384f4)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/9d216e99-2cd4-4e33-b955-2471816384f4)
 
 비록 눈에는 알림 창이 나타나지 않았지만 Notification이 앱에 전달된 것을 확인할 수 있다. 우리는 버튼이 클릭된 뒤에 조금 여유를 주기 위해서 코드를 다음과 같이 변경해보자. -performselector:withObject:afterDelay: 메소드를 이용해서 시간을 지연시켜 5초뒤에 Notification이 발생하게 하였다.
 
@@ -142,7 +142,7 @@ NSUserNotification 객체를 생성하고 Title과 InformativeText를 설정하�
 
 이제 다시 빌드해서 앱이 실행한 뒤에 버튼을 누르고 앱을 다른 앱 뒤에 숨기거나 닫아두면 5초뒤에 Notification 알림이 나타나고 NotificationCenter에 알림이 쌓이게 된다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/daaa5b21-efcf-45d3-b215-c92bd5bdf682)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/daaa5b21-efcf-45d3-b215-c92bd5bdf682)
 
 NSUserNotificationCenter 는 이렇게 직접적으로 -deliverNotification:으로 Notification을 전다할 수 있을 뿐만 아니라 schedule 기능을 이용해서 특정 시간 뒤에 알림을 나타나게 할 수도 있다.
 

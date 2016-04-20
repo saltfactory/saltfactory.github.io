@@ -11,7 +11,7 @@ tags:
   - ror
 comments: true
 images:
-  title: 'http://asset.hibrainapps.net/saltfactory/images/49f209e0-e52b-4073-a594-caba8e46baae'
+  title: 'http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/49f209e0-e52b-4073-a594-caba8e46baae'
 ---
 
 ## 서론
@@ -39,7 +39,7 @@ rails g scaffold Post title:string content:text
 
 이 명령어를 실행하면 Post에 관련된 Mode, View, Controller 에 필요한 파일들이 자동으로 생성이 된다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/da2f5084-c40a-40bd-8839-57d66d4f6ddd)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/da2f5084-c40a-40bd-8839-57d66d4f6ddd)
 
 scaffold로 생성된 파일중에 Model 에 관련된 파일로 데이터베이스에 관련된 파일이 생성이된다. RoR의 장점중인 하나인 애자일 개발에 적합한 구조로 언제든지 데이터베이스 정보를 마이그레이션할 수 있다. 모델의 추가로 데이터베이스에 필요한 테이블을 생성을 하기 위해서 다음 명령어로 데이터베이스를 마이그레이션한다.
 
@@ -49,7 +49,7 @@ rake db:migrate
 
 이 명령어를 실행하면 **Post**라는 Model이 추가되면서 필요한 **posts** 테이블을 데이터베이스에 create 시키는 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/ae3db25e-98ed-4796-b9dc-45345cd28499)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/ae3db25e-98ed-4796-b9dc-45345cd28499)
 
 이제 Post를 작성하기 위한 최소한의 필요한 파일들을 모두 만들었다. scaffold로 작업하는 것은 이렇게 간단하다. Rails 서버를 실행해보자.
 
@@ -61,19 +61,19 @@ rails s
 
 http://localhost:3000/posts
 
-![](http://asset.hibrainapps.net/saltfactory/images/35a3ebdf-212a-4850-af62-5804ac07977c)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/35a3ebdf-212a-4850-af62-5804ac07977c)
 
 특별한 코드를 작성한 것도 아닌데 이미 목록, 글쓰기, 수정, 삭제에 관한 기본적인 골격이 만들어졌다. **New Post** 링크를 클릭해보자. 링크는 다음과 같이 바뀌고 글을 입력하는 화면이 나타날 것이다.
 
 http://localhost:3000/posts/new
 
-![](http://asset.hibrainapps.net/saltfactory/images/d54b2ec8-9a61-4c70-ab7d-cfad81cd04bd)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/d54b2ec8-9a61-4c70-ab7d-cfad81cd04bd)
 
 우리는 scaffold를 만들 때 간단하게 **title**과 **content** 만 정의했기 때문에 이렇게 제목과 내용을 넣는 입력 폼이 만들어져있다. 필요한 항목을 입력하고 **Create Post** 버튼을 클릭해보자. 글이 데이터베이스에 정장적으로 저장이 된 이후 다음과 같이 URL이 변경되고 저장된 값을 보여주는 화면이 나타날 것이다.
 
 http://localhost:3000/posts/1
 
-![](http://asset.hibrainapps.net/saltfactory/images/0a699a29-f75b-419a-8080-c61657c5644d)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/0a699a29-f75b-419a-8080-c61657c5644d)
 
 Scaffold로 골격을 만들면 기본적으로 [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) 를 할 수 있는 데이터베이스 구조와 REST 구조가 만들어진다. 다른 테스트들은 생략한다.
 
@@ -83,7 +83,7 @@ Rails에서 가장 중요한 개념 중에 하나가 바로 라우팅이다. 이
 
 앞에서 우리는 scaffold로 Post에 관련된 컨트롤러를 자동으로 만들었는데 이 때 Rails의 generator가 라우팅 파일에 컨트롤러를 등록한다. Rails에서 라우팅을 설정하는 파일은 **config/routes.rb** 파일이다. 이 파일을 열어보자.
 
-![](http://asset.hibrainapps.net/saltfactory/images/24fd00d7-b425-4a00-bbd4-cff14f1c6544)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/24fd00d7-b425-4a00-bbd4-cff14f1c6544)
 
 파일을 살펴보면 **resources** 라는 예약어에 **:posts**라고 정의한 것이 보인다. 이것은 posts에 관련된 REST resource들을 자동으로 **PostsController**에 매핑해서 해당된 액션을 처리하도록하는 Rails의 관용적인 표현이다. 그럼 해당하는 컨트롤러를 살펴보자. **PostsController**는 **app/controlers/posts_controller.rb**로 만들어진다. 파일을 열어보면 Scaffold가 자동으로 컨트롤러를 추가하면서 REST 서비스에 필요한 메소드를 생성한 것을 확인할 수 있다.
 
@@ -178,7 +178,7 @@ rails g model Comment content:text post:references
 
 여기서 한가지 살펴볼 것은 Comment 모델을 생성할 때 Post를 **references**로 정의했다는 것이다. 이 의미는 Comment가 Post 객체와 연관관계가 있다는 것을 정의하는 것이다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/2b4aad0d-552b-406b-85fc-232e2755ff53)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/2b4aad0d-552b-406b-85fc-232e2755ff53)
 
 이 명령어를 실행하면 Comment 모델이 **app/models/comment.rb** 파일로 생성이 된다. 파일을 열어보면 Comment 모델이 Post 모델과의 관계를 [belongs_to](http://guides.rubyonrails.org/association_basics.html)로 정의된 것을 확인할 수 있다.
 
@@ -218,7 +218,7 @@ rake db:migrate
 ```
 이 명령어를 실행하면 Comment를 저장하기 위한 comments 테이블이 생성된다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/a2b5fd4f-3696-4bea-8a0a-6478d6d1ec1a)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/a2b5fd4f-3696-4bea-8a0a-6478d6d1ec1a)
 
 ## Comments 목록 출력을 위한  View 수정
 
@@ -252,7 +252,7 @@ rake db:migrate
 ```
 수정된 뷰를 브라우저에서 확인하자
 
-![](http://asset.hibrainapps.net/saltfactory/images/1a74f7ed-1e58-47f2-a485-60824f72e0c0)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/1a74f7ed-1e58-47f2-a485-60824f72e0c0)
 
 ## Comments 요청을 처리할 Controller 추가
 
@@ -262,7 +262,7 @@ rake db:migrate
 rails g controller Comments
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/26eef36d-1cc7-4ce6-869c-c97041d916f4)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/26eef36d-1cc7-4ce6-869c-c97041d916f4)
 
 Rails에서 Controller를 추가하면 이 컨트롤러가 처리하는 요청을 정의하기 위해 routing 설정을 해야한다. **config/routes.rb** 파일을 열어서 다음과 같이 라우팅 정보를 추가한다. 우리가 만드는 예제는 Post가 여러개의 Comments를 가지고 있는 관계 구조를 가지고 있으면서도 직접적으로 요청을 할 수 있기 때문에 다음과 같이 정의한다.
 
@@ -345,11 +345,11 @@ Comments 컨트롤러를 생성하고 Comment를 저장하기 위한 create 메�
 <%= link_to 'Back', posts_path %>
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/899d0c63-1d1a-434e-a141-9307c2181829)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/899d0c63-1d1a-434e-a141-9307c2181829)
 
 이제 Comment를 Ajax로 저장하기 위한 코드를 모두 작성하였다. 브라우저에서 Comments 입력 폼에 글을 작성하고 저장을 해보자. 다음과 같이 Inspector로 확인해보면 Comment 저장 요청을 Ajax(XHR)로 요청을 하였고 저장 후 응답을 JavaScript로 돌려주는 것을 확인할 수 있다. 또한 비어 있던 Comments 목록에 새로운 댓글이 페이지 변환없이 추가가 된 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/d8846f63-d4ef-45fc-8688-3ba90b2f911e)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/d8846f63-d4ef-45fc-8688-3ba90b2f911e)
 
 ## 복잡한 뷰를 Partial을 사용하여 구조화하기
 
@@ -417,7 +417,7 @@ jQuery에서 `$().append(html)` 코드는 html 코드를 선택한 엘리먼트�
 
 partial 뷰를 만들고 관련된 뷰 파일을 보두 수정하고난 이후 Comments 요청을 해보면 다음과 같이 partial을 사용하기 전의 결과와 동일하게 html을 재활용하여 Ajax를 사용하여 저장되고 결과가 나타는 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/6dd70b58-77fc-4f3e-a809-d98113a31cd6)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/6dd70b58-77fc-4f3e-a809-d98113a31cd6)
 
 ## Ajax를 사용한 Comment 삭제
 
@@ -475,15 +475,15 @@ Comments가 출력되는 Partial 뷰에 하나하나 삭제할 수 있도록 다
 
 뷰를 확인해보자.
 
-![](http://asset.hibrainapps.net/saltfactory/images/7b421760-40f9-4f45-a666-fb80806d5087)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/7b421760-40f9-4f45-a666-fb80806d5087)
 
 삭제 링크를 눌러 Comment가 Ajax로 삭제되는지 확인해보자. 삭제 링크를 누르면 우리가 정의한 다이얼로그가 나타난다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/783e5806-2614-4e4e-b40b-9e0ab606766e)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/783e5806-2614-4e4e-b40b-9e0ab606766e)
 
 다이얼로그에서 확인 버튼을 클리하면 다음과 같이 Ajax로 삭제를 요청하고 처리한 결과로 destroy.js.erb가 해당하는 Comment의 DOM을 제거하게 되어 뷰를 업데이트한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/ecdbb5f1-9192-47af-8a10-baec3392bba5)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/ecdbb5f1-9192-47af-8a10-baec3392bba5)
 
 ## 결론
 

@@ -22,7 +22,7 @@ Sencha에 대한 설명은 [Sencha Touch 2 (센차터치)를 이용한 웹앱 �
 
 Appspresso에서 새로운 Appspresso Proejct를 생성하면 앱스프레소에서 제공하는 Javascript UI framework 를 선택할 수 있지만, 선택하지 않고 바로 Hello World 프로젝트로 생성하기로 한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/badeb542-6b69-48f9-bf63-e88f24d5f76c)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/badeb542-6b69-48f9-bf63-e88f24d5f76c)
 
 ## Sencha
 
@@ -30,7 +30,7 @@ Appspresso에서 새로운 Appspresso Proejct를 생성하면 앱스프레소에
 
 다음은 sencha-touch-2.0.1에서 sencha-touch-all-debug.js와 sencha-touch.css 를 Appspresso 프로젝트의 js와 css에 각각 복사한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/c3062fa4-852a-4c07-9628-115b0a831620)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/c3062fa4-852a-4c07-9628-115b0a831620)
 
 다음은 index.html 에서 Sencha 파일들을 불러오게 다음과 같이 수정한다.
 
@@ -74,12 +74,12 @@ Ext.application({
 
 앱스프레소에서 빌드하고 simulator에 설치해서 실행해보자.
 
-![](http://asset.hibrainapps.net/saltfactory/images/c652e3d4-c867-4ac8-a4d9-78e1ab54fa23)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/c652e3d4-c867-4ac8-a4d9-78e1ab54fa23)
 
 생각했던 UI가 아니라서 실망을 했을지도 모르겠다. 뭔가 아이폰스럽게 UINavigationBar도 나와야 할 것 같고, UITabBar도 나와야 할 것 같은데 텅빈 화면에 단순하게 Hello, World! 만 출력되었기 때문이다. 하지만 너무 속상해 하지 말자. 우리는 앞으로 그런 Sencha의 컴포넌트를 하나씩 만들어가서 점점 네이티브 앱으로 업그레이드는 과정을 경험하게 될 것이다. "Sencha Touch 2 (센차터치)를 이용한 웹앱 개발 - 2. 뷰(View) 생성"의 글과 동일하게 우리는 최종적으로 Sencha를 MVC 모델로 프로그래밍하길 원하기 때문에 여기서 뷰는 따로 분리해서 view라는 디렉토리에 저장하길 원한다. 그런데 Appspresso에서 javascript를 일괄적으로 저장하기 위해서 만들어 준 디렉토리 js가 있다. 이 곳에 우리는 Sencha App을 저장하길 원하고 /app 디렉토리가 아닌 /js/app의 디렉토리에 접근하기 위해서 Sencha에서는 어떤 작업을 하는지 살펴보기로 하자.
 우선 우리는 앱이 시작되면 가장 처음 보이는 MainView.js를 만들어보자.
 
-![](http://asset.hibrainapps.net/saltfactory/images/ce4cbfd2-234f-4c44-9dbd-b94bc2067863)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/ce4cbfd2-234f-4c44-9dbd-b94bc2067863)
 
 디렉토리 구조는 다음과 같이 /js/app/view/ 가 존재하고 그 안에 MainView.js를 생성하였다. MainView.js 안에는 다음과 같이 입력한다.
 
@@ -122,7 +122,7 @@ Ext.application({
 
 앱스프레소를 실행해보자. 원래 Sencha의 default app 폴더는 최상위 폴더이기 때문에 다음과 같이 작성하면 다음과 같은 오류가 발생한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/e59ca162-0f59-4472-8e41-2bdda41b9f3d)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/e59ca162-0f59-4472-8e41-2bdda41b9f3d)
 
 이런 경우에는 application 경로를 변경해야하는데 Ext.applicaton 의 속성에 다음을 추가한다.
 
@@ -176,7 +176,7 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 
 간단하게 toolbar가 생기고 이제 조금은 앱처럼 보인다. 여기서 xtype에 대해서는 설명하지 않지만 다음 포스팅에서 설명할 예정이다. Sencha로 UI를 만들기가 쉬운것 같지만 생각만큼 쉽지 않기 때문에 하나하나 연구해보기로 한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/dd0a76fc-506e-4e8f-8d6f-ca69e8eb1162)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/dd0a76fc-506e-4e8f-8d6f-ca69e8eb1162)
 
 ## 결론
 

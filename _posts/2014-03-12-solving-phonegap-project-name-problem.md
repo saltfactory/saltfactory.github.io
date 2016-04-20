@@ -29,7 +29,7 @@ phonegap -v
 npm info phonegap version
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/d506e13f-004c-4208-9178-70b0d5eb5f9d)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/d506e13f-004c-4208-9178-70b0d5eb5f9d)
 
 PhoneGap의 버전은 3.4.0 이다. 그런데 PhoneGap은 정말 문서가 헷갈리게 작성되어 있다. PhoneGap 3.4.0 메뉴얼에서 The Command-Line Interface에서는 PhoneGap command로 사용하는 것이 아니라 Cordova command를 사용하는 것을 문서로 만들어 놓았다... 뭐지?
 
@@ -49,7 +49,7 @@ phonegap create sf-phonegap-demo -n SF-PhoneGap-Demo -i net.saltfactory.tutorial
 
 위의 PhoneGap 옵션은 디렉토리는 sf-phonegap-demo로 만들고 프로젝트 이름을 `SF-PhoneGap-Demo`로 만들고 identifier를 `net.saltfactory.tutorial.phonegapdemo`로 만든다는 말이다. 위 명령어를 실행해보자.
 
-![](http://asset.hibrainapps.net/saltfactory/images/fc8af540-eb19-4b42-9696-f5b7f0b547b4)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/fc8af540-eb19-4b42-9696-f5b7f0b547b4)
 
 **SF-PhoneGap-Demo** 프로젝트가 `sf-phonegap-demo`라는 디렉토리에 만들어졌다. 이제 PhoneGap 프로젝트에 iOS 플랫폼 앱을 빌드해보자.
 
@@ -63,11 +63,11 @@ PhoneGap command로 build ios를 하면 `./platforms` 라는 디렉토리 밑에
 ls ./platforms/ios
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/dff91364-0218-482b-8858-165e003ca098)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/dff91364-0218-482b-8858-165e003ca098)
 
 그런데 우리가 프로젝트 이름으로 명시한 `SF-PhoneGap-Demo` 이름을 무시하고 HelloWorld라는 프로젝트 이름으로 만들어 버린다. iOS 프로젝트를 열어보자. 황당하다. PhoneGap command에 분명히 identifier를 net.saltfactory.tutorial.phonegapdemo라고 명시했는데 프로젝트 안에 identifier는 `com.phonegap.helloworld`로 만들어져있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/59e2166a-167b-4e51-b651-d3f59d29e7ec)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/59e2166a-167b-4e51-b651-d3f59d29e7ec)
 
 문제를 찾아보기로 했다. PhoneGap 프로젝트의 전체 설정은 `/www/config.xml`에서 설정하고 각각 플랫폼에 맞는 config로 복사가 되는데 /www/config.xml을 열어보자.
 
@@ -301,11 +301,11 @@ cordova platform remove ios
 phonegap local build ios
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/784a21c2-8cae-4c90-8e2f-febd66b45c26)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/784a21c2-8cae-4c90-8e2f-febd66b45c26)
 
 www/config.xml에서 id와 name을 변경하고 다시 빌드하니 이젠 제대로 프로젝트 이름으로 만들어지는 것을 확인할 수 있다. iOS 프로젝트를 열어보자. 프로젝트를 열어보면 우리가 id를 변경한 대로 identifier가 변경되어 있는 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/8b918b1f-fae8-4a60-a349-e64951e62292)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/8b918b1f-fae8-4a60-a349-e64951e62292)
 
 Cordova command를 사용해서 PhoneGap command 문제를 해결해야한다면 굳이 PhoneGap command를 사용해야하는걸까? Cordova command로 프로젝트를 생성해보기로 하자. 존재하던 PhoneGap 프로젝트 디렉토리를 삭제한다.
 
@@ -325,7 +325,7 @@ cordova command로 Cordova 프로젝트를 만들어보자
 cordova create sf-phonegap-demo -n SF-PhoneGap-Demo -i net.saltfactory.tutorial.phonegapdemo
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/7f77441f-d6e7-4f3e-97cd-05840b853b4c)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/7f77441f-d6e7-4f3e-97cd-05840b853b4c)
 
 Cordova command는 PhoneGap command와 프로젝트 생성하는 옵션이 다르다. Cordova command로 `-name`과 `-identifier` 옵션을 주고 마들면 이 옵션들이 모두 적용되지 않고 디폴트로 HellowCordova라는 이름과 id가 `io.cordova.hellocordova`로 만들어지는 것을 확인할 수 있다. Cordova 프로젝트는 PhoneGap 프로젝트와 디렉토리 구조가 약간 다른데 PhoneGap의 `www/config.xml`의 경로가 `config.xml` 경로로 만들어진다. config.xml을 열어보자.
 
@@ -351,11 +351,11 @@ Cordova로 만든 프로젝트의 config.xml에 위와 같이 정의가 되어 �
 cordova platform add ios
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/19e1cbd6-ea27-443c-8888-d81fac04df08)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/19e1cbd6-ea27-443c-8888-d81fac04df08)
 
 디폴트로 만들어진 Cordova 프로젝트에서 iOS 플랫폼을 추가하면 config.xml에 적용된 HelloCordova라는 이름으로 iOS 프로젝트가 만들어진다. iOS 프로젝트를 열어보면 identifier가 io.cordova.hellocordova로 만들어진것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/bc9a969d-7821-4f0f-92b0-dd83231e21f2)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/bc9a969d-7821-4f0f-92b0-dd83231e21f2)
 
 Cordova command로 프로젝트를 만들 때는 다음과 같이해야 한다. 만들어진 프로젝트 디렉토리를 삭제하고 다음과 같이 다시 만들자.
 
@@ -367,7 +367,7 @@ cordova create {프로젝트 디렉토리 이름} {프로젝트 identifier} {프
 cordova create sf-phonegap-demo net.saltfactory.tutorial.phonegapdemo SF-PhoneGap-Demo
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/1d48ea32-3c42-4c99-b15f-b6059af5487d)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/1d48ea32-3c42-4c99-b15f-b6059af5487d)
 
 위와 같이 Cordova command로 생성하면 이젠 프로젝트 이름과 identifier가 정확하게 적용되어서 만들어진 것을 확인할 수 있다. config.xml을 열어보자. 아래와 같이 id와 name이 우리가 원하는 설정으로 만들어진 것을 확인할 수 있다.
 
@@ -392,11 +392,11 @@ cordova create sf-phonegap-demo net.saltfactory.tutorial.phonegapdemo SF-PhoneGa
 cordova platform add ios
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/8d7dfbde-1de8-4d12-9cc1-036de0b30d6e)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/8d7dfbde-1de8-4d12-9cc1-036de0b30d6e)
 
 위와 같이 id와 name 기반으로 iOS 플랫폼에 iOS 프로젝트가 SF-PhoneGap-Demo로 만들어진것을 확인할 수 있다. iOS 프로젝트를 열어보자. 프로젝트를 열어보면 아래와 같이 identifier가 net.saltfactory.tutorial.phonegapdemo로 만들어진 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/9c40b6d7-a669-4cff-94c8-8309047bbbb0)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/9c40b6d7-a669-4cff-94c8-8309047bbbb0)
 
 ## 결론
 

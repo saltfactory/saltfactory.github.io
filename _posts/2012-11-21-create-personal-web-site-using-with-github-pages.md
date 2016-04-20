@@ -22,11 +22,11 @@ github는 git hosting 서비스를 넘어서 개발자의 SNS, 소셜 코딩, �
 
 **(1) Pages를 위한 Repository 추가**
 
-![](http://asset.hibrainapps.net/saltfactory/images/e00a8d25-dbf2-4f08-8c60-e9d3fa2589fd)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/e00a8d25-dbf2-4f08-8c60-e9d3fa2589fd)
 
 간단하게 저장소를 추가하면 다음과 같이 생성이 된다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/0e673060-57bb-40ec-90a3-427e12b0b41c)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/0e673060-57bb-40ec-90a3-427e12b0b41c)
 
 **(2) HTML, JavaScript, CSS 파일 추가**
 
@@ -36,11 +36,11 @@ github는 git hosting 서비스를 넘어서 개발자의 SNS, 소셜 코딩, �
 git clone https://github.com/saltfactory/saltfactory.github.com
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/ab56a8af-a254-46f2-9ac2-60242f789231)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/ab56a8af-a254-46f2-9ac2-60242f789231)
 
 이렇게 로컬에 받은 saltfactory.github.com 저장소 안에 index.html 과 javascript, css 파일을 추가하면 된다. 만약 IntelliJ와 같은 IDE를 사용하고 싶은 경우는 이 저장소를 그대로 사용하면 된다. 어떠한 IDE에도 영향 없이 개발하기 위해서 로컬에서는 IntelliJ를 이용했지만 github 소스 저장소에는 IntelliJ의 메타 파일들이 관리되지 않기 위해서 .gitignore에 IDE에 관련된 파일들을 추가해서 버전관리 되지 않게 설정했다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/d6c4b0fb-c05c-47c6-921e-20a76baca296)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/d6c4b0fb-c05c-47c6-921e-20a76baca296)
 
 테스트를 위해서 index.html에 다음과 같이 간단한 코드를 추가했다.
 
@@ -61,11 +61,11 @@ git clone https://github.com/saltfactory/saltfactory.github.com
 
 그리고 추가한 파일들을 staging 에 추가하고 commit 한 다음에 github.com으로 push 한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/57ddc0e9-69da-4c10-803d-fb85e709ef4d)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/57ddc0e9-69da-4c10-803d-fb85e709ef4d)
 
 이렇게 하면 github.com에 http://saltfactory.github.com 이라는 개인 page가 생성이 된다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/f8585b82-d96a-48c7-976a-3de0d375bb6f)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/f8585b82-d96a-48c7-976a-3de0d375bb6f)
 
 ### Automatic Pages Generator 를 이용해서 page를 생성하는 방법
 
@@ -77,18 +77,18 @@ git clone https://github.com/saltfactory/saltfactory.github.com
 
 github.com에서 새로 추가한 repository로 이동을 한다. https://github.com/saltfactory/saltfactory.github.com 그러면 repository 페이지의 오른쪽 상단에 Admin 이라는 버튼이 보이는데 이것을 눌러서 repository 의 admin 페이지로 이동한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/cd80ace2-e65b-4fac-a5f9-b96a2d1f6105)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/cd80ace2-e65b-4fac-a5f9-b96a2d1f6105)
 
 #### Automatic Page Generator 선택
 
 Repository의 admin 페이지로 이동하면 Github page 라는 항목 아래 Automatic Page Generator 라는 버튼이 보인다. 이 버튼을 선택한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/74f806a0-fb5a-4f09-ad07-f6e142ae05cf)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/74f806a0-fb5a-4f09-ad07-f6e142ae05cf)
 
 #### Markdown 작성
 Automatic Page Generator 버튼을 누르면 Markdown 을 수정할 수 있는 페이지가 나타난다. github는 HTML 개발자 뿐만 아니라 다양한 개발자들이 사용하기 때문에 혹시 HTML 코드를 모르거나 (그럴일은 없겠지만), 보다 HTML을 간단하고 편리하게 작성하기 위해서 Markdown을 사용할 수 있게 지원해주는 것 같다. Markdown에 익숙해지면 HTML코드는 귀찮게 느껴지게 된다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/b55e9dd6-8654-4c21-ae96-db2857b82efe)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/b55e9dd6-8654-4c21-ae96-db2857b82efe)
 
 화면 캡쳐에는 제외되었지만 아래로 스크롤을 하면 google analytics id를 연결하는 것도 있다. page의 접근 통계를 google analytics 로 분석할 수 있는 기능도 지원된다. 그리도 Layout을 선택하는 버튼이 보이는데 이를 누르고 Layout을 선택할 수 있다.
 
@@ -96,15 +96,15 @@ Automatic Page Generator 버튼을 누르면 Markdown 을 수정할 수 있는 �
 
 github는 미리 다양한 layout을 만들어 두었다. 역시 개발자의 귀차니즘을 잘 알고 미리 이쁜 theme들을 준비할 것을 보면 github가 얼마나 개발자들의 특징을 잘 알고 서비스를 만드는지를 알 수 있다. (다양한 layout이 보이는데 @susukang98 님의 page가 github의 default layout으로 만들어진 것을 확인할 수 있다. 역시 개발자세요~ default)
 
-![](http://asset.hibrainapps.net/saltfactory/images/680901cd-df42-4f61-8052-6d550adafb59)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/680901cd-df42-4f61-8052-6d550adafb59)
 
 마음에 드는 layout을 선택하고 publish 라고 체크표시가 된 버튼을 선택하면 약 10분 뒤에 적용이 된다는 메세지와 repository에 layout을 위한 파일들이 추가된 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/6a6e029a-bb59-4637-90c4-3781ae7f36ba)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/6a6e029a-bb59-4637-90c4-3781ae7f36ba)
 
 얼마 지나고 나서 http://saltfactory.github.com 을 열어보자. 멋진 개인 page가 만들어진 것을 확인할 수 있다. 뿐만 아니라 github.com의 개인 저장소로 연결해주는 귀여운 버튼도 자동으로 만들어지는 것을 확인할 수 있다. 이제 Markdown을 수정해서 내용만 변경하면 될 것이다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/0d6b692b-85a7-43ba-bfbd-83a7c7323d7c)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/0d6b692b-85a7-43ba-bfbd-83a7c7323d7c)
 
 ## 결론
 

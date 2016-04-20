@@ -97,7 +97,7 @@ Single-User 모드로 설치할 때는 다음과 같이 하면 된다.
 gem install linecache19 -- --with-ruby-include=$HOME/.rvm/src/ruby-1.9.2-head
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/8e639082-fa36-4146-a143-b59dd8df2553)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/8e639082-fa36-4146-a143-b59dd8df2553)
 
 ruby-debug-base19 설치에서도 동일한 문제로 설치가 되지 않는다. 위와 같은 방법으로 설치하면 해결할 수 있다.
 

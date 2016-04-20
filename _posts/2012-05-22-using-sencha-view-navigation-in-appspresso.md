@@ -184,11 +184,11 @@ index.html은 다음과 같이 저장한다. 그리고 Appspresso에서 빌드�
 </html>
 ```
 
-![](http://asset.hibrainapps.net/saltfactory/images/c4594f7c-bd70-4219-a1db-1b789179ea1c)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/c4594f7c-bd70-4219-a1db-1b789179ea1c)
 
-![](http://asset.hibrainapps.net/saltfactory/images/e2f2010e-aa53-45ad-8494-6c3f3bfd7d47)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/e2f2010e-aa53-45ad-8494-6c3f3bfd7d47)
 
-![](http://asset.hibrainapps.net/saltfactory/images/4643a8d1-5a10-4e06-952d-cb58f952a2fa)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/4643a8d1-5a10-4e06-952d-cb58f952a2fa)
 
 이것은 나중에 Model과 Store에 대해서 한번 더 자세히 설명하겠지만, 데이터의 저장된 형태를 Nested로 하여 그 데이터의 형태대로 리스트 뷰를 차례로 만들어주는 Sencha의 고급 컴포넌트 중에 하나이다. 그럼 이러한 리스트 말고 일반 뷰 (Panel)은 어떻게 하면 다음 뷰로 이동이 가능할까? 데이터의 저장 구조도 없고 단순하게 뷰를 이동시키는 것인데 말이다.
 그래서 Sencha에서는 NavigationView 컴포넌트를 만들어 두었다.
@@ -231,9 +231,9 @@ Ext.application({
 
 on the fly로 새로 고침을 해서 살펴보면 위에서 봤던 Nested ListView와 동일하게 새로운 뷰가 push되어서 들어가는 것을 확인할 수 있다. 그리고 back 버턴을 누르면 자동으로 첫 뷰로 되돌아 오는 것을 확인할 수 있다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/ba4e2775-5de4-4306-acfa-841d87d413f8)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/ba4e2775-5de4-4306-acfa-841d87d413f8)
 
-![](http://asset.hibrainapps.net/saltfactory/images/3cdec955-721b-4f22-8248-d410a3e89945)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/3cdec955-721b-4f22-8248-d410a3e89945)
 
 공식 메뉴얼에 있는 코드를 이해를 돕기 위해서 다음과 같이 수정을 해보자.
 우선 두번째 뷰 SecondView.js를 다음 내용으로 저장을 한다.
@@ -365,15 +365,15 @@ Ext.application({
 
 이렇게 새롭게 설정한 navigationBar는 새로운 view가 push가 되어도 계속 유지가 되어버리는 문제가 발생한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/c6ca3a47-d05c-4e15-9239-be7e1fcd3d77)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/c6ca3a47-d05c-4e15-9239-be7e1fcd3d77)
 
-![](http://asset.hibrainapps.net/saltfactory/images/d21825ba-7839-452d-88c9-dabb8b0bf718)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/d21825ba-7839-452d-88c9-dabb8b0bf718)
 
 iOS 였다면 이 동작은 다음과 같이 나타난다. 이러한 이유는 Sencha는 View 를 추가하는 것이고 iOS에서 UINavigationController에 추가되는 것은 새로운 ViewController가 추가되기 때문에 약간 그 성격이 다른것이다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/efd522fa-5f2d-4118-8cea-cbe984ee8a52)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/efd522fa-5f2d-4118-8cea-cbe984ee8a52)
 
-![](http://asset.hibrainapps.net/saltfactory/images/17d97125-6e8b-4937-bd80-70233bec34cd)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/17d97125-6e8b-4937-bd80-70233bec34cd)
 
 그래서 직접 네비게이션을 할 수 있는 코드를 작성해보기로 한다. 기본 로직은 간단하다 각각 Toolbar를 가진 First View와 Second View를 만들어서  버턴을 누를때 뷰를 전환하면서 마치 navigation controller가 동작하듯 slide animation으로 이동하게 하는 것이다.
 
@@ -482,7 +482,7 @@ Ext.application({
 
 우리가 UINavigationController의 stack에 뷰컨트롤러를 push 하듯 Ext.Viewport.add 로 뷰를 추가하고 Ext.Viewport.animationActiveItem으로 다른 뷰끼리 이동을하는 로직이다. 그런데 이 코드를 실행하면 WARN이 발생한다. 아래 경고는 Second View에서 Back 버턴을 클릭하면 동작하게 한 handler에서 발생하는 경고이다. 경고의 내용을 살펴보면 이미 composeButton 이라는 ID를 사용하고 있어서 발생하는 문제라는 것을 확인할 수 있다. Ext.Viewport에서는 firstView와 secondView 두가지를 보관하고 있다가 해당하는 뷰를 보여주는 방법인데 다시 컴포넌트를 추가하려고 보니까 이미 생성한 ID 가 있어서 발생하는 문제이다. 해결방법은 이미 만들어진 뷰를 다시 생성하지 않고 재활용하면 되는 것이다. 실제  UINavigationController로 스택에 viewController를 push 하였다가 다시 pop 하는 방법을 사용한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/150fc6b8-2716-4ad1-b87f-90566c45636a)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/150fc6b8-2716-4ad1-b87f-90566c45636a)
 
 코드른 다음과 같이 고쳐보자. 처음 앱이 동작할때 Ext.Viewport에 두 가지 뷰를 담아둔다.
 
@@ -589,9 +589,9 @@ Ext.define('SaltfactoryHybridTutorial.view.SecondView', {
 
 이렇게 두가지 뷰를 NavigationController 를 이용하여 Ext.Viewport에 담긴 뷰 간에 전환을 마치 UINavigationController에서 push와 pop을 하는 효과를 가져올 수 있게 구현할 수 있게 되었다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/af5617af-6735-49de-a826-beb74b758bd5)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/af5617af-6735-49de-a826-beb74b758bd5)
 
-![](http://asset.hibrainapps.net/saltfactory/images/94f18424-640f-4906-a539-8d48acc5d1dc)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/94f18424-640f-4906-a539-8d48acc5d1dc)
 
 두가지 뷰를 네비게이션하는 문제는 해결했지만 좀더 UINavgationController 처럼 컨트롤러 하나가 뷰의 동작을 담당하도록 하고 싶은 마음이 생긴다. 우리가 Sencha를 사용하는 궁긍적 목적인 MVC를 패턴을 사용하고 싶기 때문이다. 그래서 우리는 NavigationController를 하나 추가한다. (Sencha 튜토리얼에서 Sencha의 Controller에서 좀더 자세히 다루겠다. 지금은 Controller가 특정 Element에 이벤트를 등록하고 등록된 이벤트가 일어나면  처리할 수 있는 handler를 이용해서 명령어를 처리하거나 전달하는 객체라로 생각하자.)
 

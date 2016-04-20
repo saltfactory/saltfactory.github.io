@@ -9,7 +9,7 @@ tags:
   - springloaded
 comments: true
 images:
-  title: 'http://asset.hibrainapps.net/saltfactory/images/88cef926-acf7-45e9-b96d-bbad57bc21d0'
+  title: 'http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/88cef926-acf7-45e9-b96d-bbad57bc21d0'
 ---
 
 
@@ -70,7 +70,7 @@ spring.thymeleaf.cache=false
 
 위의 build.gradle 수정이 끝나면 Gradle 패널에서 리로드 아이콘을 클릭하여 필요한 클래스가 자동으로 프로젝트에 설치될 수 있도록 적용한다. 그리고 Tasks 중에서 application 하위에 있는 **bootRun**으로 프로젝트를 실행한다. 중요한 부분이다. 그냥 run으로 실행하면 리로드가 되지 않는다. 반드시 **bootRun**으로 실행하여야 한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/4d704ed6-614c-41e1-8a25-b182d66d41e4)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/4d704ed6-614c-41e1-8a25-b182d66d41e4)
 
 
 ## 정적파일 수정
@@ -107,7 +107,7 @@ body {
 
 수정한 결과가 서버 재시작 없이 반영되는지 브라우저를 리로드해보자.
 
-![](http://asset.hibrainapps.net/saltfactory/images/f759d640-768f-4218-9a20-15dc16b45005)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/f759d640-768f-4218-9a20-15dc16b45005)
 
 style.css 파일의 background-color를 수정해보자.
 
@@ -116,7 +116,7 @@ body {
     background-color: blue;
 }
 ```
-![](http://asset.hibrainapps.net/saltfactory/images/6d375b34-e988-4eca-862f-c9595dd0a96d)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/6d375b34-e988-4eca-862f-c9595dd0a96d)
 
 HTML 파일(Thymleaf) 수정, CSS 정적 파일 수정을 했을 경우 서버 재시작 없이 바로 적용되는 것을 확인할 수 있다.
 
@@ -139,15 +139,15 @@ public class PostsController {
 
 컨트롤러 파일 수정 이후 정적파일과 동일하게 브라우저를 새로 고침하면 다음과 같이 찾을 수 없는 페이지로 나올 것이다. 컨트롤러에 URL을 매핑하는 것을 추가하였는데 왜 수정 사항이 적용되지 않았을까?
 
-![](http://asset.hibrainapps.net/saltfactory/images/8335a5a9-a001-45c8-a05d-47b7c6581077)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/8335a5a9-a001-45c8-a05d-47b7c6581077)
 
 이유는 자바는 클래스로 컴파일이 되어야한다. 이런 이유로 서버는 재시작하지 않지만 파일은 컴파일하여 위에 build.gradle 파일에서 spring-loaded의 Java Agent가 참조하고 있는 빌드 타겟에 클래스 파일이 변경되어야 하기 때문이다. 그래서 클래스 파일은 수정후 IntelliJ의 빌드 메뉴에서 컴파일 파일 메뉴를 선택한다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/42255043-9d5c-4e72-9f6c-79579d18ec0b)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/42255043-9d5c-4e72-9f6c-79579d18ec0b)
 
 이제 다시 브라우저를 새로 고침해보자. 다음과 같이 컨트롤 클래스에 변경된 사항이 적용되어 찾을 수 없는 URL 매핑이 이젠 JSON을 반환할 수 있게 되었다.
 
-![](http://asset.hibrainapps.net/saltfactory/images/055162d9-fb9e-495f-9fee-f7a0e5ef784d)
+![](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/055162d9-fb9e-495f-9fee-f7a0e5ef784d)
 
 ## 결론
 

@@ -15,17 +15,17 @@ docker는 리눅스 컨테이너 환경으로 리눅스 자원을 나누어 사�
 
 <!--more-->
 
-![Docker Logo](http://asset.hibrainapps.net/saltfactory/images/f33da3ee-c5fc-4b88-b495-c637c9862c42)
+![Docker Logo](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/f33da3ee-c5fc-4b88-b495-c637c9862c42)
 
 ## Docker
 
 [Docker](https://www.docker.com/)는 가상 컨테이너에 애플리케이션을 포장해서 서로 다른 리눅스 서버에 실행할 수 있게 도와주는 기술이다. 이 것은 다양한 오픈소스 소프트웨어와 결합할 수 있는 리눅스 환경에서 클라우드와 가상화 기능을 실현할 기술로 주목 받아왔다. 이것은 VM는 비슷한것 같지만 Docker는 VM이 무거운 운영체제를 포함하지 않아도 된다. 좀더 정확한 표현은 호스트의 운영체제를 공유하는 방식이다. 이 때문에 수많은 리소스를 포함하고 있는 VM에 비해서 훨씬 빠르고 가벼운 가상화를 제공한다.
 
-![VM vs. Docker](http://asset.hibrainapps.net/saltfactory/images/4a8ff7dc-e5a6-4de8-addd-cc8715eec91d)
+![VM vs. Docker](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/4a8ff7dc-e5a6-4de8-addd-cc8715eec91d)
 
 Docker는 리눅스 컨테이너([LXC](http://en.wikipedia.org/wiki/LXC)) 가상화 기술을 기반해 애플리케이션 샌드박스를 자동생성하는 기술이다. 리눅스 운영체제 상에 CPU, 메모리, 스토리지, 네트워크 등의 자원을 애플리케이션마다 별로 격리된 가상공간으로 할당한다.
 
-![VM vs. Docker](http://asset.hibrainapps.net/saltfactory/images/0cbfe0cb-87d7-421d-be50-97caa8df7057)
+![VM vs. Docker](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/0cbfe0cb-87d7-421d-be50-97caa8df7057)
 [이미지 출처 : http://pointful.github.io/docker-intro/]
 
 ## Docker 사내 도입 배경
@@ -73,7 +73,7 @@ Mac OS X에서 docker 엔진을 사용하기 위해 모든 설치가 완료되�
 boot2docker init
 ```
 
-![boot2docker init](http://asset.hibrainapps.net/saltfactory/images/244f2298-f145-47b0-adc9-baa8ad1acd3c)
+![boot2docker init](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/244f2298-f145-47b0-adc9-baa8ad1acd3c)
 
 ## Docker 시작
 
@@ -89,7 +89,7 @@ boot2docker up
 export DOCKER_HOST=tcp://192.168.59.103:2375
 ```
 
-![export DOCKER_HOST](http://asset.hibrainapps.net/saltfactory/images/3486e7b7-affd-4bc3-879b-31af1f8fce06)
+![export DOCKER_HOST](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/3486e7b7-affd-4bc3-879b-31af1f8fce06)
 
 ## Docker 접속
 
@@ -98,7 +98,7 @@ Mac OS X 터미널에서 docker로 접속하기 위해서는 `boot2docker`의 `s
 ```
 boot2docker ssh
 ```
-![boot2docker ssh](http://asset.hibrainapps.net/saltfactory/images/d4c91b89-93c2-47c8-993d-a8c3fc423a44)
+![boot2docker ssh](http://hbn-blog-assets.s3.ap-northeast-2.amazonaws.com/saltfactory/images/d4c91b89-93c2-47c8-993d-a8c3fc423a44)
 ***boot2docker@0.8*** 버전에서는 `boot2docker ssh`로 접근하면 비밀번호(**tcuser**)를 물어봤는데 최근 버전은 물어보지 않고 바로 Docker로 접속된다. Docker에 접속하게 되면 Mac OS X의 터미널의 프롬프트가 ***docker@boot2dockr***로 변경되는 것을 확인할 수 있다.
 
 ## Docker 나가기
