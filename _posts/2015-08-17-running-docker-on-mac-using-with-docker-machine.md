@@ -8,7 +8,7 @@ tags:
   - mac
 comments: true
 images:
-  title: 'https://hbn-blog-assets.s3.amazonaws.com/docker-logo-new.png'
+  title: 'http://blog.hibrainapps.net/saltfactory/images/docker-logo-new.png'
 ---
 
 

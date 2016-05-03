@@ -8,7 +8,7 @@ redirect_from : /profile/
 
 
 <!-- ![profile]({{site.url}}/assets/images/profile.png) -->
-![](https://s3.ap-northeast-2.amazonaws.com/hbn-blog-assets/170527_1397357473697_3166009_o+(1).jpg)
+![](http://blog.hibrainapps.net/saltfactory/images/170527_1397357473697_3166009_o+(1).jpg)
 
 * [창원대학교 컴퓨터공학과](http://portal.changwon.ac.kr/home/ce) 박사수료
 * [하이브레인넷](http://www.hibrain.net) 부설연구소

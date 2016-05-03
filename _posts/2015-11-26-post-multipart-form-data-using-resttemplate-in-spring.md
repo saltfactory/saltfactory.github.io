@@ -12,7 +12,7 @@ tags:
   - form
 comments: true
 images:
-  title: 'https://hbn-blog-assets.s3.amazonaws.com/spring_bean_bud.jpg'
+  title: 'http://blog.hibrainapps.net/saltfactory/images/spring_bean_bud.jpg'
 ---
 
 ## 서론

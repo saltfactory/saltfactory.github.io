@@ -9,7 +9,7 @@ tags:
   - yaml
 comments: true
 images:
-  title: 'http://blog.hibrainapps.net/saltfactory/images/e2332bdb-1a94-4849-8dc3-8a81c73ec2ac'
+  title: 'http://blog.hibrainapps.net/saltfactory/images/spring_bean_bud.jpg'
 ---
 
 ## 서론

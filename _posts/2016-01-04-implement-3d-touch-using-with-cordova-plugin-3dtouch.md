@@ -11,7 +11,7 @@ tags:
   - ios
 comments: true
 images:
-  title: https://s3.ap-northeast-2.amazonaws.com/hbn-blog-assets/screen-shot-2015-09-26-at-5-44-22-pm.png
+  title: http://blog.hibrainapps.net/saltfactory/images/screen-shot-2015-09-26-at-5-44-22-pm.png
 ---
 
 ## 서론

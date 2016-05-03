@@ -9,7 +9,7 @@ tags:
   - springloaded
 comments: true
 images:
-  title: 'http://blog.hibrainapps.net/saltfactory/images/88cef926-acf7-45e9-b96d-bbad57bc21d0'
+  title: 'http://blog.hibrainapps.net/saltfactory/images/spring_bean_bud.jpg'
 ---
 
 
@@ -159,4 +159,3 @@ Spring은 훌륭하고 매우 안정적인 웹 프레임워크를 만들 수 있
 2. http://tomaszjanek.pl/blog/2015/02/03/hot-reloading-in-spring-boot-with-spring-loaded/
 3. http://blog.saltfactory.net/java/creating-springboot-project-in-intellij.html
 4. https://github.com/spring-projects/spring-loaded
-

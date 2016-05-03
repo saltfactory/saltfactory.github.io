@@ -11,7 +11,7 @@ tags:
   - unittest
 comments: true
 images:
-  title: 'http://blog.hibrainapps.net/saltfactory/images/2d442604-9eac-4a07-a1c4-19266bb4f064'
+  title: 'http://blog.hibrainapps.net/saltfactory/images/spring_bean_bud.jpg'
 ---
 
 ## 서론
@@ -719,4 +719,3 @@ Spring으로 REST 서비스를 만들 때는 Ruby on Rails 만큼의 빠르게 �
 5. http://flystone.tistory.com/196
 6. http://zeroturnaround.com/rebellabs/java-8-explained-applying-lambdas-to-java-collections/
 7. http://apieceofmycode.blogspot.kr/2014/07/spring-integration-testing-under-spring.html
-

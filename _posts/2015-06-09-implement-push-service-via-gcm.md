@@ -10,7 +10,7 @@ tags:
   - notification
 comments: true
 images:
-  title: 'https://hbn-blog-assets.s3.amazonaws.com/Screen%20Shot%202016-03-23%20at%2012.04.01%20AM.png'
+  title: 'http://blog.hibrainapps.net/saltfactory/images/Screen%20Shot%202016-03-23%20at%2012.04.01%20AM.png'
 ---
 
 ## 서론

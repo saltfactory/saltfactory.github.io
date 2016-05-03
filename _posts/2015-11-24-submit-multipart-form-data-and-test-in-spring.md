@@ -11,7 +11,7 @@ tags:
   - unit-testing
 comments: true
 images:
-  title: 'http://blog.hibrainapps.net/saltfactory/images/0188bd5c-93df-4d74-87c4-78385bf9ba40'
+  title: 'http://blog.hibrainapps.net/saltfactory/images/spring_bean_bud.jpg'
 ---
 
 
