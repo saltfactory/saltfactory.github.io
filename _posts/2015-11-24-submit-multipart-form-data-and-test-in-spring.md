@@ -11,7 +11,7 @@ tags:
   - unit-testing
 comments: true
 images:
-  title: 'http://blog.hibrainapps.net/saltfactory/images/spring_bean_bud.jpg'
+  title: 'http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/spring_bean_bud.jpg'
 ---
 
 
@@ -37,9 +37,9 @@ git checkout -t origin/spring-boot-rest
 
 다운받은 디렉토리 안에 **SpringBootDemo** 디렉토리 안에 Gradle 기반의 Spring Boot 프로젝트가 존재한다. IntelliJ에서 build.gradle을 임포트하면 자동으로 Spring 프로젝트가 만들어지게 된다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/192d6ae3-92e3-4368-b565-8413fd53ecdc)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/192d6ae3-92e3-4368-b565-8413fd53ecdc)
 
-![](http://blog.hibrainapps.net/saltfactory/images/19af044e-3282-44dd-8198-00374e74a458)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/19af044e-3282-44dd-8198-00374e74a458)
 
 ## Thymeleaf 라이브러리 추가
 
@@ -131,7 +131,7 @@ spring.thymeleaf.prefix=classpath:/templates/
 
 다운받은 프로젝트 안에 **src/resources/templates/articles/** 디렉토리를 만든다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/87bf1d09-0d6d-43d3-852c-e3a14f7ceb02)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/87bf1d09-0d6d-43d3-852c-e3a14f7ceb02)
 
 build.gradle 설정을 모두 마쳤으면 IntelliJ의 Gralde project 패널에서 새로고침 버튼을 클하면 추가한 Dependencies에 관련된 라이브러리를 저장소로부터 자동으로 다운받을 수 있다.
 
@@ -321,7 +321,7 @@ public class ArticlesControllerTests {
 
 테스트를 진행해보자. 결과는 다음과 같이 실패가 된다. 소스코드에는 문제가 없는데 왜 HTML이 HTTP의 응답이 즉, 우리가 추가한 컨트롤러의 메소드에서 반환되는 객체가 뷰 페이지(**text/html**)가 아니라 문자열(**text/plain**)이 되었을까?
 
-![](http://blog.hibrainapps.net/saltfactory/images/795c5141-1305-4561-abe3-0b2592577290)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/795c5141-1305-4561-abe3-0b2592577290)
 
 이유는 바로 **@RestController** 때문이다. 클래스 레벨에 붙여놓은 Spring Annotation인 @RestController 는 컨트롤러 내부에서 작성한 메소드가 반환하는 모든 객체를 Document 타입으로 반환하기 때문이다. 이 문제를 해결하기 위해서는 @RestController 를 @Controller 어노테이션으로 변경을 해야한다. ArticlesController 코드를 다음과 같이 수정한다. @RestController 대신에 @Controller로 변경한다.
 
@@ -357,7 +357,7 @@ public class ArticlesController {
 
 클래스 레벨에 @Controller로 어노테이션을 수정하고 다시 테스트를 진행한다. 테스트는 성공적인 결과가 나올 것이고 HTML 코드를 보기 위해서 뷰 결과를 로깅한 결과를 보면 Thymeleaf 뷰 템플릿을 사용하여 만든 뷰가 HTML 코드로 렌더링 될 것을 확인할 수 있다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/4d4f2983-a4a6-40ba-a69e-3522df88b0a3)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/4d4f2983-a4a6-40ba-a69e-3522df88b0a3)
 
 ## @RequestBody Vs. @ModelAndAttribute
 
@@ -430,7 +430,7 @@ public class ArticlesController {
 
 테스트 결과는 정상적으로 진행이 될 것이다. 위에서 살펴보면 이전에 @RequestBody를 테스트하기 위해서 객체를 JSON 타입으로 변경한 것과는 달리 **.param()**을 통해서 Form 파라미터를 추가하는 것을 확인할 수 있다. 또한 post()를 요청할 때 contentType이 **APPLICATION_FORM_URLENCODED** 인것을 확인할 수 있다. 실제 파라미터 데이터가 ModelAndAttribute로 매핑되는지 확인해보기 위해서 컨트롤러에 브레이크포인트를 걸고 다시 한번 테스트를 진행해보자.
 
-![](http://blog.hibrainapps.net/saltfactory/images/277207a1-f122-4b2a-97dc-0c502d5f6a3b)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/277207a1-f122-4b2a-97dc-0c502d5f6a3b)
 
 컨트롤러 안에서 RequestMethod.POST 요청이 들어오면 ModelAndAttribute의 데이터를 Article 객체에 매핑되어진 것을 확인할 수 있다.
 
@@ -573,7 +573,7 @@ public class Article implements Serializable {
 
 실제 파일이 전송이 되어 컨트롤러에 들어가는지 확인하기 위해서 컨트롤러 메소드에 브레이크포인트를 걸어서 확인해보자. 테스트를 진행해서 브레이크포인트를 살펴보면 다음과 같이 파일이 컨트롤러에 저장되는 것을 확인할 수 있다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/c97d549a-80dd-43be-bcb9-e7b495d081e7)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/c97d549a-80dd-43be-bcb9-e7b495d081e7)
 
 이제 FORM을 처리하기 위한 컨트롤러, 뷰 템플릿, 단위 테스트 코드가 모두 작성되고 테스트 되었다.
 
@@ -585,15 +585,15 @@ public class Article implements Serializable {
 gradle bootRun
 ```
 
-![](http://blog.hibrainapps.net/saltfactory/images/7f06b464-d103-4377-a697-d24857e0c786)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/7f06b464-d103-4377-a697-d24857e0c786)
 
 브라우저를 열어서 http://localhost:8080/articles/new 로 접근해보자
 
-![](http://blog.hibrainapps.net/saltfactory/images/416dfe17-022d-410c-8c69-04c9c80b08f4)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/416dfe17-022d-410c-8c69-04c9c80b08f4)
 
 Form이 나타나면 입력 폼에 내용을 입력하고 첨부파일도 추가가 한 후, submit을 해보자. 결과는 정상적으로 Article 객체에 포함되어 컨트롤러에 도착하여 JSON으로 결과가 반환된 것을 확인할 수 있다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/71d6ef31-9c83-4b25-828c-ca4020662a94)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/71d6ef31-9c83-4b25-828c-ca4020662a94)
 
 ## 결론
 

@@ -26,7 +26,7 @@ checkout -t origin/t6-addressbook-group
 
 앞이서 우리는 그룹에 관한 데이터 처리를 하기 위해서 SFGroupService라는 것을 만들었다. 마찬가지로 우리는 연락처에 대한 작업을 처리하기 위해서 SFContactService라는 객체를 만들어서 사용할 것이다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/43ad7992-e56f-48e3-ae81-7c348cce0832)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/43ad7992-e56f-48e3-ae81-7c348cce0832)
 
 이 포스트 이전에 우리는 SFGroupService에서 그룹 목록을 출력시키는 기능을 구현했었다. UITableView에 그룹 목록들이 나타나는데, 해당 그룹을 선택하여 Cell을 선택하면 groupId를 가지고 그룹을 찾아서 그 그룹에 해당된 연락처를 조회해서 이름을 출력시키도록 해보자.
 
@@ -123,7 +123,7 @@ ABAddressBook에서 groupId로  그룹을 찾는다는 것은 ABRecordRef를 찾
 
 앞의 글에서 그룹을 목록화 해서 사용했던 SFGroupTableViewController의 Cell을 선택하면 그 그룹에 해당되는 멤버들의 연락처들을 보기 위해서 SFContactsTableViewController를 추가하도록 하자.
 
-![](http://blog.hibrainapps.net/saltfactory/images/6706bc8b-d757-44ba-b691-3b0332078ec4)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/6706bc8b-d757-44ba-b691-3b0332078ec4)
 
 이 SFContacatsTableViewController는 SFGroupTableViewController의 cell을 선택하면 navigationViewController로 뷰를 push 하도록 하기 위해서 SFGroupTableViewController.m 파일에 다음 코드를 추가한다.
 
@@ -364,14 +364,14 @@ ABAddressBook에서 groupId로  그룹을 찾는다는 것은 ABRecordRef를 찾
 ```
 iOS 시뮬레이터를 열고 테스트를 위해서 특정 그룹에 연락처를 추가해보자. 앞의 예제에서 만들었던 "창원대학교" 그룹에 연락처를 하나 추가했다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/be370277-cfd5-4334-a4ed-dfb60754057d)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/be370277-cfd5-4334-a4ed-dfb60754057d)
 
 이제 수정한 코드를 위해서 빌드하고 실행을 해보자.
 다음과 같이 그룹 목록이 나오는 SFGroupTableViewController에서 "창원대학교"에 해당하는 Cell을 선택하면 SFContactsTableViewController가 navigationController에 push 되면서 "창원대학교에" 해당하는 연락처들을 조회해서 lastName과 firstName을 조합해서 UITableView에 나타내어 주게 된다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/e8600f3f-7fa1-4e62-88fb-9116bb295126)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/e8600f3f-7fa1-4e62-88fb-9116bb295126)
 
-![](http://blog.hibrainapps.net/saltfactory/images/797163b0-a1fa-44f4-bb2a-90b79e13ac51)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/797163b0-a1fa-44f4-bb2a-90b79e13ac51)
 
 ## 결론
 

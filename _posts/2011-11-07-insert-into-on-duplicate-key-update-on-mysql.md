@@ -42,11 +42,11 @@ ALTER TABLE students ADD UNIQUE (NAME);
 
 테스트할 테이블의 컬럼 중에 name 이라는 컬럼에 Unique 제약 조건을 추가했다. desc students; 를 실행하면 name 컬럼에 unique key가 생성되어 있는 것을 확인 할 수 있다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/75c2afb6-2d84-44ca-96a8-31717cf711af)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/75c2afb6-2d84-44ca-96a8-31717cf711af)
 
 우선 이 테이블에는 아무런 데이터가 없다. select * from students;로 조회 하면 Empty set이라고 출력될 것이다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/e8fa6e81-9c90-43a4-8399-6e0ca1c96f45)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/e8fa6e81-9c90-43a4-8399-6e0ca1c96f45)
 
 다음은 insert into on duplicate key update를 할 것이다. 만약에 saltfactory라는 사용자가 없다면 insert를 하고 이메일은 saltfactory@gmail.com을 입력하고, 만약 saltfactory라는 사용자가 존재하고 있다면 saltfactory@me.com을 이메일로 업데이트하라는 쿼리이다.
 
@@ -57,9 +57,9 @@ ON DUPLICATE KEY UPDATE name='saltfactory', email='saltfactory@me.com';
 
 현재 아무런 값이 없기 때문에 insert를 하면서 saltfactory와 saltfactory@gmail.com을 입력할 것이다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/d4b65aff-b913-40eb-b803-bcf66cb1af3c)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/d4b65aff-b913-40eb-b803-bcf66cb1af3c)
 
 한번더 위 쿼리를 실행하면 saltfactory라는 이름이 이미 있으니 saltfactory@gmail.com의 이메일 주소가 saltfactory@me.com으로 업데이트 될 것이다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/be5be7be-390a-4b49-b00a-48aab46cbbbb)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/be5be7be-390a-4b49-b00a-48aab46cbbbb)
 

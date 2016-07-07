@@ -15,7 +15,7 @@ Oralce에서는 Mac을 위한 공식적은 DBMS 설치 파일을 제공하지 �
 <!--more-->
 
 
-![oracle](http://blog.hibrainapps.net/saltfactory/images/29e675bd-ea14-4d16-ac69-e99cb27d34d9)
+![oracle](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/29e675bd-ea14-4d16-ac69-e99cb27d34d9)
 
 개발용으로 맥(Mac OS X)은 더 없이 훌륭한 랩탑이다. 유닉스 기반의 운영체제이기 때문에 서버 프로그램과 클라이언트 프로그램을 동시에 작업하거나 테스트할 수 있기 때문이다. 맥은 대부분의 웹 서버와 데이터베이스를 설치해서 개발할 수 있다. 대부분 벤더에서 Mac 용 버전을 개발하고 배포하고 있는데 Oracle은 Databsae를 공식적으로 Windows와 Linux 플랫폼을 Mac용은 지원하지 않는다. 다만 Mac에서 Oracle Database에 접근할 수 있는 client를 지원 하고 있다. (물론 VM을 설치해서 사용은 가능하지만 이것은 논외로 생각한다.). Oracle Instant Client는 Oracle Database에 접근할 수 있는 sqlplus 를 지원하고 있을 뿐만 아니라, Oracle 기반 Application을 개발할 때 특별히 수정해서 소스를 재 컴파일할 필요 없고 적은 용량의 디스크에서도 바로 사용할 수 있게 경량으로 프로그램과 라이브러리를 담고 있는 패키지이다.
 
@@ -35,13 +35,13 @@ Mac OS X은 PPC, 32-bit, 64-bit 버전이 있기 때문에 자신이 어떤 운�
 uname -a
 ```
 
-![uname](http://blog.hibrainapps.net/saltfactory/images/b7ef9c33-8226-4b49-87d9-fd3afb93a5d2)
+![uname](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/b7ef9c33-8226-4b49-87d9-fd3afb93a5d2)
 
 Mac OS X가 **64-bit** 운영체제일 경우 **RELEASE_X86_64 x86_64**가 나타날 것이고, **32-bit** 일 경우 **RELEASE_I386 i386**으로 나타난다. 이 글을 포스팅할 때 Oralce instant client의 가장 최근 버전은 Version 11.2.0.4.0(64-bit) 이다.
 
 필요한 파일을 모두 다운로드 받은 후 특정 경로로 이동한다. 관리의 편리성을 위해서 `/Projects/Servers/Libraries/Oracle/instantclient_11_2` 에 다운로드 받은 모든 파일을 이동시켰다.
 
-![instantclient directory](http://blog.hibrainapps.net/saltfactory/images/30a9bdd0-eabc-48ec-af7d-6d2c54e97f7b)
+![instantclient directory](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/30a9bdd0-eabc-48ec-af7d-6d2c54e97f7b)
 
 ## 시스템 환경변수 추가
 
@@ -93,13 +93,13 @@ sqlplus tutorial/tutorial@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=192.168.0.12
 
 아래는 위의 sqlplus 를 이용해서 Oracle에 접속한 결과이다. 우리가 사용한 Oracle instant client의 SQL*Plus는 11.2.0.4.0 버전이고 서버에는 Oracle Database 10g Express Edition Release 10.2.0.1.0이 설치되어 있다는 것을 확인할 수 있다.
 
-![sqlplus connect](http://blog.hibrainapps.net/saltfactory/images/c2a161af-17e4-4f45-9a23-586f02f9ec25)
+![sqlplus connect](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/c2a161af-17e4-4f45-9a23-586f02f9ec25)
 
 ## OID 에러 해결
 
 위와 동일하게 진행했는데 만약 다음과 같이 **OID 에러**가 발생하는 경우가 있을 것이다. [OID](http://www.oracle.com/technetwork/middleware/id-mgmt/overview/index-082035.html)는 [Oracle Internet Directory](http://www.oracle.com/technetwork/middleware/id-mgmt/overview/index-082035.html)를 말하는 것으로 [Oracle Fusion Middleware](http://www.oracle.com/us/products/middleware/overview/index.html)의 [Tier Identity Management Oracle Internet Directory](http://docs.oracle.com/cd/E27559_01/integration.1112/e27123/topology.htm)의 표준이다. OID는 [LDAP3](http://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol)(Light weight Directory Access Protocol)로 구현이 되어 있고 Microsoft의 Active Directory의 Oracle 버전이라 생각하면 된다. 이때 OID는 호스트 validation을 체크하는데 `/etc/hosts`에 `hostname`이 없으면 OID에러를 발생한다.
 
-![oid error](http://blog.hibrainapps.net/saltfactory/images/2e171f0e-beee-4730-a15f-0ed7a385e2e0)
+![oid error](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/2e171f0e-beee-4730-a15f-0ed7a385e2e0)
 
 Oracle instant client 10.x 버전에는 발생하지 않았는데 Oracle instant client 11.x 버전부터 OID 에리거 발생을 하는데 이럴 경우 `/etc/hosts` 파일에 현재 자신의 컴퓨터의 hostname을 추가한다.
 
@@ -109,7 +109,7 @@ Oracle instant client 10.x 버전에는 발생하지 않았는데 Oracle instant
 hostname
 ```
 
-![hostname](http://blog.hibrainapps.net/saltfactory/images/4873bcb1-79a0-4373-9c88-33959da1bfe6)
+![hostname](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/4873bcb1-79a0-4373-9c88-33959da1bfe6)
 
 현재 사용하고 있는 Mac의 hostname은 saltfactory이다. 이젠 `/etc/hosts` 파일을 열어서 다음과 같이 `hostname`을 추가한다.
 

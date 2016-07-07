@@ -9,7 +9,7 @@ tags:
   - browser
 comments: true
 images:
-  title: 'http://blog.hibrainapps.net/saltfactory/images/cbce30a2-5b51-4f2e-bb35-76e863964242'
+  title: 'http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/cbce30a2-5b51-4f2e-bb35-76e863964242'
 ---
 
 ## 서론

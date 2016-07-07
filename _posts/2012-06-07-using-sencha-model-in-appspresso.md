@@ -29,14 +29,14 @@ disqus_identifier : http://blog.saltfactory.net/156
 
 실제 기존의 네이티브 앱에서는 앱이 실행되면 원격 서버로 부터 json 형식으로된 건물들의 데이터를 요청해서 지도 위에 건물의 위치를 Maker로 표시하고 marker를 선택할때 CallOutView (말풍선)이 나와서 건물의 이름과 호관을 보여준다. 우리는 이 기능을 구현할 것이다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/7c735c6e-0d02-4fd4-932e-3f5398a8d47b)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/7c735c6e-0d02-4fd4-932e-3f5398a8d47b)
 
 ## 원격 데이터 요청
 
 우리는 앞에서 만든 원격 데이터를 요청하기 위해서 MainController를 수정할 것이다. MainController가 지도를 MainView의 Panel에 만들어서 올리면서 원격 서버로부터 건물 데이터를 요청하기위해서 Controller가 launch 될 때 Appspresso의 ax.ext.net.curl을 요청하도록 해보겠다.
 먼저 우리는 Sencha만 가지고 하이브리드 앱을 구현하는 것이 아니라 Appspresso의 WAC plugins을 사용할 것이다. 앱스프레소의 프러그인 중에서  원격의 데이터를 요청하기 위해서 ax.ext.net.curl을 이용할 것이다. 이 플러그인을 사용하기 위해서 Appspresso의 project.xml 을 열어서 Plugin List 중에서 ax.ext.net을 선택한다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/ea934398-e0db-483d-af00-6ce8431862af)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/ea934398-e0db-483d-af00-6ce8431862af)
 
 이젠 MainController.js를 열어서 launch때 동작하는 메소드를 수정한다.
 
@@ -162,7 +162,7 @@ MainController가 생성되고 launch 될 때 동작하는 메소드 안에 원�
   }
 ```
 
-![](http://blog.hibrainapps.net/saltfactory/images/8c478b71-0c3a-45ef-933f-4c97a6ddbf83)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/8c478b71-0c3a-45ef-933f-4c97a6ddbf83)
 
 우리는 이렇게 Sencha Touch 의 MVC 중에서 Controller 안에서 Appspresso의 plugins를 사용하는 방법을 같이 해보았다. 이젠 이렇게 Appspresso의 plugins으로 요청한 데이터를 Sencha의 Model로 저장하는 Store를 구현해보자.
 
@@ -338,7 +338,7 @@ Ext.define('CWNUMap.controller.MainController', {
 
 앱을 다시 실행시키면 다음과 같이 json 데이터가 모두 Model 로 BuildingStore에 저장이 되고, Store가 load될 때 callback으로 각각의 Model 데이터를 출력하도록 하였다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/3ae6df7c-f149-4bd7-8dd4-b93d7130ea64)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/3ae6df7c-f149-4bd7-8dd4-b93d7130ea64)
 
 이제 Appspresso 의 plugins으로 원격에서 건물정보 데이터를 가져와서 Sencha의 Model 로 변경하여 Store로 저장하여 로드하였기 때문에 UI에서  Model를 이용하여 UI 요소를 추가할 수 있다. 지도 위에다 Store에 저장된 Model을 이용해서 Marker를 추가해보자. MainController.js를 다음과 같이 수정한다.
 
@@ -451,9 +451,9 @@ Ext.define('CWNUMap.controller.MainController', {
 블로그 포스트요으로 inforwindow에 inline code로 만들었지만 css로 스타일을 분리하면 더 좋은 코드가 될 것 이다.
 Appspresso 에서 On The Fly로 simulator로 빌드해서 테스트해보자. iOS와 Android 에서 모두 정상적으로 동작하는 것을 확인할 수 있다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/d04e6de4-d9c4-47ab-b449-d8a9b1f8518f)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/d04e6de4-d9c4-47ab-b449-d8a9b1f8518f)
 
-![](http://blog.hibrainapps.net/saltfactory/images/e6858e7c-f3cf-4463-b459-233de505fbc3)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/e6858e7c-f3cf-4463-b459-233de505fbc3)
 
 ## 결론
 

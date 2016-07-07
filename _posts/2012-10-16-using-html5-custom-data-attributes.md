@@ -104,7 +104,7 @@ HTML5의 Custom Data Attribute를 CSS에서 쿼리하기 위해서는 다음과 
 
 [data-item]은 Custom Data Attributes에 data-item으로 지정된 모든 element를 쿼리한다는 의미이다. 위 파일을 HTML5를 해석할 수 있는 브라우저에서 열어보면 다음과 같이 출력되는 것을 확인할 수 있다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/bdc0f891-ab0b-409b-a80f-38de10e19a26)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/bdc0f891-ab0b-409b-a80f-38de10e19a26)
 
 Custom Data Attributes에 해당하는 모든 element에 font:red;가 적용된 것을 확인할 수 있다. Custom Data Attributes를 이용하면 CSS 쿼리를 좀더 디테일하게 설정을 할 수 있다. 이유는 Custom Data Attributes가 바로 value를 가지고 있기 때문에 데이터의 값에 해당하는 element를 css로 쿼리를 할 수 있다는 것이다. 위 코드에서 data-item="4" 인 데이터를 HTML에서 문서에서 찾아서 스타일을 지정하려면 다음과 같이 css 쿼리를 사용한다.
 
@@ -130,7 +130,7 @@ Custom Data Attributes에 해당하는 모든 element에 font:red;가 적용된 
 </html>
 ```
 
-![](http://blog.hibrainapps.net/saltfactory/images/99737d2a-d959-4c22-880c-36e106749e12)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/99737d2a-d959-4c22-880c-36e106749e12)
 
 만약 data-type이 "text"로 지정한 여러개를 선택할 경우는 다음과 같이 하면 된다.
 
@@ -141,7 +141,7 @@ Custom Data Attributes에 해당하는 모든 element에 font:red;가 적용된 
 
 ```
 
-![](http://blog.hibrainapps.net/saltfactory/images/2cf7be67-2223-4ef1-923d-e2b2c05c9c1c)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/2cf7be67-2223-4ef1-923d-e2b2c05c9c1c)
 
 이렇게 여러개를 한번에 선택할 수 있는 css의 쿼리 뿐만 아니라 여러개의 속성 값을 지정하여 복합적인 데이터의 조건을 쿼리할 수 도 있다. `data-type`이 number 이고 그 중에서 `data-item` 이 3 인 것을 찾을 때 다음과 같이 할 수 있다.
 
@@ -167,7 +167,7 @@ Custom Data Attributes에 해당하는 모든 element에 font:red;가 적용된 
 </html>
 ```
 
-![](http://blog.hibrainapps.net/saltfactory/images/31123155-d714-4d92-9927-609269dd1809)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/31123155-d714-4d92-9927-609269dd1809)
 
 이렇게 HTML5의 Custom Data Attributes를 HTML 문서를 좀더 의미적으로 데이터를 표현할 수 있을뿐만 아니라 data-* 의 element를 선택적으로 CSS 쿼리하여 스타일을 디테일하게 적용할 수가 있다는 것을 살펴보았다. 그럼 이 데이터들을 HTML selectors로 어떻게 접근할 수 있는지 확인해보자.
 
@@ -202,7 +202,7 @@ HTML5 Selectors API에서 querySelector를 사용할 수 있다는 것을 [HTML5
 위 코드를 실행시키면 HTML5의 Selectors API를 이용해서 HTML의 **Custom Data Attributes**로 정의한 element를 CSS 쿼리를 이용해서 접근 가능하다는 것을 확인할 수 있다.
 
 
-![](http://blog.hibrainapps.net/saltfactory/images/7e6e6791-2c7e-4ee5-a427-5dfb81f2bcd4)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/7e6e6791-2c7e-4ee5-a427-5dfb81f2bcd4)
 
 ## 결론
 

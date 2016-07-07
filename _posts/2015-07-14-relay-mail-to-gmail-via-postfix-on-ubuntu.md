@@ -11,7 +11,7 @@ tags:
   - relay
 comments: true
 images:
-  title: 'http://blog.hibrainapps.net/saltfactory/images/634b2cac-47b5-44d3-a3ea-633c0a337d80'
+  title: 'http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/634b2cac-47b5-44d3-a3ea-633c0a337d80'
 ---
 
 ## 서론
@@ -152,7 +152,7 @@ echo "Postfix를 사용하여 gmail로 메일 보내기" | mail -S from="SungKwa
 
 메일이 정상적으로 발송이 되면 Gmail로 메일이 도착하는 것을 확인할 수 있다.
 
-![gmail 발송 테스트](http://blog.hibrainapps.net/saltfactory/images/b006dec9-9e91-4d21-a7c3-e46f51a66e2a)
+![gmail 발송 테스트](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/b006dec9-9e91-4d21-a7c3-e46f51a66e2a)
 
 
 ## 결론

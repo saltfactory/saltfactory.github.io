@@ -10,7 +10,7 @@ tags:
   - notification
 comments: true
 images:
-  title: 'http://blog.hibrainapps.net/saltfactory/images/Screen%20Shot%202016-03-23%20at%2012.04.01%20AM.png'
+  title: 'http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/Screen%20Shot%202016-03-23%20at%2012.04.01%20AM.png'
 ---
 
 ## 서론
@@ -29,7 +29,7 @@ GCM을 테스트하기 위한 Android 프로젝트를 하나 만들도록 한다
 
 ### Start New Android Studio project
 
-![Start New Android Studio](http://blog.hibrainapps.net/saltfactory/images/9ceb0e11-523f-44cc-b5df-a34b4d7118e4)
+![Start New Android Studio](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/9ceb0e11-523f-44cc-b5df-a34b4d7118e4)
 
 ### New Project
 
@@ -40,19 +40,19 @@ GCM을 테스트하기 위한 Android 프로젝트를 하나 만들도록 한다
 
 으로 프로젝트를 만든다. 위 입력은 자신에 맞게 수정하여 입력한다. 주의할 점은 **Pacakge name**이다. Android의 어플리케이션의 유일한 identifier는 package name으로 인식하기 때문에 자신의 앱과 중복되지 않은 이름을 입력한다.
 
-![New Project](http://blog.hibrainapps.net/saltfactory/images/07381211-7b35-48c2-8ca1-c6f9396af0a7)
+![New Project](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/07381211-7b35-48c2-8ca1-c6f9396af0a7)
 
 ### Target Android Device
 
 다음은 개발하고 싶은 **SDK**를 선택한다. 우리는 Android 스마트폰 GCM을 테스트할 예정이기 때문에 **Phone and Tablet Minimum SDK**를 선택한다. 현재 연구에 사용하고 있는 Android 디바이스가 최신형이 아니기 때문에 **API 14(Android 4.0)**을 선택했다. 자신에 맞는 SDK를 선택하면 된다.
 
-![Phone and Table Minimum SDK](http://blog.hibrainapps.net/saltfactory/images/70dd0a1f-a710-414f-b1cb-bf9948c45196)
+![Phone and Table Minimum SDK](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/70dd0a1f-a710-414f-b1cb-bf9948c45196)
 
 ### Add an activity to Mobile
 
 단순히 GCM을 테스트하기 위해서 우리는 **Blank Activity**를 선택한다. 실제 프로젝트를 새롭게 진행한다면 자신에게 필요한 Activity를 선택하면 된다.
 
-![Add an activity to Mobile](http://blog.hibrainapps.net/saltfactory/images/0375db27-256c-45e9-af2b-c7180c24ce6d)
+![Add an activity to Mobile](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/0375db27-256c-45e9-af2b-c7180c24ce6d)
 
 ### Customize the Activity
 
@@ -63,23 +63,23 @@ GCM을 테스트하기 위한 Android 프로젝트를 하나 만들도록 한다
 * **Title** : **GCM demo**
 * **Menu Resource Name** : menu_main
 
-![Customize the Activity](http://blog.hibrainapps.net/saltfactory/images/8300184b-bb71-4b5c-b997-9fabdedf6309)
+![Customize the Activity](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/8300184b-bb71-4b5c-b997-9fabdedf6309)
 
 간단하게 **Gradle** 기반의 Anroid 프로젝트가 만들어졌다.
 
-![created android project](http://blog.hibrainapps.net/saltfactory/images/b45c7903-31b6-481a-8647-9693f55e3f07)
+![created android project](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/b45c7903-31b6-481a-8647-9693f55e3f07)
 
 ## 앱 등록하기
 
 Android GCM 서비스를 개발하기 전에 GCM을 사용하기 위해 앱을 등록해야한다. Android GCM 사이트에 접속해보자. https://developers.google.com/cloud-messaging/
 
-![](http://blog.hibrainapps.net/saltfactory/images/c5c19610-b2fc-43f1-8168-d73ff8e34d57)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/c5c19610-b2fc-43f1-8168-d73ff8e34d57)
 
 Google Cloud Messasing은 이제 **Android** 디바이스 뿐만 아니라 **iOS** 디바이스에도 동일한 로직으로 GCM 서비스를 이용하여 메세지를 보낼 수 있다. **iOS**를 위한 GCM의 소개는 다음 포스트에서 소개하도록 하고 우선 **Android GCM**을 소개한다. Google의 서비스는 점차적으로 [Material Design](http://www.google.com/design/spec/material-design/introduction.html)으로 디자인을 변경하고 있다. GCM 사이트 역시 **Material Design**이 적용되어 있다. [TRY IT ON ANDROID](https://developers.google.com/cloud-messaging/android/start) 버튼을 클릭한다.
 
 우리는 **SF-GCM-demo**라는 프로젝트를 이미 만들었고 GCM을 추가할 것이기 때문에 [add Cloud Messaging to your existing app](https://developers.google.com/cloud-messaging/android/client)를 클릭한다.
 
-![add Cloud Messasing to your exsiting app](http://blog.hibrainapps.net/saltfactory/images/9ab6adf4-f822-4ab0-b7fe-928b17d12706)
+![add Cloud Messasing to your exsiting app](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/9ab6adf4-f822-4ab0-b7fe-928b17d12706)
 
 ### Get a configuration file
 
@@ -92,15 +92,15 @@ Google Cloud Messasing은 이제 **Android** 디바이스 뿐만 아니라 **iOS
 * **App name** : 앱 이름을 입력한다. 영문으로만 등록이 가능하다.
 * **Android package name** : **net.saltfactory.demo.gcm**
 
-![Create or Choose an app](http://blog.hibrainapps.net/saltfactory/images/a01fdb5e-1eb5-481b-82c0-0f46898f3a93)
+![Create or Choose an app](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/a01fdb5e-1eb5-481b-82c0-0f46898f3a93)
 
 **Continue Choose an configure services** 버튼을 클릭한다. 등록하는 시간을 기다리면 다음과 같이 **SF-GCM-DEMO** 앱이 **net.saltfactory.demo.gcm** 패키지명으로 등록된 것을 확인할 수 있다. 앱을 등록하면 Google Sigin-in, Cloud Messaging, Analytics 서비스를 사용할 수 있다. 우리는  **Cloud Messaging**를 상용할 것이기 때문에 다른 설명은 생략한다.
 
-![Registration Android App](http://blog.hibrainapps.net/saltfactory/images/a1583124-beeb-4f3a-acfc-093779911535)
+![Registration Android App](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/a1583124-beeb-4f3a-acfc-093779911535)
 
 **Google Cloud Messaging** 탭을 보면 **ENABLE GOOGLE CLOUD MESSAGING** 버튼이 보인다. 이 버튼을 눌러줘야 GCM 서비스가 활성화 된다. 버튼을 클릭하자. 그러면 아래와 같이 GCM 서비스가 활성화 된 것을 확인할 수 있다. 이제 Google 서비스에 GCM에 관한 설정은 모두 마친 것이다.
 
-![Enable google cloud messaging](http://blog.hibrainapps.net/saltfactory/images/67833730-0f41-4f95-bece-0ec13fcc2dd1)
+![Enable google cloud messaging](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/67833730-0f41-4f95-bece-0ec13fcc2dd1)
 
 아래에 보면 **Generate configuration files** 라는 버튼이 보인다. 이전 GCM에서의 복잡한 설정을 간단하게 configuration file로 처리를 할 수 있게 GCM 서비스가 업그레이드 되었다. 설정 파일을 만들어보자.
 
@@ -108,11 +108,11 @@ Google Cloud Messasing은 이제 **Android** 디바이스 뿐만 아니라 **iOS
 
 GCM 서비스가 업그레이드 되면서 설정하는 프로세스가 매우 직관적으로 변경되었다. 앞에서 설명하듯 차례차례 문서대로 진행하면 다음과 같이 **Server API key**와 **Sender ID**를 만들 수 있다. 이전에 블로그에 포스팅한 글의 가장 많은 질문이 **Project ID**를 어떻게 생성하는지에 대한 질문이였는데 GCM 업그레이드 이후 간단하게 생성할 수 있게 되었다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/cde4e93e-795b-48e5-990f-0963cb0f751f)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/cde4e93e-795b-48e5-990f-0963cb0f751f)
 
 설정 파일 또한 쉽게 생성이 되었다. 상단에 **Download google-services.json** 버튼을 클릭해서 설정파일을 다운로드한다. 다운로드 받은 `google-services.json` 파일은 앞에서 만든 Android 프로젝트 디렉토리 안에 `app/` 디렉토리 안으로 복사한다. 이 파일이 `/app` 디렉토리안에 들어있지 않으면 GCM 프로젝트를 빌드할 때 `R.string.gcm_defaultSenderId` 리소스를 찾을 수 없다는 에러가 발생하면서 빌드가 되지 않는다.
 
-![copy google-services.json](http://blog.hibrainapps.net/saltfactory/images/224e057c-8880-4b53-8aa4-8702c6a36c4d)
+![copy google-services.json](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/224e057c-8880-4b53-8aa4-8702c6a36c4d)
 
 ### google-services.json
 
@@ -190,7 +190,7 @@ allprojects {
 }
 ```
 
-![Android Studio gradle fresh button](http://blog.hibrainapps.net/saltfactory/images/2e35a3a3-cb7d-4233-aae0-c1530b7df258)
+![Android Studio gradle fresh button](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/2e35a3a3-cb7d-4233-aae0-c1530b7df258)
 
 ## Set Up Google Play Services
 
@@ -434,9 +434,9 @@ GCM을 사용하기 위한 메니페스트 파일 전체 내용은 다음과 같
 
 **GCM Demo**를 좀더 사용할만한 데모 앱을 만들기 위해서 [Button](http://developer.android.com/reference/android/widget/Button.html), [TextView](http://developer.android.com/reference/android/widget/TextView.html) 그리고 [ProgressBar](https://developer.android.com/reference/android/widget/ProgressBar.html)를 사용하여 UI를 구성하였다.
 
-![GCM Demo start](http://blog.hibrainapps.net/saltfactory/images/5f8c146a-9cb4-4750-9112-21e2dcc03db1)
+![GCM Demo start](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/5f8c146a-9cb4-4750-9112-21e2dcc03db1)
 
-![GCM Demo finish](http://blog.hibrainapps.net/saltfactory/images/1fd7d2d1-8bab-4258-90d4-87d73e834e70)
+![GCM Demo finish](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/1fd7d2d1-8bab-4258-90d4-87d73e834e70)
 
 ### string.xml
 
@@ -868,7 +868,7 @@ public class MyGcmListenerService extends GcmListenerService {
 
 이제 GCM 서비스를 만들기 위한 Android에 관한 모든 설정이 끝났다. **gradle**을 사용하여 디바이스로 실행하면 앱이 실행이 될 것이다. 간단하게 Android Studio에서 Run을 실행하면 된다. 앱을 실행하여 토큰을 획득하면 아래와 같이 **Instance ID**에 해당하는 **token**을 가져올 것이다.
 
-![GCM Demo finish](http://blog.hibrainapps.net/saltfactory/images/58c6c243-badf-4b19-951d-e1257af2a789)
+![GCM Demo finish](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/58c6c243-badf-4b19-951d-e1257af2a789)
 
 ## Node.js를 이용한 GCM Provider 만들기
 
@@ -884,7 +884,7 @@ npm install node-gcm
 * **Server API Key** : 처음 GCM 웹 페이지에서 앱을 등록하고 획득한 Server API Key 이다.
 * **InstanceID token** : Android 디바이스에서 Instance ID의 token을 획득한 것을 사용한다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/b6e4fd95-f775-4560-acb2-b80ecafae1d8)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/b6e4fd95-f775-4560-acb2-b80ecafae1d8)
 
 ```javascript
 var gcm = require('node-gcm');
@@ -921,11 +921,11 @@ sender.send(message, registrationIds, 4, function (err, result) {
 ```
 node gcm_provider.js
 ```
-![gcm_provider](http://blog.hibrainapps.net/saltfactory/images/e8b95a14-84d4-4165-8730-b25e811d517c)
+![gcm_provider](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/e8b95a14-84d4-4165-8730-b25e811d517c)
 
 이제 Android 디바이스에 GCM으로 메세지가 전송되었는지 Notification Center를 확인하자.
 
-![GCM message](http://blog.hibrainapps.net/saltfactory/images/de43ac19-a66d-4fdf-9b07-5c63777a6b88)
+![GCM message](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/de43ac19-a66d-4fdf-9b07-5c63777a6b88)
 
 
 ## HTTP Connection Server
@@ -941,7 +941,7 @@ curl --header "Authorization: key=$server_api_key" \
 https://gcm-http.googleapis.com/gcm/send \
 -d "{\"data\":{\"title\":\"saltfactory GCM demo\",\"message\":\"Google Cloud Messaging 테스트\"},\"to\":\"$token\"}"
 ```
-![HTTP Connection Server](http://blog.hibrainapps.net/saltfactory/images/22a6ef72-9164-4939-90a8-2bdd158e7ec7)
+![HTTP Connection Server](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/22a6ef72-9164-4939-90a8-2bdd158e7ec7)
 
 ## 결론
 

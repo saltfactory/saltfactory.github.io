@@ -52,7 +52,7 @@ disqus_identifier : http://blog.saltfactory.net/201
 </html>
 ```
 
-![](http://blog.hibrainapps.net/saltfactory/images/0ba171b0-1eef-485f-88a1-8391d9ac7cc3)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/0ba171b0-1eef-485f-88a1-8391d9ac7cc3)
 
 이 문서에서 HTML4 selector API를 이용해서 contents 안의 첫번째 li 속에 있는 span의 내용을 가져오고 싶다고 할 때 javascript 코드를 다음과 같이 추가할 수 있다.
 
@@ -96,7 +96,7 @@ disqus_identifier : http://blog.saltfactory.net/201
 </html>
 ```
 
-![](http://blog.hibrainapps.net/saltfactory/images/d3e678dc-a414-407e-b175-18dcea439fe2)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/d3e678dc-a414-407e-b175-18dcea439fe2)
 
 ## jQuery selectors
 
@@ -168,7 +168,7 @@ disqus_identifier : http://blog.saltfactory.net/201
 
 위 세가지 방법은 모두 동일한 결과를 가져온다는 것을 알 수 있다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/f0372194-3d08-40aa-bb05-fea4a99c66fe)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/f0372194-3d08-40aa-bb05-fea4a99c66fe)
 
 이제 selector API로 NODE_LIST(element의 집합들)을 접근하기 위해서는 어떻게 해야할까? 위 문서에서 빨간색 글자를 가진 className에 activity가 포함된 elements를 접근하고한다고 가정하자. 이때 HTML4 selectors API는 다음과 같이 사용할 수 있다.
 
@@ -241,7 +241,7 @@ jQuery는 확실히 HTML4의 selectors API보다 사용하기 편리하다는 �
 </script>
 ```
 
-![](http://blog.hibrainapps.net/saltfactory/images/fdff3eda-af96-4dab-ab2f-46d801b6046a)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/fdff3eda-af96-4dab-ab2f-46d801b6046a)
 
 querySelectorAll는 위와 같이 CSS의 쿼리로 접근하는 기능 이외에도 여러개의 쿼리를 적용하여 한번에 여러개의 element를 접근할 수 있다. li의 className이 html4와 html5인 모든 element를 접근하기 위해서 다음과 같이 쿼리를 배열로 여러개 넣어주면 된다.
 
@@ -287,7 +287,7 @@ querySelectorAll는 위와 같이 CSS의 쿼리로 접근하는 기능 이외에
 </html>
 ```
 
-![](http://blog.hibrainapps.net/saltfactory/images/d8eff9e4-8c4d-408d-a587-d57eb6bfd447)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/d8eff9e4-8c4d-408d-a587-d57eb6bfd447)
 
 ## 결론
 

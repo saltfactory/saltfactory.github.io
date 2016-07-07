@@ -16,17 +16,17 @@ disqus_identifier : http://blog.saltfactory.net/167
 
 우선 예제를 테스트할 프로젝트를 만들어보자. 각자 원하는 이름으로 프로젝트를 생성한다. 이 포스팅에서 사용한 프로젝트 이름은 SFAddressbookTutorial 이다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/9bd30cba-ccd0-4e1e-bf9c-ac34cf110413)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/9bd30cba-ccd0-4e1e-bf9c-ac34cf110413)
 
 이번 프로젝트부터는 Unit Tests를 활용할것이다. 프로젝트를 진행하면서 단위테스트는 매우 중요한 것이라고 생각하고 있기 때문에 단위테스트를 하는 습관을 가질 필요가 있다. 프로젝트를 생성하면 단위테스트를 하기위한 샘플 파일이 자동으로 생성이된다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/d351a8c1-9840-4077-8fe1-b76354be9f31)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/d351a8c1-9840-4077-8fe1-b76354be9f31)
 
 Xcode에서 Objective-C를 단위테스트하기 위한 방법에 대해서는 다음에 자세히 설명하도록 하겠다.
 단위테스트를 할 수 있는 테스트프로젝트에 주소록 API를 사용할 수 있도록 Library를 추가한다.
 프로젝트 파일을 선택하여 Targets 중에 SFAddressBookTutorialTests 타켓을 선택한다. 그리고 Build Phases를 선택하여 Link Binary with Libraries를 열어서 Addressbook.framework와 AddressbookUI.framework를 추가한다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/3e47ba46-650a-4f43-ada0-4d1fbc043c71)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/3e47ba46-650a-4f43-ada0-4d1fbc043c71)
 
 이제 iOS에서 주소록 API를 사용할 준비가 모두 마쳤다.
 SFAddressBookTutorialTests.m 파일을 열어서 -testSelectAllGroups 메소드를 추가한다.
@@ -40,7 +40,7 @@ SFAddressBookTutorialTests.m 파일을 열어서 -testSelectAllGroups 메소드�
 
 다음은 단위 테스트 중에서 이 메소드만 테스트하고 싶기 때문에 alt 키를 누른 상태에서 Run 버튼을 클릭하여 Test하는 메소드 중에서 testSelectallGroups만 제외하고 모두 체크를 해제한다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/a0977c91-50fb-4272-aaa6-27d2c62634d6)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/a0977c91-50fb-4272-aaa6-27d2c62634d6)
 
 다음은 Test를 선택하거나 테스트를 진행하거나 command + U 를 선택해서 단위 테스트를 시작한다.
 지금은 테스트메소드 안에 아무런 코드가 없어서 특별한 에러나 오류 없이 테스트가 성공적으로 끝나게 될 것이다.
@@ -71,9 +71,9 @@ SFAddressBookTutorialTests.m 파일을 열어서 -testSelectAllGroups 메소드�
 }
 ```
 
-![](http://blog.hibrainapps.net/saltfactory/images/36948878-17e3-4bd3-a9fd-5feeda1fc6c7)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/36948878-17e3-4bd3-a9fd-5feeda1fc6c7)
 
-![](http://blog.hibrainapps.net/saltfactory/images/fb57fc71-d83c-4576-8e83-9032207de5c7)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/fb57fc71-d83c-4576-8e83-9032207de5c7)
 
 이렇게 단위테스트에서 로직을 간단하게 테스트할 수 있다.
 
@@ -97,7 +97,7 @@ SFAddressBookTutorialTests.m 파일을 열어서 -testSelectAllGroups 메소드�
 
 단위테스트를 진행하면 아무런 에러가 나지 않는다. 그래서 실제 아이폰 주소록의 데이터를 확인해보았는데 지금 시뮬레이터의 아이폰 주소록에는 어떤 연락처도 존재하지 않는다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/83377a1f-ca66-4917-91c6-c8f135bbb2f9)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/83377a1f-ca66-4917-91c6-c8f135bbb2f9)
 
 우리는 ABAddressBookRef에서부터 그룹 목록을 가져오고 난 뒤에 그룹의 갯수를 알아보기로 하는 코드를 추가한다.
 
@@ -121,7 +121,7 @@ SFAddressBookTutorialTests.m 파일을 열어서 -testSelectAllGroups 메소드�
 
 다시 단위 테스트를 실행해보니 다음과 같이 에러가 발생한다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/b55330d3-c00d-482d-acf2-3903b28c1e8c)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/b55330d3-c00d-482d-acf2-3903b28c1e8c)
 
 즉, 현재 테스트하고 있는 아이폰 주소록에는 그룹이 하나도 존재하고 있지 않다는 것이다.
 
@@ -159,7 +159,7 @@ SFAddressBookTutorialTests.m 파일을 열어서 -testSelectAllGroups 메소드�
 
 ABAddressBookRef 에 그룹을 추가하기 위해서는 ABRecordRef 타입의 그룹정보를 생성해서 ABAddressBook에 ABRecordRef 타입의 그룹 정보를 추가하고 추가된 ABAddressBook을 저장하면 된다. 테스트를 마치고 시뮬레이터의 주소록을 살펴보면 새로운 그룹이 생성된 것을 확인할 수 있다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/352a5b77-c4a5-4645-bdd4-164b879737d5)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/352a5b77-c4a5-4645-bdd4-164b879737d5)
 
 우선 ABGroupCreate()를 이용해서 그룹정보를 생성해서 저장할 준비를 한다.
 다음은 ABRecordSetValue를 이용해서 방금 생성한 grouopRef를 kABGroupNameProperty 속성으로 이름을 가지고 저장한다.
@@ -204,7 +204,7 @@ ABAddressBookRef 에 그룹을 추가하기 위해서는 ABRecordRef 타입의 �
 
 위에 코드에서 보듯이 모든 그룹을 배열형태로 가져오고 그 배열을 순차적으로 돌면서 해당되는 index 의 그룹 정보를 출력하고 있다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/d215985c-e7c2-4194-8516-83e6ebc23948)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/d215985c-e7c2-4194-8516-83e6ebc23948)
 
 현재 테스트하고 있는 시뮬레이터의 주소록에서 ABRecordGetRecordID로 구한 groupId는 1이다. 우리는 이 groupId를 가지고 그룹을 삭제하는 테스트를 할 것이다.
 

@@ -9,7 +9,7 @@ tags:
   - github pages
 comments: true
 images:
-  title: 'http://blog.hibrainapps.net/saltfactory/images/89577e27-9e4e-4c79-a36e-c547359237bf'
+  title: 'http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/89577e27-9e4e-4c79-a36e-c547359237bf'
 ---
 
 ## 서론
@@ -100,11 +100,11 @@ jekyll serve —wtach
 
 이 글을 작성하게된 이유가 있다. 최신 GitHub Pages 라이브러리를 업데이트하고 난 뒤 GitHub에 push를 하는데 다음과 같이 GitHub Pages 빌드에 실패를 했다는 메일이 왔다.
 
-![GitHub build failed email](http://blog.hibrainapps.net/saltfactory/images/fe5c936f-9249-4663-abde-99913c48dc63)
+![GitHub build failed email](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/fe5c936f-9249-4663-abde-99913c48dc63)
 
 내가 push한 Jekyll에 문제가 있다는 것을 확인하고 Jekyll 빌드를 실행하는데 다음과 같이 에러가 발생했다.
 
-![jekyll error](http://blog.hibrainapps.net/saltfactory/images/234069e0-a05f-46fa-b648-66888a4337bb)
+![jekyll error](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/234069e0-a05f-46fa-b648-66888a4337bb)
 
 Jekyll과 GitHub Pages를 사용하여 블로그를 운영할 때 가장 불편한 것은 서버의 로그를 볼 수 없다는 것이다. 그래서 로컬의 Jekyll 환경으로 테스트를 해야한다. 서버의 문제를 파악하기 위해서 GitHub Pages에서 운영하고 있는 Ruby와 depenency versions에 꼭 맞는 라이브러리로 동일한 환경을 구축해야지만 정확하게 디버깅을 할 수 있다.
 

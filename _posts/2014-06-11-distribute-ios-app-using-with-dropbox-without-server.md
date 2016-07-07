@@ -38,33 +38,33 @@ Apple에서는 임의의 테스트 사용자가 앱을 테스트를 진행할 �
 
 우리가 필요한 것은 Ad-Hoc의 provisioning profile을 만드는 것이다. Apple 개발자 사이트에서 Provisioning Profiles 중에서 **distribution**을 클릭한다. 이미 만들어진 앱스토어 등록하거나 ad-hoc 테스트를 진행한 적이 있으면 provisioning profile들이 보일 것이고 그렇지 않으면 비어 있을 것이다.  
 
-![provisioning profiles](http://blog.hibrainapps.net/saltfactory/images/ca782683-836f-40ab-9f68-b0ad495148c9)
+![provisioning profiles](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/ca782683-836f-40ab-9f68-b0ad495148c9)
 
 **+ 버튼**을 클릭하자. 우리는 Ad-Hoc 배포를 위한 provisioning profile을 만들 것이기 때문에 Ad Hoc을 선택하고 Continue를 선택한다.
 
-![distribution ad-hoc](http://blog.hibrainapps.net/saltfactory/images/f2a06d0e-120d-490d-a3b1-e66ad0967a58)
+![distribution ad-hoc](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/f2a06d0e-120d-490d-a3b1-e66ad0967a58)
 
 다음은 provisioning profile에 인증될 앱을 선택하는 화면이 나오는데 해당하는 ***App ID***를 선택한다.
 
-![select app id](http://blog.hibrainapps.net/saltfactory/images/e84d1d2b-1e88-4da9-9993-7f6ecf8dbbff)
+![select app id](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/e84d1d2b-1e88-4da9-9993-7f6ecf8dbbff)
 
 위 사진에서 만약 App ID가 나타나지 않거나 다른 App ID를 등록해서 선택하고 싶을 경우는 사이트 왼쪽 메뉴에서 Identifiers 카테고리 아래의 App IDs를 선택해서 새롭게 등록하면 된다. App ID를 선택하고 난 다음 **개발자의 Certificates**를 선택한다.
 
-![select certificates](http://blog.hibrainapps.net/saltfactory/images/65e2b2e2-3d0c-4ac0-ab9c-c286bdca4a22)
+![select certificates](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/65e2b2e2-3d0c-4ac0-ab9c-c286bdca4a22)
 
 유일한 앱 ID와 개발자 Certificates 선택 다음에는 디바이스 인증을 위해서 **등록된 디바이스를 선택**한다. provisioning profile을 가지고 인증 확인을 할 때, App ID, Certificates, Devices를 검사하게 되기 때문이다. Ad-Hoc 으로 배포해서 설치될 디바이스를 선택한다. 만약에 배포하고 싶은데 디바이스가 등록되어 있지 않으면 추가 등록하고 싶은 디바이스의 UUID를 알아서 새롭게 등록한 후 선택하여 추가한다.
 
-![select device](http://blog.hibrainapps.net/saltfactory/images/f3f54c72-2fb7-4675-a974-54cdbe03fc8c)
+![select device](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/f3f54c72-2fb7-4675-a974-54cdbe03fc8c)
 
 마지막으로 **provisioning profile의 이름**을 입력한다. 우리는 saltfactory_tutorial_ad-hoc 으로 저장하였다.
 
-![name generate](http://blog.hibrainapps.net/saltfactory/images/9918df37-e4a3-405f-b0c3-e398c0cabd9a)
+![name generate](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/9918df37-e4a3-405f-b0c3-e398c0cabd9a)
 
 **generate**를 선택하면 distribution provisioning profile이 만들어 질 것이다.
 
-![generated profile](http://blog.hibrainapps.net/saltfactory/images/73de4a7c-b3ff-4314-9b55-a237b8320939)
+![generated profile](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/73de4a7c-b3ff-4314-9b55-a237b8320939)
 
-![generated profile lists](http://blog.hibrainapps.net/saltfactory/images/2dc67877-c39d-4917-bd8b-883a03291cbc)
+![generated profile lists](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/2dc67877-c39d-4917-bd8b-883a03291cbc)
 
 ## Build Scheme and Archive
 
@@ -72,29 +72,29 @@ Apple에서는 임의의 테스트 사용자가 앱을 테스트를 진행할 �
 
 Xcode에서 **빌드 스키마** 창을 연다. option 키를 누르고 Run 버튼을 누른다. 그리고 **archive**를 선택한다. Scheme는 우리가 생성한 프로덕트 이름이고 **Destination**은 **iOS Device**로 수정한다(기본은 simulator로 되어 있다)
 
-![build scheme](http://blog.hibrainapps.net/saltfactory/images/832f2a01-24fc-4c3a-8fac-82f2d3cac065)
+![build scheme](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/832f2a01-24fc-4c3a-8fac-82f2d3cac065)
 
 **Archive 버튼**을 누른다. 만약에 provisioning profile 정보와 code sign의 정보가 일치되지 않을 경우 다음과 같은 에러를 만나게 된다.
 
-![code sign error](http://blog.hibrainapps.net/saltfactory/images/7358ee3d-ed5c-4e7f-99f6-799ce4e9353f)
+![code sign error](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/7358ee3d-ed5c-4e7f-99f6-799ce4e9353f)
 
 provisioning profile과 code sign이 이상없이 인증이 완료되면 다음과 같이 **Organizer 창**이 나타난다.
 
-![organizer window](http://blog.hibrainapps.net/saltfactory/images/1eef2553-2523-4499-9461-ae8b718a41fb)
+![organizer window](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/1eef2553-2523-4499-9461-ae8b718a41fb)
 
 만약 앱을 앱 스토어에 등록하기 위해서는 Validate... 버튼을 선택하면되고 Ad-Hoc 배포를 하기 위해서는 Distribute 버튼을 선택한다. 우리는 Ad-Hoc 배포를 할 것이기 때문에 **Save for Enterprise or Ad Hoc Development** 를 선택하고 Next를 누른다.
 
-![distribution method](http://blog.hibrainapps.net/saltfactory/images/bc8c0a87-38f1-48f2-8dd8-b0ea003e5094)
+![distribution method](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/bc8c0a87-38f1-48f2-8dd8-b0ea003e5094)
 
 우리가 앞에서 만든 provisioning profile인 saltfactory_tutorial_ad-hoc을 선택하고 Export를 하도록 한다.
 
-![choose profile sign](http://blog.hibrainapps.net/saltfactory/images/7cbf9c68-1920-4878-b804-fb4c9b120049)
+![choose profile sign](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/7cbf9c68-1920-4878-b804-fb4c9b120049)
 
 ## export files
 
 위 과정이 마치고 나면 우리는 이제 Ad-Hoc으로 앱을 설치할 수 있는 준비를 모두 마친것이다. **export**를 누르면 다음과 같은 화면이 나온다. 이 것은 OTA를 설정하는 화면으로 실제 앱의 속성을 저장하고 있는 .plist 파일과 실제 앱 바이너리 파일인 .ipa 파일이 만들어지고 서버에 이 두 파일을 저장하게 된다.
 
-![export files](http://blog.hibrainapps.net/saltfactory/images/13c17b39-30bc-468f-a657-170f4bbf964d)
+![export files](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/13c17b39-30bc-468f-a657-170f4bbf964d)
 
 여기서 Application URL은 앱의 정보를 저장하고 있는 파일인데 서버에 두 파일을 저장한 이후, 아이폰에서 모바일 safari 브라우저에  http://dev.saltfactory.net/ota/SFAdHocDemo.plist 링크를 입력하면 자동으로 앱이 다운로드 되어 설치하게 된다.
 
@@ -103,22 +103,22 @@ provisioning profile과 code sign이 이상없이 인증이 완료되면 다음�
 하지만 우리는 서버가 없다. 서버가 없기 때문에 우리는 dropbox를 이용할 것이다.
 dropbox를 맥에 설치하거내 dropbox웹을 열어보자. dropbox에서 홈 디렉토리 밑에 `ota`라는 디렉토리를 만들어보자.
 
-![create ota directory](http://blog.hibrainapps.net/saltfactory/images/8ad4c546-8cec-4826-8251-df27441b585d)
+![create ota directory](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/8ad4c546-8cec-4826-8251-df27441b585d)
 
 맥에 설치했다면 다음과 같이 finder에서 dropbox 디렉토리 안에 ota 디렉토리가 동기화 되어 생성된 것을 확인할 수 있다.
 
-![created ota directory](http://blog.hibrainapps.net/saltfactory/images/5437aad5-f34b-46b6-9cfe-af8aa61a2531)
+![created ota directory](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/5437aad5-f34b-46b6-9cfe-af8aa61a2531)
 
 ota directory에 **SFAdHocDemo.plist** 이름을 가진 파일과 **SFAdHocDemo.ipa** 파일을 추가한다. 그리고 추가한 파일에 오른쪽 마우스를 클릭해서 **Share Dropbox Link**를 선택하여 dropbox의 URL을 복사한다.
 
-![copy share link](http://blog.hibrainapps.net/saltfactory/images/fceb6823-4ae4-42b9-84b7-de4af7a70252)
+![copy share link](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/fceb6823-4ae4-42b9-84b7-de4af7a70252)
 
 그리고 다시 Xcode의 **Oraginizer**로 돌아가보자. 그리고 복사한 Dropbox URL을 다음과 같이 **Application URL**에 붙여넣기를 한다.
 
 ```
 https://www.dropbox.com/s/y852vcepgtaopvu/SFAdHocDemo.ipa
 ```
-![application url](http://blog.hibrainapps.net/saltfactory/images/4c011264-c3f3-4926-ba68-24f7ebba975f)
+![application url](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/4c011264-c3f3-4926-ba68-24f7ebba975f)
 
 하지만 이것은 dropbox의 페이지 URL 이다. 우리는 파일을 바로 다운로드 받을 수 있게 해야하기 때문에 다음과 같이 URL을 변경한다.
 
@@ -134,7 +134,7 @@ https://dl.dropboxusercontent.com/s/y852vcepgtaopvu/SFAdHocDemo.ipa
 
 그리고 파일을 dropbox의 디렉토리 중에 우리가 만든 ota 디렉토리 안으로 저장하게 한다. 그러면 다음과 같이 dropbox의 생성한 ota 디렉토리 안에 **SFAdHocDemo.plist**와 **SFAdHocDemo.ipa** 두개의 파일이 저장된 것을 확인할 수 있다.
 
-![files](http://blog.hibrainapps.net/saltfactory/images/7f6d2e48-1e40-435c-b8f8-78972a25d569)
+![files](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/7f6d2e48-1e40-435c-b8f8-78972a25d569)
 
 마지막으로 OTA를 사용할 수 있게 HTML 파일을 ota 디렉토리에 하나 추가해서 만들자. 파일 이름은 **download.html**로 정한다.
 
@@ -164,22 +164,22 @@ https://dl.dropboxusercontent.com/s/y852vcepgtaopvu/SFAdHocDemo.ipa
 </body> </html
 ```
 
-![download.html](http://blog.hibrainapps.net/saltfactory/images/95d791af-16fb-43b6-b897-5bfd520d3369)
+![download.html](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/95d791af-16fb-43b6-b897-5bfd520d3369)
 
 이제 아이폰에서 safari로 download.html 링크를 열어보자. download.html에서 오른쪽 마우스로 Share Dropbox Link를 선택하거나 dropbox 웹 사이트에서 download.html 파일을 선택해서 share를 한 뒤 링크를 아이폰으로 문자나 메일로 보낼 수 있다.
 
-![send url to iphone](http://blog.hibrainapps.net/saltfactory/images/5ce51685-b69a-46f6-8100-06b1b1ebd700)
+![send url to iphone](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/5ce51685-b69a-46f6-8100-06b1b1ebd700)
 
 메세지로 받은 링크를 열어보면 다음과 같이 열린다.
 
-![message income {width:320px;}](http://blog.hibrainapps.net/saltfactory/images/e7b8aaba-aaab-40b7-9a6f-8faf0dfe363b)
-![open mobile safari {width:320px;}](http://blog.hibrainapps.net/saltfactory/images/3031e2b2-f18a-41f6-97c2-c2ec831aeca4)
-![open ota site {width:320px;}](http://blog.hibrainapps.net/saltfactory/images/f3206cd3-6dd1-4ccc-963f-8438728b1060)
+![message income {width:320px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/e7b8aaba-aaab-40b7-9a6f-8faf0dfe363b)
+![open mobile safari {width:320px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/3031e2b2-f18a-41f6-97c2-c2ec831aeca4)
+![open ota site {width:320px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/f3206cd3-6dd1-4ccc-963f-8438728b1060)
 
 이렇게 설치할 수 있는 download.html 이 열리게 되는데 SFAdHocDemo.ipa를 다운받을 수 있는 링크를 눌러보자. 아래와 같이 다운받을 앱이 나타나고 install을 선택하면 아이폰에 설치가 진행된다.
 
-![push install message {width:320px;}](http://blog.hibrainapps.net/saltfactory/images/5d076208-61e7-4aca-8449-4c14a83a0c34)
-![install app on iphone {width:320px;}](http://blog.hibrainapps.net/saltfactory/images/c3854d17-0eaa-4c47-8665-aed1777b8eba)
+![push install message {width:320px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/5d076208-61e7-4aca-8449-4c14a83a0c34)
+![install app on iphone {width:320px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/c3854d17-0eaa-4c47-8665-aed1777b8eba)
 
 ## 결론
 

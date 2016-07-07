@@ -42,7 +42,7 @@ ruby를 실행한다.
 ruby scraping.rb
 ```
 
-![](http://blog.hibrainapps.net/saltfactory/images/9f2cd8ac-0e29-48dd-8ae9-2e05695faf67)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/9f2cd8ac-0e29-48dd-8ae9-2e05695faf67)
 
 위와 같이 ruby로 웹 사이트의 HTML 페이지 코드를 모두 가져온 것을 확인할 수 있다. 이젠 이 코드에서 필요한 데이터를 가져오자. 이 블로그는 Daum에서 운영하는 Tistory 블로그이다. Tistory 블로그에서는 방문자 수를 보여주는데 오늘 몇명이 블로그에 방문했는지를 확인하기 위해서 매번 웹 사이트를 방문하기 불편하기 때문에 오늘 방문자 수를 웹 사이트를 열지 않고 가져오는 방법을 예를 들겠다.
 Tistory에서는 웹 사이트 방문자를 `<li id="side_today_count">` 방문자 수`</li>` 로 HTML 코드에서 만들어서 보여주고 있다. 그래서 nokogiri를 이용해서 데이터를 가져도록 한다. nokogiri는 XML의 XPATH를 지원한다. XPATH의 사용법은 다음을 참고하자. http://www.w3schools.com/xpath/
@@ -64,11 +64,11 @@ puts "오늘의 방문자 수 : #{side_today_count}"
 
 ruby를 실행하면 다음과 같이 오늘 방문자를 확인할 수 있다. 지금은 오전이라 방문자 수가 적다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/9fcd60f3-996a-4562-951f-9cb01acab9aa)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/9fcd60f3-996a-4562-951f-9cb01acab9aa)
 
 실제 방문자 수가 같은지 웹 사이트를 확인해보자. 웹 사이트의 방문자 수를 확인하면 위의 결과와 동일하다는 것을 확인할 수 있다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/e2d5deea-b2a8-4b78-8df9-b55724aa9510)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/e2d5deea-b2a8-4b78-8df9-b55724aa9510)
 
 ## Node.js 로 웹 사이트 데이터 가져오기
 
@@ -103,7 +103,7 @@ node로 실행을 한다.
 node scraping.js
 ```
 
-![](http://blog.hibrainapps.net/saltfactory/images/23116c94-fe71-4427-913b-bd11e9407786)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/23116c94-fe71-4427-913b-bd11e9407786)
 
 실행한 결과는 위에 ruby로 작성한 것과 동일하게 HTML 코드를 가져오는 것을 확인할 수 있다. 다음은 nokogiri의 XPATH를 사용하여 데이터를 가져온 것 처럼 cheerio를 이용해서 마치 jQuery 처럼 데이터를 가져게 해보자.
 
@@ -131,7 +131,7 @@ request(url, function(error, response, html){
 
 실행하면 우리가 원하는 데이터를 웹사이트에서 가져올 수 있는 것을 확인 할 수 있다. 글을 작성하는 시간에도 방문자들 있어서 방문자 수가 늘었다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/b0fd2feb-bcb8-4dc7-99e1-85f0fe625e20)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/b0fd2feb-bcb8-4dc7-99e1-85f0fe625e20)
 
 ### Phantomjs로 웹사이트 데이터 가져오기
 
@@ -165,7 +165,7 @@ page.open('http://blog.saltfactory.net', function (status) {
 phantomjs scraping_phantom.js
 ```
 
-![](http://blog.hibrainapps.net/saltfactory/images/d673101c-d83f-4c94-9776-66d357150dbd)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/d673101c-d83f-4c94-9776-66d357150dbd)
 
 Phantomjs의 실행 결과는 위의 코드들과 동일하다는 것을 확인할 수 있다. 이젠 Phantomjs에서 필요한 데이터를 가져와보자. phantomjs는 webkit 엔진을 wrapping하고 있기 때문에 HTML의 DOM API를 바로 사용할 수 있다. 그래서 `document.getElementById`로 필요한 데이터에 바로 접근할 수 있다.
 
@@ -191,7 +191,7 @@ page.open('http://blog.saltfactory.net', function (status) {
 
 다시 phantomjs를 실행한다. 결과가 동일하게 나오는 것을 확인할 수 있다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/199667ee-692e-4f0b-a8a3-db350a7ca70f)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/199667ee-692e-4f0b-a8a3-db350a7ca70f)
 
 ### Phantomjs를 node에서 사용하기
 
@@ -230,7 +230,7 @@ phantom.create(function(ph) {
 node scraping_phantom.js
 ```
 
-![](http://blog.hibrainapps.net/saltfactory/images/c2c62815-baaa-4e2c-8ee8-6c3a0a8a63ea)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/c2c62815-baaa-4e2c-8ee8-6c3a0a8a63ea)
 
 ## 결론
 

@@ -13,7 +13,7 @@ disqus_identifier : http://blog.saltfactory.net/118
 iOS는 보안상 자신의 앱에서 접근할 수 있는 Sandbox를 제외하고 접근하면 앱 리뷰에서 reject를 당한다. 보안상 앱이 접근할 수 있는 Diectory는 제한이 되어 있다.  아래 그림은 아이폰 앱에서 접근할 수 있는 Sandbox를 그림으로 표현한 것이다. Documents는 iCloud가 서비스가 오픈되고 나서 부터는 백업이 가능한 디렉토리로 임시 파일을 저장하면 reject의 사유가 된다. Library 안의 Caches 디렉토리에 파일을 저장하면 iCoud 자동 백업 목록에서 제외하여 저장할 수 있도록 되었다.
 <!--more-->
 
-![](http://blog.hibrainapps.net/saltfactory/images/f3e43791-9f57-4a4c-ba32-900ea5d98dba)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/f3e43791-9f57-4a4c-ba32-900ea5d98dba)
 
 위 그림과 같이 아이폰 앱들은 각각 Sandbox에 보호되어서 있어서 다른 앱의 Sandbox에 접근할 수 없게 되어 있지만 Jailbreak 를 한 아이폰에서는 다른 디렉토리에 접근이 가능하게 될 수도 있다. 또는 다른 방법으로 다른 앱의 디렉토리에 접근할 수 있는 방법도 있지만 그 내용은 이 포스팅에서 작성하지는 않겠다. 다만 이렇게 일반 텍스트로 파일을 디렉토리에 저장하면 보안상 문제가 생길 수 있다는 것이다.
 
@@ -188,7 +188,7 @@ http://robnapier.net/blog/aes-commoncrypto-564 블로그에서는 위 코드로 
 
 Hello, Saltfactory라는 텍스트는 AES 256 암호화를 통해서 다음과 같이 파일에 저장이 된다. 그리고 이 파일을 읽어서 같은 키 값을 가지고 복호화하면 다시 Hello, Saltfactory가 콘솔창에 출력되는 것을 확인 할 수 있다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/bcced82a-490c-4fb1-9e8c-b8fb6b26bf30)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/bcced82a-490c-4fb1-9e8c-b8fb6b26bf30)
 
 RNCryptor를 사용하여 프로젝트에 적용하기 위해서 SFSecurityHelper라는 클래스를 만들어서 `-encryptText:``와 `-decryptData:` 메소드를 정의하고 각각 `-securityHelperDidEncryptText:encrypted:` 와 `-securityHelperDidDecryptData:text:` 딜리게이트 메소드를 호출하게 하였다. 암호화나 복호화 오류 발생시 UI에서 처리하기 위해서 `-securityHelperFailWithError:` 딜리게이트 메소드도 추가하였다.
 

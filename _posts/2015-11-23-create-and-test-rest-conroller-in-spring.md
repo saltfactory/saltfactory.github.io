@@ -11,7 +11,7 @@ tags:
   - unittest
 comments: true
 images:
-  title: 'http://blog.hibrainapps.net/saltfactory/images/spring_bean_bud.jpg'
+  title: 'http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/spring_bean_bud.jpg'
 ---
 
 ## 서론
@@ -27,7 +27,7 @@ images:
 
 IntelliJ에서 SpringBoot 프로젝트를  만들어보자. 우리는 Java 8 기준으로 프로젝트를 만들 것이다. 이 포스트를 작성할 때 가장 최근 버전은 **1.8.0_66** 이였다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/3d3927b8-cfc6-40c9-801d-917a22df11d2)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/3d3927b8-cfc6-40c9-801d-917a22df11d2)
 
 프로젝트는 다음 설정으로 만든다.
 
@@ -42,23 +42,23 @@ IntelliJ에서 SpringBoot 프로젝트를  만들어보자. 우리는 Java 8 기
 - **Description** : Demo project for Spring Boot
 - **package** : net.saltfactory.tutorial
 
-![](http://blog.hibrainapps.net/saltfactory/images/c876d844-f622-40a9-a5ff-08cb48760fe1)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/c876d844-f622-40a9-a5ff-08cb48760fe1)
 
 Spring Boot 버전은 가장 최신 안저화 버전인 **1.3.0**을 선택하고 REST 서비스를 만들기 위해서 **web**을 체크한다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/17ce5ae5-e33c-4d0b-96ce-59b516b3e9e9)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/17ce5ae5-e33c-4d0b-96ce-59b516b3e9e9)
 
 다음은 Project가 저장될 경로를 지정한다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/62d703c5-c4cc-4ef1-982d-20ded01fccab)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/62d703c5-c4cc-4ef1-982d-20ded01fccab)
 
 다음은 Gradle 기반의 프로젝트를 선택하였기 때문에 Gradle을 설정하는 화면이 나온다. 가장 최신 **Gradle**과 **Gravle JVM**을 설정한다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/ebc1663e-5a97-4f2f-9945-be7a6d125821)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/ebc1663e-5a97-4f2f-9945-be7a6d125821)
 
 모든 설정이 끝나면 다음과 같은 구조로 Spring Boot 프로젝트가 만들어진다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/b59078be-3af7-43c1-a475-912b7097d164)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/b59078be-3af7-43c1-a475-912b7097d164)
 
 Spring Boot 프로젝트의 베이스 파일은 github에서 참조할 수 있다.
 
@@ -381,7 +381,7 @@ public class ArticlesServiceTest {
 }
 ```
 
-![](http://blog.hibrainapps.net/saltfactory/images/9ced2865-7bde-4047-bcfb-17f23dbcb083)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/9ced2865-7bde-4047-bcfb-17f23dbcb083)
 
 테스트를 실행하면 ArticlesService의 메소드들이 모두 정상적으로 처리를 하고 있는 것을 확인할 수 있다.
 
@@ -494,7 +494,7 @@ public class ArticlesControllerTest {
 
 위 테스트를 진행하면 마치 Spring 어플리케이션에 **/api/articles** Http 요청을 한 것과 동일한 테스트를 진행하게 된다. 만약 정상적으로 컨트롤러가 요청을 받아서 처리하고 다시 Http 응답을 돌려준다면 **status().isOk()**가 나올 것이다. 또한 response의 컨텐트 타입은 컨트롤러에서 @ResponseBody를 사용하여 만들어진 리턴객체를 포함하고 있기 때문에 JSON 타입으로 응답이 온다. 컨텐츠 내용을 확인할 때는 JSON 문자열로 결과가 올 것이기 때문에 JSON Mapper를 사용하여 객체를 JSON 문자열로 만들어서 response의 컨텐츠 문자열과 비교한다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/ae6a5855-8cd4-486d-943e-cbdbe4d0444d)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/ae6a5855-8cd4-486d-943e-cbdbe4d0444d)
 
 만약 response의 문자열을 로깅하고 싶을 경우는 [MvcResult](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/test/web/servlet/MvcResult.html)를 사용하여 로깅을 할 수 있다.
 
@@ -516,7 +516,7 @@ public class ArticlesControllerTest {
 
 테스트를 실행하면 결과로 컨트롤러로 부터 받은 response의 content 의 JSON 문자열을 로깅으로 확인할 수 있다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/ca095991-d480-4f51-a132-7e48ffe10b8b)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/ca095991-d480-4f51-a132-7e48ffe10b8b)
 
 ## GET /api/articles/{id}
 
@@ -548,7 +548,7 @@ REST 서비스에서 리소스의 단일 정보를 표현하는 URL 패턴으로
 
 테스트를 실행 후 결과를 살펴보면 녹색으로 정상적으로 처리된 것을 확인할 수 있다. 필요에 따라서 로깅을 하여 응답 결과를 로깅으로 확인할 수도 있다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/4a1a0eb8-f631-41ca-8461-e9fbd53a0222)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/4a1a0eb8-f631-41ca-8461-e9fbd53a0222)
 
 ## POST /api/articles
 
@@ -592,7 +592,7 @@ POST를 처리하기 위한 컨트롤르를 테스트하기 위해서 다음과 
 
 JSON 타입으로 데이터를 POST로 REST 요청을 할 때 서버에 제대로 전송이 되어 지정한 Article 타입에 매핑되는지 확인하기 위해서 컨트롤러에서 브레이크 포인트를 지정하여 요청 중 클래스 내부를 살펴보자.
 
-![](http://blog.hibrainapps.net/saltfactory/images/21fd242d-1cdd-4dc0-9deb-4f9626c09d97)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/21fd242d-1cdd-4dc0-9deb-4f9626c09d97)
 
 컨트롤러에서 JSON 타입의 Http Request가 요청이 들어올 대 **@RequestBody**를 사용하여 객체로 바로 매핑을 되는 것을 확인할 수 있다.
 
@@ -656,11 +656,11 @@ JSON 타입으로 데이터를 POST로 REST 요청을 할 때 서버에 제대�
 
 테스트를 진행할 때 ArticlesController의 patch() 메소드 안에 브레이크 포인트를 추가하여 PATCH 요청을 처리할 때의 객체를 탐색해보기로 한다. 테스트를 위해서 Article id가 1인 객체를 JSON body로 Patch 요청을 하였고 컨트롤러에서 @RequestBody로 요청한 JSON을 해당 객체로 매핑한 것을 살펴볼 수 있다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/d0c3c16e-164a-4782-8499-08521a78adb4)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/d0c3c16e-164a-4782-8499-08521a78adb4)
 
 우리는 테스트에서 Http Request를 요청할 때 REST 요청으로 **PATCH** 를 정상적으로 요청했는지 살펴보기 위해서 컨트롤의 브레이크포인트 시점에서 클래스 내부를 좀 더 탐색하기로 한다. **NativeMethodAccessoryImpl**에서 HTTP Request PATCH의 요청을 Spring 내부에서 "method"를 "patch"로 매핑한 것을 살펴볼 수 있다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/9be8e778-c277-4683-9979-1372a6b6a6c4)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/9be8e778-c277-4683-9979-1372a6b6a6c4)
 
 PUT에 관련된 테스트를 진행하여도 동일하게 처리되는 것을 확인할 수 있을 것이다.
 
@@ -698,7 +698,7 @@ REST에서 DELETE의 요청은 해당하는 리소스를 삭제하는 요청이�
 
 단위 테스트는 하나의 메소드로 작은 테스트부터 시작해서 클래스 테스트 전체 테스트로 Test Suit로 만들어서 테스트를 진행할 수도 있다. 또는 Gradle을 사용하여 모든 테스트를 진행할 수도 있다. IntelliJ를 사용한다면 **Gradle projects** 패널을 열어서 **build setup > init**을 실행한 뒤  **verfication > test**를 선택하게 되면 모든 테스트를 일괄적으로 진행한다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/d0897b4f-f616-4471-a8a2-842d6fc08db9)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/d0897b4f-f616-4471-a8a2-842d6fc08db9)
 
 ## 결론
 

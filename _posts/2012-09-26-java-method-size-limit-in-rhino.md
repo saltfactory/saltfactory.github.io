@@ -23,7 +23,7 @@ java -jar js.jar
 js> load ("env.rhino.1.2.js");
 ```
 
-![](http://blog.hibrainapps.net/saltfactory/images/aab557ff-f185-4678-a020-8a02dcebeba8)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/aab557ff-f185-4678-a020-8a02dcebeba8)
 
 ## Java method size limit
 
@@ -42,7 +42,7 @@ http://www.coachwei.com/2008/09/01/the-64kb-java-language-problem-lesso-learnd-f
 
 env.rhino.1.2.js 파일을 살펴보자. env.rhino.1.2.js는 64k가 넘는다는 것을 확인 할 수 있다.
 
-![](http://blog.hibrainapps.net/saltfactory/images/f0ba3c1a-5e65-4404-96cc-d1d8cb6e3a2c)
+![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/f0ba3c1a-5e65-4404-96cc-d1d8cb6e3a2c)
 
 그래서 github.com/hns 에서 rhino를 fork 해서 코드를 수정했다. https://github.com/hns/rhino/commit/207bb86e63b452237fbf6004fee12b90980c67f3 커밋된 내용을 참조하거나 이 커밋의 rhino를 다운 받는다. 그리고 압축을 해지한 다음 ant를 이용해서 jar를 생성하기 위해서를 build를 한다. 그리고 en.rhino.1.2.js를 다시 로드한다.
 
