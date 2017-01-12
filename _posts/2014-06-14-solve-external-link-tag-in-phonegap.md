@@ -14,7 +14,7 @@ PhoneGap을 사용하여 크로스플랫폼 하이브리드 앱을 개발할 때
 
 <!--more-->
 
-![phonegap](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/d7b62578-c5c6-4987-8591-9f64b9533615)
+![phonegap](http://asset.blog.hibrainapps.net/saltfactory/images/d7b62578-c5c6-4987-8591-9f64b9533615)
 
 [PhoneGap](http://phonegap.com) ([Cordova](http://cordova.apache.org)) 는 **하이브리드 앱 개발 플랫폼**이다. 모바일 앱 개발을 할 때 하이브리드 앱이라고 하면 통상 웹 자원과 네이티브 자원을 함께 사용해서 앱을 개발하는 것을 의미한다. PhoneGap은 UI 및 사용자의 이벤트를 HTML 나 JavaScript로 처리를 한다. 이 말은 다시말하면 PhoneGap은 내장 ***WebView***를 사용하고 WebView 안에 웹 자원을 사용하여 개발을 한다는 것이다. PhoneGap에서 웹 자원은 로컬 HTML, CSS, 그리고 JavaScript를 사용한다. 웹뷰에서 HTML으로 UI를 만들때 페이지 전환을 링크를 사용한다. 이 때 앱 안에 링크를 사용할 때 다음과 같은 문제를 가진다.
 
@@ -54,7 +54,7 @@ bower install driftyco/ionic-bower
 
 bower로 설치가 끝나면 `www/lib` 안에 다음과 같이 라이브러리들이 설치된 것을 확인할 수 있다.
 
-![after install ionic using bower](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/2dded45d-ad07-42f2-bfe4-26ff4626cba1)
+![after install ionic using bower](http://asset.blog.hibrainapps.net/saltfactory/images/2dded45d-ad07-42f2-bfe4-26ff4626cba1)
 
 이제 테스트를 위해서 www/index.html 파일을 다음과 같이 수정한다.
 
@@ -103,8 +103,8 @@ phonegap run ios
 
 > a 링크는 우리가 만든 앱을 사라지게 만들어버리고 a 링크가 가지고 있는 URL로 화면이 변경되어 버려 PhoneGap으로 만든 앱이 사라져 버리고 WebView에 새로운 사이트가 가득차 버리게 되는 문제가 발생한다.
 
-![simple page with in a link {width:320px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/05042842-8628-47b3-8979-18962d7ed712)
-![change new page after click link {width:320px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/8b033733-7edf-4605-b31b-0d8dbbd8351e)
+![simple page with in a link {width:320px;}](http://asset.blog.hibrainapps.net/saltfactory/images/05042842-8628-47b3-8979-18962d7ed712)
+![change new page after click link {width:320px;}](http://asset.blog.hibrainapps.net/saltfactory/images/8b033733-7edf-4605-b31b-0d8dbbd8351e)
 
 그럼 PhoneGap 으로 하이브리드 앱을 만들때 컨텐츠 안에 a 링크가 있을 경우 어떻게 대처해야할까?
 
@@ -162,9 +162,9 @@ phonegap run ios
 <a href="#" onclick="navigator.app.loadUrl('http://blog.saltfactory.net', {openExternal:true});">Go saltfactor's blog</a>
 ```
 
-![open safari browser {width:320px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/10522908-76f2-4f90-81c2-d7d29baa6641)
-![backgroud navigation ios {width:320px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/e7268fba-88ee-46d5-990b-77126abec6ae)
-![background navigation ios {width:320px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/f189c528-244e-4119-9a5a-a61ca1676925)
+![open safari browser {width:320px;}](http://asset.blog.hibrainapps.net/saltfactory/images/10522908-76f2-4f90-81c2-d7d29baa6641)
+![backgroud navigation ios {width:320px;}](http://asset.blog.hibrainapps.net/saltfactory/images/e7268fba-88ee-46d5-990b-77126abec6ae)
+![background navigation ios {width:320px;}](http://asset.blog.hibrainapps.net/saltfactory/images/f189c528-244e-4119-9a5a-a61ca1676925)
 
 하지만 이 방법을 사용하기 위해서는 a 링크의 href를 분석해서 inappbrower를 사용해서 링크를 열수 있는 JavaScript 코드로 변경을 해줘야한다.
 > 컨텐츠를 개발자가 만들때는 문제가 되지 않지만 HTML 코드를 서버에서 Ajax와 같은 것을 이용해서 HTML코드를 가져와서 PhoneGap을 적용할 때는 a 링크 사용의 문제는 여전히 존재하게 된다.
@@ -250,9 +250,9 @@ phonegap run ios
 
 앱을 실행한 후 링크를 클릭하면 다음 그림과 같이 모바일 브라우저로 링크가 열리게 되는 것을 확인할 수 있다.이 방법은 기존의 HTML에 들어있는 a 링크를 InAppB	rowser 플러그인을 사용해서 열도록 코드를 분석해서 태그를 변경하지 않아도 되는 장점이 있다.
 
-![simple page within a link {width:320px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/99ed3b32-7659-4d33-a0bd-3805de822619)
-![view safari new page from a link {width:320px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/9cc108bc-cd56-4139-bca2-b9171ca77649)
-![ios background navigator {width:320px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/41a20586-7cad-4283-a724-b49f951dc0a2)
+![simple page within a link {width:320px;}](http://asset.blog.hibrainapps.net/saltfactory/images/99ed3b32-7659-4d33-a0bd-3805de822619)
+![view safari new page from a link {width:320px;}](http://asset.blog.hibrainapps.net/saltfactory/images/9cc108bc-cd56-4139-bca2-b9171ca77649)
+![ios background navigator {width:320px;}](http://asset.blog.hibrainapps.net/saltfactory/images/41a20586-7cad-4283-a724-b49f951dc0a2)
 
 ## 네이티브코드 변경 - Android
 
@@ -345,9 +345,9 @@ phonegap run android
 앱을 실행시켜서 a 링크를 클릭해보자. 그러면 안드로이드 디바이스의 디폴트 브라우저로 링크가 열리는 것을 확인할 수 있다.
 이렇게 네이티브 코드를 수정하여 사용하면 InAppBrowser에서 새 창을 브라우저에서 열기 위해서 여러가지 HTML 코드를 다시 프로그램으로 수정할 필요 없이 기존의 HTML 코드의 a 링크를 그대로 사용하면서 새로운 브라우저에 열 수 있게 할 수 있다.
 
-![android simple page within a link {width:320px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/253915d7-548e-4840-b277-87daa64fdfeb)
-![android default brwoser new page {width:320px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/d877b6e4-0976-475e-9308-700adf667583)
-![android backgroud navigator {width:320px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/4491441d-cc03-4d41-8588-32a9cff52701)
+![android simple page within a link {width:320px;}](http://asset.blog.hibrainapps.net/saltfactory/images/253915d7-548e-4840-b277-87daa64fdfeb)
+![android default brwoser new page {width:320px;}](http://asset.blog.hibrainapps.net/saltfactory/images/d877b6e4-0976-475e-9308-700adf667583)
+![android backgroud navigator {width:320px;}](http://asset.blog.hibrainapps.net/saltfactory/images/4491441d-cc03-4d41-8588-32a9cff52701)
 
 ## 결론
 

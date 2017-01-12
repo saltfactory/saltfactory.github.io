@@ -132,7 +132,7 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 
 index.html을 새로 고치맣면 아이폰에서 Toolbar와 동일한 모야이 상단에 붙은 것을 확인할 수 있다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/477e860a-be4a-42a4-b451-9df0593eac76)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/477e860a-be4a-42a4-b451-9df0593eac76)
 
 우리는 좀더 Toolbar 스럽게 만들기 위해서 버턴을 추가하자, 왼쪽상단에 "Back" 이라는 뒤로가기 버턴을 추가할 것이다. MainView.js 파일을 다음과 같이 수정하자.
 
@@ -177,7 +177,7 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 });
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/c0926abd-dc44-4904-8698-5ad6c828848a)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/c0926abd-dc44-4904-8698-5ad6c828848a)
 
 우리는 Toolbar를 조금 더 수정해보자. Toolbar 오른쪽에 "New"라는 버턴을 추가해보자. 우리는 앞서 버턴을 툴바에 추가하는 방법에 대해서 알아보았다. 그래서 코드를 다음과 같이 수정한다.
 
@@ -227,7 +227,7 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 });
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/20842fa6-ece8-4f68-b96a-9407f71fd5a2)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/20842fa6-ece8-4f68-b96a-9407f71fd5a2)
 
 그런데 우리가 원하는 모양으로 나오지 않는다는 것을 확인할 수 있다. 이는 아이폰 개발자라면 알 수 있는 UI 구성이다. UIToolbar에 items를 NSArray 타입으로 받아서 UI를 구성하는데 Sencha에서도 동일하게 구성을 만들어둔 것이다. 그래서 다음과 같이 변경해보자.
 
@@ -283,7 +283,7 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 
 다시 index.html 파일을 새로 고침해보자. 이제 우리가 원하는 모양대로 Toolbar가 네이티브 앱의 모양과 동일하게 구성된 것을 확인할 수 있다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/3ed1f690-d038-4d24-9477-61a92b4f05d2)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/3ed1f690-d038-4d24-9477-61a92b4f05d2)
 
 Sencha에서 우리는 컴포넌트를 생성하는 방법으로 Ext.create를 사용했고 위 예제에서는 이름과 동일한 클래스명을 new로 생성하였다. 우리는 Ext.create을 상용해서 컴포넌트들을 생성하고 추가해보자.
 
@@ -428,7 +428,7 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 });
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/265af8d8-ff82-441d-adcf-bba7d7d28588)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/265af8d8-ff82-441d-adcf-bba7d7d28588)
 
 그리고 우리는 본문을 HTML로 작성하고자 하기 때문에 컨텐츠가 HTML 스타일이 적용되게 다음 코드를 추가하자.
 
@@ -478,7 +478,7 @@ Ext.define('SaltfactorySenchaTutorial.view.MainView', {
 });
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/a647d666-7be3-41e7-98b3-c68881919990)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/a647d666-7be3-41e7-98b3-c68881919990)
 
 ## 결론
 

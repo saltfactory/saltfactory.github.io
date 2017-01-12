@@ -10,7 +10,7 @@ disqus_identifier : http://blog.saltfactory.net/217
 
 ## 서론
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/1561b442-a166-4332-994a-35cfbe4e241c)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/1561b442-a166-4332-994a-35cfbe4e241c)
 
 안드로이드 개발을 하면 emulator로 개발하는 개발자는 거의 없을것 같기도 하다. 이유는 안드로이드 에뮬레이터 속도가 정말 답답하게 느리기 때문이다. 뿐만 아니라 개발을 할 때 반드시 디바이스에 디버깅을 해야하는 경우도 있다. 이럴때, 안드로이드 앱 안의 데이터베이스에 접근할 때 문제가 생긴다. 그렇다고 매번 emualtor에서 데이터베이스를 조회하고 다시 디바이스로 빌드한다면 개발에 상당히 불편함을 느낀다. 이를 해결하기 위한 방법을 찾아서 개발에 직접 사용하고 있는 방법을 포스팅하기로 한다.
 
@@ -84,14 +84,14 @@ emulator를 실행해보자. emulator를 실행하고 난 뒤 터미널에서 ad
 ./adb devices
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/a599288b-24df-40f6-8192-d3fab023946c)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/a599288b-24df-40f6-8192-d3fab023946c)
 
 우리는 emulator를 실행했기 때문에 emulator-5554 라는 디바이스가 목록에 나타나게 된다. 이 디바이스에서 접근하기 위해서는 다음과 같이하면 된다.
 ```
 ./adb -s emulator-5554 shell
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/5bb6492a-e2c5-430d-a3fd-778bae88c4b9)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/5bb6492a-e2c5-430d-a3fd-778bae88c4b9)
 
 이제 우리가 원하는 데이터베이스에 접근을 해보자. 개발중이 앱에서 사용하고 있는 데이터베이스에 접근하기 위해서는 다음과 같이 하면 된다.
 
@@ -100,7 +100,7 @@ cd data/data/{앱 패지키 이름}/databases
 cd data/data/net.saltfactory.tutorial.sqlite3demo/databases
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/0d755de4-5906-49a1-9f93-884521acef77)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/0d755de4-5906-49a1-9f93-884521acef77)
 
 위의 예제 코드에서 우리는 sf_db_sqlite3_demo.db 라는 sqlite 데이터베이스를 만들어 사용했기 때문에 앱이 가지고 있는 데이터베이스에 sf_db_sqlite3_demo.db 라는 파일이 보일 것이다. 이젠 이 데이터베이스 파일에 sqlite3로 접근해보자.
 
@@ -108,7 +108,7 @@ cd data/data/net.saltfactory.tutorial.sqlite3demo/databases
 sqlite3 sf_db_sqlite3_demo.db
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/803e7e4a-6509-4cdd-8514-32bd7159814e)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/803e7e4a-6509-4cdd-8514-32bd7159814e)
 
 이렇게 emulator에서는 sqlite3로 앱 개발하고 있는 데이터베이스에 접근할 수 있다.
 
@@ -120,7 +120,7 @@ sqlite3 sf_db_sqlite3_demo.db
 ./adb devices
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/23be46e8-b319-41e8-87f1-0ffcbfbd1e34)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/23be46e8-b319-41e8-87f1-0ffcbfbd1e34)
 
 이제 emulator에서 접근한 방법과 동일하게 디바이스에 접근해보자.
 
@@ -136,7 +136,7 @@ cd /data/data/net.saltfactory.tutorial.sqlite3demo/databases
 
 이동 후 데이터베이스 목록을 보기 위해서 ls 명령어 실행하면 emulator와 달리 opendir failed, Permission denied 에러가 나타난다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/f4646a33-7318-4f2c-a51c-93ee485743e0)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/f4646a33-7318-4f2c-a51c-93ee485743e0)
 
 emulator에서 shell은 root 권한이지만, 디바이스에 접근할 경우 보안 문제 때문에 root 권한을 가질 수가 없다. rooting을 이용해서 root 권한을 얻을 수 있지만 이는 불법적인 방법이기 때문에 사용하기 꺼려진다. 그럼 sqlite3는 실행할 수 있을까? 우리는 데이터베이스 이름을 알기 때문에 sqlite3로 데이터베이스를 바로 열 수 있다.
 
@@ -146,7 +146,7 @@ sqlite3 sf_db_sqlite3_demo.db
 
 이렇게 sqlite3를 실행하면 sqlite3 명령어를 찾을 수 없다고 나온다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/f70ae478-d729-44fe-84cc-0b3fba2a62e1)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/f70ae478-d729-44fe-84cc-0b3fba2a62e1)
 
 ICS 이상 버전에서는 run-as 명령어를 실행할 수 있는데 이것은 shell에서 어플리케이션을 동작시키는 명령어로 어플리케이션 동작 상태 환경으로 만들어준다.
 
@@ -156,7 +156,7 @@ run-as net.saltfactory.tutorial.sqlite3demo
 
 그리고 ls 명령어를 실행하면 다음과 같이 어플리케이션이 사용하고 있는 디렉토리 목록을 살펴볼 수 있다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/a5d8fbba-b20c-47d3-a0e4-0285af0e61a4)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/a5d8fbba-b20c-47d3-a0e4-0285af0e61a4)
 
 디렉토리 접근은 가능하지만 여전히 sqlite3 명령어를 사용할 수 없다. 그래서 우리는 다음과 같이 sqlite3 바이너리 파일을 안드로이드 디바이스에 복사해서 넣는다. 단순히 sqlite3 파일을 복사하면 실행이 되지 않는다. sqlite3 파일은 실행 및 라이브러리가 모두 바이너리 파일로 포함된 파일이어야 하는데 다음 링크에서 sqlite3를 구할 수 있다. (SQLite3 다운로드 : Jelly Bean and later here)
 
@@ -178,7 +178,7 @@ chmod 755 /data/local/tmp/sqlite3
 
 복사한 sqlite3를 실행해보자
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/604c1598-4575-47df-8a39-19c528223f17)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/604c1598-4575-47df-8a39-19c528223f17)
 
 sqlite3 명령어가 먹히는 것을 확인할 수 있다.
 이젠 sqlite3로 우리가 접근하고 싶어하는 디바이스내 데이터베이스에 접근해보자.
@@ -199,7 +199,7 @@ cd databases
 /data/local/tmp/sqlite3 sf_db_sqlite3_demo.db
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/deb408df-cee6-4f84-b384-a6eaaec18c58)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/deb408df-cee6-4f84-b384-a6eaaec18c58)
 
 위에서 emulator에서 sqlite3로 실행한 것과 동일하게 이젠 디바이스 안에 데이터베이스 안에 접근해서 디버깅을 할 수 있게 되었다.
 

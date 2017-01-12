@@ -48,7 +48,7 @@ void UIImageFromURL( NSURL * URL, void (^imageBlock)(UIImage * image), void (^er
 
 이 코드를 iOS에서 사용하면 다음과 같은 warning이 나타난다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/3fbd0a84-966a-43e8-bcb0-5d46f673d570)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/3fbd0a84-966a-43e8-bcb0-5d46f673d570)
 
 이것은 UIImageFromURL가 미리 선언되어 있지 않아서 발생하는 경고인데 .h 파일 안에 미리 선언해주면 이 경고는 사라진다.
 
@@ -79,7 +79,7 @@ void UIImageFromURL( NSURL * URL, void (^imageBlock)(UIImage * image), void (^er
 }
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/488aef88-86bb-4933-8bf3-29c3f8b255df)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/488aef88-86bb-4933-8bf3-29c3f8b255df)
 
 우리는 이 코드를 좀더 Objective-C에 익숙한 메소드와 파라미터 방식으로 변경하고 싶다고 생각했다. Objective-C의 메소드 선언 방법은 개발할때 파라미터에 대한 이름과 타입을 참조하는데 더 유용하기 때문이다. 그래서 이 코드를 다음과 같이 변경하여 인스턴스 메소드로 만들어서 사용할 수 있다.
 
@@ -187,7 +187,7 @@ void UIImageFromURL( NSURL * URL, void (^imageBlock)(UIImage * image), void (^er
 }
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/3958633b-88a9-4662-8d51-a23be3fb9c39)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/3958633b-88a9-4662-8d51-a23be3fb9c39)
 
 참조 원문 : http://www.geekygoodness.com/2011/06/17/uiimage-from-url-simplified/
 코드의 저작권은 http://www.geekygoodness.com 에 있기 때문에 코드 사용시 원 저작권자에게 사용 요청을 받기 바랍니다.

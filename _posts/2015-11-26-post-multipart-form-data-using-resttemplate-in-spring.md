@@ -12,7 +12,7 @@ tags:
   - form
 comments: true
 images:
-  title: 'http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/spring_bean_bud.jpg'
+  title: 'http://asset.blog.hibrainapps.net/saltfactory/images/spring_bean_bud.jpg'
 ---
 
 ## 서론
@@ -29,7 +29,7 @@ Spring에서 **RestTemplate**을 사용하면 간단하게 REST 서비스 요청
 
 우리는 앞의 글에서 RestTemplate을 사용하여 JSON 타입의 API 형태의 REST 서비를 요청하는 예제를 다루었다. 만약 GET으로 요청하면 HTML을 보여주는 컨트롤러를 만들어보자. 우리는 새로운 Article의 입력을 위해 Form을 가지고 있는 뷰를 Thymeleaf로 만들었다. 다운로드 받은 소스코드에서 Spring Boot 서버를 실행하고 http://localhost:8080/articles/new 를 요청하면 다음과 같이 입력화면이 브라우저에 나타난다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/e68b96c9-2a86-48a6-afcc-7177d11bf8b5)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/e68b96c9-2a86-48a6-afcc-7177d11bf8b5)
 
 우리는 이 화면을 위한 컨트롤르 메소드를 다음과 같이 ArticlesController 안에 newArticle() 이라는 이름으로 다음과 같이 만들었었다.
 
@@ -154,7 +154,7 @@ public void testNewArticle() throws Exception {
 }
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/96c8ab42-83e6-42b5-ad08-09a19a5c49bf)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/96c8ab42-83e6-42b5-ad08-09a19a5c49bf)
 
 앞의 글에서 살펴본 것과 같이 RestTemplate을 사용하여 JSON 만 가져오는 것 뿐만 아니라 HTML 문서도 가져올 수 있다. 다시 말해서 모든 URI에 접근해서 HTTP Request로 요청할 수 있는 모든 일을 할 수 있는 것이다.
 
@@ -204,15 +204,15 @@ public void testSubmit() throws Exception {
 
 ```
 테스트 결과는 다음과 같다. 테스트 Fail 정보를 살펴보면 컨트롤에서 POST로 받은 Article의 객체를 JSON으로 매핑하여 반환할 때 Article의 필드에 값이 없는 것을 확인할 수 있다. 다시말해서 @ModelAttribute로 매핑되는 파라미터의 값이 하나도 들어오지 않았다는 말이 된다.
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/8b8b92f7-f4e4-4201-9628-98b789ce1e4f)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/8b8b92f7-f4e4-4201-9628-98b789ce1e4f)
 
 그럼 컨트롤러에 도착할 때, Request를 POST로 전송하여 컨트롤러까지 오는 객체를 알아보기 위해서 submit을 처리하는 메소드에 브레이크 포인트를 걸어서 확인해보자.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/9b20d013-4ea0-4f70-8d3f-b7d2d2caac92)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/9b20d013-4ea0-4f70-8d3f-b7d2d2caac92)
 
 브레이크 포인트를 확인해보면 @ModelAttribute에 매핑할 객체의 값이 모두 null인 것을 확인할 수 있다. 다시 말하자면 POST로 넘겨 받은 파라미터를 객체로 매핑할 때 정보를 제대로 확인할 수 없다는 것이다. 좀 더 HTTP 요청을 처리하는 객체의 내부를 살펴보자. Spring 클래스 중에서 **processRequest()** 메소드 안의 request 값을 살펴보면 RestTemplate에서 요청한 Content-Type이 **application/json;charset=UTF-8** 이란는 것을 알 수 있다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/f025e8d6-1b94-4b4a-981b-d2946e611f12)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/f025e8d6-1b94-4b4a-981b-d2946e611f12)
 
 우리는 컨트롤러에 @ModelAttribute로 파라미터를 객체에 매핑하도록 하였는데 application/json 컨텐츠 타입의 바디 즉, @RequestBody로 객체를 매핑하는 구조가 아니기 때문에 이렇게 POST로 넘어온다면 객체에 매핑이 되지 않는다. 좀 더 구체적으로 로깅을 살펴보기 위해서 Spring 어플리케이션의 로깅 레벨을 **DEBUG**로 변경하고 실행해보자. **src/main/resources/application.properties** 열어서 다음과 같이 로깅 레벨을 지정한다.
 
@@ -221,7 +221,7 @@ logging.level.=DEBUG
 ```
 다시 테스트를 실행해보자. 로깅 레벨을 DEBUG로 지정하고 테스트를 진행하면 서버와 클래스 내부의 객체를 보다 자세하게 로깅할 수 있다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/64236ddf-4ace-4dc6-9d31-b48f839eb950)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/64236ddf-4ace-4dc6-9d31-b48f839eb950)
 
 ```text
 2015-11-26 13:48:41.123 DEBUG 54749 --- [o-auto-1-exec-1] o.a.c.http11.InternalNioInputBuffer      : Received [POST /articles HTTP/1.1
@@ -279,9 +279,9 @@ public void testSubmit() throws Exception {
 
 테스트를 실행하면 다음과 같이 HTTPMethod.POST를 요청할 때 Content-Type이 **application/x-www-form-urlencoded**로 전송되고 Article의 객체가 POST의 Body 로 전송되는 것을 확인할 수 있다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/03a7acb2-b2ef-4743-ba55-79b2c1357826)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/03a7acb2-b2ef-4743-ba55-79b2c1357826)
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/6ee56904-bc9a-4777-9af2-6b89c1c055fe)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/6ee56904-bc9a-4777-9af2-6b89c1c055fe)
 
 
 ## MultiValueMap을 사용하여 Multipart/Form-data 전송하기
@@ -332,9 +332,9 @@ public void testSubmit() throws Exception {
 }
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/dc36a145-ae15-47c0-90a9-f14977290af9)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/dc36a145-ae15-47c0-90a9-f14977290af9)
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/a5d748b8-61eb-473f-a05a-45717875574b)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/a5d748b8-61eb-473f-a05a-45717875574b)
 
 이렇게 RestTemplate을 사용하여 JSON 타입으로 POST를 전송하거나 Multipart/Form-data 형태로 파일을 포함한 데이터를 서버로 전송할 수 있다.
 

@@ -22,7 +22,7 @@ Plugins을 만들기 위해서 먼저 PhoneGap CLI로 PhoneGap 프로젝트를 �
 phonegap create sf-phonegap-plugin-demo -i net.saltfactory.tutorial.phonegap.plugindemo -n SF-PhoneGap-Plugin-Demo
 ```
 
-![phonegap create {max-width:600px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/8167a771-5560-46bf-9e75-8c058e6ecf7c)
+![phonegap create {max-width:600px;}](http://asset.blog.hibrainapps.net/saltfactory/images/8167a771-5560-46bf-9e75-8c058e6ecf7c)
 
 현재 PhoneGap CLI 버전( 3.4.0-0.19.7 )에서는 PhoneGap CLI로 프로젝트를 만들면 **identifier**와 프로젝트 이름이 디폴트에서 변경되지 않는 문제가 있다.(참조 : http://blog.saltfactory.net/234) 에디터로 `./www/config.xml` 을 열어서 다음을 수정하자.
 
@@ -142,7 +142,7 @@ phonegap local build ios
 ls -l ./platforms/ios/SF-PhoneGap-Plugin-Demo
 ```
 
-![phonegap ios platform {max-width: 600px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/2774593a-84c1-46b1-bf8f-87aa4c93b3a0)
+![phonegap ios platform {max-width: 600px;}](http://asset.blog.hibrainapps.net/saltfactory/images/2774593a-84c1-46b1-bf8f-87aa4c93b3a0)
 
 `./platforms/ios/SF-PhoneGap-Plugin-Demo` 라는 디렉토리 안에는 iOS 프로젝트에 사용하는 파일들이 존재하고 `Plugins`라는 디렉토리가 있는 것을 확인할 수 있다. 현재 아무런 Plugins을 만들지 않았기 때문에 비어있는 상태이다.
 
@@ -150,11 +150,11 @@ ls -l ./platforms/ios/SF-PhoneGap-Plugin-Demo
 
 iOS용 Plugins을 만들기 위해서는 **Xcode가** 필요하다. PhoneGap CLI로 local build ios를 이용해서 iOS 플랫폼 자원을 만들면 iOS 코드를 편집할 수 있는 Xcode 프로젝트 파일도 함께 만들어지는데 위치는 `./platforms/ios` 안에 `{PhoneGap 프로젝트 이름}.xcodeproj` 파일로 만들어진다.
 
-![xcode project {max-width:600px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/d4679763-3330-4cfc-8426-ac893ca50ac1)
+![xcode project {max-width:600px;}](http://asset.blog.hibrainapps.net/saltfactory/images/d4679763-3330-4cfc-8426-ac893ca50ac1)
 
 `./platforms/ios/SF-PhoneGap-Plugin-Demo.xcodeproj` 파일을 실행시켜보자. 아래와 같이 **SF-PhoneGap-Plugin-Demo** 프로젝트 안에 `CordovaLib.xcodeproj` 파일이 포함되어 있는 것을 알 수 있다. 또한 **Build Phases의 Link binary With Libraries**를 살펴보면 **libCordova.a**라는 cordova의 static library가 포함되어 있는 것을 확인할 수 있다. 이러한 이유로 Cordova에서 만든 Class를 우리는 별 다른 설정없이 사용할 수 있다.
 
-![xcode build phases {max-width:600px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/b64c2311-cd71-4d3f-8b7a-bc9bb7a6128f)
+![xcode build phases {max-width:600px;}](http://asset.blog.hibrainapps.net/saltfactory/images/b64c2311-cd71-4d3f-8b7a-bc9bb7a6128f)
 
 우리는 이제 PhoneGap 공식 문서의 Echo 기능을 가진 Plugin을 만들어볼 것이다. (참조 : http://docs.phonegap.com/en/edge/guide_hybrid_plugins_index.md.html#Plugin%20Development%20Guide) 문서에서는 복잡하게 설명이 되어 있는데 간단하게 원리는 다음과 같다.
 
@@ -168,23 +168,23 @@ iOS용 Plugins을 만들기 위해서는 **Xcode가** 필요하다. PhoneGap CLI
 
 **SF-PhoneGap-Plugin-Demo** 안에 있는 `Plugins` 디렉토리에서 **New File** 을 한다.
 
-![New file {max-width: 600px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/06bda890-7951-4094-bf48-25d05bde7c03)
+![New file {max-width: 600px;}](http://asset.blog.hibrainapps.net/saltfactory/images/06bda890-7951-4094-bf48-25d05bde7c03)
 
 그리고 **Subclass of** 부분에서 우리는 Cordova의 CDVPlugin을 상속받아서 만들려하기 때문에 **CDVPlugin**을 입력한다. 그리고 새로운 파일의 Class 이름을 입력한다. 우리는 Echo 하는 클래스를 만들 것이기 때문에 편의상 이름을 **SFPluginEcho**라 입력하겠다.
 
-![New file {max-width: 600px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/38e1f854-e64b-47df-b5a3-4a7b5d4a2354)
+![New file {max-width: 600px;}](http://asset.blog.hibrainapps.net/saltfactory/images/38e1f854-e64b-47df-b5a3-4a7b5d4a2354)
 
-![New file {max-width: 600px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/9db90376-fe79-462e-86b5-3dd9eccda788)
+![New file {max-width: 600px;}](http://asset.blog.hibrainapps.net/saltfactory/images/9db90376-fe79-462e-86b5-3dd9eccda788)
 
 위와 같이 새로운 Class 파일을 Plugins에 만들어 진것을 확인할 수 있다. 우리는 간단히 웹에서 넘겨준 문자열을 iOS 자원인 **UIAlertView**를 이용해서 경고창을 띄우는 것을 에제로 해볼 것이다. 메소드 이름은 echo로 하겠다. `SFPluginEcho.h`에 다음과 같이 메소들 선언한다.
 
 메소드를 추가하기 전에 CDVPlugin를 상속 받은 `SFPluginEcho.h` 파일을 살펴보면 `#import<Cordova/Cordova.h>`에 에러가 발생한 것을 확인할 수 있다. PhoneGap CLI의 버그인지 알수 없지만 Cordova 라이브러리를 추가하여 사용할 때 `Cordova/CDV.h`를 import 해야하기 때문에 다음과 같이 변경한다.
 
-![cordova header import {max-width:600px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/532462f1-5db4-4eb9-a948-415bd2e512f2)
+![cordova header import {max-width:600px;}](http://asset.blog.hibrainapps.net/saltfactory/images/532462f1-5db4-4eb9-a948-415bd2e512f2)
 
 아래와 같이 `Cordova/CDV.h`를 import하면 위의 에러가 사라진다. `Cordova/CDV.h`를 열어서 확인하면 그 안에 `CDVPlugin.h`를 import하고 있는 것을 확인할 수 있다.
 
-![import header {max-width:600px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/8f958f3b-ec50-40d9-8de1-af277cee7c2f)
+![import header {max-width:600px;}](http://asset.blog.hibrainapps.net/saltfactory/images/8f958f3b-ec50-40d9-8de1-af277cee7c2f)
 
 이제 echo 메소드를 추가하자. 메소드를 추가할 때 이 Class는 웹에서 Cordova가 제공하는 JavaScript 인터페이스로 접근을 할 것이다. 이 때, Cordova 내부에서 지정하기를 `CDVInvokedUrlCommand` 형태로 넘어오기 때문에 메소드를 추가할 때는 인자값을 `CDVInokedUrlCommand`를 받을 수 있게 정의 한다.
 
@@ -324,7 +324,7 @@ phonegap local build ios
 phonegap local install ios
 ```
 
-![ios simulator {max-width:320px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/a62b28e7-64f8-4815-9c15-5886852b86c3)
+![ios simulator {max-width:320px;}](http://asset.blog.hibrainapps.net/saltfactory/images/a62b28e7-64f8-4815-9c15-5886852b86c3)
 
 ## CDVPluginResult를 이용해서 네이티브의 데이터를 JavaScript에 넘겨서 사용하기
 
@@ -485,7 +485,7 @@ phonegap local build ios
 phonegap local install ios
 ```
 
-![ios simulator {max-width:320px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/6a153987-a8db-4a48-8f7b-b81c932bff92)
+![ios simulator {max-width:320px;}](http://asset.blog.hibrainapps.net/saltfactory/images/6a153987-a8db-4a48-8f7b-b81c932bff92)
 
 위와 같이 네이티브 코드에서 `CDVPluginResult`에 값을 Dictionary 넘겨서 JavaScript의 callback에서 JSON 값을 받아서 출력할 수 있다.
 
@@ -691,7 +691,7 @@ phonegap local build ios
 phonegap local install ios
 ```
 
-![ios simulator {max-width:320px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/ef40f399-3b5d-4de2-b2fb-bb9cf981affa)
+![ios simulator {max-width:320px;}](http://asset.blog.hibrainapps.net/saltfactory/images/ef40f399-3b5d-4de2-b2fb-bb9cf981affa)
 
 위와 같이 iOS 네이티브 코드에서 JavaScript의 `print_message()` 함수를 호출한 것을 확인할 수 있다.
 
@@ -914,7 +914,7 @@ cd ../SF-PhoneGap-Demo
 phonegap plugin list
 ```
 
-![plugins list {max-width:600px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/785d44cb-3b98-463f-aedb-942f1a97334b)
+![plugins list {max-width:600px;}](http://asset.blog.hibrainapps.net/saltfactory/images/785d44cb-3b98-463f-aedb-942f1a97334b)
 
 이제 우리가 만든 Plugins을 설치 해보자.
 
@@ -922,7 +922,7 @@ phonegap plugin list
 phonegap local plugin add ../sf-phonegap-plugin-demo
 ```
 
-![add plugin {max-width:600px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/9c10fcdb-810c-4af7-ab82-01b321e5540b)
+![add plugin {max-width:600px;}](http://asset.blog.hibrainapps.net/saltfactory/images/9c10fcdb-810c-4af7-ab82-01b321e5540b)
 
 Plugins 설치가 마치면 다시 PhoneGap 프로젝트의 Plugins의 목록을 살펴보자.
 
@@ -930,7 +930,7 @@ Plugins 설치가 마치면 다시 PhoneGap 프로젝트의 Plugins의 목록을
 phonegap plugin list
 ```
 
-![plugins list {max-width:600px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/12b2a30c-08c5-4490-a2a5-71025af7cad7)
+![plugins list {max-width:600px;}](http://asset.blog.hibrainapps.net/saltfactory/images/12b2a30c-08c5-4490-a2a5-71025af7cad7)
 
 아무런 Plugins가 없었는데 설치후 우리가 생성한 **net.saltfactory.tutorial.phonegap.plugindemo** Plugins이 설치된 것을 확인할 수 있다.
 `./plugins` 디렉토리 안을 살펴보자.
@@ -939,7 +939,7 @@ phonegap plugin list
 ls -l ./plugins
 ```
 
-![plugins list {max-width:600px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/607f860f-a319-491c-ade0-bec8eff01a9c)
+![plugins list {max-width:600px;}](http://asset.blog.hibrainapps.net/saltfactory/images/607f860f-a319-491c-ade0-bec8eff01a9c)
 
 PhoneGap 프로젝트의 `./plugins` 디렉토리 안에는 우리가 Plugins으로 생성한 **net.saltfactory.tutorial.phonegap.plugindemo**가 설치된 것을 확인할 수 있다. 그리고 `ios.json` 파일을 열어보자. 아래와 같이 `config.xml`에 자동적으로 feature를 추가하는 정보가 들어가 있다.
 
@@ -1055,7 +1055,7 @@ phonegap local build ios
 phonegap local install ios
 ```
 
-![ios simulator {max-width:320px;}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/376a555b-fad0-4e5a-a385-9e4a60f0c0d4)
+![ios simulator {max-width:320px;}](http://asset.blog.hibrainapps.net/saltfactory/images/376a555b-fad0-4e5a-a385-9e4a60f0c0d4)
 
 실행 결과 정상적으로 우리가 만든 Plugins을 새로운 PhoneGap 프로젝트에 설치해서 적용하는 것을 확인했다.
 

@@ -22,7 +22,7 @@ disqus_identifier : http://blog.saltfactory.net/48
 
 디렉토리는 아무곳에 설치해도 상관이 없지만 개발의 편리를 위해서 /Projects/Servers/Oracle/instantclient 밑에 설치하려고한다. 다운 받은 파일은 이 디덱토리 밑으로 모두 mv 시켰다. 그리고 unzip 명령어를 사용해 모두 압축을 해제했다. 압축을 해제하면 instantclient_10_2라는 폴더가 생성되고 압축을 해제한 파일들은 모두 그 안에 들어있게 된다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/e5f6f33a-c5d1-47e7-9bdc-eb4799bf9710)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/e5f6f33a-c5d1-47e7-9bdc-eb4799bf9710)
 
 프로파일을 열어서 환경변수를 등록하고 프로파일을 다시 로드한다.
 
@@ -43,4 +43,4 @@ source ~/.profile
 
 이제 sqlplus 를 사용할 수 있게 되었다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/fec64c35-e653-4aa6-81f8-5474e783084c)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/fec64c35-e653-4aa6-81f8-5474e783084c)

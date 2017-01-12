@@ -31,7 +31,7 @@ SFApp.prototype.start = function(message){
 var app = new SFApp();
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/b0459b2d-7be0-493a-8ad7-f0579016bf34)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/b0459b2d-7be0-493a-8ad7-f0579016bf34)
 
 위와 같이 단순하게 SFApp 객체에 start라는 function을 사용해서 app이 시작될 때 message를 로깅하도록 하였다. 위의 간단한 코드는 다음과 같이 변경할 수 있다. 우리는 callback을 사용하기 원하기 때문에 function 하나를 선언하고 callback으로 호출하게 수정한다.
 
@@ -57,7 +57,7 @@ var app = new SFApp();
 app.start('saltfactory callback demo', callback);
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/8b14ec9e-9629-4d6e-ab4f-9105a2c76bb9)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/8b14ec9e-9629-4d6e-ab4f-9105a2c76bb9)
 
 위 예제는 callback function을 만들어서 파라미터로 사용하는 예제 이다. callback을 객체에 넣고 사용할때 어떻게 사용할 수 있을까? 다음과 같이  proptype로 연결하거나 객체 안의 function도 파라미터로 넘겨서 callback을 사용할 수 있다.
 
@@ -204,7 +204,7 @@ public class MainActivity extends Activity {
 
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/0a449ed1-88dc-432b-a231-6610b213195f)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/0a449ed1-88dc-432b-a231-6610b213195f)
 
 이렇게 callback 메소드를 외부에서 구체적으로 만들어서 사용할 수 있으니까 `SFCallback` 인터페이스는 여러가지 형태의 callback의 구현체로 사용할 수 있게 되는것이다. 만약 callback method로 파라미터를 받아서 호출하는 외부에서 좀더 자세한 구현을 하고 싶을 경우는 현재 callback의 인자가 없는데 callback 메소드의 인자로 내부에서 외부로 파라미터를 넘겨줘서 호출하는 곳에서 상세 구현을 하면 된다.
 

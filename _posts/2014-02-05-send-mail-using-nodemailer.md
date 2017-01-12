@@ -10,7 +10,7 @@ disqus_identifier : http://blog.saltfactory.net/223
 
 ## 서론
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/aac62155-cca3-4156-94c5-c3c0e4412b75)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/aac62155-cca3-4156-94c5-c3c0e4412b75)
 
 푸시서버를 Springframework에서 Node.js로 변경하는 사내 프로젝트에서 메일 발송 프로그램이 필요하게 되었다. 푸시 전송 후 정상적으로 발송되었는지 리포팅을 메일로 발송해주었는데 기존에는 javamail을 사용했다. Node.js로 시스템을 새롭게 구축하면서 새로운 메일 발송 프로그램이 필요했고 Nodemailer로 메일 발송을 하게 되어 간단한 사용 방법을 포스팅한다.
 
@@ -65,11 +65,11 @@ smtpTransport.sendMail(mailOptions, function(error, response){
 node sf_mail.js
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/f0cafaf6-0ba9-4c71-852a-8cd9d605af4b)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/f0cafaf6-0ba9-4c71-852a-8cd9d605af4b)
 
 메일이 정상적으로 발송하면 response를 받을 수 있고 이것을 callback으로 처리할 수 있다. 그리고 메일은 정상적으로 발송 되었는지 확인해보자.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/9da33f55-0d26-4ebc-a9aa-9a4942c42bf0)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/9da33f55-0d26-4ebc-a9aa-9a4942c42bf0)
 
 메일함을 살펴보면 한글이 포함된 메일이 정상적으로 발송 되어진것을 확인할 수 있다.
 
@@ -109,7 +109,7 @@ smtpTransport.sendMail(mailOptions, function(error, response){
 
 HTML을 발송하기 위해서는 mailOptions에서 text 대신 html 프로퍼티에 html 코드를 입력하면 된다. 발송된 메일을 확인해보자. HTML 코드가 적용된 메일이 정상적으로 전송된 것을 확인할 수 있다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/755dc39a-7af6-40ab-bb58-c982277993c4)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/755dc39a-7af6-40ab-bb58-c982277993c4)
 
 ### 파일첨부
 
@@ -154,15 +154,15 @@ smtpTransport.sendMail(mailOptions, function(error, response){
 
 테스트를 위해 간단한 로그 파일을 test.log 같은 경로에 만들었다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/2e58c83a-12ec-42b5-8cbf-0730420fd964)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/2e58c83a-12ec-42b5-8cbf-0730420fd964)
 
 메일을 발송한 후 확인해보자. 메일을 확인하면 파일이 정상적으로 첨부되어 발송 되었다는 것을 확인할 수 있다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/9fec66ac-eed3-4f10-9cdf-2de8e29387f4)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/9fec66ac-eed3-4f10-9cdf-2de8e29387f4)
 
 파일은 손상없이 정상적으로 전송되었는지 확인하기 위해서 첨부파일을 다운받아서 열어보자.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/e2eca74a-e026-4309-a66e-d34f0e7bae5c)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/e2eca74a-e026-4309-a66e-d34f0e7bae5c)
 
 ## 결론
 

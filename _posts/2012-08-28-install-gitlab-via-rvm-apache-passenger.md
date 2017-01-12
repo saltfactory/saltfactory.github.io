@@ -146,7 +146,7 @@ sudo -u gitlab -H git clone git@localhost:gitolite-admin.git /tmp/gitolite-admin
 
 지금까지의 설정이 바르게 되었다면 다음과 같이 출력 될 것이다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/7bcc0c32-fa07-418f-a60c-c26e140ca882)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/7bcc0c32-fa07-418f-a60c-c26e140ca882)
 
 ## gitlab  설치
 
@@ -368,9 +368,9 @@ a2ensite gitlab.saltfactory.net
 
 이제 apache2를 재시작하면 gitlab.saltfactory.net(예제 도메인으로 실제 도메인으로 접근해보길 바란다.) 으로 접근하면 gitlab 을 사용할 수 있게 된다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/973f4b2e-33fa-4425-8d75-5d5acc052fe1)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/973f4b2e-33fa-4425-8d75-5d5acc052fe1)
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/e932d6e2-b3b4-4842-abdc-e0eefe825f4c)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/e932d6e2-b3b4-4842-abdc-e0eefe825f4c)
 
 ## 참고
 

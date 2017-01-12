@@ -19,7 +19,7 @@ UILocalNotification 클래스는 특별한 날짜나 시간에 사용자에게 �
 
 우선 Single ViewController를 가지는 프로젝트를 만들고 xib 파일에 UITextField와 UIButton으로 다음과 같이 시간을 입력받을 입력 박스와 저장을 할 수 있는 버턴을 만든다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/c7bf08d9-4735-4f0b-8383-78d0f119e15d)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/c7bf08d9-4735-4f0b-8383-78d0f119e15d)
 
 그리고 각각 IBOutlet과 IBAction으로 연결한다.
 
@@ -60,7 +60,7 @@ IBAction에 연결된 메소드를 구현해보자. ARC로 작성하였다. ARC�
 
 이 예제는 간단하게 사용자로 부터 textField에 시간을 입력받는다. 좀더 좋은 일정관리 프로그램을 만들기 위해서는 date picker를 이용하여 사용하면 좋을 것이다. 이 예제의 요점은 사용자가 아이폰 기계에 특정한 시간에 job을 등록할 수 있다는 것이다. 그리고 마치 Push Notification을 설정하듯 알림 메세지, 알림음 뱃지 등을 설정할 수가 있다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/83d7601f-f01d-467c-b773-32e81ad2ba61)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/83d7601f-f01d-467c-b773-32e81ad2ba61)
 
 Local Notification을 등록하는 방법이 이렇게 간단하다. 그럼 이렇게 등록한 Local Notification에서 뭔가 데이터를 받아서 처리하고 싶을 경우가 있다. 이러한 경우 알림이 왔을 때 어떻게 처리할 수 있는지 살펴보자. application:didReceiveLocalNotification: 이라는 메소드가 바로 Local Notification이 실행되면 동작하는 delegate method 이다. AppDelegate.m 파일에 이 메소드를 추가하여 Local Notification을 처리할 수가 있다. 이때 notification으로 부터 데이터를 받아오는 것은 userInfo라는 dictionary 객체인데, notification 객체에 dictionary 형태로 저장하여 등록하면 된다. 이 과정은 위의 코드에 나와 있다.
 
@@ -84,5 +84,5 @@ Local Notification을 등록하는 방법이 이렇게 간단하다. 그럼 이�
 ```
 이제 Local Notification이 발생할때 앱이 실행되지 않거나 실행되고 있거나 동일하게 알림 창을 통해서 알림 정보를 받을 수 있게 되었다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/fa8ea50f-b7e4-4d22-877c-510bb51de468)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/fa8ea50f-b7e4-4d22-877c-510bb51de468)
 

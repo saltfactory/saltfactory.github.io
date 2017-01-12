@@ -20,7 +20,7 @@ XML 자체로 Java 코드와 UI 코드를 분리한다는 메타 프로그래밍
 
 기본적으로 안드로이드의 레이아웃을 구성하는데는 `/res/layout/{파일이름}.xml` 과 같이 XML 파일을 만들어서 화면 출력을 구성하고 widget의 id를 부여한다. 이러한 이유로 XML 파일에는 화면 출력에 대한 element의 속성을 지정하여한다. 이전 포스트인 [Android Draw 9-path 이미지 스트래칭을 이용하여 크기가 다른 버튼 만들기](http://blog.saltfactory.net/88) 를 살펴보면 타이틀 바에 버턴을 두개 올리고 제목을 출력시키기 위해서 우리가 설정했던 XML을 참조할 수 있다. 타이틀바에 버턴을 두개 올리고 제목을 출력시키기 위해서 상당히 많은 코드를 하나의 xml에 설정한 것을 알 수 있다. 마약 다음 그림과 같이 TextView 두개를 가지고 반복 적으로 출력되는 화면이 있는데 각각 이 TextView는 top과 bottom으로 나누어 다르게 출력시키고 싶어한다. 이런 모양을 출력하기 위해서는 기본적으로 다음 코드가 필요하다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/2d90fd1a-b2ef-4d90-b362-7dac5f6e2282)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/2d90fd1a-b2ef-4d90-b362-7dac5f6e2282)
 
 우선 이 TextView 들은 ScrollView안에서 반복적으로 출력이 된다. 그리고 이 TextView는 각각 `@drawable/bg_box_top`과 `@drawable_bg_box_bottom`을 배경으로 사용하고 있고 이 두개의 TextView의 wrap하고 있는 LinearLayout이 반복적으로 생성되는 코드이다.
 

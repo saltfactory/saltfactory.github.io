@@ -22,7 +22,7 @@ cd $SENCHA_HOME
 sencha generate app TestApp ../TestApp
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/04baefae-3edc-4377-b448-746dcd28ecd4)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/04baefae-3edc-4377-b448-746dcd28ecd4)
 
 이젠 테스트로 만든 Sencha Projects 디렉토리에서 index.html 파일을 chrome에서 열어보자.
 
@@ -34,7 +34,7 @@ cd ../TestApp
 open -a "Google Chrome" index.html
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/190afcad-2447-4b65-bd17-489c6965a02f)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/190afcad-2447-4b65-bd17-489c6965a02f)
 
 chrome 브라우저가 열리면서 다음과 같이 Cross origin requests are only supported for HTTP 에러를 발생하면서 Sencha Application이 실행이 되지 않는다. Safari 브라우저로 열어보자
 
@@ -42,7 +42,7 @@ chrome 브라우저가 열리면서 다음과 같이 Cross origin requests are o
 open -a "Safari" index.html
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/448f4d7d-b7ce-4516-973e-08de24f2ab64)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/448f4d7d-b7ce-4516-973e-08de24f2ab64)
 
 Safari 브라우저에서는 문제 없이 실행이 되는 것을 확인할 수 있다. 위와 같은 문제는 Chrome 브라우저에서 file 경로로 브라우저에서 열게되었을때 access file policy 제한으로 발생하는 문제이다. 그래서 Chrome 브라우저를 실행할 때 다음과 같이 옵션을 추가한다.
 
@@ -56,9 +56,9 @@ Safari 브라우저에서는 문제 없이 실행이 되는 것을 확인할 수
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --allow-file-access-from-files index.html
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/dac7cb61-e780-45ff-b217-2ddbd69416cd)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/dac7cb61-e780-45ff-b217-2ddbd69416cd)
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/1ac3ebf2-b235-4f6d-b6d8-0c702e6dd374)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/1ac3ebf2-b235-4f6d-b6d8-0c702e6dd374)
 
 이렇게 Chrome 브라우저를 열때 file access policy 제한을 풀어서 index.html을 실행하면 앞에서 봤던 문제 없이 Sencha Application을 Chrome에서 file 경로로 실행할 수 있게 된다.
 

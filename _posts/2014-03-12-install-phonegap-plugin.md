@@ -22,7 +22,7 @@ PhoneGap을 사용하면서 가장 이상한것이 PhoneGap CLI와 Cordova CLI(c
 ls -l sf-phonegap-demo/
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/2054707f-3155-4e5c-98f4-205d3da6016e)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/2054707f-3155-4e5c-98f4-205d3da6016e)
 
 PhoneGap  프로젝트 디렉토리 밑에는 plugins라는 디렉토가 존재한다. 이 디렉토리에 우리가 사용할 plugins를 저장하는데 최초 PhoneGap 프로젝트를 생성하면 아무런 plugin을 사용하지 않기 때문에 `/plugins` 디렉토리 안에는 아무런 plugin이 존재하지 않는다. PhoneGap CLI로 Plugins을 설치하는 방법은 다음과 같다.
 
@@ -36,7 +36,7 @@ phonegap local plugin add {plugin repository}
 phonegap local plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/1f03080b-e17c-47cb-889e-5c3623f2c7f0)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/1f03080b-e17c-47cb-889e-5c3623f2c7f0)
 
 우리는 디바이스 정보를 가져오기 위한 **org.apache.cordova.device** 플러그인을 설치했는데 이것을 직접 웹 코드에서 사용해보자. org.apache.cordova.device 플러그인을 사용하기 위한 API는 다음에서 확인할 수 있다. http://cordova.apache.org/docs/en/3.3.0/cordova_device_device.md.html#Device
 
@@ -104,7 +104,7 @@ phonegap local install ios
 
 위와 같이 웹에서 device에 접근하는 코드를 추가하고 난 뒤에 다시 PhoneGap 프로젝트를 빌드하고 설치하면 이젠 웹에서 네이티브의 디바이스 정보를 가져올 수 있는 것을 확인할 수 있다. 아래는 아이폰 시뮬레이터에서 디바이스 정보를 획득한 화면인다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/b1dad475-54d1-4ee4-8003-701e0a530389)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/b1dad475-54d1-4ee4-8003-701e0a530389)
 
 그럼 Android 디바이스에도 하나의 코드로 동작하는지 살펴보자. 코드는 수정하지 않고 build와 install만 android로 변경해서 해보자.
 
@@ -115,7 +115,7 @@ phonegap local build android
 phonegap local install android
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/533afacd-e512-49ef-8246-266e0575a9b4)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/533afacd-e512-49ef-8246-266e0575a9b4)
 
 PhoneGap CLI를 실행해서 iOS와 android 디바이스의 정보를 가져오는 작업을 테스트해보았다. PhoneGap은 웹 기술로 네이티브 정보를 획득할 수 있다는 것을 확인했다. 다시 살펴보면 어떤 플랫폼인지 디바이스인지를 상관하지 않고 개발자는 웹 코드만 신경쓰고 작업하면 된다는 것이다. 웹 프로그램으로서는 디바이스의 자원을 사용할 수 없지만 PhoneGap에서는 Plugins 개념이라는 것을 사용해서 웹에서 접근할 수 있는 방법을 제공하고 있다.
 PhoneGap에서 공식적으로 공개하고 있는 plugins은 다음과 같다.
@@ -240,7 +240,7 @@ phonegap local plugin remove {플러그인 이름}
 phonegap local plugin remove org.apache.cordova.device
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/9d852559-1a3d-4ce9-9345-b510ca9ca585)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/9d852559-1a3d-4ce9-9345-b510ca9ca585)
 
 ### Plugman 으로 PhoneGap Plugins 설치하기
 
@@ -338,7 +338,7 @@ npm install -g
 plugman search device
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/e0e38ebd-19da-4053-b739-514def6cf472)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/e0e38ebd-19da-4053-b739-514def6cf472)
 
 plugman search는 http://plugins.cordova.io 라는 plugins 저장소에서 등록된 Plugins을 검색하게 해준다. 마치 npm이나 homebrew를 사용하는 것과 유사하다. 이 곳에 등록된 Plugin을 설치하기 위해서는 위에서와 같이 URI 경로를 모두 입력할 필요없이 다음과 같이 plugin의 ID로 설치가 가능하다.
 
@@ -352,7 +352,7 @@ plugman install --platform ios --project ./platforms/ios --plugin org.apache.cor
 plugman info org.apache.cordova.device
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/bbb79dfb-df70-4b20-9b9a-5e549c3a9e93)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/bbb79dfb-df70-4b20-9b9a-5e549c3a9e93)
 
 이렇게 Plugman으로 PhoneGap의 Plugins을 설치할 수 있다. 하지만 아직 Plugman으로 설치한 Plugin을 PhoneGap CLI로 빌드하면 사용할 수 있는 방법이 명확하지 않다.
 

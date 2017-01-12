@@ -17,18 +17,18 @@ disqus_identifier : http://blog.saltfactory.net/126
 
 앞에서 같이 테스트한 SaltfactoryHybridTutorial (http://blog.saltfactory.net/125) 을 다시 열어 보자. 그리고 preferences를 열어서 Appspresso의 Debug를 열어서 Debug Server Host를 지정한다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/dc5ca502-8e5c-4baf-a135-64e784253710)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/dc5ca502-8e5c-4baf-a135-64e784253710)
 
 이제 프로젝트를 디버그 모드로 실행해서 테스트를 해보자.
 프로젝트 디렉토리에서 오른쪽 마우스를 클릭해서 Debug as > Debug Appspresso application on iOS device를 선택한다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/5649b90f-723c-473c-a23d-0504111d529f)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/5649b90f-723c-473c-a23d-0504111d529f)
 
 그리고 eclipse의 하단에 있는 On The Fly 창을 확인한다. 밑에 빨간색으로 표시한 곳에 현재의 프로젝트명이 선택되어져 있어야 한다. 만약 그렇지 않을 경우는 on the fly의 target을 찾지 못한다는 에러가 발생하게 된다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/cb85a303-46f7-4661-8e0b-747f2161ef1c)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/cb85a303-46f7-4661-8e0b-747f2161ef1c)
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/8a07f757-3c4b-423b-a77c-5d1d6f2453ce)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/8a07f757-3c4b-423b-a77c-5d1d6f2453ce)
 
 최초에 한번 빌드되어 실행되면서 Log가 남았다. 소스를 확인해보자.
 
@@ -78,9 +78,9 @@ ax.log("Hello World") 라는 appspresso의 예약된 객체의 메소드를 사�
 
 새로고침을 실행하면 다음과 같이 "Goodbye World" 가 로그에 남게 되고 simulator를 확인해보면 Goodbye World 고 글자가 변경된 것을 확인 할 수 있다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/302f5e83-1969-4d1c-a965-060b18f63475)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/302f5e83-1969-4d1c-a965-060b18f63475)
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/44079328-fe3f-4488-9b59-93806baf71fe)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/44079328-fe3f-4488-9b59-93806baf71fe)
 
 ## 결론
 

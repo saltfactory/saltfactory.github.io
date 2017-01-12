@@ -32,11 +32,11 @@ typedef enum {
 
 테스트를 위해서 empty 프로젝트를 만든다. 이 포스팅에서는 SFTableViewCellTutorial이라는 이름으로 만들었다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/50e6532e-87b6-4bbb-9732-3f2b60069598)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/50e6532e-87b6-4bbb-9732-3f2b60069598)
 
 그리고 UITableViewController를 상속받은 SFTableViewController를 추가하여 UINavigationController에 추가하고 rootViewController로 지정한다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/57058be7-3cad-4c41-876f-973cf3b914a1)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/57058be7-3cad-4c41-876f-973cf3b914a1)
 
 ```objective-c
 //
@@ -187,7 +187,7 @@ typedef enum {
 }
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/6b0afa2a-c2ac-43c9-a012-33712a2367f4)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/6b0afa2a-c2ac-43c9-a012-33712a2367f4)
 
 ## UITableViewCellStyleSubtitle
 
@@ -213,7 +213,7 @@ UITableViewCellStyleDefault는 단순하게 textLabel을 표현하기 위한 기
 }
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/bb8b9e8d-a6d4-4e2e-9490-23d35a2f1def)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/bb8b9e8d-a6d4-4e2e-9490-23d35a2f1def)
 
 UITableViewCellStyleSubtitle은 UITableViewCellStyleDefault로 나타난 textLabel 밑에 detailTextLabel을 나타나게 하는 스타일로 만들어준다.
 
@@ -241,11 +241,11 @@ UITableViewCellStyleValue1은 UITableViewCellStyleSubtitle과 달리 detailLabel
 }
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/bc70fe52-2fcb-4edf-a2c8-0901119f8089)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/bc70fe52-2fcb-4edf-a2c8-0901119f8089)
 
 좀더 익숙한 UI로 만들어보려면 UITableViewStyle을 UITableViewStyleGrouped로 변경해보면 된다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/be940ecb-b97a-41ff-afc4-30bead86e18d)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/be940ecb-b97a-41ff-afc4-30bead86e18d)
 
 ## UITableViewCellStyleValue2
 
@@ -270,7 +270,7 @@ UITableViewCellStyleValue2는 UITableViewCellStyleValue1과 반대로 되는 스
 }
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/b096a54f-7606-4a9c-b0fd-1f370e059a3d)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/b096a54f-7606-4a9c-b0fd-1f370e059a3d)
 
 UITalbeViewCellStyleValue1에서 detailTextLabel의 색상을 변경하고 싶을 경우에는 다음과 같이 한다.
 
@@ -300,7 +300,7 @@ UITalbeViewCellStyleValue1에서 detailTextLabel의 색상을 변경하고 싶�
 
 위 코드를 추가하고 다시 빌드와 실행을해보고 확인한다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/337f7b09-08e0-40c6-8a42-d40fc9fee7b3)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/337f7b09-08e0-40c6-8a42-d40fc9fee7b3)
 
 ## 소스
 

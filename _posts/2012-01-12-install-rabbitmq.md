@@ -10,7 +10,7 @@ disqus_identifier : http://blog.saltfactory.net/90
 
 ## 서론
 
-![{max-width:180px}](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/08ce2e6f-1119-4f85-ba5f-cac72dedae29)
+![{max-width:180px}](http://asset.blog.hibrainapps.net/saltfactory/images/08ce2e6f-1119-4f85-ba5f-cac72dedae29)
 
 [RabbitMQ](http://www.rabbitmq.com)는 간단하게 말하면 표준 [AMQP (Advanced Message Queueing Protocol)](http://www.amqp.org) 메세지 브로커 소프트웨어(message broker software) 오픈소스이다. RabbitMQ는 [erlang](http://www.erlang.org)언어로 만들어졌을 뿐만 아니라, clustering과 failover를 위한 OTP framework로 서버가 만들어져 있다. RabbitMQ는 VMware에서 지원해주고 있는데 spring source 프로젝트중에 [spring AMQP](http://projects.spring.io/spring-amqp/)가 정식으로 1.0으로 릴리즈되면서 RabbitMQ의 지원은 더 적극적인것 같다. RabbitMQ는 다양한 언어로된 RabbitMQ client를 지원하고 있고 공식적인 온라인 문서에서는 Python과 Java에 대한 소스코드를 예제로 공개하고 있다.
 
@@ -44,7 +44,7 @@ brew는 macport와 달리 `/usr/local/Cellar/{패키지명}/{버전}` 으로 패
 
 서버를 실행하면 RabbitMQ의 심볼이 나타나면서 rabbit boot start, external infrastructure ready, kernel ready, core initialized, message delivery logic read 순으로 부팅이 완료되고 메세지를 받기 위해 대기한다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/ade5c010-e308-401d-bc48-364cfc70d2ae)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/ade5c010-e308-401d-bc48-364cfc70d2ae)
 
 RabbitMQ의 상태를 확인하기 위해서는 `rabbitmqctl`을 사용하면 된다.
 

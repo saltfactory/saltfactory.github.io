@@ -8,7 +8,7 @@ redirect_from: /153/
 disqus_identifier : http://blog.saltfactory.net/153
 ---
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/57d3329e-1c94-4fe0-a33c-fa8a13a05cb4)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/57d3329e-1c94-4fe0-a33c-fa8a13a05cb4)
 
 이번 서울 일정에서 KTH의 Appspresso 개발팀을 만나게 되었다. 아니, 더 정확하게 이야기하자면 KTH Appspresso 팀에서 평범한 지방대학교 연구실과 연구소에 있는 나에게 저녁식사 초대를 해주었던 것이다. 대한민국 IT의 중심에서 좋은 영향력을 가진 엔지니어들과의 자리가 너무 고맙고 유익했기 때문에 블로그에 잠시 이야기를 남긴다.
 
@@ -74,5 +74,5 @@ K : "가지고 있는 디바이스로 모두 테스트를 하고, 가지고 있�
 
 KTH 엔지니어들의 사진은 남기지 않아도 이날을 기억하기 위해서 왕재곱창 집을 찍고 왔답니다^^ 선물까지 준비해주셨다는데 배송이 늦어서 우편으로 보내어 주신다고 합니다(사진은 나중에~). 정말 제가 더 고마운 시간들이였습니다. 다음에 만나더 좀더 깊은 주제로 이야기 나누고 싶습니다~ 감사합니다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/4f8815d4-9134-4a9f-b762-f6a2ef3846d6)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/4f8815d4-9134-4a9f-b762-f6a2ef3846d6)
 

@@ -435,7 +435,7 @@ Ext.define('CWNUMap.controller.MainController', {
 
 앱을 실행해보면 "건물찾기"와 "현재위치" 버튼을 클릭하면 각각에 handler의 메소드들이 동작하고 그 안에서 fireEvent로 Controller에게 전파해서 Controller가 refs와 conrol로 제어하는 해당되는 핸들러 메소드를 실행하게 되는 결과를 확인할 수 있다. 나머지 지도에 관련된 변경된 코드는 이전 아티클과 동일하게 동작하기 때문에 설명을 생략한다. 다만 주의해야할 부분은 이전에는 document.getElementById로 panel 을 찾은 부분을 Ext.Get().dom으로 찾았다는 것을 주의한다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/c4ddf78d-0b7e-42d7-9cea-392d76f2fea5)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/c4ddf78d-0b7e-42d7-9cea-392d76f2fea5)
 
 이제 건물찾기를 하면 새로운 BuildingsView.js 가 열리면서 건물목록이 List 형태로 출력이 되는 뷰를 추가할 것이다. /js/app/view/BuildingsView.js를 추가한다. MainView.js와 동일하게 View안에 일어나는 이벤트를 Controller로 전파하기 위해서 fireEvent를 handler 메소드안에 등록하도록 한다. 다만, 이 BuildingsView 안에는 BuildingsList 라는 리스트 뷰가 하나 추가되어 있는데 각 row를 클릭할 때마다 onSelectItem이라는 handler가 동작하게 하고 그 안에서 fireEvent를 추가할때 파라미터를 함께 전달할 수 있도록 했다. 이유는 해당되는 빌딩의 index를 가지고 앞에서 Store를 가지고 저장한 marker와 infowindow를 찾기 위해서 이다. 그리고 BuildingsList에 이전에 MainController에서 load했던 Store를 그대로 재활용하기 위해서 Ext.getStore('BuildingsStore')를 이용했다. 이렇게 한번 load된 Store를 앱에서 어디서든지 getStore로 불러서 활용할 수 있다.
 
@@ -631,7 +631,7 @@ Ext.define('CWNUMap.controller.MainController', {
 
 이제 앱을 새로 실행시키고 MainView에서 "건물찾기"라는 뷰를 동작시키면 다음과 같이 BuildingsView가 나타나는데 이때 BuildingsList 에 이전에  로드한 Store를 가지고 Ext.dataview.list의 store 속성으로 반복해서 출력하도록 구현된 뷰를 볼 수 있다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/cd3db0eb-f75e-466f-9715-dc5563cf0692)  
+![](http://asset.blog.hibrainapps.net/saltfactory/images/cd3db0eb-f75e-466f-9715-dc5563cf0692)  
 
 이제 이 List에서 row를 선택하여 하나의 Item이 가지고 있는 정보를 가지고 지도를 이동하고 marker에 infowindow를 나타나게하면서 BuildingsView를 닫는 행위를 "닫기"라는 버턴이 눌러졌을때 일어나도록 BuildingsView를 관찰하는 BuildingController를 추가할 것이다.
 /js/app/contorller/BuildingController.js를 추가하자. MainController.js와 동일하게 refs로 각각의 view를 참조하게 설정한다. 반드시 존재하는 view를 모두 참조할 필요는 없다. 이 Controller에서 사용하는 뷰만 refs로 지정한다. 그리고 BuildingsView에서 Controller에게 이벤트를 전파하려고 등록한 fireEvent의 이름과 각각에 처리하는 메소드를 연결한다.
@@ -728,7 +728,7 @@ Ext.application({
 
 이제 앱을 새로 실행시키면 BuildingsView에서 각 행을 누를 때 마다 선택한 건물 정보를 가지고 maker로 이동하고 infowindow를 나게 하면서 열렸던 BuildingsView를 닫는 행위를 Controller에 의해서 제어된다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/37fb22af-b344-4e03-91e9-232bf7a33673)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/37fb22af-b344-4e03-91e9-232bf7a33673)
 
 나머지 사용되었던 파일 코드를 추가한다.
 먼저 list의 item의 높이를 변경하기 위해서 css를 추가하였다. /css/master.css
@@ -818,13 +818,13 @@ css 파일을 추가하기 위해서 index.html 파일 수정 작업이 있었�
 
 이렇게 MVC를 이용해서 두개의 View에 각각 이벤트를 각각 Controller로 연결을 하고 해당 Controller에서 다른 View로 전환을 Controller에서 담당을 했다. 뿐만 아니라 Controller에서 Model을 기반으로 Store로 데이터를 만들고 그것을 각각 View에서 사용할 수 있었다. 그래서 데이터를 저장하는 코드, 데이터를 표현하는 코드, 이벤트를 제어하는 코드를 각각 나누어서 MVC 기반으로 전반적으로 프그램이 완성되었다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/259a2da1-9e6f-4fb5-9735-7a3d2531c5d6)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/259a2da1-9e6f-4fb5-9735-7a3d2531c5d6)
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/e6a9fa45-9221-486a-b643-7604e02e6558)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/e6a9fa45-9221-486a-b643-7604e02e6558)
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/b2faaef0-3443-4d46-b290-8afac3a1fa25)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/b2faaef0-3443-4d46-b290-8afac3a1fa25)
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/ea071726-19f2-4a80-8013-231a24989e8f)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/ea071726-19f2-4a80-8013-231a24989e8f)
 
 ## 결론
 

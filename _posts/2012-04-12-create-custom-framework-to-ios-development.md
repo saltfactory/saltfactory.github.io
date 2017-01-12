@@ -11,17 +11,17 @@ disqus_identifier : http://blog.saltfactory.net/120
 우리는 이전의 아티클에서 [iOS 개발 할 때 정적 라이브러리(static library)를 사용하여 팀 프로젝트 협업하기](http://blog.saltfactory.net/119) 라는 제목으로 정적 라이브러리를 사용해서 코드 재사용성을 높이고 팀 프로젝트나 협업을 할 수 있는 방법을 학습했다. 정적 라이브러리 프로젝트를 생성하여 개발하고 그 코드를 재사용하기 위해서 우리는 프로젝트에 정적 라이브러리 프로젝트를 추가하여 build settings에 헤더 파일을 추가했다. 개발자에게 이미 만들어진 라이브러리와 리소스 등을 좀더 근사하게 UIKit.framework나 MKMap.framewrof 와 같이 배포하여 사용되기를 바랄 수 있다. 하지만 Cocoa Touch 프로젝트에서는 framework를 위한 프로젝트를 생성할 수 없다.
 <!--more-->
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/26076b1f-6b77-4bd5-9521-342dcee217ff)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/26076b1f-6b77-4bd5-9521-342dcee217ff)
 
 이러한 이유 때문에 Cocoa framework 처럼 iOS framework 처럼 만들 수 있는 템플릿을 만들어서 사용하기도 한다. https://github.com/kstenerud/iOS-Universal-Framework 에서 소스코드를 받아서 템플릿을 만들어서 사용할 수 있다. 이 포스팅에서 소개할 것은 iOS framework를 어떻게 생성해서 배포할 수 있을지에 대해서 고민하고 찾아보는 가운데 http://spin.atomicobject.com/2011/12/13/building-a-universal-framework-for-ios/ 블로그에서 Aggregate(여러개의 타겟을 한번에 빌드할 때 하나의 타겟으로 빌드할 수 있다) 를 이용해서 framework를 생성할 수 있는 방법이 있어서 실제 적용해보고 포스팅하기로 했다. 우리는  iOS 개발 할 때 정적 라이브러리(static library)를 사용하여 팀 프로젝트 협업하기 아티클에서 정적 라이브리로 만든 것 중에서 A개발자가 만든 파일을 저장하는 SFFileManager가 포함된 SaltfactoryiOSLib를 framework로 배포하여 사용할 수 있게 수정할 것이다.
 
 SaltfactoryiOSLib의 프로젝트에서 타겟을 Aggregate의 Target을 추가하자. 이때 이름은 SaltfactoryiOS라고 하였다. 이것은 나중에 프레임워크의 이름이 되는데 import `<SaltfactoryiOS/SFFileManager.h>` 라고 사용 할 수 있다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/9a9b102b-eec1-4d9d-835b-78029b0dd586)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/9a9b102b-eec1-4d9d-835b-78029b0dd586)
 
 Target에 Aggregate 가 추가되면 Build Phases 탭에서 Add Build Phase 버턴을 클릭해서 Add Run Script를 추가하여 Build Universal Framework와 Build Static Lib라고 이름을 변경한다. 그리고 Add Build Phase 버턴을 클릭해서 Add Copy Files를 하나 추가한다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/03f55c72-c22a-46f4-8457-1e20f26dc56d)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/03f55c72-c22a-46f4-8457-1e20f26dc56d)
 
 Build Static Lib는 정적 라이브러리를 빌드하는 스크립트가 포함된다.
 
@@ -61,34 +61,34 @@ ln -s "Versions/Current/${PRODUCT_NAME}" "${FRAMEWORK}/${PRODUCT_NAME}"
 
 Copy Files 에는 실제 복사되어질 파일을 넣어주면 되는데 .h 파일이 framework 폴더에 ${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal/${PRODUCT_NAME}.framework/Versions/A/Headers/ 라는 폴더로 복사되게 지정한다. 이때 Destination을 Absolute Path로 지정한다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/5f3fbb4b-de91-421c-9a03-80f3509be631)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/5f3fbb4b-de91-421c-9a03-80f3509be631)
 
 이제 SatfactoryiOS 타겟을 지정하고 빌드해보자. 보통 framework는 배포용으로 만들기 때문에 Release로 빌드하도록 한다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/2371b60a-6d51-4769-85e3-71ad1891b9ed)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/2371b60a-6d51-4769-85e3-71ad1891b9ed)
 
 빌드를 시작하면 다음과 같은 에러가 발생되면서 빌드가 실패될 것이다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/746c610d-50c2-473f-bc1a-1b02862b5890)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/746c610d-50c2-473f-bc1a-1b02862b5890)
 
 이것은 libSaltfactoryiOSLib.a를 찾지 못해서 발생하는 문제이다. 정적 라이브러리를 찾는 경로를 살펴보면 빌드 디렉토리 밑에 Build/Products/Release-iphonesimulator/libSaltfactoryiOSLib.a를 찾지 못하고 있다. 이것은 복사하려는 정적 라이브러리가 만들어져 있지 않기 때문인데 이런 에러가 나타나면 SaltfactoryiOSLib 프로젝트에서 Simulator와 Device 스키마를 설정해서 모두 Release로 빌드한 후 에 다시 SaltfactoryiOS 타겟(Appregate)을 다시 빌드하면 정상적으로 빌드가 완료되고 Release-iphoneuniversal 이라는 디렉토리 밑에 SaltfactoryiOS.framework 라는 프레임워크 폴더가 생성된 것을 확인 할 수 있다. tree 라는 command tool을 이용해서 SaltfactoryiOS.framework 디렉토리 구조를 살펴보면 다음과 같다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/591190b2-f64e-40c3-b7bb-be364170861c)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/591190b2-f64e-40c3-b7bb-be364170861c)
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/af78ac65-5c6d-4764-9796-74ca2d46eb35)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/af78ac65-5c6d-4764-9796-74ca2d46eb35)
 
 이제 정적 라이브러리로 사용한 프로젝트를 framework를 이용해서 사용할 수 있도록 변경해보자.
 우선 SaltfactoryiOSTutorial 프로젝트에서 사용한 libSaltfactoryiOSLib.a 정적 라이브러리를 제거한다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/d8bdea52-54d5-43f0-b228-d17fc43859e7)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/d8bdea52-54d5-43f0-b228-d17fc43859e7)
 
 다음은 Header Search Paths에서 포함시킨 헤더파일을 삭제한다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/cb6e7868-8a16-4385-b0bd-a2ea0ba57e79)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/cb6e7868-8a16-4385-b0bd-a2ea0ba57e79)
 
 이제 SaltfactoryiOS.framework를 추가한다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/0e4a7974-3689-4c98-a833-be916e164801)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/0e4a7974-3689-4c98-a833-be916e164801)
 
 그리고 `#import "SFFileManager.h"`로 임포트한 것을 `#import <SaltfactoryiOS/SFFileManager.h>`로 변경한다.
 
@@ -121,7 +121,7 @@ Copy Files 에는 실제 복사되어질 파일을 넣어주면 되는데 .h 파
 
 이렇게 이제 다시 SaltfactoryiOSTutorial  프로젝트를 빌드하여 실행해보면 이전에 정적 라이브러리를 사용해서 실행되는 결과와 동일하게 실행되는 것을 확인 할 수 있다. 프로젝트의 구조를 살펴보면 암호화와 복호화를 위해서 만든 SaltfactorySecurityLib 프로젝트의 libSaltfactorySecurityLib.a 정적라이브러리와 Aggregate를 이용해서 SaltfactoryiOS.framework로 만든 라이브러리를 사용하는 것을 볼 수 있다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/ad9f57c7-e202-4cc6-a105-0a171f2ed017)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/ad9f57c7-e202-4cc6-a105-0a171f2ed017)
 
 정적 라이브러리를 사용 하는 것과 달리 SaltfactoryiOS.framework라는 프레임워크 폴더 자체를 프로젝트에서 마치 MKMap.framework를 추가하듯 Build Phases에 추가해서 간단하게 사용 할 수 있게 되었다. 프로젝트 파일들과 상관없이 이제 자신만의 프레임워크를 배포 할 수 있게 된 것이다.
 

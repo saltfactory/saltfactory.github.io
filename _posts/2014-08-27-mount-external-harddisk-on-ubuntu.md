@@ -120,13 +120,13 @@ blacklist uas
 
 이젠 Ubuntu에 USB 외장하드디스크를 연결해서 사용할 수 있는 준비를 모두 마쳤다. 우리는 모든 운영체제에서 Read/Write를 할 수 있게 500G 하드디스크를 **FAT** 형식으로 포맷을 했는데, FAT 형식은 4G 이상 대용량 파일을 저장할 수 없다는 에러를 만나서 [exFAT](http://en.wikipedia.org/wiki/ExFAT) 형식으로 다시 포맷을 했다. Mac OS X (10.9.x) 에서는 NTFS 포멧 형식을 지원하고 있지 않는다. 그리고 Mac OS X에서는 NTFS로 포멧되어진 외장하드디스크는 read only로 마운트가 되어진다. 그래서 우리는 exFAT으로 USB 외장하드디스크를 포맷했다. Mac OS X 에서 USB 외장하드디스크를 포맷하기 위해서는 [Disk Utility](http://en.wikipedia.org/wiki/Disk_Utility)를 상용하면 된다.
 
-![exfat](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/e6a3e566-5f5e-41ba-bfcf-0e0ff36ef0da)
+![exfat](http://asset.blog.hibrainapps.net/saltfactory/images/e6a3e566-5f5e-41ba-bfcf-0e0ff36ef0da)
 
 
 ## USB 외장하드디스크 마운트
 
 exFAT으로 포맷되어진 USB 외장하드디스크를 Ubuntu에 연결한다. 그리고 `fdisk -l` 명령어를 실행해보자.
-![fdisk](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/e764076c-0dee-405a-b8d9-c92979c75d4a)
+![fdisk](http://asset.blog.hibrainapps.net/saltfactory/images/e764076c-0dee-405a-b8d9-c92979c75d4a)
 
 처음 우리가 USB 외장하드디스크를 연결해서 `fdisk -l`을 실행했을 때는 디스크 목록에 외장하드디스크가 나타나지 않았는데 이젠 `/dev/sde1` 500G 하드디스크가 목록에 나타나는 것을 볼 수 있다. 우리는 **exFAT**으로 포맷했는데 Ubuntu에서 인식할 때는 **NTFS**로 인식이 되는 것 같다.
 

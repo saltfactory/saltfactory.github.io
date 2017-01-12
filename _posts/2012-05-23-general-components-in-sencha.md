@@ -57,9 +57,9 @@ Ext.application({
 
 위의 코드는 아래 그림과 같이 두가지 탭 아티템을 가지고있는 탭 메뉴를 생성할 수 있다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/0cbcba0e-d14b-4561-8af3-67bc9b7afcb6)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/0cbcba0e-d14b-4561-8af3-67bc9b7afcb6)
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/088b19e0-881d-4c35-b90f-b86f3b9013b8)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/088b19e0-881d-4c35-b90f-b86f3b9013b8)
 
 만약에 Android의 TabHost와 같이 탭 메뉴가 상단에 위치하고 싶을 경우는 tabBarPosition을 top으로 변경하면 된다.
 
@@ -100,9 +100,9 @@ Ext.application({
 
 tabBarPosition이 변경됨으로 탭 메뉴의 형태도 달라진다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/3de8dd4b-73aa-4f1c-8518-45e615050a61)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/3de8dd4b-73aa-4f1c-8518-45e615050a61)
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/9e598522-0492-4018-8cb1-f6e668979f77)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/9e598522-0492-4018-8cb1-f6e668979f77)
 
 Sencha Touch를 이용하면 이렇게 간단하게 탭 메뉴를 구성할 수 있다.
 우리는 [Sencah Touch2를 이용한 하이브리드 앱 개발 - 2.View 생성](http://blog.saltfactory.net/140) 글에서 view를 구성하는 파일을 /app/view/ 밑에 구성한다는 것을 살펴보았다. 우리는 여러개의 뷰를 만들어서 Tab을 이용해서 서로 다른 뷰 사이를 전환해보도록 하겠다.
@@ -218,9 +218,9 @@ Ext.application({
 });
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/b68749ae-7def-4060-95cf-e7bdaa3ad61c)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/b68749ae-7def-4060-95cf-e7bdaa3ad61c)
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/dcf1463a-8ad4-486d-9430-26c0f9c57c0b)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/dcf1463a-8ad4-486d-9430-26c0f9c57c0b)
 
 탭 메뉴에 두가지 아이템을 선택할 수 있도록 되어졌고 각 아이템을 선택하면 뷰가 전환되는 것을 확인할 수 있을 것이다. 그런데 뷰의 전환이 iOS의 TabViewController와 Android의 TabHost와 다르다는 것을 느낄 것이다. Sencha는 기본적으로 뷰 전환 에니메이션을 Slide로 지정하고 있기 때문이다. 그럼 네이티브 앱과 같이 뷰가 전환되기 위해서는 에니메이션 효과를 없애면 된다.
 
@@ -307,7 +307,7 @@ Ext.define('SaltfactorySenchaTutorial.view.FirstView', {
 
 원격 URL 로 이미지를 불러와서 현재의 뷰 (Ext.Container)에 Ext.Img 컴포넌트를 add 시키는 방법을 사용했다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/33cf4be5-562d-4d8d-ba24-9264ee4258d5)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/33cf4be5-562d-4d8d-ba24-9264ee4258d5)
 
 ## MessageBox
 
@@ -351,7 +351,7 @@ Ext.define('SaltfactorySenchaTutorial.view.FirstView', {
 });
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/07bccc25-cecf-4128-b89b-250076a82018)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/07bccc25-cecf-4128-b89b-250076a82018)
 
 MessageBox의 OK 버튼을 눌렀을 때 위 코드는 아무런 작업을 하지 않고 닫히기만 한다. 그래서 Ext.emptyFn 메소들를 입력했다. 그럼 버튼이 눌러졌을때 뭔가 일을 처리할 수 있도록 handler를 등록하자.
 
@@ -396,7 +396,7 @@ Ext.define('SaltfactorySenchaTutorial.view.FirstView', {
 
 Ext.emptyFn  대신에 작업을 처리할 수 있는 function으로 교체했다. 이제 다시 앱을 실행시키고 버튼을 누르면 등록해둔 handler 가 동작하는 것을 확인할 수 있다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/08f0a2a6-48be-420a-9d33-0df6a5b13f3e)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/08f0a2a6-48be-420a-9d33-0df6a5b13f3e)
 
 위의 MessageBox는 단순하게 버튼이 OK 하나만 되어 있는 MessageBox이다. 우리는 이러한 Alert 형태의 MessageBox 말고 사용자가 confirm을 할 수 있는 MessageBox를 많이 사용하기도 한다. 그래서 Sencha에서는 Ext.Msg에 Ext.Msg.alert와 Ext.Msg.confirm 두가지를 미리 정의해두었다.
 
@@ -437,7 +437,7 @@ Ext.define('SaltfactorySenchaTutorial.view.FirstView', {
 
 Ext.Msg.alert와 다르게 No, Yes 두가지 버튼이 포함되어 사용자가 결정할 수 있는 MessageBox가 만들어졌다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/1e8612f2-dd8b-47c0-aceb-2d67c65cf862)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/1e8612f2-dd8b-47c0-aceb-2d67c65cf862)
 
 Ext.Msg.alert에서 버튼을 누르면 이벤트를 처리할 수 있는 handler 를 등록한것 처럼 Ext.Msg.confirm을 처리하는 function을 정의해서 추가한다.  이 때 버튼을 누르면 어떤 것이 선택되었는지 알 수가 있다. 다음 코드로 변경해보자.
 
@@ -480,7 +480,7 @@ Ext.define('SaltfactorySenchaTutorial.view.FirstView', {
 
 No 버튼을 누르면 no가 전달되고 Yes를 누르면 yes 값이 전달되는지 확인할 수 있다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/5fd6a33d-ff8b-48f2-ba1e-c04773f19008)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/5fd6a33d-ff8b-48f2-ba1e-c04773f19008)
 
 또는 Ext.Msg를 직접 정의하여 사용할 수도 있다. Ext.Msg의 buttons에 각각 버턴을 따로 지정하고 hander도 따로 지정하면 된다.
 
@@ -532,9 +532,9 @@ Ext.define('SaltfactorySenchaTutorial.view.FirstView', {
 });
 ```
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/b167284a-0d0f-4ed7-be00-d9795aa27f4f)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/b167284a-0d0f-4ed7-be00-d9795aa27f4f)
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/0bd5e518-3fe9-4024-98ac-716b3214e31d)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/0bd5e518-3fe9-4024-98ac-716b3214e31d)
 
 ## ActionSheet
 
@@ -627,7 +627,7 @@ Ext.define('SaltfactorySenchaTutorial.view.FirstView', {
 
 actionSheet의 items 들의 버튼 UI에 따라사 색상이 달라진다는 것을 확인할 수 있다.
 
-![](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/97c0d933-495c-44c2-b370-b2d12a515947)
+![](http://asset.blog.hibrainapps.net/saltfactory/images/97c0d933-495c-44c2-b370-b2d12a515947)
 
 ## 결론
 

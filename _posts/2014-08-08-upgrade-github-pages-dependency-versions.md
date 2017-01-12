@@ -10,7 +10,7 @@ comments: true
 redirect_from: /256/
 disqus_identifier: 'http://blog.saltfactory.net/256'
 images:
-  title: 'http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/936a7798-d70b-4957-b291-5ed619cfb801'
+  title: 'http://asset.blog.hibrainapps.net/saltfactory/images/936a7798-d70b-4957-b291-5ed619cfb801'
 ---
 
 ## 서론
@@ -44,7 +44,7 @@ clone https://github.com/saltfactory/saltfactory.github.io.git
 
 ## Jekyll
 
-![jekyll](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/0d6a63c8-4deb-4dc9-928c-3e3d961ea281)
+![jekyll](http://asset.blog.hibrainapps.net/saltfactory/images/0d6a63c8-4deb-4dc9-928c-3e3d961ea281)
 
 [Jekyll](http://jekyllrb.com/)은 static websites 생성 프레임워크이다. `Ruby`로 만들어진 이 것은 **Markdown** 파일을 `_posts` 디렉토리에 생성하는 것 만으로 멋진 static website를 만들어준다. Markdown을 사용하는 개발자에게 반가운 이야기일 것이다. 우리도 Markdown을 표준 document format으로 정하고 난 뒤에 Jekyll을 사용해서 Pages를 만들고 기존의 블로그를 이전하고 있다.
 
@@ -133,7 +133,7 @@ bundle install
 ```
 
 기존에는 [nokogiri](http://nokogiri.org/)를 사용하지 않았는데 이번 GitHub pages dependency versions에서는 nokogiri가 의존성이 있는 것으로 확인되었다. 만약 다음과 같이 에러가 발생한다면 nokogiri가 XML 라이브러리가 필요해서 생기는 문제이다.
-![nokogiri install error](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/0e0db0f8-8bc0-41c7-9a6e-0fa22f105219)
+![nokogiri install error](http://asset.blog.hibrainapps.net/saltfactory/images/0e0db0f8-8bc0-41c7-9a6e-0fa22f105219)
 
 이 문제를 만나게 되면 [Homebrew](http://brew.sh/)를 사용해서 XML C 라이브러인 ***libiconv***를 설치한다. homebrew에서 libiconv를 찾아보자.
 
@@ -158,7 +158,7 @@ brew install libiconv
 ```
 
 마지막으로 nokogiri를 다시 설치한다. 다음과 같이 nokogiri가 정상적으로 설치가 되는 것을 확인할 수 있다.
-![nokogiri installed](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/2540c218-b519-407b-a2f0-c3a891aec775)
+![nokogiri installed](http://asset.blog.hibrainapps.net/saltfactory/images/2540c218-b519-407b-a2f0-c3a891aec775)
 
 이제 Jekyll을 사용할 모든 준비가 끝났다.
 
@@ -170,7 +170,7 @@ brew install libiconv
 jekyll new . --force
 ```
 이렇게 jekyll을 새롭게 생성하면 디렉토리 안에 다음과 같은 파일들이 생성이 될 것이다.
-![after jekyll new](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/ca5de217-a265-43bb-8caa-bd12971c93e2)
+![after jekyll new](http://asset.blog.hibrainapps.net/saltfactory/images/ca5de217-a265-43bb-8caa-bd12971c93e2)
 
 만약  다음과 같이 ***LSI***에 대한 경고가 나오면 다음과 같이 [GSL](http://www.gnu.org/software/gsl/)을 설치한다. 이것은 C 연산 라이브리인데 이것을 사용하면 10배 정도 더 빠르게 연산이 가능하다.
 
@@ -202,11 +202,11 @@ gem install rb-gsl
 ```
 jekyll serve --watch
 ```
-![jekyll serve](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/5532ff2b-6b80-41e6-b386-36ac9d7767f7)
+![jekyll serve](http://asset.blog.hibrainapps.net/saltfactory/images/5532ff2b-6b80-41e6-b386-36ac9d7767f7)
 
 Jekyll 서버가 정상적으로 시작되면 http://localhost:4000 을 브라우저에서 확인한다.
 
-![preview default](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/f2c8f409-d654-446b-9765-3d5d8691ade6)
+![preview default](http://asset.blog.hibrainapps.net/saltfactory/images/f2c8f409-d654-446b-9765-3d5d8691ade6)
 
 서버가 실행되면 디렉토리에는 자동적으로 static page 들이 만들어진다. `tree` 명령어를 사용해서 확인해보자
 
@@ -214,7 +214,7 @@ Jekyll 서버가 정상적으로 시작되면 http://localhost:4000 을 브라�
 tree
 ```
 
-![tree after run](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/e2ec3f4b-d78a-4164-b269-8902793410c2)
+![tree after run](http://asset.blog.hibrainapps.net/saltfactory/images/e2ec3f4b-d78a-4164-b269-8902793410c2)
 
 `_post` 디렉토리 안에 Markdown 으로 되어 있는 파일을 Jekyll이 자동으로 디렉토리를 만들면서 정적 HTML 파일을 생성한 것을 확인할 수 있다.
 
@@ -248,9 +248,9 @@ gems:
 
 다시 Jekyll 서버 를 실행시켜보자. `_config.yml` 파일은 `--watch` 옵션이 적용되지 않기 때문에 이 파일을 수정하면 Jekyll 서버를 다시 실행시켜야 한다.
 
-![restart jekyll](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/39918d12-a161-4e63-b4cf-68c2d4ee449e)
+![restart jekyll](http://asset.blog.hibrainapps.net/saltfactory/images/39918d12-a161-4e63-b4cf-68c2d4ee449e)
 
-![post view](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/662a626b-bdca-43e8-8e4d-0b0d5e97e2ba)
+![post view](http://asset.blog.hibrainapps.net/saltfactory/images/662a626b-bdca-43e8-8e4d-0b0d5e97e2ba)
 
 
 ## 블로그 포스트 만들기
@@ -265,16 +265,16 @@ Jekyll은 **Markdown** 파일을 자동으로 정적 페이지로 만들어준�
 
 ## Jekyll
 
-![jekyll](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/84755ce7-0464-4833-9cc5-2b4a922bf8e9)
+![jekyll](http://asset.blog.hibrainapps.net/saltfactory/images/84755ce7-0464-4833-9cc5-2b4a922bf8e9)
 
 [Jekyll](http://jekyllrb.com/)은 static websites 생성 프레임워크이다. `Ruby`로 만들어진 이 것은 **Markdown** 파일을 `_posts` 디렉토리에 생성하는 것 만으로 멋진 static website를 만들어준다. Markdown을 사용하는 개발자에게 반가운 이야기일 것이다. 우리도 Markdown을 표준 document format으로 정하고 난 뒤에 Jekyll을 사용해서 Pages를 만들고 기존의 블로그를 이전하고 있다.ndex.html 파일을 git push 하는 것 만으로도 만들 수 있고, 다른 static website generator framework를 사용해도 된다. GitHub에서는 공식적인 Database를 지원하고 있지 않기 때문에 static website(HTML 파일)을 사용해야 한다.
 ```
 
 위와 같이 `_post` 디렉토리에 Markdown을 추가하면 Jekyll은 자동으로 새로운 정적 페이지를 만들고 적용한다.
 
-![new post](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/eee2d1e3-d410-4137-bb7b-2261ab57ea44)
+![new post](http://asset.blog.hibrainapps.net/saltfactory/images/eee2d1e3-d410-4137-bb7b-2261ab57ea44)
 
-![example](http://hbn-blog-assets.s3.amazonaws.com/saltfactory/images/b49e0d83-14f3-4d67-979f-ef263ac80273)
+![example](http://asset.blog.hibrainapps.net/saltfactory/images/b49e0d83-14f3-4d67-979f-ef263ac80273)
 
 
 
